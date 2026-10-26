@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.recubeicbm.player.aim_rifle": {
+      "loop": true,
+      "override_previous_animation": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            "-90.0 + query.target_x_rotation - query.is_sneaking * 27.0",
+            "math.clamp(query.target_y_rotation, -60.0, 45.0)",
+            0.0
+          ]
+        },
+        "leftarm": {
+          "rotation": [
+            "-90.0 + query.target_x_rotation - query.is_sneaking * 27.0",
+            "42.0 + math.clamp(query.target_y_rotation, -45.0, 5.0)",
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.recubeicbm.player.aim_pistol": {
+      "loop": true,
+      "override_previous_animation": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            "-90.0 + query.target_x_rotation - query.is_sneaking * 27.0",
+            "math.clamp(query.target_y_rotation, -60.0, 45.0)",
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

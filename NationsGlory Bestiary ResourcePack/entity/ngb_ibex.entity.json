@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:ibex",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/ibex_0",
+        "v1": "textures/entity/ngb/ibex_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.ibex"
+      },
+      "animations": {
+        "idle": "animation.ng.ibex.idle",
+        "move": "animation.ng.ibex.move",
+        "attack": "animation.ng.ibex.attack",
+        "controller": "controller.animation.ng.ibex.move",
+        "look": "animation.ng.ibex.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.ibex"
+      ],
+      "spawn_egg": {
+        "base_color": "#9b7247",
+        "overlay_color": "#8b633d"
+      }
+    }
+  }
+}

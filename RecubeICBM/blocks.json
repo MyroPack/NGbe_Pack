@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.40",
+  "ng:plateforme": {
+    "textures": "recubeicbm_invisible",
+    "sound": "metal"
+  },
+  "ng:plateforme_part": {
+    "textures": "recubeicbm_invisible",
+    "sound": "metal"
+  },
+  "ng:tourelle_anti_missile": {
+    "textures": "recubeicbm_invisible",
+    "sound": "metal"
+  },
+  "ng:tourelle_anti_missile_part": {
+    "textures": "recubeicbm_invisible",
+    "sound": "metal"
+  }
+}

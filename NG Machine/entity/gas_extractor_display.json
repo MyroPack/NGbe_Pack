@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:gas_extractor_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/gas_extractor"
+      },
+      "geometry": {
+        "default": "geometry.gas_extractor"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

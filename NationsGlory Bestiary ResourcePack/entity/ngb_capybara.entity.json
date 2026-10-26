@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:capybara",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/capybara_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.capybara"
+      },
+      "animations": {
+        "idle": "animation.ng.capybara.idle",
+        "move": "animation.ng.capybara.move",
+        "controller": "controller.animation.ng.capybara.move",
+        "look": "animation.ng.capybara.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.capybara"
+      ],
+      "spawn_egg": {
+        "base_color": "#ab7445",
+        "overlay_color": "#b7874f"
+      }
+    }
+  }
+}

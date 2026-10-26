@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:enderdragon_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/enderdragon_mount"
+			},
+			"geometry": {
+				"default": "geometry.enderdragon_mount"
+			},
+			"scripts": {
+				"animate": [
+					"idle",
+					"move"
+				]
+			},
+			"animations": {
+				"idle": "animation.enderdragon_mount.idle",
+				"move": "animation.enderdragon_mount.idle"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.furniture_coastal_painting",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-12.5, 12, -5],
+							"size": [25, 1, 25],
+							"pivot": [0, 12.5, 7.5],
+							"rotation": [-90, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 16], "uv_size": [16, -0.5]},
+								"east": {"uv": [0, 0.5], "uv_size": [16, -0.5], "uv_rotation": 180},
+								"south": {"uv": [0, 16], "uv_size": [16, -0.5]},
+								"west": {"uv": [0, 16], "uv_size": [16, -0.5]},
+								"up": {"uv": [0.5, 0], "uv_size": [-0.5, 0.5]},
+								"down": {"uv": [16, 0], "uv_size": [-16, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

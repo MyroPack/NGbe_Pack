@@ -1,0 +1,63 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:icbm_missile",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "conventionnel": "textures/recubeicbm/missile/conventionnel",
+        "repulsive": "textures/recubeicbm/missile/repulsive",
+        "shrapnel": "textures/recubeicbm/missile/shrapnel",
+        "incendiaire": "textures/recubeicbm/missile/incendiaire",
+        "fragmentation": "textures/recubeicbm/missile/fragmentation",
+        "emp": "textures/recubeicbm/missile/emp",
+        "nuke": "textures/recubeicbm/missile/nuke",
+        "nuke_cluster": "textures/recubeicbm/missile/nuke_cluster",
+        "thermobarique": "textures/recubeicbm/missile/thermobarique",
+        "magnetique": "textures/recubeicbm/missile/magnetique",
+        "earthquake": "textures/recubeicbm/missile/earthquake",
+        "drill": "textures/recubeicbm/missile/drill",
+        "endothermique": "textures/recubeicbm/missile/endothermique",
+        "anti_matter": "textures/recubeicbm/missile/anti_matter",
+        "red_matter": "textures/recubeicbm/missile/red_matter",
+        "interceptor": "textures/recubeicbm/missile/interceptor",
+        "rpg_rocket": "textures/recubeicbm/missile/rpg_rocket"
+      },
+      "geometry": {
+        "conventionnel": "geometry.recubeicbm.flight.conventionnel",
+        "repulsive": "geometry.recubeicbm.flight.repulsive",
+        "shrapnel": "geometry.recubeicbm.flight.shrapnel",
+        "incendiaire": "geometry.recubeicbm.flight.incendiaire",
+        "fragmentation": "geometry.recubeicbm.flight.fragmentation",
+        "emp": "geometry.recubeicbm.flight.emp",
+        "nuke": "geometry.recubeicbm.flight.nuke",
+        "nuke_cluster": "geometry.recubeicbm.flight.nuke_cluster",
+        "thermobarique": "geometry.recubeicbm.flight.thermobarique",
+        "magnetique": "geometry.recubeicbm.flight.magnetique",
+        "earthquake": "geometry.recubeicbm.flight.earthquake",
+        "drill": "geometry.recubeicbm.flight.drill",
+        "endothermique": "geometry.recubeicbm.flight.endothermique",
+        "anti_matter": "geometry.recubeicbm.flight.anti_matter",
+        "red_matter": "geometry.recubeicbm.flight.red_matter",
+        "interceptor": "geometry.recubeicbm.flight.interceptor",
+        "rpg_rocket": "geometry.recubeicbm.flight.rpg_rocket"
+      },
+      "animations": {
+        "flight": "animation.recubeicbm.missile.flight"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.pitch = q.target_x_rotation;"
+        ],
+        "animate": [
+          "flight"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.recubeicbm.icbm_missile"
+      ]
+    }
+  }
+}

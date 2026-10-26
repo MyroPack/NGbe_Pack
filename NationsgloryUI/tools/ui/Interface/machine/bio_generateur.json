@@ -1,0 +1,606 @@
+{
+  "namespace": "bio_generateur",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+ 
+/*             {"small_chest_grid@chest.small_chest_grid":{
+              "grid_dimensions": [ 9, 9 ],
+              "layer":800000,
+              "anchor_from":"bottom_right",
+              "anchor_to":"bottom_right",
+              "size": [ 162, 162 ]
+            }},
+ */
+
+            {"background_black@ng_asset.background_white":{
+              "color":[0.000, 0.000, 0.000],
+              "size":["150%","150%"],
+              "alpha":0.5
+            }},
+
+            {"stack_panel@ng_module.stackpanel":{
+              "size":[222,"100%c"],
+              "controls":[
+
+                  {"gestion_panel@ng_asset.background_white":{
+                    "color":[0.153, 0.153, 0.165],
+                    "size":["100%",127],
+                    "controls":[
+
+                        {"stack_panel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                    {"header@ng_asset.background_01":{
+                                      "size": ["100%",20],
+                                      "controls":[
+
+                                          {"stack_panel@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":["100% - 4px","100% - 2px"],
+                                            "controls":[
+
+                                                     {"padding@ng_module.panel":{
+                                                        "size":[5,"100%"]
+                                                     }},
+
+                                                     {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+                                                         
+                                                                      {"title":{
+                                                                        "type":"label",
+                                                                        "font_scale_factor":0.8,
+                                                                        "layer":10,
+                                                                        "offset":[0,-1.3],
+                                                                        "font_type":"MinecraftTen",
+                                                                        "text":"bio generateur"
+                                                                      }}
+                                                     ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":["fill","100%"]
+                                                      }},
+
+                                                      {"bio@ng_module.panel":{
+                                                       "size":["100%c","100%"],
+                                                       "controls":[
+                                                              
+                                                          {"background@ng_asset.background_03":{
+                                                            "min_size":[20,"100% - 2px"],
+                                                            "size": ["100%c + 10px","100% - 2px"],
+                                                            "controls":[
+
+                                                                      {"text@ng_module.Simple_text": {
+                                                                        "$type_get_text": "Get_text_type_1",
+                                                                        "$index": 20,
+                                                                        "layer":5,
+                                                                        "size": ["100%c", "100%"],
+                                                                        "$size_icone_left": [8,8],
+                                                                        "$text_offset":[0,0.3],
+                                                                        "$color_icone_left": [0.369, 0.647, 0.000],
+                                                                        "$texture_icone_left": "ng_asset.icon_32",
+                                                                        "$font_scale_factor": 0.7
+                                                                      }}
+                                                            ]}}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[1,"100%"]
+                                                      }},
+
+                                                      {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                              {"close_button@ng_module.close_button":{}}  
+                                                              
+                                                      ]}}
+                                          ]}}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",2]
+                                    }},
+
+                                    {"content@ng_module.panel":{
+                                      "size":["100%",100],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "$toggle_default_state":true,
+                                              "size":["100% - 6px","100%"],
+                                              "controls":[
+
+                                                  {"button_toggle@ng_asset.background_15":{
+                                                    "size":[20,"100%"],
+                                                    "controls":[
+
+                                                            {"content@ng_module.stackpanel":{
+                                                              "size":["100% - 4px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"homme_button@ng_module.section_toggle_button": { 
+                                                                      "toggle_group_forced_index": 0, 
+                                                                      "$section_topic": "page_1",
+
+                                                                     
+
+                                                                      "$is_default_toggle": true,
+                                                                      "$sibling_toggle_1": "page_2_button_toggle",
+
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_06",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }},
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"setting@ng_module.section_toggle_button": { 
+                                                                      "$toggle_group_forced_index": 1, 
+                                                                      "$section_topic": "page_2",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_05",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }}
+                                                            ]}}
+
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel":{
+                                                    "size":[3,"100%"]
+                                                  }},
+
+                                                  {"amelioration@ng_asset.background_13":{
+                                                      "size":["fill","100%"],
+                                                      "controls":[
+
+                                                              {"page1@bio_generateur.page1":{}},
+                                                              {"page2@bio_generateur.page2":{}}
+                                                  ]}}
+                                            ]}}
+                                    ]}}
+                        ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",5]
+                  }},
+
+                  {"inventory@ng_asset.background_02":{
+                    "size": ["100%",113],
+                    "controls":[
+
+                                {"inventory_content@ng_module.stackpanel":{
+                                  "size":[208,"100% - 10px"],
+                                  "controls":[           
+
+                                              {"title":{
+                                                  "size":["100%",10],
+                                                  "type":"label",
+                                                  "layer":5,
+                                                  "font_scale_factor":0.6,
+                                                  "color":[0.443, 0.443, 0.482],
+                                                  "font_type":"MinecraftTen",
+                                                  "text":"inventaire"
+                                              }},
+
+                                              {"inventory@ng_asset.background_white":{
+                                                "color":[0.180, 0.180, 0.192],
+                                                "size":[208,93],
+                                                "controls":[
+
+                                                    {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                      "size":[207,92],
+                                                      "offset":[0.5,0.5],
+                                                      "controls":[
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,69],
+                                                            "$grid_dimensions":[9,3],
+                                                            "$collection_name":"inventory_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }},
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,23],
+                                                            "$grid_dimensions":[9,1],
+                                                            "$collection_name":"hotbar_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }}
+
+                                                    ]}}
+                                              ]}}
+                                ]}}
+
+
+                  ]}}
+            ]}}    
+  ]},
+
+  "page1@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100% - 8px","100% - 8px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+   ], 
+    "controls":[
+
+            {"left_part@ng_module.stackpanel":{
+              "size":["50% - 2px","100%"],
+              "controls":[
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+
+                              {"stack_panel@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100% - 2px","100% - 2px"],
+                                "controls":[
+
+                                          {"padding@ng_module.panel":{
+                                            "size":[5,"100%"]
+                                          }},
+
+                                          {"centring@ng_module.panel":{
+                                            "size":["100%c","100%"],
+                                            "controls":[
+                                                                                                  
+                                                    {"title":{
+                                                      "type":"label",
+                                                      "font_scale_factor":0.7,
+                                                      "layer":10,
+                                                      "offset":[0,-0.6],
+                                                      "color":[0.624, 0.624, 0.663],
+                                                      "font_type":"MinecraftTen",
+                                                      "text":"Amelioration"
+                                                    }}
+                                          ]}}
+                              ]}}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",35],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c",20],
+                                "controls":[
+
+                                        {"slot_1@ng_module.custome_slot":{
+                                          "$index":16
+                                        }},
+
+                                        {"padding@ng_module.panel":{
+                                          "size":[4,"100%"]
+                                        }},
+
+                                        {"slot_2@ng_module.custome_slot":{
+                                          "$index":17
+                                        }},
+
+                                        {"padding@ng_module.panel":{
+                                          "size":[4,"100%"]
+                                        }},
+
+                                        {"slot_3@ng_module.custome_slot":{
+                                          "$index":18
+                                        }}
+                              ]}}
+                      ]}},
+
+                      {"padding@ng_module.panel":{
+                        "size":["100%",2]
+                      }},
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+
+                              {"stack_panel@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100% - 2px","100% - 2px"],
+                                "controls":[
+
+                                              {"padding@ng_module.panel":{
+                                                "size":[5,"100%"]
+                                              }},
+
+                                              {"centring@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+                                                                                                  
+                                                        {"title":{
+                                                          "type":"label",
+                                                          "font_scale_factor":0.7,
+                                                          "layer":10,
+                                                          "offset":[0,-0.6],
+                                                          "color":[0.624, 0.624, 0.663],
+                                                          "font_type":"MinecraftTen",
+                                                          "text":"informations"
+                                                        }}
+                                              ]}}
+                              ]}}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",25],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                  "size":["100% - 8px",20],
+                                  "controls":[
+                                                                                      
+                                      {"padding@ng_module.panel":{
+                                          "size":["100%",1]
+                                      }},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+
+                                              {"text@ng_module.label":{
+                                                "text":"Surchauffe",
+                                                "font_scale_factor": 0.6    
+                                              }},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":["fill","100%"]
+                                              }},
+
+                                              {"heat_bar@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 14,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                              }}
+                                      ]}},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+
+                                                {"text@ng_module.panel":{
+                                                  "size":["100%c",10],
+                                                  "controls":[
+
+                                                        {"text@ng_module.label":{
+                                                          "text":"Consomation",
+                                                          "size":["default",10],
+                                                          "font_scale_factor": 0.6    
+                                                        }}
+                                                ]}},
+
+                                                {"padding@ng_module.panel":{
+                                                  "size":["fill","100%"]
+                                                }},
+
+                                                {"consumption_label@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 13,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                               }}
+                                      ]}}
+                              ]}}
+                      ]}}
+            ]}},
+
+            {"padding@ng_module.panel":{
+              "size":[4,"100%"]
+            }},
+
+            {"description@ng_module.Simple_text": {
+              "$type_get_text": "Get_text_type_1",
+              "$index": 15,
+              "layer":15,
+              "$text_size":[90,92],
+              "size":["100%c","100%"],
+              "$font_scale_factor": 0.7,
+              "$text_color": [0.624, 0.624, 0.663]    
+            }}
+  ]},
+
+  "page2@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100% - 8px","100% - 8px"],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "page_2_button_toggle",
+          "source_property_name": "(not #toggle_state)",
+          "target_property_name": "#visible"
+        }
+    ],
+    "controls":[
+
+            {"content@ng_module.panel":{
+              "size":["100%","100%"],
+              "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":[115,65],
+                          "controls":[
+
+                                    {"panel@ng_module.panel":{
+                                      "size":[10,65],
+                                      "controls":[
+
+                                          {"icon@ng_asset.icon_19":{
+                                            "size":[7,7],
+                                            "layer":1000,
+                                            "offset":[0,1],
+                                            "anchor_from":"top_middle",
+                                            "anchor_to":"top_middle"
+                                          }},
+
+                                          {"loading_bar@ng_module.loading_bar": {
+                                            "size": [10,65],
+                                            "layer": 5,
+                                            "$index": 12,
+                                            "$load_bar_size":[8,"100% - 2px"],
+                                            "$orientation": "vertical",
+                                            "$color_border": [0.584, 0.329, 0.043],
+                                            "$layer_percent": 3,
+                                            "$texture_background_bar":"ng_asset.background_02",
+                                            "$texture_background_top": "textures/ui/background/background_white"
+                                          }}
+                                    ]}},
+
+                                    {"padding@ng_module.panel": {
+                                      "size": ["fill", "100%"]
+                                    }},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "size":[84,"100%"],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100%",8],
+                                              "controls":[
+
+                                                    {"text@ng_module.label":{
+                                                      "text":"Production",
+                                                      "font_scale_factor":0.5
+                                                    }},
+
+                                                    {"padding@ng_module.panel":{
+                                                      "size":["fill","100%"]
+                                                    }},
+
+                                                    {"text@ng_module.Simple_text": {
+                                                      "$type_get_text": "Get_text_type_1",
+                                                      "$index": 21,
+                                                      "layer":10,
+                                                      "size": ["100%c", "100%"],
+                                                      "$text_color":[0.443, 0.443, 0.482],
+                                                      "$font_scale_factor": 0.5,
+                                                      "$text_offset": [0, -1.3]
+                                                    }}
+                                            ]}},
+
+                                            {"loading_bar@ng_module.loading_bar": {
+                                              "size": ["100%",4],
+                                              "layer": 5,
+                                              "$index": 21,
+                                              "$load_bar_size":["100% - 2px",2],
+                                              "$orientation": "horizontal",
+                                              "$color_border": [0.980, 0.980, 0.980],
+                                              "$layer_percent": 3,
+                                              "$texture_background_bar":"ng_asset.background_02",
+                                              "$texture_background_top": "textures/ui/background/background_white"
+                                            }},
+
+                                            {"padding@ng_module.panel": {
+                                              "size": ["100%cm", "fill"]
+                                            }},
+
+                                            {"slot_ligne@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "collection_name":"container_items",
+                                              "size":["100%c",21],
+                                              "controls":[
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":22
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":23
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":24
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":25
+                                                    }}
+
+
+                                            ]}},
+
+                                            {"slot_ligne@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "collection_name":"container_items",
+                                              "size":["100%c",21],
+                                              "controls":[
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":26
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":27
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":28
+                                                    }},
+
+                                                    {"slot_1@ng_module.custome_slot":{
+                                                        "$index":29
+                                                    }}
+
+
+                                            ]}}
+
+                                    ]}}
+                        ]}}
+            ]}}
+  ]}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+    

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:mushroom_blue",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/mushroom_blue_0",
+        "v1": "textures/entity/ngb/mushroom_blue_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.mushroom_blue"
+      },
+      "animations": {
+        "idle": "animation.ng.mushroom_blue.idle",
+        "move": "animation.ng.mushroom_blue.move",
+        "controller": "controller.animation.ng.mushroom_blue.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.mushroom_blue"
+      ],
+      "spawn_egg": {
+        "base_color": "#afd1d9",
+        "overlay_color": "#241f20"
+      }
+    }
+  }
+}

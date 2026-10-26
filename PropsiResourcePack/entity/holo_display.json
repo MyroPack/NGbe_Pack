@@ -1,0 +1,20 @@
+﻿{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:holo_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "nope"
+      },
+      "geometry": {
+        "default": "nope"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:fish_piranha",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/fish_piranha_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.fish_piranha"
+      },
+      "animations": {
+        "idle": "animation.ng.fish_piranha.idle",
+        "move": "animation.ng.fish_piranha.move",
+        "attack": "animation.ng.fish_piranha.attack",
+        "controller": "controller.animation.ng.fish_piranha.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.fish_piranha"
+      ],
+      "spawn_egg": {
+        "base_color": "#a94b31",
+        "overlay_color": "#5e5f68"
+      }
+    }
+  }
+}

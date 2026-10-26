@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:machine_display",
+      "materials": {
+        "default": "enderman_invisible"
+      },
+      "textures": {
+        "default": "textures/blocks/cable_core"
+      },
+      "geometry": {
+        "default": "geometry.machine_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

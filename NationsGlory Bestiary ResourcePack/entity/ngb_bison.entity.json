@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:bison",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/bison_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.bison"
+      },
+      "animations": {
+        "idle": "animation.ng.bison.idle",
+        "move": "animation.ng.bison.move",
+        "attack": "animation.ng.bison.attack",
+        "controller": "controller.animation.ng.bison.move",
+        "look": "animation.ng.bison.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.bison"
+      ],
+      "spawn_egg": {
+        "base_color": "#221a13",
+        "overlay_color": "#30261b"
+      }
+    }
+  }
+}

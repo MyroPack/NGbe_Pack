@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:voriack",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/voriack_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.voriack"
+      },
+      "animations": {
+        "idle": "animation.ng.voriack.idle",
+        "move": "animation.ng.voriack.move",
+        "attack": "animation.ng.voriack.attack",
+        "controller": "controller.animation.ng.voriack.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.voriack"
+      ],
+      "spawn_egg": {
+        "base_color": "#27253c",
+        "overlay_color": "#36325a"
+      }
+    }
+  }
+}

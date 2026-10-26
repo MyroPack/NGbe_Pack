@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_tool_repairer": {
+      "arrays": {
+        "textures": {
+          "array.state": [
+            "Texture.off",
+            "Texture.on"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.state[query.variant == 1 ? 1 : 0]"
+      ]
+    }
+  }
+}

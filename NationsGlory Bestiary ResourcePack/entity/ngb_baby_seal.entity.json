@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_seal",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_seal_0",
+        "v1": "textures/entity/ngb/baby_seal_1",
+        "v2": "textures/entity/ngb/baby_seal_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_seal"
+      },
+      "animations": {
+        "idle": "animation.ng.baby_seal.idle",
+        "move": "animation.ng.baby_seal.move",
+        "swim_idle": "animation.ng.baby_seal.swim_idle",
+        "swim_move": "animation.ng.baby_seal.swim_move",
+        "controller": "controller.animation.ng.baby_seal.move",
+        "look": "animation.ng.baby_seal.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_swimming = query.mark_variant == 2;",
+          "variable.ngb_moving = query.modified_move_speed > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_seal"
+      ],
+      "spawn_egg": {
+        "base_color": "#75767b",
+        "overlay_color": "#66676c"
+      }
+    }
+  }
+}

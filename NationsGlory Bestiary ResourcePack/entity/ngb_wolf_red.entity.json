@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:wolf_red",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/wolf_red_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.wolf"
+      },
+      "animations": {
+        "idle": "animation.ng.wolf.idle",
+        "move": "animation.ng.wolf.move",
+        "controller": "controller.animation.ng.wolf_red.move",
+        "look": "animation.ng.wolf.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.wolf_red"
+      ],
+      "spawn_egg": {
+        "base_color": "#9a744e",
+        "overlay_color": "#443728"
+      }
+    }
+  }
+}

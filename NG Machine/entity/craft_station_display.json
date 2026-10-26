@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:craft_station_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/craft_station"
+			},
+			"geometry": {
+				"default": "geometry.craft_station"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

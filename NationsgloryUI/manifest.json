@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "Recube"
+    ],
+    "generated_with": {
+      "bridge": [
+        "2.7.46"
+      ],
+      "dash": [
+        "0.11.7"
+      ]
+    }
+  },
+  "header": {
+    "name": "Nationsglory UI",
+    "description": "Nationsglory UI",
+    "uuid": "9b43c001-bdfc-44ef-a513-4c0d3a0d553c",
+    "version": [
+      1,
+      1,
+      48
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "description": "Nationsglory UI",
+      "uuid": "28aec5d1-ce6b-4045-927d-e2126e57b7c4",
+      "version": [
+        1,
+        1,
+        48
+      ]
+    }
+  ]
+}

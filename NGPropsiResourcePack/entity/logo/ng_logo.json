@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:ng_logo",
+      "materials": {
+        "default": "alpha_block_color"
+      },
+      "textures": {
+        "default": "textures/entity/logo/ng_logo"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_ng_logo"
+      },
+      "animations": {
+        "idle": "animation.propsi_e_ng_logo.idle"
+      },
+      "scripts": {
+        "scale": "2",
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:bio_generator_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/bio_generator",
+        "on": "textures/blocks/bio_generator_on"
+      },
+      "geometry": {
+        "default": "geometry.bio_generator"
+      },
+      "render_controllers": [
+        "controller.render.ng_bio_generator"
+      ]
+    }
+  }
+}

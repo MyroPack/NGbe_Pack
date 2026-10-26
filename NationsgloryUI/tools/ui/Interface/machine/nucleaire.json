@@ -1,0 +1,650 @@
+{
+  // Ecran partage par toutes les machines du nucleaire de NGMachineMod (route ng:nucleaire, voir UI_LAYOUT.md du mod).
+  // Meme cadre que les autres machines (en-tete, onglets machine et reglages, ameliorations, inventaire) ; la page
+  // machine montre ce que la machine envoie : titre (21), etat (22), MARCHE et ARRET (23, 24), barre (25) et son texte
+  // (26), bloc d'informations de 8 lignes (intitules 27 a 34, valeurs 35 a 42), 2 cases (43, 44) dont le nombre est
+  // dans le slot 45, l'objet attendu en transparence dans chaque case vide (46, 47) et la legende des cases (48) ; la
+  // troisieme case de la forge nucleaire (49) et son objet attendu (50).
+  "namespace": "nucleaire",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+            {"background_black@ng_asset.background_white":{
+              "color":[0.000, 0.000, 0.000],
+              "size":["150%","150%"],
+              "alpha":0.5
+            }},
+
+            {"stack_panel@ng_module.stackpanel":{
+              "size":[262,"100%c"],
+              "controls":[
+
+                  {"gestion_panel@ng_asset.background_white":{
+                    "color":[0.153, 0.153, 0.165],
+                    "size":["100%",127],
+                    "controls":[
+
+                        {"stack_panel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                    {"header@ng_asset.background_01":{
+                                      "size": ["100%",20],
+                                      "controls":[
+
+                                          {"stack_panel@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":["100% - 4px","100% - 2px"],
+                                            "controls":[
+
+                                                     {"padding@ng_module.panel":{
+                                                        "size":[5,"100%"]
+                                                     }},
+
+                                                     {"title@ng_module.Simple_text": {
+                                                        "$type_get_text": "Get_text_type_1",
+                                                        "$index": 21,
+                                                        "layer":10,
+                                                        "size": ["100%c", "100%"],
+                                                        "$font_type":"MinecraftTen",
+                                                        "$font_scale_factor": 0.8,
+                                                        "$text_offset":[0,-1.3]
+                                                     }},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":["fill","100%"]
+                                                      }},
+
+                                                      {"elec@ng_module.panel":{
+                                                       "size":["100%c","100%"],
+                                                       "controls":[
+
+                                                          {"background@ng_asset.background_03":{
+                                                            "min_size":[20,"100% - 2px"],
+                                                            "size": ["100%c + 10px","100% - 2px"],
+                                                            "controls":[
+
+                                                                      {"text@ng_module.Simple_text": {
+                                                                        "$type_get_text": "Get_text_type_1",
+                                                                        "$index": 20,
+                                                                        "layer":5,
+                                                                        "$text_offset":[0,0.3],
+                                                                        "size": ["100%c", "100%"],
+                                                                        "$size_icone_left": [8,8],
+                                                                        "$color_icone_left": [0.910, 0.725, 0.192],
+                                                                        "$texture_icone_left": "ng_asset.icon_03",
+                                                                        "$font_scale_factor": 0.7
+                                                                      }}
+                                                            ]}}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[1,"100%"]
+                                                      }},
+
+                                                      {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+                                                              {"close_button@ng_module.close_button":{}}
+                                                      ]}}
+                                          ]}}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",2]
+                                    }},
+
+                                    {"content@ng_module.panel":{
+                                      "size":["100%",100],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "$toggle_default_state":true,
+                                              "size":["100% - 6px","100%"],
+                                              "controls":[
+
+                                                  {"button_toggle@ng_asset.background_15":{
+                                                    "size":[20,"100%"],
+                                                    "controls":[
+
+                                                            {"content@ng_module.stackpanel":{
+                                                              "size":["100% - 4px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"homme_button@ng_module.section_toggle_button": {
+                                                                      "toggle_group_forced_index": 0,
+                                                                      "$section_topic": "page_1",
+                                                                      "$is_default_toggle": true,
+                                                                      "$sibling_toggle_1": "page_2_button_toggle",
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_06",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }},
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"setting@ng_module.section_toggle_button": {
+                                                                      "$toggle_group_forced_index": 1,
+                                                                      "$section_topic": "page_2",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_05",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }}
+                                                            ]}}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel":{
+                                                    "size":[3,"100%"]
+                                                  }},
+
+                                                  {"amelioration@ng_asset.background_13":{
+                                                      "size":["fill","100%"],
+                                                      "controls":[
+                                                              {"page1@nucleaire.page1":{}},
+                                                              {"page2@nucleaire.page2":{}}
+                                                  ]}}
+                                            ]}}
+                                    ]}}
+                        ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",5]
+                  }},
+
+                  {"inventory@ng_asset.background_02":{
+                    "size": ["100%",113],
+                    "controls":[
+
+                                {"inventory_content@ng_module.stackpanel":{
+                                  "size":[208,"100% - 10px"],
+                                  "controls":[
+
+                                              {"title":{
+                                                  "size":["100%",10],
+                                                  "type":"label",
+                                                  "layer":5,
+                                                  "font_scale_factor":0.6,
+                                                  "color":[0.443, 0.443, 0.482],
+                                                  "font_type":"MinecraftTen",
+                                                  "localize":true,
+                                                  "text":"ng.nucleaire.inventory"
+                                              }},
+
+                                              {"inventory@ng_asset.background_white":{
+                                                "color":[0.180, 0.180, 0.192],
+                                                "size":[208,93],
+                                                "controls":[
+
+                                                    {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                      "size":[207,92],
+                                                      "offset":[0.5,0.5],
+                                                      "controls":[
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,69],
+                                                            "$grid_dimensions":[9,3],
+                                                            "$collection_name":"inventory_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }},
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,23],
+                                                            "$grid_dimensions":[9,1],
+                                                            "$collection_name":"hotbar_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }}
+                                                    ]}}
+                                              ]}}
+                                ]}}
+                  ]}}
+            ]}}
+  ]},
+
+  // Page des reglages : ameliorations, informations, description (comme les autres machines)
+  "page1@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100% - 8px","100% - 8px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls":[
+
+            {"left_part@ng_module.stackpanel":{
+              "size":["50% - 2px","100%"],
+              "controls":[
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+                              {"title":{
+                                "type":"label",
+                                "font_scale_factor":0.7,
+                                "layer":10,
+                                "offset":[0,-0.6],
+                                "color":[0.624, 0.624, 0.663],
+                                "font_type":"MinecraftTen",
+                                "localize":true,
+                                "text":"ng.nucleaire.upgrades"
+                              }}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",35],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c",20],
+                                "controls":[
+                                        {"slot_1@ng_module.custome_slot":{ "$index":16 }},
+                                        {"padding@ng_module.panel":{ "size":[4,"100%"] }},
+                                        {"slot_2@ng_module.custome_slot":{ "$index":17 }},
+                                        {"padding@ng_module.panel":{ "size":[4,"100%"] }},
+                                        {"slot_3@ng_module.custome_slot":{ "$index":18 }}
+                              ]}}
+                      ]}},
+
+                      {"padding@ng_module.panel":{
+                        "size":["100%",2]
+                      }},
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+                              {"title":{
+                                "type":"label",
+                                "font_scale_factor":0.7,
+                                "layer":10,
+                                "offset":[0,-0.6],
+                                "color":[0.624, 0.624, 0.663],
+                                "font_type":"MinecraftTen",
+                                "localize":true,
+                                "text":"ng.nucleaire.information"
+                              }}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",25],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                  "size":["100% - 8px",20],
+                                  "controls":[
+
+                                      {"padding@ng_module.panel":{
+                                          "size":["100%",1]
+                                      }},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+                                              {"text@ng_module.label":{
+                                                "text":"ng.nucleaire.heat",
+                                                "localize":true,
+                                                "font_scale_factor": 0.6
+                                              }},
+                                              {"padding@ng_module.panel":{
+                                                "size":["fill","100%"]
+                                              }},
+                                              {"heat_bar@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 14,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                              }}
+                                      ]}},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+                                                {"text@ng_module.label":{
+                                                  "text":"ng.nucleaire.consumption",
+                                                  "localize":true,
+                                                  "size":["default",10],
+                                                  "font_scale_factor": 0.6
+                                                }},
+                                                {"padding@ng_module.panel":{
+                                                  "size":["fill","100%"]
+                                                }},
+                                                {"consumption_label@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 13,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                               }}
+                                      ]}}
+                              ]}}
+                      ]}}
+            ]}},
+
+            {"padding@ng_module.panel":{
+              "size":[4,"100%"]
+            }},
+
+            {"description@ng_module.Simple_text": {
+              "$type_get_text": "Get_text_type_1",
+              "$index": 15,
+              "layer":15,
+              "$text_size":[110,92],
+              "size":["100%c","100%"],
+              "$font_scale_factor": 0.6,
+              "$text_color": [0.624, 0.624, 0.663]
+            }}
+  ]},
+
+  // Une ligne du bloc d'informations : l'intitule a gauche (gris), la valeur a droite (prete, couleurs comprises)
+  "row@ng_module.stackpanel": {
+    "orientation":"horizontal",
+    "size":["100%",9.5],
+    "controls":[
+      {"padding@ng_module.panel":{ "size":[3,"100%"] }},
+      {"label@ng_module.Simple_text": {
+        "$type_get_text": "Get_text_type_1",
+        "$index": "$label_index",
+        "layer":10,
+        "size": ["100%c", "100%"],
+        "$font_scale_factor": 0.5,
+        "$text_color": [0.624, 0.624, 0.663],
+        "$text_offset": [0, -0.5]
+      }},
+      {"padding@ng_module.panel":{ "size":["fill","100%"] }},
+      {"value@ng_module.Simple_text": {
+        "$type_get_text": "Get_text_type_1",
+        "$index": "$value_index",
+        "layer":10,
+        "size": ["100%c", "100%"],
+        "$font_scale_factor": 0.5,
+        "$text_offset": [0, -0.5]
+      }},
+      {"padding@ng_module.panel":{ "size":[3,"100%"] }}
+    ]
+  },
+
+  // Une case reelle : dessinee seulement si la machine en a assez (slot 45), avec l'objet attendu en transparence tant
+  // qu'elle est vide. Le nombre d'objets est ramene d'un pixel vers l'interieur : a sa place par defaut, colle au coin
+  // de la case de 21, il debordait sur le cadre (essai du 17/10).
+  "slot@ng_module.conditional": {
+    "collection_name":"container_items",
+    "type":"panel",
+    "size":[21,21],
+    "controls":[
+      {"cell@ng_module.collectionpanel":{
+        "collection_name":"container_items",
+        "size":["100%","100%"],
+        "controls":[
+          {"ghost@nucleaire.ghost_item":{ "$index":"$ghost_index", "layer":2 }},
+          {"slot@ng_module.custome_slot":{
+            "$index":"$slot_index",
+            "$offset_stack_count_label":[-1,-1],
+            "$font_scale_factor_stack_count_label":0.9
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // L'objet attendu d'une case vide : le serveur met un exemplaire de l'objet lui-meme dans le slot $index (rien quand
+  // la case est occupee), dessine en transparence par le rendu des objets du jeu, a la taille de l'objet de la case.
+  // Rien d'autre : ni fond, ni nombre, ni bouton (la case reelle, au-dessus pour la souris, garde les clics et le
+  // survol). Meme principe que l'apercu du compresseur electrique. L'ancien chemin d'icone lu dans le nom donnait le
+  // damier violet et noir de texture introuvable (essai du 17/10).
+  "ghost_item@ng_module.collectionpanel":{
+    "collection_name":"container_items",
+    "collection_index":"$index",
+    "size":[16,16],
+    "controls":[
+      {"item@common.item_renderer":{
+        "size":["100%","100%"],
+        "alpha":0.35,
+        "$item_collection_name":"container_items"
+      }}
+    ]
+  },
+
+  // La premiere case se montre si le slot 45 dit 1, 2 ou 3, la deuxieme s'il dit 2 ou 3, la troisieme (forge
+  // nucleaire : missile, catalyseur, barre d'uranium) s'il dit 3
+  "slot_first@nucleaire.slot": {
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '1' - '2' - '3') = #hover_text))", "target_property_name": "#visible"}
+    ]
+  },
+  "slot_second@nucleaire.slot": {
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '2' - '3') = #hover_text))", "target_property_name": "#visible"}
+    ]
+  },
+  "slot_third@nucleaire.slot": {
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '3') = #hover_text))", "target_property_name": "#visible"}
+    ]
+  },
+
+  // Un bouton MARCHE ou ARRET : cache tant que son nom ne porte ni §0 ni §1 (la machine n'a pas d'interrupteur)
+  "power@ng_module.conditional": {
+    "collection_name":"container_items",
+    "type":"panel",
+    "size":[44,14],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))", "target_property_name": "#visible"}
+    ],
+    "controls":[
+      {"button@ng_module.multiple_status_button": {
+        "size": ["100%", "100%"],
+        "$size_button": ["100%", "100%"],
+        "$index": "$button_index",
+        "$textures_button_S0": "ng_asset.button_empty",
+        "$textures_button_S1": "$current_texture",
+        "$S0_type_get_text": "Get_text_type_1",
+        "$S1_type_get_text": "Get_text_type_1",
+        "$font_type":"MinecraftTen",
+        "$font_scale_factor": 0.6,
+        "$fonction_mapping_button_S0": "clickable",
+        "$fonction_mapping_button_S1": "nonclickable",
+        "$text_offset": [0, -1.3]
+      }}
+    ]
+  },
+
+  // Page de la machine : a gauche l'etat, la barre, les cases et l'interrupteur ; a droite le bloc d'informations
+  "page2@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100% - 8px","100% - 8px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "(not #toggle_state)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls":[
+
+            {"left@ng_module.stackpanel":{
+              "size":[96,"100%"],
+              "collection_name":"container_items",
+              "controls":[
+
+                  {"state@ng_module.Simple_text": {
+                    "$type_get_text": "Get_text_type_1",
+                    "$index": 22,
+                    "layer":10,
+                    "size": ["100%", 10],
+                    "$font_type":"MinecraftTen",
+                    "$font_scale_factor": 0.65,
+                    "$text_offset": [0, -1]
+                  }},
+
+                  {"bar_label@ng_module.Simple_text": {
+                    "$type_get_text": "Get_text_type_1",
+                    "$index": 26,
+                    "layer":10,
+                    "size": ["100%", 7],
+                    "$font_scale_factor": 0.5,
+                    "$text_color": [0.910, 0.725, 0.192],
+                    "$text_offset": [0, -1]
+                  }},
+
+                  {"loading_bar@ng_module.loading_bar": {
+                    "size": ["100%",6],
+                    "layer": 5,
+                    "$index": 25,
+                    "$load_bar_size":["100% - 2px",4],
+                    "$orientation": "horizontal",
+                    "$color_border": [0.910, 0.725, 0.192],
+                    "$layer_percent": 3,
+                    "$texture_background_bar":"ng_asset.background_02",
+                    "$texture_background_top": "textures/ui/background/background_white"
+                  }},
+
+                  {"padding@ng_module.panel":{ "size":["100%",5] }},
+
+                  // Le parent direct d'une case conditionnelle doit nommer la collection, sinon sa condition ne lit rien
+                  // et la case reste cachee (meme regle que list_craft du compresseur et content de la citerne)
+                  {"slots@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "size":["100%",21],
+                    "collection_name":"container_items",
+                    "controls":[
+                        {"slot_0@nucleaire.slot_first":{
+                          "collection_index": 45,
+                          "$slot_index": 43,
+                          "$ghost_index": 46
+                        }},
+                        {"padding@ng_module.panel":{ "size":[3,"100%"] }},
+                        {"slot_1@nucleaire.slot_second":{
+                          "collection_index": 45,
+                          "$slot_index": 44,
+                          "$ghost_index": 47
+                        }},
+                        {"padding@ng_module.panel":{ "size":[3,"100%"] }},
+                        {"slot_2@nucleaire.slot_third":{
+                          "collection_index": 45,
+                          "$slot_index": 49,
+                          "$ghost_index": 50
+                        }}
+                    ]}},
+
+                  {"caption@ng_module.Simple_text": {
+                    "$type_get_text": "Get_text_type_1",
+                    "$index": 48,
+                    "layer":10,
+                    "size": ["100%", 8],
+                    "$font_scale_factor": 0.45,
+                    "$text_offset": [0, 0]
+                  }},
+
+                  {"padding@ng_module.panel":{ "size":["100%","fill"] }},
+
+                  {"buttons@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "size":["100%",14],
+                    "collection_name":"container_items",
+                    "controls":[
+                        {"on@nucleaire.power":{
+                          "collection_index": 23,
+                          "$button_index": 23,
+                          "$current_texture": "ng_asset.button_activated"
+                        }},
+                        {"padding@ng_module.panel":{ "size":[4,"100%"] }},
+                        {"off@nucleaire.power":{
+                          "collection_index": 24,
+                          "$button_index": 24,
+                          "$current_texture": "ng_asset.button_07"
+                        }}
+                    ]}}
+              ]}},
+
+            {"padding@ng_module.panel":{
+              "size":[5,"100%"]
+            }},
+
+            {"info@ng_module.stackpanel":{
+              "size":["fill","100%"],
+              "controls":[
+
+                  {"header@ng_asset.background_12":{
+                    "size": ["100%",12],
+                    "controls":[
+                        {"stack_panel@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+                              {"padding@ng_module.panel":{ "size":[4,"100%"] }},
+                              {"centring@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+                                    {"title":{
+                                      "type":"label",
+                                      "font_scale_factor":0.6,
+                                      "layer":10,
+                                      "offset":[0,-0.6],
+                                      "color":[0.624, 0.624, 0.663],
+                                      "font_type":"MinecraftTen",
+                                      "localize":true,
+                                      "text":"ng.nucleaire.information"
+                                    }}
+                              ]}}
+                          ]}}
+                  ]}},
+
+                  {"rows@ng_asset.background_11":{
+                    "size": ["100%","fill"],
+                    "controls":[
+                        {"rows@ng_module.stackpanel":{
+                          "size":["100%","100% - 2px"],
+                          "controls":[
+                              {"padding@ng_module.panel":{ "size":["100%",1] }},
+                              {"row_0@nucleaire.row":{ "$label_index": 27, "$value_index": 35 }},
+                              {"row_1@nucleaire.row":{ "$label_index": 28, "$value_index": 36 }},
+                              {"row_2@nucleaire.row":{ "$label_index": 29, "$value_index": 37 }},
+                              {"row_3@nucleaire.row":{ "$label_index": 30, "$value_index": 38 }},
+                              {"row_4@nucleaire.row":{ "$label_index": 31, "$value_index": 39 }},
+                              {"row_5@nucleaire.row":{ "$label_index": 32, "$value_index": 40 }},
+                              {"row_6@nucleaire.row":{ "$label_index": 33, "$value_index": 41 }},
+                              {"row_7@nucleaire.row":{ "$label_index": 34, "$value_index": 42 }}
+                          ]}}
+                  ]}}
+              ]}}
+    ]}
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:village_aurelions_officer",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/village_aurelions_officer_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.village_aurelions_officer"
+      },
+      "animations": {
+        "idle": "animation.ng.village_aurelions_officer.idle",
+        "move": "animation.ng.village_aurelions_officer.move",
+        "attack": "animation.ng.village_aurelions_officer.attack",
+        "controller": "controller.animation.ng.village_aurelions_officer.move",
+        "look": "animation.ng.village_aurelions_officer.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.village_aurelions_officer"
+      ],
+      "spawn_egg": {
+        "base_color": "#d0af94",
+        "overlay_color": "#473518"
+      }
+    }
+  }
+}

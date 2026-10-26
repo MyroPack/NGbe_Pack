@@ -1,0 +1,34 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "Recube"
+    ]
+  },
+  "header": {
+    "name": "NationsGlory Bestiary ResourcePack",
+    "description": "Mobs of the NationsGlory bestiary (models, textures, animations, sounds)",
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ],
+    "uuid": "6d00234e-d69f-5d35-b7b1-ed6de9ece673",
+    "version": [
+      0,
+      1,
+      1
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "99e7a329-c91d-5d91-9ebb-23f009cd815b",
+      "version": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

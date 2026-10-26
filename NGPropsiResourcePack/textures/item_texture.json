@@ -1,0 +1,1266 @@
+{
+  "resource_pack_name" : "NGPropsiResourcePack",
+  "texture_name" : "atlas.items",
+  "texture_data" : {
+    "propsi_tool" : {
+      "textures" : "textures/items/propsi_tool"
+    },
+    "rotation_tool" : {
+      "textures" : "textures/items/rotation_tool"
+    },
+    "bo_staff" : {
+      "textures" : "textures/items/bo_staff"
+    },
+    "bronze_staff" : {
+      "textures" : "textures/items/bronze_staff"
+    },
+    "demonic_staff" : {
+      "textures" : "textures/items/demonic_staff"
+    },
+    "diamond_staff" : {
+      "textures" : "textures/items/diamond_staff"
+    },
+    "egg_staff_ng" : {
+      "textures" : "textures/items/egg_staff_ng"
+    },
+    "emerald_staff" : {
+      "textures" : "textures/items/emerald_staff"
+    },
+    "gold_staff" : {
+      "textures" : "textures/items/gold_staff"
+    },
+    "mithril_staff" : {
+      "textures" : "textures/items/mithril_staff"
+    },
+    "staff_ananas" : {
+      "textures" : "textures/items/staff_ananas"
+    },
+    "staff_apple_0" : {
+      "textures" : "textures/items/staff_apple_0"
+    },
+    "staff_apple_1" : {
+      "textures" : "textures/items/staff_apple_1"
+    },
+    "staff_apple_2" : {
+      "textures" : "textures/items/staff_apple_2"
+    },
+    "staff_apple_3" : {
+      "textures" : "textures/items/staff_apple_3"
+    },
+    "staff_bananas_0" : {
+      "textures" : "textures/items/staff_bananas_0"
+    },
+    "staff_bananas_1" : {
+      "textures" : "textures/items/staff_bananas_1"
+    },
+    "staff_basket" : {
+      "textures" : "textures/items/staff_basket"
+    },
+    "staff_beach_ball" : {
+      "textures" : "textures/items/staff_beach_ball"
+    },
+    "staff_bell" : {
+      "textures" : "textures/items/staff_bell"
+    },
+    "staff_black_chocolate" : {
+      "textures" : "textures/items/staff_black_chocolate"
+    },
+    "staff_bone_1" : {
+      "textures" : "textures/items/staff_bone_1"
+    },
+    "staff_bone_2" : {
+      "textures" : "textures/items/staff_bone_2"
+    },
+    "staff_bottle_0" : {
+      "textures" : "textures/items/staff_bottle_0"
+    },
+    "staff_bottle_1" : {
+      "textures" : "textures/items/staff_bottle_1"
+    },
+    "staff_bottle_2" : {
+      "textures" : "textures/items/staff_bottle_2"
+    },
+    "staff_bottle_3" : {
+      "textures" : "textures/items/staff_bottle_3"
+    },
+    "staff_bottle_4" : {
+      "textures" : "textures/items/staff_bottle_4"
+    },
+    "staff_brain_1" : {
+      "textures" : "textures/items/staff_brain_1"
+    },
+    "staff_brain_2" : {
+      "textures" : "textures/items/staff_brain_2"
+    },
+    "staff_broken_easter" : {
+      "textures" : "textures/items/staff_broken_easter"
+    },
+    "staff_bronze_egg" : {
+      "textures" : "textures/items/staff_bronze_egg"
+    },
+    "staff_bucket_0" : {
+      "textures" : "textures/items/staff_bucket_0"
+    },
+    "staff_bucket_1" : {
+      "textures" : "textures/items/staff_bucket_1"
+    },
+    "staff_bucket_2" : {
+      "textures" : "textures/items/staff_bucket_2"
+    },
+    "staff_candy_1" : {
+      "textures" : "textures/items/staff_candy_1"
+    },
+    "staff_candy_2" : {
+      "textures" : "textures/items/staff_candy_2"
+    },
+    "staff_candy_3" : {
+      "textures" : "textures/items/staff_candy_3"
+    },
+    "staff_candy_4" : {
+      "textures" : "textures/items/staff_candy_4"
+    },
+    "staff_candy_5" : {
+      "textures" : "textures/items/staff_candy_5"
+    },
+    "staff_candycauldron" : {
+      "textures" : "textures/items/staff_candycauldron"
+    },
+    "staff_casserole" : {
+      "textures" : "textures/items/staff_casserole"
+    },
+    "staff_cauldron" : {
+      "textures" : "textures/items/staff_cauldron"
+    },
+    "staff_cherries" : {
+      "textures" : "textures/items/staff_cherries"
+    },
+    "staff_chocolate_bunny" : {
+      "textures" : "textures/items/staff_chocolate_bunny"
+    },
+    "staff_chocolate_hen" : {
+      "textures" : "textures/items/staff_chocolate_hen"
+    },
+    "staff_coin_0" : {
+      "textures" : "textures/items/staff_coin_0"
+    },
+    "staff_coin_1" : {
+      "textures" : "textures/items/staff_coin_1"
+    },
+    "staff_coin_2" : {
+      "textures" : "textures/items/staff_coin_2"
+    },
+    "staff_coin_3" : {
+      "textures" : "textures/items/staff_coin_3"
+    },
+    "staff_coin_4" : {
+      "textures" : "textures/items/staff_coin_4"
+    },
+    "staff_coin_5" : {
+      "textures" : "textures/items/staff_coin_5"
+    },
+    "staff_coin_6" : {
+      "textures" : "textures/items/staff_coin_6"
+    },
+    "staff_coin_7" : {
+      "textures" : "textures/items/staff_coin_7"
+    },
+    "staff_coin_8" : {
+      "textures" : "textures/items/staff_coin_8"
+    },
+    "staff_coin_9" : {
+      "textures" : "textures/items/staff_coin_9"
+    },
+    "staff_coin_10" : {
+      "textures" : "textures/items/staff_coin_10"
+    },
+    "staff_coin_11" : {
+      "textures" : "textures/items/staff_coin_11"
+    },
+    "staff_coin_12" : {
+      "textures" : "textures/items/staff_coin_12"
+    },
+    "staff_counter_geiger" : {
+      "textures" : "textures/items/staff_counter_geiger"
+    },
+    "staff_crystal_0" : {
+      "textures" : "textures/items/staff_crystal_0"
+    },
+    "staff_crystal_1" : {
+      "textures" : "textures/items/staff_crystal_1"
+    },
+    "staff_crystal_2" : {
+      "textures" : "textures/items/staff_crystal_2"
+    },
+    "staff_crystal_3" : {
+      "textures" : "textures/items/staff_crystal_3"
+    },
+    "staff_crystal_4" : {
+      "textures" : "textures/items/staff_crystal_4"
+    },
+    "staff_crystal_5" : {
+      "textures" : "textures/items/staff_crystal_5"
+    },
+    "staff_crystal_6" : {
+      "textures" : "textures/items/staff_crystal_6"
+    },
+    "staff_cursedskull_1" : {
+      "textures" : "textures/items/staff_cursedskull_1"
+    },
+    "staff_cursedskull_2" : {
+      "textures" : "textures/items/staff_cursedskull_2"
+    },
+    "staff_cursedskull_3" : {
+      "textures" : "textures/items/staff_cursedskull_3"
+    },
+    "staff_cursedskull_4" : {
+      "textures" : "textures/items/staff_cursedskull_4"
+    },
+    "staff_cursedskull_5" : {
+      "textures" : "textures/items/staff_cursedskull_5"
+    },
+    "staff_dish_0" : {
+      "textures" : "textures/items/staff_dish_0"
+    },
+    "staff_dish_1" : {
+      "textures" : "textures/items/staff_dish_1"
+    },
+    "staff_dish_2" : {
+      "textures" : "textures/items/staff_dish_2"
+    },
+    "staff_dish_3" : {
+      "textures" : "textures/items/staff_dish_3"
+    },
+    "staff_dried_kelp" : {
+      "textures" : "textures/items/staff_dried_kelp"
+    },
+    "staff_dust_2" : {
+      "textures" : "textures/items/staff_dust_2"
+    },
+    "staff_dust_3" : {
+      "textures" : "textures/items/staff_dust_3"
+    },
+    "staff_dust_8" : {
+      "textures" : "textures/items/staff_dust_8"
+    },
+    "staff_dust_11" : {
+      "textures" : "textures/items/staff_dust_11"
+    },
+    "staff_dust_12" : {
+      "textures" : "textures/items/staff_dust_12"
+    },
+    "staff_dust_13" : {
+      "textures" : "textures/items/staff_dust_13"
+    },
+    "staff_easter_backet" : {
+      "textures" : "textures/items/staff_easter_backet"
+    },
+    "staff_easter_bell" : {
+      "textures" : "textures/items/staff_easter_bell"
+    },
+    "staff_easter_egg_0" : {
+      "textures" : "textures/items/staff_easter_egg_0"
+    },
+    "staff_easter_egg_7" : {
+      "textures" : "textures/items/staff_easter_egg_7"
+    },
+    "staff_easter_egg_8" : {
+      "textures" : "textures/items/staff_easter_egg_8"
+    },
+    "staff_elec_circuit" : {
+      "textures" : "textures/items/staff_elec_circuit"
+    },
+    "staff_explosive" : {
+      "textures" : "textures/items/staff_explosive"
+    },
+    "staff_extractmineral_8" : {
+      "textures" : "textures/items/staff_extractmineral_8"
+    },
+    "staff_extractmineral_0" : {
+      "textures" : "textures/items/staff_extractmineral_0"
+    },
+    "staff_extractmineral_1" : {
+      "textures" : "textures/items/staff_extractmineral_1"
+    },
+    "staff_extractmineral_2" : {
+      "textures" : "textures/items/staff_extractmineral_2"
+    },
+    "staff_extractmineral_3" : {
+      "textures" : "textures/items/staff_extractmineral_3"
+    },
+    "staff_extractmineral_4" : {
+      "textures" : "textures/items/staff_extractmineral_4"
+    },
+    "staff_extractmineral_5" : {
+      "textures" : "textures/items/staff_extractmineral_5"
+    },
+    "staff_extractmineral_6" : {
+      "textures" : "textures/items/staff_extractmineral_6"
+    },
+    "staff_extractmineral_7" : {
+      "textures" : "textures/items/staff_extractmineral_7"
+    },
+    "staff_eye_human" : {
+      "textures" : "textures/items/staff_eye_human"
+    },
+    "staff_eye_monster" : {
+      "textures" : "textures/items/staff_eye_monster"
+    },
+    "staff_eye_zombie" : {
+      "textures" : "textures/items/staff_eye_zombie"
+    },
+    "staff_flipflops" : {
+      "textures" : "textures/items/staff_flipflops"
+    },
+    "staff_fried_eggs" : {
+      "textures" : "textures/items/staff_fried_eggs"
+    },
+    "staff_futurphone" : {
+      "textures" : "textures/items/staff_futurphone"
+    },
+    "staff_gem_0" : {
+      "textures" : "textures/items/staff_gem_0"
+    },
+    "staff_gem_1" : {
+      "textures" : "textures/items/staff_gem_1"
+    },
+    "staff_gem_2" : {
+      "textures" : "textures/items/staff_gem_2"
+    },
+    "staff_gem_3" : {
+      "textures" : "textures/items/staff_gem_3"
+    },
+    "staff_gem_4" : {
+      "textures" : "textures/items/staff_gem_4"
+    },
+    "staff_gem_5" : {
+      "textures" : "textures/items/staff_gem_5"
+    },
+    "staff_gem_6" : {
+      "textures" : "textures/items/staff_gem_6"
+    },
+    "staff_gem_7" : {
+      "textures" : "textures/items/staff_gem_7"
+    },
+    "staff_gem_8" : {
+      "textures" : "textures/items/staff_gem_8"
+    },
+    "staff_gem_9" : {
+      "textures" : "textures/items/staff_gem_9"
+    },
+    "staff_gem_10" : {
+      "textures" : "textures/items/staff_gem_10"
+    },
+    "staff_ghost" : {
+      "textures" : "textures/items/staff_ghost"
+    },
+    "staff_gold_egg" : {
+      "textures" : "textures/items/staff_gold_egg"
+    },
+    "staff_grapes_0" : {
+      "textures" : "textures/items/staff_grapes_0"
+    },
+    "staff_grapes_1" : {
+      "textures" : "textures/items/staff_grapes_1"
+    },
+    "staff_hall_bucket" : {
+      "textures" : "textures/items/staff_hall_bucket"
+    },
+    "staff_hall_pumpkin" : {
+      "textures" : "textures/items/staff_hall_pumpkin"
+    },
+    "staff_hand_human" : {
+      "textures" : "textures/items/staff_hand_human"
+    },
+    "staff_hand_monster" : {
+      "textures" : "textures/items/staff_hand_monster"
+    },
+    "staff_hand_zombie" : {
+      "textures" : "textures/items/staff_hand_zombie"
+    },
+    "staff_icecream_0" : {
+      "textures" : "textures/items/staff_icecream_0"
+    },
+    "staff_icecream_1" : {
+      "textures" : "textures/items/staff_icecream_1"
+    },
+    "staff_icecream_2" : {
+      "textures" : "textures/items/staff_icecream_2"
+    },
+    "staff_ingot_0" : {
+      "textures" : "textures/items/staff_ingot_0"
+    },
+    "staff_ingot_1" : {
+      "textures" : "textures/items/staff_ingot_1"
+    },
+    "staff_ingot_2" : {
+      "textures" : "textures/items/staff_ingot_2"
+    },
+    "staff_ingot_3" : {
+      "textures" : "textures/items/staff_ingot_3"
+    },
+    "staff_lemon_0" : {
+      "textures" : "textures/items/staff_lemon_0"
+    },
+    "staff_lemon_1" : {
+      "textures" : "textures/items/staff_lemon_1"
+    },
+    "staff_lifebelt" : {
+      "textures" : "textures/items/staff_lifebelt"
+    },
+    "staff_mag" : {
+      "textures" : "textures/items/staff_mag"
+    },
+    "staff_magiccauldron_1" : {
+      "textures" : "textures/items/staff_magiccauldron_1"
+    },
+    "staff_magiccauldron_2" : {
+      "textures" : "textures/items/staff_magiccauldron_2"
+    },
+    "staff_magiccauldron_3" : {
+      "textures" : "textures/items/staff_magiccauldron_3"
+    },
+    "staff_magicwand_1" : {
+      "textures" : "textures/items/staff_magicwand_1"
+    },
+    "staff_magicwand_2" : {
+      "textures" : "textures/items/staff_magicwand_2"
+    },
+    "staff_milk_chocolat" : {
+      "textures" : "textures/items/staff_milk_chocolat"
+    },
+    "staff_newspaper" : {
+      "textures" : "textures/items/staff_newspaper"
+    },
+    "staff_orange_0" : {
+      "textures" : "textures/items/staff_orange_0"
+    },
+    "staff_orange_1" : {
+      "textures" : "textures/items/staff_orange_1"
+    },
+    "staff_paper_0" : {
+      "textures" : "textures/items/staff_paper_0"
+    },
+    "staff_paper_1" : {
+      "textures" : "textures/items/staff_paper_1"
+    },
+    "staff_paper_2" : {
+      "textures" : "textures/items/staff_paper_2"
+    },
+    "staff_paper_3" : {
+      "textures" : "textures/items/staff_paper_3"
+    },
+    "staff_paper_4" : {
+      "textures" : "textures/items/staff_paper_4"
+    },
+    "staff_paper_5" : {
+      "textures" : "textures/items/staff_paper_5"
+    },
+    "staff_paper_6" : {
+      "textures" : "textures/items/staff_paper_6"
+    },
+    "staff_paper_7" : {
+      "textures" : "textures/items/staff_paper_7"
+    },
+    "staff_paper_8" : {
+      "textures" : "textures/items/staff_paper_8"
+    },
+    "staff_paper_9" : {
+      "textures" : "textures/items/staff_paper_9"
+    },
+    "staff_paper_10" : {
+      "textures" : "textures/items/staff_paper_10"
+    },
+    "staff_paper_11" : {
+      "textures" : "textures/items/staff_paper_11"
+    },
+    "staff_paper_12" : {
+      "textures" : "textures/items/staff_paper_12"
+    },
+    "staff_paper_13" : {
+      "textures" : "textures/items/staff_paper_13"
+    },
+    "staff_pear_0" : {
+      "textures" : "textures/items/staff_pear_0"
+    },
+    "staff_pear_1" : {
+      "textures" : "textures/items/staff_pear_1"
+    },
+    "staff_pearl_bracelet" : {
+      "textures" : "textures/items/staff_pearl_bracelet"
+    },
+    "staff_pentagram" : {
+      "textures" : "textures/items/staff_pentagram"
+    },
+    "staff_pizza_slice" : {
+      "textures" : "textures/items/staff_pizza_slice"
+    },
+    "staff_pumpkin" : {
+      "textures" : "textures/items/staff_pumpkin"
+    },
+    "staff_rawmineral_0" : {
+      "textures" : "textures/items/staff_rawmineral_0"
+    },
+    "staff_rawmineral_1" : {
+      "textures" : "textures/items/staff_rawmineral_1"
+    },
+    "staff_rawmineral_2" : {
+      "textures" : "textures/items/staff_rawmineral_2"
+    },
+    "staff_rawmineral_3" : {
+      "textures" : "textures/items/staff_rawmineral_3"
+    },
+    "staff_rawmineral_4" : {
+      "textures" : "textures/items/staff_rawmineral_4"
+    },
+    "staff_rawmineral_5" : {
+      "textures" : "textures/items/staff_rawmineral_5"
+    },
+    "staff_rawmineral_6" : {
+      "textures" : "textures/items/staff_rawmineral_6"
+    },
+    "staff_rawmineral_7" : {
+      "textures" : "textures/items/staff_rawmineral_7"
+    },
+    "staff_rawmineral_8" : {
+      "textures" : "textures/items/staff_rawmineral_8"
+    },
+    "staff_rubber_ring_0" : {
+      "textures" : "textures/items/staff_rubber_ring_0"
+    },
+    "staff_rubber_ring_1" : {
+      "textures" : "textures/items/staff_rubber_ring_1"
+    },
+    "staff_shell_0" : {
+      "textures" : "textures/items/staff_shell_0"
+    },
+    "staff_shell_1" : {
+      "textures" : "textures/items/staff_shell_1"
+    },
+    "staff_silver_egg" : {
+      "textures" : "textures/items/staff_silver_egg"
+    },
+    "staff_skewer" : {
+      "textures" : "textures/items/staff_skewer"
+    },
+    "staff_skewer_peppers" : {
+      "textures" : "textures/items/staff_skewer_peppers"
+    },
+    "staff_snorkeling_mask" : {
+      "textures" : "textures/items/staff_snorkeling_mask"
+    },
+    "staff_soul_1" : {
+      "textures" : "textures/items/staff_soul_1"
+    },
+    "staff_soul_2" : {
+      "textures" : "textures/items/staff_soul_2"
+    },
+    "staff_soul_3" : {
+      "textures" : "textures/items/staff_soul_3"
+    },
+    "staff_soul_4" : {
+      "textures" : "textures/items/staff_soul_4"
+    },
+    "staff_soul_5" : {
+      "textures" : "textures/items/staff_soul_5"
+    },
+    "staff_spatula_0" : {
+      "textures" : "textures/items/staff_spatula_0"
+    },
+    "staff_spatula_1" : {
+      "textures" : "textures/items/staff_spatula_1"
+    },
+    "staff_starfish" : {
+      "textures" : "textures/items/staff_starfish"
+    },
+    "staff_stone_0" : {
+      "textures" : "textures/items/staff_stone_0"
+    },
+    "staff_stone_1" : {
+      "textures" : "textures/items/staff_stone_1"
+    },
+    "staff_stone_2" : {
+      "textures" : "textures/items/staff_stone_2"
+    },
+    "staff_strawberry_0" : {
+      "textures" : "textures/items/staff_strawberry_0"
+    },
+    "staff_strawberry_1" : {
+      "textures" : "textures/items/staff_strawberry_1"
+    },
+    "staff_sunscreen" : {
+      "textures" : "textures/items/staff_sunscreen"
+    },
+    "staff_sushi_0" : {
+      "textures" : "textures/items/staff_sushi_0"
+    },
+    "staff_sushi_1" : {
+      "textures" : "textures/items/staff_sushi_1"
+    },
+    "staff_watergun_0" : {
+      "textures" : "textures/items/staff_watergun_0"
+    },
+    "staff_watergun_1" : {
+      "textures" : "textures/items/staff_watergun_1"
+    },
+    "staff_watermelon" : {
+      "textures" : "textures/items/staff_watermelon"
+    },
+    "staff_whistle" : {
+      "textures" : "textures/items/staff_whistle"
+    },
+    "staff_white_chocolate" : {
+      "textures" : "textures/items/staff_white_chocolate"
+    },
+    "staff_wire_0" : {
+      "textures" : "textures/items/staff_wire_0"
+    },
+    "staff_wire_1" : {
+      "textures" : "textures/items/staff_wire_1"
+    },
+    "staff_wire_2" : {
+      "textures" : "textures/items/staff_wire_2"
+    },
+    "staff_witchhat" : {
+      "textures" : "textures/items/staff_witchhat"
+    },
+    "stone_staff" : {
+      "textures" : "textures/items/stone_staff"
+    },
+    "wood_staff" : {
+      "textures" : "textures/items/wood_staff"
+    },
+    "rp_item_capsule_blue" : {
+      "textures" : "textures/items/rp_item_capsule_blue"
+    },
+    "rp_item_capsule_red" : {
+      "textures" : "textures/items/rp_item_capsule_red"
+    },
+    "rp_item_plant" : {
+      "textures" : "textures/items/rp_item_plant"
+    },
+    "rp_item_potion_blue" : {
+      "textures" : "textures/items/rp_item_potion_blue"
+    },
+    "rp_item_potion_bottle_blue" : {
+      "textures" : "textures/items/rp_item_potion_bottle_blue"
+    },
+    "rp_item_potion_bottle_green" : {
+      "textures" : "textures/items/rp_item_potion_bottle_green"
+    },
+    "rp_item_potion_bottle_orange" : {
+      "textures" : "textures/items/rp_item_potion_bottle_orange"
+    },
+    "rp_item_potion_bottle_red" : {
+      "textures" : "textures/items/rp_item_potion_bottle_red"
+    },
+    "rp_item_potion_bottle_yellow" : {
+      "textures" : "textures/items/rp_item_potion_bottle_yellow"
+    },
+    "rp_item_potion_disposable_black" : {
+      "textures" : "textures/items/rp_item_potion_disposable_black"
+    },
+    "rp_item_potion_disposable_brown" : {
+      "textures" : "textures/items/rp_item_potion_disposable_brown"
+    },
+    "rp_item_potion_disposable_gray" : {
+      "textures" : "textures/items/rp_item_potion_disposable_gray"
+    },
+    "rp_item_potion_disposable_purple" : {
+      "textures" : "textures/items/rp_item_potion_disposable_purple"
+    },
+    "rp_item_potion_disposable_red" : {
+      "textures" : "textures/items/rp_item_potion_disposable_red"
+    },
+    "rp_item_potion_green" : {
+      "textures" : "textures/items/rp_item_potion_green"
+    },
+    "rp_item_potion_orange" : {
+      "textures" : "textures/items/rp_item_potion_orange"
+    },
+    "rp_item_potion_red" : {
+      "textures" : "textures/items/rp_item_potion_red"
+    },
+    "rp_item_potion_yellow" : {
+      "textures" : "textures/items/rp_item_potion_yellow"
+    },
+    "rp_item_rune_black" : {
+      "textures" : "textures/items/rp_item_rune_black"
+    },
+    "rp_item_rune_blue" : {
+      "textures" : "textures/items/rp_item_rune_blue"
+    },
+    "rp_item_rune_brown" : {
+      "textures" : "textures/items/rp_item_rune_brown"
+    },
+    "rp_item_rune_dark_red" : {
+      "textures" : "textures/items/rp_item_rune_dark_red"
+    },
+    "rp_item_rune_green" : {
+      "textures" : "textures/items/rp_item_rune_green"
+    },
+    "rp_item_rune_orange" : {
+      "textures" : "textures/items/rp_item_rune_orange"
+    },
+    "rp_item_rune_purple" : {
+      "textures" : "textures/items/rp_item_rune_purple"
+    },
+    "rp_item_rune_red" : {
+      "textures" : "textures/items/rp_item_rune_red"
+    },
+    "rp_item_rune_white" : {
+      "textures" : "textures/items/rp_item_rune_white"
+    },
+    "rp_item_rune_yellow" : {
+      "textures" : "textures/items/rp_item_rune_yellow"
+    },
+    "rp_item_syringe_green" : {
+      "textures" : "textures/items/rp_item_syringe_green"
+    },
+    "rp_item_syringe_yellow" : {
+      "textures" : "textures/items/rp_item_syringe_yellow"
+    },
+    "fishing_dock_furniture" : {
+      "textures" : "textures/items/fishing_dock_furniture"
+    },
+    "axe_book" : {
+      "textures" : "textures/items/axe_book"
+    },
+    "book1" : {
+      "textures" : "textures/items/book1"
+    },
+    "book2" : {
+      "textures" : "textures/items/book2"
+    },
+    "book3" : {
+      "textures" : "textures/items/book3"
+    },
+    "book4" : {
+      "textures" : "textures/items/book4"
+    },
+    "book5" : {
+      "textures" : "textures/items/book5"
+    },
+    "book6" : {
+      "textures" : "textures/items/book6"
+    },
+    "bow_book" : {
+      "textures" : "textures/items/bow_book"
+    },
+    "crumpled_paper" : {
+      "textures" : "textures/items/crumpled_paper"
+    },
+    "dagger_book" : {
+      "textures" : "textures/items/dagger_book"
+    },
+    "feather_pen" : {
+      "textures" : "textures/items/feather_pen"
+    },
+    "fire_scroll" : {
+      "textures" : "textures/items/fire_scroll"
+    },
+    "fountain_pen" : {
+      "textures" : "textures/items/fountain_pen"
+    },
+    "grow_scroll" : {
+      "textures" : "textures/items/grow_scroll"
+    },
+    "ink" : {
+      "textures" : "textures/items/ink"
+    },
+    "letter" : {
+      "textures" : "textures/items/letter"
+    },
+    "letter_stack" : {
+      "textures" : "textures/items/letter_stack"
+    },
+    "mail" : {
+      "textures" : "textures/items/mail"
+    },
+    "paper" : {
+      "textures" : "textures/items/paper"
+    },
+    "paper_stack" : {
+      "textures" : "textures/items/paper_stack"
+    },
+    "paper1" : {
+      "textures" : "textures/items/paper1"
+    },
+    "paper2" : {
+      "textures" : "textures/items/paper2"
+    },
+    "paper3" : {
+      "textures" : "textures/items/paper3"
+    },
+    "posion_scroll" : {
+      "textures" : "textures/items/posion_scroll"
+    },
+    "scroll1" : {
+      "textures" : "textures/items/scroll1"
+    },
+    "scroll2" : {
+      "textures" : "textures/items/scroll2"
+    },
+    "scroll3" : {
+      "textures" : "textures/items/scroll3"
+    },
+    "scroll4" : {
+      "textures" : "textures/items/scroll4"
+    },
+    "scroll5" : {
+      "textures" : "textures/items/scroll5"
+    },
+    "scroll6" : {
+      "textures" : "textures/items/scroll6"
+    },
+    "spear_book" : {
+      "textures" : "textures/items/spear_book"
+    },
+    "sword_book" : {
+      "textures" : "textures/items/sword_book"
+    },
+    "thunder_scroll" : {
+      "textures" : "textures/items/thunder_scroll"
+    },
+    "torn_scroll" : {
+      "textures" : "textures/items/torn_scroll"
+    },
+    "unknown_scroll" : {
+      "textures" : "textures/items/unknown_scroll"
+    },
+    "wand_book" : {
+      "textures" : "textures/items/wand_book"
+    },
+    "propsi_oversized_acacia_log_bench" : {
+      "textures" : "textures/items/oversized/acacia_log_bench"
+    },
+    "propsi_oversized_antique_bench" : {
+      "textures" : "textures/items/oversized/antique_bench"
+    },
+    "propsi_oversized_anubis_statue" : {
+      "textures" : "textures/items/oversized/anubis_statue"
+    },
+    "propsi_oversized_aurelion_order_banner" : {
+      "textures" : "textures/items/oversized/aurelion_order_banner"
+    },
+    "propsi_oversized_bank_drapery" : {
+      "textures" : "textures/items/oversized/bank_drapery"
+    },
+    "propsi_oversized_birch_log_bench" : {
+      "textures" : "textures/items/oversized/birch_log_bench"
+    },
+    "propsi_oversized_buddha_statue" : {
+      "textures" : "textures/items/oversized/buddha_statue"
+    },
+    "propsi_oversized_cobra_statue" : {
+      "textures" : "textures/items/oversized/cobra_statue"
+    },
+    "propsi_oversized_cosmerio_drapery" : {
+      "textures" : "textures/items/oversized/cosmerio_drapery"
+    },
+    "propsi_oversized_cosmetic_stand" : {
+      "textures" : "textures/items/oversized/cosmetic_stand"
+    },
+    "propsi_oversized_dark_oak_log_bench" : {
+      "textures" : "textures/items/oversized/dark_oak_log_bench"
+    },
+    "propsi_oversized_elegant_curtain" : {
+      "textures" : "textures/items/oversized/elegant_curtain"
+    },
+    "propsi_oversized_experiment_block_3" : {
+      "textures" : "textures/items/oversized/experiment_block_3"
+    },
+    "propsi_oversized_fabric_sofa" : {
+      "textures" : "textures/items/oversized/fabric_sofa"
+    },
+    "propsi_oversized_fireplace" : {
+      "textures" : "textures/items/oversized/fireplace"
+    },
+    "propsi_oversized_jungle_log_bench" : {
+      "textures" : "textures/items/oversized/jungle_log_bench"
+    },
+    "propsi_oversized_large_antique_curtain" : {
+      "textures" : "textures/items/oversized/large_antique_curtain"
+    },
+    "propsi_oversized_large_christmas_curtain" : {
+      "textures" : "textures/items/oversized/large_christmas_curtain"
+    },
+    "propsi_oversized_large_elegant_curtain" : {
+      "textures" : "textures/items/oversized/large_elegant_curtain"
+    },
+    "propsi_oversized_large_red_christmas_curtain" : {
+      "textures" : "textures/items/oversized/large_red_christmas_curtain"
+    },
+    "propsi_oversized_large_red_gift_ribbon" : {
+      "textures" : "textures/items/oversized/large_red_gift_ribbon"
+    },
+    "propsi_oversized_large_white_gift_ribbon" : {
+      "textures" : "textures/items/oversized/large_white_gift_ribbon"
+    },
+    "propsi_oversized_mangrove_log_bench" : {
+      "textures" : "textures/items/oversized/mangrove_log_bench"
+    },
+    "propsi_oversized_market_stand" : {
+      "textures" : "textures/items/oversized/market_stand"
+    },
+    "propsi_oversized_marketus_drapery" : {
+      "textures" : "textures/items/oversized/marketus_drapery"
+    },
+    "propsi_oversized_noctembrun_crew_banner" : {
+      "textures" : "textures/items/oversized/noctembrun_crew_banner"
+    },
+    "propsi_oversized_oak_log_bench" : {
+      "textures" : "textures/items/oversized/oak_log_bench"
+    },
+    "propsi_oversized_hay_bed" : {
+      "textures" : "textures/items/oversized/hay_bed"
+    },
+    "propsi_oversized_camping_roast_spit" : {
+      "textures" : "textures/items/oversized/camping_roast_spit"
+    },
+    "propsi_oversized_brazier_flame" : {
+      "textures" : "textures/items/oversized/brazier_flame"
+    },
+    "propsi_oversized_camping_cooking_pot" : {
+      "textures" : "textures/items/oversized/camping_cooking_pot"
+    },
+    "propsi_oversized_oak_log_sign_3x2" : {
+      "textures" : "textures/items/oversized/oak_log_sign_3x2"
+    },
+    "propsi_oversized_oak_log_sign_5x3" : {
+      "textures" : "textures/items/oversized/oak_log_sign_5x3"
+    },
+    "propsi_oversized_oak_sign_2x3" : {
+      "textures" : "textures/items/oversized/oak_sign_2x3"
+    },
+    "propsi_oversized_oak_sign_2x3_framed" : {
+      "textures" : "textures/items/oversized/oak_sign_2x3_framed"
+    },
+    "propsi_oversized_oak_sign_3x2" : {
+      "textures" : "textures/items/oversized/oak_sign_3x2"
+    },
+    "propsi_oversized_oak_sign_5x3" : {
+      "textures" : "textures/items/oversized/oak_sign_5x3"
+    },
+    "propsi_oversized_oak_sign_9x5" : {
+      "textures" : "textures/items/oversized/oak_sign_9x5"
+    },
+    "propsi_oversized_pale_oak_log_bench" : {
+      "textures" : "textures/items/oversized/pale_oak_log_bench"
+    },
+    "propsi_oversized_park_bench" : {
+      "textures" : "textures/items/oversized/park_bench"
+    },
+    "propsi_oversized_sacred_lion_statue" : {
+      "textures" : "textures/items/oversized/sacred_lion_statue"
+    },
+    "propsi_oversized_skojmar_clan_banner" : {
+      "textures" : "textures/items/oversized/skojmar_clan_banner"
+    },
+    "propsi_oversized_solkhar_caravan_banner" : {
+      "textures" : "textures/items/oversized/solkhar_caravan_banner"
+    },
+    "propsi_oversized_spruce_log_bench" : {
+      "textures" : "textures/items/oversized/spruce_log_bench"
+    },
+    "propsi_oversized_station_fuel_tank" : {
+      "textures" : "textures/items/oversized/station_fuel_tank"
+    },
+    "propsi_oversized_stone_sign_2x3" : {
+      "textures" : "textures/items/oversized/stone_sign_2x3"
+    },
+    "propsi_oversized_stone_sign_3x2" : {
+      "textures" : "textures/items/oversized/stone_sign_3x2"
+    },
+    "propsi_oversized_stone_sign_9x5" : {
+      "textures" : "textures/items/oversized/stone_sign_9x5"
+    },
+    "propsi_oversized_street_lamp" : {
+      "textures" : "textures/items/oversized/street_lamp"
+    },
+    "propsi_oversized_street_lamp_pole" : {
+      "textures" : "textures/items/oversized/street_lamp_pole"
+    },
+    "propsi_oversized_sylvari_tribe_banner" : {
+      "textures" : "textures/items/oversized/sylvari_tribe_banner"
+    },
+    "propsi_oversized_tall_double_street_lamp" : {
+      "textures" : "textures/items/oversized/tall_double_street_lamp"
+    },
+    "propsi_oversized_temple_statue" : {
+      "textures" : "textures/items/oversized/temple_statue"
+    },
+    "propsi_oversized_terrakin_people_banner" : {
+      "textures" : "textures/items/oversized/terrakin_people_banner"
+    },
+    "propsi_oversized_tethered_balloons" : {
+      "textures" : "textures/items/oversized/tethered_balloons"
+    },
+    "propsi_oversized_tied_acacia_logs" : {
+      "textures" : "textures/items/oversized/tied_acacia_logs"
+    },
+    "propsi_oversized_tied_birch_logs" : {
+      "textures" : "textures/items/oversized/tied_birch_logs"
+    },
+    "propsi_oversized_tied_cherry_logs" : {
+      "textures" : "textures/items/oversized/tied_cherry_logs"
+    },
+    "propsi_oversized_tied_dark_oak_logs" : {
+      "textures" : "textures/items/oversized/tied_dark_oak_logs"
+    },
+    "propsi_oversized_tied_mangrove_logs" : {
+      "textures" : "textures/items/oversized/tied_mangrove_logs"
+    },
+    "propsi_oversized_tied_oak_logs" : {
+      "textures" : "textures/items/oversized/tied_oak_logs"
+    },
+    "propsi_oversized_tied_pale_oak_logs" : {
+      "textures" : "textures/items/oversized/tied_pale_oak_logs"
+    },
+    "propsi_oversized_tied_spruce_logs" : {
+      "textures" : "textures/items/oversized/tied_spruce_logs"
+    },
+    "propsi_oversized_trash_mannequin" : {
+      "textures" : "textures/items/oversized/trash_mannequin"
+    },
+    "propsi_oversized_whale_statue" : {
+      "textures" : "textures/items/oversized/whale_statue"
+    },
+    "propsi_oversized_wooden_chandelier" : {
+      "textures" : "textures/items/oversized/wooden_chandelier"
+    },
+    "propsi_oversized_wooden_wall_banner" : {
+      "textures" : "textures/items/oversized/wooden_wall_banner"
+    },
+    "propsi_oversized_tied_jungle_logs" : {
+      "textures" : "textures/items/oversized/tied_jungle_logs"
+    },
+    "propsi_oversized_flowering_seasonal_bush" : {
+      "textures" : "textures/items/oversized/flowering_seasonal_bush"
+    },
+    "propsi_oversized_wooden_desk" : {
+      "textures" : "textures/items/oversized/wooden_desk"
+    },
+    "propsi_oversized_potted_cactus" : {
+      "textures" : "textures/items/oversized/potted_cactus"
+    },
+    "propsi_oversized_iron_chandelier" : {
+      "textures" : "textures/items/oversized/iron_chandelier"
+    },
+    "propsi_oversized_quartz_display_column" : {
+      "textures" : "textures/items/oversized/quartz_display_column"
+    },
+    "propsi_oversized_wooden_dresser" : {
+      "textures" : "textures/items/oversized/wooden_dresser"
+    },
+    "propsi_oversized_noctembrun_crew_standard" : {
+      "textures" : "textures/items/oversized/noctembrun_crew_standard"
+    },
+    "propsi_oversized_aurelion_order_standard" : {
+      "textures" : "textures/items/oversized/aurelion_order_standard"
+    },
+    "propsi_oversized_solkhar_caravan_standard" : {
+      "textures" : "textures/items/oversized/solkhar_caravan_standard"
+    },
+    "propsi_oversized_sylvari_tribe_standard" : {
+      "textures" : "textures/items/oversized/sylvari_tribe_standard"
+    },
+    "propsi_oversized_skojmar_clan_standard" : {
+      "textures" : "textures/items/oversized/skojmar_clan_standard"
+    },
+    "propsi_oversized_terrakin_people_standard" : {
+      "textures" : "textures/items/oversized/terrakin_people_standard"
+    },
+    "propsi_oversized_dolphin_fountain_1" : {
+      "textures" : "textures/items/oversized/dolphin_fountain_1"
+    },
+    "propsi_oversized_dolphin_fountain_2" : {
+      "textures" : "textures/items/oversized/dolphin_fountain_2"
+    },
+    "propsi_oversized_large_wooden_chandelier" : {
+      "textures" : "textures/items/oversized/large_wooden_chandelier"
+    },
+    "propsi_oversized_large_iron_chandelier" : {
+      "textures" : "textures/items/oversized/large_iron_chandelier"
+    },
+    "propsi_oversized_large_red_bow" : {
+      "textures" : "textures/items/oversized/large_red_bow"
+    },
+    "propsi_oversized_large_green_gift_ribbon" : {
+      "textures" : "textures/items/oversized/large_green_gift_ribbon"
+    },
+    "propsi_oversized_desert_lantern" : {
+      "textures" : "textures/items/oversized/desert_lantern"
+    },
+    "propsi_oversized_elephant_plushie" : {
+      "textures" : "textures/items/oversized/elephant_plushie"
+    },
+    "propsi_oversized_upright_piano" : {
+      "textures" : "textures/items/oversized/upright_piano"
+    },
+    "propsi_oversized_nationsglory_banners" : {
+      "textures" : "textures/items/oversized/nationsglory_banners"
+    },
+    "propsi_oversized_double_wrought_iron_flag" : {
+      "textures" : "textures/items/oversized/double_wrought_iron_flag"
+    },
+    "propsi_oversized_un_flag" : {
+      "textures" : "textures/items/oversized/un_flag"
+    },
+    "propsi_oversized_skojmar_clan_flag" : {
+      "textures" : "textures/items/oversized/skojmar_clan_flag"
+    },
+    "propsi_oversized_wooden_flag" : {
+      "textures" : "textures/items/oversized/wooden_flag"
+    },
+    "propsi_oversized_wrought_iron_flag" : {
+      "textures" : "textures/items/oversized/wrought_iron_flag"
+    },
+    "propsi_oversized_wooden_flags" : {
+      "textures" : "textures/items/oversized/wooden_flags"
+    },
+    "propsi_oversized_whale_fountain" : {
+      "textures" : "textures/items/oversized/whale_fountain"
+    },
+    "propsi_oversized_quartz_fountain" : {
+      "textures" : "textures/items/oversized/quartz_fountain"
+    },
+    "propsi_oversized_auction_house_sales_stand" : {
+      "textures" : "textures/items/oversized/auction_house_sales_stand"
+    },
+    "propsi_oversized_auction_house_search_stand" : {
+      "textures" : "textures/items/oversized/auction_house_search_stand"
+    },
+    "propsi_oversized_skye_helicopter" : {
+      "textures" : "textures/items/oversized/skye_helicopter"
+    },
+    "propsi_oversized_street_lamp_with_flag" : {
+      "textures" : "textures/items/oversized/street_lamp_with_flag"
+    },
+    "propsi_oversized_wooden_street_lamp_with_flag" : {
+      "textures" : "textures/items/oversized/wooden_street_lamp_with_flag"
+    },
+    "propsi_oversized_wooden_street_lamp_with_two_flags" : {
+      "textures" : "textures/items/oversized/wooden_street_lamp_with_two_flags"
+    },
+    "propsi_oversized_parrot_balloon" : {
+      "textures" : "textures/items/oversized/parrot_balloon"
+    },
+    "propsi_oversized_bank_stand" : {
+      "textures" : "textures/items/oversized/bank_stand"
+    },
+    "propsi_oversized_wooden_covered_wagon" : {
+      "textures" : "textures/items/oversized/wooden_covered_wagon"
+    },
+    "propsi_oversized_wooden_wagon" : {
+      "textures" : "textures/items/oversized/wooden_wagon"
+    },
+    "propsi_oversized_wooden_fenced_cart" : {
+      "textures" : "textures/items/oversized/wooden_fenced_cart"
+    },
+    "propsi_oversized_wooden_cart" : {
+      "textures" : "textures/items/oversized/wooden_cart"
+    },
+    "propsi_oversized_wooden_stall_cart" : {
+      "textures" : "textures/items/oversized/wooden_stall_cart"
+    },
+    "propsi_oversized_furniture_plant_palm" : {
+      "textures" : "textures/items/oversized/furniture_plant_palm"
+    },
+    "propsi_oversized_desert_floor_potted_palm" : {
+      "textures" : "textures/items/oversized/desert_floor_potted_palm"
+    },
+    "propsi_oversized_pharaoh_sarcophagus" : {
+      "textures" : "textures/items/oversized/pharaoh_sarcophagus"
+    },
+    "propsi_oversized_fishing_rod_rack" : {
+      "textures" : "textures/items/oversized/fishing_rod_rack"
+    },
+    "propsi_oversized_drying_fish_rack" : {
+      "textures" : "textures/items/oversized/drying_fish_rack"
+    },
+    "propsi_oversized_big_flag_alpha" : {
+      "textures" : "textures/items/oversized/big_flag_alpha"
+    },
+    "propsi_oversized_big_flag_delta" : {
+      "textures" : "textures/items/oversized/big_flag_delta"
+    },
+    "propsi_oversized_big_flag_epsilon" : {
+      "textures" : "textures/items/oversized/big_flag_epsilon"
+    },
+    "propsi_oversized_big_flag_iris" : {
+      "textures" : "textures/items/oversized/big_flag_iris"
+    },
+    "propsi_oversized_big_flag_market" : {
+      "textures" : "textures/items/oversized/big_flag_market"
+    },
+    "propsi_oversized_big_flag_ng" : {
+      "textures" : "textures/items/oversized/big_flag_ng"
+    },
+    "propsi_oversized_big_flag_nova" : {
+      "textures" : "textures/items/oversized/big_flag_nova"
+    },
+    "propsi_oversized_big_flag_omega" : {
+      "textures" : "textures/items/oversized/big_flag_omega"
+    },
+    "propsi_oversized_big_flag_sigma" : {
+      "textures" : "textures/items/oversized/big_flag_sigma"
+    },
+    "propsi_oversized_floor_flag_alpha" : {
+      "textures" : "textures/items/oversized/floor_flag_alpha"
+    },
+    "propsi_oversized_floor_banner_cyan" : {
+      "textures" : "textures/items/oversized/floor_banner_cyan"
+    },
+    "propsi_oversized_floor_flag_delta" : {
+      "textures" : "textures/items/oversized/floor_flag_delta"
+    },
+    "propsi_oversized_floor_flag_epsilon" : {
+      "textures" : "textures/items/oversized/floor_flag_epsilon"
+    },
+    "propsi_oversized_floor_flag_iris" : {
+      "textures" : "textures/items/oversized/floor_flag_iris"
+    },
+    "propsi_oversized_floor_flag_market" : {
+      "textures" : "textures/items/oversized/floor_flag_market"
+    },
+    "propsi_oversized_floor_flag_ng" : {
+      "textures" : "textures/items/oversized/floor_flag_ng"
+    },
+    "propsi_oversized_floor_flag_nova" : {
+      "textures" : "textures/items/oversized/floor_flag_nova"
+    },
+    "propsi_oversized_floor_flag_omega" : {
+      "textures" : "textures/items/oversized/floor_flag_omega"
+    },
+    "propsi_oversized_floor_flag_sigma" : {
+      "textures" : "textures/items/oversized/floor_flag_sigma"
+    },
+    "propsi_oversized_ng_poster_7x4_1" : {
+      "textures" : "textures/items/oversized/ng_poster_7x4_1"
+    },
+    "propsi_oversized_ng_poster_7x4_2" : {
+      "textures" : "textures/items/oversized/ng_poster_7x4_2"
+    },
+    "propsi_oversized_ng_poster_2x3_1" : {
+      "textures" : "textures/items/oversized/ng_poster_2x3_1"
+    },
+    "propsi_oversized_ng_poster_2x3_2" : {
+      "textures" : "textures/items/oversized/ng_poster_2x3_2"
+    },
+    "propsi_oversized_furniture_coastal_couch" : {
+      "textures" : "textures/items/oversized/furniture_coastal_couch"
+    },
+    "propsi_oversized_furniture_coastal_bed" : {
+      "textures" : "textures/items/oversized/furniture_coastal_bed"
+    },
+    "propsi_oversized_furniture_coastal_painting" : {
+      "textures" : "textures/items/oversized/furniture_coastal_painting"
+    },
+    "propsi_oversized_furniture_coastal_bookcase" : {
+      "textures" : "textures/items/oversized/furniture_coastal_bookcase"
+    },
+    "propsi_oversized_furniture_coastal_hammock" : {
+      "textures" : "textures/items/oversized/furniture_coastal_hammock"
+    }
+  }
+}

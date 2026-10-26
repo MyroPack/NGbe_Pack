@@ -1,0 +1,50 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_fishing_net_wall_decoration",
+				"texture_width": 128,
+				"texture_height": 128
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0.475, 0, 0],
+					"cubes": [
+						{
+							"origin": [-21.95, 0, 7.0078],
+							"size": [29.9, 14.95, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [32, 16]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 16]
+								},
+								"south": {
+									"uv": [0, 16],
+									"uv_size": [32, 16]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 16]
+								},
+								"up": {
+									"uv": [0, 0],
+									"uv_size": [32, 0]
+								},
+								"down": {
+									"uv": [0, 0],
+									"uv_size": [32, 0]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,959 @@
+{
+    "namespace": "pays_membres",
+ 
+    // -----------------------------------------------
+    //
+    //                  Categorie Membres
+    //
+    // -----------------------------------------------
+
+    "membres_main@ng_asset.background_white":{
+      "size":[380,230],
+      "color":[0.153,0.153,0.165],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                          {"title@ng_module.label":{
+                                            "text":"Membres",
+                                            "offset":[0,-1.3],
+                                            "font_type":"MinecraftTen",
+                                            "font_scale_factor":0.9
+                                          }}
+                              ]}}, 
+
+                              {"padding@ng_module.panel": {
+                                "size": ["fill", "100%"]
+                              }},
+
+                              {"buttton@ng_module.Simple_Button":{
+                                "size": [80,"100%"],
+                                "$size_button":[80,13],
+                                "$index": 18,
+                                "$size_icone_left": [7,7],
+                                "$type_get_text":"Get_text_type_1",
+                                "$font_scale_factor":0.7,
+                                "$texture_icone_left": "ng_asset.icon_58",
+                                "$texture_button": "ng_asset.button_29"
+                              }}
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "layer":10,
+                          "size":["100% - 10px","100% - 10px"],
+                          "controls":[
+
+                                {"content@ng_module.stackpanel":{
+                                  "size":["50% - 2.5px","100%"],
+                                  "controls":[
+
+                                      {"background@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "controls":[
+
+                                              {"content@ng_module.stackpanel":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                    {"header@ng_asset.background_62":{
+                                                      "size":["100%",30],
+                                                      "controls":[
+
+                                                        {"content@ng_module.stackpanel":{
+                                                          "orientation":"horizontal",
+                                                          "size":["100% - 8px","100%"],
+                                                          "controls":[
+
+                                                                {"label_memebers@ng_module.panel":{
+                                                                  "size":["100%c","100%"],
+                                                                  "controls":[
+
+                                                                      {"label@ng_module.label":{
+                                                                        "text":"Membres",
+                                                                        "font_scale_factor":0.7,
+                                                                        "color":[0.980, 0.980, 0.980]
+                                                                      }}
+                                                                ]}},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": ["fill", "100%"]
+                                                                }},
+
+                                                                {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [15,"100%"],
+                                                                  "$size_button":[15,15],
+                                                                  "$index": 19,
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_56",
+                                                                  "$texture_button": "ng_asset.button_37"
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [2.5, "100%"]
+                                                                }},
+
+                                                                {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [15,"100%"],
+                                                                  "$size_button":[15,15],
+                                                                  "$index": 20,
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_55",
+                                                                  "$texture_button": "ng_asset.button_37"
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [2.5, "100%"]
+                                                                }},
+
+                                                                {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [15,"100%"],
+                                                                  "$size_button":[15,15],
+                                                                  "$index": 21,
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_54",
+                                                                  "$texture_button": "ng_asset.button_37"
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [2.5, "100%"]
+                                                                }},
+
+                                                                {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [15,"100%"],
+                                                                  "$size_button":[15,15],
+                                                                  "$index": 22,
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_50",
+                                                                  "$texture_button": "ng_asset.button_37"
+                                                                }}
+
+                                                        ]}}
+
+                                                    ]}},
+
+                                                    {"list_membres@ng_module.panel": {
+                                                      "size": ["100%", "fill"],
+                                                      "controls":[
+
+                                                          {"content@ng_module.stackpanel":{
+                                                            "collection_name": "container_items",
+                                                            "size":["100% - 5px",130],
+                                                            "controls":[
+
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 23,
+                                                                  "$index_time": 24
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 25,
+                                                                  "$index_time": 26
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 27,
+                                                                  "$index_time": 28
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 29,
+                                                                  "$index_time": 30
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 31,
+                                                                  "$index_time": 32
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 33,
+                                                                  "$index_time": 34
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 35,
+                                                                  "$index_time": 36
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 37,
+                                                                  "$index_time": 38
+                                                                }},
+                                                                
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 39,
+                                                                  "$index_time": 40
+                                                                }},
+
+                                                                {"button_item_01@pays_membres.membres_main_cat_mambre_button_asset":{
+                                                                  "$grade_pseudo": 41,
+                                                                  "$index_time": 42
+                                                                }}
+
+                                                          ]}}
+
+                                                    ]}},
+
+                                                    {"paggination@ng_module.stackpanel":{
+                                                                "size":["100%",10],
+                                                                "orientation":"horizontal",
+                                                                "controls":[
+
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }},
+
+                                                                    {"left_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                                                "size": [10,10],
+                                                                                                "offset": [0,0.6],
+                                                                                                "$index": 43,
+                                                                                                "$icon_right_offset": [-0.3,0],
+                                                                                                "$size_icone_right": [7,7],
+                                                                                                "$texture_icone_right": "ng_asset.icon_34",
+                                                                                                "$texture_button": "ng_asset.button_18"
+                                                                                            }}
+
+                                                                    ]}},
+
+                                                                    {"text@ng_module.panel":{
+                                                                      "size": ["fill","100%"],
+                                                                      "controls": [
+
+                                                                            {"text@ng_module.Simple_text":{
+                                                                              "$type_get_text": "Get_text_type_1",
+                                                                              "$index": 45,
+                                                                              "offset": [0,0.8],
+                                                                              "size": ["100%c","100%"],
+                                                                              "$font_scale_factor": 0.7
+                                                                            }}
+                                                                    ]}},
+
+                                                                    {"righ_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                            "size": [10,10],
+                                                                            "offset": [0,0.6],
+                                                                            "$index": 44,
+                                                                            "$icon_right_offset": [0.3,0],
+                                                                            "$size_icone_right": [7,7],
+                                                                            "$texture_icone_right": "ng_asset.icon_35",
+                                                                            "$texture_button": "ng_asset.button_18"
+                                                                          }}
+
+                                                                    ]}},
+                                                                                    
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }}
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["100%", 2.5]
+                                                    }}
+                                              ]}}
+
+                                      ]}}
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": [5, "100%"]
+                                }},
+
+                                {"content@ng_module.stackpanel":{
+                                  "size":["50% - 2.5px","100%"],
+                                  "controls":[
+
+                                      {"content@ng_module.stackpanel":{
+                                        "size":["100%","50% - 2.5px"],
+                                        "controls":[
+
+                                            {"header@ng_asset.background_white":{
+                                              "color":[0.153, 0.153, 0.165],
+                                              "controls":[
+
+                                                  {"content@ng_module.stackpanel":{
+                                                    "size":["100% - 2px","100% - 2px"],
+                                                    "controls":[
+
+                                                        {"background@ng_asset.background_62":{
+                                                          "size":["100%",30],
+                                                          "controls":[
+
+                                                              {"content@ng_module.stackpanel":{
+                                                                "orientation":"horizontal",
+                                                                "size":["100% - 8px","100%"],
+                                                                "controls":[
+
+                                                                      {"label_memebers@ng_module.panel":{
+                                                                        "size":["100%c","100%"],
+                                                                        "controls":[
+
+                                                                            {"label@ng_module.label":{
+                                                                              "text":"Candidatures",
+                                                                              "font_scale_factor":0.7,
+                                                                              "color":[0.980, 0.980, 0.980]
+                                                                            }}
+                                                                      ]}}
+                                                              ]}}
+                                                        ]}},
+
+                                                        {"candidature_list@ng_module.panel": {
+                                                          "size": ["100%", "fill"],
+                                                          "controls":[
+
+                                                            {"candidature_list@ng_module.panel": {
+                                                              "size": ["100%", "fill"],
+                                                              "controls":[
+
+                                                                  {"content@ng_module.stackpanel":{
+                                                                    "collection_name": "container_items",
+                                                                    "offset":[0,0.3],
+                                                                    "size":["100% - 5px",48],
+                                                                    "controls":[
+
+                                                                        {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                          "$pseudo_grade": 49,
+                                                                          "$button_valider":50,
+                                                                          "$button_invalider":51
+                                                                        }},
+                                                                        
+                                                                        {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                          "$pseudo_grade": 52,
+                                                                          "$button_valider":53,
+                                                                          "$button_invalider":54
+                                                                        }},
+                                                                        
+                                                                        {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                          "$pseudo_grade": 55,
+                                                                          "$button_valider":56,
+                                                                          "$button_invalider":57
+                                                                        }},
+                                                                               
+                                                                        {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                          "$pseudo_grade": 58,
+                                                                          "$button_valider":59,
+                                                                          "$button_invalider":60
+                                                                        }}
+                                                                  
+                                                                  ]}}
+                                                            ]}}
+                                                        ]}},
+
+                                                        {"paggination@ng_module.stackpanel":{
+                                                                "size":["100%",10],
+                                                                "orientation":"horizontal",
+                                                                "controls":[
+
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }},
+
+                                                                    {"left_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                                                "size": [10,10],
+                                                                                                "offset": [0,0.6],
+                                                                                                "$index": 46,
+                                                                                                "$icon_right_offset": [-0.3,0],
+                                                                                                "$size_icone_right": [7,7],
+                                                                                                "$texture_icone_right": "ng_asset.icon_34",
+                                                                                                "$texture_button": "ng_asset.button_18"
+                                                                                            }}
+
+                                                                    ]}},
+
+                                                                    {"text@ng_module.panel":{
+                                                                      "size": ["fill","100%"],
+                                                                      "controls": [
+
+                                                                            {"text@ng_module.Simple_text":{
+                                                                              "$type_get_text": "Get_text_type_1",
+                                                                              "$index": 48,
+                                                                              "offset": [0,0.8],
+                                                                              "size": ["100%c","100%"],
+                                                                              "$font_scale_factor": 0.7
+                                                                            }}
+                                                                    ]}},
+
+                                                                    {"righ_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                            "size": [10,10],
+                                                                            "offset": [0,0.6],
+                                                                            "$index": 47,
+                                                                            "$icon_right_offset": [0.3,0],
+                                                                            "$size_icone_right": [7,7],
+                                                                            "$texture_icone_right": "ng_asset.icon_35",
+                                                                            "$texture_button": "ng_asset.button_18"
+                                                                          }}
+
+                                                                    ]}},
+                                                                                    
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["100%", 2.5]
+                                                        }}
+                                    
+                                                  ]}}
+                                            ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 5]
+                                      }},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "size":["100%","50% - 2.5px"],
+                                        "controls":[
+
+                                                  {"background@ng_asset.background_white":{
+                                                    "color":[0.153, 0.153, 0.165],
+                                                    "controls":[
+
+                                                        {"content@ng_module.stackpanel":{
+                                                          "size":["100% - 2px","100% - 2px"],
+                                                          "controls":[
+
+                                                              {"header@ng_asset.background_62":{
+                                                                "size":["100%",30],
+                                                                "controls":[
+
+                                                                    {"content@ng_module.stackpanel":{
+                                                                      "orientation":"horizontal",
+                                                                      "size":["100% - 8px","100%"],
+                                                                      "controls":[
+
+                                                                            {"label_memebers@ng_module.panel":{
+                                                                              "size":["100%c","100%"],
+                                                                              "controls":[
+
+                                                                                  {"label@ng_module.label":{
+                                                                                    "text":"Candidatures envoyées",
+                                                                                    "font_scale_factor":0.7,
+                                                                                    "color":[0.980, 0.980, 0.980]
+                                                                                  }}  
+
+                                                               
+                                                                            ]}},
+
+                                                                            {"padding@ng_module.panel": {
+                                                                              "size": ["fill", "100%"]
+                                                                            }},
+
+                                                                            {"buttton@ng_module.Simple_Button":{
+                                                                              "size": [50,"100%"],
+                                                                              "$size_button":[50,15],
+                                                                              "$index": 64,
+                                                                              "$size_icone_right": [7,7],
+                                                                              "$icon_right_offset":[0,0],
+                                                                              "$padding_right":[0,0],
+                                                                              "$font_scale_factor":0.7,
+                                                                              "$type_get_text": "Get_text_type_1",
+                                                                              "$texture_icone_right": "ng_asset.icon_57",
+                                                                              "$texture_button": "ng_asset.button_37"
+                                                                            }}
+
+                                                                    ]}}
+                                                              ]}},
+
+                                                              {"padding@ng_module.panel": {
+                                                                "size": ["100%", "fill"],
+                                                                "controls":[
+
+                                                                  {"candidature_list@ng_module.panel": {
+                                                                    "size": ["100%", "fill"],
+                                                                    "controls":[
+
+                                                                        {"content@ng_module.stackpanel":{
+                                                                          "collection_name": "container_items",
+                                                                          "offset":[0,0.3],
+                                                                          "size":["100% - 5px",48],
+                                                                          "controls":[
+                                                                            
+                                                                              {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                                "$pseudo_grade": 65,
+                                                                                "$button_invalider":66,
+                                                                                "$visibilité_button_valider":false
+                                                                              }},
+                                                                              
+                                                                              {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                                "$pseudo_grade": 67,
+                                                                                "$button_invalider":68,
+                                                                                "$visibilité_button_valider":false
+                                                                              }},
+                                                                              
+                                                                              {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                                "$pseudo_grade": 69,
+                                                                                "$button_invalider":70,
+                                                                                "$visibilité_button_valider":false
+                                                                              }},
+                                                                                    
+                                                                              {"button_item_01@pays_membres.membres_main_cat_candidatures_and_sendcandidatur_button_asset":{
+                                                                                "$pseudo_grade": 71,
+                                                                                "$button_invalider":72,
+                                                                                "$visibilité_button_valider":false
+                                                                              }}
+                                                                    ]}}
+                                                              ]}}
+
+                                                              ]}},
+
+                                                              {"paggination@ng_module.stackpanel":{
+                                                                "size":["100%",10],
+                                                                "orientation":"horizontal",
+                                                                "controls":[
+
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }},
+
+                                                                    {"left_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                                                "size": [10,10],
+                                                                                                "offset": [0,0.6],
+                                                                                                "$index": 61,
+                                                                                                "$icon_right_offset": [-0.3,0],
+                                                                                                "$size_icone_right": [7,7],
+                                                                                                "$texture_icone_right": "ng_asset.icon_34",
+                                                                                                "$texture_button": "ng_asset.button_18"
+                                                                                            }}
+
+                                                                    ]}},
+
+                                                                    {"text@ng_module.panel":{
+                                                                      "size": ["fill","100%"],
+                                                                      "controls": [
+
+                                                                            {"text@ng_module.Simple_text":{
+                                                                              "$type_get_text": "Get_text_type_1",
+                                                                              "$index": 63,
+                                                                              "offset": [0,0.8],
+                                                                              "size": ["100%c","100%"],
+                                                                              "$font_scale_factor": 0.7
+                                                                            }}
+                                                                    ]}},
+
+                                                                    {"righ_button@ng_module.panel":{
+                                                                      "size": ["100%c","100%"],
+                                                                      "controls": [
+
+                                                                          {"buttton@ng_module.Simple_Button":{
+                                                                            "size": [10,10],
+                                                                            "offset": [0,0.6],
+                                                                            "$index": 62,
+                                                                            "$icon_right_offset": [0.3,0],
+                                                                            "$size_icone_right": [7,7],
+                                                                            "$texture_icone_right": "ng_asset.icon_35",
+                                                                            "$texture_button": "ng_asset.button_18"
+                                                                          }}
+
+                                                                    ]}},
+                                                                                    
+                                                                    {"padding@ng_module.panel": {
+                                                                      "size": [3.5, "100%"]
+                                                                    }}
+                                                              ]}},
+
+                                                              {"padding@ng_module.panel": {
+                                                                "size": ["100%", 2.5]
+                                                              }}
+
+                                                        ]}}
+                                                  ]}}
+                                      ]}}
+                              ]}}
+                        ]}}
+                  ]}}
+            ]}}
+    ]},
+
+    //Asset Categorie Membre
+
+    "membres_main_cat_mambre_button_asset@ng_module.stackpanel": {
+      "collection_index": "$grade_pseudo",
+      "size": ["100%",13],
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+        {"button": {
+            "type": "input_panel",
+            "collection_index": "$grade_pseudo",
+            "$fonction_mapping_button_S0|default": "clickable",
+            "$fonction_mapping_button_S1|default": "nonclickable",
+            "$textures_button_S0|default": "ng_asset.button_full_white",
+            "$textures_button_S1|default": "ng_asset.button_full_white",
+            "size": ["100%","100%"],
+            "controls": [
+
+              {"check_status_S0": {
+                  "$mapping_button|default": "$fonction_mapping_button_S0",
+                  "type": "panel",
+                  "size": [
+                    "100%",
+                    "100%"
+                  ],
+                  "bindings": [
+                    {
+                      "binding_name": "#hover_text",
+                      "binding_type": "collection",
+                      "binding_collection_name": "container_items"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                      "target_property_name": "#visible"
+                    }
+                  ],
+                  "controls": [
+
+                    {"texture_button@$textures_button_S0": {
+                      "$color_hover_button": [0.247, 0.247, 0.278],
+                      "$color_pressed_button": [0.153, 0.153, 0.165],
+                      "$color_default_button":[0.153, 0.153, 0.165]
+                    }},
+
+                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"grade@ng_module.stackpanel":{
+                                            "size":[42,"100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$grade_pseudo",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"pseudo@ng_module.panel":{
+                                            "size":["fill","100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$grade_pseudo",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [120,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"time@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":[34,"100%"],
+                                            "controls":[
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["fill", "100%"]
+                                                }},
+ 
+                                                {"label_time@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$index_time",
+                                                  "layer": 6,
+                                                  "$text_color":[0.545, 0.580, 0.639],
+                                                  "$max_size": [50,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}}
+
+                    ]}}
+
+
+
+              ]}},
+
+              {"check_status_S1": {
+                  "$mapping_button|default": "$fonction_mapping_button_S1",
+                  "type":"panel",
+                  "size":["100%","100%"],
+                  "bindings": [
+                    {
+                      "binding_name": "#hover_text",
+                      "binding_type": "collection",
+                      "binding_collection_name": "container_items"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                      "target_property_name": "#visible"
+                    }
+                  ],
+                  "controls": [
+
+                    {"texture_button@$textures_button_S1": {
+                      "$color_hover_button": [0.247, 0.247, 0.278],
+                      "$color_pressed_button": [0.247, 0.247, 0.278],
+                      "$color_default_button":[0.247, 0.247, 0.278]
+                    }},
+
+                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"grade@ng_module.stackpanel":{
+                                            "size":[42,"100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$grade_pseudo",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"pseudo@ng_module.panel":{
+                                            "size":["fill","100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$grade_pseudo",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [120,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"time@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":[34,"100%"],
+                                            "controls":[
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["fill", "100%"]
+                                                }},
+ 
+                                                {"label_time@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$index_time",
+                                                  "layer": 6,
+                                                  "$text_color":[0.545, 0.580, 0.639],
+                                                  "$max_size": [50,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}}
+
+                    ]}}
+              ]}}
+          ]
+        }}
+    ]},
+
+    "membres_main_cat_candidatures_and_sendcandidatur_button_asset@ng_module.stackpanel": {
+      "collection_index": "$pseudo_grade",
+      "$visibilité_button_valider|default":"",
+      "size": ["100%",12],
+      "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "size": ["100%",12],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"grade@ng_module.stackpanel":{
+                                            "size":[60,"100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$pseudo_grade",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [50,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [20, "100%"]
+                                          }},
+
+                                          {"pseudo@ng_module.panel":{
+                                            "size":[55,"100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$pseudo_grade",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [50,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"button@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":[30,"100%"],
+                                            "controls":[
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["fill", "100%"]
+                                                }},
+
+                                                {"buttton@ng_module.Simple_Button":{
+                                                  "size": [10,"100%"],
+                                                  "visible":"$visibilité_button_valider",
+                                                  "$size_button":[10,10],
+                                                  "offset": [0,0.6],
+                                                  "$index": "$button_valider",
+                                                  "$icon_right_offset": [0,0],
+                                                  "$size_icone_right": [6,6.3],
+                                                  "$color_icone_right": [0.188, 0.004, 0.059],
+                                                  "$texture_icone_right": "ng_asset.icon_49",
+                                                  "$texture_button": "ng_asset.button_03"
+                                                }},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [2.5, "100%"],
+                                                  "visible":"$visibilité_button_valider"
+                                                }},
+
+                                                {"buttton@ng_module.Simple_Button":{
+                                                  "size": [10,"100%"],
+                                                  "$size_button":[10,10],
+                                                  "offset": [0,0.6],
+                                                  "$index": "$button_invalider",
+                                                  "layer":160,
+                                                  "$size_icone_right": [5.3,5.3],
+                                                  "$color_icone_right": [0.188, 0.004, 0.059],
+                                                  "$texture_icone_right": "ng_asset.icon_50",
+                                                  "$texture_button": "ng_asset.button_25"
+                                                }}
+                                               
+                                          ]}}
+
+                                    ]}}
+                                ]}}
+                        ]}}
+            ]}}
+    ]}
+
+}

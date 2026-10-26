@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_solar_panel_advanced": {
+      "arrays": {
+        "textures": {
+          "array.state": [
+            "Texture.default",
+            "Texture.on"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.state[math.clamp(query.variant, 0, 1)]"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.animate_tag": {
+			"geometry": "Geometry.nametag",
+			"materials": [
+				{
+					"*": "Material.nametag"
+				}
+			],
+			"textures": [
+				"Texture.pioneer_tag"
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.mod(math.floor(query.life_time*5), 8)/8"
+				],
+				"scale": [
+					1,
+					0.125
+				]
+			}
+		}
+	}
+}

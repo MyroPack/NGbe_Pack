@@ -1,0 +1,223 @@
+{
+    "namespace": "pays",
+
+    "main_panel": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+
+            {"main@ng_module.panel":{
+                "size": ["100%","100%"],
+                "controls": [
+
+                    {"main_pays@ng_module.stackpanel":{
+                      "size": ["100%","100%"],
+                      "controls": [
+
+                            {"header@ng_asset.background_white":{
+                                "color": [0.153,0.153,0.165],
+                                "size": ["100%",20],
+                                "controls": [
+
+                                    {"content_header@ng_module.stackpanel":{
+                                        "orientation": "horizontal",
+                                        "size": ["100% - 10px","100%"],
+                                        "controls": [
+
+                                            {"padding@ng_module.panel":{
+                                                "size": [20,"100%"]
+                                            }},
+
+                                            {"menu@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 10,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"banque@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 11,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"membre@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 12,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"statistique@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 13,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"recherche@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 15,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"guerre@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 16,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"parametre@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 17,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            // Huitieme onglet. Les cases 18 et suivantes sont celles des ecrans,
+                                            // de longueurs differentes : il est lu dans la derniere case du
+                                            // conteneur (199, PaysSlots.RankingTab de NGCountryMod), qu'aucun
+                                            // ecran n'atteint. Sans NGCountryMod pour l'ecrire, la case est vide
+                                            // et rien ne s'affiche.
+                                            {"classement@ng_module.multiple_status_button":{
+                                                "size": ["10%","100%"],
+                                                "$size_button": ["100%","100%"],
+                                                "$index": 199,
+                                                "$textures_button_S0": "ng_asset.button_20",
+                                                "$textures_button_S1": "ng_asset.button_empty",
+                                                "$font_type": "MinecraftTen",
+                                                "$S1_text_color": [0.443,0.443,0.482],
+                                                "$fonction_mapping_button_S0": "nonclickable",
+                                                "$fonction_mapping_button_S1": "clickable",
+                                                "$S0_type_get_text": "Get_text_type_1",
+                                                "$S1_type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"padding@ng_module.panel":{
+                                                "size": ["fill","100%"]
+                                            }},
+
+                                            // Bouton Home : ferme le menu et ouvre le telephone (/app).
+                                            {"home@ng_module.panel":{
+                                                "size": ["100%c","100%"],
+                                                "controls": [
+
+                                                    {"home_button@ng_module.home_button":{}}
+
+                                            ]}},
+
+                                            {"padding_home@ng_module.panel":{
+                                                "size": [2,"100%"]
+                                            }},
+
+                                            {"close@ng_module.panel":{
+                                                "size": ["100%c","100%"],
+                                                "controls": [
+
+                                                    {"close_button@ng_module.close_button":{}}
+
+                                            ]}}
+                                    ]}}
+                            ]}},
+
+                            {"content@ng_asset.background_white":{
+                              "size": ["100%","fill"],
+                              "alpha":0.6,
+                              "color":[0.000, 0.000, 0.000],
+                              "controls": [
+
+                                    {"content@ng_module.Toggle":{
+                                        "size": ["100%","100%"],
+                                        "$index_page": 14,
+                                        "$page1": "pays_banque.banque_main", 
+                                        "$page2": "pays_banque.banque_historique_transaction",
+                                        "$page3": "pays_banque.banque_historique_chest",
+                                        "$page4": "pays_banque.banque_chest",
+
+                                        "$page5": "pays_statistique.statistique_main",
+
+                                        "$page6": "pays_membres.membres_main",
+
+                                        "$page7": "pays_general.information_general_edit_main",
+
+                                        "$page8": "pays_general.information_general_main",
+
+                                        "$page9": "pays_R&D.recherche_et_developpement_main",
+                                        "$page10": "pays_R&D.recherche_et_developpement_détails",
+
+                                        "$page11": "pays_editgrade.edite_grade",
+
+                                        "$page12": "pays_guerre.guerre_main",
+                                        "$page13": "pays_guerre.guerre_demande",
+                                        "$page14": "pays_guerre.guerre_en_cours",
+
+                                        "$page15": "pays_classement.classement_main"
+
+                                    }}
+                            ]}}
+                    ]}}
+            ]}}
+    ]}
+
+}
+  

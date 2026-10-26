@@ -1,0 +1,202 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_fish_prize_wall_decoration",
+				"texture_width": 128,
+				"texture_height": 128
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9, 2, 6],
+							"size": [18, 10, 2],
+							"uv": {
+								"north": {
+									"uv": [48, 16],
+									"uv_size": [18, 10]
+								},
+								"east": {
+									"uv": [15, 87],
+									"uv_size": [2, 10]
+								},
+								"south": {
+									"uv": [48, 16],
+									"uv_size": [18, 10]
+								},
+								"west": {
+									"uv": [17, 87],
+									"uv_size": [2, 10]
+								},
+								"up": {
+									"uv": [48, 26],
+									"uv_size": [18, 2]
+								},
+								"down": {
+									"uv": [48, 30],
+									"uv_size": [18, -2]
+								}
+							}
+						},
+						{
+							"origin": [-4.5, 2.5, 5.8],
+							"size": [9, 3, 0],
+							"uv": {
+								"north": {
+									"uv": [84, 40],
+									"uv_size": [9, 3]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 3]
+								},
+								"south": {
+									"uv": [84, 40],
+									"uv_size": [9, 3]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 3]
+								},
+								"up": {
+									"uv": [0, 0],
+									"uv_size": [9, 0]
+								},
+								"down": {
+									"uv": [0, 0],
+									"uv_size": [9, 0]
+								}
+							}
+						},
+						{
+							"origin": [-3.5, 8.0785, 1.5917],
+							"size": [7, 0, 2],
+							"pivot": [1.5, 7.5587, 5],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [0, 7]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [0, 2]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [0, 7]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [0, 2]
+								},
+								"up": {
+									"uv": [91, 19],
+									"uv_size": [7, 2]
+								},
+								"down": {
+									"uv": [91, 23],
+									"uv_size": [7, -2]
+								}
+							}
+						},
+						{
+							"origin": [4.5, 6.5, 3.5],
+							"size": [2, 3, 3],
+							"uv": {
+								"north": {
+									"uv": [73, 46],
+									"uv_size": [2, 3]
+								},
+								"east": {
+									"uv": [96, 0],
+									"uv_size": [3, 3]
+								},
+								"south": {
+									"uv": [58, 94],
+									"uv_size": [2, 3]
+								},
+								"west": {
+									"uv": [96, 3],
+									"uv_size": [3, 3]
+								},
+								"up": {
+									"uv": [85, 96],
+									"uv_size": [2, 3]
+								},
+								"down": {
+									"uv": [96, 97],
+									"uv_size": [2, -3]
+								}
+							}
+						},
+						{
+							"origin": [-8.5, 4.5, 5],
+							"size": [12, 7, 0],
+							"uv": {
+								"north": {
+									"uv": [76, 0],
+									"uv_size": [12, 7]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [7, 0]
+								},
+								"south": {
+									"uv": [76, 7],
+									"uv_size": [12, 7]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [7, 0]
+								},
+								"up": {
+									"uv": [0, 0],
+									"uv_size": [12, 0]
+								},
+								"down": {
+									"uv": [0, 0],
+									"uv_size": [12, 0]
+								}
+							}
+						},
+						{
+							"origin": [-3.5, 5.5, 3.5],
+							"size": [8, 4, 3],
+							"uv": {
+								"north": {
+									"uv": [84, 32],
+									"uv_size": [8, 4]
+								},
+								"east": {
+									"uv": [92, 35],
+									"uv_size": [3, 4]
+								},
+								"south": {
+									"uv": [84, 36],
+									"uv_size": [8, 4]
+								},
+								"west": {
+									"uv": [92, 43],
+									"uv_size": [3, 4]
+								},
+								"up": {
+									"uv": [84, 43],
+									"uv_size": [8, 3]
+								},
+								"down": {
+									"uv": [84, 49],
+									"uv_size": [8, -3]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

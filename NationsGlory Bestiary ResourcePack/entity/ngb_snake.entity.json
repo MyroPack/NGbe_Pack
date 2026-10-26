@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:snake",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/snake_0",
+        "v1": "textures/entity/ngb/snake_1",
+        "v2": "textures/entity/ngb/snake_2",
+        "v3": "textures/entity/ngb/snake_3",
+        "v4": "textures/entity/ngb/snake_4",
+        "v5": "textures/entity/ngb/snake_5"
+      },
+      "geometry": {
+        "default": "geometry.ng.snake"
+      },
+      "animations": {
+        "idle": "animation.ng.snake.idle",
+        "move": "animation.ng.snake.move",
+        "attack": "animation.ng.snake.attack",
+        "controller": "controller.animation.ng.snake.move",
+        "look": "animation.ng.snake.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.snake"
+      ],
+      "spawn_egg": {
+        "base_color": "#271e25",
+        "overlay_color": "#dcc7a6"
+      }
+    }
+  }
+}

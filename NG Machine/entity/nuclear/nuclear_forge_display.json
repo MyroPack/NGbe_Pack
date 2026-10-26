@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:nuclear_forge_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/nuclear_forge_off",
+        "on": "textures/entity/nuclear/nuclear_forge_on"
+      },
+      "geometry": {
+        "default": "geometry.ng_nuclear_forge"
+      },
+      "render_controllers": [
+        "controller.render.ng_nuclear_onoff"
+      ]
+    }
+  }
+}

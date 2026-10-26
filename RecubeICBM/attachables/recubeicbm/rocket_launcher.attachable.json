@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:rocket_launcher",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/items/rocket_launcher",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.rocket_launcher"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.rocket_launcher.first_person",
+        "third_person_hold": "animation.recubeicbm.held.rocket_launcher.third_person"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

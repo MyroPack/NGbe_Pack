@@ -1,0 +1,269 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.liquid_tank",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 4.5,
+        "visible_bounds_offset": [
+          0,
+          1.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "liquidtank",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                0,
+                -8
+              ],
+              "size": [
+                16,
+                14,
+                16
+              ],
+              "uv": [
+                0,
+                47
+              ]
+            },
+            {
+              "origin": [
+                -4,
+                2,
+                -10
+              ],
+              "size": [
+                8,
+                11,
+                2
+              ],
+              "uv": [
+                48,
+                47
+              ]
+            },
+            {
+              "origin": [
+                -4,
+                2,
+                8
+              ],
+              "size": [
+                8,
+                11,
+                2
+              ],
+              "pivot": [
+                0,
+                7.5,
+                9
+              ],
+              "rotation": [
+                0,
+                180,
+                0
+              ],
+              "uv": [
+                48,
+                47
+              ]
+            },
+            {
+              "origin": [
+                -8,
+                0,
+                -8
+              ],
+              "size": [
+                16,
+                14,
+                16
+              ],
+              "uv": [
+                0,
+                47
+              ]
+            },
+            {
+              "origin": [
+                -6,
+                52,
+                -6
+              ],
+              "size": [
+                12,
+                3,
+                12
+              ],
+              "uv": [
+                56,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -8,
+                47,
+                -8
+              ],
+              "size": [
+                16,
+                5,
+                16
+              ],
+              "uv": [
+                16,
+                77
+              ]
+            },
+            {
+              "origin": [
+                -7,
+                14,
+                -7
+              ],
+              "size": [
+                14,
+                33,
+                14
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -3,
+                20,
+                -9
+              ],
+              "size": [
+                6,
+                22,
+                2
+              ],
+              "uv": [
+                0,
+                77
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fluid",
+          "parent": "liquidtank",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "rotation": [
+            0,
+            -90,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.025,
+                3,
+                7
+              ],
+              "size": [
+                10,
+                10,
+                3
+              ],
+              "inflate": -0.025,
+              "uv": [
+                56,
+                15
+              ]
+            },
+            {
+              "origin": [
+                -4.025,
+                4,
+                9
+              ],
+              "size": [
+                8,
+                8,
+                1
+              ],
+              "inflate": -0.025,
+              "uv": [
+                56,
+                28
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fluid_out",
+          "parent": "liquidtank",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "rotation": [
+            0,
+            90,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.025,
+                3,
+                7
+              ],
+              "size": [
+                10,
+                10,
+                3
+              ],
+              "inflate": -0.025,
+              "uv": [
+                82,
+                15
+              ]
+            },
+            {
+              "origin": [
+                -4.025,
+                4,
+                9
+              ],
+              "size": [
+                8,
+                8,
+                1
+              ],
+              "inflate": -0.025,
+              "uv": [
+                82,
+                28
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

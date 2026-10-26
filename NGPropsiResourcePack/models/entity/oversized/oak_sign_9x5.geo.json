@@ -1,0 +1,87 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_oak_sign_9x5_display",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 10,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [0, 3.12, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [-24.07143, -0.25, -7.72143],
+					"cubes": [
+						{
+							"origin": [-76, 0, -10.1],
+							"size": [4, 100, 4],
+							"pivot": [-74, 34, -8.1],
+							"rotation": [0, 180, 0],
+							"uv": [240, 152]
+						},
+						{
+							"origin": [72, 0, -10.1],
+							"size": [4, 100, 4],
+							"pivot": [74, 34, -8.1],
+							"rotation": [0, -180, 0],
+							"uv": [240, 152],
+							"mirror": true
+						},
+						{
+							"origin": [24, 0, -10.1],
+							"size": [4, 16.1, 4],
+							"pivot": [26, 34, -8.1],
+							"rotation": [0, -180, 0],
+							"uv": [222, 152]
+						},
+						{
+							"origin": [-28, 0, -10.1],
+							"size": [4, 16.1, 4],
+							"pivot": [-26, 34, -8.1],
+							"rotation": [0, -180, 0],
+							"uv": [222, 152],
+							"mirror": true
+						},
+						{
+							"origin": [-72, 11.9, -9.1],
+							"size": [72, 4, 2],
+							"uv": [33, 98]
+						},
+						{
+							"origin": [0, 11.9, -9.1],
+							"size": [72, 4, 2],
+							"uv": [33, 98]
+						},
+						{
+							"origin": [0, 95.9, -9.1],
+							"size": [72, 4, 2],
+							"uv": [33, 98]
+						},
+						{
+							"origin": [-72, 95.9, -9.1],
+							"size": [72, 4, 2],
+							"uv": [33, 98]
+						},
+						{
+							"origin": [-72, 16, -8],
+							"size": [144, 80, 0.5],
+							"uv": {
+								"north": {
+									"uv": [112, 0],
+									"uv_size": [144, 80]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [80, 48]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,232 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.propsi_e_ngphonetablette",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "bone",
+          "pivot": [
+            8,
+            0,
+            -8
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                4,
+                2
+              ],
+              "size": [
+                16,
+                11,
+                0
+              ],
+              "uv": [
+                0,
+                40
+              ]
+            },
+            {
+              "origin": [
+                -6,
+                1,
+                -1
+              ],
+              "size": [
+                2,
+                4,
+                2
+              ],
+              "uv": [
+                41,
+                15
+              ]
+            },
+            {
+              "origin": [
+                4,
+                1,
+                -1
+              ],
+              "size": [
+                2,
+                4,
+                2
+              ],
+              "uv": [
+                41,
+                8
+              ]
+            },
+            {
+              "origin": [
+                -7,
+                0,
+                -3
+              ],
+              "size": [
+                14,
+                1,
+                6
+              ],
+              "uv": [
+                16,
+                43
+              ]
+            },
+            {
+              "origin": [
+                -7,
+                5,
+                -3
+              ],
+              "size": [
+                14,
+                33,
+                6
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    53,
+                    128
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    6
+                  ],
+                  "uv_size": [
+                    6,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    53,
+                    128
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    20,
+                    6
+                  ],
+                  "uv_size": [
+                    6,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    6,
+                    0
+                  ],
+                  "uv_size": [
+                    14,
+                    6
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    20,
+                    6
+                  ],
+                  "uv_size": [
+                    14,
+                    -6
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "bone2",
+          "parent": "bone",
+          "pivot": [
+            0,
+            21.5,
+            2.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                4,
+                -6
+              ],
+              "size": [
+                16,
+                35,
+                3
+              ],
+              "pivot": [
+                0,
+                9.5,
+                -3.5
+              ],
+              "rotation": [
+                0,
+                180,
+                0
+              ],
+              "uv": [
+                0,
+                51
+              ]
+            },
+            {
+              "origin": [
+                -8,
+                4,
+                1
+              ],
+              "size": [
+                16,
+                35,
+                3
+              ],
+              "pivot": [
+                0,
+                21.5,
+                2.5
+              ],
+              "rotation": [
+                0,
+                180,
+                0
+              ],
+              "uv": [
+                0,
+                90
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

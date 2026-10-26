@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.market_furniture_paint_can",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [0.925, 4.5125, 2.15625],
+					"rotation": [0, 27.5, 0],
+					"cubes": [
+						{
+							"origin": [-4.1, 0, -2.125],
+							"size": [8, 9, 8],
+							"uv": {
+								"north": {"uv": [25, 18], "uv_size": [-8, 9]},
+								"east": {"uv": [26, 9], "uv_size": [-8, 9]},
+								"south": {"uv": [17, 18], "uv_size": [-8, 9]},
+								"west": {"uv": [33, 18], "uv_size": [-8, 9]},
+								"up": {"uv": [34, 17], "uv_size": [8, -8]},
+								"down": {"uv": [35, 0], "uv_size": [8, 8]}
+							}
+						},
+						{
+							"origin": [-4.6, 5.75, 1.125],
+							"size": [9, 2, 6],
+							"uv": {
+								"north": {"uv": [50, 25], "uv_size": [-9, 2]},
+								"east": {"uv": [54, 10], "uv_size": [-6, 2]},
+								"south": {"uv": [50, 23], "uv_size": [-9, 2]},
+								"west": {"uv": [54, 12], "uv_size": [-6, 2]},
+								"up": {"uv": [32, 42], "uv_size": [9, -6]},
+								"down": {"uv": [40, 27], "uv_size": [9, 6]}
+							}
+						},
+						{
+							"origin": [4.4, 7.75, 7.125],
+							"size": [-9, -2, -6],
+							"uv": {
+								"north": {"uv": [52, 2], "uv_size": [-9, 2]},
+								"east": {"uv": [54, 14], "uv_size": [-6, 2]},
+								"south": {"uv": [52, 0], "uv_size": [-9, 2]},
+								"west": {"uv": [44, 48], "uv_size": [-6, 2]},
+								"up": {"uv": [41, 23], "uv_size": [9, -6]},
+								"down": {"uv": [41, 33], "uv_size": [9, 6]}
+							}
+						},
+						{
+							"origin": [-0.5, 0.05, -6],
+							"size": [9, 0, 9],
+							"uv": {
+								"up": {"uv": [0, 27], "uv_size": [9, -9]},
+								"down": {"uv": [18, 0], "uv_size": [9, 9]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

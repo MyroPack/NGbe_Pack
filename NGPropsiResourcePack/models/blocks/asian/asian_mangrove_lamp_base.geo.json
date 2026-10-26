@@ -1,0 +1,88 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.asian_mangrove_lamp_base",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "group2",
+					"pivot": [0, 22.56, 0],
+					"cubes": [
+						{
+							"origin": [0, 1.88, -7.52],
+							"size": [0, 26.32, 15.04],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 28]}
+							}
+						},
+						{
+							"origin": [-7.52, 1.88, 0],
+							"size": [15.04, 26.32, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 28]}
+							}
+						},
+						{
+							"origin": [-0.94, 0, -7.52],
+							"size": [1.88, 1.88, 15.04],
+							"uv": {
+								"north": {"uv": [30, 26], "uv_size": [2, 2]},
+								"east": {"uv": [38, 35], "uv_size": [16, 2]},
+								"south": {"uv": [30, 26], "uv_size": [2, 2]},
+								"west": {"uv": [38, 35], "uv_size": [16, 2]},
+								"up": {"uv": [38, 38], "uv_size": [2, 16]},
+								"down": {"uv": [26, 55], "uv_size": [2, -16]}
+							}
+						},
+						{
+							"origin": [-7.52, 0, -0.94],
+							"size": [15.04, 1.88, 1.88],
+							"uv": {
+								"north": {"uv": [38, 35], "uv_size": [16, 2]},
+								"east": {"uv": [30, 26], "uv_size": [2, 2]},
+								"south": {"uv": [38, 35], "uv_size": [16, 2]},
+								"west": {"uv": [30, 26], "uv_size": [2, 2]},
+								"up": {"uv": [38, 38], "uv_size": [2, 16]},
+								"down": {"uv": [26, 55], "uv_size": [2, -16]}
+							}
+						},
+						{
+							"origin": [-0.94, 1.88, -0.94],
+							"size": [1.88, 26.32, 1.88],
+							"uv": {
+								"north": {"uv": [35, 35], "uv_size": [2, 28]},
+								"east": {"uv": [37, 35], "uv_size": [-2, 28]},
+								"south": {"uv": [35, 35], "uv_size": [2, 28]},
+								"west": {"uv": [37, 35], "uv_size": [-2, 28]}
+							}
+						},
+						{
+							"origin": [-3.76, 28.2, -3.76],
+							"size": [7.52, 1.8, 7.52],
+							"uv": {
+								"north": {"uv": [41, 41], "uv_size": [8, -2]},
+								"east": {"uv": [41, 41], "uv_size": [8, -2]},
+								"south": {"uv": [41, 41], "uv_size": [8, -2]},
+								"west": {"uv": [41, 41], "uv_size": [8, -2]},
+								"up": {"uv": [34, 38], "uv_size": [-8, -8]},
+								"down": {"uv": [35, 34], "uv_size": [8, -8]}
+							}
+						}
+					]
+				},
+				{
+					"name": "glow1",
+					"parent": "group2",
+					"pivot": [6.58, 31.96, -6.58]
+				}
+			]
+		}
+	]
+}

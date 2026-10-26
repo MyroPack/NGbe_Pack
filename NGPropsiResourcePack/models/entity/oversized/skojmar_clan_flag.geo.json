@@ -1,0 +1,81 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_skojmar_clan_flag_display",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5.5,
+				"visible_bounds_height": 2.0,
+				"visible_bounds_offset": [0, 0.53, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 8.50682, 15.97886],
+					"rotation": [-90, 0, 90],
+					"cubes": [
+						{
+							"origin": [-10.5, 6.525, 13.9925],
+							"size": [21, 4, 4],
+							"inflate": 0.25,
+							"uv": {
+								"north": {
+									"uv": [51, 0],
+									"uv_size": [21, 4]
+								},
+								"south": {
+									"uv": [72, 0],
+									"uv_size": [-21, 4]
+								},
+								"up": {
+									"uv": [51, 4],
+									"uv_size": [21, -4]
+								},
+								"down": {
+									"uv": [51, 4],
+									"uv_size": [21, -4]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "flag1",
+					"parent": "root",
+					"pivot": [0, 6.375, 15.4425],
+					"cubes": [
+						{
+							"origin": [-7.5, -27.575, 15.3925],
+							"size": [16, 34, 0],
+							"uv": {
+								"north": {
+									"uv": [54, 5],
+									"uv_size": [16, 34]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "flag1_2",
+					"parent": "flag1",
+					"pivot": [0, -27.675, 15.4425],
+					"cubes": [
+						{
+							"origin": [-7.5, -43.5, 15.3925],
+							"size": [16, 16, 0],
+							"uv": {
+								"north": {
+									"uv": [54, 39],
+									"uv_size": [16, 16]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

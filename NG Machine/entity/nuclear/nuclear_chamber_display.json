@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:nuclear_chamber_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/nuclear_chamber"
+      },
+      "geometry": {
+        "default": "geometry.ng_nuclear_chamber"
+      },
+      "render_controllers": [
+        "controller.render.ng_nuclear_chamber"
+      ]
+    }
+  }
+}

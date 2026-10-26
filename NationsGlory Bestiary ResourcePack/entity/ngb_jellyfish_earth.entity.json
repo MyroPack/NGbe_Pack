@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:jellyfish_earth",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/jellyfish_earth_0",
+        "v1": "textures/entity/ngb/jellyfish_earth_1",
+        "v2": "textures/entity/ngb/jellyfish_earth_2",
+        "v3": "textures/entity/ngb/jellyfish_earth_3",
+        "v4": "textures/entity/ngb/jellyfish_earth_4",
+        "v5": "textures/entity/ngb/jellyfish_earth_5"
+      },
+      "geometry": {
+        "default": "geometry.ng.jellyfish_earth"
+      },
+      "animations": {
+        "idle": "animation.ng.jellyfish_earth.idle",
+        "move": "animation.ng.jellyfish_earth.move",
+        "controller": "controller.animation.ng.jellyfish_earth.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.jellyfish_earth"
+      ],
+      "spawn_egg": {
+        "base_color": "#e3ebf3",
+        "overlay_color": "#f6fafc"
+      }
+    }
+  }
+}

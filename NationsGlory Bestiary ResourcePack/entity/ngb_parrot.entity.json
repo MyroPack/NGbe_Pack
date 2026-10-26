@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:parrot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/parrot_0",
+        "v1": "textures/entity/ngb/parrot_1",
+        "v2": "textures/entity/ngb/parrot_2",
+        "v3": "textures/entity/ngb/parrot_3",
+        "v4": "textures/entity/ngb/parrot_4"
+      },
+      "geometry": {
+        "default": "geometry.ng.parrot"
+      },
+      "animations": {
+        "idle": "animation.ng.parrot.idle",
+        "move": "animation.ng.parrot.move",
+        "fly_idle": "animation.ng.parrot.fly_idle",
+        "fly_move": "animation.ng.parrot.fly_move",
+        "controller": "controller.animation.ng.parrot.move",
+        "look": "animation.ng.parrot.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.parrot"
+      ],
+      "spawn_egg": {
+        "base_color": "#c8232c",
+        "overlay_color": "#f2c230"
+      }
+    }
+  }
+}

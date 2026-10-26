@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:lion",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/lion_0",
+        "v1": "textures/entity/ngb/lion_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.lion"
+      },
+      "animations": {
+        "idle": "animation.ng.lion.idle",
+        "move": "animation.ng.lion.move",
+        "attack": "animation.ng.lion.attack",
+        "controller": "controller.animation.ng.lion.move",
+        "look": "animation.ng.lion.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.lion"
+      ],
+      "spawn_egg": {
+        "base_color": "#b8935a",
+        "overlay_color": "#5e3d1e"
+      }
+    }
+  }
+}

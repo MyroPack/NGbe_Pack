@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:fennec",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/fennec_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.fennec"
+      },
+      "animations": {
+        "idle": "animation.ng.fennec.idle",
+        "move": "animation.ng.fennec.move",
+        "controller": "controller.animation.ng.fennec.move",
+        "look": "animation.ng.fennec.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.fennec"
+      ],
+      "spawn_egg": {
+        "base_color": "#e6c48f",
+        "overlay_color": "#f6ecd8"
+      }
+    }
+  }
+}

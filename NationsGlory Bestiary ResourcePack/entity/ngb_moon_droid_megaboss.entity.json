@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:moon_droid_megaboss",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/moon_droid_megaboss_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.moon_droid_megaboss"
+      },
+      "animations": {
+        "idle": "animation.ng.moon_droid_megaboss.idle",
+        "move": "animation.ng.moon_droid_megaboss.move",
+        "attack": "animation.ng.moon_droid_megaboss.attack",
+        "controller": "controller.animation.ng.moon_droid_megaboss.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.moon_droid_megaboss"
+      ],
+      "spawn_egg": {
+        "base_color": "#303d3c",
+        "overlay_color": "#5d6960"
+      }
+    }
+  }
+}

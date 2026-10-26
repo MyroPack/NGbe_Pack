@@ -1,0 +1,47 @@
+{
+  // Messages du chat caches pendant l'autocompletion des commandes. La liste des commandes et l'aide des
+  // parametres sont les memes lignes de la collection auto_complete (chat.commands_panel), sans aucun binding
+  // de visibilite dans le vanilla 1.26.50 : le seul binding vanilla qui cache les messages est #chat_visible
+  // (chat.messages_text). On le pose aussi sur tout le panneau des messages, en binding_condition always pour
+  // qu'il se mette a jour pendant que le panneau est cache (comme #has_new_messages de new_messages_button).
+  "chat_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "messages_panel",
+        "value": [
+          {
+            "messages_panel@chat.messages_scrolling_panel": {
+              "bindings": [
+                {
+                  "binding_type": "global",
+                  "binding_condition": "always",
+                  "binding_name": "#chat_visible",
+                  "binding_name_override": "#visible"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "messages_text": {
+    "visible": false,
+    "bindings": [
+      {
+        "binding_name": "#text"
+      },
+      {
+        "binding_name": "#chat_visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#chat_visible and (not ((('%.6s' * #text) = '§b§r') or (('%.6s' * #text) = '§i§r') or (('%.6s' * #text) = '§a§r') or (('%.6s' * #text) = '§e§r') or (('%.6s' * #text) = '§s§r') or (('%.6s' * #text) = '§t§r'))))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

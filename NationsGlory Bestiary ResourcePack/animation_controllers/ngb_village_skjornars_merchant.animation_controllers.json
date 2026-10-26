@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ng.village_skjornars_merchant.move": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "move": "v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "move": {
+          "animations": [
+            "move"
+          ],
+          "transitions": [
+            {
+              "idle": "!v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        }
+      }
+    }
+  }
+}

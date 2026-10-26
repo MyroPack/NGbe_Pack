@@ -1,0 +1,357 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.meteor_display",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [
+					0,
+					0.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "met_group",
+					"pivot": [
+						0,
+						6,
+						0
+					],
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				{
+					"name": "met_projectile",
+					"parent": "met_group",
+					"pivot": [
+						0,
+						6.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6.5,
+								0,
+								-6.5
+							],
+							"size": [
+								13,
+								15,
+								13
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone",
+					"parent": "met_projectile",
+					"pivot": [
+						6,
+						15,
+						-6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								5.5,
+								2,
+								6.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								6,
+								8.5,
+								0
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone6",
+					"parent": "met_projectile",
+					"pivot": [
+						6,
+						15,
+						6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								5.5,
+								2,
+								19.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								6,
+								8.5,
+								13
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone7",
+					"parent": "met_projectile",
+					"pivot": [
+						-6,
+						15,
+						6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6.5,
+								2,
+								19.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								-6,
+								8.5,
+								13
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone8",
+					"parent": "met_projectile",
+					"pivot": [
+						-6,
+						0,
+						6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6.5,
+								-13,
+								19.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								-6,
+								-6.5,
+								13
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone9",
+					"parent": "met_projectile",
+					"pivot": [
+						6,
+						0,
+						6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								5.5,
+								-13,
+								19.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								6,
+								-6.5,
+								13
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone3",
+					"parent": "met_projectile",
+					"pivot": [
+						-6,
+						15,
+						-6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6.5,
+								2,
+								6.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								-6,
+								8.5,
+								0
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone4",
+					"parent": "met_projectile",
+					"pivot": [
+						-6,
+						0,
+						-6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6.5,
+								-13,
+								6.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								-6,
+								-6.5,
+								0
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				},
+				{
+					"name": "met_bone5",
+					"parent": "met_projectile",
+					"pivot": [
+						6,
+						0,
+						-6.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								5.5,
+								-13,
+								6.5
+							],
+							"size": [
+								1,
+								13,
+								0
+							],
+							"pivot": [
+								6,
+								-6.5,
+								0
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								25,
+								47
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

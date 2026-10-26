@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:big_flag_iris_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/flag/flag_iris"
+      },
+      "geometry": {
+        "default": "geometry.banner_flag"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

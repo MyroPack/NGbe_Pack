@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:meerkat",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/meerkat_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.meerkat"
+      },
+      "animations": {
+        "idle": "animation.ng.meerkat.idle",
+        "move": "animation.ng.meerkat.move",
+        "controller": "controller.animation.ng.meerkat.move",
+        "look": "animation.ng.meerkat.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.meerkat"
+      ],
+      "spawn_egg": {
+        "base_color": "#a07c58",
+        "overlay_color": "#bb9c74"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:electric_charger_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/electric_charger_off",
+        "on": "textures/blocks/electric_charger_on"
+      },
+      "geometry": {
+        "default": "geometry.electric_charger"
+      },
+      "render_controllers": [
+        "controller.render.ng_electric_charger"
+      ]
+    }
+  }
+}

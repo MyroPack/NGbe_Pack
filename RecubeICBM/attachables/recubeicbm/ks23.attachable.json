@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:ks23",
+      "item": {
+        "ng:ks23": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/weapon/ks23",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.ks23"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.ks23.first_person",
+        "third_person_hold": "animation.recubeicbm.held.ks23.third_person",
+        "idle": "animation.recubeicbm.weapon.ks23.idle",
+        "fire": "animation.recubeicbm.weapon.ks23.fire",
+        "reload": "animation.recubeicbm.weapon.ks23.reload",
+        "weapon": "controller.animation.recubeicbm.weapon"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          },
+          "weapon"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

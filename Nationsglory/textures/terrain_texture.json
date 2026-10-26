@@ -1,0 +1,77 @@
+{
+  "texture_name" : "atlas.terrain",
+  "texture_data" : {
+    "storage_module_0" : {
+      "textures" : "textures/blocks/storage_module_0"
+    },
+    "ore_cluster_iron" : {
+      "textures" : "textures/blocks/ore_cluster_iron"
+    },
+    "ore_cluster_copper" : {
+      "textures" : "textures/blocks/ore_cluster_copper"
+    },
+    "ore_cluster_gold" : {
+      "textures" : "textures/blocks/ore_cluster_gold"
+    },
+    "ore_cluster_tin" : {
+      "textures" : "textures/blocks/ore_cluster_tin"
+    },
+    "ore_cluster_tin_edora" : {
+      "textures" : "textures/blocks/ore_cluster_tin_edora"
+    },
+    "ore_cluster_aluminium" : {
+      "textures" : "textures/blocks/ore_cluster_aluminium"
+    },
+    "ore_cluster_zirconium_edora" : {
+      "textures" : "textures/blocks/ore_cluster_zirconium_edora"
+    },
+    "ore_cluster_lead_edora" : {
+      "textures" : "textures/blocks/ore_cluster_lead_edora"
+    },
+    "ore_cluster_cryolite_edora" : {
+      "textures" : "textures/blocks/ore_cluster_cryolite_edora"
+    },
+    "ore_cluster_uranium" : {
+      "textures" : "textures/blocks/ore_cluster_uranium"
+    },
+    "ore_cluster_adamantium" : {
+      "textures" : "textures/blocks/ore_cluster_adamantium"
+    },
+    "ore_cluster_silicon" : {
+      "textures" : "textures/blocks/ore_cluster_silicon"
+    },
+    "ore_cluster_quartz" : {
+      "textures" : "textures/blocks/ore_cluster_quartz"
+    },
+    "ore_cluster_quartz_lunar" : {
+      "textures" : "textures/blocks/ore_cluster_quartz_lunar"
+    },
+    "ore_cluster_coal" : {
+      "textures" : "textures/blocks/ore_cluster_coal"
+    },
+    "ore_cluster_redstone" : {
+      "textures" : "textures/blocks/ore_cluster_redstone"
+    },
+    "ore_cluster_lapis" : {
+      "textures" : "textures/blocks/ore_cluster_lapis"
+    },
+    "ore_cluster_diamond" : {
+      "textures" : "textures/blocks/ore_cluster_diamond"
+    },
+    "ore_cluster_emerald" : {
+      "textures" : "textures/blocks/ore_cluster_emerald"
+    },
+    "shadow_ore" : {
+      "textures" : "textures/blocks/shadow_ore"
+    },
+    "meteor_terrestre" : {
+      "textures" : "textures/blocks/meteor/meteor_terrestre"
+    },
+    "meteor_volcan" : {
+      "textures" : "textures/blocks/meteor/meteor_volcan"
+    },
+    "meteor_lune" : {
+      "textures" : "textures/blocks/meteor/meteor_lune"
+    }
+  }
+}

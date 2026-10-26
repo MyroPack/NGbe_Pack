@@ -1,0 +1,692 @@
+{
+  "namespace": "troc",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+/*       {"small_chest_grid@chest.small_chest_grid":{
+        "grid_dimensions": [ 9, 9 ],
+        "layer":4000000,
+        "anchor_from":"left_middle",
+        "anchor_to":"left_middle",
+        "size": [ 162, 162 ]
+      }},
+
+      {"hotbar_grid@common.hotbar_grid_template": {
+        "layer":4000000
+      }},  */
+
+      {"background_black@ng_asset.background_white":{
+        "color":[0.000, 0.000, 0.000],
+        "size":["150%","150%"],
+        "alpha":0.5
+      }},
+
+      {"background@ng_asset.background_02":{
+        "size": [308,230],
+        "controls":[
+ 
+            {"content@ng_module.stackpanel":{
+              "size":["100% - 2px","100% - 2px"],
+              "controls":[
+
+                      {"header@ng_asset.background_01":{
+                        "size": ["100%",20],
+                        "controls":[
+
+                                  {"content@ng_module.stackpanel":{
+                                    "size":["100% - 2px","100% - 2px"],
+                                    "orientation":"horizontal",
+                                    "controls":[
+
+                                              {"padding@ng_module.panel":{
+                                                "size":[5,"100%"]
+                                              }},
+
+                                              {"centring@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+
+                                                      {"text":{
+                                                        "type":"label",
+                                                        "text":"Troc - ",
+                                                        "offset":[0,-1.3],
+                                                        "font_type": "MinecraftTen",
+                                                        "font_scale_factor": 0.8
+                                                      }}
+                                              ]}},
+
+                                              {"pseudo@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$index": 10,
+                                                "size": ["100%c", "100%"],
+                                                "$font_scale_factor": 0.8,
+                                                "$font_type": "MinecraftTen",
+                                                "$text_offset": [0, -1.3]
+                                              }},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":["fill","100%"]
+                                              }},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":[3,"100%"]
+                                              }},
+
+                                              {"money@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+                                                        
+                                                    {"background@ng_asset.background_03":{
+                                                      "min_size":[25,"100% - 2px"],
+                                                      "size": ["100%c + 10px","100% - 2px"],
+                                                      "controls":[
+
+                                                                {"text@ng_module.Simple_text": {
+                                                                  "$type_get_text": "Get_text_type_3",
+                                                                  "$index": 11,
+                                                                  "$size_icone_right": [8, 8],
+                                                                  "$padding_right": [0.1, 0],
+                                                                  "$offset_icone_right":[0,0],
+                                                                  "$text_offset":[1.6,0.6],
+                                                                  "$color_icone_right": [0.533, 0.941, 0.392],
+                                                                  "$texture_icone_right": "ng_asset.icon_10",
+                                                                  "layer":100,
+                                                                  "size": ["100%c", "100%"],
+                                                                  "$font_scale_factor": 0.7
+                                                                }}
+                                                    ]}}
+                                              ]}},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":[2.5,"100%"]
+                                              }},
+                                        
+                                              {"close_button@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+
+                                                    {"close_button@ng_asset.background_white":{
+                                                      "color":[0.094, 0.094, 0.106],
+                                                      "size":[16,16],
+                                                      "controls":[
+
+                                                            {"close_button@ng_module.close_button":{}}  
+
+                                                    ]}}
+                                              ]}},  
+                                              
+                                              {"padding@ng_module.panel":{
+                                                "size":[2.5,"100%"]
+                                              }}
+                                  ]}}
+                      ]}},
+
+                            {"padding@ng_module.panel":{
+                              "size":["100%",5]
+                            }},
+
+                      {"inventory_content@ng_module.panel":{
+                        "size":["100%","100%c"],
+                        "controls":[
+
+                              {"inventory_content@ng_module.stackpanel":{
+                               "size":["100% - 29px",82],
+                               "controls":[           
+
+                                        {"title":{
+                                            "size":["100%",10],
+                                            "type":"label",
+                                            "font_scale_factor":0.6,
+                                            "color":[0.831, 0.831, 0.847],
+                                            "font_type":"MinecraftTen",
+                                            "text":"inventaire"
+                                        }},
+
+                                        {"deal_panel@ng_asset.background_white":{
+                                          "color":[0.180, 0.180, 0.192],
+                                          "size":["100%",70],
+                                          "controls":[
+
+                                        {"inventory_&_hotbar@ng_module.stackpanel":{
+                                          "orientation":"horizontal",
+                                          "size":[275,69],
+                                          "offset":[0,0.5],
+                                          "controls":[
+
+                                              {"complementaroy@ng_module.grid_asset":{
+                                                "$size_grid":[69,69],
+                                                "$grid_dimensions":[3,3],
+                                                "$collection_name":"hotbar_items",
+                                                "$item_renderer_panel_size":[22,22],
+                                                "$cell_image_size":[22,22],
+                                                "$textures_slot_hover":"ng_asset.background_10",
+                                                "$textures_slot_default":"ng_asset.background_white",
+                                                "$color_background_default":[0.094, 0.094, 0.106],
+                                                "$slot_size":[22,22]
+                                              }},
+
+                                              {"complementaroy@ng_module.grid_asset":{
+                                                "$size_grid":[207,69],
+                                                "$grid_dimensions":[9,3],
+                                                "$collection_name":"inventory_items",
+                                                "$item_renderer_panel_size":[22,22],
+                                                "$cell_image_size":[22,22],
+                                                "$textures_slot_hover":"ng_asset.background_10",
+                                                "$textures_slot_default":"ng_asset.background_white",
+                                                "$color_background_default":[0.094, 0.094, 0.106],
+                                                "$slot_size":[22,22]
+                                              }}
+                                        ]}}
+                                        ]}}
+                              ]}}
+                      ]}},
+
+                      {"trade_content@ng_module.panel":{
+                        "size":["100%","100%c"],
+                        "controls":[
+
+                              {"deal_panel@ng_asset.background_white":{
+                                "color":[0.094, 0.094, 0.106],
+                                "size":["100% - 30px",93],
+                                "controls":[
+
+                                        {"content@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                              {"header@ng_asset.background_06":{
+                                                "size":["100%",15],
+                                                "layer":2,   
+                                                "controls":[
+
+                                                      {"content@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "size":["100% - 2px","100% -2px"],
+                                                        "controls":[
+
+                                                              {"padding@ng_module.panel":{
+                                                                "size":[5,"100%"]
+                                                              }},
+
+                                                              {"centring@ng_module.panel":{
+                                                                "size":["100%c","100%"],
+                                                                "controls":[
+                                                         
+                                                                      {"title":{
+                                                                        "type":"label",
+                                                                        "font_scale_factor":0.7,
+                                                                        "layer":10,
+                                                                        "offset":[0,-1.3],
+                                                                        "font_type":"MinecraftTen",
+                                                                        "text":"proposition d'echange"
+                                                                      }}
+                                                              ]}}
+                                                      ]}}
+                                              ]}},
+
+                                              {"content@ng_asset.background_07":{
+                                                "size":["100%","fill"],
+                                                "controls":[
+
+                                                      {"trade@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "size":["100% - 8px","100% - 5px"],
+                                                        "controls":[
+
+                                                              {"your_trade@ng_module.stackpanel":{
+                                                                "size":[111,"100%"],
+                                                                "controls":[
+
+                                                                        {"text@ng_module.stackpanel":{
+                                                                          "orientation":"horizontal",
+                                                                          "size":["100%",10],
+                                                                          "controls":[
+
+                                                                                {"title":{
+                                                                                  "type":"label",
+                                                                                  "layer":10,
+                                                                                  "font_scale_factor":0.5,
+                                                                                  "color":[0.831, 0.831, 0.847],
+                                                                                  "font_type":"MinecraftTen",
+                                                                                  "text":"Ta proposition"
+                                                                                }},
+
+                                                                                {"padding@ng_module.panel":{
+                                                                                  "size":["fill",10]
+                                                                                }},
+
+                                                                                {"status@ng_module.multiple_status_text": {
+                                                                                  "$S0_type_get_text": "Get_text_type_1",
+                                                                                  "$S1_type_get_text": "Get_text_type_1",
+                                                                                  "$index": 26,
+                                                                                  "$S0_font_type":"MinecraftTen",
+                                                                                  "$S1_font_type":"MinecraftTen",
+                                                                                  "$S0_text_color": [1.000, 0.537, 0.012],
+                                                                                  "$S1_text_color":[0.604, 0.902, 0.000],
+                                                                                  "layer":10,
+                                                                                  "size": ["100%c", "100%"],
+                                                                                  "$font_scale_factor": 0.5,
+                                                                                  "$text_offset": [0, -1.3]
+                                                                                }}
+                                                                        ]}},
+
+                                                                        {"background@ng_asset.background_white":{
+                                                                          "size":["100%",45],
+                                                                          "color":[0.322, 0.322, 0.361],
+                                                                          "controls":[
+
+                                                                                  {"slot":{
+                                                                                    "type":"stack_panel",
+                                                                                    "size":[109,43],
+                                                                                    "controls":[
+
+                                                                                        {"ligne_1":{
+                                                                                            "type":"stack_panel",
+                                                                                            "orientation":"horizontal",
+                                                                                            "collection_name": "container_items",
+                                                                                            "size":["100%",21],
+                                                                                            "controls":[
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":14
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":15
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                      "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":16
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                      "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":17
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":18
+                                                                                              }}
+                                                                                        ]}},
+
+                                                                                        {"padding@ng_module.panel":{
+                                                                                          "size":["100%",1]
+                                                                                        }},
+
+                                                                                        {"ligne_2":{
+                                                                                            "type":"stack_panel",
+                                                                                            "orientation":"horizontal",
+                                                                                            "collection_name": "container_items",
+                                                                                            "size":["100%",21],
+                                                                                            "controls":[
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":19
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":20
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":21
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":22
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":23
+                                                                                              }}
+                                                                                        ]}}
+                                                                                  ]}}
+                                                                        ]}},
+
+                                                                        {"padding@ng_module.panel":{
+                                                                          "size":["100%",2]
+                                                                        }},
+
+                                                                        {"button_money@ng_module.stackpanel":{
+                                                                          "orientation":"horizontal",
+                                                                          "size":["100%",13],
+                                                                          "controls":[
+
+                                                                                  // Plus d'offre de NGCoins : l'argent prend toute la rangee, avec le logo dollar du bandeau.
+                                                                                  {"money@ng_module.Simple_Button":{
+                                                                                    "size":["100%","100%"],
+                                                                                    "$index": 24,
+                                                                                    "$texture_button": "ng_asset.button_01",
+                                                                                    "$type_get_text": "Get_text_type_1",
+                                                                                    "$font_scale_factor": 0.6,
+                                                                                    "$text_offset":[0,0.3],
+                                                                                    "$size_icone_right": [7, 7],
+                                                                                    "$padding_right": [1, 0],
+                                                                                    "$color_icone_right": [0.533, 0.941, 0.392],
+                                                                                    "$texture_icone_right": "ng_asset.icon_10"
+                                                                                  }}
+                                                                        ]}}
+                                                              ]}},
+
+                                                              {"padding@ng_module.panel":{
+                                                                "size":["fill","100%"],
+                                                                "controls":[
+
+                                                                      {"icon_double_arrow@ng_asset.icon_02":{
+                                                                        "size":[15,15]
+                                                                      }}
+                                                              ]}}, 
+                                                              
+                                                              {"him_trade@ng_module.stackpanel":{
+                                                                "size":[111,"100%"],
+                                                                "controls":[
+
+                                                                        {"text@ng_module.stackpanel":{
+                                                                          "orientation":"horizontal",
+                                                                          "size":["100%",10],
+                                                                          "controls":[
+
+                                                                                {"status@ng_module.multiple_status_text": {
+                                                                                  "$S0_type_get_text": "Get_text_type_1",
+                                                                                  "$S1_type_get_text": "Get_text_type_1",
+                                                                                  "$index": 39,
+                                                                                  "$S0_font_type":"MinecraftTen",
+                                                                                  "$S1_font_type":"MinecraftTen",
+                                                                                  "$S0_text_color": [1.000, 0.537, 0.012],
+                                                                                  "$S1_text_color":[0.604, 0.902, 0.000],
+                                                                                  "layer":10,
+                                                                                  "size": ["100%c", "100%"],
+                                                                                  "$font_scale_factor": 0.5,
+                                                                                  "$text_offset": [0, -1.3]
+                                                                                }},                                                                                
+
+                                                                                {"padding@ng_module.panel":{
+                                                                                  "size":["fill","100%"]
+                                                                                }},
+
+                                                                                 {"centring@ng_module.panel":{
+                                                                                  "size":["100%c","100%"],
+                                                                                  "controls":[
+                                                                                    
+                                                                                        {"title":{
+                                                                                          "type":"label",
+                                                                                          "layer":10,
+                                                                                          "font_scale_factor":0.5,
+                                                                                          "color":[0.443, 0.443, 0.482],
+                                                                                          "font_type":"MinecraftTen",
+                                                                                          "text":"proposition de ",
+                                                                                          "offset":[0,-1.3]
+                                                                                        }}
+                                                                                ]}}, 
+
+                                                                                {"text@ng_module.Simple_text": {
+                                                                                  "$type_get_text": "Get_text_type_1",
+                                                                                  "$index": 10,
+                                                                                  "layer":100,
+                                                                                  "size": ["100%c", "100%"],
+                                                                                  "$font_scale_factor": 0.5,
+                                                                                  "$font_type": "MinecraftTen",
+                                                                                  "$text_offset": [0, -1.3]
+                                                                                }}
+                                                                        ]}},
+
+                                                                        {"background@ng_asset.background_white":{
+                                                                          "size":["100%",45],
+                                                                          "color":[0.322, 0.322, 0.361],
+                                                                          "controls":[
+
+                                                                                  {"slot":{
+                                                                                    "type":"stack_panel",
+                                                                                    "size":[109,43],
+                                                                                    "controls":[
+
+                                                                                        {"ligne_1":{
+                                                                                            "type":"stack_panel",
+                                                                                            "orientation":"horizontal",
+                                                                                            "collection_name": "container_items",
+                                                                                            "size":["100%",21],
+                                                                                            "controls":[
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":27,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":28,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                      "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":29,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                      "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":30,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":31,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }}
+                                                                                        ]}},
+
+                                                                                        {"padding@ng_module.panel":{
+                                                                                          "size":["100%",1]
+                                                                                        }},
+
+                                                                                        {"ligne_2":{
+                                                                                            "type":"stack_panel",
+                                                                                            "orientation":"horizontal",
+                                                                                            "collection_name": "container_items",
+                                                                                            "size":["100%",21],
+                                                                                            "controls":[
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":32,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":33,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":34,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":35,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }},
+
+                                                                                                  {"padding@ng_module.panel":{
+                                                                                                    "size":[1,10]
+                                                                                                  }},
+
+                                                                                              {"slot_1@ng_module.custome_slot":{
+                                                                                                "$index":36,
+                                                                                                "$mapping_container":"container_mapping_nonclickable"
+                                                                                              }}
+                                                                                        ]}}
+                                                                                  ]}}
+                                                                        ]}},
+
+                                                                        {"padding@ng_module.panel":{
+                                                                          "size":["100%",2]
+                                                                        }},
+
+                                                                        {"button_money@ng_module.stackpanel":{
+                                                                          "orientation":"horizontal",
+                                                                          "size":["100%",13],
+                                                                          "controls":[
+
+                                                                              // Plus de NGCoins offerts : l'argent prend toute la rangee, avec le logo dollar du bandeau.
+                                                                              {"background@ng_asset.background_09":{
+                                                                                "size":["100%","100%"],
+                                                                                "controls":[
+
+                                                                                      {"text@ng_module.Simple_text": {
+                                                                                          "$type_get_text": "Get_text_type_1",
+                                                                                          "$index": 37,
+                                                                                          "layer":100000,
+                                                                                          "size": ["100%c", "100%"],
+                                                                                          "$font_scale_factor": 0.6,
+                                                                                          "$text_offset":[0,0.3],
+                                                                                          "$size_icone_right": [7, 7],
+                                                                                          "$padding_right": [1, 0],
+                                                                                          "$color_icone_right": [0.533, 0.941, 0.392],
+                                                                                          "$texture_icone_right": "ng_asset.icon_10"
+                                                                                      }}
+                                                                              ]}}
+                                                                        ]}}
+                                                              ]}}  
+                                                      ]}}
+                                              ]}}
+                                        ]}}
+                              ]}}
+                      ]}},
+
+                         {"padding@ng_module.panel":{
+                              "size":["100%",4]
+                          }},
+
+                      {"button":{
+                        "size":["100%",18],
+                        "type":"panel",
+                        "controls":[
+
+                              {"button":{
+                                "size":["100% - 10px",18],
+                                "type":"stack_panel",
+                                "orientation":"horizontal",
+                                "controls":[
+
+                                  {"button@ng_module.Simple_Button":{
+                                    "size": ["47.5%", "100%"],
+                                    "$size_button": ["100%", "100%"],
+                                    "$index": 12,
+                                    "$texture_button": "ng_asset.button_02",
+                                    "$type_get_text": "Get_text_type_1",
+                                    "$font_scale_factor": 0.6
+                                  }},
+
+                                  {"padding@ng_module.panel":{
+                                    "size":["5%","100%"]
+                                  }},
+
+                                  {"button@ng_module.multiple_status_button": {
+                                    "size": ["47.5%", "100%"],
+                                    "$size_button": ["100%", "100%"],
+                                    "$index": 13,
+                                  
+                                    "$textures_button_S0": "ng_asset.button_02",
+                                    "$textures_button_S1": "ng_asset.button_03",
+                                    "$textures_button_S2": "ng_asset.button_04",
+                                
+                                    "$fonction_mapping_button_S0": "clickable",
+                                    "$fonction_mapping_button_S1": "clickable",
+                                    "$fonction_mapping_button_S2": "nonclickable",
+                                  
+                                    "$S0_type_get_text": "Get_text_type_1",
+                                    "$S1_type_get_text": "Get_text_type_1",
+                                    "$S2_type_get_text": "Get_text_type_1",
+                                  
+                                    "$font_scale_factor": 0.6
+                                  }}
+                                ]}}
+                      ]}}
+            ]}}
+      ]}}
+  ]},
+
+  "custome_slot@ng_module.container_item":{
+    "collection_index":"$index",
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[21,21],
+    "$cell_image_size":[21,21],
+    "$textures_slot_hover":"ng_asset.background_10",
+    "$textures_slot_default":"ng_asset.background_white",
+    "$color_background_default":[0.094, 0.094, 0.106],
+    "$slot_size":[21,21]
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+    

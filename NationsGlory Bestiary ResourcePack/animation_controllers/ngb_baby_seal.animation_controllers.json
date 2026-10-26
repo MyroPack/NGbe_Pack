@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ng.baby_seal.move": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "swim_idle": "v.ngb_swimming"
+            },
+            {
+              "move": "v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "move": {
+          "animations": [
+            "move"
+          ],
+          "transitions": [
+            {
+              "swim_move": "v.ngb_swimming"
+            },
+            {
+              "idle": "!v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "swim_idle": {
+          "animations": [
+            "swim_idle"
+          ],
+          "transitions": [
+            {
+              "idle": "!v.ngb_swimming"
+            },
+            {
+              "swim_move": "v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "swim_move": {
+          "animations": [
+            "swim_move"
+          ],
+          "transitions": [
+            {
+              "idle": "!v.ngb_swimming"
+            },
+            {
+              "swim_idle": "!v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        }
+      }
+    }
+  }
+}

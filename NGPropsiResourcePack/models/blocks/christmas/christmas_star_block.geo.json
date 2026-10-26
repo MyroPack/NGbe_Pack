@@ -1,0 +1,41 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.christmas_star_block",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "star",
+					"pivot": [0, 24.08757, -0.2175],
+					"cubes": [
+						{
+							"origin": [-7, 0.08757, -0.10875],
+							"size": [14, 15.95622, 0],
+							"pivot": [0, 8.06567, -0.10875],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"south": {"uv": [0, 0], "uv_size": [14, 22]}
+							}
+						},
+						{
+							"origin": [-7, 0.08757, -0.10875],
+							"size": [14, 15.95622, 0],
+							"pivot": [0, 8.06567, -0.10875],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"south": {"uv": [14, 0], "uv_size": [-14, 22]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

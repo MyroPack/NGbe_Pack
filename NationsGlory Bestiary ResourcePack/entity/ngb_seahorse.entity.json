@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:seahorse",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/seahorse_0",
+        "v1": "textures/entity/ngb/seahorse_1",
+        "v2": "textures/entity/ngb/seahorse_2",
+        "v3": "textures/entity/ngb/seahorse_3",
+        "v4": "textures/entity/ngb/seahorse_4"
+      },
+      "geometry": {
+        "default": "geometry.ng.seahorse"
+      },
+      "animations": {
+        "idle": "animation.ng.seahorse.idle",
+        "move": "animation.ng.seahorse.move",
+        "controller": "controller.animation.ng.seahorse.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.seahorse"
+      ],
+      "spawn_egg": {
+        "base_color": "#6d31b9",
+        "overlay_color": "#5729a8"
+      }
+    }
+  }
+}

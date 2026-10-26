@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:monkey",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/monkey_0",
+        "v1": "textures/entity/ngb/monkey_1",
+        "v2": "textures/entity/ngb/monkey_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.monkey"
+      },
+      "animations": {
+        "idle": "animation.ng.monkey.idle",
+        "move": "animation.ng.monkey.move",
+        "controller": "controller.animation.ng.monkey.move",
+        "look": "animation.ng.monkey.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.monkey"
+      ],
+      "spawn_egg": {
+        "base_color": "#493b31",
+        "overlay_color": "#3d2f28"
+      }
+    }
+  }
+}

@@ -1,0 +1,1141 @@
+{
+  "namespace": "ng_map",
+
+  // -----------------------------------------------
+  //
+  //        Carte du monde en jeu (/map)
+  //
+  // -----------------------------------------------
+  //
+  // Formulaire simple envoye par RecubeDynmap (carte en jeu) et aiguille ici par server_form.json
+  // quand son titre commence par le marqueur §m§r§a§r§p§r :
+  //   - titre (#title_text) : marqueur + titre, le marqueur est retire a l'affichage ;
+  //   - texte (#form_text) : position du joueur, pays, largeur de la vue ;
+  //   - bouton 0 : image de la carte (type url), affichee en grand a gauche. Son texte est ecrit
+  //     a sa place tant que l'image n'est pas arrivee : la case de la carte n'est jamais vide ;
+  //   - bouton 1, facultatif : image de la vue d'avant (type url), sans texte, gardee affichee
+  //     le temps que celle du bouton 0 arrive (voir pictures_area) ;
+  //   - boutons suivants : actions (zoom, deplacement, recentrer, claims, accueil, fermer), puis lignes de
+  //     la legende. Chacun porte une image du pack (type path), TRANSPARENTE, dont le chemin sert
+  //     d'etiquette : textures/ui/ng_map/id/<nom>. Le pack compare ce chemin pour ranger chaque
+  //     bouton a sa place (croix directionnelle, zoom, interrupteur des claims, legende, fermer).
+  //
+  // Habillage : celui des maquettes du designer (creation de pays, ecrans Java) : fenetre 27272A
+  // cernee 18181B, barre de titre 3F3F46 bordee 52525C avec le titre a gauche et la croix a
+  // droite, panneaux 18181B bordes 3F3F46, boutons a icone 52525C bordes 71717B.
+  //
+  // Tailles : la fenetre prend la hauteur de l'ecran moins 12 (300 au plus) ; sa largeur vaut sa
+  // hauteur + 110, la carte est un carre de hauteur - 32, le panneau lateral fait 124 de large.
+  //
+  // Liaisons : uniquement des formes deja en service. L'etiquette d'un bouton se lit par une
+  // egalite sur #form_button_texture, comme les tests '' et 'loading' de l'image : aucune
+  // operation sur un texte. Les liaisons de l'image de la carte (relues en permanence depuis la
+  // 1.1.32) sont inchangees : une etiquette transparente posee dans la pile des images laisse
+  // voir le cadre et son texte de chargement, comme avant. Les factories suivent le contrat
+  // vanilla depuis la 1.21.70 (longueur liee a #form_button_contents, cle "button").
+  // Dependances au pack NG : textures/ui/background, textures/ui/icon, textures/ui/ng_map.
+
+  "flat_image": {
+    "type": "image",
+    "texture": "textures/ui/background/background_white"
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+
+      // Place disponible : l'ecran moins une marge de 6, 300 de haut au plus. Invisible.
+      {"bounds": {
+        "type": "image",
+        "texture": "textures/ui/background/background_empty",
+        "size": [ "100% - 12px", "100% - 12px" ],
+        "max_size": [ 600, 300 ],
+        "layer": 1,
+        "controls": [
+
+          // Fenetre : fond 27272A cerne 18181B. Largeur = hauteur + 110.
+          {"window": {
+            "type": "image",
+            "texture": "textures/ui/background/background_02",
+            "size": [ "100%y + 110px", "100%" ],
+            "layer": 1,
+            "controls": [
+              {"title_bar@ng_map.title_bar": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 1 ]
+              }},
+              {"map_side@ng_map.map_side": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 7, 25 ]
+              }},
+              {"side_panel@ng_map.side_panel": {
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [ -7, 25 ]
+              }}
+            ]
+          }}
+
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Barre de titre : icone, titre sans le marqueur, fermeture
+  // -----------------------------------------------
+
+  "title_bar": {
+    "type": "image",
+    "texture": "textures/ui/background/background_01",
+    "size": [ "100% - 2px", 18 ],
+    "layer": 2,
+    "controls": [
+
+      {"title_icon": {
+        "type": "image",
+        "texture": "textures/ui/icon/icon_43",
+        "size": [ 8, 8 ],
+        "color": [ 0.831, 0.831, 0.847 ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 6, 0 ],
+        "layer": 2
+      }},
+
+      {"title_label": {
+        "type": "label",
+        "size": [ "100% - 60px", "default" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 18, -1 ],
+        "text": "#text",
+        "text_alignment": "left",
+        "font_type": "MinecraftTen",
+        "color": [ 0.98, 0.98, 0.98 ],
+        "layer": 2,
+        "bindings": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#title_text - '§m§r§a§r§p§r')",
+            "target_property_name": "#text"
+          }
+        ]
+      }},
+
+      // Bouton d'accueil : la maison avant la croix, meme cadre et memes fonds qu'elle, 2 px a sa gauche. C'est un
+      // bouton du formulaire (etiquette accueil, InGame.HomeCommand de RecubeDynmap, /app sur NationsGlory) :
+      // sans lui (RecubeDynmap plus ancien, reglage vide), rien n'est dessine.
+      {"home@ng_map.home_slot": {
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [ -18, 0 ]
+      }},
+
+      {"close@ng_map.close_button": {
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [ -2, 0 ]
+      }}
+
+    ]
+  },
+
+  "home_slot@ng_map.slot": {
+    "size": [ 14, 14 ],
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.home_item" } }
+  },
+  "home_item": {
+    "type": "panel",
+    "size": [ 14, 14 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/accueil')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"frame@ng_map.flat_image": {
+        "size": [ 14, 14 ],
+        "color": [ 0.094, 0.094, 0.106 ],
+        "layer": 1
+      }},
+      {"button@ng_map.home_button": {}}
+    ]
+  },
+  "home_button@common.button": {
+    "size": [ 12, 12 ],
+    "layer": 2,
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+      {"hover": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+      {"pressed": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+      {"icon": {
+        "type": "image",
+        "texture": "textures/ui/icon/icon_06",
+        "size": [ 6, 6 ],
+        "color": [ 0.831, 0.831, 0.847 ],
+        "layer": 5
+      }}
+    ]
+  },
+
+  "close_button@ng_map.flat_image": {
+    "size": [ 14, 14 ],
+    "color": [ 0.094, 0.094, 0.106 ],
+    "layer": 2,
+    "controls": [
+
+      {"button@common.button": {
+        "size": [ 12, 12 ],
+        "$pressed_button_name": "button.menu_exit",
+        "controls": [
+          {"default": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+          {"hover": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+          {"pressed": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+          {"icon": {
+            "type": "image",
+            "texture": "textures/ui/icon/icon_01",
+            "size": [ 6, 6 ],
+            "color": [ 0.831, 0.831, 0.847 ],
+            "layer": 5
+          }}
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  La carte : un carre, a gauche
+  // -----------------------------------------------
+
+  // Decoupe : chaque bouton du formulaire porte une image, donc map_area empile un cadre par
+  // bouton. Seul le premier (le bouton 0, l'image de la carte) tient dans ce carre ; les autres
+  // tombent dessous, hors de la zone, et ne sont pas dessines.
+  "map_side": {
+    "type": "panel",
+    "size": [ "100%y", "100% - 32px" ],
+    "clips_children": true,
+    "layer": 2,
+    "controls": [
+      {"map_area@ng_map.map_area": {}},
+
+      // Par-dessus le cadre, exactement a la place de l'image : la pile des images arrivees.
+      {"pictures_holder": {
+        "type": "panel",
+        "size": [ "100%y", "100%" ],
+        "layer": 60,
+        "controls": [
+          {"pictures_clip": {
+            "type": "panel",
+            "size": [ "100% - 4px", "100% - 4px" ],
+            "clips_children": true,
+            "controls": [
+              {"pictures_area@ng_map.pictures_area": {}}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "map_area": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "ng_map.map_item"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "map_item": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#texture = ''))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      // Cadre carre : filet 3F3F46 puis fond presque noir, ce qu'on voit tant que l'image charge.
+      {"map_frame@ng_map.flat_image": {
+        "size": [ "100%y", "100%" ],
+        "color": [ 0.247, 0.247, 0.275 ],
+        "layer": 1,
+        "controls": [
+          {"map_ground@ng_map.flat_image": {
+            "size": [ "100% - 2px", "100% - 2px" ],
+            "color": [ 0.035, 0.035, 0.043 ],
+            "layer": 1
+          }},
+          {"loading_label@ng_map.loading_label": {}},
+          {"loading@progress.progress_loading_bars": {
+            "size": [ 30, 4 ],
+            "offset": [ 0, 30 ],
+            "layer": 2,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "map_image",
+                "resolve_sibling_scope": true,
+                "source_property_name": "(#texture = 'loading')",
+                "target_property_name": "#visible"
+              }
+            ]
+          }},
+          {"map_image@ng_map.map_image": {}}
+        ]
+      }}
+
+    ]
+  },
+
+  // Texte du bouton de la carte, ecrit dans le cadre : l'image, opaque et sur un calque plus
+  // haut, le recouvre des qu'elle est la.
+  "loading_label": {
+    "type": "label",
+    "size": [ "100% - 24px", "default" ],
+    "text": "#form_button_text",
+    "text_alignment": "center",
+    "color": [ 0.624, 0.624, 0.663 ],
+    "font_scale_factor": 0.8,
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      }
+    ]
+  },
+
+  // Calque le plus haut : l'image de la carte passe devant tout le reste du cadre.
+  // "binding_condition": "always" sur les trois liaisons, comme l'image de la fenetre QR code
+  // depuis la 1.1.32 (correctif de soso) : le jeu relit la texture du bouton en permanence, donc
+  // l'image apparait des qu'elle est chargee. Sans cela elle n'arrivait qu'au premier geste du
+  // joueur (souris, fenetre).
+  "map_image": {
+    "type": "image",
+    "texture": "#texture",
+    "keep_ratio": false,
+    "size": [ "100% - 4px", "100% - 4px" ],
+    "layer": 50,
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_condition": "always"
+      },
+      {
+        "binding_name": "#form_button_texture_file_system",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Image d'avant gardee a l'ecran (boutons 0 et 1)
+  // -----------------------------------------------
+  //
+  // Le mod envoie la nouvelle image dans le bouton 0 et, s'il y en a une, celle de la vue d'avant
+  // dans le bouton 1, que le jeu a deja telechargee. Chaque image n'est visible qu'une fois
+  // arrivee, et un element cache ne prend pas de place dans une pile : tant que la nouvelle image
+  // charge, c'est donc l'image d'avant qui occupe le cadre ; des que la nouvelle arrive elle
+  // prend la premiere place, et l'image d'avant, poussee dessous, sort de la zone decoupee.
+  // Les boutons suivants (actions, legende) portent une etiquette transparente : s'ils se
+  // retrouvent en tete de pile (premiere ouverture, rien d'arrive), ils laissent voir le cadre
+  // et son texte de chargement.
+
+  "pictures_area": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "ng_map.picture"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Memes liaisons que map_image, relues en permanence.
+  "picture": {
+    "type": "image",
+    "texture": "#texture",
+    "keep_ratio": false,
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_condition": "always"
+      },
+      {
+        "binding_name": "#form_button_texture_file_system",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+        "binding_condition": "always",
+        "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Panneau lateral : fiche, croix directionnelle et zoom, claims, legende, fermer
+  // -----------------------------------------------
+
+  "side_panel@ng_map.flat_image": {
+    "size": [ 124, "100% - 32px" ],
+    "color": [ 0.247, 0.247, 0.275 ],
+    "layer": 2,
+    "controls": [
+      {"ground@ng_map.flat_image": {
+        "size": [ "100% - 2px", "100% - 2px" ],
+        "color": [ 0.094, 0.094, 0.106 ],
+        "layer": 1,
+        "controls": [
+          {"column@ng_map.side_column": {}}
+        ]
+      }}
+    ]
+  },
+
+  "side_column": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100% - 6px", "100% - 6px" ],
+    "layer": 1,
+    "controls": [
+      {"padding_top": { "type": "panel", "size": [ "100%", 2 ] }},
+      {"content_label@ng_map.content_label": {}},
+      {"padding_content": { "type": "panel", "size": [ "100%", 3 ] }},
+      {"rule_content@ng_map.rule": {}},
+      {"padding_controls": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"controls@ng_map.controls_row": {}},
+      {"padding_rule": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"rule_controls@ng_map.rule": {}},
+      {"padding_claims": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"claims_on@ng_map.claims_on_slot": {}},
+      {"claims_off@ng_map.claims_off_slot": {}},
+      {"padding_legend": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"legend_you@ng_map.legend_you_slot": {}},
+      {"legend_own@ng_map.legend_own_slot": {}},
+      {"legend_claims@ng_map.legend_claims_slot": {}},
+      {"spring": { "type": "panel", "size": [ "100%", "fill" ] }},
+      {"close@ng_map.close_slot": {}}
+    ]
+  },
+
+  // Fiche : le texte du formulaire, aligne a gauche (libelles gris, valeurs blanches).
+  "content_label": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text": "#form_text",
+    "text_alignment": "left",
+    "color": [ 0.98, 0.98, 0.98 ],
+    "font_scale_factor": 0.7,
+    "layer": 2
+  },
+
+  "rule@ng_map.flat_image": {
+    "size": [ "100%", 1 ],
+    "color": [ 0.247, 0.247, 0.275 ],
+    "layer": 2
+  },
+
+  // Croix directionnelle a gauche (cases de 20, ecart de 2, Recentrer au milieu), zoom a droite.
+  "controls_row": {
+    "type": "panel",
+    "size": [ "100%", 64 ],
+    "controls": [
+
+      {"dpad": {
+        "type": "panel",
+        "size": [ 64, 64 ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 8, 0 ],
+        "controls": [
+          {"north@ng_map.north_cell": { "anchor_from": "top_middle", "anchor_to": "top_middle" }},
+          {"west@ng_map.west_cell": { "anchor_from": "left_middle", "anchor_to": "left_middle" }},
+          {"recenter@ng_map.recenter_cell": {}},
+          {"east@ng_map.east_cell": { "anchor_from": "right_middle", "anchor_to": "right_middle" }},
+          {"south@ng_map.south_cell": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle" }}
+        ]
+      }},
+
+      {"zoom": {
+        "type": "panel",
+        "size": [ 20, 64 ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [ -8, 0 ],
+        "controls": [
+          {"zoom_in@ng_map.zoom_in_cell": { "anchor_from": "top_middle", "anchor_to": "top_middle" }},
+          {"zoom_icon": {
+            "type": "image",
+            "texture": "textures/ui/icon/icon_46",
+            "size": [ 10, 10 ],
+            "color": [ 0.443, 0.443, 0.482 ],
+            "layer": 2
+          }},
+          {"zoom_out@ng_map.zoom_out_cell": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle" }}
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Une case = la liste des boutons du formulaire, dont un seul element est visible
+  // -----------------------------------------------
+  //
+  // Chaque case est une pile alimentee par la liste des boutons (meme factory que la carte) ;
+  // son element n'est visible que pour le bouton qui porte l'etiquette de la case, et un element
+  // cache ne prend pas de place. Sous la case, son aspect eteint : c'est lui qu'on voit quand
+  // le serveur n'envoie pas le bouton (zoom au bout de l'echelle, Recentrer quand la carte suit
+  // deja le joueur).
+
+  "slot": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "layer": 3,
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Case de taille fixe (20 x 20) : aspect eteint dessous, bouton dessus.
+  "cell_off": {
+    "type": "image",
+    "texture": "textures/ui/background/background_04",
+    "size": [ "100%", "100%" ],
+    "layer": 1,
+    "$icon|default": "textures/ui/ng_map/recentrer",
+    "controls": [
+      {"icon": {
+        "type": "image",
+        "texture": "$icon",
+        "size": [ 10, 10 ],
+        "color": [ 0.322, 0.322, 0.361 ],
+        "layer": 2
+      }}
+    ]
+  },
+
+  "icon_item": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$icon|default": "textures/ui/ng_map/recentrer",
+    "controls": [
+      {"button@ng_map.icon_button": {}}
+    ]
+  },
+
+  // Bouton a icone : 52525C borde 71717B, survol 71717B borde 9F9FA9 (petits boutons des maquettes).
+  "icon_button@common.button": {
+    "size": [ "100%", "100%" ],
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+      {"hover": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+      {"pressed": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+      {"icon": {
+        "type": "image",
+        "texture": "$icon",
+        "size": [ 10, 10 ],
+        "color": [ 0.98, 0.98, 0.98 ],
+        "layer": 3
+      }}
+    ]
+  },
+
+  // --- Nord
+
+  "north_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/nord" }},
+      {"slot@ng_map.north_slot": {}}
+    ]
+  },
+  "north_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.north_item" } }
+  },
+  "north_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/nord",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/nord')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Sud
+
+  "south_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/sud" }},
+      {"slot@ng_map.south_slot": {}}
+    ]
+  },
+  "south_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.south_item" } }
+  },
+  "south_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/sud",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/sud')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Ouest
+
+  "west_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/ouest" }},
+      {"slot@ng_map.west_slot": {}}
+    ]
+  },
+  "west_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.west_item" } }
+  },
+  "west_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/ouest",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/ouest')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Est
+
+  "east_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/est" }},
+      {"slot@ng_map.east_slot": {}}
+    ]
+  },
+  "east_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.east_item" } }
+  },
+  "east_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/est",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/est')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Recentrer (envoye seulement quand la carte a ete deplacee)
+
+  "recenter_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/recentrer" }},
+      {"slot@ng_map.recenter_slot": {}}
+    ]
+  },
+  "recenter_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.recenter_item" } }
+  },
+  "recenter_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/recentrer",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/recentrer')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Zoom + (absent a l'echelle la plus proche)
+
+  "zoom_in_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/zoom_plus" }},
+      {"slot@ng_map.zoom_in_slot": {}}
+    ]
+  },
+  "zoom_in_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.zoom_in_item" } }
+  },
+  "zoom_in_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/zoom_plus",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/zoom_plus')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // --- Zoom - (absent a l'echelle la plus large)
+
+  "zoom_out_cell": {
+    "type": "panel",
+    "size": [ 20, 20 ],
+    "controls": [
+      {"off@ng_map.cell_off": { "$icon": "textures/ui/ng_map/zoom_moins" }},
+      {"slot@ng_map.zoom_out_slot": {}}
+    ]
+  },
+  "zoom_out_slot@ng_map.slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.zoom_out_item" } }
+  },
+  "zoom_out_item@ng_map.icon_item": {
+    "$icon": "textures/ui/ng_map/zoom_moins",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/zoom_moins')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Claims : une ligne cliquable, son texte a gauche, un interrupteur a droite
+  // -----------------------------------------------
+  //
+  // Le serveur envoie l'un OU l'autre bouton (etiquette claims_oui ou claims_non), jamais les
+  // deux, et aucun si le bouton des claims est eteint : la case prend la hauteur de son element,
+  // donc 16 pour celle qui est la et rien pour l'autre.
+
+  "flow_slot@ng_map.slot": {
+    "size": [ "100%", "100%c" ]
+  },
+
+  "claims_row@common.button": {
+    "size": [ "100%", "100%" ],
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default": { "type": "image", "texture": "textures/ui/background/background_40", "size": [ "100%", "100%" ] }},
+      {"hover": { "type": "image", "texture": "textures/ui/background/background_01", "size": [ "100%", "100%" ] }},
+      {"pressed": { "type": "image", "texture": "textures/ui/background/background_01", "size": [ "100%", "100%" ] }},
+      {"row_label": {
+        "type": "label",
+        "size": [ "100% - 30px", "default" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 5, 0 ],
+        "text": "#form_button_text",
+        "text_alignment": "left",
+        "color": [ 0.98, 0.98, 0.98 ],
+        "font_scale_factor": 0.7,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  },
+
+  // Interrupteur allume : vert 9AE600 borde 7CCF00, pastille blanche a droite. Pose par-dessus la
+  // ligne cliquable, a droite : une image ne prend pas le clic.
+  "switch_on": {
+    "type": "image",
+    "texture": "textures/ui/background/background_47",
+    "size": [ 16, 8 ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [ -4, 0 ],
+    "layer": 10,
+    "controls": [
+      {"knob@ng_map.flat_image": {
+        "size": [ 6, 6 ],
+        "color": [ 0.98, 0.98, 0.98 ],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [ -1, 0 ],
+        "layer": 1
+      }}
+    ]
+  },
+
+  // Interrupteur eteint : gris 52525C borde 71717B, pastille a gauche.
+  "switch_off": {
+    "type": "image",
+    "texture": "textures/ui/background/background_17",
+    "size": [ 16, 8 ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [ -4, 0 ],
+    "layer": 10,
+    "controls": [
+      {"knob@ng_map.flat_image": {
+        "size": [ 6, 6 ],
+        "color": [ 0.831, 0.831, 0.847 ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 1, 0 ],
+        "layer": 1
+      }}
+    ]
+  },
+
+  "claims_on_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.claims_on_item" } }
+  },
+  "claims_on_item": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/claims_oui')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"row@ng_map.claims_row": {}},
+      {"switch@ng_map.switch_on": {}}
+    ]
+  },
+
+  "claims_off_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.claims_off_item" } }
+  },
+  "claims_off_item": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/claims_non')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"row@ng_map.claims_row": {}},
+      {"switch@ng_map.switch_off": {}}
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Legende : une pastille et le texte du bouton, non cliquable
+  // -----------------------------------------------
+  //
+  // Le serveur n'envoie que les lignes utiles (pas de pastille « Ton pays » pour un joueur sans
+  // claim, rien sur les claims quand ils sont caches). Une ligne absente ne prend pas de place.
+
+  "legend_row": {
+    "type": "panel",
+    "size": [ "100%", 8 ],
+    "$swatch|default": "textures/ui/ng_map/legende_toi",
+    "controls": [
+      {"swatch": {
+        "type": "image",
+        "texture": "$swatch",
+        "size": [ 6, 6 ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 1, 0 ],
+        "layer": 2
+      }},
+      {"legend_label": {
+        "type": "label",
+        "size": [ "100% - 12px", "default" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 11, 0 ],
+        "text": "#form_button_text",
+        "text_alignment": "left",
+        "color": [ 0.624, 0.624, 0.663 ],
+        "font_scale_factor": 0.7,
+        "layer": 2,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  },
+
+  "legend_you_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.legend_you_item" } }
+  },
+  "legend_you_item@ng_map.legend_row": {
+    "$swatch": "textures/ui/ng_map/legende_toi",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/legende_toi')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "legend_own_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.legend_own_item" } }
+  },
+  "legend_own_item@ng_map.legend_row": {
+    "$swatch": "textures/ui/ng_map/legende_pays",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/legende_pays')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "legend_claims_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.legend_claims_item" } }
+  },
+  "legend_claims_item@ng_map.legend_row": {
+    "$swatch": "textures/ui/ng_map/legende_claims",
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/legende_claims')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Fermer : bouton de texte, en bas du panneau (3F3F46 borde 52525C, survol 52525C)
+  // -----------------------------------------------
+
+  "close_slot@ng_map.flow_slot": {
+    "factory": { "name": "buttons", "control_ids": { "button": "ng_map.close_item" } }
+  },
+  "close_item": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/ng_map/id/fermer')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"button@ng_map.text_button": {}}
+    ]
+  },
+
+  "text_button@common.button": {
+    "size": [ "100%", "100%" ],
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default": { "type": "image", "texture": "textures/ui/background/background_01", "size": [ "100%", "100%" ] }},
+      {"hover": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+      {"pressed": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+      {"button_label": {
+        "type": "label",
+        "text": "#form_button_text",
+        "color": [ 0.831, 0.831, 0.847 ],
+        "font_scale_factor": 0.8,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  }
+}

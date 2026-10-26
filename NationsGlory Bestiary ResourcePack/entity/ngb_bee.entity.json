@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:bee",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/bee_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.bee"
+      },
+      "animations": {
+        "idle": "animation.ng.bee.idle",
+        "move": "animation.ng.bee.move",
+        "fly_idle": "animation.ng.bee.fly_idle",
+        "fly_move": "animation.ng.bee.fly_move",
+        "controller": "controller.animation.ng.bee.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.bee"
+      ],
+      "spawn_egg": {
+        "base_color": "#52433c",
+        "overlay_color": "#d7b14d"
+      }
+    }
+  }
+}

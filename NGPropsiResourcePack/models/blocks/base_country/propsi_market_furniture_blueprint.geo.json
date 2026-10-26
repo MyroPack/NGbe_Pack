@@ -1,0 +1,123 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_market_furniture_blueprint",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2,
+				"visible_bounds_offset": [0, 0.07, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [-1, 16.7, -2.30866],
+					"cubes": [
+						{
+							"origin": [-7.95933, 0.2, -2.75628],
+							"size": [15, 0, 11],
+							"pivot": [-0.45933, 0.1, 2.74372],
+							"rotation": [0, 22.5, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [15, 0]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [11, 0]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [15, 0]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [11, 0]
+								},
+								"up": {
+									"uv": [12, 64],
+									"uv_size": [15, 11]
+								},
+								"down": {
+									"uv": [27, 75],
+									"uv_size": [15, -11]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "cubeinverted",
+					"parent": "group",
+					"pivot": [-6.46455, 1.4, -3.24372],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
+						{
+							"origin": [-5.75, 0.4, -8.80866],
+							"size": [13, 0, 11],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [13, 0]
+								},
+								"east": {
+									"uv": [0, 0],
+									"uv_size": [11, 0]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [13, 0]
+								},
+								"west": {
+									"uv": [0, 0],
+									"uv_size": [11, 0]
+								},
+								"up": {
+									"uv": [42, 64],
+									"uv_size": [13, 11]
+								},
+								"down": {
+									"uv": [55, 75],
+									"uv_size": [13, -11]
+								}
+							}
+						},
+						{
+							"origin": [-7.75, 0.4, -8.80866],
+							"size": [2, 2, 11],
+							"uv": {
+								"north": {
+									"uv": [28, 91],
+									"uv_size": [2, 2]
+								},
+								"east": {
+									"uv": [82, 64],
+									"uv_size": [11, 2]
+								},
+								"south": {
+									"uv": [30, 91],
+									"uv_size": [2, 2]
+								},
+								"west": {
+									"uv": [82, 66],
+									"uv_size": [11, 2]
+								},
+								"up": {
+									"uv": [2, 82],
+									"uv_size": [2, 11]
+								},
+								"down": {
+									"uv": [4, 93],
+									"uv_size": [2, -11]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

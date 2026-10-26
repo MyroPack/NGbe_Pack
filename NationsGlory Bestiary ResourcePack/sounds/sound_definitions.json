@@ -1,0 +1,1782 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "mob.ng.elephant.ambient": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/elephant/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/elephant/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/elephant/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.lion.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/lion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.fennec.ambient": {
+      "category": "neutral",
+      "max_distance": 20,
+      "sounds": [
+        {
+          "name": "sounds/ngb/fennec/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/fennec/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/fennec/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.alligator.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/alligator/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/alligator/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_alligator.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/alligator/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/alligator/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.bear.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/bear/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bear/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bear/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bear/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_bear.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/baby_bear/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_bear/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_bear/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_bear/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.cat.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/cat/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.cat_baby.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/cat_baby/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_8",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_9",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_10",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_11",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_12",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/cat_baby/ambient_13",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.chicken.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/chicken/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_8",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_9",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/chicken/ambient_10",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_chicken.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/baby_chicken/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_chicken/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.deer.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/deer/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_deer.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/deer/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/deer/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.donkey.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/donkey/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/donkey/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/donkey/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_donkey.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/donkey/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/donkey/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/donkey/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.dromedary.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/dromedary/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_dromedary.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/dromedary/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dromedary/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.flamingo.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/flamingo/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/flamingo/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/flamingo/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/flamingo/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.giraffe.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/giraffe/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/giraffe/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_giraffe.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/giraffe/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.goat.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/goat/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.goat_baby.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/goat/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/goat/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.hippo.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/hippo/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/hippo/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_hippo.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/baby_hippo/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.horse.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/horse/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/horse/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/horse/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.horse_baby.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/horse/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/horse/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/horse/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.meerkat.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/meerkat/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/meerkat/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/meerkat/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.monkey.ambient": {
+      "category": "hostile",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/monkey/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.panda.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/panda/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_panda.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/panda/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panda/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.panther.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/panther/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_panther.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/panther/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/panther/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.penguin2.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/penguin2/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/penguin2/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_penguin.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/penguin2/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/penguin2/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.raccoon.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/raccoon/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/raccoon/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/raccoon/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/raccoon/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.seal.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/seal/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/seal/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/seal/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/seal/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_seal.ambient": {
+      "category": "hostile",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/baby_seal/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_seal/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_seal/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/baby_seal/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.sheep.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/sheep/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sheep/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sheep/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.sheep_baby.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/sheep/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sheep/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sheep/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.wolf.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/wolf/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.wolf_baby.ambient": {
+      "category": "hostile",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/wolf/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.wolf_red.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/wolf/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/wolf/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.parrot.ambient": {
+      "category": "neutral",
+      "max_distance": 20,
+      "sounds": [
+        {
+          "name": "sounds/ngb/parrot/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/parrot/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/parrot/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.bat.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/bat/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bat/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bat/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/bat/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.toucan.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/toucan/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/toucan/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/toucan/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/toucan/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.dolphin.ambient": {
+      "category": "neutral",
+      "max_distance": 20,
+      "sounds": [
+        {
+          "name": "sounds/ngb/dolphin/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_8",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_9",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.dolphin_baby.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/dolphin/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_6",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_7",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_8",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/dolphin/ambient_9",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.sea_turtle.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.baby_sea_turtle.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/sea_turtle/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.crab.ambient": {
+      "category": "hostile",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/crab/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.frog.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/frog/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frog/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frog/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frog/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.snake.ambient": {
+      "category": "hostile",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/snake/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/snake/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.creeper_autel.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/creeper_autel/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_autel/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_autel/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_autel/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.creeper_mushroom_blue.ambient": {
+      "category": "hostile",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/creeper_mushroom_blue/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_mushroom_blue/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_mushroom_blue/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_mushroom_blue/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/creeper_mushroom_blue/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.frozenglowsquid.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/frozenglowsquid/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frozenglowsquid/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frozenglowsquid/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/frozenglowsquid/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.jellyfish.ambient": {
+      "category": "neutral",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/jellyfish/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/jellyfish/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/jellyfish/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/jellyfish/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.mushroom_blue.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/mushroom_blue/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/mushroom_blue/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/mushroom_blue/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.neblion.ambient": {
+      "category": "neutral",
+      "max_distance": 16,
+      "sounds": [
+        {
+          "name": "sounds/ngb/neblion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/neblion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/neblion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/neblion/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/neblion/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/neblion/ambient_5",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.phantom_hawk.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/phantom_hawk/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/phantom_hawk/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/phantom_hawk/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.phantom_reaper.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/phantom_reaper/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/phantom_reaper/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/phantom_reaper/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/phantom_reaper/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.moon_droid_bastion.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.moon_droid_blade.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_blade/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.moon_droid_cannon.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_blade/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.moon_droid_relay.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_blade/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.moon_droid_megaboss.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_bastion/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_blade/ambient_3",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/moon_droid_megaboss/ambient_4",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.village_skjornars_officer.ambient": {
+      "category": "hostile",
+      "max_distance": 32,
+      "sounds": [
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "mob.ng.village_skjornars_villager.ambient": {
+      "category": "neutral",
+      "max_distance": 24,
+      "sounds": [
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_0",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_1",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/ngb/village_skjornars_officer/ambient_2",
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

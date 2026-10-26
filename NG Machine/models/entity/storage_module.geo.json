@@ -1,0 +1,196 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.storage_module",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [
+						8,
+						0,
+						-8
+					],
+					"cubes": [
+						{
+							"origin": [
+								3.975,
+								3,
+								-2
+							],
+							"size": [
+								10,
+								10,
+								3
+							],
+							"inflate": -0.025,
+							"pivot": [
+								8.975,
+								8,
+								0
+							],
+							"rotation": [
+								0,
+								90,
+								0
+							],
+							"uv": [
+								56,
+								38
+							]
+						},
+						{
+							"origin": [
+								4.975,
+								4,
+								0
+							],
+							"size": [
+								8,
+								8,
+								1
+							],
+							"inflate": -0.025,
+							"pivot": [
+								8.975,
+								8,
+								0
+							],
+							"rotation": [
+								0,
+								90,
+								0
+							],
+							"uv": [
+								0,
+								62
+							]
+						},
+						{
+							"origin": [
+								-14,
+								4,
+								0
+							],
+							"size": [
+								8,
+								8,
+								1
+							],
+							"pivot": [
+								-10,
+								8,
+								0
+							],
+							"rotation": [
+								0,
+								90,
+								0
+							],
+							"uv": [
+								18,
+								62
+							]
+						},
+						{
+							"origin": [
+								-13,
+								3,
+								-2
+							],
+							"size": [
+								10,
+								10,
+								3
+							],
+							"pivot": [
+								-8,
+								8,
+								0
+							],
+							"rotation": [
+								0,
+								90,
+								0
+							],
+							"uv": [
+								56,
+								51
+							]
+						}
+					]
+				},
+				{
+					"name": "bones",
+					"pivot": [
+						8,
+						0,
+						-8
+					],
+					"parent": "bone",
+					"cubes": [
+						{
+							"origin": [
+								-7,
+								3,
+								-7
+							],
+							"size": [
+								14,
+								10,
+								14
+							],
+							"uv": [
+								0,
+								38
+							]
+						},
+						{
+							"origin": [
+								-8,
+								13,
+								-8
+							],
+							"size": [
+								16,
+								3,
+								16
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								3,
+								16
+							],
+							"uv": [
+								0,
+								19
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

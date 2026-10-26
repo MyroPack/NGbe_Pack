@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:antelope",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/antelope_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.antelope"
+      },
+      "animations": {
+        "idle": "animation.ng.antelope.idle",
+        "move": "animation.ng.antelope.move",
+        "controller": "controller.animation.ng.antelope.move",
+        "look": "animation.ng.antelope.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.antelope"
+      ],
+      "spawn_egg": {
+        "base_color": "#9d5f37",
+        "overlay_color": "#b47849"
+      }
+    }
+  }
+}

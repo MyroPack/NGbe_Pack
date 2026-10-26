@@ -1,0 +1,55 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:small_megalodon_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/small_megalodon_mount"
+			},
+			"geometry": {
+				"default": "geometry.small_megalodon_mount"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"idle": "animation.small_megalodon_mount.idle",
+				"moving": "animation.small_megalodon_mount.walk",
+				"main": "controller.animation.mount.general",
+				"death": "animation.small_megalodon_mount.death",
+				"body_damage": "animation.small_megalodon_mount.body_damage_right",
+				"rotate_left": "animation.small_megalodon_mount.rotate_left",
+				"rotate_right": "animation.small_megalodon_mount.rotate_right"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.moving = query.modified_move_speed > 0.05 || query.vertical_speed > 0.05 || query.vertical_speed < -0.05;",
+					"variable.raw_turn = query.body_y_rotation - variable.last_body_y_rotation;",
+					"variable.body_rot_delta = math.mod(variable.raw_turn + 540, 360) - 180;",
+					"variable.last_body_y_rotation = query.body_y_rotation;",
+					"variable.turn_left = variable.moving && (query.yaw_speed > 0.04 || variable.body_rot_delta > 0.45);",
+					"variable.turn_right = variable.moving && (query.yaw_speed < -0.04 || variable.body_rot_delta < -0.45);"
+				],
+				"animate": [
+					{
+						"death": "!query.is_alive"
+					},
+					{
+						"body_damage": "query.is_alive && query.hurt_time > 0"
+					},
+					{
+						"rotate_left": "query.is_alive && query.hurt_time <= 0 && variable.turn_left && !variable.turn_right"
+					},
+					{
+						"rotate_right": "query.is_alive && query.hurt_time <= 0 && variable.turn_right && !variable.turn_left"
+					},
+					"main",
+					"idle"
+				]
+			}
+		}
+	}
+}

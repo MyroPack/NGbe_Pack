@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:liquid_tank_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "empty": "textures/blocks/liquid_tank_empty",
+        "level_1": "textures/blocks/liquid_tank_1",
+        "level_2": "textures/blocks/liquid_tank_2",
+        "level_3": "textures/blocks/liquid_tank_3",
+        "level_4": "textures/blocks/liquid_tank_4"
+      },
+      "geometry": {
+        "default": "geometry.liquid_tank"
+      },
+      "render_controllers": [
+        "controller.render.ng_liquid_tank"
+      ]
+    }
+  }
+}

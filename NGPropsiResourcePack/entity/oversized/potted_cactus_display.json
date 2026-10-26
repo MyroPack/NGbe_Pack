@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:potted_cactus_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/oversized/potted_cactus"
+      },
+      "geometry": {
+        "default": "geometry.propsi_potted_cactus_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

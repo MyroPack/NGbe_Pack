@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:solar_panel_advanced_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/solar_panel_advanced",
+        "on": "textures/blocks/solar_panel_advanced_on"
+      },
+      "geometry": {
+        "default": "geometry.solar_panel_advanced"
+      },
+      "animations": {
+        "off": "animation.solar_panel_advanced.off"
+      },
+      "scripts": {
+        "animate": [
+          "off"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng_solar_panel_advanced"
+      ]
+    }
+  }
+}

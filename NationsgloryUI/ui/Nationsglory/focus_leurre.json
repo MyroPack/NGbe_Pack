@@ -1,0 +1,55 @@
+{
+  "namespace": "focus_leurre",
+
+  // -----------------------------------------------
+  //
+  //        Leurre de focus des interfaces NG
+  //
+  // -----------------------------------------------
+  //
+  // A l'ouverture d'un ecran (ou quand le serveur le renvoie pour le rafraichir), le jeu donne le
+  // focus au controle qui a la plus forte default_focus_precedence ; a egalite, au premier qu'il
+  // rencontre, souvent la croix de la barre de titre. Tant que la souris n'a pas bouge, un clic
+  // agit sur ce controle et non sur celui qui est sous le curseur : en cliquant vite sur un bouton
+  // qui recharge l'ecran (zoom de la carte), le clic suivant tombait sur la croix et fermait tout.
+  //
+  // Le leurre est un bouton invisible de 1 x 1 au centre, sur le calque le plus bas, qui prend ce
+  // focus (priorite 10000, au-dessus des cases de conteneur, a 1) et ne fait rien : il envoie
+  // button.focus_filler, le bouton bouche-trou des ecrans du jeu de base, sans son de clic. Des
+  // que la souris bouge, le survol reprend la main et le clic va de nouveau sous le curseur. Au
+  // toucher, le jeu agit sous le doigt : rien ne change. A la manette, un appui sur une direction
+  // quitte le leurre vers le bouton le plus proche.
+  //
+  // Pose une seule fois, par les aiguillages : chest_screen.json (ecrans de coffre NG, par
+  // focus_leurre.contenu) et server_form.json (carte du monde, fenetre QR code).
+
+  "leurre@common.button": {
+    "size": [ 1, 1 ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 0,
+    "focus_enabled": true,
+    "default_focus_precedence": 10000,
+    "sound_volume": 0.0,
+    "$pressed_button_name": "button.focus_filler",
+    "$button_tts_name": "",
+    "controls": [
+      {"default@common.empty_panel": {}},
+      {"hover@common.empty_panel": {}},
+      {"pressed@common.empty_panel": {}}
+    ]
+  },
+
+  // Ecran de coffre NG : le leurre, puis le contenu que chest_screen.json a choisi pour ce titre
+  // ($focus_leurre_contenu). Meme taille que la place du contenu, aucun calque ajoute : la mise en
+  // page et les calques du contenu ne changent pas.
+  "contenu": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$focus_leurre_contenu|default": "common.empty_panel",
+    "controls": [
+      {"leurre@focus_leurre.leurre": {}},
+      {"contenu@$focus_leurre_contenu": {}}
+    ]
+  }
+}

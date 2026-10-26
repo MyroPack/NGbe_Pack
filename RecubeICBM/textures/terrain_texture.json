@@ -1,0 +1,11 @@
+{
+  "resource_pack_name": "RecubeICBMResourcePack",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "recubeicbm_invisible": {
+      "textures": "textures/recubeicbm/blocks/invisible"
+    }
+  }
+}

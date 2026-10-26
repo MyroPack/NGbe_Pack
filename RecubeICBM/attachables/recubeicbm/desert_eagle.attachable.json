@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:desert_eagle",
+      "item": {
+        "ng:desert_eagle": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/weapon/desert_eagle",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.desert_eagle"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.desert_eagle.first_person",
+        "third_person_hold": "animation.recubeicbm.held.desert_eagle.third_person",
+        "no_accessories": "animation.recubeicbm.weapon.no_accessories",
+        "idle": "animation.recubeicbm.weapon.desert_eagle.idle",
+        "fire": "animation.recubeicbm.weapon.desert_eagle.fire",
+        "reload": "animation.recubeicbm.weapon.desert_eagle.reload",
+        "weapon": "controller.animation.recubeicbm.weapon"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          },
+          "no_accessories",
+          "weapon"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

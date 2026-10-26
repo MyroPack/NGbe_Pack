@@ -1,0 +1,9 @@
+// Banniere missile des petites notifications (RecubeICBM, NotifyMod) : icone. Le controle est dans ui/hud_screen.json,
+// panneau des notifications ; il se montre pour les seuls bandeaux §t§r dont l'etiquette porte la marque de RecubeICBM.
+{
+  "namespace": "icbm_hud",
+  "icon_missile": {
+    "type": "image",
+    "texture": "textures/ui/icbm/missile"
+  }
+}

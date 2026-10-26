@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:gas_compressor_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/gas_compressor_off",
+				"on": "textures/blocks/gas_compressor_on"
+			},
+			"geometry": {
+				"default": "geometry.gas_compressor"
+			},
+			"render_controllers": [
+				"controller.render.ng_gas_compressor"
+			]
+		}
+	}
+}

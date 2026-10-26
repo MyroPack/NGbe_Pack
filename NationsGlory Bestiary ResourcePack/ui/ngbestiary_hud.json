@@ -1,0 +1,838 @@
+{
+ "namespace": "ngbestiary_hud",
+ "viewfinder": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "lines": {
+     "type": "collection_panel",
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "collection_name": "scoreboard_players",
+     "factory": {
+      "name": "player_list_factory",
+      "control_name": "ngbestiary_hud.viewfinder_line"
+     },
+     "bindings": [
+      {
+       "binding_name": "#scoreboard_sidebar_size",
+       "binding_type": "global",
+       "binding_name_override": "#collection_length"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "viewfinder_line": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "frame": {
+     "type": "panel",
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "layer": 60,
+     "bindings": [
+      {
+       "binding_name": "#player_name_sidebar",
+       "binding_type": "collection",
+       "binding_collection_name": "scoreboard_players"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(not((#player_name_sidebar - '§b§e§s§t§v§r') = #player_name_sidebar))",
+       "target_property_name": "#visible"
+      }
+     ],
+     "controls": [
+      {
+       "veil": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_veil",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "layer": 1
+       }
+      },
+      {
+       "corner_tl": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_corner_tl",
+        "size": [
+         55.5,
+         55.5
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [
+         30,
+         30.25
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "corner_tr": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_corner_tr",
+        "size": [
+         55.5,
+         55.5
+        ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [
+         -30,
+         30.25
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "corner_bl": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_corner_bl",
+        "size": [
+         55.5,
+         55.5
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": [
+         30,
+         -30.25
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "corner_br": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_corner_br",
+        "size": [
+         55.5,
+         55.5
+        ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "offset": [
+         -30,
+         -30.25
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "focus": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_focus",
+        "size": [
+         31.5,
+         31.5
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "offset": [
+         0,
+         0
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "ruler": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_ruler",
+        "size": [
+         95.75,
+         4
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         0,
+         31.5
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "battery": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_battery",
+        "size": [
+         11.25,
+         6
+        ],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [
+         -30,
+         15.5
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "hd": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_hd",
+        "size": [
+         17,
+         8.25
+        ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "offset": [
+         -30,
+         -14
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "flash": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_flash",
+        "size": [
+         10,
+         7.75
+        ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "offset": [
+         -51.25,
+         -14
+        ],
+        "layer": 2
+       }
+      },
+      {
+       "cursor1": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_cursor",
+        "size": [
+         5.25,
+         11
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         -47.2,
+         28
+        ],
+        "layer": 3,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§1§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ]
+       }
+      },
+      {
+       "cursor2": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_cursor",
+        "size": [
+         5.25,
+         11
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         -23.6,
+         28
+        ],
+        "layer": 3,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§2§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ]
+       }
+      },
+      {
+       "cursor3": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_cursor",
+        "size": [
+         5.25,
+         11
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         0.0,
+         28
+        ],
+        "layer": 3,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§3§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ]
+       }
+      },
+      {
+       "cursor4": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_cursor",
+        "size": [
+         5.25,
+         11
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         23.6,
+         28
+        ],
+        "layer": 3,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§4§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ]
+       }
+      },
+      {
+       "cursor5": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_cursor",
+        "size": [
+         5.25,
+         11
+        ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "offset": [
+         47.2,
+         28
+        ],
+        "layer": 3,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§5§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "date": {
+     "type": "panel",
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "layer": 60,
+     "bindings": [
+      {
+       "binding_name": "#player_name_sidebar",
+       "binding_type": "collection",
+       "binding_collection_name": "scoreboard_players"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(not((#player_name_sidebar - '§b§e§s§t§d§r') = #player_name_sidebar))",
+       "target_property_name": "#visible"
+      }
+     ],
+     "controls": [
+      {
+       "text": {
+        "type": "label",
+        "text": "#player_name_sidebar",
+        "font_type": "smooth",
+        "shadow": false,
+        "color": [
+         0.98,
+         0.98,
+         0.98
+        ],
+        "localize": false,
+        "layer": 2,
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         }
+        ],
+        "font_scale_factor": 0.811,
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": [
+         30,
+         -14.3
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "name": {
+     "type": "panel",
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "layer": 60,
+     "bindings": [
+      {
+       "binding_name": "#player_name_sidebar",
+       "binding_type": "collection",
+       "binding_collection_name": "scoreboard_players"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(not((#player_name_sidebar - '§b§e§s§t§n§r') = #player_name_sidebar))",
+       "target_property_name": "#visible"
+      }
+     ],
+     "controls": [
+      {
+       "tag_done": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_tag",
+        "nineslice_size": 3,
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "offset": [
+         0,
+         -30.5
+        ],
+        "layer": 2,
+        "size": [
+         "100%cm + 24px",
+         13.25
+        ],
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§4§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ],
+        "controls": [
+         {
+          "icon": {
+           "type": "image",
+           "texture": "textures/ui/ngbestiary/hud/vf_label_icon",
+           "size": [
+            5.5,
+            6.25
+           ],
+           "anchor_from": "left_middle",
+           "anchor_to": "left_middle",
+           "offset": [
+            3.75,
+            0
+           ],
+           "layer": 2
+          }
+         },
+         {
+          "text": {
+           "type": "label",
+           "text": "#player_name_sidebar",
+           "font_type": "smooth",
+           "shadow": false,
+           "color": [
+            0.98,
+            0.98,
+            0.98
+           ],
+           "localize": false,
+           "layer": 2,
+           "bindings": [
+            {
+             "binding_name": "#player_name_sidebar",
+             "binding_type": "collection",
+             "binding_collection_name": "scoreboard_players"
+            }
+           ],
+           "font_scale_factor": 0.954,
+           "anchor_from": "right_middle",
+           "anchor_to": "right_middle",
+           "offset": [
+            -8.5,
+            0
+           ]
+          }
+         }
+        ]
+       }
+      },
+      {
+       "tag_new": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/hud/vf_tag",
+        "nineslice_size": 3,
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "offset": [
+         0,
+         -30.5
+        ],
+        "layer": 2,
+        "size": [
+         "100%cm + 17px",
+         13.25
+        ],
+        "bindings": [
+         {
+          "binding_name": "#player_name_sidebar",
+          "binding_type": "collection",
+          "binding_collection_name": "scoreboard_players"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(not((#player_name_sidebar - '§6§r') = #player_name_sidebar))",
+          "target_property_name": "#visible"
+         }
+        ],
+        "controls": [
+         {
+          "text": {
+           "type": "label",
+           "text": "#player_name_sidebar",
+           "font_type": "smooth",
+           "shadow": false,
+           "color": [
+            0.98,
+            0.98,
+            0.98
+           ],
+           "localize": false,
+           "layer": 2,
+           "bindings": [
+            {
+             "binding_name": "#player_name_sidebar",
+             "binding_type": "collection",
+             "binding_collection_name": "scoreboard_players"
+            }
+           ],
+           "font_scale_factor": 0.954
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "toast": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "layer": 1000000010,
+  "bindings": [
+   {
+    "binding_name": "#chat_text",
+    "binding_name_override": "#text",
+    "binding_type": "collection",
+    "binding_collection_name": "chat_text_grid",
+    "binding_condition": "once"
+   },
+   {
+    "binding_type": "view",
+    "source_property_name": "((('%.18s' * #text) = '§t§r§n§g§b§r') or (('%.18s' * #text) = '§t§r§n§g§d§r'))",
+    "target_property_name": "#visible",
+    "binding_condition": "once"
+   }
+  ],
+  "controls": [
+   {
+    "paper": {
+     "type": "image",
+     "texture": "textures/ui/ngbestiary/hud/toast_paper",
+     "size": [
+      148,
+      32
+     ],
+     "layer": 1
+    }
+   },
+   {
+    "icon_update": {
+     "type": "image",
+     "size": [
+      20,
+      20
+     ],
+     "anchor_from": "left_middle",
+     "anchor_to": "left_middle",
+     "offset": [
+      5.2,
+      0
+     ],
+     "layer": 2,
+     "texture": "textures/ui/ngbestiary/hud/toast_update",
+     "bindings": [
+      {
+       "binding_name": "#chat_text",
+       "binding_name_override": "#text",
+       "binding_type": "collection",
+       "binding_collection_name": "chat_text_grid",
+       "binding_condition": "once"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§b§r')",
+       "target_property_name": "#visible",
+       "binding_condition": "once"
+      }
+     ]
+    }
+   },
+   {
+    "icon_done": {
+     "type": "image",
+     "size": [
+      20,
+      20
+     ],
+     "anchor_from": "left_middle",
+     "anchor_to": "left_middle",
+     "offset": [
+      5.2,
+      0
+     ],
+     "layer": 2,
+     "texture": "textures/ui/ngbestiary/hud/toast_done",
+     "bindings": [
+      {
+       "binding_name": "#chat_text",
+       "binding_name_override": "#text",
+       "binding_type": "collection",
+       "binding_collection_name": "chat_text_grid",
+       "binding_condition": "once"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§d§r')",
+       "target_property_name": "#visible",
+       "binding_condition": "once"
+      }
+     ]
+    }
+   },
+   {
+    "texts": {
+     "type": "stack_panel",
+     "orientation": "vertical",
+     "size": [
+      105.5,
+      "100%c"
+     ],
+     "anchor_from": "left_middle",
+     "anchor_to": "left_middle",
+     "offset": [
+      33.6,
+      -0.5
+     ],
+     "layer": 2,
+     "controls": [
+      {
+       "title": {
+        "type": "label",
+        "font_type": "smooth",
+        "shadow": false,
+        "text_alignment": "left",
+        "size": [
+         "default",
+         "default"
+        ],
+        "layer": 3,
+        "text": "#text2",
+        "color": [
+         0.302,
+         0.208,
+         0.2
+        ],
+        "font_scale_factor": 1.069,
+        "property_bag": {
+         "#search": 19,
+         "#search_2": 0,
+         "#tail": "",
+         "#separator": ";"
+        },
+        "bindings": [
+         {
+          "binding_collection_name": "chat_text_grid",
+          "binding_condition": "once",
+          "binding_name_override": "#text",
+          "binding_name": "#chat_text",
+          "binding_type": "collection"
+         },
+         {
+          "binding_condition": "always",
+          "binding_type": "view",
+          "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+          "target_property_name": "#search"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(#text - (('%.'+#search+'s') * #text))",
+          "target_property_name": "#tail"
+         },
+         {
+          "binding_condition": "always",
+          "binding_type": "view",
+          "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #tail = #tail) and (('%.'+#search_2+'s') * #tail = ('%.'+#search_2+'s') * #tail - #separator) ))",
+          "target_property_name": "#search_2"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "((('%.'+#search_2+'s') * #tail) - #separator)",
+          "target_property_name": "#text2"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(#text - '§o')",
+          "target_property_name": "#display_text"
+         }
+        ]
+       }
+      },
+      {
+       "gap": {
+        "type": "panel",
+        "size": [
+         "100%",
+         0.75
+        ]
+       }
+      },
+      {
+       "content": {
+        "type": "label",
+        "font_type": "smooth",
+        "shadow": false,
+        "text_alignment": "left",
+        "size": [
+         "default",
+         "default"
+        ],
+        "layer": 3,
+        "text": "#text3",
+        "color": [
+         0.541,
+         0.404,
+         0.361
+        ],
+        "font_scale_factor": 0.725,
+        "property_bag": {
+         "#search": 19,
+         "#search_2": 0,
+         "#tail": "",
+         "#separator": ";",
+         "#text3": ""
+        },
+        "bindings": [
+         {
+          "binding_collection_name": "chat_text_grid",
+          "binding_condition": "once",
+          "binding_name_override": "#text",
+          "binding_name": "#chat_text",
+          "binding_type": "collection"
+         },
+         {
+          "binding_condition": "always",
+          "binding_type": "view",
+          "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+          "target_property_name": "#search"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(#text - (('%.'+#search+'s') * #text))",
+          "target_property_name": "#tail"
+         },
+         {
+          "binding_condition": "always",
+          "binding_type": "view",
+          "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #tail = #tail) and (('%.'+#search_2+'s') * #tail = ('%.'+#search_2+'s') * #tail - #separator) ))",
+          "target_property_name": "#search_2"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(#tail - (('%.'+#search_2+'s') * #tail))",
+          "target_property_name": "#text3"
+         },
+         {
+          "binding_type": "view",
+          "source_property_name": "(#text - '§o')",
+          "target_property_name": "#display_text"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

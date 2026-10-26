@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:fuel_generator_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/fuel_generator",
+        "on": "textures/blocks/fuel_generator_on"
+      },
+      "geometry": {
+        "default": "geometry.machine_fuel_generator"
+      },
+      "render_controllers": [
+        "controller.render.ng_fuel_generator"
+      ]
+    }
+  }
+}

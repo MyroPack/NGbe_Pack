@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ngpremium:lootbox_ultimate",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/lootbox_ultimate"
+      },
+      "animations": {
+        "anim_1": "animation.lootbox_ultimate.idle",
+        "anim_2": "animation.lootbox_ultimate.open1",
+        "anim_3": "animation.lootbox_ultimate.open2",
+        "anim_4": "animation.lootbox_ultimate.open3",
+        "anim_5": "animation.lootbox_ultimate.open4"
+      },
+      "scripts": {
+        "animate": [
+          {"anim_1": "q.variant == 0"},
+          {"anim_2": "q.variant == 1"},
+          {"anim_3": "q.variant == 2"},
+          {"anim_4": "q.variant == 3"},
+          {"anim_5": "q.variant == 4"}
+
+        ]
+      },
+      "geometry": {
+        "default": "geometry.lootbox_ultimate"
+      },
+      "sound_effects": {
+				"lootbox_ultimate_idle": "lootbox_ultimate_idle"
+			},
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

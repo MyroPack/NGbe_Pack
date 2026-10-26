@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:skojmar_clan_flag_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/oversized/skojmar_clan_flag"
+      },
+      "geometry": {
+        "default": "geometry.propsi_skojmar_clan_flag_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "animations": {
+        "idle": "animation.propsi_skojmar_clan_flag.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}

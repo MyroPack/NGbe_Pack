@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_penguin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_penguin_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_penguin"
+      },
+      "animations": {
+        "idle": "animation.ng.penguin2.idle",
+        "move": "animation.ng.penguin2.move",
+        "swim_idle": "animation.ng.penguin2.swim_idle",
+        "swim_move": "animation.ng.penguin2.swim_move",
+        "controller": "controller.animation.ng.baby_penguin.move",
+        "look": "animation.ng.penguin2.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_swimming = query.mark_variant == 2;",
+          "variable.ngb_moving = query.modified_move_speed > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_penguin"
+      ],
+      "spawn_egg": {
+        "base_color": "#9ea3b0",
+        "overlay_color": "#4d535c"
+      }
+    }
+  }
+}

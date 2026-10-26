@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.health_bar": {
+			"geometry": "Geometry.health_bar",
+			"materials": [
+				{
+					"*": "Material.health_bar"
+				}
+			],
+			"textures": [
+				"Texture.health_bar"
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					"(math.floor((1 - (query.health / query.max_health)) * 67)) / 67"
+				],
+				"scale": [
+					1,
+					0.014925
+				]
+			}
+		}
+	}
+}

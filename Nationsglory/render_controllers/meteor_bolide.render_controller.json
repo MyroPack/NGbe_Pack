@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_meteor_bolide": {
+      "arrays": {
+        "textures": {
+          "array.type": [
+            "Texture.terrestre",
+            "Texture.volcan",
+            "Texture.lune"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.type[query.variant]"
+      ],
+      "ignore_lighting": true
+    }
+  }
+}

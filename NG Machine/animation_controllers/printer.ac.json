@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ng_printer.print": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "transitions": [
+                        { "printing": "q.variant == 1" }
+                    ]
+                },
+                "printing": {
+                    "animations": [
+                        "print"
+                    ],
+                    "transitions": [
+                        { "idle": "q.variant == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

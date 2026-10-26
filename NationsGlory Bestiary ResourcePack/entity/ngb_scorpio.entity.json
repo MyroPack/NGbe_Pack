@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:scorpio",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/scorpio_0",
+        "v1": "textures/entity/ngb/scorpio_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.scorpio"
+      },
+      "animations": {
+        "idle": "animation.ng.scorpio.idle",
+        "move": "animation.ng.scorpio.move",
+        "attack": "animation.ng.scorpio.attack",
+        "controller": "controller.animation.ng.scorpio.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.scorpio"
+      ],
+      "spawn_egg": {
+        "base_color": "#262322",
+        "overlay_color": "#171414"
+      }
+    }
+  }
+}

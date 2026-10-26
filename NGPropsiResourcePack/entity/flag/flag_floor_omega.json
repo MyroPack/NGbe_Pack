@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:flag_floor_omega",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/flag/flag_omega"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "geometry": {
+        "default": "geometry.banner_floor"
+      },
+      "animations": {
+        "idle": "animation.banner_floor.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}

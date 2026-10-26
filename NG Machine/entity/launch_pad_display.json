@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:launch_pad_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ng_launch_pad"
+			},
+			"geometry": {
+				"default": "geometry.ng_launch_pad_display"
+			},
+			"animations": {
+				"open": "animation.ng_launch_pad.open",
+				"hatch": "controller.animation.ng_launch_pad.hatch"
+			},
+			"scripts": {
+				"animate": [
+					"hatch"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

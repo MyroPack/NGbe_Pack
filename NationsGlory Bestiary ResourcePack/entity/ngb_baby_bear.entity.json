@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_bear",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_bear_0",
+        "v1": "textures/entity/ngb/baby_bear_1",
+        "v2": "textures/entity/ngb/baby_bear_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_bear"
+      },
+      "animations": {
+        "idle": "animation.ng.baby_bear.idle",
+        "move": "animation.ng.baby_bear.move",
+        "controller": "controller.animation.ng.baby_bear.move",
+        "look": "animation.ng.baby_bear.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_bear"
+      ],
+      "spawn_egg": {
+        "base_color": "#422920",
+        "overlay_color": "#5d4131"
+      }
+    }
+  }
+}

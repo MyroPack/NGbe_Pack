@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:moon_droid_relay",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/moon_droid_relay_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.moon_droid_relay"
+      },
+      "animations": {
+        "idle": "animation.ng.moon_droid_relay.idle",
+        "move": "animation.ng.moon_droid_relay.move",
+        "attack": "animation.ng.moon_droid_relay.attack",
+        "controller": "controller.animation.ng.moon_droid_relay.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.moon_droid_relay"
+      ],
+      "spawn_egg": {
+        "base_color": "#6d7d70",
+        "overlay_color": "#4b514c"
+      }
+    }
+  }
+}

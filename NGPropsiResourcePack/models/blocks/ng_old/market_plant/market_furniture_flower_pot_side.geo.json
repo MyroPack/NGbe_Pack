@@ -1,0 +1,65 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.market_furniture_flower_pot_side",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"north": {"uv": [5, 13], "uv_size": [4, 4]},
+								"east": {"uv": [5, 13], "uv_size": [4, 4]},
+								"south": {"uv": [5, 13], "uv_size": [4, 4]},
+								"west": {"uv": [5, 13], "uv_size": [4, 4]},
+								"up": {"uv": [9, 17], "uv_size": [-4, -4]},
+								"down": {"uv": [9, 17], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "bone",
+					"pivot": [9, 16, -9],
+					"cubes": [
+						{
+							"origin": [-8, 16, -10],
+							"size": [16, 12, 2],
+							"uv": {
+								"north": {"uv": [35, 8], "uv_size": [-16, 12]},
+								"east": {"uv": [16, 0], "uv_size": [2, 12]},
+								"south": {"uv": [19, 8], "uv_size": [16, 12]},
+								"west": {"uv": [16, 0], "uv_size": [2, 12]},
+								"up": {"uv": [19, 5], "uv_size": [16, 2]},
+								"down": {"uv": [19, 7], "uv_size": [16, -2]}
+							}
+						},
+						{
+							"origin": [-8, 28, -12],
+							"size": [16, 2, 4],
+							"uv": {
+								"north": {"uv": [19, 5], "uv_size": [16, 2]},
+								"east": {"uv": [35, 5], "uv_size": [4, 2]},
+								"south": {"uv": [19, 5], "uv_size": [16, 2]},
+								"west": {"uv": [35, 5], "uv_size": [4, 2]},
+								"up": {"uv": [19, 0], "uv_size": [16, 4]},
+								"down": {"uv": [19, 4], "uv_size": [16, -4]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

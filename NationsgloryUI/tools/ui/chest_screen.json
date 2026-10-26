@@ -1,0 +1,292 @@
+{
+  "namespace": "chest",
+  
+  "large_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "$use_custom_pocket_toast|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.large_chest_panel",
+        "$screen_bg_content": "common.screen_background",
+        "$screen_background_alpha": 0.4
+      },
+      {
+        "requires": "$pocket_screen",
+        "$use_custom_pocket_toast": true,
+        "$screen_content": "pocket_containers.large_chest_panel"
+      }
+    ]
+  },
+
+  "small_chest_screen@common.inventory_screen_common": {
+		"$close_on_player_hurt|default": true,
+		"$use_custom_pocket_toast|default": false,
+		"close_on_player_hurt": "$close_on_player_hurt",
+		"use_custom_pocket_toast": "$use_custom_pocket_toast",
+		"$new_container_title": "$container_title",
+    "variables": [
+          {
+            "requires": "$desktop_screen",
+            "$screen_content": "chest.small_chest_panel"
+          },
+          {
+            "requires": "$pocket_screen",
+            "$use_custom_pocket_toast": true,
+            "$screen_content": "pocket_containers.small_chest_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:trade')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "troc.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:batterie')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "batterie.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:compresseur_electrique')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "compresseur_electrique.main_panel"
+          },
+           {
+            "requires": "($new_container_title = 'ng:generateur_charbon')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "generateur_charbon.main_panel"
+          }, 
+          {
+            "requires": "($new_container_title = 'ng:reparateur_electrique')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "reparateur_electrique.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:ecotron')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ecotron.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:imprimante')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "imprimante.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:chargeur_electrique')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "chargeur_electrique.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:tourelle_anti_missile')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "tourelle_anti_missile.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:citerne')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "citerne.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:groupe_electrogene')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "groupe_electrogene.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:distributeur_oxygene')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "distributeur_oxygene.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:collecteur_oxygene')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "collecteur_oxygene.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:reservoir_gaz')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "reservoir_gaz.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:concasseur')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "concasseur.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:petrolier')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "petrolier.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:caoutchouteuse')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "caoutchouteuse.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:extrateur_gaz')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "extrateur_gaz.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:assembleur_rouage')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "assembleur_rouage.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:panneau_solair')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "panneau_solair.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:reparateur_industriel')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "reparateur_industriel.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:bio_generateur')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "bio_generateur.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:chargeur_carburant')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "chargeur_carburant.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:nucleaire')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "nucleaire.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:compresseur_gaz')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "compresseur_gaz.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:raffinerie')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "raffinerie.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:refrigerateur')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "refrigerateur.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:conservation')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "conservation.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:tannage')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "tannage.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:workstations')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "workstations.main_panel"
+          },
+          ////////////////////////////////////////////////////
+          {
+            "requires": "($new_container_title = 'ng:parrot_airline')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "parrot_airline.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:parrot_airline_warps')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "parrot_airline.page_warps"
+          }, 
+          {
+            "requires": "($new_container_title = 'ng:parrot_airline_homes')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "parrot_airline.page_home"
+          },
+          {
+            "requires": "($new_container_title = 'ng:competences')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "competences.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:market')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "market.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:annuaire')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "annuaire.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:annuaire_lobby')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "annuaire_lobby.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:ngphone')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ngphone.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:pays')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "pays.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:pays_fondation')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "pays_fondation.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:bestiaire')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ngbestiary.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:marchand')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ngmerchant.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:mailbox')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "mailbox.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:fusee')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "fusee.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:fusee_cargo')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "fusee.cargo_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:settings')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_settings.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:icbm_plateforme')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "icbm_plateforme.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:icbm_tourelle')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "icbm_tourelle.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:serveurs')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_serveurs.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'premium:daily_reward_ui')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_daily_reward.main_panel"
+          }
+  ]}
+}
+  

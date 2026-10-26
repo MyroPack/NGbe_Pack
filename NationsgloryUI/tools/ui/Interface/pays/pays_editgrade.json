@@ -1,0 +1,969 @@
+{
+    "namespace": "pays_editgrade",
+
+  // ------------------------------------------------------------------------
+  //
+  //                                Edite Grade
+  //
+  // ------------------------------------------------------------------------ 
+
+  "edite_grade@ng_asset.background_white":{
+    "size":[405,230],
+    "color":[0.153,0.153,0.165],
+    "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                          {"title@ng_module.label":{
+                                            "text":"Crée/modifier un grade",
+                                            "offset":[0,-1.3],
+                                            "font_type":"MinecraftTen",
+                                            "font_scale_factor":0.9
+                                          }}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["fill", "100%"]
+                              }},
+
+                              {"buttton@ng_module.Simple_Button":{
+                                "size": [50,"100%"],
+                                "$size_button":[50,14],
+                                "$index": 19,
+                                "$type_get_text":"Get_text_type_1",
+                                "$font_scale_factor":0.7,
+                                "$text_color":[0.000, 0.000, 0.000],
+                                "$texture_button": "ng_asset.button_03"
+                              }},
+
+                              {"padding@ng_module.panel": {
+                                "size": [2.5, "100%"]
+                              }},
+
+                              {"buttton@ng_module.Simple_Button":{
+                                  "size": [15,"100%"],
+                                  "$size_button":[14,14],
+                                  "$index": 18,
+                                  "$size_icone_right": [7,7],
+                                  "$texture_icone_right": "ng_asset.icon_61",
+                                  "$texture_button": "ng_asset.button_37"
+                              }}
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "layer":10,
+                          "size":["100% - 10px","100% - 10px"],
+                          "controls":[
+
+                              {"top@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100%","26%"],
+                                "controls":[
+
+                                    {"name_grade@ng_asset.background_white":{
+                                      "size":["35% - 3px","100%"],
+                                      "color":[0.153, 0.153, 0.165],
+                                      "controls":[
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                            {"header@ng_asset.background_72":{
+                                              "size":["100%",18],
+                                              "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 2px","100% - 2px"],
+                                                    "controls":[
+                                                
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[4,"100%"]
+                                                      }},
+
+                                                      {"center@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                                  {"title@ng_module.label":{
+                                                                    "text":"Grade",
+                                                                    "layer":10,
+                                                                    "offset":[0,-1.3],
+                                                                    "font_type":"MinecraftTen",
+                                                                    "font_scale_factor":0.9
+                                                                  }}
+                                                      ]}}
+                                                ]}}
+
+
+
+                                            ]}},
+
+                                            {"content@ng_asset.background_white":{
+                                              "size":["100%","fill"],
+                                              "color":[0.247, 0.247, 0.278],
+                                              "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "size":["100% - 10px","100%C"],
+                                                  "controls":[
+
+                                                      {"label@ng_module.label":{
+                                                        "text":"Nom du Grade",
+                                                        "font_scale_factor":0.7,
+                                                        "color":[0.980, 0.980, 0.980]
+                                                      }},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": ["100%",3]
+                                                      }},
+
+                                                      {"stackpanel@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "layer":10,
+                                                        "size":["100%",15],
+                                                        "controls":[
+
+                                                          {"bacgkround@ng_asset.background_09":{
+                                                            "size":["fill","100%"],
+                                                            "controls":[
+
+                                                                {"stackpanel@ng_module.stackpanel":{
+                                                                  "orientation":"horizontal",
+                                                                  "size":["100% - 10px","100%"],
+                                                                  "controls":[
+
+                                                                      {"text@ng_module.Simple_text": {
+                                                                        "size": ["100%c",15],
+                                                                        "$index":20,
+                                                                        "$max_size":[100,10],
+                                                                        "$type_get_text": "Get_text_type_1",
+                                                                        "$font_scale_factor": 0.7
+                                                                      }}
+                                                                  ]}}
+                                                          ]}},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [3, "100%"]
+                                                          }},
+
+                                                          {"button_edite@ng_module.Simple_Button":{
+                                                            "size": [15,15],
+                                                            "$index": 21,
+                                                            "$size_icone_right":[8,8],
+                                                            "$texture_icone_right": "ng_asset.icon_53",
+                                                            "$texture_button": "ng_asset.button_34"
+                                                          }}
+
+                                                      ]}}
+
+                                                      
+
+                                                ]}}
+                                            ]}}
+                                    ]}}
+
+                                    ]}},
+
+                                    {"padding@ng_module.panel": {
+                                      "size": [6, "100%"]
+                                    }},
+
+                                    {"color@ng_asset.background_white":{
+                                      "size":["65% - 3px","100%"],
+                                      "color":[0.153, 0.153, 0.165],
+                                      "controls":[
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                            {"header@ng_asset.background_72":{
+                                              "size":["100%",18],
+                                              "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 2px","100% - 2px"],
+                                                  "controls":[
+                                                
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[4,"100%"]
+                                                      }},
+
+                                                      {"center@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                                  {"title@ng_module.label":{
+                                                                    "text":"Couleur du grade",
+                                                                    "offset":[0,-1.3],
+                                                                    "layer":10,
+                                                                    "font_type":"MinecraftTen",
+                                                                    "font_scale_factor":0.9
+                                                                  }}
+                                                      ]}}
+                                                ]}}
+                                            ]}},
+
+                                            {"content@ng_asset.background_white":{
+                                              "size":["100%","fill"],
+                                              "color":[0.247, 0.247, 0.278],
+                                              "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "size":["100% - 10px","100%C"],
+                                                  "controls":[
+
+                                                      {"label@ng_module.label":{
+                                                        "text":"Couleur disponibles",
+                                                        "font_scale_factor":0.7,
+                                                        "color":[0.980, 0.980, 0.980]
+                                                      }},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": ["100%",3]
+                                                      }},
+
+                                                      {"stackpanel@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "layer":10,
+                                                        "size":["100%",12],
+                                                        "controls":[
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[1.000, 1.000, 1.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+
+                                                               {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 22,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                          ]}},
+                                                                
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.808, 0.792, 0.792],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 23,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.000, 0.000, 0.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 24,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.333, 0.333, 0.333],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 25,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.667, 0.000, 0.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 26,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[1.000, 0.333, 0.333],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 27,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.922, 0.443, 0.078],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 28,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[1.000, 0.667, 0.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 29,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[1.000, 1.000, 0.333],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 30,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.333, 1.000, 0.333],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 31,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.000, 0.667, 0.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 32,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.000, 0.667, 0.667],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 33,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.333, 0.667, 1.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 34,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.000, 0.000, 0.667],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 35,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[0.667, 0.000, 0.667],
+                                                            "size":[12,12],
+                                                            "controls":[
+
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 36,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }},
+
+                                                          {"color_1@ng_asset.background_white":{
+                                                            "color":[1.000, 0.333, 1.000],
+                                                            "size":[12,12],
+                                                            "controls":[
+                                                                {"color_1@ng_module.multiple_status_button":{
+                                                                  "size": [12,12],
+                                                                  "$index": 37,
+                                                                  "$textures_button_S0": "ng_asset.button_contour_white",
+                                                                  "$textures_button_S1": "ng_asset.button_full_contour_white",
+                                                                  "$fonction_mapping_button_S0": "clickable",
+                                                                  "$fonction_mapping_button_S1": "nonclickable"
+                                                                }}
+                                                            ]
+                                                          }},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [2.5, "100%"]
+                                                          }}
+
+                                                      ]}}
+
+                                                      
+
+                                                ]}}
+
+
+
+                                            ]}}
+                                    ]}}
+                                    ]}}
+
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["fill", 3]
+                              }},
+
+                              {"bottom@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100%","fill"],
+                                "controls":[
+
+                                    {"name_grade@ng_asset.background_white":{
+                                      "size":["100%","100%"],
+                                      "color":[0.153, 0.153, 0.165],
+                                      "controls":[
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                            {"header@ng_asset.background_72":{
+                                              "size":["100%",18],
+                                              "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 2px","100% - 2px"],
+                                                  "controls":[
+                                                
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[4,"100%"]
+                                                      }},
+
+                                                      {"center@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                                  {"title@ng_module.label":{
+                                                                    "text":"Permission",
+                                                                    "offset":[0,-1.3],
+                                                                    "layer":10,
+                                                                    "font_type":"MinecraftTen",
+                                                                    "font_scale_factor":0.9
+                                                                  }}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":["fill","100%"]
+                                                      }},
+
+                                                      // Pagination des permissions : 21 par page (3 colonnes de 7).
+                                                      // 66 page precedente, 68 « Page - x/y », 67 page suivante.
+                                                      {"paggination@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                          {"paggination@ng_module.stackpanel":{
+                                                            "size":["100%c",10],
+                                                            "orientation":"horizontal",
+                                                            "layer":10,
+                                                            "controls":[
+
+                                                                {"left_button@ng_module.panel":{
+                                                                  "size": ["100%c","100%"],
+                                                                  "controls": [
+
+                                                                      {"buttton@ng_module.Simple_Button":{
+                                                                          "size": [10,10],
+                                                                          "offset": [0,0.6],
+                                                                          "$index": 66,
+                                                                          "$icon_right_offset": [-0.3,0],
+                                                                          "$size_icone_right": [7,7],
+                                                                          "$texture_icone_right": "ng_asset.icon_34",
+                                                                          "$texture_button": "ng_asset.button_18"
+                                                                      }}
+                                                                ]}},
+
+                                                                {"text@ng_module.panel":{
+                                                                  "size": ["100%c + 6px","100%"],
+                                                                  "controls": [
+
+                                                                      {"text@ng_module.Simple_text":{
+                                                                          "$type_get_text": "Get_text_type_1",
+                                                                          "$index": 68,
+                                                                          "offset": [0,0.8],
+                                                                          "size": ["100%c","100%"],
+                                                                          "$font_scale_factor": 0.7
+                                                                      }}
+                                                                ]}},
+
+                                                                {"righ_button@ng_module.panel":{
+                                                                  "size": ["100%c","100%"],
+                                                                  "controls": [
+
+                                                                      {"buttton@ng_module.Simple_Button":{
+                                                                          "size": [10,10],
+                                                                          "offset": [0,0.6],
+                                                                          "$index": 67,
+                                                                          "$icon_right_offset": [0.3,0],
+                                                                          "$size_icone_right": [7,7],
+                                                                          "$texture_icone_right": "ng_asset.icon_35",
+                                                                          "$texture_button": "ng_asset.button_18"
+                                                                      }}
+                                                                ]}}
+                                                          ]}}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[4,"100%"]
+                                                      }}
+                                                ]}}
+                                            ]}},
+
+                                            {"content@ng_asset.background_white":{
+                                              "size":["100%","fill"],
+                                              "color":[0.247, 0.247, 0.278],
+                                              "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 6px","100% - 6px"],
+                                                  "controls":[
+
+                                                      {"stackpanel@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "size":["100%","100%"],
+                                                        "controls":[
+
+                                                            {"stackpanel@ng_module.stackpanel":{
+                                                              "collection_name":"container_items",
+                                                              "size":["32%","100%"],
+                                                              "controls":[
+
+                                                                // Titre de la colonne : le groupe de ses permissions, envoye par le mod (case 69).
+                                                                {"label@ng_module.Get_text_type_1":{
+                                                                  "type":"label",
+                                                                  "text":"#text",
+                                                                  "collection_index":69,
+                                                                  "font_scale_factor":0.65
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": ["100%", 3]
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":45
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":46
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":47
+                                                                }},
+                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":48
+                                                                }},    
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":49
+                                                                }},   
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":50
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":51
+                                                                }}
+                                                                                                                                
+                                                            ]}},
+                                                              
+                                                            {"padding@ng_module.panel": {
+                                                              "size": ["2%", "100%"]
+                                                            }},
+                                                              
+                                                            {"stackpanel@ng_module.stackpanel":{
+                                                              "collection_name":"container_items",
+                                                              "size":["32%","100%"],
+                                                              "controls":[
+
+                                                                // Titre de la colonne : le groupe de ses permissions, envoye par le mod (case 70).
+                                                                {"label@ng_module.Get_text_type_1":{
+                                                                  "type":"label",
+                                                                  "text":"#text",
+                                                                  "collection_index":70,
+                                                                  "font_scale_factor":0.65
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": ["100%", 3]
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":52
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":53
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":54
+                                                                }},
+                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":55
+                                                                }},    
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":56
+                                                                }},   
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":57
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":58
+                                                                }}
+                                                                                                                                
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": ["2%", "100%"]
+                                                            }},
+                                                              
+                                                            {"stackpanel@ng_module.stackpanel":{
+                                                              "collection_name":"container_items",
+                                                              "size":["32%","100%"],
+                                                              "controls":[
+
+                                                                // Titre de la colonne : le groupe de ses permissions, envoye par le mod (case 71).
+                                                                {"label@ng_module.Get_text_type_1":{
+                                                                  "type":"label",
+                                                                  "text":"#text",
+                                                                  "collection_index":71,
+                                                                  "font_scale_factor":0.65
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": ["100%", 3]
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":59
+                                                                }},
+
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":60
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":61
+                                                                }},
+                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":62
+                                                                }},    
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":63
+                                                                }},   
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":64
+                                                                }},
+                                                                                                                                
+                                                                {"asset_button_edite_grade@pays_editgrade.asset_button_edite_grade":{
+                                                                  "$index_permission":65
+                                                                }}
+                                                                                                                                
+                                                            ]}}
+                                                   ]}}
+
+                                                ]}}
+
+                                            ]}}
+                                    ]}}
+
+                                    ]}}
+
+                              ]}}
+                        ]}}
+
+                       
+
+                  ]}}
+            ]}}
+  ]},
+
+  "asset_button_edite_grade@ng_module.stackpanel": {
+      "collection_index": "$index_permission",
+      "size": ["100%",15.6],
+      // Ligne montree seulement si la case porte une permission : son texte a toujours §0 (accordee) ou §1
+      // (refusee). Une case sans permission (§r seul) ne montre rien, ni le cadre ni le bouton. Le test
+      // « texte vide » d'avant laissait le cadre sombre sur le vrai client.
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (((#hover_text - '§0') - '§1') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+          {"button":{
+            "type": "input_panel",
+            "size": ["100%",13.6],
+            "controls": [
+
+                {"asset_button":{
+                  "type": "stack_panel",
+                  "size": ["100%","100%"],
+                  "controls": [
+
+                      {"texture_button":{
+                        "type": "panel",
+                        "size": ["100%","100%"],
+                        "controls":[
+
+                              {"stackpanel@ng_module.stackpanel":{
+                                "orientation": "horizontal",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                  {"name_permission@ng_asset.background_73":{
+                                    "size":["fill","100%"],
+                                    "controls":[
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "orientation": "horizontal",
+                                          "size": ["100%","100%"],
+                                          "controls": [
+
+                                              {"padding@ng_module.panel": {
+                                                "size": [3, "100%"]
+                                              }},
+
+                                              {"text@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$index": "$index_permission",
+                                                "layer":5,
+                                                "$max_size":[100,10],
+                                                "size": ["100%c", "100%"],
+                                                "$font_scale_factor": 0.6
+                                              }}
+                                        ]}}
+
+                                  ]}},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [4, "100%"]
+                                  }},
+
+                                  {"general@ng_module.multiple_status_button":{
+                                    "size": [14,"100%"],
+                                    "$size_button": ["100%","100%"],
+                                    "$index": "$index_permission",
+                                    "$S0_size_icone_right": [8,8],
+                                    "$S0_color_icone_right": [0.188, 0.004, 0.059],
+                                    "$S1_size_icone_right": [7,7],
+                                    "$S1_color_icone_right": [0.188, 0.004, 0.059],
+                                    "$S1_texture_icone_right": "ng_asset.icon_50",
+                                    "$S0_texture_icone_right": "ng_asset.icon_49",
+
+                                    "$textures_button_S0": "ng_asset.button_03",
+                                    "$textures_button_S1": "ng_asset.button_25",
+                                    "$fonction_mapping_button_S0": "clickable",
+                                    "$fonction_mapping_button_S1": "clickable"
+                                  }}
+     
+                              ]}}
+                      ]}}
+                ]}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%",2]
+          }}
+  ]}
+
+}

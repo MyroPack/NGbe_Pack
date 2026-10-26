@@ -1,0 +1,1247 @@
+{
+    "namespace": "pays_statistique",
+
+
+    // -----------------------------------------------
+    //
+    //                  Categorie statistique
+    //
+    // -----------------------------------------------
+
+   "statistique_main@ng_asset.background_white":{
+    "size":[400,230],
+    "color":[0.153,0.153,0.165],
+    "controls":[
+
+        {"content@ng_module.stackpanel":{
+          "size":["100% - 2px","100% - 2px"],
+          "controls":[
+
+                {"header@ng_asset.background_35":{
+                  "size":["100%",20],
+                  "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100% - 2px","100% - 2px"],
+                        "controls":[
+
+                            {"padding@ng_module.panel":{
+                              "size":[5,"100%"]
+                            }},
+
+                            {"center@ng_module.stackpanel":{
+                              "orientation":"horizontal",
+                              "size":["100%c","100%"],
+                              "controls":[
+
+                                  {"text@ng_module.Simple_text":{
+                                    "$type_get_text": "Get_text_type_1",
+                                    "$index": 74,
+                                    "$text_offset":[0,-1.6],
+                                    "$font_type":"MinecraftTen",
+                                    "size": ["100%c","100%"],
+                                    "$font_scale_factor": 0.9
+                                  }},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [1.6, "100%"]
+                                  }},
+
+                                  {"center@ng_module.panel":{
+                                    "size":["100%c","100%c"],
+                                    "controls":[
+
+                                        {"title@ng_module.label":{
+                                          "text":"- Statistiques",
+                                          "offset":[0,1.9],
+                                          "font_type":"MinecraftTen",
+                                          "font_scale_factor":0.9
+                                        }} 
+                                  ]}}
+                            ]}}         
+                      ]}}
+
+                ]}},
+
+                {"content@ng_asset.background_31":{
+                  "size":["100%","fill"],
+                  "controls":[
+
+                       {"content@ng_module.stackpanel":{
+                        "size":["100% - 20px","100% - 20px"],
+                        "controls":[
+
+                            {"stats@ng_asset.background_40":{
+                              "size":["100%","fill"],
+                              "controls":[
+
+                                  {"content@ng_module.stackpanel":{
+                                    "size":["100% - 10px","100% - 8px"],
+                                    "controls":[
+
+                                        {"tableau@ng_module.stackpanel":{
+                                          "orientation":"horizontal",
+                                          "size":["100%","100% - 10px"],
+                                          "controls":[
+
+                                              {"chiffre_left@ng_module.stackpanel":{
+                                                "size":[10,"100%"],
+                                                "controls":[
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",10],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 18,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 19,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 20,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 21,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 22,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 23,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 24,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 25,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 26,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 27,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 28,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 29,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 1]
+                                                  }},
+
+                                                  {"background@ng_module.panel":{
+                                                    "size":["100%",11],
+                                                    "controls":[
+
+                                                      {"text@ng_module.Simple_text":{
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 30,
+                                                          "$text_offset":[-1.6],
+                                                          "anchor_from": "bottom_middle",
+                                                          "anchor_to": "bottom_middle",
+                                                          "layer": 5,
+                                                          "size": ["100%c","100%c"],
+                                                          "$font_scale_factor": 0.5
+                                                      }}
+                                                  ]}}
+                                              ]}},
+
+                                              {"background@ng_asset.background_white":{
+                                                "color":[0.212, 0.212, 0.286],
+                                                "size":["fill","100%"],
+                                                "controls":[
+
+                                                  {"background_grpahique@ng_module.stackpanel":{
+                                                    "size":["100% - 1px","100% - 1px"],
+                                                    "layer":2,
+                                                    "offset":[0.8,-0.6],
+                                                    "controls":[
+
+                                                      {"padding@ng_asset.background_white": {
+                                                        "size": ["100%", "fill"],
+                                                        "color":[0.153, 0.153, 0.165]
+                                                      }},
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},  
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},  
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},    
+                                                      
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},     
+                                                      
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},      
+                                                      
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+                                                                                                            
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+                                                                                                            
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }},
+
+                                                      {"line@ng_asset.background_white":{
+                                                        "color":[0.137, 0.137, 0.149],
+                                                        "size":["100%",1]
+                                                      }},
+
+                                                      {"background@ng_asset.background_white":{
+                                                        "color":[0.153, 0.153, 0.165],
+                                                        "size":["100%",11]
+                                                      }}
+
+
+                                                  ]}},
+
+                                                  {"legende@ng_asset.background_white":{
+                                                    "color":[0.094, 0.094, 0.106],
+                                                    "anchor_from": "top_right",
+                                                    "anchor_to": "top_right",
+                                                    "size":[80,32],
+                                                    "layer":60,
+                                                    "controls":[
+
+                                                        {"tableau@ng_module.stackpanel":{
+                                                          "size":["100% - 2px","100% - 2px"],
+                                                          "controls":[
+
+                                                              {"header@ng_asset.background_17":{
+                                                                "size":["100%",15],
+                                                                "controls":[
+
+                                                                    {"label@ng_module.stackpanel":{
+                                                                      "orientation":"horizontal",
+                                                                      "size":["100% - 4px","100%"],
+                                                                      "controls":[
+                                                                        
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [3, "100%"]
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": ["100%c", "100%"],
+                                                                          "controls":[
+
+                                                                              {"label@ng_module.label":{
+                                                                                "font_type":"MinecraftTen",
+                                                                                "text":"legende",
+                                                                                "offset":[0,-1.3],
+                                                                                "font_scale_factor":0.8,
+                                                                                "color":[0.624, 0.624, 0.663]
+                                                                              }}
+                                                                        ]}}
+
+                                                                    ]}}
+                                                              ]}},
+
+                                                              {"content@ng_asset.background_07":{
+                                                                "size":["100%",15],
+                                                                "controls":[
+
+                                                                    {"label@ng_module.stackpanel":{
+                                                                      "orientation":"horizontal",
+                                                                      "size":["100% - 6px","100%"],
+                                                                      "controls":[
+                                                                        
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [2.6, "100%"]
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": ["100%c", "100%"],
+                                                                          "controls":[
+
+                                                                              {"label@ng_module.label":{
+                                                                                "text":"Note",
+                                                                                "layer":4,
+                                                                                "offset":[0,-0.7],
+                                                                                "font_scale_factor":0.7
+                                                                              }}
+                                                                        ]}},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": ["fill", "100%"]
+                                                                        }},
+
+                                                                        {"center@ng_module.panel": {
+                                                                          "size": [5, "100%"],
+                                                                          "controls":[
+                                                                
+                                                                              {"background@ng_asset.background_white":{
+                                                                                "size":[5,5],
+                                                                                "color":[0.604, 0.902, 0.000]
+                                                                              }}
+
+                                                                        ]}}
+
+                                                                    ]}}
+
+                                                              ]}}
+                                                        ]}}
+                                                  ]}},
+
+                                                  {"tableau@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "layer":7,
+                                                    "anchor_from": "bottom_left",
+                                                    "anchor_to": "bottom_left",
+                                                    "offset":[1,-1],
+                                                    "size":["100% - 1px","100% - 1px"],
+                                                    "controls":[
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 31,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 32,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 33,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 34,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 35,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 30,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 36,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 37,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 38,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 39,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 40,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 41,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 42,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 43,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 44,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                   
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 45,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 46,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 47,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 48,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 49,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }},
+                                                        
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [4.6, "100%"]
+                                                        }},
+
+                                                        {"loading_bar@ng_module.loading_bar":{
+                                                          "size": [13,"100%"],
+                                                          "layer": 7,
+                                                          "$index": 50,
+                                                          "$load_bar_size": ["100%","100%"],
+                                                          "$orientation": "vertical",
+                                                          "$color_border": [0.604,0.902,0.0],
+                                                          "$layer_percent": 7,
+                                                          "$texture_background_bar": "ng_asset.background_empty",
+                                                          "$texture_background_top": "textures/ui/background/background_white"
+                                                        }}
+
+                                                  ]}}
+                                              ]}}
+                                        ]}},
+
+                                        {"date@ng_module.stackpanel":{
+                                          "orientation":"horizontal",
+                                          "size":["100%",10],
+                                          "layer":10,
+                                          "controls":[
+
+                                            {"background@ng_module.panel":{
+                                              "size":[13.3,10]
+                                            }},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 51,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 52,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 53,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 54,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 55,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 56,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 57,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 58,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 59,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 60,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 61,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 62,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},   
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 63,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 64,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 65,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}}, 
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 66,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 67,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 68,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 69,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}},
+
+                                            {"date@ng_module.panel":{
+                                              "size":[17.6,10],
+                                               "controls":[
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                     "$index": 70,
+                                                     "offset": [0.3,-0.3],
+                                                     "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.5
+                                                  }}
+                                            ]}}
+
+                                        ]}}
+                                  ]}}
+
+                            ]}},
+
+                            {"padding@ng_module.panel":{
+                              "size":["100%",5]
+                            }},
+
+                            {"paggination@ng_module.stackpanel":{
+                              "size":["100%",10],
+                              "orientation":"horizontal",
+                              "controls":[
+
+                                                  {"left_button@ng_module.panel":{
+                                                      "size": ["100%c","100%"],
+                                                      "controls": [
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size": [10,10],
+                                                              "offset": [0,0.6],
+                                                              "$index": 71,
+                                                              "$icon_right_offset": [-0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_34",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+
+                                                  ]}},
+
+                                                  {"text@ng_module.panel":{
+                                                      "size": ["fill","100%"],
+                                                      "controls": [
+
+                                                          {"text@ng_module.Simple_text":{
+                                                              "$type_get_text": "Get_text_type_1",
+                                                              "$index": 72,
+                                                              "offset": [0,0.8],
+                                                              "size": ["100%c","100%"],
+                                                              "$font_scale_factor": 0.85
+                                                          }}
+
+                                                  ]}},
+
+                                                  {"righ_button@ng_module.panel":{
+                                                      "size": ["100%c","100%"],
+                                                      "controls": [
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size": [10,10],
+                                                              "offset": [0,0.6],
+                                                              "$index": 73,
+                                                              "$icon_right_offset": [0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_35",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+                                                  ]}}
+
+                            ]}}
+
+                      ]}}
+
+                   
+
+                ]}}
+        ]}}
+    ]}
+
+}

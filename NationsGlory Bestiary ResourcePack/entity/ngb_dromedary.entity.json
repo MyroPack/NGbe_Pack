@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:dromedary",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/dromedary_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.dromedary"
+      },
+      "animations": {
+        "idle": "animation.ng.dromedary.idle",
+        "move": "animation.ng.dromedary.move",
+        "controller": "controller.animation.ng.dromedary.move",
+        "look": "animation.ng.dromedary.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.dromedary"
+      ],
+      "spawn_egg": {
+        "base_color": "#f3b859",
+        "overlay_color": "#c28b31"
+      }
+    }
+  }
+}

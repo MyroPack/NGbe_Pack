@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:ak47",
+      "item": {
+        "ng:ak47": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/weapon/ak47",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.ak47"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.ak47.first_person",
+        "third_person_hold": "animation.recubeicbm.held.ak47.third_person",
+        "no_accessories": "animation.recubeicbm.weapon.no_accessories",
+        "idle": "animation.recubeicbm.weapon.ak47.idle",
+        "fire": "animation.recubeicbm.weapon.ak47.fire",
+        "reload": "animation.recubeicbm.weapon.ak47.reload",
+        "weapon": "controller.animation.recubeicbm.weapon"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          },
+          "no_accessories",
+          "weapon"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:nuclear_reactor_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/nuclear_reactor_panel_off",
+        "on": "textures/entity/nuclear/nuclear_reactor_panel_on"
+      },
+      "geometry": {
+        "default": "geometry.ng_nuclear_panel"
+      },
+      "render_controllers": [
+        "controller.render.ng_nuclear_onoff"
+      ]
+    }
+  }
+}

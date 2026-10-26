@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_coal_generator": {
+      "arrays": {
+        "textures": {
+          "array.state": [
+            "Texture.default",
+            "Texture.on_0",
+            "Texture.on_1",
+            "Texture.on_2",
+            "Texture.on_3"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.state[query.variant == 0 ? 0 : (1 + math.mod(math.floor(query.life_time * 8), 4))]"
+      ]
+    }
+  }
+}

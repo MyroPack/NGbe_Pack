@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ngpremium.assault_package": {
+			"initial_state": "falling",
+			"states": {
+				"falling": {
+					"animations": [
+						"sky"
+					],
+					"transitions": [
+						{
+							"landing": "q.variant == 1"
+						}
+					]
+				},
+				"landing": {
+					"animations": [
+						"start_floor"
+					],
+					"transitions": [
+						{
+							"falling": "q.variant == 0"
+						},
+						{
+							"landed": "q.all_animations_finished"
+						}
+					]
+				},
+				"landed": {
+					"animations": [
+						"floor"
+					],
+					"transitions": [
+						{
+							"falling": "q.variant == 0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:boar",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/boar_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.boar"
+      },
+      "animations": {
+        "idle": "animation.ng.boar.idle",
+        "move": "animation.ng.boar.move",
+        "attack": "animation.ng.boar.attack",
+        "controller": "controller.animation.ng.boar.move",
+        "look": "animation.ng.boar.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.boar"
+      ],
+      "spawn_egg": {
+        "base_color": "#4f4036",
+        "overlay_color": "#3d3129"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:snapping_turtle",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/snapping_turtle_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.snapping_turtle"
+      },
+      "animations": {
+        "idle": "animation.ng.snapping_turtle.idle",
+        "move": "animation.ng.snapping_turtle.move",
+        "attack": "animation.ng.snapping_turtle.attack",
+        "controller": "controller.animation.ng.snapping_turtle.move",
+        "look": "animation.ng.snapping_turtle.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.snapping_turtle"
+      ],
+      "spawn_egg": {
+        "base_color": "#5d5843",
+        "overlay_color": "#494134"
+      }
+    }
+  }
+}

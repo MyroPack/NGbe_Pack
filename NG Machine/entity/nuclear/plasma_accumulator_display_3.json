@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:plasma_accumulator_display_3",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/plasma_accumulator"
+      },
+      "geometry": {
+        "default": "geometry.ng_plasma_accumulator"
+      },
+      "animations": {
+        "loop": "animation.ng_plasma_accumulator.tier3"
+      },
+      "scripts": {
+        "animate": [
+          "loop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:owl",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/owl_0",
+        "v1": "textures/entity/ngb/owl_1",
+        "v2": "textures/entity/ngb/owl_2",
+        "v3": "textures/entity/ngb/owl_3"
+      },
+      "geometry": {
+        "default": "geometry.ng.owl"
+      },
+      "animations": {
+        "idle": "animation.ng.owl.idle",
+        "move": "animation.ng.owl.move",
+        "fly_idle": "animation.ng.owl.fly_idle",
+        "fly_move": "animation.ng.owl.fly_move",
+        "controller": "controller.animation.ng.owl.move",
+        "look": "animation.ng.owl.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.owl"
+      ],
+      "spawn_egg": {
+        "base_color": "#574333",
+        "overlay_color": "#443127"
+      }
+    }
+  }
+}

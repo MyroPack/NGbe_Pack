@@ -1,0 +1,42 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "Recube"
+    ],
+    "generated_with": {
+      "bridge": [
+        "2.7.46"
+      ],
+      "dash": [
+        "0.11.7"
+      ]
+    }
+  },
+  "header": {
+    "name": "NG Vehicule",
+    "description": "pack.description",
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ],
+    "uuid": "c38e5c48-14eb-4b4e-a5a3-79f660c9c051",
+    "version": [
+      1,
+      0,
+      3
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "5e2eaeea-75ec-4e1a-836d-70f22be1495d",
+      "version": [
+        1,
+        0,
+        3
+      ]
+    }
+  ]
+}

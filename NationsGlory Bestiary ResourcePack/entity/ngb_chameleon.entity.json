@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:chameleon",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/chameleon_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.chameleon"
+      },
+      "animations": {
+        "idle": "animation.ng.chameleon.idle",
+        "move": "animation.ng.chameleon.move",
+        "controller": "controller.animation.ng.chameleon.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.chameleon"
+      ],
+      "spawn_egg": {
+        "base_color": "#729c55",
+        "overlay_color": "#476834"
+      }
+    }
+  }
+}

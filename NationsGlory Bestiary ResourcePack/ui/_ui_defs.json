@@ -1,0 +1,7 @@
+{
+  "ui_defs": [
+    "ui/ngbestiary/book.json",
+    "ui/ngbestiary_hud.json",
+    "ui/ngbestiary/merchant.json"
+  ]
+}

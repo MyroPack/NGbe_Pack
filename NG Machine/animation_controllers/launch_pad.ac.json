@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ng_launch_pad.hatch": {
+            "initial_state": "closed",
+            "states": {
+                "closed": {
+                    "transitions": [
+                        {
+                            "open": "q.variant == 1"
+                        }
+                    ]
+                },
+                "open": {
+                    "animations": [
+                        "open"
+                    ],
+                    "blend_transition": 0.6,
+                    "transitions": [
+                        {
+                            "closed": "q.variant != 1"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

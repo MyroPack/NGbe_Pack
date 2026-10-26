@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:moon_droid_blade",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/moon_droid_blade_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.moon_droid_blade"
+      },
+      "animations": {
+        "idle": "animation.ng.moon_droid_blade.idle",
+        "move": "animation.ng.moon_droid_blade.move",
+        "attack": "animation.ng.moon_droid_blade.attack",
+        "controller": "controller.animation.ng.moon_droid_blade.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.moon_droid_blade"
+      ],
+      "spawn_egg": {
+        "base_color": "#e83b47",
+        "overlay_color": "#383137"
+      }
+    }
+  }
+}

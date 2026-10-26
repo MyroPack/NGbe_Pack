@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:furniture_plant_palm_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/summer/furniture_plant_palm"
+      },
+      "geometry": {
+        "default": "geometry.furniture_plant_palm"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

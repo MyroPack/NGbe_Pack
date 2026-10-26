@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.propsi_skojmar_clan_flag.idle": {
+      "loop": true,
+      "bones": {
+        "flag1": {
+          "rotation": [
+            "-math.cos(query.life_time*45)*22.5",
+            0,
+            0
+          ]
+        },
+        "flag1_2": {
+          "rotation": [
+            "-math.cos((query.life_time*45)+2)*22.5",
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

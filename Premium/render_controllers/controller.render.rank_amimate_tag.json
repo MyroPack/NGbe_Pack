@@ -1,0 +1,34 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.rank_animate_tag": {
+			"geometry": "Geometry.nametag",
+			"materials": [
+				{
+					"*": "Material.nametag"
+				}
+			],
+			"textures": [
+				"Array.rank_tag[math.clamp(q.mark_variant - 3, 0, 1)]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.rank_tag": [
+						"Texture.pioneer_tag_animated",
+						"Texture.gold_tag_animated"
+					]
+				}
+			},
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.mod(math.floor(query.life_time*5), 8)/8"
+				],
+				"scale": [
+					1,
+					0.125
+				]
+			}
+		}
+	}
+}

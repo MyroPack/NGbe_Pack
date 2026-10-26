@@ -1,0 +1,322 @@
+[
+	{
+		"atlas_tile": "fountain_water_jet",
+		"flipbook_texture": "textures/blocks/nationsglory/fountain_water_jet",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/nationsglory/border_2",
+		"atlas_tile": "border_2",
+		"ticks_per_frame": 4
+	},
+	{
+		"flipbook_texture": "textures/blocks/nationsglory/border_3",
+		"atlas_tile": "border_3",
+		"ticks_per_frame": 4
+	},
+	{
+		"flipbook_texture": "textures/blocks/ng_old/snow_toxic_roots",
+		"atlas_tile": "snow_toxic_roots",
+		"ticks_per_frame": 10
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/ceiling_neon_border",
+		"atlas_tile": "ceiling_neon_border",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_neon_border",
+		"atlas_tile": "floor_neon_border",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_yellow",
+		"atlas_tile": "horizontal_circuit_path_yellow",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_white",
+		"atlas_tile": "horizontal_circuit_path_white",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_orange",
+		"atlas_tile": "horizontal_circuit_path_orange",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_blue",
+		"atlas_tile": "horizontal_circuit_path_blue",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_green",
+		"atlas_tile": "horizontal_circuit_path_green",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_red",
+		"atlas_tile": "horizontal_circuit_path_red",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_purple",
+		"atlas_tile": "horizontal_circuit_path_purple",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_light_blue",
+		"atlas_tile": "horizontal_circuit_path_light_blue",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/horizontal_circuit_path_lime",
+		"atlas_tile": "horizontal_circuit_path_lime",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_purple",
+		"atlas_tile": "floor_circuit_path_purple",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_white",
+		"atlas_tile": "floor_circuit_path_white",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_orange",
+		"atlas_tile": "floor_circuit_path_orange",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_blue",
+		"atlas_tile": "floor_circuit_path_blue",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_green",
+		"atlas_tile": "floor_circuit_path_green",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_red",
+		"atlas_tile": "floor_circuit_path_red",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_light_blue",
+		"atlas_tile": "floor_circuit_path_light_blue",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_yellow",
+		"atlas_tile": "floor_circuit_path_yellow",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/floor_circuit_path_lime",
+		"atlas_tile": "floor_circuit_path_lime",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_orange",
+		"atlas_tile": "striped_light_wall_orange",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_white",
+		"atlas_tile": "striped_light_wall_white",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_blue",
+		"atlas_tile": "striped_light_wall_blue",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_green",
+		"atlas_tile": "striped_light_wall_green",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_red",
+		"atlas_tile": "striped_light_wall_red",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_purple",
+		"atlas_tile": "striped_light_wall_purple",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_light_blue",
+		"atlas_tile": "striped_light_wall_light_blue",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_yellow",
+		"atlas_tile": "striped_light_wall_yellow",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/striped_light_wall_lime",
+		"atlas_tile": "striped_light_wall_lime",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_light_blue",
+		"atlas_tile": "dark_striped_light_wall_light_blue",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_white",
+		"atlas_tile": "dark_striped_light_wall_white",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_orange",
+		"atlas_tile": "dark_striped_light_wall_orange",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_blue",
+		"atlas_tile": "dark_striped_light_wall_blue",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_green",
+		"atlas_tile": "dark_striped_light_wall_green",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_red",
+		"atlas_tile": "dark_striped_light_wall_red",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_purple",
+		"atlas_tile": "dark_striped_light_wall_purple",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_yellow",
+		"atlas_tile": "dark_striped_light_wall_yellow",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/dark_striped_light_wall_lime",
+		"atlas_tile": "dark_striped_light_wall_lime",
+		"ticks_per_frame": 12
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_yellow",
+		"atlas_tile": "wall_light_panel_yellow",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_white",
+		"atlas_tile": "wall_light_panel_white",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_orange",
+		"atlas_tile": "wall_light_panel_orange",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_blue",
+		"atlas_tile": "wall_light_panel_blue",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_green",
+		"atlas_tile": "wall_light_panel_green",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_purple",
+		"atlas_tile": "wall_light_panel_purple",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_light_blue",
+		"atlas_tile": "wall_light_panel_light_blue",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/wall_light_panel_lime",
+		"atlas_tile": "wall_light_panel_lime",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/bird_bath",
+		"atlas_tile": "bird_bath",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/snow_globe",
+		"atlas_tile": "snow_globe",
+		"ticks_per_frame": 6
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/water_column",
+		"atlas_tile": "water_column",
+		"ticks_per_frame": 8
+	},
+	{
+		"flipbook_texture": "textures/blocks/halloween/halloween_ceiling_candle",
+		"atlas_tile": "halloween_ceiling_candle",
+		"ticks_per_frame": 4
+	},
+	{
+		"flipbook_texture": "textures/blocks/halloween/halloween_standing_candle",
+		"atlas_tile": "halloween_standing_candle",
+		"ticks_per_frame": 4
+	},
+	{
+		"flipbook_texture": "textures/blocks/halloween/halloween_wall_candle",
+		"atlas_tile": "halloween_wall_candle",
+		"ticks_per_frame": 4
+	},
+	{
+		"flipbook_texture": "textures/blocks/nationsglory/westeros_glowing",
+		"atlas_tile": "westeros_glowing",
+		"ticks_per_frame": 6
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng_2/firefly_bush",
+		"atlas_tile": "firefly_bush",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng_2/decorative_flame",
+		"atlas_tile": "decorative_flame",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng_2/blue_decorative_flame",
+		"atlas_tile": "blue_decorative_flame",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng_2/small_decorative_flame",
+		"atlas_tile": "small_decorative_flame",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng_2/small_blue_decorative_flame",
+		"atlas_tile": "small_blue_decorative_flame",
+		"ticks_per_frame": 3
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/uranium_ore",
+		"atlas_tile": "uranium_ore",
+		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/asteroid_crystal_ore",
+		"atlas_tile": "asteroid_crystal_ore",
+		"ticks_per_frame": 2
+	}
+]

@@ -1,0 +1,240 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.player.armor.megalodon_helmet",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [
+          0,
+          2,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            20.4,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                23,
+                -5
+              ],
+              "size": [
+                10,
+                10,
+                10
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                29,
+                -6
+              ],
+              "size": [
+                10,
+                4,
+                1
+              ],
+              "uv": [
+                22,
+                57
+              ]
+            },
+            {
+              "origin": [
+                5,
+                26,
+                -2
+              ],
+              "size": [
+                2,
+                4,
+                4
+              ],
+              "uv": [
+                18,
+                62
+              ]
+            },
+            {
+              "origin": [
+                -7,
+                26,
+                -2
+              ],
+              "size": [
+                2,
+                4,
+                4
+              ],
+              "uv": [
+                18,
+                62
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -3,
+                23,
+                -7
+              ],
+              "size": [
+                6,
+                3,
+                3
+              ],
+              "uv": [
+                60,
+                12
+              ]
+            },
+            {
+              "origin": [
+                -3,
+                26,
+                -7
+              ],
+              "size": [
+                6,
+                2,
+                3
+              ],
+              "uv": [
+                0,
+                62
+              ]
+            }
+          ]
+        },
+        {
+          "name": "glow2",
+          "parent": "head",
+          "pivot": [
+            0,
+            28,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5,
+                26,
+                -2
+              ],
+              "size": [
+                2,
+                4,
+                4
+              ],
+              "uv": [
+                66,
+                95
+              ]
+            },
+            {
+              "origin": [
+                -7,
+                26,
+                -2
+              ],
+              "size": [
+                2,
+                4,
+                4
+              ],
+              "uv": [
+                66,
+                95
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "group",
+          "parent": "head",
+          "pivot": [
+            0,
+            33,
+            -4
+          ],
+          "rotation": [
+            -30,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                32.8,
+                -4.275
+              ],
+              "size": [
+                2,
+                7,
+                5
+              ],
+              "uv": [
+                60,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "glow",
+          "parent": "group",
+          "pivot": [
+            0,
+            33,
+            -4
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                32.8,
+                -4.275
+              ],
+              "size": [
+                2,
+                7,
+                5
+              ],
+              "uv": [
+                108,
+                98
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

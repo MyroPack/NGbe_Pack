@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:donkey",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/donkey_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.donkey"
+      },
+      "animations": {
+        "idle": "animation.ng.donkey.idle",
+        "move": "animation.ng.donkey.move",
+        "controller": "controller.animation.ng.donkey.move",
+        "look": "animation.ng.donkey.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.donkey"
+      ],
+      "spawn_egg": {
+        "base_color": "#716253",
+        "overlay_color": "#5e4f41"
+      }
+    }
+  }
+}

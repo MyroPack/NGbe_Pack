@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:creeper_mushroom_blue",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/creeper_mushroom_blue_0",
+        "v1": "textures/entity/ngb/creeper_mushroom_blue_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.creeper_mushroom_blue"
+      },
+      "animations": {
+        "idle": "animation.ng.creeper_mushroom_blue.idle",
+        "move": "animation.ng.creeper_mushroom_blue.move",
+        "controller": "controller.animation.ng.creeper_mushroom_blue.move",
+        "look": "animation.ng.creeper_mushroom_blue.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.creeper_mushroom_blue"
+      ],
+      "spawn_egg": {
+        "base_color": "#9bc3cf",
+        "overlay_color": "#323435"
+      }
+    }
+  }
+}

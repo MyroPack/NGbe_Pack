@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ngpremium:lootbox_megalodon",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/lootbox/lootbox_megalodon"
+      },
+      "animations": {
+        "anim_1": "animation.ng_lootbox_megalodon.idle",
+        "anim_2": "animation.ng_lootbox_megalodon.open0",
+        "anim_3": "animation.ng_lootbox_megalodon.open1",
+        "anim_4": "animation.ng_lootbox_megalodon.open2",
+        "anim_5": "animation.ng_lootbox_megalodon.open3"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "anim_1": "q.variant == 0"
+          },
+          {
+            "anim_2": "q.variant == 1"
+          },
+          {
+            "anim_3": "q.variant == 2"
+          },
+          {
+            "anim_4": "q.variant == 3"
+          },
+          {
+            "anim_5": "q.variant == 4"
+          }
+        ]
+      },
+      "geometry": {
+        "default": "geometry.ng_lootbox_megalodon"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "sound_effects": {
+        "lootbox_megalodon_idle": "ng.lootbox.megalodon.idle"
+      }
+    }
+  }
+}

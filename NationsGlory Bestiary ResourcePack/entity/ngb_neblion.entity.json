@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:neblion",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/neblion_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.neblion"
+      },
+      "animations": {
+        "idle": "animation.ng.neblion.idle",
+        "move": "animation.ng.neblion.move",
+        "controller": "controller.animation.ng.neblion.move",
+        "look": "animation.ng.neblion.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.neblion"
+      ],
+      "spawn_egg": {
+        "base_color": "#f1e3c8",
+        "overlay_color": "#dabfa0"
+      }
+    }
+  }
+}

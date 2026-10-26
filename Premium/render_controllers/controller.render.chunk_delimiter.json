@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.chunk_delimiter": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.resources[q.mark_variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.resources": [
+						"Texture.yellow",
+						"Texture.blue",
+						"Texture.red"
+					]
+				}
+			}
+		}
+	}
+}

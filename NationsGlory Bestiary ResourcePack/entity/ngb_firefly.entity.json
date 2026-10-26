@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:firefly",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/firefly_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.firefly"
+      },
+      "animations": {
+        "idle": "animation.ng.firefly.idle",
+        "move": "animation.ng.firefly.move",
+        "fly_idle": "animation.ng.firefly.fly_idle",
+        "fly_move": "animation.ng.firefly.fly_move",
+        "controller": "controller.animation.ng.firefly.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.firefly"
+      ],
+      "spawn_egg": {
+        "base_color": "#271e19",
+        "overlay_color": "#a3ad1d"
+      }
+    }
+  }
+}

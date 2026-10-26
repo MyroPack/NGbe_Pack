@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_wide_seasonal_bush",
+				"texture_width": 32,
+				"texture_height": 32
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-14.95, 0, 0],
+							"size": [29.9, 29.9, 0],
+							"uv": {
+								"south": {
+									"uv": [0.0, 0.0],
+									"uv_size": [32.0, 32.0]
+								}
+							}
+						},
+						{
+							"origin": [-14.95, 0, 0],
+							"size": [29.9, 29.9, 0],
+							"pivot": [0, 14.95, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"south": {
+									"uv": [0.0, 0.0],
+									"uv_size": [32.0, 32.0]
+								}
+							}
+						},
+						{
+							"origin": [-14.95, 0, 0],
+							"size": [29.9, 29.9, 0],
+							"pivot": [0, 14.95, 0],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"south": {
+									"uv": [0.0, 0.0],
+									"uv_size": [32.0, 32.0]
+								}
+							}
+						},
+						{
+							"origin": [-14.95, 0, 0],
+							"size": [29.9, 29.9, 0],
+							"pivot": [0, 14.95, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"south": {
+									"uv": [0.0, 0.0],
+									"uv_size": [32.0, 32.0]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

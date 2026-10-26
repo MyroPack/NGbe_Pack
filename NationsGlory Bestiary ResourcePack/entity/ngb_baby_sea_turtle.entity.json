@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_sea_turtle",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_sea_turtle_0",
+        "v1": "textures/entity/ngb/baby_sea_turtle_1",
+        "v2": "textures/entity/ngb/baby_sea_turtle_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_sea_turtle"
+      },
+      "animations": {
+        "idle": "animation.ng.baby_sea_turtle.idle",
+        "move": "animation.ng.baby_sea_turtle.move",
+        "controller": "controller.animation.ng.baby_sea_turtle.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_sea_turtle"
+      ],
+      "spawn_egg": {
+        "base_color": "#85a93f",
+        "overlay_color": "#405830"
+      }
+    }
+  }
+}

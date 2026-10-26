@@ -1,0 +1,32 @@
+﻿{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic_tag": {
+      "geometry": "Geometry.nametag",
+      "materials": [
+        {
+          "*": "Material.nametag"
+        }
+      ],
+      "textures": [
+        "Array.rank_tag[q.mark_variant]"
+      ],
+      "arrays": {
+        "textures": {
+          "Array.rank_tag": [
+            "Texture.empty_tag",
+            "Texture.premium_tag",
+            "Texture.legendary_tag",
+            "Texture.guide_tag",
+            "Texture.modo_tag",
+            "Texture.super_modo_tag",
+            "Texture.responsable_tag",
+            "Texture.recube_tag",
+            "Texture.prime_tag",
+            "Texture.premium_plus_tag"
+          ]
+        }
+      }
+    }
+  }
+}

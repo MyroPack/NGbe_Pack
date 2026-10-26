@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:cow",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/cow_0",
+        "v1": "textures/entity/ngb/cow_1",
+        "v2": "textures/entity/ngb/cow_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.cow"
+      },
+      "animations": {
+        "idle": "animation.ng.cow.idle",
+        "move": "animation.ng.cow.move",
+        "controller": "controller.animation.ng.cow.move",
+        "look": "animation.ng.cow.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.cow"
+      ],
+      "spawn_egg": {
+        "base_color": "#3f3024",
+        "overlay_color": "#aa9e9e"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.machine_repair.on": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"head": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -8, 0],
+						"2.0": {
+							"pre": [0, 0, 0],
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"anvil": {
+					"scale": {
+						"0.4583": [1, 1, 1],
+						"0.5": [1.02, 1.02, 1.02],
+						"0.5833": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.rank_tag": {
+			"geometry": "Geometry.front_nametag",
+			"materials": [
+				{
+					"*": "Material.rank_tag"
+				}
+			],
+			"textures": [
+				"Array.rank_tag[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.rank_tag": [
+						"Texture.player_rank_tag",
+						"Texture.premium_rank_tag",
+						"Texture.legendary_rank_tag",
+						"Texture.affilate_rank_tag",
+						"Texture.helper_rank_tag",
+						"Texture.modo_rank_tag",
+						"Texture.operator_rank_tag",
+						"Texture.respstaff_rank_tag",
+						"Texture.dev_rank_tag",
+						"Texture.admin_rank_tag",
+						"Texture.referent_rank_tag",
+						"Texture.designer_rank_tag",
+						"Texture.recube_rank_tag",
+						"Texture.modo_plus_rank_tag",
+						"Texture.modo_t_rank_tag",
+						"Texture.builder_rank_tag",
+						"Texture.staff_rank_tag",
+						"Texture.prime_rank_tag",
+						"Texture.premium_plus_rank_tag",
+						"Texture.roleplay_rank_tag"
+					]
+				}
+			}
+		}
+	}
+}

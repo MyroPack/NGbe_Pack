@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_panther",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_panther_0",
+        "v1": "textures/entity/ngb/baby_panther_1",
+        "v2": "textures/entity/ngb/baby_panther_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_panther"
+      },
+      "animations": {
+        "idle": "animation.ng.baby_panther.idle",
+        "move": "animation.ng.baby_panther.move",
+        "controller": "controller.animation.ng.baby_panther.move",
+        "look": "animation.ng.baby_panther.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_panther"
+      ],
+      "spawn_egg": {
+        "base_color": "#cfc5a8",
+        "overlay_color": "#ac863a"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mount.general": {
+			"initial_state": "idling",
+			"states": {
+				"idling": {
+					"transitions": [
+						{
+							"moving": "variable.moving"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"moving": {
+					"animations": [
+						{
+							"moving": "query.modified_move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"idling": "!variable.moving"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.mount.idle": {
+			"initial_state": "idling",
+			"states": {
+				"idling": {
+					"animations": [
+						"idle"
+					]
+				}
+			}
+		}
+	}
+}

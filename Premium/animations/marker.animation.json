@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ngpremium_marker.face_camera": {
+			"loop": true,
+			"bones": {
+				"icon": {
+					"rotation": [
+						"-query.rotation_to_camera(0)",
+						"query.rotation_to_camera(1) + 180 - q.body_y_rotation",
+						0
+					]
+				}
+			}
+		}
+	}
+}

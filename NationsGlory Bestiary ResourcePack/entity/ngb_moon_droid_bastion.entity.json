@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:moon_droid_bastion",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/moon_droid_bastion_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.moon_droid_bastion"
+      },
+      "animations": {
+        "idle": "animation.ng.moon_droid_bastion.idle",
+        "move": "animation.ng.moon_droid_bastion.move",
+        "attack": "animation.ng.moon_droid_bastion.attack",
+        "controller": "controller.animation.ng.moon_droid_bastion.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.moon_droid_bastion"
+      ],
+      "spawn_egg": {
+        "base_color": "#232527",
+        "overlay_color": "#42514b"
+      }
+    }
+  }
+}

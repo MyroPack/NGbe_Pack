@@ -1,0 +1,547 @@
+{
+  "namespace": "ngphone",
+
+  "main_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+
+          {"main@ng_asset.background_white": {
+            "color":[0.000, 0.000, 0.000],
+            "size":["150%","150%"],
+            "alpha":0.5,
+            "controls": [
+
+               {"ng_phone@ng_asset.background_white": {
+                  "size": [400, 250],
+                  "color":[0.035, 0.035, 0.043],
+                  "controls": [
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                {"header@ng_asset.background_01":{
+                                  "layer":5,
+                                  "size":["100%",23],
+                                  "controls":[
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "orientation":"horizontal",
+                                          "size":["100% - 5px","100% - 5px"],
+                                          "controls":[
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": [5, "100%"]
+                                                  }},
+
+                                                  {"centring@ng_module.panel":{
+                                                    "size":["100%c","100%"],
+                                                    "controls":[
+                                                         
+                                                              {"title":{
+                                                                  "type":"label",
+                                                                  "font_scale_factor":1.2,
+                                                                  "layer":5,
+                                                                  "offset":[0,-1.3],
+                                                                  "font_type":"MinecraftTen",
+                                                                  "text":"Menu Rapide"
+                                                              }}
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel":{
+                                                    "size":["fill","100%"]
+                                                  }},
+
+                                                  {"centring@ng_module.panel":{
+                                                    "size":["100%c","100%"],
+                                                    "controls":[
+
+                                                          {"close_button@ng_module.close_button":{}}  
+                                                  ]}}
+
+                                        ]}}
+
+                                ]}},
+
+                                {"content@ng_asset.background_white": {
+                                  "size": ["100%", "fill"],
+                                  "color":[0.153, 0.153, 0.165],
+                                  "controls": [
+
+                                        {"stackpanel@ng_module.stackpanel":{
+                                          "size":["100%","100%"],
+                                          "controls":[
+
+                                              {"padding@ng_module.panel": {
+                                                "size": ["100%", 1]
+                                              }},
+
+                                              {"content@ng_asset.background_white": {
+                                                "size": ["100%", "100% - 22px"],
+                                                "color":[0.153, 0.153, 0.165],
+                                                "controls": [
+
+                                                    {"content@ng_asset.background_white": {
+                                                      "size": ["100% - 2px", "100%"],
+                                                      "color":[0.094, 0.094, 0.106],
+                                                      "controls": [
+
+                                                          {"stackpanel@ng_module.stackpanel":{
+                                                            "offset":[0,5],
+                                                            "size":[351,188],
+                                                            "controls":[
+
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name": "container_items",
+                                                                    "size":["100%","100%cm"],
+                                                                    "controls":[
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":13,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":14,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":15,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":16,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":17,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":18,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":19,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":20,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":21,
+                                                                          "layer":1000
+                                                                        }}
+
+                                                                  ]}},  
+                                                                  
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name": "container_items",
+                                                                    "size":["100%","100%cm"],
+                                                                    "controls":[
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":22,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":23,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":24,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":25,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":26,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":27,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":28,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":29,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":30,
+                                                                          "layer":1000
+                                                                        }}
+
+                                                                  ]}},  
+                                                                  
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name": "container_items",
+                                                                    "size":["100%","100%cm"],
+                                                                    "controls":[
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":31,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":32,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":33,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":34,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":35,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":36,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":37,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":38,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":39,
+                                                                          "layer":1000
+                                                                        }}
+
+                                                                  ]}},  
+                                                                  
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name": "container_items",
+                                                                    "size":["100%","100%cm"],
+                                                                    "controls":[
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":40,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":41,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":42,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":43,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":44,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":45,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":46,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":47,
+                                                                          "layer":1000
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [8,0.1]
+                                                                        }},
+
+                                                                        {"button_ngphone@ngphone.button_ngphone":{
+                                                                          "$index":48,
+                                                                          "layer":1000
+                                                                        }}
+
+                                                                  ]}}
+                                                          ]}}
+                                                    ]}}
+                                              ]}},
+
+                                              {"footer@ng_module.panel":{
+                                                "size":["100%",20],
+                                                "controls":[
+
+                                                     {"content@ng_module.stackpanel":{
+                                                        "orientation": "horizontal",
+                                                        "size": ["100%c","100%"],
+                                                        "controls": [
+
+                                                            {"left_button@ng_module.panel":{
+                                                                "size": ["100%c","100%"],
+                                                                "controls": [
+
+                                                                    {"buttton@ng_module.Simple_Button":{
+                                                                        "size": [11,11],
+                                                                        "offset": [0,0.6],
+                                                                        "$index": 10,
+                                                                        "$icon_right_offset": [-0.3,0],
+                                                                        "$size_icone_right": [7,7],
+                                                                        "$texture_icone_right": "ng_asset.icon_34",
+                                                                        "$texture_button": "ng_asset.button_18"
+                                                                    }}
+
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel":{
+                                                                "size": [3.1,0.1]
+                                                            }},
+
+                                                            {"text@ng_module.panel":{
+                                                                "size": ["100%c","100%"],
+                                                                "controls": [
+
+                                                                    {"text@ng_module.Simple_text":{
+                                                                        "$type_get_text": "Get_text_type_1",
+                                                                        "$index": 11,
+                                                                        "offset": [0,0.6],
+                                                                        "size": ["100%c","100%"],
+                                                                        "$font_scale_factor": 0.7
+                                                                    }}
+
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel":{
+                                                                "size": [2,0.1]
+                                                            }},
+
+                                                            {"righ_button@ng_module.panel":{
+                                                                "size": ["100%c","100%"],
+                                                                "controls": [
+
+                                                                    {"buttton@ng_module.Simple_Button":{
+                                                                        "size": [11,11],
+                                                                        "offset": [0,0.6],
+                                                                        "$index": 12,
+                                                                        "$icon_right_offset": [0.3,0],
+                                                                        "$size_icone_right": [7,7],
+                                                                        "$texture_icone_right": "ng_asset.icon_35",
+                                                                        "$texture_button": "ng_asset.button_18"
+                                                                    }}
+
+                                                            ]}}
+                                                      ]}}
+                                              ]}}
+                                        ]}}
+                                ]}}
+                        ]}}
+
+                ]}}
+
+           
+          ]}}
+  ]},
+
+  "button_ngphone@ng_module.conditional": {
+    "type": "button",
+    "hover_control": "hover",
+    "size": [32, 47],
+    "controls": [
+
+      {"default": {
+          "type": "stack_panel",
+          "size": [32,47],
+          "controls": [
+
+            {"button@ng_module.icone_button": {
+                "size": [32, 32],
+                "$size_button": [32,32],
+                "$type_get_texture": "Get_texture_type_2"
+            }},
+
+            {"padding@ng_module.panel": {
+              "size": ["100%",2.5]
+            }},
+
+            {"text@ng_module.Simple_text": {
+              "size": ["100%",5],
+              "layer": 1000,
+              "$type_get_text": "Get_text_type_3",
+              "$font_scale_factor": 0.6
+            }}
+          ]
+        }
+      }
+    ]
+  }
+
+  
+
+}

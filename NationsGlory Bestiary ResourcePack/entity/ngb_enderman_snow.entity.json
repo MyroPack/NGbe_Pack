@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:enderman_snow",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/enderman_snow_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.enderman_snow"
+      },
+      "animations": {
+        "idle": "animation.ng.enderman_snow.idle",
+        "move": "animation.ng.enderman_snow.move",
+        "controller": "controller.animation.ng.enderman_snow.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.enderman_snow"
+      ],
+      "spawn_egg": {
+        "base_color": "#534543",
+        "overlay_color": "#3a2d2c"
+      }
+    }
+  }
+}

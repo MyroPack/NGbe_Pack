@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:terrakin_people_banner_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/oversized/terrakin_people_banner"
+      },
+      "geometry": {
+        "default": "geometry.propsi_terrakin_people_banner_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

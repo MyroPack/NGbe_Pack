@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ngpremium:lootbox_legendaire",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/lootbox/lootbox_legendaire"
+      },
+      "animations": {
+        "anim_1": "animation.ng_lootbox_default.idle",
+        "anim_2": "animation.ng_lootbox_default.open1",
+        "anim_3": "animation.ng_lootbox_default.open2",
+        "anim_4": "animation.ng_lootbox_default.open3",
+        "anim_5": "animation.ng_lootbox_default.open4"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "anim_1": "q.variant == 0"
+          },
+          {
+            "anim_2": "q.variant == 1"
+          },
+          {
+            "anim_3": "q.variant == 2"
+          },
+          {
+            "anim_4": "q.variant == 3"
+          },
+          {
+            "anim_5": "q.variant == 4"
+          }
+        ]
+      },
+      "geometry": {
+        "default": "geometry.ng_lootbox_legendaire"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:big_flag_epsilon_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/flag/flag_epsilon"
+      },
+      "geometry": {
+        "default": "geometry.banner_flag"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

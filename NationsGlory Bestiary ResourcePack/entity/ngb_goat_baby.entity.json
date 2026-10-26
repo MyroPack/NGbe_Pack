@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:goat_baby",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/goat_baby_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.goat_baby"
+      },
+      "animations": {
+        "idle": "animation.ng.goat_baby.idle",
+        "move": "animation.ng.goat_baby.move",
+        "controller": "controller.animation.ng.goat_baby.move",
+        "look": "animation.ng.goat_baby.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.goat_baby"
+      ],
+      "spawn_egg": {
+        "base_color": "#f4f4f2",
+        "overlay_color": "#dbd5c2"
+      }
+    }
+  }
+}

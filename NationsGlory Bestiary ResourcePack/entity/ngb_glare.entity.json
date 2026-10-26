@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:glare",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/glare_0",
+        "v1": "textures/entity/ngb/glare_1",
+        "v2": "textures/entity/ngb/glare_2",
+        "v3": "textures/entity/ngb/glare_3"
+      },
+      "geometry": {
+        "default": "geometry.ng.glare"
+      },
+      "animations": {
+        "idle": "animation.ng.glare.idle",
+        "move": "animation.ng.glare.move",
+        "fly_idle": "animation.ng.glare.fly_idle",
+        "fly_move": "animation.ng.glare.fly_move",
+        "controller": "controller.animation.ng.glare.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.glare"
+      ],
+      "spawn_egg": {
+        "base_color": "#859cbf",
+        "overlay_color": "#93a9ca"
+      }
+    }
+  }
+}

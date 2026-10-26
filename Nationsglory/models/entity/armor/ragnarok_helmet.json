@@ -1,0 +1,48 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.player.armor.ragnarok_helmet",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4.5, 24.5, -4.5], "size": [9, 9, 9], "inflate": 0.5, "uv": [0, 14]},
+						{"origin": [-5.5, 28.5, -5.5], "size": [11, 3, 11], "inflate": 0.35, "uv": [0, 0]},
+						{"origin": [-1.5, 32.225, -7.8], "size": [3, 5, 9], "inflate": 0.25, "pivot": [0, 32.725, -2.3], "rotation": [45, 0, 0], "uv": [36, 14]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "head",
+					"pivot": [5, 31.75, -0.25],
+					"rotation": [-45, 0, 0],
+					"cubes": [
+						{"origin": [5.5, 31, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [50, 51]},
+						{"origin": [1.9, 33.4, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [20, 54]},
+						{"origin": [6.7, 35.8, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [58, 28]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "head",
+					"pivot": [-5, 31.75, -0.25],
+					"rotation": [-45, 0, 0],
+					"cubes": [
+						{"origin": [-10.5, 31, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [50, 51], "mirror": true},
+						{"origin": [-6.9, 33.4, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [20, 54], "mirror": true},
+						{"origin": [-11.7, 35.8, -1.25], "size": [5, 5, 3], "inflate": 0.5, "uv": [58, 28], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

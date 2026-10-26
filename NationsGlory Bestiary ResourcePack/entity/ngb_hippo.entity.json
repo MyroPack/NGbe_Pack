@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:hippo",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/hippo_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.hippo"
+      },
+      "animations": {
+        "idle": "animation.ng.hippo.idle",
+        "move": "animation.ng.hippo.move",
+        "attack": "animation.ng.hippo.attack",
+        "controller": "controller.animation.ng.hippo.move",
+        "look": "animation.ng.hippo.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.hippo"
+      ],
+      "spawn_egg": {
+        "base_color": "#504a47",
+        "overlay_color": "#5e5450"
+      }
+    }
+  }
+}

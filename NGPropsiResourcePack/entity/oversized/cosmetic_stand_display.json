@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:cosmetic_stand_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/oversized/cosmetic_stand"
+      },
+      "geometry": {
+        "default": "geometry.propsi_cosmetic_stand_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

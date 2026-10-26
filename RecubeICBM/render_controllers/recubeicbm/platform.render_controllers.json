@@ -1,0 +1,56 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.recubeicbm.platform_missile": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.conventionnel",
+            "Texture.repulsive",
+            "Texture.shrapnel",
+            "Texture.incendiaire",
+            "Texture.fragmentation",
+            "Texture.emp",
+            "Texture.nuke",
+            "Texture.nuke_cluster",
+            "Texture.thermobarique",
+            "Texture.magnetique",
+            "Texture.earthquake",
+            "Texture.drill",
+            "Texture.endothermique",
+            "Texture.anti_matter",
+            "Texture.red_matter"
+          ]
+        },
+        "geometries": {
+          "Array.geos": [
+            "Geometry.conventionnel",
+            "Geometry.repulsive",
+            "Geometry.shrapnel",
+            "Geometry.incendiaire",
+            "Geometry.fragmentation",
+            "Geometry.emp",
+            "Geometry.nuke",
+            "Geometry.nuke_cluster",
+            "Geometry.thermobarique",
+            "Geometry.magnetique",
+            "Geometry.earthquake",
+            "Geometry.drill",
+            "Geometry.endothermique",
+            "Geometry.anti_matter",
+            "Geometry.red_matter"
+          ]
+        }
+      },
+      "geometry": "Array.geos[math.clamp(q.variant - 1, 0, 14)]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.skins[math.clamp(q.variant - 1, 0, 14)]"
+      ]
+    }
+  }
+}

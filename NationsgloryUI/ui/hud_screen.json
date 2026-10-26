@@ -1,0 +1,1284 @@
+{
+  "namespace": "hud",
+
+  // Viseur de l'appareil photo du bestiaire (NGBestiaryResourcePack, ui/ngbestiary_hud.json), en plein ecran.
+  // Il est le fond de l'ecran du HUD : le seul controle que le jeu place hors de la zone de securite de l'ecran
+  // (comme le fond sombre des ecrans de coffre et d'inventaire). Il va donc d'un bord a l'autre de l'ecran, quel
+  // que soit le reglage « zone de securite » du joueur. Vide sans le pack du bestiaire.
+  "hud_screen@common.base_screen": {
+    "$screen_bg_content": "ngbestiary_hud.viewfinder"
+  },
+
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "notif": {
+              "ignored": "$pocket_screen",
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "controls": [
+                {
+                  "notif": {
+                    "type": "stack_panel",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": [
+                      144,
+                      "100%"
+                    ],
+                    "controls": [
+                      {
+                        "padding": {
+                          "type": "panel",
+                          "size": [
+                            "100%",
+                            "fill"
+                          ],
+                          "controls": [
+                          ]
+                        }
+                      },
+                      {
+                        "top_right_notification": {
+                          "type": "stack_panel",
+                          "layer":900000000000000000000000000000000,
+                          "size": [
+                            144,
+                            "100%c"
+                          ],
+                          "factory": {
+                            "name": "chat_item_factory",
+                            "control_ids": {
+                              "chat_item": "top_right@hud.notification"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          // Version mobile (profil d'interface Pocket) : les memes bandeaux, en haut a droite au lieu du bas a droite,
+          // qui est sous le bouton de saut des commandes tactiles. Un bandeau se pose pendant ses 5 secondes sur les
+          // cases de l'argent, des points, du pseudo et de la date (y = 24 a 54) ; l'armure, dessous, reste visible.
+          // Plus bas, sur un telephone, il arriverait a hauteur du viseur.
+          {
+            "notif_pocket": {
+              "ignored": "(not $pocket_screen)",
+              "type": "panel",
+              "size": [
+                "100%",
+                "100%"
+              ],
+              "controls": [
+                {
+                  "notif": {
+                    "type": "stack_panel",
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "size": [
+                      144,
+                      "100%"
+                    ],
+                    "controls": [
+                      {
+                        "padding": {
+                          "type": "panel",
+                          "size": [
+                            "100%",
+                            25
+                          ]
+                        }
+                      },
+                      {
+                        "top_right_notification": {
+                          "type": "stack_panel",
+                          "layer":900000000000000000000000000000000,
+                          "size": [
+                            144,
+                            "100%c"
+                          ],
+                          "factory": {
+                            "name": "chat_item_factory",
+                            "control_ids": {
+                              "chat_item": "top_right@hud.notification"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "layout_customization_reset": {
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/Black.png",
+          "fill": true,
+          "alpha": 0.5,
+          "layer": 50,
+          "controls": [
+            {
+              "layout_customization_reset_modal@common_dialogs.main_panel_two_buttons": {
+                "size": [
+                  210,
+                  160
+                ],
+                "$show_close_button": false,
+                "$child_control": "library_modal.modal_text_content",
+                "$top_button_panel": "hud.wysiwyg_reset_modal_ok",
+                "$bottom_button_panel": "hud.wysiwyg_reset_modal_cancel",
+                "$modal_text": "hudScreen.controlCustomization.resetModalText"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#reset_modal_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "layout_customization_close_without_saving": {
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/Black.png",
+          "fill": true,
+          "alpha": 0.5,
+          "layer": 50,
+          "controls": [
+            {
+              "layout_customization_close_without_saving_modal@common_dialogs.main_panel_two_buttons": {
+                "size": [
+                  210,
+                  160
+                ],
+                "$show_close_button": false,
+                "$child_control": "library_modal.modal_text_content",
+                "$top_button_panel": "hud.wysiwyg_close_without_saving_modal_ok",
+                "$bottom_button_panel": "hud.wysiwyg_close_without_saving_modal_cancel",
+                "$modal_text": "hudScreen.controlCustomization.closeWithoutSavingModalText"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#close_without_saving_modal_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "layout_customization_main_panel@hud.layout_customization_main_panel": {}
+      },
+      {
+        "layout_customization_sub_panel@hud.layout_customization_sub_panel": {}
+      },
+      {
+        "layout_customization_hint_drag_frame": {
+          "type": "image",
+          "layer": 40,
+          "use_anchored_offset": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "texture": "textures/ui/Black",
+          "size": [
+            "100%c+5px",
+            "100%c+2px"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "layout_customization_hint_drag": {
+                "type": "label",
+                "text": "hudScreen.controlCustomization.hintDrag",
+                "color": "$f_color_format"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hint_drag_visible",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#layout_customization_hint_offset_y",
+              "binding_name_override": "#anchored_offset_value_y",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      },
+      {
+        "layout_customization_hint_deselect_frame": {
+          "type": "image",
+          "layer": 40,
+          "use_anchored_offset": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "texture": "textures/ui/Black",
+          "size": [
+            "100%c+5px",
+            "100%c+2px"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "layout_customization_hint_deselect": {
+                "type": "label",
+                "text": "hudScreen.controlCustomization.hintDeselect",
+                "color": "$f_color_format"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hint_deselect_visible",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#layout_customization_hint_offset_y",
+              "binding_name_override": "#anchored_offset_value_y",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      },
+      {
+        "layout_customization_hint_saved": {
+          "type": "image",
+          "layer": 40,
+          "use_anchored_offset": true,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "property_bag": {
+            "#anchored_offset_value_y": 0.0
+          },
+          "texture": "textures/ui/Black",
+          "size": [
+            "100%c+5px",
+            "100%c+2px"
+          ],
+          "alpha": 0.5,
+          "controls": [
+            {
+              "layout_customization_hint_saved": {
+                "type": "label",
+                "text": "hudScreen.controlCustomization.hintSaved",
+                "color": "$f_color_format"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hint_saved_visible",
+              "binding_name_override": "#visible"
+            },
+            {
+              "binding_name": "#layout_customization_hint_offset_y",
+              "binding_name_override": "#anchored_offset_value_y",
+              "binding_condition": "visible"
+            }
+          ]
+        }
+      },
+      {
+        "left_helpers@$left_helpers": {}
+      },
+      {
+        "right_helpers@hud.right_helpers": {}
+      },
+      {
+        "subtitle_container_host": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "factory": {
+            "name": "subtitle_container_factory",
+            "max_children_size": 1,
+            "control_ids": {
+              "subtitle_container": "subtitle_container@hud.subtitle_container_content"
+            }
+          }
+        }
+      },
+      {
+        "emote_expediate_helpers@hud.emote_expediate_helpers": {}
+      },
+      //{ "centered_gui_elements@centered_gui_elements": {} },
+      {
+        "centered_gui_elements_at_bottom_middle@centered_gui_elements_at_bottom_middle": {}
+      },
+      {
+        "centered_gui_elements_at_bottom_middle_touch@centered_gui_elements_at_bottom_middle_touch": {}
+      },
+      {
+        "not_centered_gui_elements@not_centered_gui_elements": {}
+      },
+      {
+        "gamertag_label_for_splitscreen": {
+          "type": "label",
+          "size": [
+            "default",
+            "default"
+          ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [
+            -4,
+            4
+          ],
+          "color": "$hud_gamertag_color",
+          "text_alignment": "right",
+          "text": "#gamertag",
+          "bindings": [
+            {
+              "binding_name": "#gamertag"
+            }
+          ]
+        }
+      },
+      {
+        "exp_rend@exp_progress_bar_and_hotbar": {
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "bindings": [
+            {
+              "binding_name": "#hotbar_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "exp_rend_resizable@exp_progress_bar_and_hotbar_pocket": {
+          "bindings": [
+            {
+              "binding_name": "#hotbar_visible_not_centered_resizable",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "hud_tip_text_factory": {
+          "type": "factory",
+          "control_name": "@hud.hud_tip_text"
+        }
+      },
+      {
+        "hud_actionbar_text_area": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+              "hud_actionbar_text": "hud_actionbar_text@hud.hud_actionbar_text"
+            }
+          }
+        }
+      },
+      {
+        "hud_title_text_area": {
+          "type": "panel",
+          "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+              "hud_title_text": "hud_title_text@hud.hud_title_text"
+            }
+          }
+        }
+      },
+      {
+        "panel": {
+          "type": "panel",
+          "offset": [
+            0,
+            -5
+          ],
+          "size": [
+            "100%",
+            "75%"
+          ],
+          "controls": [
+            {
+              "mob_effects_renderer@mob_effects_renderer": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "offset": [
+                  0,
+                  -5
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#status_effects_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "vignette_rend@vignette_renderer": {}
+      },
+      {
+        "game_tip@game_tip.game_tip_factory": {}
+      },
+      {
+        "sidebar@scoreboard.scoreboard_sidebar": {
+          "ignored": "$pocket_screen",
+          "bindings": [
+            {
+              "binding_name": "#scoreboard_sidebar_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      // Version mobile (profil d'interface Pocket) : voir la fin de ui/scoreboards.json. $pocket_screen est la
+      // variable par laquelle le jeu choisit sa barre d'objets et ses ecrans de telephone : un seul des deux
+      // tableaux est cree, celui du bureau en profil Classic, celui-ci en profil Pocket.
+      {
+        "sidebar_pocket@scoreboard.scoreboard_sidebar_pocket": {
+          "ignored": "(not $pocket_screen)",
+          "bindings": [
+            {
+              "binding_name": "#scoreboard_sidebar_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "progress_rend@progress_indicator_renderer": {
+          "offset": [
+            "50%",
+            "50%"
+          ]
+        }
+      },
+      {
+        "chat_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "40%",
+            "100%"
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "controls": [
+            {
+              "paper_doll_padding": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  50
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#paper_doll_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "non_centered_gui_padding": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  32
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_visible_not_centered",
+                    "binding_name_override": "#visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            },
+            //{ "player_position@hud.player_position": {} },
+            //{ "number_of_days_played@hud.number_of_days_played": {} },
+            {
+              "game_tip@game_tip.game_tip_chat_stack_factory": {
+                "size": [
+                  "100%",
+                  "100%c"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "boss_health_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "boss_hud_padding": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  20
+                ],
+                "visible": "#boss_hud_padding",
+                //Make this visible to move the boss hud panel down
+                "bindings": [
+                  {
+                    "binding_name": "#boss_hud_padding",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "boss_hud_touch_padding": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "15%"
+                ],
+                "visible": "#boss_hud_touch_padding",
+                //Make this visible to move the boss hud panel down
+                "bindings": [
+                  {
+                    "binding_name": "#boss_hud_touch_padding",
+                    "binding_name_override": "#visible",
+                    "binding_condition": "always"
+                  }
+                ]
+              }
+            },
+            {
+              "boss_hud_panel": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "boss_health_grid@boss_health_grid": {
+                      "offset": [
+                        0,
+                        2
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "save_icon@hud.auto_save": {
+        }
+      }
+    ]
+  },
+
+  // Version mobile (profil d'interface Pocket) : la poupee du joueur que le jeu dessine en haut a gauche (15, 25)
+  // tomberait sur la case de position et sur le canal de tchat. Elle est retiree en profil Pocket, comme le pack la
+  // retire deja du bureau (centered_gui_elements, plus haut). En profil Classic ce controle reste celui du jeu.
+  "not_centered_gui_elements": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "hud_player_rend_pocket",
+        "value": [
+          {
+            "hud_player_rend_pocket@hud_player_renderer": {
+              "ignored": "$pocket_screen",
+              "offset": [ 15, 25 ],
+              "anchor_from": "top_left",
+              "anchor_to": "top_left"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_grid_item": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "chat_background",
+        "value": [
+          {
+            "chat_background": {
+              "type": "image",
+              "texture": "textures/ui/Black",
+              "alpha": 0.5,
+              "size": ["100%","100%cm + 4px"],
+              "anims": ["@hud.anim_chat_bg_wait"],
+              "controls": [
+                {
+                  "chat_text@chat_label": {
+                    "offset": [3,0],
+                    "$chat_font_scale_factor": 0.8
+                  }
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_name": "#chat_text",
+                  "binding_name_override": "#text",
+                  "binding_type": "collection",
+                  "binding_collection_name": "chat_text_grid",
+                  "binding_condition": "once"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((('%.6s' * #text) = '§b§r') or (('%.6s' * #text) = '§i§r') or (('%.6s' * #text) = '§a§r') or (('%.6s' * #text) = '§e§r') or (('%.6s' * #text) = '§s§r') or (('%.6s' * #text) = '§t§r')))",
+                  "target_property_name": "#visible",
+                  "binding_condition": "once"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not ((('%.6s' * #text) = '§b§r') or (('%.6s' * #text) = '§i§r') or (('%.6s' * #text) = '§a§r') or (('%.6s' * #text) = '§e§r') or (('%.6s' * #text) = '§s§r') or (('%.6s' * #text) = '§t§r')))",
+                  "target_property_name": "#enabled",
+                  "binding_condition": "once"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //
+  //                      Hotbar
+  //
+  // -----------------------------------------------
+  
+  "hotbar_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 22 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      { "hotbar_elipses_panel_left@hud.hotbar_elipses_panel_left_content": {} },
+      { "hotbar_grid@hud.hotbar_grid": {} },
+      { "hotbar_elipses_panel_right@hud.hotbar_elipses_panel_right_content": {} }
+  ]
+  },
+  "gui_hotbar_grid_item": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ 20, 22 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
+    "controls": [
+      { "hotbar_slot_selected_image@hotbar_slot_selected_image": {
+         "type": "image",
+          "texture": "textures/ui/selected_hotbar_slot",
+          "size": [ 24, 24 ],
+          "layer": 3,
+          "bindings": [
+            {
+              "binding_name": "#slot_selected",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$hotbar_collection_name"
+            }
+          ]
+      } },
+      { "hotbar_renderer@hotbar_renderer": {} },
+      {
+        "hotbar_parent": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            {
+              "item_icon@hotbar_hud_item_icon": {
+                "layer": 4,
+                "size": [ 16, 16 ]
+              }
+            },
+            {
+              "item_count@common.stack_count_label": {
+                "layer": 5,
+                "$item_collection_name": "$hotbar_collection_name",
+                "$stack_count_collection_name": "$hotbar_collection_name",
+                "bindings": [
+                  {
+                    "binding_name": "#inventory_stack_count",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$stack_count_collection_name"
+                  },
+                  {
+                    "binding_name": "#stack_count_visible",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$stack_count_collection_name"
+                  }
+                ]
+              }
+            },
+            { "hotbar_hint@edu_common.hotbar_hint": {} },
+            {
+              "item_dura@item_durability": {
+                "layer": 5
+              }
+            },
+            {
+              "item_store@item_storage": {
+                "layer": 5
+              }
+            },
+            {
+              "container_item_lock_overlay@hud.container_item_lock_overlay": {
+                "layer": 6,
+                "size": [ 16, 16 ]
+              }
+            }
+          ]
+        }
+      }, 
+      { "cooldown_renderer@cooldown_renderer": { "layer": 10 } },
+      { "hotbar_slot_button@gui_hotbar_slot_button_prototype": {} }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hotbar_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //
+  //             Notification
+  //
+  // -----------------------------------------------
+
+  "notification": {
+    "type": "panel",
+    "size": [144,"100%c"],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "controls": [
+
+      {"notification_panel@hud.notification_panel": {
+        "bindings": [
+            {
+              "binding_name": "#chat_text",
+              "binding_name_override": "#text",
+              "binding_type": "collection",
+              "binding_collection_name": "chat_text_grid",
+              "binding_condition": "once"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('%.6s' * #text) = '§b§r') or (('%.6s' * #text) = '§i§r') or (('%.6s' * #text) = '§a§r') or (('%.6s' * #text) = '§e§r') or (('%.6s' * #text) = '§s§r') or (('%.6s' * #text) = '§t§r'))",
+              "target_property_name": "#visible",
+              "binding_condition": "once"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((('%.6s' * #text) = '§b§r') or (('%.6s' * #text) = '§i§r') or (('%.6s' * #text) = '§a§r') or (('%.6s' * #text) = '§e§r') or (('%.6s' * #text) = '§s§r') or (('%.6s' * #text) = '§t§r'))",
+              "target_property_name": "#enabled",
+              "binding_condition": "once"
+            }
+      ]}}
+  ]},
+
+  "notification_panel": {
+    "type": "panel",
+    "size": ["100%", "100%c + 4px"],
+    "anims": ["@hud.notification_in"],
+    "controls": [
+
+      {"notification_background": {
+        "type": "image",
+        "size": ["100%", "100%c"],
+        "controls": [
+
+          {"panel": {
+            "type": "panel",
+            "size": ["100%", 30],
+            "controls": [
+
+              // Bandeau de NotifyMod (§t§r etiquette;§r titre;§r texte) : style basique, titre et texte.
+              {"toast@hud.toast_inside": {
+                "$content_background_color":[0.247, 0.247, 0.278],
+                "$outline_background_color":[0.353, 0.353, 0.392],
+
+                "$icon_outilne_background_color":[0.078, 0.078, 0.086],
+                "$icon_background_color":[0.122, 0.122, 0.137],
+
+                "$icon_texture":"ng_asset.icon_49",
+                "bindings": [
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§t§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§t§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+              ]}},
+
+              {"basique@hud.notification_inside": {
+                "$content_background_color":[0.247, 0.247, 0.278],
+                "$outline_background_color":[0.353, 0.353, 0.392],
+
+                "$icon_outilne_background_color":[0.078, 0.078, 0.086],
+                "$icon_background_color":[0.122, 0.122, 0.137],
+
+                "$icon_texture":"ng_asset.icon_49",
+                "bindings": [
+                  
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§b§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§b§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+
+              ]}},
+
+              {"information@hud.notification_inside": {
+                "$content_background_color":[0.200, 0.145, 0.682],
+                "$outline_background_color":[0.114, 0.086, 0.314],
+
+                "$icon_outilne_background_color":[0.200, 0.145, 0.682],
+                "$icon_background_color":[0.290, 0.212, 0.961],
+
+                "$icon_texture":"ng_asset.icon_48",
+                "$icon_color":[0.114, 0.086, 0.314],
+                "bindings": [
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§i§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§i§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+              ]}},
+
+              {"attention@hud.notification_inside": {
+                "$content_background_color":[0.447, 0.212, 0.082],
+                "$outline_background_color":[0.255, 0.102, 0.027],
+
+                "$icon_outilne_background_color":[0.671, 0.322, 0.071],
+                "$icon_background_color":[0.910, 0.596, 0.094],
+
+                "$icon_texture":"ng_asset.icon_47",
+                "$icon_color":[0.255, 0.102, 0.027],
+                "bindings": [
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§a§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§a§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+              ]}},
+
+              {"erreur@hud.notification_inside": {
+                "$content_background_color":[0.490, 0.122, 0.137],
+                "$outline_background_color":[0.267, 0.043, 0.051],
+
+                "$icon_outilne_background_color":[0.784, 0.031, 0.235],
+                "$icon_background_color":[1.000, 0.122, 0.294],
+                
+                "$icon_texture":"ng_asset.icon_50",
+                "$icon_color":[0.267, 0.043, 0.051],
+                "bindings": [
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§e§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§e§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+              ]}},
+
+              {"succes@hud.notification_inside": {
+                "$content_background_color":[0.067, 0.157, 0.043],
+                "$outline_background_color":[0.043, 0.114, 0.024],
+
+                "$icon_outilne_background_color":[0.486, 0.812, 0.000],
+                "$icon_background_color":[0.604, 0.902, 0.000],
+                
+                "$icon_texture":"ng_asset.icon_49",
+                "$icon_color":[0.090, 0.090, 0.090],
+                "bindings": [
+                  {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§s§r')", "target_property_name": "#visible", "binding_condition": "once"},
+                  {"binding_type": "view", "source_property_name": "(('%.6s' * #text) = '§s§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+              ]}},
+
+              // Banniere missile de RecubeICBM (icone dans ui/Interface/icbm/hud.json) : posee par-dessus le bandeau gris,
+              // pour les seuls bandeaux §t§r dont l'etiquette porte la marque §n§g§m§r ; meme titre et meme texte.
+              {"missile@hud.toast_inside": {"layer": 1000000010, "$content_background_color": [0.157, 0.188, 0.208], "$outline_background_color": [0.11, 0.133, 0.165], "$icon_outilne_background_color": [0.514, 0.165, 0.067], "$icon_background_color": [0.773, 0.255, 0.169], "$icon_texture": "icbm_hud.icon_missile", "$icon_color": [0.98, 0.98, 0.98], "bindings": [{"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"}, {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§m§r')", "target_property_name": "#visible", "binding_condition": "once"}, {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§m§r')", "target_property_name": "#enabled", "binding_condition": "once"}]}},
+
+              // Habillage des notifications du bestiaire (NGBestiaryResourcePack, ui/ngbestiary_hud.json). Il se
+              // montre lui-meme, pour les seuls bandeaux §t§r dont l'etiquette porte sa marque. Vide sans ce pack.
+              {"bestiary_toast@ngbestiary_hud.toast": {}}
+        ]}}
+        ],
+        "bindings": [
+            {
+              "binding_name": "#chat_text", 
+              "binding_name_override": "#text", 
+              "binding_type": "collection", 
+              "binding_collection_name": "chat_text_grid", 
+              "binding_condition": "once"
+          }
+      ]}}
+  ]},
+
+  "notification_inside": {
+    "type": "stack_panel",
+    "size": ["100%","100%"],
+    "orientation": "horizontal",
+    "$icon_color|default": "white",
+    "controls": [
+
+      {"icon@ng_asset.background_white": {
+        "color":"$icon_outilne_background_color",
+        "size": [30,"100%"],
+        "controls": [
+
+            {"icon@ng_asset.background_white": {
+              "color":"$icon_background_color",
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "size": ["100% - 1px","100% - 2px"],
+              "controls": [
+
+                {"icon_texture@$icon_texture":{
+                  "color":"$icon_color",
+                  "size":[18,18]
+                }}
+            ]}}
+      ]}},
+
+      {"content@ng_asset.background_white": {
+        "color":"$outline_background_color",
+        "size": ["fill","100%"],
+        "controls": [
+
+            {"content@ng_asset.background_white": {
+              "color": "$content_background_color",
+              "layer":1,
+              "size": ["100% - 2px","100% - 2px"],
+              "controls": [
+
+                  {"stackpanel@ng_module.stackpanel":{
+                    "offset":[0,-1],
+                    "size":["100% - 10px","100%c"],
+                    "controls":[
+
+                        {"title_label": {
+                          "type": "label",
+                          "text": "#text2",
+                          "max_size":["100%",10],
+                          "font_type": "MinecraftTen",
+                          "font_scale_factor": 0.86,
+                          "layer": 1000000000,
+                          "color": "white",
+                          "property_bag": {
+                            "#search": 0,
+                            "#search_2": 0,
+                            "#tail": "",
+                            "#separator": ";"
+                          },
+                          "bindings": [
+                              {
+                                "binding_collection_name": "chat_text_grid",
+                                "binding_condition": "once",
+                                "binding_name_override": "#text",
+                                "binding_name": "#chat_text",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+                                "target_property_name": "#search"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - (('%.'+#search+'s') * #text))",
+                                "target_property_name": "#tail"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #tail = #tail) and (('%.'+#search_2+'s') * #tail = ('%.'+#search_2+'s') * #tail - #separator) ))",
+                                "target_property_name": "#search_2"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((('%.'+#search_2+'s') * #tail) - #separator)",
+                                "target_property_name": "#text2"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - '§o')",
+                                "target_property_name": "#display_text"
+                              }
+                            ]
+                        }},
+
+                        {"padding@ng_module.panel": {
+                          "size": ["100%", 1]
+                        }},
+
+                        {"content": {
+                            "type": "label",
+                            "text": "#text",
+                            "font_scale_factor": 0.6,
+                            "layer": 1000000,
+                            "max_size":["100%",14],
+                            "property_bag": {
+                              "#search": 0,
+                              "#separator": ";"
+                            },
+                            "bindings": [
+                              {
+                                "binding_collection_name": "chat_text_grid",
+                                "binding_condition": "once",
+                                "binding_name_override": "#text",
+                                "binding_name": "#chat_text",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+                                "target_property_name": "#search"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((('%.'+#search+'s') * #text) - #separator)",
+                                "target_property_name": "#text"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - '§o')",
+                                "target_property_name": "#display_text"
+                              }
+                            ]
+                        }}
+                  ]}}
+            ]}}
+      ]}}
+  ]},
+
+  // Comme notification_inside, mais le texte est le 3e champ : etiquette;titre;texte des bandeaux de NotifyMod.
+  "toast_inside": {
+    "type": "stack_panel",
+    "size": ["100%","100%"],
+    "orientation": "horizontal",
+    "$icon_color|default": "white",
+    "controls": [
+
+      {"icon@ng_asset.background_white": {
+        "color":"$icon_outilne_background_color",
+        "size": [30,"100%"],
+        "controls": [
+
+            {"icon@ng_asset.background_white": {
+              "color":"$icon_background_color",
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "size": ["100% - 1px","100% - 2px"],
+              "controls": [
+
+                {"icon_texture@$icon_texture":{
+                  "color":"$icon_color",
+                  "size":[18,18]
+                }}
+            ]}}
+      ]}},
+
+      {"content@ng_asset.background_white": {
+        "color":"$outline_background_color",
+        "size": ["fill","100%"],
+        "controls": [
+
+            {"content@ng_asset.background_white": {
+              "color": "$content_background_color",
+              "layer":1,
+              "size": ["100% - 2px","100% - 2px"],
+              "controls": [
+
+                  {"stackpanel@ng_module.stackpanel":{
+                    "offset":[0,-1],
+                    "size":["100% - 10px","100%c"],
+                    "controls":[
+
+                        {"title_label": {
+                          "type": "label",
+                          "text": "#text2",
+                          "max_size":["100%",10],
+                          "font_type": "MinecraftTen",
+                          "font_scale_factor": 0.86,
+                          "layer": 1000000000,
+                          "color": "white",
+                          "property_bag": {
+                            "#search": 0,
+                            "#search_2": 0,
+                            "#tail": "",
+                            "#separator": ";"
+                          },
+                          "bindings": [
+                              {
+                                "binding_collection_name": "chat_text_grid",
+                                "binding_condition": "once",
+                                "binding_name_override": "#text",
+                                "binding_name": "#chat_text",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+                                "target_property_name": "#search"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - (('%.'+#search+'s') * #text))",
+                                "target_property_name": "#tail"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #tail = #tail) and (('%.'+#search_2+'s') * #tail = ('%.'+#search_2+'s') * #tail - #separator) ))",
+                                "target_property_name": "#search_2"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((('%.'+#search_2+'s') * #tail) - #separator)",
+                                "target_property_name": "#text2"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - '§o')",
+                                "target_property_name": "#display_text"
+                              }
+                            ]
+                        }},
+
+                        {"padding@ng_module.panel": {
+                          "size": ["100%", 1]
+                        }},
+
+                        {"content": {
+                            "type": "label",
+                            "text": "#text3",
+                            "font_scale_factor": 0.6,
+                            "layer": 1000000,
+                            "max_size":["100%",14],
+                            "property_bag": {
+                              "#search": 0,
+                              "#search_2": 0,
+                              "#tail": "",
+                              "#text3": "",
+                              "#separator": ";"
+                            },
+                            "bindings": [
+                              {
+                                "binding_collection_name": "chat_text_grid",
+                                "binding_condition": "once",
+                                "binding_name_override": "#text",
+                                "binding_name": "#chat_text",
+                                "binding_type": "collection"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+                                "target_property_name": "#search"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - (('%.'+#search+'s') * #text))",
+                                "target_property_name": "#tail"
+                              },
+                              {
+                                "binding_condition": "always",
+                                "binding_type": "view",
+                                "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #tail = #tail) and (('%.'+#search_2+'s') * #tail = ('%.'+#search_2+'s') * #tail - #separator) ))",
+                                "target_property_name": "#search_2"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#tail - (('%.'+#search_2+'s') * #tail))",
+                                "target_property_name": "#text3"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(#text - '§o')",
+                                "target_property_name": "#display_text"
+                              }
+                            ]
+                        }}
+                  ]}}
+            ]}}
+      ]}}
+  ]},
+
+  "notification_in": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": 0.25,
+    "from": [288,
+      -3
+    ],
+    "to": [
+      -5,
+      -3
+    ],
+    "next": "@hud.notification_wait"
+  },
+  "notification_wait": {
+    "anim_type": "wait",
+    "duration": 5,
+    "next": "@hud.notification_out"
+  },
+  "notification_out": {
+    "anim_type": "offset",
+    "easing": "in_cubic",
+    "duration": 0.25,
+    "from": [-5,-3],
+    "to": [288,-3],
+    "destroy_at_end": "chat_grid_item"
+  }
+}

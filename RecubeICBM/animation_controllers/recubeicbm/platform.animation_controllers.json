@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.recubeicbm.platform": {
+      "initial_state": "rest",
+      "states": {
+        "rest": {
+          "animations": [
+            "default"
+          ],
+          "transitions": [
+            {
+              "deployed": "q.variant > 0 && q.life_time < 1.0"
+            },
+            {
+              "deploying": "q.variant > 0"
+            }
+          ]
+        },
+        "deploying": {
+          "animations": [
+            "rocket"
+          ],
+          "transitions": [
+            {
+              "retracting": "q.variant <= 0"
+            }
+          ]
+        },
+        "deployed": {
+          "animations": [
+            "deployed"
+          ],
+          "transitions": [
+            {
+              "retracting": "q.variant <= 0"
+            }
+          ]
+        },
+        "retracting": {
+          "animations": [
+            "rocket_off"
+          ],
+          "transitions": [
+            {
+              "deploying": "q.variant > 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

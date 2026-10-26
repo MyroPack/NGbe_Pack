@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_storage_module": {
+      "arrays": {
+        "textures": {
+          "array.fill": [
+            "Texture.level_1",
+            "Texture.level_2",
+            "Texture.level_3",
+            "Texture.level_4",
+            "Texture.level_5"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.fill[math.clamp(query.variant, 0, 4)]"
+      ]
+    }
+  }
+}

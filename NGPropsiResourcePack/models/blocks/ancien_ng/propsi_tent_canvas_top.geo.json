@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_tent_canvas_top",
+				"texture_width": 32,
+				"texture_height": 32
+			},
+			"bones": [
+				{
+					"name": "group2",
+					"pivot": [9.4553, 25.5584, -2.667],
+					"cubes": [
+						{
+							"origin": [-8, 15.9986, -8],
+							"size": [16, 0, 16],
+							"uv": {
+								"up": {
+									"uv": [17.0, 17.0],
+									"uv_size": [-16.0, -16.0]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

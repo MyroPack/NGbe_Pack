@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:squirrel",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/squirrel_0",
+        "v1": "textures/entity/ngb/squirrel_1",
+        "v2": "textures/entity/ngb/squirrel_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.squirrel"
+      },
+      "animations": {
+        "idle": "animation.ng.squirrel.idle",
+        "move": "animation.ng.squirrel.move",
+        "controller": "controller.animation.ng.squirrel.move",
+        "look": "animation.ng.squirrel.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.squirrel"
+      ],
+      "spawn_egg": {
+        "base_color": "#ac5d34",
+        "overlay_color": "#9a4d2a"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:dolphin_baby",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/dolphin_baby_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.dolphin_baby"
+      },
+      "animations": {
+        "idle": "animation.ng.dolphin.idle",
+        "move": "animation.ng.dolphin.move",
+        "controller": "controller.animation.ng.dolphin_baby.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.dolphin_baby"
+      ],
+      "spawn_egg": {
+        "base_color": "#a6bacc",
+        "overlay_color": "#b0c4d9"
+      }
+    }
+  }
+}

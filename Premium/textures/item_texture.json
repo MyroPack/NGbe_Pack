@@ -1,0 +1,18 @@
+{
+	"resource_pack_name": "ResourcePackTemplate",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"ng_lootbox_classique": {"textures": "textures/items/lootbox/lootbox_classique"},
+		"ng_lootbox_nuke": {"textures": "textures/items/lootbox/lootbox_nuke"},
+		"ng_lootbox_legendaire": {"textures": "textures/items/lootbox/lootbox_legendaire"},
+		"ng_lootbox_ultimate": {"textures": "textures/items/lootbox/lootbox_ultimate"},
+		"ng_lootbox_megalodon": {"textures": "textures/items/lootbox/lootbox_megalodon"},
+		"ngpremium_app_button": {"textures": "textures/items/app_button"},
+		"power_potion": {
+			"textures": "textures/items/power_potion"
+		},
+		"money": {
+			"textures": "textures/items/money"
+		}
+	}
+}

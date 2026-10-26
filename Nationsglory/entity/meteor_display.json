@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:meteor_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"terrestre": "textures/entity/meteor/terrestre",
+				"volcan": "textures/entity/meteor/volcan",
+				"lune": "textures/entity/meteor/lune"
+			},
+			"geometry": {
+				"default": "geometry.meteor_display"
+			},
+			"render_controllers": [
+				"controller.render.ng_meteor_display"
+			],
+			"animations": {
+				"idle": "animation.ng_meteor_display.idle"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			}
+		}
+	}
+}

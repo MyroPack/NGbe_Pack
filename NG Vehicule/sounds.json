@@ -1,0 +1,183 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"nationsglory:cat_mount": {
+				"events": {
+					"ambient": "mob.cat.straymeow",
+					"ambient.tame": "mob.cat.meow",
+					"death": {
+						"pitch": 0.9,
+						"sound": "mob.cat.hit",
+						"volume": 0.5
+					},
+					"eat": "mob.cat.eat",
+					"hurt": {
+						"sound": "mob.cat.hit",
+						"volume": 0.45
+					},
+					"purr": "mob.cat.purr",
+					"purreow": "mob.cat.purreow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"nationsglory:frog_mount": {
+				"events": {
+					"ambient": "mob.frog.ambient",
+					"ambient.baby": {
+						"pitch": 1.2,
+						"sound": "mob.frog.ambient",
+						"volume": 2.5
+					},
+					"death": "mob.frog.death",
+					"eat": "mob.frog.eat",
+					"hurt": "mob.frog.hurt",
+					"jump_to_block": "mob.frog.jump_to_block",
+					"step": "mob.frog.step"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"nationsglory:chicken_mount": {
+				"events": {
+					"ambient": "mob.chicken.say",
+					"death": "mob.chicken.hurt",
+					"hurt": "mob.chicken.hurt",
+					"plop": "mob.chicken.plop",
+					"step": {
+						"pitch": 1,
+						"sound": "mob.chicken.step",
+						"volume": 0.25
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"nationsglory:llama_mount": {
+				"events": {
+					"add.chest": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.horse.armor",
+						"volume": 1
+					},
+					"ambient": "mob.llama.idle",
+					"armor": {
+						"pitch": 1,
+						"sound": "mob.llama.swag",
+						"volume": 0.5
+					},
+					"death": "mob.llama.death",
+					"eat": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.llama.eat",
+						"volume": [
+							0.5,
+							1.5
+						]
+					},
+					"hurt": "mob.llama.hurt",
+					"mad": "mob.llama.angry",
+					"shoot": "mob.llama.spit",
+					"step": {
+						"pitch": 1,
+						"sound": "mob.llama.step",
+						"volume": 0.15
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 0.8
+			},
+			"nationsglory:phantom_edora_mount": {
+				"events": {
+					"ambient": "mob.phantom.idle",
+					"attack": "mob.phantom.bite",
+					"death": "mob.phantom.death",
+					"flap": "mob.phantom.flap",
+					"hurt": "mob.phantom.hurt",
+					"swoop": {
+						"pitch": [
+							0.95,
+							1.05
+						],
+						"sound": "mob.phantom.swoop"
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 10
+			},
+			"nationsglory:neblion_mount": {
+				"events": {
+					"ambient": "mob.pig.say",
+					"boost": {
+						"pitch": 1,
+						"sound": "mob.pig.boost",
+						"volume": 1
+					},
+					"death": "mob.pig.death",
+					"death.to.zombie": {
+						"sound": "mob.pig.death",
+						"volume": 2
+					},
+					"hurt": "mob.pig.say",
+					"step": {
+						"pitch": 1,
+						"sound": "mob.pig.step",
+						"volume": 0.2
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"nationsglory:pig_mount": {
+				"events": {
+					"ambient": "mob.pig.say",
+					"boost": {
+						"pitch": 1,
+						"sound": "mob.pig.boost",
+						"volume": 1
+					},
+					"death": "mob.pig.death",
+					"death.to.zombie": {
+						"sound": "mob.pig.death",
+						"volume": 2
+					},
+					"hurt": "mob.pig.say",
+					"step": {
+						"pitch": 1,
+						"sound": "mob.pig.step",
+						"volume": 0.2
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			}
+		}
+	}
+}

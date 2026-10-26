@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:fuel_loader_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/fuel_loader"
+      },
+      "geometry": {
+        "default": "geometry.ng_fuel_loader"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

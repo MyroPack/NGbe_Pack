@@ -1,0 +1,56 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:rocket",
+      "render_controllers": [
+        "controller.render.item_default"
+      ],
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/entity/rocket",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.ng_rocket_held"
+      },
+      "animations": {
+        "anim_1": "animation.fuse.new",
+        "anim_2": "animation.fuse.new2",
+        "anim_3": "animation.fuse.start",
+        "anim_4": "animation.fuse.fly",
+        "anim_5": "animation.fuse.off",
+        "first_person_hold": "animation.fuse.first_person_hold",
+        "third_person_hold": "animation.fuse.third_person_hold"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "anim_1": "q.variant == 0"
+          },
+          {
+            "anim_2": "q.variant == 1"
+          },
+          {
+            "anim_3": "q.variant == 2"
+          },
+          {
+            "anim_4": "q.variant == 3"
+          },
+          {
+            "anim_5": "q.variant == 4"
+          },
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          }
+        ]
+      }
+    }
+  }
+}

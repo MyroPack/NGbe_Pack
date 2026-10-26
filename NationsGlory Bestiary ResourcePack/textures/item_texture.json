@@ -1,0 +1,468 @@
+{
+  "resource_pack_name": "ngbestiary",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "ngb_egg_elephant": {
+      "textures": "textures/items/ngb/egg_elephant"
+    },
+    "ngb_egg_baby_elephant": {
+      "textures": "textures/items/ngb/egg_baby_elephant"
+    },
+    "ngb_egg_lion": {
+      "textures": "textures/items/ngb/egg_lion"
+    },
+    "ngb_egg_baby_lion": {
+      "textures": "textures/items/ngb/egg_baby_lion"
+    },
+    "ngb_egg_fennec": {
+      "textures": "textures/items/ngb/egg_fennec"
+    },
+    "ngb_egg_alligator": {
+      "textures": "textures/items/ngb/egg_alligator"
+    },
+    "ngb_egg_baby_alligator": {
+      "textures": "textures/items/ngb/egg_baby_alligator"
+    },
+    "ngb_egg_antelope": {
+      "textures": "textures/items/ngb/egg_antelope"
+    },
+    "ngb_egg_baby_antelope": {
+      "textures": "textures/items/ngb/egg_baby_antelope"
+    },
+    "ngb_egg_armadillo": {
+      "textures": "textures/items/ngb/egg_armadillo"
+    },
+    "ngb_egg_baby_armadillo": {
+      "textures": "textures/items/ngb/egg_baby_armadillo"
+    },
+    "ngb_egg_bear": {
+      "textures": "textures/items/ngb/egg_bear"
+    },
+    "ngb_egg_baby_bear": {
+      "textures": "textures/items/ngb/egg_baby_bear"
+    },
+    "ngb_egg_bison": {
+      "textures": "textures/items/ngb/egg_bison"
+    },
+    "ngb_egg_baby_bison": {
+      "textures": "textures/items/ngb/egg_baby_bison"
+    },
+    "ngb_egg_black_rhino": {
+      "textures": "textures/items/ngb/egg_black_rhino"
+    },
+    "ngb_egg_boar": {
+      "textures": "textures/items/ngb/egg_boar"
+    },
+    "ngb_egg_baby_boar": {
+      "textures": "textures/items/ngb/egg_baby_boar"
+    },
+    "ngb_egg_capybara": {
+      "textures": "textures/items/ngb/egg_capybara"
+    },
+    "ngb_egg_cat": {
+      "textures": "textures/items/ngb/egg_cat"
+    },
+    "ngb_egg_cat_baby": {
+      "textures": "textures/items/ngb/egg_cat_baby"
+    },
+    "ngb_egg_chicken": {
+      "textures": "textures/items/ngb/egg_chicken"
+    },
+    "ngb_egg_baby_chicken": {
+      "textures": "textures/items/ngb/egg_baby_chicken"
+    },
+    "ngb_egg_cow": {
+      "textures": "textures/items/ngb/egg_cow"
+    },
+    "ngb_egg_baby_cow": {
+      "textures": "textures/items/ngb/egg_baby_cow"
+    },
+    "ngb_egg_deer": {
+      "textures": "textures/items/ngb/egg_deer"
+    },
+    "ngb_egg_baby_deer": {
+      "textures": "textures/items/ngb/egg_baby_deer"
+    },
+    "ngb_egg_donkey": {
+      "textures": "textures/items/ngb/egg_donkey"
+    },
+    "ngb_egg_baby_donkey": {
+      "textures": "textures/items/ngb/egg_baby_donkey"
+    },
+    "ngb_egg_dromedary": {
+      "textures": "textures/items/ngb/egg_dromedary"
+    },
+    "ngb_egg_baby_dromedary": {
+      "textures": "textures/items/ngb/egg_baby_dromedary"
+    },
+    "ngb_egg_duck": {
+      "textures": "textures/items/ngb/egg_duck"
+    },
+    "ngb_egg_baby_duck": {
+      "textures": "textures/items/ngb/egg_baby_duck"
+    },
+    "ngb_egg_flamingo": {
+      "textures": "textures/items/ngb/egg_flamingo"
+    },
+    "ngb_egg_fox": {
+      "textures": "textures/items/ngb/egg_fox"
+    },
+    "ngb_egg_baby_fox": {
+      "textures": "textures/items/ngb/egg_baby_fox"
+    },
+    "ngb_egg_giraffe": {
+      "textures": "textures/items/ngb/egg_giraffe"
+    },
+    "ngb_egg_baby_giraffe": {
+      "textures": "textures/items/ngb/egg_baby_giraffe"
+    },
+    "ngb_egg_goat": {
+      "textures": "textures/items/ngb/egg_goat"
+    },
+    "ngb_egg_goat_baby": {
+      "textures": "textures/items/ngb/egg_goat_baby"
+    },
+    "ngb_egg_hippo": {
+      "textures": "textures/items/ngb/egg_hippo"
+    },
+    "ngb_egg_baby_hippo": {
+      "textures": "textures/items/ngb/egg_baby_hippo"
+    },
+    "ngb_egg_horse": {
+      "textures": "textures/items/ngb/egg_horse"
+    },
+    "ngb_egg_horse_baby": {
+      "textures": "textures/items/ngb/egg_horse_baby"
+    },
+    "ngb_egg_ibex": {
+      "textures": "textures/items/ngb/egg_ibex"
+    },
+    "ngb_egg_javan_rhino": {
+      "textures": "textures/items/ngb/egg_javan_rhino"
+    },
+    "ngb_egg_koala": {
+      "textures": "textures/items/ngb/egg_koala"
+    },
+    "ngb_egg_meerkat": {
+      "textures": "textures/items/ngb/egg_meerkat"
+    },
+    "ngb_egg_monkey": {
+      "textures": "textures/items/ngb/egg_monkey"
+    },
+    "ngb_egg_panda": {
+      "textures": "textures/items/ngb/egg_panda"
+    },
+    "ngb_egg_baby_panda": {
+      "textures": "textures/items/ngb/egg_baby_panda"
+    },
+    "ngb_egg_panther": {
+      "textures": "textures/items/ngb/egg_panther"
+    },
+    "ngb_egg_baby_panther": {
+      "textures": "textures/items/ngb/egg_baby_panther"
+    },
+    "ngb_egg_penguin2": {
+      "textures": "textures/items/ngb/egg_penguin2"
+    },
+    "ngb_egg_baby_penguin": {
+      "textures": "textures/items/ngb/egg_baby_penguin"
+    },
+    "ngb_egg_pig": {
+      "textures": "textures/items/ngb/egg_pig"
+    },
+    "ngb_egg_baby_pig": {
+      "textures": "textures/items/ngb/egg_baby_pig"
+    },
+    "ngb_egg_rabbit": {
+      "textures": "textures/items/ngb/egg_rabbit"
+    },
+    "ngb_egg_baby_rabbit": {
+      "textures": "textures/items/ngb/egg_baby_rabbit"
+    },
+    "ngb_egg_raccoon": {
+      "textures": "textures/items/ngb/egg_raccoon"
+    },
+    "ngb_egg_red_panda": {
+      "textures": "textures/items/ngb/egg_red_panda"
+    },
+    "ngb_egg_reindeer": {
+      "textures": "textures/items/ngb/egg_reindeer"
+    },
+    "ngb_egg_seal": {
+      "textures": "textures/items/ngb/egg_seal"
+    },
+    "ngb_egg_baby_seal": {
+      "textures": "textures/items/ngb/egg_baby_seal"
+    },
+    "ngb_egg_sheep": {
+      "textures": "textures/items/ngb/egg_sheep"
+    },
+    "ngb_egg_sheep_baby": {
+      "textures": "textures/items/ngb/egg_sheep_baby"
+    },
+    "ngb_egg_snapping_turtle": {
+      "textures": "textures/items/ngb/egg_snapping_turtle"
+    },
+    "ngb_egg_squirrel": {
+      "textures": "textures/items/ngb/egg_squirrel"
+    },
+    "ngb_egg_tiger": {
+      "textures": "textures/items/ngb/egg_tiger"
+    },
+    "ngb_egg_baby_tiger": {
+      "textures": "textures/items/ngb/egg_baby_tiger"
+    },
+    "ngb_egg_wolf": {
+      "textures": "textures/items/ngb/egg_wolf"
+    },
+    "ngb_egg_wolf_baby": {
+      "textures": "textures/items/ngb/egg_wolf_baby"
+    },
+    "ngb_egg_wolf_red": {
+      "textures": "textures/items/ngb/egg_wolf_red"
+    },
+    "ngb_egg_zebra": {
+      "textures": "textures/items/ngb/egg_zebra"
+    },
+    "ngb_egg_parrot": {
+      "textures": "textures/items/ngb/egg_parrot"
+    },
+    "ngb_egg_bat": {
+      "textures": "textures/items/ngb/egg_bat"
+    },
+    "ngb_egg_eagle": {
+      "textures": "textures/items/ngb/egg_eagle"
+    },
+    "ngb_egg_owl": {
+      "textures": "textures/items/ngb/egg_owl"
+    },
+    "ngb_egg_toucan": {
+      "textures": "textures/items/ngb/egg_toucan"
+    },
+    "ngb_egg_dolphin": {
+      "textures": "textures/items/ngb/egg_dolphin"
+    },
+    "ngb_egg_dolphin_baby": {
+      "textures": "textures/items/ngb/egg_dolphin_baby"
+    },
+    "ngb_egg_orca": {
+      "textures": "textures/items/ngb/egg_orca"
+    },
+    "ngb_egg_shark": {
+      "textures": "textures/items/ngb/egg_shark"
+    },
+    "ngb_egg_manta_ray": {
+      "textures": "textures/items/ngb/egg_manta_ray"
+    },
+    "ngb_egg_sea_turtle": {
+      "textures": "textures/items/ngb/egg_sea_turtle"
+    },
+    "ngb_egg_baby_sea_turtle": {
+      "textures": "textures/items/ngb/egg_baby_sea_turtle"
+    },
+    "ngb_egg_fish_piranha": {
+      "textures": "textures/items/ngb/egg_fish_piranha"
+    },
+    "ngb_egg_jellyfish_earth": {
+      "textures": "textures/items/ngb/egg_jellyfish_earth"
+    },
+    "ngb_egg_seahorse": {
+      "textures": "textures/items/ngb/egg_seahorse"
+    },
+    "ngb_egg_squid": {
+      "textures": "textures/items/ngb/egg_squid"
+    },
+    "ngb_egg_ant": {
+      "textures": "textures/items/ngb/egg_ant"
+    },
+    "ngb_egg_bee": {
+      "textures": "textures/items/ngb/egg_bee"
+    },
+    "ngb_egg_chameleon": {
+      "textures": "textures/items/ngb/egg_chameleon"
+    },
+    "ngb_egg_crab": {
+      "textures": "textures/items/ngb/egg_crab"
+    },
+    "ngb_egg_firefly": {
+      "textures": "textures/items/ngb/egg_firefly"
+    },
+    "ngb_egg_frog": {
+      "textures": "textures/items/ngb/egg_frog"
+    },
+    "ngb_egg_hedgehog": {
+      "textures": "textures/items/ngb/egg_hedgehog"
+    },
+    "ngb_egg_mosquito": {
+      "textures": "textures/items/ngb/egg_mosquito"
+    },
+    "ngb_egg_scorpio": {
+      "textures": "textures/items/ngb/egg_scorpio"
+    },
+    "ngb_egg_snake": {
+      "textures": "textures/items/ngb/egg_snake"
+    },
+    "ngb_egg_spider": {
+      "textures": "textures/items/ngb/egg_spider"
+    },
+    "ngb_egg_creeper_autel": {
+      "textures": "textures/items/ngb/egg_creeper_autel"
+    },
+    "ngb_egg_creeper_mushroom_blue": {
+      "textures": "textures/items/ngb/egg_creeper_mushroom_blue"
+    },
+    "ngb_egg_edora_spider": {
+      "textures": "textures/items/ngb/egg_edora_spider"
+    },
+    "ngb_egg_enderman_snow": {
+      "textures": "textures/items/ngb/egg_enderman_snow"
+    },
+    "ngb_egg_frozenglowsquid": {
+      "textures": "textures/items/ngb/egg_frozenglowsquid"
+    },
+    "ngb_egg_glare": {
+      "textures": "textures/items/ngb/egg_glare"
+    },
+    "ngb_egg_jellyfish": {
+      "textures": "textures/items/ngb/egg_jellyfish"
+    },
+    "ngb_egg_mushroom_blue": {
+      "textures": "textures/items/ngb/egg_mushroom_blue"
+    },
+    "ngb_egg_neblion": {
+      "textures": "textures/items/ngb/egg_neblion"
+    },
+    "ngb_egg_phantom_hawk": {
+      "textures": "textures/items/ngb/egg_phantom_hawk"
+    },
+    "ngb_egg_phantom_reaper": {
+      "textures": "textures/items/ngb/egg_phantom_reaper"
+    },
+    "ngb_egg_florender": {
+      "textures": "textures/items/ngb/egg_florender"
+    },
+    "ngb_egg_zombie_pigman": {
+      "textures": "textures/items/ngb/egg_zombie_pigman"
+    },
+    "ngb_egg_moon_droid_bastion": {
+      "textures": "textures/items/ngb/egg_moon_droid_bastion"
+    },
+    "ngb_egg_moon_droid_blade": {
+      "textures": "textures/items/ngb/egg_moon_droid_blade"
+    },
+    "ngb_egg_moon_droid_cannon": {
+      "textures": "textures/items/ngb/egg_moon_droid_cannon"
+    },
+    "ngb_egg_moon_droid_relay": {
+      "textures": "textures/items/ngb/egg_moon_droid_relay"
+    },
+    "ngb_egg_megalodon": {
+      "textures": "textures/items/ngb/egg_megalodon"
+    },
+    "ngb_egg_moon_droid_megaboss": {
+      "textures": "textures/items/ngb/egg_moon_droid_megaboss"
+    },
+    "ngb_egg_voriack": {
+      "textures": "textures/items/ngb/egg_voriack"
+    },
+    "ngb_egg_village_aurelions_archer": {
+      "textures": "textures/items/ngb/egg_village_aurelions_archer"
+    },
+    "ngb_egg_village_aurelions_merchant": {
+      "textures": "textures/items/ngb/egg_village_aurelions_merchant"
+    },
+    "ngb_egg_village_aurelions_officer": {
+      "textures": "textures/items/ngb/egg_village_aurelions_officer"
+    },
+    "ngb_egg_village_aurelions_soldier": {
+      "textures": "textures/items/ngb/egg_village_aurelions_soldier"
+    },
+    "ngb_egg_village_aurelions_tamer": {
+      "textures": "textures/items/ngb/egg_village_aurelions_tamer"
+    },
+    "ngb_egg_village_noctembruns_archer": {
+      "textures": "textures/items/ngb/egg_village_noctembruns_archer"
+    },
+    "ngb_egg_village_noctembruns_merchant": {
+      "textures": "textures/items/ngb/egg_village_noctembruns_merchant"
+    },
+    "ngb_egg_village_noctembruns_officer": {
+      "textures": "textures/items/ngb/egg_village_noctembruns_officer"
+    },
+    "ngb_egg_village_noctembruns_soldier": {
+      "textures": "textures/items/ngb/egg_village_noctembruns_soldier"
+    },
+    "ngb_egg_village_noctembruns_tamer": {
+      "textures": "textures/items/ngb/egg_village_noctembruns_tamer"
+    },
+    "ngb_egg_village_skjornars_archer": {
+      "textures": "textures/items/ngb/egg_village_skjornars_archer"
+    },
+    "ngb_egg_village_skjornars_merchant": {
+      "textures": "textures/items/ngb/egg_village_skjornars_merchant"
+    },
+    "ngb_egg_village_skjornars_officer": {
+      "textures": "textures/items/ngb/egg_village_skjornars_officer"
+    },
+    "ngb_egg_village_skjornars_soldier": {
+      "textures": "textures/items/ngb/egg_village_skjornars_soldier"
+    },
+    "ngb_egg_village_skjornars_tamer": {
+      "textures": "textures/items/ngb/egg_village_skjornars_tamer"
+    },
+    "ngb_egg_village_skjornars_villager": {
+      "textures": "textures/items/ngb/egg_village_skjornars_villager"
+    },
+    "ngb_egg_village_solkhars_archer": {
+      "textures": "textures/items/ngb/egg_village_solkhars_archer"
+    },
+    "ngb_egg_village_solkhars_merchant": {
+      "textures": "textures/items/ngb/egg_village_solkhars_merchant"
+    },
+    "ngb_egg_village_solkhars_officer": {
+      "textures": "textures/items/ngb/egg_village_solkhars_officer"
+    },
+    "ngb_egg_village_solkhars_soldier": {
+      "textures": "textures/items/ngb/egg_village_solkhars_soldier"
+    },
+    "ngb_egg_village_solkhars_tamer": {
+      "textures": "textures/items/ngb/egg_village_solkhars_tamer"
+    },
+    "ngb_egg_village_sylvaris_archer": {
+      "textures": "textures/items/ngb/egg_village_sylvaris_archer"
+    },
+    "ngb_egg_village_sylvaris_merchant": {
+      "textures": "textures/items/ngb/egg_village_sylvaris_merchant"
+    },
+    "ngb_egg_village_sylvaris_officer": {
+      "textures": "textures/items/ngb/egg_village_sylvaris_officer"
+    },
+    "ngb_egg_village_sylvaris_soldier": {
+      "textures": "textures/items/ngb/egg_village_sylvaris_soldier"
+    },
+    "ngb_egg_village_sylvaris_tamer": {
+      "textures": "textures/items/ngb/egg_village_sylvaris_tamer"
+    },
+    "ngb_egg_village_terrakins_archer": {
+      "textures": "textures/items/ngb/egg_village_terrakins_archer"
+    },
+    "ngb_egg_village_terrakins_merchant": {
+      "textures": "textures/items/ngb/egg_village_terrakins_merchant"
+    },
+    "ngb_egg_village_terrakins_officer": {
+      "textures": "textures/items/ngb/egg_village_terrakins_officer"
+    },
+    "ngb_egg_village_terrakins_soldier": {
+      "textures": "textures/items/ngb/egg_village_terrakins_soldier"
+    },
+    "ngb_egg_village_terrakins_tamer": {
+      "textures": "textures/items/ngb/egg_village_terrakins_tamer"
+    },
+    "ngb_camera": {
+      "textures": "textures/items/ngb/camera"
+    },
+    "ngb_bestiary_book": {
+      "textures": "textures/items/ngb/bestiary_book"
+    }
+  }
+}

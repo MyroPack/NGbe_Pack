@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:cat_baby",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/cat_baby_0",
+        "v1": "textures/entity/ngb/cat_baby_1",
+        "v2": "textures/entity/ngb/cat_baby_2",
+        "v3": "textures/entity/ngb/cat_baby_3",
+        "v4": "textures/entity/ngb/cat_baby_4",
+        "v5": "textures/entity/ngb/cat_baby_5"
+      },
+      "geometry": {
+        "default": "geometry.ng.cat_baby"
+      },
+      "animations": {
+        "idle": "animation.ng.cat_baby.idle",
+        "move": "animation.ng.cat_baby.move",
+        "controller": "controller.animation.ng.cat_baby.move",
+        "look": "animation.ng.cat_baby.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.cat_baby"
+      ],
+      "spawn_egg": {
+        "base_color": "#12101d",
+        "overlay_color": "#06060a"
+      }
+    }
+  }
+}

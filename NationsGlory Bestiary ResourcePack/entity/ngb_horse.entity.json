@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:horse",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/horse_0",
+        "v1": "textures/entity/ngb/horse_1",
+        "v2": "textures/entity/ngb/horse_2",
+        "v3": "textures/entity/ngb/horse_3",
+        "v4": "textures/entity/ngb/horse_4"
+      },
+      "geometry": {
+        "default": "geometry.ng.donkey"
+      },
+      "animations": {
+        "idle": "animation.ng.donkey.idle",
+        "move": "animation.ng.donkey.move",
+        "controller": "controller.animation.ng.horse.move",
+        "look": "animation.ng.donkey.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.horse"
+      ],
+      "spawn_egg": {
+        "base_color": "#131518",
+        "overlay_color": "#202126"
+      }
+    }
+  }
+}

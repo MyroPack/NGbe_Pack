@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:ng_poster_2x3_2_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/oversized/ng_poster_2x3_2"
+      },
+      "geometry": {
+        "default": "geometry.propsi_ng_poster_2x3_display"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

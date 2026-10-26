@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ng_rocket": {
+      "initial_state": "docked",
+      "states": {
+        "docked": {
+          "animations": [
+            "off"
+          ],
+          "transitions": [
+            {
+              "ignited": "query.variant == 1"
+            },
+            {
+              "flying": "query.variant == 2"
+            },
+            {
+              "falling": "query.variant == 3"
+            }
+          ]
+        },
+        "ignited": {
+          "animations": [
+            "rumble"
+          ],
+          "blend_transition": 0.3,
+          "transitions": [
+            {
+              "flying": "query.variant == 2"
+            },
+            {
+              "docked": "query.variant == 0"
+            }
+          ]
+        },
+        "flying": {
+          "animations": [
+            "fly"
+          ],
+          "blend_transition": 0.5,
+          "transitions": [
+            {
+              "falling": "query.variant == 3"
+            },
+            {
+              "docked": "query.variant == 0"
+            }
+          ]
+        },
+        "falling": {
+          "animations": [
+            "fly",
+            "off"
+          ],
+          "blend_transition": 0.3,
+          "transitions": [
+            {
+              "docked": "query.variant == 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

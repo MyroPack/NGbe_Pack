@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:cog_assembler_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/cog_assembler_off",
+        "on": "textures/blocks/cog_assembler_on"
+      },
+      "geometry": {
+        "default": "geometry.cog_assembler"
+      },
+      "render_controllers": [
+        "controller.render.ng_cog_assembler"
+      ]
+    }
+  }
+}

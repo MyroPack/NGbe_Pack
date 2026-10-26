@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nametag.target_rotation": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"bone": {
+					"rotation": ["-query.rotation_to_camera(0)", "query.rotation_to_camera(1) + 180-q.body_y_rotation", 0],
+					"position": [-1, 33, 0]
+				}
+			}
+		},
+		"animation.nametag.target_rotation_big": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"bone": {
+					"rotation": ["-query.rotation_to_camera(0) - 25", "query.rotation_to_camera(1) + 180-q.body_y_rotation", 0],
+					"position": [-1, 23, 0]
+				}
+			}
+		}
+	}
+}

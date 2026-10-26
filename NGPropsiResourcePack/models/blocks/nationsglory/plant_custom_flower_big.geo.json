@@ -1,0 +1,41 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.plant_custom_flower_big",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-10, 0, 0],
+							"size": [20, 30, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -135, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [20, 30]}
+							}
+						},
+						{
+							"origin": [-10, 0, 0],
+							"size": [20, 30, 0],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 135, 0],
+							"uv": {
+								"north": {"uv": [20, 0], "uv_size": [-20, 30]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

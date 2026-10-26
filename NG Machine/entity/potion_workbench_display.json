@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:potion_workbench_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/potion_workbench"
+      },
+      "geometry": {
+        "default": "geometry.potion_workbench"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

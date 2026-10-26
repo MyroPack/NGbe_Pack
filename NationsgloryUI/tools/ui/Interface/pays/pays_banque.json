@@ -1,0 +1,1955 @@
+{
+    "namespace": "pays_banque",
+
+    // -----------------------------------------------
+    //
+    //                  Categorie Banque
+    //
+    // -----------------------------------------------
+
+    "banque_main@ng_asset.background_white":{
+      "size":[200,230],
+      "color":[0.153,0.153,0.165],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                    {"center@ng_module.panel":{
+                                      "size":["100%c","100%c"],
+                                      "controls":[
+
+                                          {"title@ng_module.label":{
+                                            "text":"Banque",
+                                            "offset":[0,1.9],
+                                            "font_type":"MinecraftTen",
+                                            "font_scale_factor":0.9
+                                          }} 
+                                    ]}}
+                              ]}}         
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "size":["100% - 15px","100% - 15px"],
+                        "controls":[
+
+                            {"banque_icon@ng_asset.banque":{
+                              "size":["100%",65]
+                            }},
+
+                            {"padding@ng_module.panel": {
+                              "size": ["100M", 5]
+                            }},
+
+                            {"sold@ng_asset.background_white":{
+                              "size":["100%","100%c + 2px"],
+                              "layer":50,
+                              "color":[0.153, 0.153, 0.165],
+                              "controls":[
+
+                                {"content@ng_module.stackpanel":{
+                                  "size":["100% - 2px","100%c"],
+                                  "controls":[
+                                    
+                                      {"header@ng_asset.background_62":{
+                                        "size":["100%",20],
+                                        "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100% - 15px","100%cm"],
+                                              "controls":[
+
+                                                  {"label@ng_module.label":{
+                                                    "text":"Solde",
+                                                    "font_scale_factor":0.7
+                                                  }},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["fill", 0.1]
+                                                  }},
+
+                                                  {"text@ng_module.Simple_text":{
+                                                    "$type_get_text": "Get_text_type_1",
+                                                    "$index": 18,
+                                                    "layer": 5,
+                                                    "size": ["100%c","100%c"],
+                                                    "$font_scale_factor": 0.7
+                                                  }}
+                                        ]}}
+
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill",5]
+                                      }},
+
+                                      {"content@ng_module.panel": {
+                                        "size": ["100%","100%c"],
+                                        "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "size":["100% - 10px","100%c"],
+                                              "controls":[
+
+                                                  {"content@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100%",18],
+                                                    "controls":[
+
+                                                        {"button_historique@ng_module.Simple_Button":{
+                                                          "size": [18,18],
+                                                          "$index": 20,
+                                                          "$size_icone_right":[8,8],
+                                                          "$texture_icone_right": "ng_asset.icon_51",
+                                                          "$texture_button": "ng_asset.button_34"
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [5, "100%"]
+                                                        }},
+
+                                                        {"input@ng_asset.background_09":{
+                                                          "size":["fill","100%"],
+                                                          "controls":[
+
+                                                            {"text@ng_module.Simple_text":{
+                                                              "$type_get_text": "Get_text_type_1",
+                                                              "$index": 19,
+                                                              "layer": 5,
+                                                              "size": ["100%c","100%c"],
+                                                              "$font_scale_factor": 0.7
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [5, "100%"]
+                                                        }},
+
+                                                        {"button_edite@ng_module.Simple_Button":{
+                                                          "size": [18,18],
+                                                          "$index": 21,
+                                                          "$size_icone_right":[8,8],
+                                                          "$texture_icone_right": "ng_asset.icon_53",
+                                                          "$texture_button": "ng_asset.button_34"
+                                                        }}
+
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["100%", 5]
+                                                  }},
+
+                                                  {"actions_retire_deposer@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100%",20],
+                                                    "controls":[
+
+                                                        {"buttton@ng_module.Simple_Button":{
+                                                          "size": ["50% - 2.5px","100%"],
+                                                          "$index": 22,
+                                                          "$font_scale_factor":0.7,
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$texture_button": "ng_asset.button_36"
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [5, "100%"]
+                                                        }},
+
+                                                        {"buttton@ng_module.Simple_Button":{
+                                                          "size": ["50% - 2.5px","100%"],
+                                                          "$index": 23,
+                                                          "$font_scale_factor":0.7,
+                                                          "$text_color":[0.020, 0.200, 0.271],
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$texture_button": "ng_asset.button_35"
+                                                        }}
+                                                  ]}}
+                                          ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["100%",4]
+                                      }}
+
+                                ]}}
+                            ]}},
+
+                            {"padding@ng_module.panel": {
+                              "size": ["fill", 7.6]
+                            }}, 
+
+                            {"chest@ng_asset.background_white":{
+                              "size":["100%",40],
+                              "layer":50,
+                              "color":[0.153, 0.153, 0.165],
+                              "controls":[
+
+                                  {"sold@ng_asset.background_62":{
+                                    "size":["100% - 2px","100% - 2px"],
+                                    "controls":[
+
+                                        {"content@ng_module.stackpanel":{
+                                          "orientation":"horizontal",
+                                          "size":["100% - 10px",18],
+                                          "controls":[
+
+                                                {"center@ng_module.panel":{
+                                                  "size":["100%c","100%"],
+                                                  "controls":[
+
+                                                    {"label@ng_module.label":{
+                                                        "text":"Coffre de Pays",
+                                                        "layer":4,
+                                                        "font_scale_factor":0.7
+                                                    }}
+                                                ]}},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [2.5, "100%"]
+                                                }},
+
+                                                {"text@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 26,
+                                                  "layer": 5,
+                                                  "$font_scale_factor":0.7,
+                                                  "$text_color":[0.545, 0.580, 0.639],
+                                                  "size": ["100%c","100%"]
+                                                }},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["fill", "100%"]
+                                                }},
+
+                                                {"button_historique@ng_module.Simple_Button":{
+                                                  "size": [18,18],
+                                                  "$index": 24,
+                                                  "$size_icone_right":[8,8],
+                                                  "$texture_icone_right": "ng_asset.icon_51",
+                                                  "$texture_button": "ng_asset.button_34"
+                                                }},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [2.5, "100%"]
+                                                }},
+
+                                                {"button_open_chest@ng_module.Simple_Button":{
+                                                  "size": [18,18],
+                                                  "$index": 25,
+                                                  "$size_icone_right":[8,8],
+                                                  "$color_icone_right":[0.020, 0.200, 0.271],
+                                                  "$texture_icone_right": "ng_asset.icon_52",
+                                                  "$texture_button": "ng_asset.button_35"
+                                                }}
+                                        ]}}
+                                  ]}}
+
+                            ]}}
+                      ]}}
+                  ]}}
+          ]}}
+    ]},
+
+    "banque_historique_transaction@ng_asset.background_white":{
+      "size":[275,220],
+      "color":[0.153,0.153,0.165],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.panel":{
+                                            "size":["100%c","100%"],
+                                            "controls":[
+
+                                                {"title@ng_module.label":{
+                                                  "text":"Historique de la banque",
+                                                  "offset":[0,-1.3],
+                                                  "font_type":"MinecraftTen",
+                                                  "font_scale_factor":0.9
+                                                }}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["fill", "100%"]
+                              }},
+
+                              {"button_search@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                      {"contour@ng_asset.background_white":{
+                                        "size":[15,15],
+                                        "layer": 10,
+                                        "color":[0.094, 0.094, 0.106],
+                                        "controls":[
+
+                                               {"searche_button@ng_module.Simple_Button":{
+                                                "size": [13,13],
+                                                "$size_button":[13,13],
+                                                "layer": 11,
+                                                "$index": 18,
+                                                "$texture_button": "ng_asset.button_26",
+                                                "$color_icone_right": [0.831, 0.831, 0.847],
+                                                "$icon_right_offset": [0.2,0.3],
+                                                "$size_icone_right": [8,8],
+                                                "$texture_icone_right": "ng_asset.icon_46"
+                                              }} 
+                                      ]}}
+                              ]}},
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }}   
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "size":["100% - 15px","100% - 15px"],
+                          "controls":[
+
+                              {"colone_name@ng_module.stackpanel":{
+                                "size":["100%", 10],
+                                "layer":5,
+                                "orientation":"horizontal",
+                                "controls":[
+
+                                  {"center_label@ng_module.panel":{
+                                    "size":[60,"100%"],
+                                    "controls":[
+
+                                        {"label@ng_module.label":{
+                                          "text":"Historique",
+                                          "layer":10,
+                                          "color":[0.831, 0.831, 0.847],
+                                          "font_scale_factor":0.8
+                                        }}
+                                  ]}},
+
+                                  {"center_label@ng_module.panel":{
+                                    "size":[76,"100%"],
+                                    "controls":[
+
+                                        {"label@ng_module.label":{
+                                          "text":"Raison",
+                                          "layer":10,
+                                          "color":[0.831, 0.831, 0.847],
+                                          "font_scale_factor":0.8
+                                        }}
+                                  ]}},
+
+                                  {"center_label@ng_module.panel":{
+                                    "size":[54,"100%"],
+                                    "controls":[
+
+                                        {"label@ng_module.label":{
+                                          "text":"Date",
+                                          "layer":10,
+                                          "color":[0.831, 0.831, 0.847],
+                                          "font_scale_factor":0.8
+                                        }}
+                                  ]}},
+
+                                  {"center_label@ng_module.panel":{
+                                    "size":["fill","100%"],
+                                    "controls":[
+
+                                        {"label@ng_module.label":{
+                                          "text":"prix",
+                                          "color":[0.831, 0.831, 0.847],
+                                          "layer":10,
+                                          "font_scale_factor":0.8
+                                        }}
+                                  ]}}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["100%", 5]
+                              }},
+
+                              {"list_transaction@ng_asset.background_66":{
+                                "size":["100%","fill"],
+                                "controls":[
+
+                                  {"panel_transaction@ng_module.stackpanel":{
+                                    "collection_name": "container_items",
+                                    "size":["100% - 10px", 144],
+                                    "controls":[
+                                    
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 22,
+                                          "$date_price": 23
+                                      }},
+                                    
+                                       {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 24,
+                                          "$date_price": 25
+                                      }},
+                                    
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 26,
+                                          "$date_price": 27
+                                      }},
+                                      
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 28,
+                                          "$date_price": 29
+                                      }},
+                                    
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 30,
+                                          "$date_price": 31
+                                      }},
+                                    
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 32,
+                                          "$date_price": 33
+                                      }},
+
+                                      {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 34,
+                                          "$date_price": 35
+                                      }},
+
+                                       {"button_item_08@pays_banque.banque_historique_transaction_button_asset":{
+                                          "$pseudo_raison": 36,
+                                          "$date_price": 37
+                                      }} 
+                                  ]}}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["100%", 5]
+                              }},
+
+                              {"paggination@ng_module.stackpanel":{
+                                "size":["100%",10],
+                                "orientation":"horizontal",
+                                "controls":[
+
+                                        {"left_button@ng_module.panel":{
+                                                        "size": ["100%c","100%"],
+                                                        "controls": [
+
+                                                            {"buttton@ng_module.Simple_Button":{
+                                                                "size": [10,10],
+                                                                "offset": [0,0.6],
+                                                                "$index": 19,
+                                                                "$icon_right_offset": [-0.3,0],
+                                                                "$size_icone_right": [7,7],
+                                                                "$texture_icone_right": "ng_asset.icon_34",
+                                                                "$texture_button": "ng_asset.button_26"
+                                                            }}
+
+                                        ]}},
+
+                                        {"text@ng_module.panel":{
+                                                        "size": ["fill","100%"],
+                                                        "controls": [
+
+                                                            {"text@ng_module.Simple_text":{
+                                                                "$type_get_text": "Get_text_type_1",
+                                                                "$index": 21,
+                                                                "offset": [0,0.8],
+                                                                "size": ["100%c","100%"],
+                                                                "$font_scale_factor": 0.85
+                                                            }}
+
+                                        ]}},
+
+                                        {"righ_button@ng_module.panel":{
+                                                        "size": ["100%c","100%"],
+                                                        "controls": [
+
+                                                            {"buttton@ng_module.Simple_Button":{
+                                                                "size": [10,10],
+                                                                "offset": [0,0.6],
+                                                                "$index": 20,
+                                                                "$icon_right_offset": [0.3,0],
+                                                                "$size_icone_right": [7,7],
+                                                                "$texture_icone_right": "ng_asset.icon_35",
+                                                                "$texture_button": "ng_asset.button_26"
+                                                            }}
+
+                                        ]}}
+
+                              ]}}
+                        ]}}
+                  ]}}
+          ]}}
+    ]},
+
+    "banque_historique_chest@ng_asset.background_white":{
+        "size":[275,220],
+        "color":[0.153,0.153,0.165],
+        "controls":[
+
+            {"content@ng_module.stackpanel":{
+              "size":["100% - 2px","100% - 2px"],
+              "controls":[
+
+                    {"header@ng_asset.background_35":{
+                      "size":["100%",20],
+                      "controls":[
+
+                          {"content@ng_module.stackpanel":{
+                            "orientation":"horizontal",
+                            "size":["100% - 2px","100% - 2px"],
+                            "controls":[
+
+                                {"padding@ng_module.panel":{
+                                  "size":[5,"100%"]
+                                }},
+
+                                {"center@ng_module.panel":{
+                                              "size":["100%c","100%"],
+                                              "controls":[
+
+                                                  {"title@ng_module.label":{
+                                                    "text":"Historique du coffre",
+                                                    "offset":[0,-1.3],
+                                                    "font_type":"MinecraftTen",
+                                                    "font_scale_factor":0.9
+                                                  }}
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["fill", "100%"]
+                                }},
+
+                                {"button_search@ng_module.panel":{
+                                  "size":["100%c","100%"],
+                                  "controls":[
+
+                                        {"contour@ng_asset.background_white":{
+                                          "size":[15,15],
+                                          "layer": 10,
+                                          "color":[0.094, 0.094, 0.106],
+                                          "controls":[
+
+                                                {"searche_button@ng_module.Simple_Button":{
+                                                  "size": [13,13],
+                                                  "$size_button":[13,13],
+                                                  "layer": 11,
+                                                  "$index": 18,
+                                                  "$texture_button": "ng_asset.button_26",
+                                                  "$color_icone_right": [0.831, 0.831, 0.847],
+                                                  "$icon_right_offset": [0.2,0.3],
+                                                  "$size_icone_right": [8,8],
+                                                  "$texture_icone_right": "ng_asset.icon_46"
+                                                }} 
+                                        ]}}
+                                ]}},
+
+                                {"padding@ng_module.panel":{
+                                  "size":[5,"100%"]
+                                }}   
+                          ]}}
+                    ]}},
+
+                    {"content@ng_asset.background_31":{
+                      "size":["100%","fill"],
+                      "controls":[
+
+                          {"stackpanel@ng_module.stackpanel":{
+                            "size":["100% - 15px","100% - 15px"],
+                            "controls":[
+
+                                {"colone_name@ng_module.stackpanel":{
+                                  "size":["100%", 10],
+                                  "layer":5,
+                                  "orientation":"horizontal",
+                                  "controls":[
+
+                                    {"padding@ng_module.panel": {
+                                      "size": [8, "100%"]
+                                    }},
+
+                                    {"historique_label@ng_module.stackpanel":{
+                                      "size":[70,"100%"],
+                                      "controls":[
+
+                                          {"label@ng_module.label":{
+                                            "text":"Historique",
+                                            "layer":10,
+                                            "color":[0.831, 0.831, 0.847],
+                                            "font_scale_factor":0.8
+                                          }}
+                                    ]}},
+
+                                    {"padding@ng_module.panel": {
+                                      "size": [27, "100%"]
+                                    }},
+
+                                    {"date_label@ng_module.stackpanel":{
+                                      "size":[70,"100%"],
+                                      "controls":[
+
+                                          {"label@ng_module.label":{
+                                            "text":"Date",
+                                            "layer":10,
+                                            "color":[0.831, 0.831, 0.847],
+                                            "font_scale_factor":0.8
+                                          }}
+                                    ]}},
+
+                                    {"padding@ng_module.panel": {
+                                      "size": ["fill", "100%"]
+                                    }},
+
+                                    {"retrait_label@ng_module.stackpanel":{
+                                      "size":[67,"100%"],
+                                      "controls":[
+
+                                          {"label@ng_module.label":{
+                                            "text":"Retrait",
+                                            "layer":10,
+                                            "color":[0.831, 0.831, 0.847],
+                                            "font_scale_factor":0.8
+                                          }}
+                                    ]}}
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["100%", 5]
+                                }},
+
+                                {"list_transaction@ng_asset.background_66":{
+                                  "size":["100%","fill"],
+                                  "controls":[
+
+                                    {"panel_transaction@ng_module.stackpanel":{
+                                      "collection_name": "container_items",
+                                      "size":["100% - 10px", 140],
+                                      "controls":[
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 22,
+                                            "$index_slot_1": 23,
+                                            "$index_slot_2": 24,
+                                            "$index_slot_3": 25
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 26,
+                                            "$index_slot_1": 27,
+                                            "$index_slot_2": 28,
+                                            "$index_slot_3": 29
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 30,
+                                            "$index_slot_1": 31,
+                                            "$index_slot_2": 32,
+                                            "$index_slot_3": 33
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 34,
+                                            "$index_slot_1": 35,
+                                            "$index_slot_2": 36,
+                                            "$index_slot_3": 37
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 38,
+                                            "$index_slot_1": 39,
+                                            "$index_slot_2": 40,
+                                            "$index_slot_3": 41
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 42,
+                                            "$index_slot_1": 43,
+                                            "$index_slot_2": 44,
+                                            "$index_slot_3": 45
+                                        }},
+
+                                        {"button_item_01@pays_banque.banque_historique_chest_button_asset":{
+                                            "$index_pseudo_&_date": 46,
+                                            "$index_slot_1": 47,
+                                            "$index_slot_2": 48,
+                                            "$index_slot_3": 49
+                                        }}
+                                    ]}}
+
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["100%", 5]
+                                }},
+
+                                {"paggination@ng_module.stackpanel":{
+                                  "size":["100%",10],
+                                  "orientation":"horizontal",
+                                  "controls":[
+
+                                          {"left_button@ng_module.panel":{
+                                                          "size": ["100%c","100%"],
+                                                          "controls": [
+
+                                                              {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [10,10],
+                                                                  "offset": [0,0.6],
+                                                                  "$index": 19,
+                                                                  "$icon_right_offset": [-0.3,0],
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_34",
+                                                                  "$texture_button": "ng_asset.button_26"
+                                                              }}
+
+                                          ]}},
+
+                                          {"text@ng_module.panel":{
+                                                          "size": ["fill","100%"],
+                                                          "controls": [
+
+                                                              {"text@ng_module.Simple_text":{
+                                                                  "$type_get_text": "Get_text_type_1",
+                                                                  "$index": 21,
+                                                                  "offset": [0,0.8],
+                                                                  "size": ["100%c","100%"],
+                                                                  "$font_scale_factor": 0.85
+                                                              }}
+
+                                          ]}},
+
+                                          {"righ_button@ng_module.panel":{
+                                                          "size": ["100%c","100%"],
+                                                          "controls": [
+
+                                                              {"buttton@ng_module.Simple_Button":{
+                                                                  "size": [10,10],
+                                                                  "offset": [0,0.6],
+                                                                  "$index": 20,
+                                                                  "$icon_right_offset": [0.3,0],
+                                                                  "$size_icone_right": [7,7],
+                                                                  "$texture_icone_right": "ng_asset.icon_35",
+                                                                  "$texture_button": "ng_asset.button_26"
+                                                              }}
+
+                                          ]}}
+
+                                ]}}
+                          ]}}
+                    ]}}
+            ]}}
+    ]},
+
+    "banque_chest@ng_module.stackpanel":{
+      "orientation":"horizontal",
+      "size":["100%c","100%cm"],
+      "controls":[
+
+          {"content@ng_asset.background_white":{
+              "size":[198,225],
+              "color":[0.094, 0.094, 0.106],
+              "controls":[
+
+                  {"content@ng_module.stackpanel":{
+                    "size":["100% - 2px","100% - 2px"],
+                    "controls":[
+
+                          {"header@ng_asset.background_35":{
+                            "size":["100%",20],
+                            "controls":[
+
+                                {"content@ng_module.stackpanel":{
+                                  "orientation":"horizontal",
+                                  "size":["100% - 2px","100% - 2px"],
+                                  "controls":[
+
+                                      {"padding@ng_module.panel":{
+                                        "size":[5,"100%"]
+                                      }},
+
+                                      {"center@ng_module.panel":{
+                                                    "size":["100%c","100%"],
+                                                    "controls":[
+
+                                                        {"title@ng_module.label":{
+                                                          "text":"coffre de banque",
+                                                          "offset":[0,-1.3],
+                                                          "font_type":"MinecraftTen",
+                                                          "font_scale_factor":0.9
+                                                        }}
+                                      ]}} 
+                                ]}}
+                          ]}},
+
+                          {"content@ng_asset.background_white":{
+                            "color":[0.153, 0.153, 0.165],
+                            "layer":10,
+                            "size":["100%","fill"],
+                            "controls":[
+
+                                {"stackpanel@ng_module.stackpanel":{
+                                  "size":["100% - 15px","100% - 8px"],
+                                  "controls":[
+
+                                            {"title@ng_module.label":{
+                                              "font_scale_factor":0.7,
+                                              "layer":10,
+                                              "color":[0.443, 0.443, 0.482],
+                                              "font_type":"MinecraftTen",
+                                              "text":"Retirer ou ajouter"
+                                            }},
+
+                                            {"padding@ng_module.panel": {
+                                              "size": ["100%", 4]
+                                            }},
+
+                                            {"bakcground_slot@ng_asset.background_white":{
+                                              "color":[0.180, 0.180, 0.192],
+                                              "size":["100%c + 2px","100%c + 2px"],
+                                              "controls":[
+                                                
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "size":["100%cm","100%c"],
+                                                  "controls":[
+
+                                                      {"slot_ligne_1@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":18
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":19
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":20
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":21
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":22
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":23
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":24
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":25
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":26
+                                                                }}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":27
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":28
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":29
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":30
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":31
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":32
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":33
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":34
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":35
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":36
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":37
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":38
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":39
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":40
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":41
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":42
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":43
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":44
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":45
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":46
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":47
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":48
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":49
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":50
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":51
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":52
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":53
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":54
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":55
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":56
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":57
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":58
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":59
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":60
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":61
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":62
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":63
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":64
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":65
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":66
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":67
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":68
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":69
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":70
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":71
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":72
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":73
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":74
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":75
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":76
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":77
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":78
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":79
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":80
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":81
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":82
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":83
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":84
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":85
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":86
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":87
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":88
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":89
+                                                                }}
+                                                      ]}},
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [0,1]
+                                                      }},
+
+                                                      {"slot_ligne_2@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
+                                                        "size":["100%c","100%cm"],
+                                                        "controls":[
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":90
+                                                                }},
+                                                                  
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":91
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":92
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":93
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":94
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":95
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":96
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":97
+                                                                }},
+                                                                
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [1, 0.1]
+                                                                }},
+
+                                                                {"slot_1@pays_banque.custome_slot":{
+                                                                  "$index":98
+                                                                }}
+                                                      ]}}
+
+                                                ]}}
+
+
+                                            ]}}
+
+
+                                ]}}
+                          ]}}
+                  ]}}
+            
+          ]}},   
+
+          {"padding@ng_module.panel": {
+            "size": [5, 0.1]
+          }},
+
+          {"inventaire@ng_module.panel": {
+           "size":[198,225],
+           "controls":[
+
+              {"content@ng_asset.background_white":{
+                  "size":[198,111],
+                  "color":[0.094, 0.094, 0.106],
+                  "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "size":["100% - 2px","100% - 2px"],
+                        "controls":[
+
+                              {"header@ng_asset.background_35":{
+                                "size":["100%",20],
+                                "controls":[
+
+                                    {"content@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "size":["100% - 2px","100% - 2px"],
+                                      "controls":[
+
+                                          {"padding@ng_module.panel":{
+                                            "size":[5,"100%"]
+                                          }},
+
+                                          {"center@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                            {"title@ng_module.label":{
+                                                              "text":"Inventaire",
+                                                              "offset":[0,-1.3],
+                                                              "font_type":"MinecraftTen",
+                                                              "font_scale_factor":0.9
+                                                            }}
+                                          ]}} 
+                                    ]}}
+                              ]}},
+
+                              {"content@ng_asset.background_white":{
+                                "color":[0.153, 0.153, 0.165],
+                                "layer":10,
+                                "size":["100%","fill"],
+                                "controls":[
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "size":["100% - 15px","100% - 8px"],
+                                      "controls":[
+
+                                                {"inventory@ng_asset.background_white":{
+                                                    "color":[0.180, 0.180, 0.192],
+                                                    "size":["100%c + 1px","100%c"],
+                                                    "controls":[
+
+                                                        {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                          "offset":[0.6, 1.3],
+                                                          "size":["100%cm","100%c"],
+                                                          "controls":[
+
+                                                              {"inventory@ng_module.grid_asset":{
+                                                                "$size_grid":[180,60],
+                                                                "$grid_dimensions":[9,3],
+                                                                "$collection_name":"inventory_items",
+                                                                "$item_renderer_panel_size":[19,19],
+                                                                "$cell_image_size":[19,19],
+                                                                "$color_background_default":[0.094, 0.094, 0.106],
+                                                                "$textures_slot_hover":"ng_asset.background_10",
+                                                                "$textures_slot_default":"ng_asset.background_white",
+                                                                "$slot_size":[19,19]
+                                                              }},
+
+                                                              {"bar@ng_module.grid_asset":{
+                                                                "$size_grid":[180,21],
+                                                                "$grid_dimensions":[9,1],
+                                                                "$collection_name":"hotbar_items",
+                                                                "$item_renderer_panel_size":[19,19],
+                                                                "$cell_image_size":[19,19],
+                                                                "$color_background_default":[0.094, 0.094, 0.106],
+                                                                "$textures_slot_hover":"ng_asset.background_10",
+                                                                "$textures_slot_default":"ng_asset.background_white",
+                                                                "$slot_size":[19,19]
+                                                              }}
+
+                                                        ]}}
+                                                  ]}}
+
+
+                                    ]}}
+                              ]}}
+                      ]}}
+                
+              ]}}
+          ]}}
+    ]},
+
+    //Asset Categorie Banque
+
+    "banque_historique_transaction_button_asset@ng_module.stackpanel": {
+      "collection_index": "$pseudo_raison",
+      "size": ["100%",18],
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "$mapping_button": "nonclickable",
+                "$textures_button_S1|default": "ng_asset.button_full_white",
+                "size": ["100%",18],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"texture_button@$textures_button_S1":{
+                                      "$color_hover_button": [0.247, 0.247, 0.278],
+                                      "$color_pressed_button": [0.153, 0.153, 0.165],
+                                      "$color_default_button":[0.153, 0.153, 0.165]
+                                    }},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"pseudo@ng_module.stackpanel":{
+                                            "size":[60,"100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$pseudo_raison",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$font_type":"MinecraftTen",
+                                                  "$max_size": [55,10],
+                                                  "$text_offset": [0,-1],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"raison@ng_module.panel":{
+                                            "size":[60,"100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$pseudo_raison",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [55,10],
+                                                  "$text_offset": [0,0.3],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+
+
+                                          ]}},
+
+                                          {"date@ng_module.panel":{
+                                            "size":[70,"100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$date_price",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [65,10],
+                                                  "$text_offset": [0,0.3],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"prix@ng_module.panel":{
+                                            "size":["fill","100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$date_price",
+                                                  "layer": 6,
+                                                  "$max_size": [50,10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}}
+
+                                    ]}}
+                                ]}}
+                        ]}}
+            ]}}
+    ]},
+
+    "banque_historique_chest_button_asset@ng_module.stackpanel": {
+      "collection_index": "$index_pseudo_&_date",
+      "size": ["100%",20],
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "$mapping_button": "nonclickable",
+                "$textures_button_S1|default": "ng_asset.button_full_white",
+                "size": ["100%","100%"],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                              "type": "panel",
+                              "size": ["100%","100%"],
+                              "controls": [
+
+                                    {"texture_button@$textures_button_S1":{
+                                      "$color_hover_button": [0.247, 0.247, 0.278],
+                                      "$color_pressed_button": [0.153, 0.153, 0.165],
+                                      "$color_default_button":[0.153, 0.153, 0.165]
+                                    }},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"pseudo@ng_module.stackpanel":{
+                                            "size":[70,"100%"],
+                                            "controls":[
+                                              
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$index_pseudo_&_date",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$font_type":"MinecraftTen",
+                                                  "$max_size": [80,10],
+                                                  "$text_offset": [0,-1],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.6
+                                                }} 
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [27, "100%"]
+                                          }},
+
+                                          {"date@ng_module.stackpanel":{
+                                            "size":[70,"100%"],
+                                            "controls":[
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$index_pseudo_&_date",
+                                                  "layer": 6,
+                                                  "$text_color":[0.980, 0.980, 0.980],
+                                                  "$max_size": [80,10],
+                                                  "$text_offset": [0,0.3],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.6
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"slot@ng_module.panel":{
+                                            "size":["100%c","100%"],
+                                            "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation": "horizontal",
+                                                  "collection_name": "container_items",
+                                                  "size": ["100%c","100%cm"],
+                                                  "controls": [
+
+                                                      {"slot@pays_banque.custome_slot":{
+                                                        "$index": "$index_slot_1",
+                                                        "$item_renderer_size":[13,13],
+                                                        "$cell_image_size":[18,18],
+                                                        "$slot_size":[18,18],
+                                                        "$offset_stack_count_label":[0,-1],
+                                                        "$font_scale_factor_stack_count_label":0.7,
+                                                        "$mapping_container": "container_mapping_nonclickable"
+                                                      }}, 
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [2.5, 0.1]
+                                                      }},
+
+                                                      {"slot@pays_banque.custome_slot":{
+                                                        "$index": "$index_slot_2",
+                                                        "$item_renderer_size":[13,13],
+                                                        "$cell_image_size":[18,18],
+                                                        "$slot_size":[18,18],
+                                                        "$offset_stack_count_label":[0,-1],
+                                                        "$font_scale_factor_stack_count_label":0.7,
+                                                        "$mapping_container": "container_mapping_nonclickable"
+                                                      }}, 
+                                                      
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [2.5, 0.1]
+                                                      }},
+
+                                                      {"slot@pays_banque.custome_slot":{
+                                                        "$index": "$index_slot_3",
+                                                        "$item_renderer_size":[13,13],
+                                                        "$cell_image_size":[18,18],
+                                                        "$slot_size":[18,18],
+                                                        "$offset_stack_count_label":[0,-1],
+                                                        "$font_scale_factor_stack_count_label":0.7,
+                                                        "$mapping_container": "container_mapping_nonclickable"
+                                                      }}   
+                                                ]}}
+                                          ]}}
+                                    ]}}
+
+                            ]}}
+                        ]}}
+            ]}}
+    ]},
+
+    "custome_slot@ng_module.container_item":{
+      "collection_index":"$index",
+      "$item_collection_name": "container_items",
+      "$item_renderer_panel_size":[19,19],
+      "$cell_image_size":[19,19],
+      "$slot_size":[19,19],
+      "$blocked_drop_one_item":true,
+      "$color_background_default":[0.094, 0.094, 0.106],
+      "$textures_slot_hover":"ng_asset.background_10",
+      "$textures_slot_default":"ng_asset.background_white"
+    }
+
+}
+
+   

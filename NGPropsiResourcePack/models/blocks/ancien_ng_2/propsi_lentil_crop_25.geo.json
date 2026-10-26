@@ -1,0 +1,56 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_lentil_crop_25",
+				"texture_width": 16,
+				"texture_height": 16
+			},
+			"bones": [
+				{
+					"name": "cross_0",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{
+							"origin": [-8, -1, 0],
+							"size": [16, 16, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 16]
+								},
+								"south": {
+									"uv": [16, 0],
+									"uv_size": [-16, 16]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "cross_1",
+					"pivot": [0, 0, 0],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [-8, -1, 0],
+							"size": [16, 16, 0],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 16]
+								},
+								"south": {
+									"uv": [16, 0],
+									"uv_size": [-16, 16]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

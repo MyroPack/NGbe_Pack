@@ -1,0 +1,92 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_nationsglory_banners_display",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3.5,
+				"visible_bounds_height": 7.5,
+				"visible_bounds_offset": [0, -3.09, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [-1, -38, 7],
+					"cubes": [
+						{
+							"origin": [-23.1725, -0.4425, 4.7375],
+							"size": [44.345, 4.525, 4.525],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [6, 0.5]
+								},
+								"south": {
+									"uv": [0, 0],
+									"uv_size": [6, 0.5]
+								},
+								"up": {
+									"uv": [6, 0.5],
+									"uv_size": [-6, -0.5]
+								},
+								"down": {
+									"uv": [6, 0.5],
+									"uv_size": [-6, -0.5]
+								}
+							}
+						},
+						{
+							"origin": [-22.72, 0.01, 5.19],
+							"size": [43.44, 3.62, 3.62],
+							"uv": {
+								"north": {
+									"uv": [6, 0],
+									"uv_size": [6, 0.5]
+								},
+								"east": {
+									"uv": [12, 0],
+									"uv_size": [0.5, 0.5]
+								},
+								"south": {
+									"uv": [6, 0],
+									"uv_size": [6, 0.5]
+								},
+								"west": {
+									"uv": [12, 0],
+									"uv_size": [0.5, 0.5]
+								},
+								"up": {
+									"uv": [12, 1.125],
+									"uv_size": [-6, -0.5]
+								},
+								"down": {
+									"uv": [12, 1.75],
+									"uv_size": [-6, -0.5]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "banner",
+					"parent": "group",
+					"pivot": [-0.81, 0.38, 6.67],
+					"cubes": [
+						{
+							"origin": [-20.91, -103.07478, 6.99939],
+							"size": [39.82, 103.17, 0.1],
+							"uv": {
+								"north": {
+									"uv": [0.25, 0],
+									"uv_size": [5.5, 14]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

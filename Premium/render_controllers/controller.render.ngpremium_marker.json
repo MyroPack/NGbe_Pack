@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.ngpremium_marker": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.icons[q.mark_variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.icons": [
+						"Texture.autel",
+						"Texture.colis",
+						"Texture.zone",
+						"Texture.boss",
+						"Texture.location",
+						"Texture.basic",
+						"Texture.atlas",
+						"Texture.postman",
+						"Texture.skye",
+						"Texture.wiki",
+						"Texture.shop",
+						"Texture.market",
+						"Texture.science",
+						"Texture.science_holo",
+						"Texture.cosmerio",
+						"Texture.onboarding",
+						"Texture.hazardio",
+						"Texture.military",
+						"Texture.pierre",
+						"Texture.pirate",
+						"Texture.patrick",
+						"Texture.elf_red",
+						"Texture.elf_green"
+					]
+				}
+			}
+		}
+	}
+}

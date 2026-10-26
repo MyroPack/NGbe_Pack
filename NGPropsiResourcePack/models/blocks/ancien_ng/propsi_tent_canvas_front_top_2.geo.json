@@ -1,0 +1,64 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_tent_canvas_front_top_2",
+				"texture_width": 64,
+				"texture_height": 64
+			},
+			"bones": [
+				{
+					"name": "group2",
+					"pivot": [-16, -40, 32],
+					"cubes": [
+						{
+							"origin": [-8, 15.9986, -14.0009],
+							"size": [16, 0, 22.0009],
+							"uv": {
+								"up": {
+									"uv": [1.0, 1.0],
+									"uv_size": [16.0, 22.0009]
+								}
+							}
+						},
+						{
+							"origin": [-8, 9.9996, -13.9991],
+							"size": [16, 6, 6],
+							"uv": {
+								"east": {
+									"uv": [37.0, 1.0],
+									"uv_size": [6.0, 6.0]
+								},
+								"south": {
+									"uv": [35.0, 1.0],
+									"uv_size": [-16.0, 6.0]
+								},
+								"west": {
+									"uv": [37.0, 1.0],
+									"uv_size": [6.0, 6.0]
+								},
+								"down": {
+									"uv": [35.0, 1.0],
+									"uv_size": [-16.0, 6.0]
+								}
+							}
+						},
+						{
+							"origin": [-8, -4.0014, -14.0009],
+							"size": [16, 20, 0],
+							"pivot": [-16, 15.9986, -14.0009],
+							"rotation": [-2.5, 0, 0],
+							"uv": {
+								"north": {
+									"uv": [1.0, 24.0],
+									"uv_size": [16.0, 20.0]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

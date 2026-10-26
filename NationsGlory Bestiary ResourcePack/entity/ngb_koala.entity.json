@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:koala",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/koala_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.koala"
+      },
+      "animations": {
+        "idle": "animation.ng.koala.idle",
+        "move": "animation.ng.koala.move",
+        "controller": "controller.animation.ng.koala.move",
+        "look": "animation.ng.koala.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.koala"
+      ],
+      "spawn_egg": {
+        "base_color": "#6e6964",
+        "overlay_color": "#837f79"
+      }
+    }
+  }
+}

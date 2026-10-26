@@ -1,0 +1,363 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.propsi_e_planet_display",
+        "texture_width": 256,
+        "texture_height": 256,
+        "visible_bounds_width": 8,
+        "visible_bounds_height": 7.5,
+        "visible_bounds_offset": [
+          0,
+          3.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            -1,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -32,
+                0,
+                -32
+              ],
+              "size": [
+                64,
+                64,
+                64
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    64,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    64,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    128
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    128,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    -64
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "sky",
+          "parent": "root",
+          "pivot": [
+            0,
+            32,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -32,
+                0,
+                -32
+              ],
+              "size": [
+                64,
+                64,
+                64
+              ],
+              "inflate": 0.2,
+              "uv": {
+                "north": {
+                  "uv": [
+                    64,
+                    128
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    128,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    128,
+                    128
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    0,
+                    192
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    128,
+                    192
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    64,
+                    256
+                  ],
+                  "uv_size": [
+                    64,
+                    -64
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "aura",
+          "parent": "root",
+          "pivot": [
+            0,
+            32,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                32,
+                64,
+                32
+              ],
+              "size": [
+                -64,
+                -64,
+                -64
+              ],
+              "inflate": -3,
+              "uv": {
+                "north": {
+                  "uv": [
+                    192,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    192,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    192,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    192,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    192,
+                    0
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    -64
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "aura2",
+          "parent": "root",
+          "pivot": [
+            0,
+            32,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                32,
+                64,
+                32
+              ],
+              "size": [
+                -64,
+                -64,
+                -64
+              ],
+              "inflate": -6,
+              "uv": {
+                "north": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    192,
+                    64
+                  ],
+                  "uv_size": [
+                    64,
+                    64
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    192,
+                    128
+                  ],
+                  "uv_size": [
+                    64,
+                    -64
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

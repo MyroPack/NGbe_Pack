@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:frog_mount",
+			"materials": {
+				"default": "frog"
+			},
+			"textures": {
+				"default": "textures/entity/frog_cold_mount"
+			},
+			"geometry": {
+				"default": "geometry.frog_mount"
+			},
+			"animations": {
+				"croak": "animation.frog_mount.croak",
+				"jump": "animation.frog_mount.jump",
+				"tongue": "animation.frog_mount.tongue",
+				"walk": "animation.frog_mount.walk",
+				"swim": "animation.frog_mount.swim",
+				"idle_water": "animation.frog_mount.idle.water",
+				"look_at_target": "animation.common.look_at_target",
+				"general": "controller.animation.frog.general",
+				"croaking": "controller.animation.frog.croaking",
+				"eat_mob": "controller.animation.frog.eat_mob"
+			},
+			"scripts": {
+				"animate": [
+					"general",
+					"croaking",
+					"eat_mob"
+				],
+				"pre_animation": [
+					"variable.moving = query.ground_speed > 0 || query.vertical_speed > 0;"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

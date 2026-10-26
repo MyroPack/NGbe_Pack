@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:missile_platform",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/entity/platform",
+        "conventionnel": "textures/recubeicbm/missile/conventionnel",
+        "repulsive": "textures/recubeicbm/missile/repulsive",
+        "shrapnel": "textures/recubeicbm/missile/shrapnel",
+        "incendiaire": "textures/recubeicbm/missile/incendiaire",
+        "fragmentation": "textures/recubeicbm/missile/fragmentation",
+        "emp": "textures/recubeicbm/missile/emp",
+        "nuke": "textures/recubeicbm/missile/nuke",
+        "nuke_cluster": "textures/recubeicbm/missile/nuke_cluster",
+        "thermobarique": "textures/recubeicbm/missile/thermobarique",
+        "magnetique": "textures/recubeicbm/missile/magnetique",
+        "earthquake": "textures/recubeicbm/missile/earthquake",
+        "drill": "textures/recubeicbm/missile/drill",
+        "endothermique": "textures/recubeicbm/missile/endothermique",
+        "anti_matter": "textures/recubeicbm/missile/anti_matter",
+        "red_matter": "textures/recubeicbm/missile/red_matter"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.platform",
+        "conventionnel": "geometry.recubeicbm.mounted.conventionnel",
+        "repulsive": "geometry.recubeicbm.mounted.repulsive",
+        "shrapnel": "geometry.recubeicbm.mounted.shrapnel",
+        "incendiaire": "geometry.recubeicbm.mounted.incendiaire",
+        "fragmentation": "geometry.recubeicbm.mounted.fragmentation",
+        "emp": "geometry.recubeicbm.mounted.emp",
+        "nuke": "geometry.recubeicbm.mounted.nuke",
+        "nuke_cluster": "geometry.recubeicbm.mounted.nuke_cluster",
+        "thermobarique": "geometry.recubeicbm.mounted.thermobarique",
+        "magnetique": "geometry.recubeicbm.mounted.magnetique",
+        "earthquake": "geometry.recubeicbm.mounted.earthquake",
+        "drill": "geometry.recubeicbm.mounted.drill",
+        "endothermique": "geometry.recubeicbm.mounted.endothermique",
+        "anti_matter": "geometry.recubeicbm.mounted.anti_matter",
+        "red_matter": "geometry.recubeicbm.mounted.red_matter"
+      },
+      "animations": {
+        "default": "animation.recubeicbm.platform.default",
+        "rocket": "animation.recubeicbm.platform.rocket",
+        "rocket_off": "animation.recubeicbm.platform.rocket_off",
+        "deployed": "animation.recubeicbm.platform.deployed",
+        "state": "controller.animation.recubeicbm.platform"
+      },
+      "scripts": {
+        "animate": [
+          "state"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default",
+        {
+          "controller.render.recubeicbm.platform_missile": "q.variant > 0"
+        }
+      ]
+    }
+  }
+}

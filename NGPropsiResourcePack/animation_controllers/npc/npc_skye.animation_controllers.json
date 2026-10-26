@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.propsi_e_npc_skye": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "blend_transition": 0.5,
+          "transitions": [
+            {
+              "look": "v.look_at_entity"
+            },
+            {
+              "talk": "q.variant == 2"
+            }
+          ]
+        },
+        "look": {
+          "animations": [
+            "look"
+          ],
+          "blend_transition": 0.5,
+          "transitions": [
+            {
+              "idle": "!v.look_at_entity"
+            },
+            {
+              "talk": "q.variant == 2"
+            }
+          ]
+        },
+        "talk": {
+          "animations": [
+            "talk"
+          ],
+          "blend_transition": 0.5,
+          "transitions": [
+            {
+              "idle": "q.variant == 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

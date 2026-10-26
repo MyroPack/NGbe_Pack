@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ng.baby_chicken": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.v0",
+            "Texture.v1",
+            "Texture.v2"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[math.clamp(q.variant, 0, 2)]"
+      ]
+    }
+  }
+}

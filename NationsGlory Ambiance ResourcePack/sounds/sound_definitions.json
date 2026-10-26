@@ -1,0 +1,481 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "ng.biome.banquise.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/banquise_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.banquise.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/banquise_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.canyon.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/canyon_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.canyon.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/canyon_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.desert.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/desert_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.desert.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/desert_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.forest.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/forest_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.forest.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/desert_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.forest_boreal.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/forest_boreal_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.forest_boreal.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/forest_boreal_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.hidden_moon.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/hidden_moon_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.hidden_moon.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/hidden_moon_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.lune.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/lune_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.lune.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/lune_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.mangrove.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/mangrove_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.mangrove.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/mangrove_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.montagne.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/montagne_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.montagne.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/montagne_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.ocean_froid.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_froid_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.ocean_froid.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_froid_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.ocean_hot.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_hot_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.ocean_hot.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_froid_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.plaines.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/plaines_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.plaines.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/plaines_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.plateau_continental.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_hot_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.plateau_continental.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/ocean_froid_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.savannah.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/savannah_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.savannah.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/savannah_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.steppe.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/savannah_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.steppe.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/savannah_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.tropical.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/tropical_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.tropical.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/tropical_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.tundra.ambient_day": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/tundra_day",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.biome.tundra.ambient_night": {
+      "category": "ambient",
+      "min_distance": 512.0,
+      "max_distance": 1024.0,
+      "sounds": [
+        {
+          "name": "sounds/ng/biome/tundra_night",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

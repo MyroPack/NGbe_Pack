@@ -1,0 +1,47 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "ng.disaster.meteorite.appear": {
+      "category": "weather",
+      "min_distance": 1000.0,
+      "max_distance": 2000.0,
+      "sounds": [
+        {
+          "name": "sounds/disaster/meteore_apparition",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.disaster.volcano.appear": {
+      "category": "weather",
+      "min_distance": 1000.0,
+      "max_distance": 2000.0,
+      "sounds": [
+        {
+          "name": "sounds/disaster/volcan_apparition",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "ng.disaster.earthquake.appear": {
+      "category": "weather",
+      "min_distance": 1000.0,
+      "max_distance": 2000.0,
+      "sounds": [
+        {
+          "name": "sounds/disaster/seisme_apparition",
+          "stream": true,
+          "is3D": false,
+          "volume": 1.0,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

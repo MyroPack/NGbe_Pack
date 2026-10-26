@@ -1,0 +1,30 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "a:entity_beam_additive": {
+             "+defines": ["ENABLE_FOG", "ENABLE_LIGHT", "USE_ONLY_EMISSIVE"],
+             "+states":[
+                "DisableCulling",
+                "EnableAlphaToCoverage"
+            ]
+        },
+        "lootbox_loot:entity_alphatest": {
+            "depthBias": 99999500
+        },
+        "lootbox_holo:entity_beam_additive": {
+             "+defines": ["ENABLE_FOG", "ENABLE_LIGHT", "USE_ONLY_EMISSIVE"],
+             "+states":[
+                "DisableCulling",
+                "EnableAlphaToCoverage"
+            ]
+        },
+        "nametag:name_tag": {
+            "+defines": [
+                "USE_UV_ANIM", "USE_EMISSIVE", "ALPHA_TEST"
+            ]
+        },
+        "health_bar:nametag": {
+            "depthBias":  99999999
+        }
+    }
+}

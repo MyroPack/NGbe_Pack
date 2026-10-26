@@ -1,0 +1,18 @@
+{
+  "namespace": "ngbestiary_hud",
+
+  // Emplacements du HUD du bestiaire. NGBestiaryResourcePack porte ce meme fichier (meme chemin, memes noms) avec
+  // le contenu des deux panneaux : le jeu fusionne les deux fichiers propriete par propriete, dans un ordre ou dans
+  // l'autre. Ici les panneaux sont vides : sans ce pack, rien ne s'affiche. Ne rien ajouter a ces deux definitions
+  // (ni taille, ni controls, ni bindings) : ce qui serait ecrit ici remplacerait ce que l'autre pack y met.
+
+  // Le bandeau d'une notification du bestiaire, pose par-dessus le bandeau gris (hud.notification_panel).
+  "toast": {
+    "type": "panel"
+  },
+
+  // Le viseur de l'appareil photo du bestiaire, en plein ecran (fond de l'ecran du HUD : hud.hud_screen).
+  "viewfinder": {
+    "type": "panel"
+  }
+}

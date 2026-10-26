@@ -1,0 +1,170 @@
+﻿{
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "storage_module_1": {
+      "textures": "textures/blocks/storage_module_1"
+    },
+    "coal_generator": {
+      "textures": "textures/blocks/coal_generator_off"
+    },
+    "bio_generator": {
+      "textures": "textures/blocks/bio_generator"
+    },
+    "liquid_tank": {
+      "textures": "textures/blocks/liquid_tank_empty"
+    },
+    "pumpjack": {
+      "textures": "textures/blocks/pumpjack"
+    },
+    "gas_extractor": {
+      "textures": "textures/blocks/gas_extractor"
+    },
+    "solar_panel": {
+      "textures": "textures/blocks/solar_panel"
+    },
+    "solar_panel_advanced": {
+      "textures": "textures/blocks/solar_panel_advanced"
+    },
+    "gas_compressor": {
+      "textures": "textures/blocks/gas_compressor_off"
+    },
+    "fridge": {
+      "textures": "textures/blocks/fridge"
+    },
+    "cable_core": {
+      "textures": "textures/blocks/cable_core"
+    },
+    "cable_t2": {
+      "textures": "textures/blocks/cable_t2"
+    },
+    "ng_invisible": {
+      "textures": "textures/blocks/ng_invisible"
+    },
+    "gas_cable_core": {
+      "textures": "textures/blocks/gas_cable_core"
+    },
+    "liquid_cable_core": {
+      "textures": "textures/blocks/liquid_cable_core"
+    },
+    "cable_block": {
+      "textures": "textures/blocks/cable_block"
+    },
+    "gas_cable_block": {
+      "textures": "textures/blocks/gas_cable_block"
+    },
+    "liquid_cable_block": {
+      "textures": "textures/blocks/liquid_cable_block"
+    },
+    "gas_tank": {
+      "textures": "textures/blocks/gas_tank"
+    },
+    "oxygen_collector": {
+      "textures": "textures/blocks/oxygen_collector"
+    },
+    "ecotron_off": {
+      "textures": "textures/blocks/ecotron_off"
+    },
+    "fuel_generator": {
+      "textures": "textures/blocks/fuel_generator"
+    },
+    "rubber_maker" : {
+      "textures" : "textures/blocks/rubber_maker"
+    },
+    "crusher_off" : {
+      "textures" : "textures/blocks/crusher_off"
+    },
+    "ecotron_on" : {
+      "textures" : "textures/blocks/ecotron"
+    },
+    "electric_compressor": {
+      "textures": "textures/blocks/electric_compressor"
+    },
+    "food_preserver": {
+      "textures": "textures/blocks/food_preserver"
+    },
+    "food_workbench": {
+      "textures": "textures/blocks/food_workbench"
+    },
+    "potion_workbench": {
+      "textures": "textures/blocks/potion_workbench"
+    },
+    "novice_workbench": {
+      "textures": "textures/blocks/novice_workbench"
+    },
+    "launch_pad": {
+      "textures": "textures/blocks/launch_pad"
+    },
+    "fuel_loader": {
+      "textures": "textures/blocks/fuel_loader"
+    },
+    "refinery": {
+      "textures": "textures/blocks/refinery"
+    },
+    "craft_station": {
+      "textures": "textures/blocks/craft_station"
+    },
+    "electric_compressor": {
+      "textures": "textures/blocks/electric_compressor"
+    },
+    "cog_assembler_off" : {
+      "textures" : "textures/blocks/cog_assembler_off"
+    },
+    "cog_assembler_on" : {
+      "textures" : "textures/blocks/cog_assembler_on"
+    },
+    "printer" : {
+      "textures" : "textures/blocks/printer"
+    },
+    "industrial_repairer_off" : {
+      "textures" : "textures/blocks/industrial_repairer_off"
+    },
+    "industrial_repairer_on" : {
+      "textures" : "textures/blocks/industrial_repairer_on"
+    },
+    "tool_repairer_off" : {
+      "textures" : "textures/blocks/tool_repairer_off"
+    },
+    "tool_repairer_on" : {
+      "textures" : "textures/blocks/tool_repairer_on"
+    },
+    "electric_charger_off" : {
+      "textures" : "textures/blocks/electric_charger_off"
+    },
+    "electric_charger_on" : {
+      "textures" : "textures/blocks/electric_charger_on"
+    },
+    "nuclear_reactor_hull": {
+      "textures": "textures/blocks/nuclear_reactor_hull"
+    },
+    "nuclear_reactor_glass": {
+      "textures": "textures/blocks/nuclear_reactor_glass"
+    },
+    "nuclear_reactor_heart": {
+      "textures": "textures/blocks/nuclear_reactor_heart"
+    },
+    "cooling_tower_concrete_1": {
+      "textures": "textures/blocks/cooling_tower_concrete_1"
+    },
+    "cooling_tower_concrete_2": {
+      "textures": "textures/blocks/cooling_tower_concrete_2"
+    },
+    "cooling_tower_concrete_3": {
+      "textures": "textures/blocks/cooling_tower_concrete_3"
+    },
+    "cooling_tower_concrete_4": {
+      "textures": "textures/blocks/cooling_tower_concrete_4"
+    },
+    "cooling_tower_concrete_5": {
+      "textures": "textures/blocks/cooling_tower_concrete_5"
+    },
+    "confinement_alloy": {
+      "textures": "textures/blocks/confinement_alloy"
+    },
+    "plasma_accumulator": {
+      "textures": "textures/blocks/plasma_accumulator"
+    },
+    "plasma_resonance": {
+      "textures": "textures/blocks/plasma_resonance"
+    }
+  }
+}

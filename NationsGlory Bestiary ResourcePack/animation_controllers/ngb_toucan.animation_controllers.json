@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ng.toucan.move": {
+      "initial_state": "ground_idle",
+      "states": {
+        "ground_idle": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "fly_idle": "v.ngb_flying"
+            },
+            {
+              "ground_move": "v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "ground_move": {
+          "animations": [
+            "move"
+          ],
+          "transitions": [
+            {
+              "fly_move": "v.ngb_flying"
+            },
+            {
+              "ground_idle": "!v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "fly_idle": {
+          "animations": [
+            "fly_idle"
+          ],
+          "transitions": [
+            {
+              "ground_idle": "!v.ngb_flying"
+            },
+            {
+              "fly_move": "v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        },
+        "fly_move": {
+          "animations": [
+            "fly_move"
+          ],
+          "transitions": [
+            {
+              "ground_idle": "!v.ngb_flying"
+            },
+            {
+              "fly_idle": "!v.ngb_moving"
+            }
+          ],
+          "blend_transition": 0.25
+        }
+      }
+    }
+  }
+}

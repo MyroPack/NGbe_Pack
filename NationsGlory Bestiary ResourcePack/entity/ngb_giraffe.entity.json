@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:giraffe",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/giraffe_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.giraffe"
+      },
+      "animations": {
+        "idle": "animation.ng.giraffe.idle",
+        "move": "animation.ng.giraffe.move",
+        "controller": "controller.animation.ng.giraffe.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.giraffe"
+      ],
+      "spawn_egg": {
+        "base_color": "#835740",
+        "overlay_color": "#be8e63"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "premium:paladin_nametag",
+      "materials": {
+        "default": "arrow"
+      },
+      "textures": {
+        "default": "textures/entity/nametag/paladin_nametag"
+      },
+      "geometry": {
+        "default": "geometry.nametag"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "scripts": {
+        "animate": [
+          "target"
+        ]
+      },
+      "animations": {
+        "target": "animation.nametag.target_rotation"
+      }
+    }
+  }
+}

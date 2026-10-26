@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.recubeicbm.weapon": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "reload": "c.owning_entity->query.mark_variant == 2"
+            },
+            {
+              "fire": "c.owning_entity->query.mark_variant == 1"
+            }
+          ]
+        },
+        "fire": {
+          "animations": [
+            "fire"
+          ],
+          "transitions": [
+            {
+              "reload": "c.owning_entity->query.mark_variant == 2"
+            },
+            {
+              "default": "c.owning_entity->query.mark_variant != 1"
+            }
+          ]
+        },
+        "reload": {
+          "animations": [
+            "reload"
+          ],
+          "transitions": [
+            {
+              "fire": "c.owning_entity->query.mark_variant == 1"
+            },
+            {
+              "default": "c.owning_entity->query.mark_variant != 2"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

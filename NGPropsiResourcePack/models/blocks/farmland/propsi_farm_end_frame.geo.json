@@ -1,0 +1,100 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_farm_end_frame",
+				"texture_width": 16,
+				"texture_height": 16
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								13,
+								16
+							],
+							"uv": {
+								"up": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									],
+									"material_instance": "up"
+								},
+								"down": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									],
+									"material_instance": "down"
+								},
+								"north": {
+									"uv": [
+										0,
+										3
+									],
+									"uv_size": [
+										16,
+										13
+									]
+								},
+								"south": {
+									"uv": [
+										0,
+										3
+									],
+									"uv_size": [
+										16,
+										13
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										3
+									],
+									"uv_size": [
+										16,
+										13
+									]
+								},
+								"west": {
+									"uv": [
+										0,
+										3
+									],
+									"uv_size": [
+										16,
+										13
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

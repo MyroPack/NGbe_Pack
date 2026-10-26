@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:manta_ray",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/manta_ray_0",
+        "v1": "textures/entity/ngb/manta_ray_1",
+        "v2": "textures/entity/ngb/manta_ray_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.manta_ray"
+      },
+      "animations": {
+        "idle": "animation.ng.manta_ray.idle",
+        "move": "animation.ng.manta_ray.move",
+        "controller": "controller.animation.ng.manta_ray.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.manta_ray"
+      ],
+      "spawn_egg": {
+        "base_color": "#495276",
+        "overlay_color": "#bcb0a6"
+      }
+    }
+  }
+}

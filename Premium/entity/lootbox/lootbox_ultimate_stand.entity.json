@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ngpremium:lootbox_ultimate_stand",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/lootbox/lootbox_ultimate_stand"
+      },
+      "animations": {
+        "wave": "animation.ng_lootbox_ultimate_stand"
+      },
+      "scripts": {
+        "animate": [
+          "wave"
+        ]
+      },
+      "geometry": {
+        "default": "geometry.ng_lootbox_ultimate_stand"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

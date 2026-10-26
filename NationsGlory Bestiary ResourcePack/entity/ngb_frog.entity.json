@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:frog",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/frog_0",
+        "v1": "textures/entity/ngb/frog_1",
+        "v2": "textures/entity/ngb/frog_2",
+        "v3": "textures/entity/ngb/frog_3",
+        "v4": "textures/entity/ngb/frog_4"
+      },
+      "geometry": {
+        "default": "geometry.ng.frog"
+      },
+      "animations": {
+        "idle": "animation.ng.frog.idle",
+        "move": "animation.ng.frog.move",
+        "controller": "controller.animation.ng.frog.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.frog"
+      ],
+      "spawn_egg": {
+        "base_color": "#4e9c46",
+        "overlay_color": "#428238"
+      }
+    }
+  }
+}

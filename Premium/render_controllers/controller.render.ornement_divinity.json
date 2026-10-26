@@ -1,0 +1,16 @@
+﻿{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ornement_divinity": {
+      "geometry": "Geometry.nametag",
+      "materials": [
+        {
+          "*": "Material.nametag"
+        }
+      ],
+      "textures": [
+        "Texture.better_divinity"
+      ]
+    }
+  }
+}

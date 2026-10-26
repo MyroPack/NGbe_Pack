@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:antimissile_turret",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/entity/turret"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.turret"
+      },
+      "animations": {
+        "idle": "animation.recubeicbm.turret.idle",
+        "state": "controller.animation.recubeicbm.turret"
+      },
+      "scripts": {
+        "animate": [
+          "state"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

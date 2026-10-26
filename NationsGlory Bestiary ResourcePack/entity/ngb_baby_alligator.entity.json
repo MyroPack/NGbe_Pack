@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_alligator",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_alligator_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_alligator"
+      },
+      "animations": {
+        "idle": "animation.ng.baby_alligator.idle",
+        "move": "animation.ng.baby_alligator.move",
+        "controller": "controller.animation.ng.baby_alligator.move",
+        "look": "animation.ng.baby_alligator.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_alligator"
+      ],
+      "spawn_egg": {
+        "base_color": "#313f29",
+        "overlay_color": "#635e49"
+      }
+    }
+  }
+}

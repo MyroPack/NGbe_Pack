@@ -1,0 +1,459 @@
+
+{
+  "namespace": "furnace",
+
+  "furnace_screen@common.inventory_screen_common": {
+    "$screen_bg_content": "common.screen_background",
+    "$screen_background_alpha": 0.5,
+    "$screen_content":"furnace.furnace_panel",
+    "button_mappings": "$screen_button_mappings",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnace.furnace_panel",
+        "$screen_background_alpha": 0.4,
+        "$screen_button_mappings": [
+          {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_inventory_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_up",
+            "to_button_id": "button.menu_up",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_down",
+            "to_button_id": "button.menu_down",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_left",
+            "to_button_id": "button.menu_left",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_right",
+            "to_button_id": "button.menu_right",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_secondary_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_back",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed",
+            "ignored": "(not $is_ps4)"
+          },
+          {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.clear_hotbar_or_drop",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_clear",
+            "to_button_id": "button.menu_clear",
+            "mapping_type": "focused"
+          },
+          {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_left",
+            "to_button_id": "button.layout_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_right",
+            "to_button_id": "button.layout_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_left",
+            "to_button_id": "button.shift_pane_focus",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_right",
+            "to_button_id": "button.clear_selected_recipe",
+            "mapping_type": "global"
+          }
+        ]
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace.furnace_panel",
+        "$screen_background_alpha": 0.4,
+        "$screen_button_mappings": [
+          {
+            "from_button_id": "button.menu_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_inventory_cancel",
+            "to_button_id": "button.menu_exit",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_up",
+            "to_button_id": "button.menu_up",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_down",
+            "to_button_id": "button.menu_down",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_left",
+            "to_button_id": "button.menu_left",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_right",
+            "to_button_id": "button.menu_right",
+            "mapping_type": "global",
+            "scope": "view"
+          },
+          {
+            "from_button_id": "button.menu_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_secondary_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_ok",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_back",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed",
+            "ignored": "(not $is_ps4)"
+          },
+          {
+            "from_button_id": "button.controller_select",
+            "to_button_id": "button.cursor_drop_one",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select",
+            "to_button_id": "button.cursor_drop_all",
+            "mapping_type": "pressed"
+          },
+          {
+            "from_button_id": "button.menu_tab_left",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_tab_right",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_left",
+            "to_button_id": "button.left_panel_tab_increment",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_alternate_tab_right",
+            "to_button_id": "button.left_panel_tab_decrement",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.controller_secondary_select_left",
+            "to_button_id": "button.controller_secondary_select_left",
+            "mapping_type": "global"
+          },
+          {
+            "from_button_id": "button.menu_clear",
+            "to_button_id": "button.menu_clear",
+            "mapping_type": "focused"
+          }
+        ]
+      }
+    ]
+  },
+
+  "flame_empty_image@ng_asset.icon_18": {
+    "layer": 2
+  },
+
+  "flame_full_image@ng_asset.icon_18": {
+    "layer": 3,
+    "clip_direction": "down",
+    "color":[1.000, 0.827, 0.392],
+    "bindings": [
+      {
+        "binding_name": "#furnace_flame_ratio",
+        "binding_name_override": "#clip_ratio",
+        "binding_condition": "always"
+      }
+  ]},
+
+  "furnace_panel": {
+    "type": "panel",
+    "controls": [
+
+            {"background@ng_asset.background_02":{
+              "size":[287,117], 
+              "controls":[
+
+                  {"stackpanel@ng_module.stackpanel":{ 
+                    "size":["100% - 2px","100% - 2px"], 
+                    "controls":[
+
+                  {"header@ng_asset.background_01":{
+                      "size": ["100%",20],
+                      "controls":[
+
+                                {"stack_panel@ng_module.stackpanel":{
+                                  "orientation":"horizontal",
+                                  "size":["100% - 4px","100% - 2px"],
+                                  "controls":[
+
+                                                            {"padding@ng_module.panel":{
+                                                                "size":[5,"100%"]
+                                                            }},
+
+                                                            {"centring@ng_module.panel":{
+                                                                "size":["100%c","100%"],
+                                                                "controls":[
+                                                                
+                                                                              {"title":{
+                                                                                "type":"label",
+                                                                                "font_scale_factor":0.8,
+                                                                                "layer":5,
+                                                                                "offset":[0,-1.3],
+                                                                                "font_type":"MinecraftTen",
+                                                                                "text":"Fourneau"
+                                                                              }}
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel":{
+                                                              "size":["fill","100%"]
+                                                            }},
+
+                                                            {"centring@ng_module.panel":{
+                                                              "size":["100%c","100%"],
+                                                              "controls":[
+
+                                                                    {"close_button@ng_module.close_button":{}}  
+
+                                                            ]}}
+                                ]}}
+                  ]}},
+
+                  {"content@ng_module.panel":{
+                    "size":["100%",100],
+                    "controls":[
+
+                        {"stackpnel@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 10px","100% - 10px"],
+                          "controls":[
+
+                                      {"inventory@ng_asset.background_white":{
+                                        "color":[0.180, 0.180, 0.192],
+                                        "size":[190,85],
+                                        "controls":[
+
+                                                          {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                            "size":[189,84],
+                                                            "offset":[0.5,0.5],
+                                                            "controls":[
+
+                                                                {"complementaroy@ng_module.grid_asset":{
+                                                                  "$size_grid":[189,63],
+                                                                  "$grid_dimensions":[9,3],
+                                                                  "layer":0,
+                                                                  "$collection_name":"inventory_items",
+                                                                  "$item_renderer_panel_size":[20,20],
+                                                                  "$cell_image_size":[20,20],
+                                                                  "$textures_slot_hover":"ng_asset.background_10",
+                                                                  "$textures_slot_default":"ng_asset.background_white",
+                                                                  "$color_background_default":[0.094, 0.094, 0.106],
+                                                                  "$slot_size":[20,20]
+                                                                }},
+
+                                                                {"complementaroy@ng_module.grid_asset":{
+                                                                  "$size_grid":[189,21],
+                                                                  "$grid_dimensions":[9,1],
+                                                                  "layer":0,
+                                                                  "$collection_name":"hotbar_items",
+                                                                  "$item_renderer_panel_size":[20,20],
+                                                                  "$cell_image_size":[20,20],
+                                                                  "$textures_slot_hover":"ng_asset.background_10",
+                                                                  "$textures_slot_default":"ng_asset.background_white",
+                                                                  "$color_background_default":[0.094, 0.094, 0.106],
+                                                                  "$slot_size":[20,20]
+                                                                }}
+                                                          ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": [5, "100%"]
+                                      }},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "size": ["100% - 195px","100% - 5px"],
+                                        "controls":[
+
+                                            {"header@ng_asset.background_12":{
+                                              "size": ["100%",15],
+                                              "controls":[
+
+                                                        {"stack_panel@ng_module.stackpanel":{
+                                                          "orientation":"horizontal",
+                                                          "size":["100% - 4px","100% - 2px"],
+                                                          "controls":[
+
+                                                                      {"padding@ng_module.panel":{
+                                                                        "size":[5,"100%"]
+                                                                      }},
+
+                                                                      {"centring@ng_module.panel":{
+                                                                        "size":["100%c","100%"],
+                                                                        "controls":[
+                                                                                        
+                                                                                  {"title":{
+                                                                                    "type":"label",
+                                                                                    "font_scale_factor":0.7,
+                                                                                    "layer":5,
+                                                                                    "offset":[0,-1],
+                                                                                    "font_type":"MinecraftTen",
+                                                                                    "text":"Fourneau"
+                                                                                    }}
+                                                                      ]}}                 
+                                                        ]}}
+                                            ]}},
+
+                                            {"content@ng_asset.background_11":{
+                                              "size":["100%","100% - 15px"],
+                                              "controls":[
+
+                                                {"stack_panel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 10px","100% - 10px"], 
+                                                  "controls":[
+
+                                                          {"stackpane@ng_module.stackpanel":{
+                                                            "size":["100%cm","100%"],
+                                                            "controls":[
+
+                                                                {"slot@furnace.custome_slot":{
+                                                                  "$item_collection_name":"furnace_ingredient_items"
+                                                                }},
+
+                                                                {"padding@ng_module.panel": {
+                                                                  "size": [21, "fill"],
+                                                                  "controls":[
+
+                                                                      {"flame_panel": {
+                                                                        "type": "panel",
+                                                                        "size": [ 15, 15 ],
+                                                                        "controls": [
+
+                                                                            {"flame_empty_image@furnace.flame_empty_image": {}},
+                                                                            {"flame_full_image@furnace.flame_full_image": {}}
+                                                                      ]}}
+
+                                                                ]}},
+
+                                                                {"slot@furnace.custome_slot":{
+                                                                  "$item_collection_name":"furnace_fuel_items"
+                                                                }}
+                                                          ]}},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": ["fill", "100%"],
+                                                            "controls":[
+
+                                                                      {"icone@ng_asset.icon_17":{
+                                                                        "size":[15,15]
+                                                                      }}
+                                                          ]}},
+
+                                                          {"stackpane@ng_module.stackpanel":{
+                                                            "size":["100%cm","100%"],
+                                                            "controls":[
+
+                                                                {"center@ng_module.panel": {
+                                                                  "size": ["100%c", "100%"],
+                                                                  "controls":[
+
+                                                                    {"slot_sortie@furnace.custome_slot":{
+                                                                      "$item_collection_name":"furnace_output_items"
+                                                                    }}
+
+
+                                                                ]}}
+
+                                                          ]}}
+                                                ]}}
+
+                                            ]}}
+
+                                      ]}}
+                        ]}}
+                  ]}}
+                  ]}}
+            ]}}
+  ]},
+
+  "custome_slot@ng_module.container_item":{
+    "collection_index":"$index",
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[21,21],
+    "$cell_image_size":[21,21],
+    "layer":5,
+    "$textures_slot_hover":"ng_asset.background_10",
+    "$textures_slot_default":"ng_asset.background_09",
+    "$slot_size":[21,21]
+  }
+}

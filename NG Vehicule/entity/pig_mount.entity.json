@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:pig_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/pig_mount"
+			},
+			"geometry": {
+				"default": "geometry.pig_mount"
+			},
+			"animations": {
+				"moving": "animation.pig_mount.walk",
+				"idle": "animation.pig_mount.idle",
+				"main": "controller.animation.mount.general"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.moving = query.modified_move_speed > 0.05 || query.vertical_speed > 0.05;",
+					"variable.xTargetRot = math.clamp(query.target_x_rotation, -30, 30);",
+					"variable.xHeadRot = variable.xTargetRot;",
+					"variable.yHeadRot = math.clamp(query.target_y_rotation, -30, 30);"
+				],
+				"animate": [
+					"main",
+					"idle"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

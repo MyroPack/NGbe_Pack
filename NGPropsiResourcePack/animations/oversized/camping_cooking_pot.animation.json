@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.propsi_camping_cooking_pot.idle": {
+      "loop": true,
+      "animation_length": 6,
+      "bones": {
+        "group3": {
+          "rotation": [
+            "-0-math.sin(query.life_time*60)*5",
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

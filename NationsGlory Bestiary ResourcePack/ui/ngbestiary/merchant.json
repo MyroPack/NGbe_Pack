@@ -1,0 +1,4313 @@
+{
+ "namespace": "ngmerchant",
+ "item_slot": {
+  "type": "collection_panel",
+  "collection_name": "container_items",
+  "$index|default": 0,
+  "controls": [
+   {
+    "cell": {
+     "type": "panel",
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "collection_index": "$index",
+     "controls": [
+      {
+       "renderer": {
+        "type": "custom",
+        "renderer": "inventory_item_renderer",
+        "size": [
+         "100% - 2px",
+         "100% - 2px"
+        ],
+        "layer": 1,
+        "bindings": [
+         {
+          "binding_type": "collection_details",
+          "binding_collection_name": "container_items"
+         },
+         {
+          "binding_name": "#item_renderer_data",
+          "binding_type": "collection",
+          "binding_collection_name": "container_items"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "row0_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 26,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 29,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row0_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 27,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 30,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row0_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 28,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 31,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row0": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row0_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 29,
+        "controls": [
+         {
+          "row0_give0_box@ngmerchant.row0_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row0_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 30,
+        "controls": [
+         {
+          "row0_give1_box@ngmerchant.row0_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row0_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 31,
+        "controls": [
+         {
+          "row0_give2_box@ngmerchant.row0_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 32,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 33,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 34,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 35,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "row1_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 36,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 39,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row1_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 37,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 40,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row1_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 38,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 41,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row1": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row1_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 39,
+        "controls": [
+         {
+          "row1_give0_box@ngmerchant.row1_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row1_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 40,
+        "controls": [
+         {
+          "row1_give1_box@ngmerchant.row1_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row1_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 41,
+        "controls": [
+         {
+          "row1_give2_box@ngmerchant.row1_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 42,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 43,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 44,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 45,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "row2_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 46,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 49,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row2_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 47,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 50,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row2_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 48,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 51,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row2": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row2_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 49,
+        "controls": [
+         {
+          "row2_give0_box@ngmerchant.row2_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row2_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 50,
+        "controls": [
+         {
+          "row2_give1_box@ngmerchant.row2_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row2_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 51,
+        "controls": [
+         {
+          "row2_give2_box@ngmerchant.row2_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 52,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 53,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 54,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 55,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "row3_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 56,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 59,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row3_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 57,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 60,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row3_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 58,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 61,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row3": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row3_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 59,
+        "controls": [
+         {
+          "row3_give0_box@ngmerchant.row3_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row3_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 60,
+        "controls": [
+         {
+          "row3_give1_box@ngmerchant.row3_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row3_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 61,
+        "controls": [
+         {
+          "row3_give2_box@ngmerchant.row3_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 62,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 63,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 64,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 65,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "row4_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 66,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 69,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row4_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 67,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 70,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row4_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 68,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 71,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row4": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row4_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 69,
+        "controls": [
+         {
+          "row4_give0_box@ngmerchant.row4_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row4_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 70,
+        "controls": [
+         {
+          "row4_give1_box@ngmerchant.row4_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row4_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 71,
+        "controls": [
+         {
+          "row4_give2_box@ngmerchant.row4_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 72,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 73,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 74,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 75,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "row5_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 76,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 79,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row5_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 77,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 80,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row5_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   20.302
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 78,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 81,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      14.839
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "row5": {
+  "type": "panel",
+  "size": [
+   280.531,
+   23.993
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/row",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row5_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 79,
+        "controls": [
+         {
+          "row5_give0_box@ngmerchant.row5_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      3.691,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row5_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 80,
+        "controls": [
+         {
+          "row5_give1_box@ngmerchant.row5_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      26.761,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "row5_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 81,
+        "controls": [
+         {
+          "row5_give2_box@ngmerchant.row5_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      49.831,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      74.747,
+      9.228
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive@ngmerchant.item_slot": {
+     "$index": 82,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      1.846
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "receive_count@ngbestiary.slot_text": {
+     "$index": 83,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102.431,
+      16.684
+     ],
+     "size": [
+      20.302,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   },
+   {
+    "label@ngbestiary.slot_text": {
+     "$index": 84,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      9.551
+     ],
+     "size": [
+      70.133,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "open@ngbestiary.slot_click": {
+     "$index": 85,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      204.862,
+      6.921
+     ],
+     "size": [
+      70.133,
+      10.151
+     ]
+    }
+   }
+  ]
+ },
+ "list_page": {
+  "type": "panel",
+  "size": [
+   442.944,
+   249.156
+  ],
+  "controls": [
+   {
+    "paper@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/list",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      73.824,
+      27.684
+     ],
+     "size": [
+      295.296,
+      193.788
+     ]
+    }
+   },
+   {
+    "icon@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/icon",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      35.066
+     ],
+     "size": [
+      7.382,
+      7.382
+     ]
+    }
+   },
+   {
+    "title@ngbestiary.fixed_text": {
+     "$key": "ngmerchant.title",
+     "$font": "MinecraftTen",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      91.357,
+      34.181
+     ],
+     "size": [
+      203.016,
+      10.154
+     ],
+     "$scale": 0.738,
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ],
+     "$label_size": [
+      "default",
+      "default"
+     ]
+    }
+   },
+   {
+    "rule@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/rule",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      47.063
+     ],
+     "size": [
+      280.531,
+      0.923
+     ]
+    }
+   },
+   {
+    "close@common.button": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      352.51,
+      33.221
+     ],
+     "size": [
+      11.074,
+      11.074
+     ],
+     "layer": 40,
+     "$pressed_button_name": "button.menu_exit",
+     "controls": [
+      {
+       "default": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      },
+      {
+       "hover": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close_hover",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      },
+      {
+       "pressed": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close_hover",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "row0_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 34,
+        "controls": [
+         {
+          "row0@ngmerchant.row0": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      51.677
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row1_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 44,
+        "controls": [
+         {
+          "row1@ngmerchant.row1": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      78.438
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row2_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 54,
+        "controls": [
+         {
+          "row2@ngmerchant.row2": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      105.199
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row3_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 64,
+        "controls": [
+         {
+          "row3@ngmerchant.row3": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      131.96
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row4_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 74,
+        "controls": [
+         {
+          "row4@ngmerchant.row4": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      158.722
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   },
+   {
+    "row5_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 84,
+        "controls": [
+         {
+          "row5@ngmerchant.row5": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      81.206,
+      185.483
+     ],
+     "size": [
+      280.531,
+      23.993
+     ]
+    }
+   }
+  ]
+ },
+ "counter_box": {
+  "type": "panel",
+  "size": [
+   51.677,
+   9.228
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/counter",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      51.677,
+      9.228
+     ]
+    }
+   },
+   {
+    "text@ngbestiary.slot_text": {
+     "$index": 11,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      1.846,
+      2.169
+     ],
+     "size": [
+      47.986,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "detail_give0_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   28.607
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 18,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 21,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      -3.691,
+      21.298
+     ],
+     "size": [
+      27.684,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "detail_give1_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   28.607
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 19,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 22,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      -3.691,
+      21.298
+     ],
+     "size": [
+      27.684,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "detail_give2_box": {
+  "type": "panel",
+  "size": [
+   20.302,
+   28.607
+  ],
+  "controls": [
+   {
+    "back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "item@ngmerchant.item_slot": {
+     "$index": 20,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      0.0,
+      0.0
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "count@ngbestiary.slot_text": {
+     "$index": 23,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      -3.691,
+      21.298
+     ],
+     "size": [
+      27.684,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   }
+  ]
+ },
+ "detail_page": {
+  "type": "panel",
+  "size": [
+   442.944,
+   249.156
+  ],
+  "controls": [
+   {
+    "paper@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/detail",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      101.508,
+      53.522
+     ],
+     "size": [
+      239.928,
+      142.111
+     ]
+    }
+   },
+   {
+    "icon@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/icon",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      108.89,
+      60.905
+     ],
+     "size": [
+      7.382,
+      7.382
+     ]
+    }
+   },
+   {
+    "title@ngbestiary.fixed_text": {
+     "$key": "ngmerchant.title",
+     "$font": "MinecraftTen",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      119.041,
+      60.019
+     ],
+     "size": [
+      147.648,
+      10.154
+     ],
+     "$scale": 0.738,
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ],
+     "$label_size": [
+      "default",
+      "default"
+     ]
+    }
+   },
+   {
+    "rule@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/rule",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      108.89,
+      72.901
+     ],
+     "size": [
+      225.163,
+      0.923
+     ]
+    }
+   },
+   {
+    "close@common.button": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      324.826,
+      59.059
+     ],
+     "size": [
+      11.074,
+      11.074
+     ],
+     "layer": 40,
+     "$pressed_button_name": "button.menu_exit",
+     "controls": [
+      {
+       "default": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      },
+      {
+       "hover": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close_hover",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      },
+      {
+       "pressed": {
+        "type": "image",
+        "texture": "textures/ui/ngbestiary/close_hover",
+        "size": [
+         "100%",
+         "100%"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "counter_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 11,
+        "controls": [
+         {
+          "counter_box@ngmerchant.counter_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      269.458,
+      59.982
+     ],
+     "size": [
+      51.677,
+      9.228
+     ]
+    }
+   },
+   {
+    "portrait_frame@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/portrait",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      110.736,
+      78.438
+     ],
+     "size": [
+      29.53,
+      29.53
+     ]
+    }
+   },
+   {
+    "portrait@ngbestiary.slot_image": {
+     "$index": 12,
+     "$image_layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      112.582,
+      80.284
+     ],
+     "size": [
+      25.838,
+      25.838
+     ]
+    }
+   },
+   {
+    "speech@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/speech",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      145.802,
+      77.515
+     ],
+     "size": [
+      186.406,
+      33.221
+     ]
+    }
+   },
+   {
+    "name@ngbestiary.slot_text": {
+     "$index": 13,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      151.339,
+      81.668
+     ],
+     "size": [
+      83.052,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ],
+     "$label_size": [
+      "default",
+      "default"
+     ]
+    }
+   },
+   {
+    "job_icon@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/job",
+     "layer": 4,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      267.612,
+      80.745
+     ],
+     "size": [
+      4.614,
+      4.614
+     ]
+    }
+   },
+   {
+    "job@ngbestiary.slot_text": {
+     "$index": 14,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      274.072,
+      81.668
+     ],
+     "size": [
+      55.368,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$color": [
+      0.702,
+      0.584,
+      0.502
+     ],
+     "$label_size": [
+      "default",
+      "default"
+     ]
+    }
+   },
+   {
+    "dialogue@ngbestiary.slot_text": {
+     "$index": 15,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      151.339,
+      89.973
+     ],
+     "size": [
+      175.332,
+      14.842
+     ],
+     "$scale": 0.461,
+     "$color": [
+      0.541,
+      0.404,
+      0.361
+     ]
+    }
+   },
+   {
+    "trade_box@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/trade_box",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      110.736,
+      116.273
+     ],
+     "size": [
+      221.472,
+      71.978
+     ]
+    }
+   },
+   {
+    "detail_give0_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 21,
+        "controls": [
+         {
+          "detail_give0_box@ngmerchant.detail_give0_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      161.49,
+      121.81
+     ],
+     "size": [
+      20.302,
+      28.607
+     ]
+    }
+   },
+   {
+    "detail_give1_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 22,
+        "controls": [
+         {
+          "detail_give1_box@ngmerchant.detail_give1_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      185.483,
+      121.81
+     ],
+     "size": [
+      20.302,
+      28.607
+     ]
+    }
+   },
+   {
+    "detail_give2_box_slot": {
+     "type": "collection_panel",
+     "collection_name": "container_items",
+     "controls": [
+      {
+       "cell": {
+        "type": "collection_panel",
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "collection_index": 23,
+        "controls": [
+         {
+          "detail_give2_box@ngmerchant.detail_give2_box": {
+           "bindings": [
+            {
+             "binding_type": "collection",
+             "binding_collection_name": "container_items",
+             "binding_name": "#hover_text",
+             "binding_name_override": "#hover_text"
+            },
+            {
+             "binding_type": "view",
+             "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+             "target_property_name": "#visible"
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ],
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      209.476,
+      121.81
+     ],
+     "size": [
+      20.302,
+      28.607
+     ]
+    }
+   },
+   {
+    "detail_arrow@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/arrow",
+     "layer": 2,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      233.468,
+      129.192
+     ],
+     "size": [
+      23.993,
+      5.537
+     ]
+    }
+   },
+   {
+    "detail_receive_back@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/slot",
+     "layer": 1,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      261.152,
+      121.81
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "detail_receive@ngmerchant.item_slot": {
+     "$index": 24,
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      261.152,
+      121.81
+     ],
+     "size": [
+      20.302,
+      20.302
+     ]
+    }
+   },
+   {
+    "detail_receive_count@ngbestiary.slot_text": {
+     "$index": 25,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      257.461,
+      143.108
+     ],
+     "size": [
+      27.684,
+      4.691
+     ],
+     "$scale": 0.369,
+     "$align": "center",
+     "$color": [
+      0.302,
+      0.208,
+      0.2
+     ]
+    }
+   },
+   {
+    "button@ngbestiary.picture": {
+     "$texture": "textures/ui/ngbestiary/merchant/button_wide",
+     "layer": 3,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      118.118,
+      171.641
+     ],
+     "size": [
+      206.707,
+      11.074
+     ]
+    }
+   },
+   {
+    "trade_label@ngbestiary.slot_text": {
+     "$index": 16,
+     "$font": "default",
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      118.118,
+      174.732
+     ],
+     "size": [
+      206.707,
+      5.614
+     ],
+     "$scale": 0.461,
+     "$align": "center",
+     "$color": [
+      0.988,
+      0.922,
+      0.725
+     ]
+    }
+   },
+   {
+    "trade@ngbestiary.slot_click": {
+     "$index": 17,
+     "$hover_texture": "textures/ui/ngbestiary/merchant/button_wide_hover",
+     "$pressed_texture": "textures/ui/ngbestiary/merchant/button_wide_pressed",
+     "$hover_slice": 0,
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      118.118,
+      171.641
+     ],
+     "size": [
+      206.707,
+      11.074
+     ]
+    }
+   }
+  ]
+ },
+ "main_panel": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "veil": {
+     "type": "image",
+     "texture": "textures/ui/ngbestiary/veil",
+     "alpha": 0.6,
+     "size": [
+      4096,
+      4096
+     ],
+     "layer": 1,
+     "controls": [
+      {
+       "stage": {
+        "type": "panel",
+        "size": [
+         442.944,
+         249.156
+        ],
+        "layer": 2,
+        "controls": [
+         {
+          "pages": {
+           "type": "collection_panel",
+           "collection_name": "container_items",
+           "controls": [
+            {
+             "cell": {
+              "type": "collection_panel",
+              "size": [
+               "100%",
+               "100%"
+              ],
+              "collection_index": 10,
+              "controls": [
+               {
+                "list_page@ngmerchant.list_page": {
+                 "bindings": [
+                  {
+                   "binding_type": "collection",
+                   "binding_collection_name": "container_items",
+                   "binding_name": "#hover_text",
+                   "binding_name_override": "#hover_text"
+                  },
+                  {
+                   "binding_type": "view",
+                   "source_property_name": "(not ((#hover_text - '1') = #hover_text))",
+                   "target_property_name": "#visible"
+                  }
+                 ]
+                }
+               },
+               {
+                "detail_page@ngmerchant.detail_page": {
+                 "bindings": [
+                  {
+                   "binding_type": "collection",
+                   "binding_collection_name": "container_items",
+                   "binding_name": "#hover_text",
+                   "binding_name_override": "#hover_text"
+                  },
+                  {
+                   "binding_type": "view",
+                   "source_property_name": "(not ((#hover_text - '2') = #hover_text))",
+                   "target_property_name": "#visible"
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            }
+           ],
+           "anchor_from": "top_left",
+           "anchor_to": "top_left",
+           "offset": [
+            0.0,
+            0.0
+           ],
+           "size": [
+            442.944,
+            249.156
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

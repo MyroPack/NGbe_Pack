@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:radioactive_collector_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/radioactive_collector"
+      },
+      "geometry": {
+        "default": "geometry.ng_radioactive_collector"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

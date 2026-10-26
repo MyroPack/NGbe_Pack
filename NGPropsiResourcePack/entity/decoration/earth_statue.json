@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:earth_statue",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/decoration/earth_statue"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_earth_statue"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

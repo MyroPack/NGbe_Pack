@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:liquid_azote_generator_display_on",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/liquid_azote_generator"
+      },
+      "geometry": {
+        "default": "geometry.ng_liquid_azote_generator"
+      },
+      "animations": {
+        "loop": "animation.ng_liquid_azote_generator.work"
+      },
+      "scripts": {
+        "animate": [
+          "loop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

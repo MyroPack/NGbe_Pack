@@ -1,0 +1,51 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.stone_wall_corner",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone2",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [-4, 3, -4], "size": [8, 9, 8], "uv": [0, 31]},
+						{"origin": [-5, 0, -5], "size": [10, 3, 10], "uv": [0, 17]},
+						{
+							"origin": [-8, 12, -6],
+							"size": [14, 4, 12],
+							"uv": {
+								"north": {"uv": [45, 55], "uv_size": [14, 4]},
+								"east": {"uv": [0, 60], "uv_size": [12, 4]},
+								"south": {"uv": [45, 55], "uv_size": [14, 4]},
+								"west": {"uv": [45, 55], "uv_size": [12, 4]},
+								"up": {"uv": [12, 48], "uv_size": [16, 12]},
+								"down": {"uv": [28, 60], "uv_size": [16, -12]}
+							}
+						},
+						{
+							"origin": [6, 12, -6],
+							"size": [2, 4, 12],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
+							"uv": {
+								"north": {"uv": [57, 55], "uv_size": [2, 4]},
+								"east": {"uv": [28, 12], "uv_size": [12, 4]},
+								"south": {"uv": [45, 55], "uv_size": [2, 4]},
+								"west": {"uv": [28, 60], "uv_size": [12, 4]},
+								"up": {"uv": [14, 0], "uv_size": [-2, 12]},
+								"down": {"uv": [41, 12], "uv_size": [2, -12]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

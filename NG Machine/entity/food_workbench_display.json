@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:food_workbench_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/food_workbench"
+			},
+			"geometry": {
+				"default": "geometry.food_workbench"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:flamingo",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/flamingo_0",
+        "v1": "textures/entity/ngb/flamingo_1",
+        "v2": "textures/entity/ngb/flamingo_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.flamingo"
+      },
+      "animations": {
+        "idle": "animation.ng.flamingo.idle",
+        "move": "animation.ng.flamingo.move",
+        "controller": "controller.animation.ng.flamingo.move",
+        "look": "animation.ng.flamingo.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.flamingo"
+      ],
+      "spawn_egg": {
+        "base_color": "#b06c72",
+        "overlay_color": "#e38c98"
+      }
+    }
+  }
+}

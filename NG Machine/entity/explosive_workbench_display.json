@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:explosive_workbench_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ng_explosive_workbench"
+			},
+			"geometry": {
+				"default": "geometry.ng_explosive_workbench"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

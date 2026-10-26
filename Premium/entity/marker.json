@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ngpremium:marker",
+			"materials": {
+				"default": "map_marker"
+			},
+			"textures": {
+				"autel": "textures/entity/marker/autel",
+				"colis": "textures/entity/marker/colis",
+				"zone": "textures/entity/marker/zone",
+				"boss": "textures/entity/marker/boss",
+				"location": "textures/entity/marker/location",
+				"basic": "textures/entity/marker/basic",
+				"atlas": "textures/entity/marker/atlas",
+				"postman": "textures/entity/marker/postman",
+				"skye": "textures/entity/marker/skye",
+				"wiki": "textures/entity/marker/wiki",
+				"shop": "textures/entity/marker/shop",
+				"market": "textures/entity/marker/market",
+				"science": "textures/entity/marker/science",
+				"science_holo": "textures/entity/marker/science_holo",
+				"cosmerio": "textures/entity/marker/cosmerio",
+				"onboarding": "textures/entity/marker/onboarding",
+				"hazardio": "textures/entity/marker/hazardio",
+				"military": "textures/entity/marker/military",
+				"pierre": "textures/entity/marker/pierre",
+				"pirate": "textures/entity/marker/pirate",
+				"patrick": "textures/entity/marker/patrick",
+				"elf_red": "textures/entity/marker/elf_red",
+				"elf_green": "textures/entity/marker/elf_green"
+			},
+			"geometry": {
+				"default": "geometry.ngpremium_marker"
+			},
+			"animations": {
+				"face_camera": "animation.ngpremium_marker.face_camera"
+			},
+			"scripts": {
+				"animate": [
+					"face_camera"
+				]
+			},
+			"render_controllers": [
+				"controller.render.ngpremium_marker"
+			]
+		}
+	}
+}

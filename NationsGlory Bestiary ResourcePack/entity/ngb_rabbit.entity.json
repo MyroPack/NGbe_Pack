@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:rabbit",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/rabbit_0",
+        "v1": "textures/entity/ngb/rabbit_1",
+        "v2": "textures/entity/ngb/rabbit_2",
+        "v3": "textures/entity/ngb/rabbit_3",
+        "v4": "textures/entity/ngb/rabbit_4"
+      },
+      "geometry": {
+        "default": "geometry.ng.rabbit"
+      },
+      "animations": {
+        "idle": "animation.ng.rabbit.idle",
+        "move": "animation.ng.rabbit.move",
+        "controller": "controller.animation.ng.rabbit.move",
+        "look": "animation.ng.rabbit.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.rabbit"
+      ],
+      "spawn_egg": {
+        "base_color": "#a1977f",
+        "overlay_color": "#897762"
+      }
+    }
+  }
+}

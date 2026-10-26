@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:jellyfish",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/jellyfish_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.jellyfish"
+      },
+      "animations": {
+        "idle": "animation.ng.jellyfish.idle",
+        "move": "animation.ng.jellyfish.move",
+        "fly_idle": "animation.ng.jellyfish.fly_idle",
+        "fly_move": "animation.ng.jellyfish.fly_move",
+        "controller": "controller.animation.ng.jellyfish.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.jellyfish"
+      ],
+      "spawn_egg": {
+        "base_color": "#d9cff8",
+        "overlay_color": "#dc8be6"
+      }
+    }
+  }
+}

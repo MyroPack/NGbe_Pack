@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_blue_flag_garland",
+				"texture_width": 64,
+				"texture_height": 64
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{
+							"origin": [-7, -6, 0],
+							"size": [14, 19, 0.05],
+							"uv": {
+								"north": {
+									"uv": [0.1, 0.1],
+									"uv_size": [28.0, 38.0]
+								},
+								"east": {
+									"uv": [0.0, 0.1],
+									"uv_size": [0.1, 38.0]
+								},
+								"west": {
+									"uv": [28.1, 0.1],
+									"uv_size": [0.1, 38.0]
+								},
+								"south": {
+									"uv": [28.2, 0.1],
+									"uv_size": [28.0, 38.0]
+								},
+								"up": {
+									"uv": [0.1, 0.0],
+									"uv_size": [28.0, 0.1]
+								},
+								"down": {
+									"uv": [28.1, 0.1],
+									"uv_size": [28.0, -0.1]
+								}
+							}
+						},
+						{
+							"origin": [-8, 11, 0],
+							"size": [16, 6, 0.1],
+							"uv": {
+								"north": {
+									"uv": [0.2, 40.2],
+									"uv_size": [32.0, 12.0]
+								},
+								"east": {
+									"uv": [0.0, 40.2],
+									"uv_size": [0.2, 12.0]
+								},
+								"west": {
+									"uv": [32.2, 40.2],
+									"uv_size": [0.2, 12.0]
+								},
+								"south": {
+									"uv": [32.4, 40.2],
+									"uv_size": [32.0, 12.0]
+								},
+								"up": {
+									"uv": [0.2, 40.0],
+									"uv_size": [32.0, 0.2]
+								},
+								"down": {
+									"uv": [32.2, 40.2],
+									"uv_size": [32.0, -0.2]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

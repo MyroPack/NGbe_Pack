@@ -1,0 +1,67 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_oak_sign_3x2_display",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1.66, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [-8.07143, -0.25, -7.72143],
+					"cubes": [
+						{
+							"origin": [-28, 0, -10.1],
+							"size": [4, 53, 4],
+							"pivot": [-26, 34, -8.1],
+							"rotation": [0, 180, 0],
+							"uv": [0, 157]
+						},
+						{
+							"origin": [24, 0, -10.1],
+							"size": [4, 53, 4],
+							"pivot": [26, 34, -8.1],
+							"rotation": [0, -180, 0],
+							"uv": [0, 157],
+							"mirror": true
+						},
+						{
+							"origin": [-26, 47.9, -9.1],
+							"size": [50, 4, 2],
+							"uv": [19, 181]
+						},
+						{
+							"origin": [-26, 11.9, -9.1],
+							"size": [50, 4, 2],
+							"uv": [19, 181]
+						},
+						{
+							"origin": [-26, 4.9, -9.1],
+							"size": [50, 4, 2],
+							"uv": [19, 181]
+						},
+						{
+							"origin": [-24, 16, -8],
+							"size": [48, 32, 0.5],
+							"uv": {
+								"north": {
+									"uv": [67, 108],
+									"uv_size": [48, 32]
+								},
+								"south": {
+									"uv": [67, 108],
+									"uv_size": [48, 32]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

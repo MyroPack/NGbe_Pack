@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:phantom_reaper",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/phantom_reaper_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.phantom_reaper"
+      },
+      "animations": {
+        "idle": "animation.ng.phantom_reaper.idle",
+        "move": "animation.ng.phantom_reaper.move",
+        "attack": "animation.ng.phantom_reaper.attack",
+        "controller": "controller.animation.ng.phantom_reaper.move",
+        "look": "animation.ng.phantom_reaper.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.phantom_reaper"
+      ],
+      "spawn_egg": {
+        "base_color": "#534543",
+        "overlay_color": "#3a2d2c"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ngpremium:assault_package",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/assault_package"
+			},
+			"geometry": {
+				"default": "geometry.ngpremium.assault_package"
+			},
+			"animations": {
+				"sky": "animation.ngpremium.assault_package.sky",
+				"start_floor": "animation.ngpremium.assault_package.start_floor",
+				"floor": "animation.ngpremium.assault_package.floor",
+				"state": "controller.animation.ngpremium.assault_package"
+			},
+			"scripts": {
+				"animate": [
+					"state"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

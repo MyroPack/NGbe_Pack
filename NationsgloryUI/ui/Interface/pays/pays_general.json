@@ -1,0 +1,2314 @@
+{
+    "namespace": "pays_general",
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Drapeau du pays
+    //
+    // ------------------------------------------------------------------------
+    // Le drapeau du pays dans son cadre, pour les deux ecrans d'information generale.
+    // NGCountryMod ecrit dans la case $index le chemin de la texture du drapeau
+    // (textures/ui/country_flags/<code du caractere du pays>), lu par ng_module.icone
+    // apres les 90 premiers octets du nom, comme les icones de recettes des ateliers.
+    // Un pays sans drapeau laisse le cadre vide. Les textures font 26 x 13 : a 39 x 19.5
+    // un pixel du drapeau fait 1.5 unite d'interface. Personne ne choisit ce drapeau.
+
+    "country_flag@ng_module.panel":{
+      "$index|default": 18,
+      "size":[41,22],
+      "controls":[
+
+          {"frame@ng_asset.background_09":{
+            "size":[41,21.5],
+            "controls":[
+
+                {"flag@ng_module.icone":{
+                  "size":[39,19.5],
+                  "$Get_text_type":"Get_text_type_2"
+                }}
+          ]}}
+    ]},
+
+    // Le drapeau du pays en fond de tout le bloc d'information de l'onglet Menu.
+    // NGCountryMod ecrit dans la case $index le chemin du fond du pays
+    // (textures/ui/country_flag_backgrounds/<code>), lu comme le petit drapeau. L'image
+    // fait 262 x 58 : le drapeau etire aux proportions du bloc, lisse, et deja assombri
+    // par son voile (dense a gauche sous les textes, plus leger au centre). Elle est
+    // dessinee a la couche 5 : le contenu du bloc doit etre au-dessus (couche 10).
+    // Un pays sans drapeau, ou un mod qui n'ecrit pas cette case, garde le fond uni.
+
+    "country_flag_background@ng_module.icone":{
+      "$index|default": 44,
+      "$Get_text_type":"Get_text_type_2",
+      "size":["100%","100%"]
+    },
+
+    // Le buste du chef du pays, a plat et de face, au milieu du bloc d'information de l'onglet
+    // Menu. L'ecran ne sait pas dessiner une image fabriquee par le serveur : NGCountryMod ecrit
+    // le buste comme du texte, une ligne par case (cases 54 a 72, de haut en bas : 8 lignes de
+    // tete puis 11 lignes de corps) et un caractere par pixel de la peau. Les caracteres sont les
+    // carres de couleur de font/glyph_E3, E5, E7, E9, EA, EB, EC, ED et EF
+    // (tools/chief_bust/palette_glyphs.py). Chaque ligne est affichee telle quelle : aucune
+    // operation sur le texte. Un pays dont le serveur ne connait pas la peau du chef, ou un mod
+    // qui n'ecrit pas ces cases, ne dessine rien.
+    //
+    // Le buste est pose en bas du bloc, au milieu : 19 lignes de 3 unites, 57 de haut. Une ligne
+    // de tete (8 caracteres) est centree au-dessus d'une ligne de corps (16, ou 14 a bras fins).
+    //
+    // Taille d'un pixel de peau, reglee sur le vrai client (1.26.52) : sa hauteur est celle de la
+    // ligne, 3 unites ; sa largeur vient de la police. A l'echelle de texte 0,2 la tete (8
+    // caracteres) est aussi large qu'un carre de 24 unites : un carre de couleur, case pleine de
+    // 16 pixels d'une page de 256, avance donc d'environ 15 unites a l'echelle 1 (juge a l'oeil
+    // contre une mire, a 5 % pres ; 17 etait suppose, qui donnait un buste trop etroit).
+    // Chaque ligne est dessinee quatre fois, les copies decalees de 0,25 unite, pour qu'aucun
+    // lisere ne se voie entre les carres.
+
+    "chief_bust_text@ng_module.Get_text_type_1": {
+      "type": "label",
+      "text": "#text",
+      "font_type": "default",
+      "font_scale_factor": 0.2,
+      "localize": false,
+      "shadow": false,
+      "color": [1, 1, 1]
+    },
+
+    "chief_bust_row": {
+      "type": "panel",
+      "size": ["100%", 3],
+      "collection_index": "$index",
+      "controls": [
+        {"text@pays_general.chief_bust_text": {}},
+        {"right@pays_general.chief_bust_text": { "offset": [0.25, 0] }},
+        {"down@pays_general.chief_bust_text": { "offset": [0, 0.25] }},
+        {"both@pays_general.chief_bust_text": { "offset": [0.25, 0.25] }}
+    ]},
+
+    "chief_bust@ng_module.panel": {
+      "size": [90, 57],
+      "anchor_from": "bottom_middle",
+      "anchor_to": "bottom_middle",
+      "layer": 7,
+      "controls": [
+
+          {"rows": {
+            "type": "stack_panel",
+            "orientation": "vertical",
+            "collection_name": "container_items",
+            "size": ["100%", "100%c"],
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "controls": [
+              {"r00@pays_general.chief_bust_row": { "$index": 54 }},
+              {"r01@pays_general.chief_bust_row": { "$index": 55 }},
+              {"r02@pays_general.chief_bust_row": { "$index": 56 }},
+              {"r03@pays_general.chief_bust_row": { "$index": 57 }},
+              {"r04@pays_general.chief_bust_row": { "$index": 58 }},
+              {"r05@pays_general.chief_bust_row": { "$index": 59 }},
+              {"r06@pays_general.chief_bust_row": { "$index": 60 }},
+              {"r07@pays_general.chief_bust_row": { "$index": 61 }},
+              {"r08@pays_general.chief_bust_row": { "$index": 62 }},
+              {"r09@pays_general.chief_bust_row": { "$index": 63 }},
+              {"r10@pays_general.chief_bust_row": { "$index": 64 }},
+              {"r11@pays_general.chief_bust_row": { "$index": 65 }},
+              {"r12@pays_general.chief_bust_row": { "$index": 66 }},
+              {"r13@pays_general.chief_bust_row": { "$index": 67 }},
+              {"r14@pays_general.chief_bust_row": { "$index": 68 }},
+              {"r15@pays_general.chief_bust_row": { "$index": 69 }},
+              {"r16@pays_general.chief_bust_row": { "$index": 70 }},
+              {"r17@pays_general.chief_bust_row": { "$index": 71 }},
+              {"r18@pays_general.chief_bust_row": { "$index": 72 }}
+          ]}}
+    ]},
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Categorie Information General Edit
+    //
+    // ------------------------------------------------------------------------
+
+    "information_general_edit_main@ng_asset.background_white":{
+      "size":[405,230],
+      "color":[0.153,0.153,0.165],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                          {"title@ng_module.label":{
+                                            "text":"information Géneral",
+                                            "offset":[0,-1.3],
+                                            "font_type":"MinecraftTen",
+                                            "font_scale_factor":0.9
+                                          }}
+                              ]}}
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "layer":10,
+                          "size":["100% - 10px","100% - 10px"],
+                          "controls":[
+
+                              {"top@ng_asset.background_white":{
+                                "color":[0.153, 0.153, 0.165],
+                                "size":["100%","45% - 2px"],
+                                "controls":[
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "size":["100% - 10px","100% - 4px"], 
+                                      "controls":[
+
+                                          {"left@ng_module.stackpanel":{
+                                            "size":["100%cm","100%"],
+                                            "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":[150,22],
+                                                  "controls":[
+
+                                                    {"flag@pays_general.country_flag":{
+                                                      "$index": 18
+                                                    }},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": [5, 0.1]
+                                                    }},
+ 
+                                                    {"stackpanel@ng_module.stackpanel":{
+                                                      "size":["100%cm",22],
+                                                      "controls":[
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [0.1, "fill"]
+                                                          }},
+
+                                                          {"label@ng_module.label":{
+                                                            "font_scale_factor":0.65,
+                                                            "color":[0.741, 0.741, 0.741],
+                                                            "text":"Pays"
+                                                          }},
+
+                                                          {"player_name@ng_module.Simple_text": {
+                                                            "$type_get_text": "Get_text_type_1",
+                                                            "$index": 19,
+                                                            "layer":6,
+                                                            "$text_offset":[-0.6,-2],
+                                                            "$font_type":"MinecraftTen",
+                                                            "size": ["100%c", "100%c"],
+                                                            "$font_scale_factor": 1
+                                                          }} 
+
+                                                    ]}} 
+                                                ]}},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [0.1, 2.5]
+                                                }},
+
+                                                {"description@ng_asset.background_09":{
+                                                  "size":[150,"fill"],
+                                                  "controls":[
+
+                                                      {"center_label@ng_module.stackpanel":{
+                                                        "size":["100% - 6px","100% - 6px"],
+                                                        "controls":[
+
+                                                                {"player_name@ng_module.Simple_text": {
+                                                                  "$type_get_text": "Get_text_type_1",
+                                                                  "$index": 20,
+                                                                  "layer":6,
+                                                                  "$max_size":[145,30],
+                                                                  "size": ["100%c", "100%c"],
+                                                                  "$font_scale_factor": 0.65
+                                                                }}                                                              
+                                                      ]}},
+
+                                                      {"buttton@ng_module.Simple_Button":{
+                                                        "size": [10,10],
+                                                        "$size_button":[10,10],
+                                                        "$index": 21,
+                                                        "offset":[-2,-2],
+                                                        "anchor_from": "bottom_right",
+                                                        "anchor_to": "bottom_right",
+                                                        "$size_icone_right": [7,7],
+                                                        "$color_icone_right":[0.020, 0.200, 0.271],
+                                                        "$icon_right_offset":[0,-0.3],
+                                                        "$texture_icone_right": "ng_asset.icon_53",
+                                                        "$texture_button": "ng_asset.button_35"
+                                                      }}
+                                                ]}},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [0.1, 2.5]
+                                                }},
+
+                                                {"modt@ng_asset.background_09":{
+                                                  "size":[150,14],
+                                                  "controls":[
+
+                                                    {"stackpanel@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100% - 4px","100% - 4px"], 
+                                                      "controls":[
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": [1, "100%"]
+                                                          }},
+                                                        
+                                                          {"center_label@ng_module.panel":{
+                                                            "size":["100%c","100%"],
+                                                            "controls":[
+
+                                                                {"modt@ng_module.Simple_text": {
+                                                                  "$type_get_text": "Get_text_type_1",
+                                                                  "$index": 22,
+                                                                  "layer":6,
+                                                                  "$max_size":[130,10],
+                                                                  "size": ["100%c", 19],
+                                                                  "$font_scale_factor": 0.65
+                                                                }}                                                              
+                                                          ]}},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": ["fill", "100%"]
+                                                          }},
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                            "size": [10,"100%"],
+                                                            "$size_button":[10,10],
+                                                            "$index": 23,
+                                                            "$size_icone_right": [7,7],
+                                                            "$color_icone_right":[0.020, 0.200, 0.271],
+                                                            "$icon_right_offset":[0,-0.3],
+                                                            "$texture_icone_right": "ng_asset.icon_53",
+                                                            "$texture_button": "ng_asset.button_35"
+                                                          }}
+                                                    ]}}
+                                                ]}}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"right@ng_module.stackpanel":{
+                                            "size":[100,"100%"],
+                                            "controls":[ 
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":[100,25],
+                                                  "controls":[ 
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["fill", "100%"]
+                                                    }},
+
+                                                    {"description@ng_asset.background_white":{
+                                                      "color":[0.094, 0.094, 0.106],
+                                                      "size":[85,25],
+                                                      "controls":[
+
+                                                            {"description@ng_asset.background_01":{
+                                                              "size":["100% - 2px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name":"container_items",
+                                                                    "size":["100%c",18],
+                                                                    "controls":[ 
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 24,
+                                                                          "$item_renderer_size":[16,16],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [2, "100%"]
+                                                                        }},
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 25,
+                                                                          "$item_renderer_size":[16,16],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [2, "100%"]
+                                                                        }},
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 26,
+                                                                          "$item_renderer_size":[16,16],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [5, "100%"]
+                                                                        }},
+
+                                                                        {"buttton@ng_module.Simple_Button":{
+                                                                          "size": [12,"100%"],
+                                                                          "$size_button":[12,12],
+                                                                          "$index": 27,
+                                                                          "$icon_right_offset":[0.3,-0.3],
+                                                                          "$color_icone_right":[0.020, 0.200, 0.271],
+                                                                          "$size_icone_right": [7,7],
+                                                                          "$texture_icone_right": "ng_asset.icon_53",
+                                                                          "$texture_button": "ng_asset.button_35"
+                                                                        }} 
+                                                                  ]}}
+                                                            ]}}
+                                                    ]}}
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": [5, "fill"]
+                                                    }},
+
+                                                    {"text@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%",22],
+                                                      "controls":[
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": ["fill", "100%"]
+                                                            }},
+ 
+                                                            {"pays@ng_module.stackpanel":{
+                                                              "size":["100%cm",22],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [0.1, "fill"]
+                                                                  }},
+
+                                                                  {"label@ng_module.label":{
+                                                                    "font_scale_factor":0.65,
+                                                                    "color":[0.741, 0.741, 0.741],
+                                                                    "text":"Relation"
+                                                                  }},
+
+                                                                  {"player_name@ng_module.Simple_text": {
+                                                                    "$type_get_text": "Get_text_type_1",
+                                                                    "$index": 28,
+                                                                    "layer":6,
+                                                                    "$text_offset":[-0.6,-2],
+                                                                    "$max_size":[50,10],
+                                                                    "$font_type":"MinecraftTen",
+                                                                    "size": ["100%c", "100%c"],
+                                                                    "$font_scale_factor": 0.85
+                                                                  }} 
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": [5, "100%"]
+                                                            }},
+
+                                                            {"nota@ng_module.stackpanel":{
+                                                              "size":["100%cm",22],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [0.1, "fill"]
+                                                                  }},
+
+                                                                  {"label@ng_module.label":{
+                                                                    "font_scale_factor":0.65,
+                                                                    "color":[0.741, 0.741, 0.741],
+                                                                    "text":"Notation"
+                                                                  }},
+
+                                                                  {"player_name@ng_module.Simple_text": {
+                                                                    "$type_get_text": "Get_text_type_1",
+                                                                    "$index": 29,
+                                                                    "layer":7,
+                                                                    "$max_size":[50,10],
+                                                                    "$text_offset":[-0.6,-2],
+                                                                    "$font_type":"MinecraftTen",
+                                                                    "size": ["100%c", "100%c"],
+                                                                    "$font_scale_factor": 0.85
+                                                                  }} 
+                                                            ]}}
+                                                    ]}}, 
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["fill",10]
+                                                    }}
+                                          ]}}
+                                    ]}}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["100%", 4]
+                              }},
+
+                              {"bottom@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100%","55% - 2px"],
+                                "controls":[
+
+                                  {"edition_grade@ng_asset.background_white":{
+                                    "color":[0.153, 0.153, 0.165],
+                                    "size":["33% - 2.5px","100%"],
+                                    "controls":[
+
+                                        {"content@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                                {"header@ng_asset.background_62":{
+                                                  "size":["100%",20],
+                                                  "controls":[
+
+                                                    {"cotent@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100% - 10px","100% - 2px"],
+                                                      "controls":[
+
+                                                          {"center_label@ng_module.panel":{
+                                                            "size":["100%c","100%"],
+                                                            "controls":[
+
+                                                                {"label@ng_module.label":{
+                                                                  "text":"Edition grades",
+                                                                  "layer":15,
+                                                                  "font_scale_factor":0.68
+                                                                }}
+                                                          ]}},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": ["fill", "100%"]
+                                                          }},
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                            "size": [60,"100%"],
+                                                            "$size_button":[60,14],
+                                                            "$index": 30,
+                                                            "$size_icone_right": [7,7],
+                                                            "$icon_right_offset":[0,0],
+                                                            "$padding_right":[0,0],
+                                                            "$font_scale_factor":0.6,
+                                                            "$type_get_text": "Get_text_type_1",
+                                                            "$texture_icone_right": "ng_asset.icon_57",
+                                                            "$texture_button": "ng_asset.button_37"
+                                                          }}
+                                                    ]}}
+                                                ]}},
+
+                                                {"center@ng_module.panel":{
+                                                "size":["100%","fill"],
+                                                "controls":[
+
+                                                {"scroll@ng_module.scroll_test":{
+                                                  "layer":150,
+                                                  "size":["100% - 4px","100% - 4px"],
+                                                  "$size_scroll_bar":[5,"100%"],
+                                                  "$scroll_textures_bar": "ng_asset.background_white",
+                                                  "$scroll_bar_color":[0.322, 0.322, 0.361],
+                                                  "$scroll_textures_background": "ng_asset.background_white",
+                                                  "$scroll_background_color":[0.094, 0.094, 0.106],
+                                                  "$scrolling_content": "pays_general.list_edition_grade"                              
+                                                }}
+                                            ]}}
+                                                
+                                        ]}}
+
+                                  ]}},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [5, "100%"]
+                                  }},
+
+                                  {"log_pays@ng_asset.background_white":{
+                                    "color":[0.153, 0.153, 0.165],
+                                    "size":["33% - 2.5px","100%"],
+                                    "controls":[
+
+                                      {"content@ng_module.stackpanel":{
+                                        "size":["100% - 2px","100% - 2px"],
+                                        "controls":[
+
+                                            {"header@ng_asset.background_62":{
+                                              "size":["100%",20],
+                                              "controls":[
+
+                                                {"cotent@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 10px","100% - 2px"],
+                                                  "controls":[
+
+                                                      {"center_label@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Log du pays",
+                                                              "layer":15,
+                                                              "font_scale_factor":0.68
+                                                            }}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": ["fill", "100%"]
+                                                      }},
+
+                                                      {"center_label@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Actions",
+                                                              "layer":15,
+                                                              "color":[0.443, 0.443, 0.482],
+                                                              "font_scale_factor":0.68
+                                                            }}
+                                                      ]}}
+                                                ]}}
+                                            ]}},
+
+                                            {"center@ng_module.panel":{
+                                              "size":["100%","fill"],
+                                              "controls":[
+
+                                                {"scroll@ng_module.scroll_test":{
+                                                  "size":["100% - 4px","100% - 4px"],
+                                                  "$size_scroll_bar":[5,"100%"],
+                                                  "$scroll_textures_bar": "ng_asset.background_white",
+                                                  "$scroll_bar_color":[0.322, 0.322, 0.361],
+                                                  "$scroll_textures_background": "ng_asset.background_white",
+                                                  "$scroll_background_color":[0.094, 0.094, 0.106],
+                                                  "$scrolling_content": "pays_general.list_log"                              
+                                                }}
+                                            ]}}
+                                      ]}}
+                                  ]}},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [5, "100%"]
+                                  }},
+
+                                  {"actions@ng_module.stackpanel":{
+                                    "layer":11,
+                                    "size":["33% - 1.3px","100%"],
+                                    "controls":[
+
+                                      {"categorie_evoluer@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "size":["100%",19.7],
+                                        "controls":[
+
+                                              {"categorie_evoluer@ng_asset.background_62":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 6px","100%"],
+                                                    "controls":[
+
+                                                        {"text_center@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "layer":15,
+                                                              "text":"Faire évoluer le pays",
+                                                              "font_scale_factor":0.6
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"buttton@ng_module.Simple_Button":{
+                                                            "size": [40,"100%"],
+                                                            "$size_button":[40,12],
+                                                            "$index": 77,
+                                                            "$text_color":[0.000, 0.000, 0.000],
+                                                            "$font_scale_factor":0.6,
+                                                            "$type_get_text":"Get_text_type_1",
+                                                            "$texture_button": "ng_asset.button_31"
+                                                        }}
+                                                  ]}}
+                                              ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2]
+                                      }},
+
+                                      {"categorie_unclaimall@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "size":["100%",19.7],
+                                        "controls":[
+
+                                              {"categorie_unclaimall@ng_asset.background_62":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 6px","100%"],
+                                                    "controls":[
+
+                                                        {"text_center@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "layer":15,
+                                                              "text":"Liberer les territoires",
+                                                              "font_scale_factor":0.6
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"buttton@ng_module.Simple_Button":{
+                                                            "size": [40,"100%"],
+                                                            "$size_button":[40,12],
+                                                            "$index": 78,
+                                                            "$text_color":[0.000, 0.000, 0.000],
+                                                            "$font_scale_factor":0.6,
+                                                            "$type_get_text":"Get_text_type_1",
+                                                            "$texture_button": "ng_asset.button_21"
+                                                        }}
+                                                  ]}}
+                                              ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2]
+                                      }},
+
+                                      {"categorie_recrutement@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "size":["100%",19.7],
+                                        "controls":[
+
+                                              {"categorie_unclaimall@ng_asset.background_62":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 6px","100%"],
+                                                    "controls":[
+
+                                                        {"text_center@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Recrutement",
+                                                              "layer":15,
+                                                              "font_scale_factor":0.6
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"buttton@ng_module.multiple_status_button":{
+                                                            "size": [40,"100%"],
+                                                            "$size_button":[40,12],
+                                                            "$index": 79,
+                                                            "$textures_button_S0": "ng_asset.button_03",
+                                                            "$textures_button_S1": "ng_asset.button_21",
+                                                            "$fonction_mapping_button_S0": "clickable",
+                                                            "$fonction_mapping_button_S1": "clickable",
+                                                            "$S0_text_color":[0.000, 0.000, 0.000],
+                                                            "$S1_text_color":[0.000, 0.000, 0.000],
+                                                            "$S0_type_get_text": "Get_text_type_1",
+                                                            "$S1_type_get_text": "Get_text_type_1",
+                                                            "$font_scale_factor":0.6
+                                                        }}
+                                                  ]}}
+                                              ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2]
+                                      }},
+
+                                      {"categorie_exclusion@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "size":["100%",19.7],
+                                        "controls":[
+
+                                              {"categorie_unclaimall@ng_asset.background_62":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 6px","100%"],
+                                                    "controls":[
+
+                                                        {"text_center@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Auto-kick joueur",
+                                                              "layer":15,
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"buttton@ng_module.multiple_status_button":{
+                                                            "size": [40,"100%"],
+                                                            "$size_button":[40,12],
+                                                            "$index": 80,
+                                                            "$textures_button_S0": "ng_asset.button_03",
+                                                            "$textures_button_S1": "ng_asset.button_21",
+                                                            "$fonction_mapping_button_S0": "clickable",
+                                                            "$fonction_mapping_button_S1": "clickable",
+                                                            "$S0_text_color":[0.000, 0.000, 0.000],
+                                                            "$S1_text_color":[0.000, 0.000, 0.000],
+                                                            "$S0_type_get_text": "Get_text_type_1",
+                                                            "$S1_type_get_text": "Get_text_type_1",
+                                                            "$font_scale_factor":0.6
+                                                        }}
+                                                  ]}}
+                                              ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2]
+                                      }},
+
+                                      {"categorie_disband@ng_asset.background_white":{
+                                        "color":[0.153, 0.153, 0.165],
+                                        "size":["100%",19.7],
+                                        "controls":[
+
+                                              {"categorie_unclaimall@ng_asset.background_62":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                  {"stackpanel@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100% - 6px","100%"],
+                                                    "controls":[
+
+                                                        {"text_center@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Disband le pays",
+                                                              "layer":15,
+                                                              "font_scale_factor":0.6
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"buttton@ng_module.Simple_Button":{
+                                                            "size": [40,"100%"],
+                                                            "$size_button":[40,12],
+                                                            "$index": 81,
+                                                            "$text_color":[0.000, 0.000, 0.000],
+                                                            "$font_scale_factor":0.65,
+                                                            "$type_get_text":"Get_text_type_1",
+                                                            "$texture_button": "ng_asset.button_21"
+                                                        }}
+                                                  ]}}
+                                              ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2]
+                                      }}
+
+                                  ]}}
+                              ]}}
+                        ]}}
+
+                       
+
+                  ]}}
+            ]}}
+    ]},
+
+    //Asset Categorie BInformation General Edit
+
+    "list_log@ng_module.stackpanel":{
+      "collection_name": "container_items",
+      "size":["100%","100%c"],
+      "controls":[
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 67
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 68
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 69
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 70
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 71
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 72
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 73
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 74
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 75
+        }},
+
+        {"list_log@pays_general.asset_list_logs":{ 
+            "$pseudo_actions": 76
+        }}
+
+    ]},
+
+    "asset_list_logs@ng_module.stackpanel": {
+      "collection_index": "$pseudo_actions",
+      "$visibilité_button_valider|defualt":"",
+      "size": ["100%",12],
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "$mapping_button": "nonclickable",
+                "$textures_button_S1|default": "ng_asset.button_full_white",
+                "size": ["100%",12],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"texture_button@$textures_button_S1":{
+                                      "$color_hover_button":[0.153, 0.153, 0.165],
+                                      "$color_pressed_button": [0.153, 0.153, 0.165],
+                                      "$color_default_button":[0.153, 0.153, 0.165]
+                                    }},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"pseudo@ng_module.stackpanel":{
+                                            "size":["50%","100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$pseudo_actions",
+                                                  "layer": 6,
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"Actions@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":["50%","100%"],
+                                            "controls":[
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["fill", "100%"]
+                                                }},
+
+                                                {"label_pseudo@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$pseudo_actions",
+                                                  "layer": 6,
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}}
+                                    ]}}
+                                ]}}
+                        ]}}
+            ]}}
+    ]},
+
+    "list_edition_grade@ng_module.stackpanel":{
+      "collection_name": "container_items",
+      "layer":151,
+      "size":["100%","100%c"],
+      "controls":[
+
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 31,
+            "$dowgrade":32,
+            "$edit":34,
+            "$grade_membre":33
+        }},
+
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 35,
+            "$dowgrade":36,
+            "$edit":38,
+            "$grade_membre":37
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 39,
+            "$dowgrade":40,
+            "$edit":42,
+            "$grade_membre":41
+        }},
+
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 43,
+            "$dowgrade":44,
+            "$edit":46,
+            "$grade_membre":45
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 47,
+            "$dowgrade":48,
+            "$edit":50,
+            "$grade_membre":49
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 51,
+            "$dowgrade":52,
+            "$edit":54,
+            "$grade_membre":53
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 55,
+            "$dowgrade":56,
+            "$edit":58,
+            "$grade_membre":57
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 59,
+            "$dowgrade":60,
+            "$edit":62,
+            "$grade_membre":61
+        }},
+        
+        {"list_edition@pays_general.asset_list_edition_grade":{ 
+            "$upgrade": 63,
+            "$dowgrade":64,
+            "$edit":66,
+            "$grade_membre":65
+        }}
+    ]},
+
+    "asset_list_edition_grade@ng_module.stackpanel": {
+      "collection_index": "$grade_membre",
+      "size": ["100%",12],
+      "bindings": [
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "size": ["100%",12],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "collection_name": "container_items",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"buttton@ng_module.Simple_Button":{
+                                            "size": [10,"100%"],
+                                            "$size_button":[10,10],
+                                            "$index": "$upgrade",
+                                            "$size_icone_right": [7,7],
+                                            "$texture_icone_right": "ng_asset.icon_56",
+                                            "$texture_button": "ng_asset.button_37"
+                                          }},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [1.3, "100%"]
+                                          }},
+
+                                          {"buttton@ng_module.Simple_Button":{
+                                            "size": [10,"100%"],
+                                            "$size_button":[10,10],
+                                            "$index": "$dowgrade",
+                                            "layer":15,
+                                            "$size_icone_right": [7,7],
+                                            "$texture_icone_right": "ng_asset.icon_55",
+                                            "$texture_button": "ng_asset.button_37"
+                                          }},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"grade@ng_module.stackpanel":{
+                                            "size":[35,"100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_3",
+                                                  "$index": "$grade_membre",
+                                                  "layer": 15,
+                                                  "$max_size":[33, 10],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"pseudo@ng_module.panel":{
+                                            "size":[35,"100%"],
+                                            "controls":[
+
+                                                {"label_grade@ng_module.Simple_text":{
+                                                  "$type_get_text": "Get_text_type_2",
+                                                  "$index": "$grade_membre",
+                                                  "layer": 6,
+                                                  "$max_size":[33, 11.3],
+                                                  "size": ["100%c","100%"],
+                                                  "$font_scale_factor": 0.65
+                                                }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"buttton@ng_module.Simple_Button":{
+                                            "size": [10,"100%"],
+                                            "$size_button":[10,10],
+                                            "layer":150,
+                                            "$index": "$edit",
+                                            "$icon_right_offset":[0.3,-0.3],
+                                            "$color_icone_right":[0.020, 0.200, 0.271],
+                                            "$size_icone_right": [7,7],
+                                            "$texture_icone_right": "ng_asset.icon_53",
+                                            "$texture_button": "ng_asset.button_35"
+                                          }}                                       
+                                    ]}}
+                                ]}}
+                        ]}}
+            ]}}
+    ]},
+
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Categorie Information General 
+    //
+    // ------------------------------------------------------------------------
+
+    "information_general_main@ng_asset.background_white":{
+      "size":[405,230],
+      "color":[0.153,0.153,0.165],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "size":["100% - 2px","100% - 2px"],
+            "controls":[
+
+                  {"header@ng_asset.background_35":{
+                    "size":["100%",20],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "orientation":"horizontal",
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                              {"padding@ng_module.panel":{
+                                "size":[5,"100%"]
+                              }},
+
+                              {"center@ng_module.panel":{
+                                "size":["100%c","100%"],
+                                "controls":[
+
+                                          {"title@ng_module.label":{
+                                            "text":"information Géneral",
+                                            "offset":[0,-1.3],
+                                            "font_type":"MinecraftTen",
+                                            "font_scale_factor":0.9
+                                          }}
+                              ]}}
+                        ]}}
+                  ]}},
+
+                  {"content@ng_asset.background_31":{
+                    "size":["100%","fill"],
+                    "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "layer":10,
+                          "size":["100% - 10px","100% - 10px"],
+                          "controls":[
+
+                              {"top@ng_asset.background_white":{
+                                "color":[0.153, 0.153, 0.165],
+                                "size":["100%","45% - 2px"],
+                                "controls":[
+
+                                    {"flag_background@pays_general.country_flag_background":{
+                                      "$index": 44
+                                    }},
+
+                                    // Le buste du chef, entre le fond de drapeau (couche 5) et le
+                                    // contenu du bloc (couche 10).
+                                    {"chief_bust@pays_general.chief_bust":{}},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "layer":10,
+                                      "size":["100% - 10px","100% - 4px"], 
+                                      "controls":[
+
+                                          {"left@ng_module.stackpanel":{
+                                            "size":["100%cm","100%"],
+                                            "controls":[
+
+                                                {"flag_label@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":[150,22],
+                                                  "controls":[
+
+                                                      {"flag@pays_general.country_flag": {
+                                                        "$index": 18
+                                                      }},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [5, 0.1]
+                                                      }},
+  
+                                                      {"stackpanel@ng_module.stackpanel":{
+                                                        "size":["100%cm",22],
+                                                        "controls":[
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": [0.1, "fill"]
+                                                            }},
+
+                                                            {"label@ng_module.label":{
+                                                              "font_scale_factor":0.65,
+                                                              "color":[0.741, 0.741, 0.741],
+                                                              "text":"Pays"
+                                                            }},
+
+                                                            {"player_name@ng_module.Simple_text": {
+                                                              "$type_get_text": "Get_text_type_1",
+                                                              "$index": 19,
+                                                              "layer":6,
+                                                              "$text_offset":[-0.6,-2],
+                                                              "$font_type":"MinecraftTen",
+                                                              "size": ["100%c", "100%c"],
+                                                              "$font_scale_factor": 1
+                                                            }} 
+
+                                                      ]}} 
+                                                ]}},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [0.1, 3.5]
+                                                }},
+
+                                                {"description@ng_module.stackpanel":{
+                                                  "size":[150,"fill"],
+                                                  "controls":[
+
+                                                     {"description@ng_module.Simple_text": {
+                                                        "$type_get_text": "Get_text_type_1",
+                                                        "$index": 20,
+                                                        "layer":6,
+                                                        "$max_size":[150,30],
+                                                        "size": ["100%c","100%c"],
+                                                        "$font_scale_factor": 0.7
+                                                      }}
+                                                ]}},
+
+                                                {"buttton@ng_module.Simple_Button":{
+                                                    "size": [100,20],
+                                                    "$size_button":[100,20],
+                                                    "$index": 21,
+                                                    "$text_color":[0.020, 0.200, 0.271],
+                                                    "$font_scale_factor":0.7,
+                                                    "$type_get_text":"Get_text_type_1",
+                                                    "$texture_button": "ng_asset.button_35"
+                                                }},
+
+                                                {"padding@ng_module.panel": {
+                                                  "size": [0.1, 2.8]
+                                                }}
+
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"right@ng_module.stackpanel":{
+                                            "size":[100,"100%"],
+                                            "controls":[ 
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":[100,27],
+                                                  "controls":[ 
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["fill", "100%"]
+                                                    }},
+
+                                                    {"slot@ng_asset.background_white":{
+                                                      "color":[0.094, 0.094, 0.106],
+                                                      "size":[68,27],
+                                                      "controls":[
+
+                                                            {"content@ng_asset.background_01":{
+                                                              "size":["100% - 2px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "orientation":"horizontal",
+                                                                    "collection_name":"container_items",
+                                                                    "size":["100%c",18],
+                                                                    "controls":[ 
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 22,
+                                                                          "$item_renderer_size":[14,14],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [2, "100%"]
+                                                                        }},
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 23,
+                                                                          "$item_renderer_size":[14,14],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }},
+
+                                                                        {"padding@ng_module.panel": {
+                                                                          "size": [2, "100%"]
+                                                                        }},
+
+                                                                        {"slot@ng_module.custome_slot":{
+                                                                          "$index": 24,
+                                                                          "$item_renderer_size":[14,14],
+                                                                          "$cell_image_size":[18,18],
+                                                                          "$slot_size":[18,18],
+                                                                          "$offset_stack_count_label":[0,-1],
+                                                                          "$font_scale_factor_stack_count_label":0.7,
+                                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                                        }}                                                                      
+                                                                  ]}}
+                                                            ]}}
+                                                    ]}}
+                                                ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": [5, "fill"]
+                                                    }},
+
+                                                    {"text@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%",22],
+                                                      "controls":[
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": ["fill", "100%"]
+                                                            }},
+ 
+                                                            {"pays@ng_module.stackpanel":{
+                                                              "size":["100%cm",22],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [0.1, "fill"]
+                                                                  }},
+
+                                                                  {"label@ng_module.label":{
+                                                                    "font_scale_factor":0.65,
+                                                                    "color":[0.741, 0.741, 0.741],
+                                                                    "text":"Relation"
+                                                                  }},
+
+                                                                  {"player_name@ng_module.Simple_text": {
+                                                                    "$type_get_text": "Get_text_type_1",
+                                                                    "$index": 25,
+                                                                    "layer":6,
+                                                                    "$text_offset":[-0.6,-2],
+                                                                    "$max_size":[50,10],
+                                                                    "$font_type":"MinecraftTen",
+                                                                    "size": ["100%c", "100%c"],
+                                                                    "$font_scale_factor": 0.85
+                                                                  }} 
+                                                            ]}},
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": [5, "100%"]
+                                                            }},
+
+                                                            {"nota@ng_module.stackpanel":{
+                                                              "size":["100%cm",22],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [0.1, "fill"]
+                                                                  }},
+
+                                                                  {"label@ng_module.label":{
+                                                                    "font_scale_factor":0.65,
+                                                                    "color":[0.741, 0.741, 0.741],
+                                                                    "text":"Notation"
+                                                                  }},
+
+                                                                  {"player_name@ng_module.Simple_text": {
+                                                                    "$type_get_text": "Get_text_type_1",
+                                                                    "$index": 26,
+                                                                    "layer":7,
+                                                                    "$max_size":[50,10],
+                                                                    "$text_offset":[-0.6,-2],
+                                                                    "$font_type":"MinecraftTen",
+                                                                    "size": ["100%c", "100%c"],
+                                                                    "$font_scale_factor": 0.85
+                                                                  }} 
+                                                            ]}}
+                                                    ]}}, 
+
+                                                    {"text_pib@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%",22],
+                                                      "controls":[
+
+                                                            {"padding@ng_module.panel": {
+                                                              "size": ["fill", "100%"]
+                                                            }},
+
+                                                            {"pib@ng_module.stackpanel":{
+                                                              "size":["100%cm",22],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [0.1, "fill"]
+                                                                  }},
+
+                                                                  {"label@ng_module.label":{
+                                                                    "font_scale_factor":0.65,
+                                                                    "color":[0.741, 0.741, 0.741],
+                                                                    "localize":true,
+                                                                    "text":"ng.pays.gdp"
+                                                                  }},
+
+                                                                  {"player_name@ng_module.Simple_text": {
+                                                                    "$type_get_text": "Get_text_type_1",
+                                                                    "$index": 73,
+                                                                    "layer":8,
+                                                                    "$max_size":[70,10],
+                                                                    "$text_offset":[-0.6,-2],
+                                                                    "$font_type":"MinecraftTen",
+                                                                    "size": ["100%c", "100%c"],
+                                                                    "$font_scale_factor": 0.85
+                                                                  }}
+                                                            ]}}
+                                                      ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["fill",3]
+                                                    }}
+                                          ]}}
+                                    ]}}
+                              ]}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["100%", 4]
+                              }},
+
+                              {"bottom@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100%","55% - 2px"],
+                                "controls":[
+
+                                  {"memebre_en_ligne@ng_asset.background_white":{
+                                    "color":[0.153, 0.153, 0.165],
+                                    "size":["33% - 2.5px","100%"],
+                                    "controls":[
+
+                                        {"content@ng_module.stackpanel":{
+                                          "size":["100% - 2px","100% - 2px"],
+                                          "controls":[
+
+                                                {"header@ng_asset.background_62":{
+                                                  "size":["100%",20],
+                                                  "controls":[
+
+                                                    {"cotent@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100% - 10px","100% - 2px"],
+                                                      "controls":[
+
+                                                          {"center_label@ng_module.panel":{
+                                                            "size":["100%c","100%"],
+                                                            "controls":[
+
+                                                                {"label@ng_module.label":{
+                                                                  "text":"Membres en ligne",
+                                                                  "layer":10,
+                                                                  "font_scale_factor":0.68
+                                                                }}
+                                                          ]}},
+
+                                                          {"padding@ng_module.panel": {
+                                                            "size": ["fill", "100%"]
+                                                          }},
+
+                                                          {"text@ng_module.Simple_text": {
+                                                            "$type_get_text": "Get_text_type_1",
+                                                            "$index": 27,
+                                                            "layer":5,
+                                                            "$text_color":[0.443, 0.443, 0.482],
+                                                            "size": ["100%c", "100%"],
+                                                            "$font_scale_factor": 0.68
+                                                          }}
+                                                    ]}}
+                                                ]}},
+
+                                                {"scroll@ng_module.panel":{
+                                                "size":["100%","fill"],
+                                                "controls":[
+
+                                                  {"scroll@ng_module.scroll_test":{
+                                                    "size":["100% - 4px","100% - 4px"],
+                                                    "$size_scroll_bar":[5,"100%"],
+                                                    "$scroll_textures_bar": "ng_asset.background_white",
+                                                    "$scroll_bar_color":[0.322, 0.322, 0.361],
+                                                    "$scroll_textures_background": "ng_asset.background_white",
+                                                    "$scroll_background_color":[0.094, 0.094, 0.106],
+                                                    "$scrolling_content": "pays_general.list_memebres_en_ligne_asset"                              
+                                                  }}
+                                                ]}}
+                                        ]}}
+                                  ]}},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [5, "100%"]
+                                  }},
+
+                                  {"information@ng_module.stackpanel":{
+                                    "size":["33% - 2.5px","100%"],
+                                    "controls":[
+
+                                          {"ligue@ng_asset.background_30":{
+                                            "size":["100%",19.7],
+                                            "controls":[
+
+                                              // Hauteur fixe de 16 (celle de l'icone) : « Ligue » reste centre en hauteur.
+                                              {"stackpanel@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "layer":10,
+                                                "size":["100% - 10px",16],
+                                                "controls":[
+
+                                                        {"label_ligue@ng_module.panel":{
+                                                          "size":["100%c",16],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Ligue",
+                                                              "color":[0.263, 0.125, 0.016],
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        // L'icone de la ligue a la place de son nom : NGCountryMod ecrit dans la
+                                                        // case 40 le chemin de l'icone (textures/ui/ng_assets/league/, celles de
+                                                        // l'onglet Classement, « unranked » pour un pays non classe), lu apres les
+                                                        // 90 premiers octets comme le drapeau.
+                                                        {"ligue_icon@ng_module.panel": {
+                                                          "size": [16, 16],
+                                                          "controls": [
+                                                            {"icon@ng_module.icone": {
+                                                              "$index": 40,
+                                                              "$Get_text_type": "Get_text_type_2",
+                                                              "layer": 60,
+                                                              "size": [16, 16]
+                                                            }}
+                                                          ]
+                                                        }}
+                                              ]}}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", 2]
+                                          }},
+
+                                          {"claim@ng_asset.background_68":{
+                                            "size":["100%",19.7],
+                                            "controls":[
+
+                                              {"stackpanel@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "layer":10,
+                                                "size":["100% - 10px","100%cm"],
+                                                "controls":[
+
+                                                        {"label_ligue@ng_module.panel":{
+                                                          "size":["100%c","100%c"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Nombre de claims",
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"ligue_name@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 41,
+                                                          "layer":6,
+                                                          "$text_color":[0.443, 0.443, 0.482],
+                                                          "$max_size":[70,10],
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.65
+                                                        }}
+                                              ]}}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                              "size": ["fill", 2]
+                                          }},
+
+                                          {"power@ng_asset.background_69":{
+                                            "size":["100%",19.7],
+                                            "controls":[
+
+                                              {"stackpanel@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "layer":10,
+                                                "size":["100% - 10px","100%cm"],
+                                                "controls":[
+
+                                                        {"label_ligue@ng_module.panel":{
+                                                          "size":["100%c","100%c"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Power",
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"ligue_name@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 42,
+                                                          "layer":6,
+                                                          "$max_size":[70,10],
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.65
+                                                        }}
+                                              ]}}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", 2]
+                                          }},
+                                          
+                                          {"mmr@ng_asset.background_68":{
+                                            "size":["100%",19.7],
+                                            "controls":[
+
+                                              {"stackpanel@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "layer":10,
+                                                "size":["100% - 10px","100%cm"],
+                                                "controls":[
+
+                                                        {"label_ligue@ng_module.panel":{
+                                                          "size":["100%c","100%c"],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"MMR",
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"ligue_name@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 43,
+                                                          "layer":6,
+                                                          "$text_color":[0.443, 0.443, 0.482],
+                                                          "$max_size":[70,10],
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.65
+                                                        }}
+                                              ]}}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", 2]
+                                          }},
+                                          
+                                          {"dans_le_pays@ng_asset.background_68":{
+                                            "size":["100%",19.7],
+                                            "controls":[
+
+                                              {"stackpanel@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "layer":10,
+                                                "offset":[0,0.5],
+                                                "collection_name":"container_items",
+                                                "size":["100% - 10px","100%cm"],
+                                                "controls":[
+
+                                                        {"label_ligue@ng_module.panel":{
+                                                          "size":["100%c",15],
+                                                          "controls":[
+
+                                                            {"label@ng_module.label":{
+                                                              "text":"Dans le pays",
+                                                              "offset":[0,-0.5],
+                                                              "font_scale_factor":0.65
+                                                            }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"slot@ng_module.custome_slot":{
+                                                          "$index": 45,
+                                                          "$item_renderer_size":[11,11],
+                                                          "$cell_image_size":[14.6,14.6],
+                                                          "$slot_size":[14.6,14.6],
+                                                          "$offset_stack_count_label":[0,-1],
+                                                          "$visible_stack_count_label":false,
+                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [2, 0.1]
+                                                        }},
+
+                                                        {"slot@ng_module.custome_slot":{
+                                                          "$index": 46,
+                                                          "$item_renderer_size":[11,11],
+                                                          "$cell_image_size":[14.6,14.6],
+                                                          "$slot_size":[14.6,14.6],
+                                                          "$offset_stack_count_label":[0,-1],
+                                                          "$visible_stack_count_label":false,
+                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [2, 0.1]
+                                                        }},
+
+                                                        {"slot@ng_module.custome_slot":{
+                                                          "$index": 47,
+                                                          "$item_renderer_size":[11,11],
+                                                          "$cell_image_size":[14.6,14.6],
+                                                          "$slot_size":[14.6,14.6],
+                                                          "$offset_stack_count_label":[0,-1],
+                                                          "$visible_stack_count_label":false,
+                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": [2, 0.1]
+                                                        }},
+
+                                                        {"slot@ng_module.custome_slot":{
+                                                          "$index": 48,
+                                                          "$item_renderer_size":[11,11],
+                                                          "$cell_image_size":[14.6,14.6],
+                                                          "$slot_size":[14.6,14.6],
+                                                          "$offset_stack_count_label":[0,-1],
+                                                          "$visible_stack_count_label":false,
+                                                          "$mapping_container": "container_mapping_nonclickable"
+                                                        }}
+                                              ]}}
+                                          ]}}
+                                  ]}},
+
+                                  {"padding@ng_module.panel": {
+                                    "size": [5, "100%"]
+                                  }},
+
+                                  {"r&d@ng_module.stackpanel":{
+                                    "layer":11,
+                                    "size":["33% - 1.3px","100%"],
+                                    "controls":[
+
+                                        {"content@ng_asset.background_white":{
+                                          "size":["100%","100%"],
+                                          "color":[0.153, 0.153, 0.165],
+                                          "controls":[
+
+                                              {"r&d@ng_module.stackpanel":{
+                                                "size":["100% - 2px","100% - 2px"],
+                                                "controls":[
+
+                                                    {"header@ng_asset.background_62":{
+                                                      "size":["100%",20],
+                                                      "controls":[
+
+                                                        {"cotent@ng_module.stackpanel":{
+                                                          "orientation":"horizontal",
+                                                          "size":["100% - 10px","100% - 2px"],
+                                                          "controls":[
+
+                                                              {"center_label@ng_module.panel":{
+                                                                "size":["100%c","100%"],
+                                                                "controls":[
+
+                                                                    {"label@ng_module.label":{
+                                                                      "text":"Niveau de R&D",
+                                                                      "layer":10,
+                                                                      "font_scale_factor":0.68
+                                                                    }}
+                                                              ]}}
+                                                        ]}}
+
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["fill",2]
+                                                    }},
+
+                                                    {"r&d@ng_module.stackpanel":{
+                                                      "size":["100%","fill"],
+                                                      "controls":[
+
+                                                        {"r&d@ng_module.stackpanel":{
+                                                          "orientation":"horizontal",
+                                                          "size":["100%","50% - 1px"],
+                                                          "controls":[
+
+                                                              {"asset_button_r&d@pays_general.asset_button_r&d":{
+                                                                "size":["50% - 1px","100%"],
+                                                                "$icon":"icon_60",
+                                                                "$index_button":49
+                                                              }},
+
+                                                              {"padding@ng_module.panel": {
+                                                                "size": [2, "100%"]
+                                                              }},
+
+                                                              {"asset_button_r&d@pays_general.asset_button_r&d":{
+                                                                "size":["50% - 1px","100%"],
+                                                                "$icon":"icon_59",
+                                                                "$index_button":50
+                                                              }}
+
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill",2]
+                                                        }},
+
+                                                        {"r&d@ng_module.stackpanel":{
+                                                          "orientation":"horizontal",
+                                                          "size":["100%","50% - 1.3px"],
+                                                          "controls":[
+
+                                                              {"asset_button_r&d@pays_general.asset_button_r&d":{
+                                                                "size":["33% - 1px","100%"],
+                                                                "$icon":"icon_54",
+                                                                "$index_button":51
+                                                              }},
+
+                                                              {"padding@ng_module.panel": {
+                                                                "size": [2.2, "100%"]
+                                                              }},
+
+                                                              {"asset_button_r&d@pays_general.asset_button_r&d":{
+                                                                "size":["33% - 1px","100%"],
+                                                                 "$icon":"icon_23",
+                                                                 "$index_button":52
+                                                              }},
+
+                                                              {"padding@ng_module.panel": {
+                                                                "size": [2.2, "100%"]
+                                                              }},
+
+                                                              {"asset_button_r&d@pays_general.asset_button_r&d":{
+                                                                "size":["33% - 1px","100%"],
+                                                                "$icon":"icon_62",
+                                                                "$index_button":53
+                                                              }}
+
+                                                        ]}}
+
+                                                    ]}}
+
+                                              ]}}
+                                        ]}}
+                                  ]}}
+                              ]}}
+                        ]}}
+                  ]}}
+            ]}}
+    ]},
+
+    // Asset Categorie Information General 
+
+    "asset_button_r&d@ng_module.stackpanel": {
+      "collection_name": "container_items",
+      "size": ["100%","100%"],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "collection_index": "$index_button",
+                "$mapping_button": "nonclickable",
+                "$textures_button_S1": "ng_asset.button_38",
+                "$textures_button_S0": "ng_asset.button_39",
+                "size": ["100%","100%"],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"check_status_S0": {
+                                        "type": "panel",
+                                        "size": ["100%","100%"],
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hover_text",
+                                            "binding_type": "collection",
+                                            "binding_collection_name": "container_items"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ],
+                                        "controls": [
+
+                                          {"texture_button@$textures_button_S0": {}},
+
+                                          {"stackpanel@ng_module.stackpanel":{
+                                            "collection_name": "container_items",
+                                            "size": ["100%","100%c"],
+                                            "layer":15,
+                                            "controls": [
+
+                                                {"icon@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                      {"icon@ng_asset.$icon":{
+                                                        "size":[10,10]
+                                                      }}
+                                                ]}},
+
+                                                {"name@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                    {"text@ng_module.Simple_text": {
+                                                      "$type_get_text": "Get_text_type_2",
+                                                      "$index": "$index_button",
+                                                      "layer":5,
+                                                      "$font_type":"MinecraftTen",
+                                                      "size": ["100%c", "100%c"],
+                                                      "$font_scale_factor": 0.55
+                                                    }}
+                                                ]}},
+                                              
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["100%", 1]
+                                                }},
+
+                                                {"losange_level@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                    {"losange@ng_asset.background_losange_04":{
+                                                      "size":[18,18],
+                                                      "color":[0.369, 0.647, 0.000],
+                                                      "controls":[
+
+                                                            {"text@ng_module.Simple_text": {
+                                                              "$type_get_text": "Get_text_type_3",
+                                                              "$index": "$index_button",
+                                                              "layer":5,
+                                                              "size": [18, 18],
+                                                              "$size_label": [18, 18],
+                                                              "$padding_left": [0, 0],
+                                                              "$padding_right": [0, 0],
+                                                              "$anchor_from": "left_middle",
+                                                              "$anchor_to": "left_middle",
+                                                              "$text_offset":[8.2,-0.3],
+                                                              "$font_scale_factor": 0.45
+                                                            }}
+                                                    ]}}
+                                                ]}}                                                                         
+                                          ]}}
+                                    ]}},
+
+                                    {"check_status_S1": {
+                                        "type":"panel",
+                                        "size":["100%","100%"],
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hover_text",
+                                            "binding_type": "collection",
+                                            "binding_collection_name": "container_items"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ],
+                                        "controls": [
+
+                                          {"texture_button@$textures_button_S1": {}},
+
+                                          {"stackpanel@ng_module.stackpanel":{
+                                            "collection_name": "container_items",
+                                            "size": ["100%","100%c"],
+                                            "layer":15,
+                                            "controls": [
+
+                                                {"icon@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                      {"icon@ng_asset.$icon":{
+                                                        "size":[10,10]
+                                                      }}
+                                                ]}},
+
+                                                {"name@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                    {"text@ng_module.Simple_text": {
+                                                      "$type_get_text": "Get_text_type_2",
+                                                      "$index": "$index_button",
+                                                      "layer":5,
+                                                      "$font_type":"MinecraftTen",
+                                                      "size": ["100%c", "100%c"],
+                                                      "$font_scale_factor": 0.55
+                                                    }}
+                                                ]}},
+                                              
+                                                {"padding@ng_module.panel": {
+                                                  "size": ["100%", 1]
+                                                }},
+
+                                                {"losange_level@ng_module.panel":{
+                                                  "size":["100%","100%c"],
+                                                  "controls":[
+
+                                                    {"losange@ng_asset.background_losange_04":{
+                                                      "size":[18,18],
+                                                      "controls":[
+
+                                                            {"text@ng_module.Simple_text": {
+                                                              "$type_get_text": "Get_text_type_3",
+                                                              "$index": "$index_button",
+                                                              "layer":5,
+                                                              "size": [18, 18],
+                                                              "$size_label": [18, 18],
+                                                              "$padding_left": [0, 0],
+                                                              "$padding_right": [0, 0],
+                                                              "$anchor_from": "left_middle",
+                                                              "$anchor_to": "left_middle",
+                                                              "$text_offset":[8.2,-0.3],
+                                                              "$font_scale_factor": 0.45
+                                                            }}
+
+                                                        
+                                                    ]}}
+
+                                                ]}}
+
+
+
+                                                                         
+                                          ]}}
+                                    ]}}
+
+                                ]}}
+                        ]}}
+            ]}}
+    ]},
+
+    "list_memebres_en_ligne_asset@ng_module.stackpanel":{
+      "collection_name": "container_items",
+      "size":["100%","100%c"],
+      "controls":[
+
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 28
+        }},
+
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 29
+        }},
+
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 30
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 31
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 32
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 33
+        }},
+
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 34
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 35
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 36
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 37
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 38
+        }},
+        
+        {"list_membre@pays_general.memebres_en_ligne_asset":{ 
+            "$pseudo_grade": 39
+        }}
+
+    ]},
+
+    "memebres_en_ligne_asset@ng_module.stackpanel": {
+      "collection_index": "$pseudo_grade",
+      "$visibilité_button_valider|default":"",
+      "size": ["100%",12],
+      "bindings": [
+
+            {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+            },
+
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+                "target_property_name": "#visible"
+            }
+
+      ],
+      "controls": [
+
+            {"button":{
+                "type": "input_panel",
+                "$mapping_button": "nonclickable",
+                "$textures_button_S1|default": "ng_asset.button_full_white",
+                "size": ["100%",12],
+                "controls": [
+
+                    {"asset_button":{
+                        "type": "stack_panel",
+                        "size": ["100%","100%"],
+                        "controls": [
+
+                            {"texture_button":{
+                                "type": "panel",
+                                "size": ["100%","100%"],
+                                "controls": [
+
+                                    {"texture_button@$textures_button_S1":{
+                                      "$color_hover_button":[0.153, 0.153, 0.165],
+                                      "$color_pressed_button": [0.153, 0.153, 0.165],
+                                      "$color_default_button":[0.153, 0.153, 0.165]
+                                    }},
+
+                                    {"stackpanel@ng_module.stackpanel":{
+                                      "orientation": "horizontal",
+                                      "size": ["100% - 6px","100%"],
+                                      "controls": [
+
+                                          {"pseudo@ng_module.Simple_text": {
+                                            "$type_get_text": "Get_text_type_3",
+                                            "$index": "$pseudo_grade",
+                                            "layer":5,
+                                            "size": ["100%c", "100%"],
+                                            "$font_scale_factor": 0.7
+                                          }},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"text@ng_module.Simple_text": {
+                                            "$type_get_text": "Get_text_type_2",
+                                            "$index": "$pseudo_grade",
+                                            "layer":15,
+                                            "size": ["100%c", "100%"],
+                                            "$font_scale_factor": 0.7
+                                          }}                                                                             
+                                    ]}}
+                                ]}}
+                        ]}}
+            ]}}
+    ]}
+}
+  

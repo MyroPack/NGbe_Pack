@@ -1,0 +1,541 @@
+{
+  "namespace": "annuaire_lobby",
+
+  // -----------------------------------------------
+  //
+  //   Annuaire du lobby (titre de conteneur ng:annuaire_lobby, NGMod AnnuaireLobbyUi)
+  //
+  //   Le lobby n'appartient a aucun groupe de jeu : pas d'onglet PAYS, pas d'argent, pas de fiche de joueur.
+  //   Une liste seule, a la largeur des deux panneaux de l'annuaire des serveurs de jeu (liste 300 + fiche 130) :
+  //   pseudo, serveur ou se trouve le joueur, bouton Rejoindre.
+  //   L'en-tete, la barre de recherche, la liste a ascenseur et la pagination sont repris de annuaire.json,
+  //   avec les memes numeros de slot (10, 13, 15 a 19). Slots propres a cette fenetre :
+  //     11, 12, 14 : legende des colonnes (Joueur, Serveur, Action), sur une ligne fixe au-dessus de la liste
+  //     20         : nombre de joueurs connectes, a gauche dans le bandeau de la recherche
+  //   Les lignes ont leur propre numerotation :
+  //
+  //     ligne n (0 a 9) : base = 21 + n*6
+  //       +0 visibilite de la ligne (texte non vide = ligne affichee)
+  //       +1 pseudo
+  //       +2 serveur, couleur par defaut (lobby et serveurs hors groupe)
+  //       +3 serveur, couleur 1 (Nova, orange FF6900)
+  //       +4 serveur, couleur 2 (Iris, BB00CE)
+  //       +5 bouton Rejoindre (texte prefixe par §0 = bouton cliquable ; slot vide = pas de bouton)
+  //
+  //   Un seul des trois slots de serveur porte un texte, les deux autres sont vides et ne prennent aucune place.
+  //
+  // -----------------------------------------------
+
+  "main_panel": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "controls": [
+
+          {"main@ng_module.panel": {
+            "size": ["100%", "100%"],
+            "controls": [
+
+            {"main_annuaire@ng_module.stackpanel": {
+                "size": ["100%", "100%"],
+                "controls": [
+
+                {"header@ng_asset.background_white": {
+                  "color": [0.153, 0.153, 0.165],
+                  "size": ["100%", 20],
+                  "controls": [
+
+                      {"content_header@ng_module.stackpanel": {
+                          "orientation": "horizontal",
+                          "size": ["100% - 10px", "100% - 2px"],
+                          "controls": [
+
+                          {"title@ng_module.panel": {
+                            "size": ["100%c", "100%"],
+                            "controls": [
+
+                                {"label@ng_module.label": {
+                                    "text": "Annuaire",
+                                    "offset": [0, -1.3],
+                                    "font_type": "MinecraftTen"
+                                }}
+                          ]}},
+
+                          {"padding@ng_module.panel": {
+                            "size": ["fill", "100%"],
+                            "controls":[
+
+                                {"padding@ng_module.stackpanel": {
+                                  "orientation":"horizontal",
+                                  "size": ["100%c", "100%"],
+                                  "controls":[
+
+                                        {"joueur_button@ng_module.multiple_status_button": {
+                                          "size": [50, "100%"],
+                                          "$size_button": ["100%", "100%"],
+                                          "$index": 10,
+                                          "$textures_button_S0": "ng_asset.button_empty",
+                                          "$textures_button_S1": "ng_asset.button_20",
+                                          "$font_type": "MinecraftTen",
+                                          "$S0_text_color": [0.443, 0.443, 0.482],
+                                          "$fonction_mapping_button_S0": "clickable",
+                                          "$fonction_mapping_button_S1": "nonclickable",
+                                          "$S0_type_get_text": "Get_text_type_1",
+                                          "$S1_type_get_text": "Get_text_type_1",
+                                          "$font_scale_factor": 0.7
+                                        }}
+                                ]}}
+                          ]}},
+
+                          {"pb@ng_module.panel": {
+                            "size": ["100%c", "100%"],
+                            "controls": [
+
+                            {"background@ng_asset.background_white": {
+                                "size": ["100%c + 2px", 15],
+                                "color": [0.094, 0.094, 0.106],
+                                "controls": [
+
+                                {"background@ng_asset.background_white": {
+                                  "size": ["100%c + 8px", 13],
+                                  "color": [0.035, 0.035, 0.043],
+                                  "controls": [
+
+                                  {"text@ng_module.Simple_text": {
+                                      "$type_get_text": "Get_text_type_1",
+                                      "$index": 13,
+                                      "offset": [0.8, 0.3],
+                                      "layer": 5,
+                                      "$text_offset": [1, 0.3],
+                                      "size": ["100%c", "100%"],
+                                      "$font_scale_factor": 0.7,
+                                      "$size_icone_right": [8, 8],
+                                      "$padding_right": [0.1, 0],
+                                      "$color_icone_right": [0.945, 0.753, 0.051],
+                                      "$texture_icone_right": "ng_asset.icon_09"
+                                  }}
+
+                                  ]
+                                }}
+
+                                ]
+                            }}
+
+                            ]
+                          }},
+
+                          {"padding@ng_module.panel": {
+                            "size": [2.5, "100%"]
+                          }},
+
+                          // Bouton Home : la maison de la case 1 (le hub de PalaUiMod), que NGMod fait ouvrir le telephone
+                          // (/app), a la place du bouton au point d'exclamation (icon_47) relie a la case 0, sans effet.
+                          {"home@ng_module.panel": {
+                            "size": ["100%c", "100%"],
+                            "controls": [
+
+                                {"home_button@ng_module.home_button": {}}
+
+                          ]}},
+
+                          {"padding@ng_module.panel": {
+                            "size": [2.5, "100%"]
+                          }},
+
+                          {"close@ng_module.panel": {
+                            "size": ["100%c", "100%"],
+                            "controls": [
+
+                                {"close_button@ng_module.close_button": {}}
+
+                          ]}}
+
+                      ]}}
+                ]}},
+
+                {"content@ng_asset.background_white": {
+                  "color": [0.035, 0.035, 0.043],
+                  "size": ["100%", "fill"],
+                  "controls": [
+
+                    // La liste seule (pas de fiche a droite) : elle prend la largeur de la liste et de la fiche d'origine.
+                    {"list_panel@ng_asset.background_49":{
+                      "size":[432,230],
+                      "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                {"header@ng_asset.background_white":{
+                                  "size":["100%",24],
+                                  "color":[0.247, 0.247, 0.278],
+                                  "controls":[
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100% - 5px","100% - 5px"],
+                                        "controls":[
+
+                                          // Nombre de joueurs connectes, a l'oppose de la recherche, sur le bord gauche
+                                          // des pseudos (15 de marge des lignes + 4 dans la colonne, moins les 2,5 du bandeau).
+                                          {"padding_online@ng_module.panel": {
+                                            "size": [16.5, "100%"]
+                                          }},
+
+                                          {"online@ng_module.Simple_text": {
+                                            "$type_get_text": "Get_text_type_1",
+                                            "$index": 20,
+                                            "layer": 6,
+                                            "$text_color": [0.831, 0.831, 0.847],
+                                            "$text_offset": [0, 0.6],
+                                            "size": ["100%c", "100%"],
+                                            "$font_scale_factor": 0.7
+                                          }},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["fill", "100%"]
+                                          }},
+
+                                          {"button_recherche@ng_module.panel": {
+                                            "size": ["100%c", "100%"],
+                                            "controls":[
+
+                                              {"recherche@ng_module.Simple_Button": {
+                                                "size": [60, 14],
+                                                "$index": 15,
+                                                "$texture_button": "ng_asset.button_29",
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                              }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": [2.5, "100%"]
+                                          }},
+
+                                          {"button_trie@ng_module.panel": {
+                                            "size": ["100%c", "100%"],
+                                            "controls":[
+
+                                              {"trie@ng_module.Simple_Button": {
+                                                "size": [30, 14],
+                                                "$index": 16,
+                                                "$texture_button": "ng_asset.button_29",
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                              }}
+                                          ]}}
+
+                                      ]}}
+                                ]}},
+
+                                // Legende des colonnes : hors de la liste a ascenseur, elle ne defile pas. Memes
+                                // marges que les lignes (15 a gauche ; a droite 10, plus l'ascenseur et sa marge).
+                                {"legend@ng_asset.background_white": {
+                                  "size": ["100%", 12],
+                                  "color": [0.094, 0.094, 0.106],
+                                  "controls": [
+
+                                    {"columns@ng_module.stackpanel": {
+                                      "orientation": "horizontal",
+                                      "anchor_from": "left_middle",
+                                      "anchor_to": "left_middle",
+                                      "offset": [15, 0],
+                                      "size": ["100% - 35px", "100%"],
+                                      "controls": [
+
+                                        {"player@ng_module.panel": {
+                                          "size": [150, "100%"],
+                                          "controls": [
+
+                                            {"text@ng_module.Simple_text": {
+                                              "anchor_from": "left_middle",
+                                              "anchor_to": "left_middle",
+                                              "offset": [4, 0],
+                                              "$type_get_text": "Get_text_type_1",
+                                              "$index": 11,
+                                              "layer": 6,
+                                              "$text_color": [0.600, 0.600, 0.639],
+                                              "$text_offset": [0, 0.6],
+                                              "size": ["100%c", "100%"],
+                                              "$font_scale_factor": 0.7
+                                            }}
+                                        ]}},
+
+                                        {"server@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_1",
+                                          "$index": 12,
+                                          "layer": 6,
+                                          "$text_color": [0.600, 0.600, 0.639],
+                                          "$text_offset": [0, 0.6],
+                                          "size": ["100%c", "100%"],
+                                          "$font_scale_factor": 0.7
+                                        }},
+
+                                        {"padding@ng_module.panel": {
+                                          "size": ["fill", "100%"]
+                                        }},
+
+                                        // Centree au-dessus des boutons Rejoindre (58 de large).
+                                        {"action@ng_module.panel": {
+                                          "size": [58, "100%"],
+                                          "controls": [
+
+                                            {"text@ng_module.Simple_text": {
+                                              "$type_get_text": "Get_text_type_1",
+                                              "$index": 14,
+                                              "layer": 6,
+                                              "$text_color": [0.600, 0.600, 0.639],
+                                              "$text_offset": [0, 0.6],
+                                              "size": ["100%c", "100%"],
+                                              "$font_scale_factor": 0.7
+                                            }}
+                                        ]}}
+                                    ]}}
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["100%", 3]
+                                }},
+
+                                {"scroll@ng_module.panel": {
+                                  "size": ["100%","fill"],
+                                  "controls":[
+
+                                          {"scroll@ng_module.scroll_test":{
+                                            "size":["100% - 10px","100%"],
+                                            "$size_scroll_bar":[5,"100%"],
+                                            "$scroll_textures_bar": "ng_asset.background_white",
+                                            "$scroll_bar_color":[0.322, 0.322, 0.361],
+                                            "$scroll_textures_background": "ng_asset.background_white",
+                                            "$scroll_background_color":[0.094, 0.094, 0.106],
+                                            "$scrolling_content": "annuaire_lobby.list_joueur"
+                                          }}
+                                ]}},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["100%", 5]
+                                }},
+
+                                {"paggination@ng_asset.background_white":{
+                                  "color":[0.153, 0.153, 0.165],
+                                  "layer":2,
+                                  "size":["100%",20],
+                                  "controls":[
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%c","100%"],
+                                        "controls":[
+
+                                            {"left_button@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+
+                                                  {"buttton@ng_module.Simple_Button":{
+                                                      "size":[11,11],
+                                                      "offset":[0,0.6],
+                                                      "$index": 17,
+                                                      "$icon_right_offset":[-0.3,0],
+                                                      "$size_icone_right": [7,7],
+                                                      "$texture_icone_right": "ng_asset.icon_34",
+                                                      "$texture_button": "ng_asset.button_18"
+                                                  }}
+                                            ]}},
+
+                                            {"padding@ng_module.panel": {
+                                                "size": [3, 0.1]
+                                            }},
+
+                                            {"text@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+
+                                                  {"text@ng_module.Simple_text": {
+                                                      "$type_get_text": "Get_text_type_1",
+                                                      "$index": 18,
+                                                      "offset":[0,0.6],
+                                                      "layer":5,
+                                                      "$text_color":[0.443, 0.443, 0.482],
+                                                      "size": ["100%c", "100%"],
+                                                      "$font_scale_factor": 0.7
+                                                  }}
+                                            ]}},
+
+                                            {"padding@ng_module.panel": {
+                                                "size": [2, 0.1]
+                                            }},
+
+                                            {"righ_button@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+
+                                                  {"buttton@ng_module.Simple_Button":{
+                                                      "size":[11,11],
+                                                      "offset":[0,0.6],
+                                                      "$index": 19,
+                                                      "$icon_right_offset":[0.3,0],
+                                                      "$size_icone_right": [7,7],
+                                                      "$texture_icone_right": "ng_asset.icon_35",
+                                                      "$texture_button": "ng_asset.button_18"
+                                                  }}
+
+                                            ]}}
+                                      ]}}
+                                ]}}
+                        ]}}
+                    ]}}
+
+                ]}}
+
+              ]}}
+          ]}}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //                  Liste des joueurs
+  //
+  // -----------------------------------------------
+
+  "list_joueur@ng_module.stackpanel":{
+    "collection_name": "container_items",
+    "size":["100%","100%c"],
+    "controls":[
+
+      {"joueur_00@annuaire_lobby.ligne_joueur":{
+          "$index": 21, "$index_pseudo": 22, "$index_serveur": 23, "$index_serveur_1": 24, "$index_serveur_2": 25, "$index_rejoindre": 26
+      }},
+      {"joueur_01@annuaire_lobby.ligne_joueur":{
+          "$index": 27, "$index_pseudo": 28, "$index_serveur": 29, "$index_serveur_1": 30, "$index_serveur_2": 31, "$index_rejoindre": 32
+      }},
+      {"joueur_02@annuaire_lobby.ligne_joueur":{
+          "$index": 33, "$index_pseudo": 34, "$index_serveur": 35, "$index_serveur_1": 36, "$index_serveur_2": 37, "$index_rejoindre": 38
+      }},
+      {"joueur_03@annuaire_lobby.ligne_joueur":{
+          "$index": 39, "$index_pseudo": 40, "$index_serveur": 41, "$index_serveur_1": 42, "$index_serveur_2": 43, "$index_rejoindre": 44
+      }},
+      {"joueur_04@annuaire_lobby.ligne_joueur":{
+          "$index": 45, "$index_pseudo": 46, "$index_serveur": 47, "$index_serveur_1": 48, "$index_serveur_2": 49, "$index_rejoindre": 50
+      }},
+      {"joueur_05@annuaire_lobby.ligne_joueur":{
+          "$index": 51, "$index_pseudo": 52, "$index_serveur": 53, "$index_serveur_1": 54, "$index_serveur_2": 55, "$index_rejoindre": 56
+      }},
+      {"joueur_06@annuaire_lobby.ligne_joueur":{
+          "$index": 57, "$index_pseudo": 58, "$index_serveur": 59, "$index_serveur_1": 60, "$index_serveur_2": 61, "$index_rejoindre": 62
+      }},
+      {"joueur_07@annuaire_lobby.ligne_joueur":{
+          "$index": 63, "$index_pseudo": 64, "$index_serveur": 65, "$index_serveur_1": 66, "$index_serveur_2": 67, "$index_rejoindre": 68
+      }},
+      {"joueur_08@annuaire_lobby.ligne_joueur":{
+          "$index": 69, "$index_pseudo": 70, "$index_serveur": 71, "$index_serveur_1": 72, "$index_serveur_2": 73, "$index_rejoindre": 74
+      }},
+      {"joueur_09@annuaire_lobby.ligne_joueur":{
+          "$index": 75, "$index_pseudo": 76, "$index_serveur": 77, "$index_serveur_1": 78, "$index_serveur_2": 79, "$index_rejoindre": 80
+      }}
+  ]},
+
+  // Une ligne : meme regle d'affichage que asset_list_joueur de annuaire.json (ligne visible si son slot a un texte).
+  "ligne_joueur@ng_module.stackpanel": {
+    "collection_index":"$index",
+    "size": ["100%",18],
+    "bindings":[
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hover_text) = ''))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"ligne@ng_module.panel": {
+          "size": ["100%","100%"],
+          "controls": [
+
+                {"stackpanel@ng_module.stackpanel":{
+                  "orientation":"horizontal",
+                  "size":["100% - 20px","100% - 4px"],
+                  "controls":[
+
+                      // Le pseudo, a gauche de sa colonne de 150 avec 4 de marge (le texte d'un Simple_text se centre
+                      // dans sa propre largeur : c'est le panneau de la colonne qui le cale a gauche).
+                      {"player_name_column@ng_module.panel": {
+                        "size": [150, "100%c"],
+                        "controls": [
+
+                          {"player_name@ng_module.Simple_text": {
+                            "anchor_from": "top_left",
+                            "anchor_to": "top_left",
+                            "offset": [4, 0],
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": "$index_pseudo",
+                            "layer":6,
+                            "$max_size":[141,10],
+                            "$text_offset":[0,1.4],
+                            "size": ["100%c", "100%c"],
+                            "$font_type":"MinecraftTen",
+                            "$font_scale_factor": 0.7
+                          }}
+                      ]}},
+
+                      // Le serveur : trois textes, un par couleur, dont un seul est rempli par le serveur de jeu.
+                      {"serveur@ng_module.Simple_text": {
+                        "$type_get_text": "Get_text_type_1",
+                        "$index": "$index_serveur",
+                        "layer":6,
+                        "$max_size":[180,10],
+                        "$text_offset":[0,3.3],
+                        "$text_color":[0.831, 0.831, 0.847],
+                        "size": ["100%c", "100%c"],
+                        "$font_scale_factor": 0.7
+                      }},
+
+                      {"serveur_1@ng_module.Simple_text": {
+                        "$type_get_text": "Get_text_type_1",
+                        "$index": "$index_serveur_1",
+                        "layer":6,
+                        "$max_size":[180,10],
+                        "$text_offset":[0,3.3],
+                        "$text_color":[1.000, 0.412, 0.000],
+                        "size": ["100%c", "100%c"],
+                        "$font_scale_factor": 0.7
+                      }},
+
+                      {"serveur_2@ng_module.Simple_text": {
+                        "$type_get_text": "Get_text_type_1",
+                        "$index": "$index_serveur_2",
+                        "layer":6,
+                        "$max_size":[180,10],
+                        "$text_offset":[0,3.3],
+                        "$text_color":[0.733, 0.000, 0.808],
+                        "size": ["100%c", "100%c"],
+                        "$font_scale_factor": 0.7
+                      }},
+
+                      {"padding@ng_module.panel": {
+                        "size": ["fill", "100%"]
+                      }},
+
+                      // Bouton a etats, comme les onglets de l'en-tete : dessine seulement si le texte du slot porte §0.
+                      {"rejoindre@ng_module.multiple_status_button": {
+                        "size": [58, "100%"],
+                        "$size_button": ["100%", "100%"],
+                        "$index": "$index_rejoindre",
+                        "$textures_button_S0": "ng_asset.button_29",
+                        "$fonction_mapping_button_S0": "clickable",
+                        "$fonction_mapping_button_S1": "nonclickable",
+                        "$S0_type_get_text": "Get_text_type_1",
+                        "$S1_type_get_text": "Get_text_type_1",
+                        "$font_scale_factor": 0.7
+                      }}
+
+                ]}}
+          ]}}
+  ]}
+
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "ng.rocket.liftoff": {
+      "category": "neutral",
+      "max_distance": 64.0,
+      "sounds": [
+        { "name": "sounds/rocket/rocket_liftoff", "stream": true, "volume": 1.0 }
+      ]
+    },
+    "ng.rocket.liftoff.rider": {
+      "category": "neutral",
+      "min_distance": 1500.0,
+      "max_distance": 2000.0,
+      "sounds": [
+        { "name": "sounds/rocket/rocket_liftoff", "stream": true, "volume": 1.0 }
+      ]
+    }
+  }
+}

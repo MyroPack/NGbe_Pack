@@ -1,0 +1,54 @@
+{
+	"resource_pack_name": "NGVehiculeResourcePack",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bike_cow": {
+			"textures": "textures/items/bike_cow"
+		},
+		"bike_pig": {
+			"textures": "textures/items/bike_pig"
+		},
+		"bike_cat": {
+			"textures": "textures/items/bike_cat"
+		},
+		"bike_chicken": {
+			"textures": "textures/items/bike_chicken"
+		},
+		"bike_frog": {
+			"textures": "textures/items/bike_frog"
+		},
+		"bike_goat": {
+			"textures": "textures/items/bike_goat"
+		},
+		"bike_llama": {
+			"textures": "textures/items/bike_llama"
+		},
+		"bike_neblion": {
+			"textures": "textures/items/bike_neblion"
+		},
+		"bike_camel": {
+			"textures": "textures/items/bike_camel"
+		},
+		"bike_snowball": {
+			"textures": "textures/items/bike_snowball"
+		},
+		"bike_small_megalodon": {
+			"textures": "textures/items/small_megalodon_mount"
+		},
+		"bike_ender_dragon": {
+			"textures": "textures/items/bike_ender_dragon"
+		},
+		"bike_happy_ghast": {
+			"textures": "textures/items/bike_ghast"
+		},
+		"bike_phantom_fly": {
+			"textures": "textures/items/bike_phantom_fly"
+		},
+		"bike_pegasus": {
+			"textures": "textures/items/bike_pegasus"
+		},
+		"bike_pegasus_chinese": {
+			"textures": "textures/items/bike_pegasus_chinese"
+		}
+	}
+}

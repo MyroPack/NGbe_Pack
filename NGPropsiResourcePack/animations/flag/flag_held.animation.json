@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.propsi_flag_held.first_person": {
+      "loop": true,
+      "bones": {
+        "hold": {
+          "rotation": [
+            -15,
+            -30,
+            0
+          ],
+          "scale": 0.6
+        }
+      }
+    },
+    "animation.propsi_flag_held.third_person": {
+      "loop": true,
+      "bones": {
+        "hold": {
+          "scale": 0.75
+        }
+      }
+    }
+  }
+}

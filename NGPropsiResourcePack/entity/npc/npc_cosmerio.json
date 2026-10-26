@@ -1,0 +1,166 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npc_cosmerio",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npc/npc_cosmerio"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npc_cosmerio"
+      },
+      "animations": {
+        "anim_1": "animation.propsi_e_npc.default_pays",
+        "anim_2": "animation.propsi_e_npc.default_npc",
+        "anim_3": "animation.propsi_e_npc.default_npc_left_object",
+        "anim_4": "animation.propsi_e_npc.default_wiki",
+        "anim_5": "animation.propsi_e_npc.default_canne",
+        "anim_6": "animation.propsi_e_npc.evil_laugh",
+        "anim_7": "animation.propsi_e_npc.big_brain",
+        "anim_8": "animation.propsi_e_npc.air_punch",
+        "anim_9": "animation.propsi_e_npc.ballerina",
+        "anim_10": "animation.propsi_e_npc.smash_flip",
+        "anim_11": "animation.propsi_e_npc.drop_it",
+        "anim_12": "animation.propsi_e_npc.air_guitar",
+        "anim_13": "animation.propsi_e_npc.head_banger",
+        "anim_14": "animation.propsi_e_npc.no_parachute",
+        "anim_15": "animation.propsi_e_npc.bring_the_energy",
+        "anim_16": "animation.propsi_e_npc.twerk",
+        "anim_17": "animation.propsi_e_npc.flushed_away",
+        "anim_18": "animation.propsi_e_npc.gangnam_style",
+        "anim_19": "animation.propsi_e_npc.the_force",
+        "anim_20": "animation.propsi_e_npc.helicopter",
+        "anim_21": "animation.propsi_e_npc.high_knees",
+        "anim_22": "animation.propsi_e_npc.sanic_fast",
+        "anim_23": "animation.propsi_e_npc.float",
+        "anim_24": "animation.propsi_e_npc.search",
+        "anim_25": "animation.propsi_e_npc.sus",
+        "anim_26": "animation.propsi_e_npc.floating_head",
+        "anim_27": "animation.propsi_e_npc.bouncy",
+        "anim_28": "animation.propsi_e_npc.sprinkler",
+        "anim_29": "animation.propsi_e_npc.slap_spin",
+        "anim_30": "animation.propsi_e_npc.facepalm_smash",
+        "anim_31": "animation.propsi_e_npc.not_today",
+        "anim_32": "animation.propsi_e_npc.bull_rage",
+        "anim_33": "animation.propsi_e_npc.hands_up",
+        "anim_34": "animation.propsi_e_npc.quick_stretch",
+        "anim_35": "animation.propsi_e_npc.smack"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "anim_1": "q.variant == 0"
+          },
+          {
+            "anim_2": "q.variant == 1"
+          },
+          {
+            "anim_3": "q.variant == 2"
+          },
+          {
+            "anim_4": "q.variant == 3"
+          },
+          {
+            "anim_5": "q.variant == 4"
+          },
+          {
+            "anim_6": "q.variant == 5"
+          },
+          {
+            "anim_7": "q.variant == 6"
+          },
+          {
+            "anim_8": "q.variant == 7"
+          },
+          {
+            "anim_9": "q.variant == 8"
+          },
+          {
+            "anim_10": "q.variant == 9"
+          },
+          {
+            "anim_11": "q.variant == 10"
+          },
+          {
+            "anim_12": "q.variant == 11"
+          },
+          {
+            "anim_13": "q.variant == 12"
+          },
+          {
+            "anim_14": "q.variant == 13"
+          },
+          {
+            "anim_15": "q.variant == 14"
+          },
+          {
+            "anim_16": "q.variant == 15"
+          },
+          {
+            "anim_17": "q.variant == 16"
+          },
+          {
+            "anim_18": "q.variant == 17"
+          },
+          {
+            "anim_19": "q.variant == 18"
+          },
+          {
+            "anim_20": "q.variant == 19"
+          },
+          {
+            "anim_21": "q.variant == 20"
+          },
+          {
+            "anim_22": "q.variant == 21"
+          },
+          {
+            "anim_23": "q.variant == 22"
+          },
+          {
+            "anim_24": "q.variant == 23"
+          },
+          {
+            "anim_25": "q.variant == 24"
+          },
+          {
+            "anim_26": "q.variant == 25"
+          },
+          {
+            "anim_27": "q.variant == 26"
+          },
+          {
+            "anim_28": "q.variant == 27"
+          },
+          {
+            "anim_29": "q.variant == 28"
+          },
+          {
+            "anim_30": "q.variant == 29"
+          },
+          {
+            "anim_31": "q.variant == 30"
+          },
+          {
+            "anim_32": "q.variant == 31"
+          },
+          {
+            "anim_33": "q.variant == 32"
+          },
+          {
+            "anim_34": "q.variant == 33"
+          },
+          {
+            "anim_35": "q.variant == 34"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

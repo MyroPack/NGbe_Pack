@@ -1,0 +1,137 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ng_nuclear_panel",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [
+          0,
+          0.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "bones",
+          "pivot": [
+            8,
+            0,
+            -8
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                3,
+                -8
+              ],
+              "size": [
+                16,
+                10,
+                16
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    32,
+                    20
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    33,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    33,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    33,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    16,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    32,
+                    16
+                  ],
+                  "uv_size": [
+                    16,
+                    -16
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -8.25,
+                13,
+                -8.25
+              ],
+              "size": [
+                16.5,
+                3,
+                16.5
+              ],
+              "uv": [
+                0,
+                45
+              ]
+            },
+            {
+              "origin": [
+                -8.25,
+                0,
+                -8.25
+              ],
+              "size": [
+                16.5,
+                3,
+                16.5
+              ],
+              "uv": [
+                0,
+                26
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

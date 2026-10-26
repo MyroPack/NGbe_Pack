@@ -1,0 +1,223 @@
+﻿{
+  "format_version": "1.21.40",
+  "ng:storage_module": {
+    "textures": "storage_module_1",
+    "sound": "place.iron"
+  },
+  "ng:cable": {
+    "textures": "cable_core",
+    "sound": "stone"
+  },
+  "ng:gas_cable": {
+    "textures": "gas_cable_core",
+    "sound": "stone"
+  },
+  "ng:liquid_cable": {
+    "textures": "liquid_cable_core",
+    "sound": "stone"
+  },
+  "ng:cable_block": {
+    "textures": "cable_block",
+    "sound": "metal"
+  },
+  "ng:gas_cable_block": {
+    "textures": "gas_cable_block",
+    "sound": "metal"
+  },
+  "ng:liquid_cable_block": {
+    "textures": "liquid_cable_block",
+    "sound": "metal"
+  },
+  "ng:gas_tank": {
+    "textures": "gas_tank",
+    "sound": "place.iron"
+  },
+  "ng:oxygen_collector": {
+    "textures": "oxygen_collector",
+    "sound": "place.iron"
+  },
+  "ng:coal_generator": {
+    "textures": "coal_generator",
+    "sound": "place.iron"
+  },
+  "ng:structure_block": {
+    "textures": "coal_generator",
+    "sound": "place.iron"
+  },
+  "ng:ecotron": {
+    "textures": "ecotron_off",
+    "sound": "place.iron"
+  },
+  "ng:fuel_generator": {
+    "textures": "fuel_generator",
+    "sound": "place.iron"
+  },
+  "ng:rubber_maker": {
+    "textures": "rubber_maker",
+    "sound": "place.iron"
+  },
+  "ng:crusher": {
+    "textures": "crusher_off",
+    "sound": "place.iron"
+  },
+  "ng:electric_compressor": {
+    "textures": "electric_compressor",
+    "sound": "place.iron"
+  },
+  "ng:food_preserver": {
+    "textures": "food_preserver",
+    "sound": "place.iron"
+  },
+  "ng:food_workbench": {
+    "textures": "food_workbench",
+    "sound": "place.iron"
+  },
+  "ng:potion_workbench": {
+    "textures": "potion_workbench",
+    "sound": "place.iron"
+  },
+  "ng:novice_workbench": {
+    "textures": "novice_workbench",
+    "sound": "wood"
+  },
+  "ng:weapon_workbench": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:energy_workbench": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:explosive_workbench": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:launch_pad": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:launch_pad_part": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:fuel_loader": {
+    "textures": "fuel_loader",
+    "sound": "place.iron"
+  },
+  "ng:refinery": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:craft_station": {
+    "textures": "craft_station",
+    "sound": "metal"
+  },
+  "ng:cog_assembler": {
+    "textures": "cog_assembler_off",
+    "sound": "place.iron"
+  },
+  "ng:printer": {
+    "textures": "printer",
+    "sound": "place.iron"
+  },
+  "ng:industrial_repairer": {
+    "textures": "industrial_repairer_off",
+    "sound": "place.iron"
+  },
+  "ng:tool_repairer": {
+    "textures": "tool_repairer_off",
+    "sound": "place.iron"
+  },
+  "ng:electric_charger": {
+    "textures": "electric_charger_off",
+    "sound": "place.iron"
+  },
+  "ng:nuclear_reactor_hull": {
+    "textures": "nuclear_reactor_hull",
+    "sound": "stone"
+  },
+  "ng:nuclear_reactor_glass": {
+    "textures": "nuclear_reactor_glass",
+    "sound": "glass"
+  },
+  "ng:nuclear_reactor_heart": {
+    "textures": "nuclear_reactor_heart",
+    "sound": "stone"
+  },
+  "ng:cooling_tower_concrete_1": {
+    "textures": "cooling_tower_concrete_1",
+    "sound": "stone"
+  },
+  "ng:cooling_tower_concrete_2": {
+    "textures": "cooling_tower_concrete_2",
+    "sound": "stone"
+  },
+  "ng:cooling_tower_concrete_3": {
+    "textures": "cooling_tower_concrete_3",
+    "sound": "stone"
+  },
+  "ng:cooling_tower_concrete_4": {
+    "textures": "cooling_tower_concrete_4",
+    "sound": "stone"
+  },
+  "ng:cooling_tower_concrete_5": {
+    "textures": "cooling_tower_concrete_5",
+    "sound": "glass"
+  },
+  "ng:confinement_alloy": {
+    "textures": "confinement_alloy",
+    "sound": "stone"
+  },
+  "ng:plasma_accumulator": {
+    "textures": "plasma_accumulator",
+    "sound": "stone"
+  },
+  "ng:plasma_resonance": {
+    "textures": "plasma_resonance",
+    "sound": "stone"
+  },
+  "ng:nuclear_reactor": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:nuclear_chimney": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:turbine": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:nuclear_chamber": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:radioactive_collector": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:liquid_azote_generator": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:plasma_accumulator_t1": {
+    "textures": "ng_invisible",
+    "sound": "stone"
+  },
+  "ng:plasma_accumulator_t2": {
+    "textures": "ng_invisible",
+    "sound": "stone"
+  },
+  "ng:plasma_accumulator_t3": {
+    "textures": "ng_invisible",
+    "sound": "stone"
+  },
+  "ng:nuclear_fuel_loader": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:nuclear_forge": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  }
+}

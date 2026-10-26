@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sky_wood_2",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 8, -4],
+							"size": [16, 8, 12],
+							"uv": {
+								"north": {"uv": [4, 0], "uv_size": [8, 16], "uv_rotation": 90},
+								"east": {"uv": [0, 0], "uv_size": [12, 8]},
+								"south": {"uv": [0, 3], "uv_size": [4, 8]},
+								"west": {"uv": [4, 0], "uv_size": [12, 8]},
+								"up": {"uv": [16, 16], "uv_size": [-12, -16], "uv_rotation": 90},
+								"down": {"uv": [16, 16], "uv_size": [-12, -16], "uv_rotation": 270}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

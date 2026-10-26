@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:deer",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/deer_0",
+        "v1": "textures/entity/ngb/deer_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.deer"
+      },
+      "animations": {
+        "idle": "animation.ng.deer.idle",
+        "move": "animation.ng.deer.move",
+        "controller": "controller.animation.ng.deer.move",
+        "look": "animation.ng.deer.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.deer"
+      ],
+      "spawn_egg": {
+        "base_color": "#d0a58c",
+        "overlay_color": "#89543a"
+      }
+    }
+  }
+}

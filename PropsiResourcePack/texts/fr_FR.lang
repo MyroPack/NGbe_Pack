@@ -1,0 +1,8 @@
+pack.name=PropsiResourcePack
+pack.description=Pack de ressource de décoration
+
+item.propsi:propsi_carton=Carton
+item.propsi:propsi_tool=Propsi tool
+item.propsi:rotation_tool=Outil de rotation
+tile.propsi:propsi_carton.name=Carton
+entity.propsi:portal_recube.name=Portail Recube

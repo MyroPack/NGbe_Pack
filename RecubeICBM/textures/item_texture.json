@@ -1,0 +1,144 @@
+{
+  "resource_pack_name": "RecubeICBMResourcePack",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "recubeicbm_conventionnel": {
+      "textures": "textures/recubeicbm/items/conventionnel"
+    },
+    "recubeicbm_repulsive": {
+      "textures": "textures/recubeicbm/items/repulsive"
+    },
+    "recubeicbm_shrapnel": {
+      "textures": "textures/recubeicbm/items/shrapnel"
+    },
+    "recubeicbm_incendiaire": {
+      "textures": "textures/recubeicbm/items/incendiaire"
+    },
+    "recubeicbm_fragmentation": {
+      "textures": "textures/recubeicbm/items/fragmentation"
+    },
+    "recubeicbm_emp": {
+      "textures": "textures/recubeicbm/items/emp"
+    },
+    "recubeicbm_nuke": {
+      "textures": "textures/recubeicbm/items/nuke"
+    },
+    "recubeicbm_nuke_cluster": {
+      "textures": "textures/recubeicbm/items/nuke_cluster"
+    },
+    "recubeicbm_thermobarique": {
+      "textures": "textures/recubeicbm/items/thermobarique"
+    },
+    "recubeicbm_magnetique": {
+      "textures": "textures/recubeicbm/items/magnetique"
+    },
+    "recubeicbm_earthquake": {
+      "textures": "textures/recubeicbm/items/earthquake"
+    },
+    "recubeicbm_drill": {
+      "textures": "textures/recubeicbm/items/drill"
+    },
+    "recubeicbm_endothermique": {
+      "textures": "textures/recubeicbm/items/endothermique"
+    },
+    "recubeicbm_anti_matter": {
+      "textures": "textures/recubeicbm/items/anti_matter"
+    },
+    "recubeicbm_red_matter": {
+      "textures": "textures/recubeicbm/items/red_matter"
+    },
+    "recubeicbm_plateforme": {
+      "textures": "textures/recubeicbm/items/plateforme"
+    },
+    "recubeicbm_nuclear_warhead_1": {
+      "textures": "textures/recubeicbm/items/nuclear_warhead_1"
+    },
+    "recubeicbm_nuclear_warhead_2": {
+      "textures": "textures/recubeicbm/items/nuclear_warhead_2"
+    },
+    "recubeicbm_nuclear_warhead_3": {
+      "textures": "textures/recubeicbm/items/nuclear_warhead_3"
+    },
+    "recubeicbm_missile_blueprint_green": {
+      "textures": "textures/recubeicbm/items/missile_blueprint_green"
+    },
+    "recubeicbm_missile_blueprint_red": {
+      "textures": "textures/recubeicbm/items/missile_blueprint_red"
+    },
+    "recubeicbm_missile_blueprint_blue": {
+      "textures": "textures/recubeicbm/items/missile_blueprint_blue"
+    },
+    "recubeicbm_missile_blueprint_cyan": {
+      "textures": "textures/recubeicbm/items/missile_blueprint_cyan"
+    },
+    "recubeicbm_missile_blueprint_yellow": {
+      "textures": "textures/recubeicbm/items/missile_blueprint_yellow"
+    },
+    "recubeicbm_missile_guidance": {
+      "textures": "textures/recubeicbm/items/missile_guidance"
+    },
+    "recubeicbm_missile_thruster": {
+      "textures": "textures/recubeicbm/items/missile_thruster"
+    },
+    "recubeicbm_tourelle_anti_missile": {
+      "textures": "textures/recubeicbm/items/tourelle_anti_missile"
+    },
+    "recubeicbm_anti_ballistic_missile": {
+      "textures": "textures/recubeicbm/items/anti_ballistic_missile"
+    },
+    "recubeicbm_ak47": {
+      "textures": "textures/recubeicbm/items/ak47"
+    },
+    "recubeicbm_usp45": {
+      "textures": "textures/recubeicbm/items/usp45"
+    },
+    "recubeicbm_rpg": {
+      "textures": "textures/recubeicbm/items/rpg"
+    },
+    "recubeicbm_rocket_launcher": {
+      "textures": "textures/recubeicbm/items/rocket_launcher"
+    },
+    "recubeicbm_chargeur_ak47": {
+      "textures": "textures/recubeicbm/items/chargeur_ak47"
+    },
+    "recubeicbm_chargeur_usp45": {
+      "textures": "textures/recubeicbm/items/chargeur_usp45"
+    },
+    "recubeicbm_roquette_rpg": {
+      "textures": "textures/recubeicbm/items/roquette_rpg"
+    },
+    "recubeicbm_chargeur_desert_eagle": {
+      "textures": "textures/recubeicbm/items/chargeur_desert_eagle"
+    },
+    "recubeicbm_chargeur_m249": {
+      "textures": "textures/recubeicbm/items/chargeur_m249"
+    },
+    "recubeicbm_chargeur_ks23": {
+      "textures": "textures/recubeicbm/items/chargeur_ks23"
+    },
+    "recubeicbm_chargeur_mossberg": {
+      "textures": "textures/recubeicbm/items/chargeur_mossberg"
+    },
+    "recubeicbm_chargeur_vide_pistolet": {
+      "textures": "textures/recubeicbm/items/chargeur_vide_pistolet"
+    },
+    "recubeicbm_chargeur_vide_automatique": {
+      "textures": "textures/recubeicbm/items/chargeur_vide_automatique"
+    },
+    "recubeicbm_chargeur_vide_pompe": {
+      "textures": "textures/recubeicbm/items/chargeur_vide_pompe"
+    },
+    "recubeicbm_desert_eagle": {
+      "textures": "textures/recubeicbm/items/desert_eagle"
+    },
+    "recubeicbm_m249": {
+      "textures": "textures/recubeicbm/items/m249"
+    },
+    "recubeicbm_ks23": {
+      "textures": "textures/recubeicbm/items/ks23"
+    },
+    "recubeicbm_mossberg": {
+      "textures": "textures/recubeicbm/items/mossberg"
+    }
+  }
+}

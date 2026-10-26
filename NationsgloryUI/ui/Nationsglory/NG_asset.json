@@ -1,0 +1,1137 @@
+{
+  "namespace": "ng_asset",
+
+  // -----------------------------------------------
+  //
+  //               NG Asset Button 
+  //
+  // -----------------------------------------------
+
+  "button_empty@ng_module.mapping_button": {
+    "$contour_visible":false,
+    "$default_button_texture|default": "textures/ui/background/background_empty",
+    "$hover_button_texture|default": "textures/ui/background/background_empty",
+    "$pressed_button_texture|default": "textures/ui/background/background_empty"
+  },
+
+  "button_full_white@ng_module.mapping_button": {
+    "$contour_visible":false,
+    "$default_button_texture|default": "textures/ui/background/background_white",
+    "$hover_button_texture|default": "textures/ui/background/background_white",
+    "$pressed_button_texture|default": "textures/ui/background/background_white"
+  },
+
+  "button_full_contour_white@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_22",
+    "$hover_button_texture|default": "textures/ui/background/background_22",
+    "$pressed_button_texture|default": "textures/ui/background/background_22"
+  },
+
+  "button_contour_white@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_empty",
+    "$hover_button_texture|default": "textures/ui/background/background_22",
+    "$pressed_button_texture|default": "textures/ui/background/background_22"
+  },
+
+  "button_background_white@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_white",
+    "$hover_button_texture|default": "textures/ui/background/background_22",
+    "$pressed_button_texture|default": "textures/ui/background/background_22"
+  },
+
+  "button_01@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_09",
+    "$hover_button_texture|default": "textures/ui/background/background_10",
+    "$pressed_button_texture|default": "textures/ui/background/background_10"
+  },
+
+  "button_02@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_01",
+    "$hover_button_texture|default": "textures/ui/background/background_05",
+    "$pressed_button_texture|default": "textures/ui/background/background_05"
+  },
+
+  "button_03@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_08",
+    "$hover_button_texture|default": "textures/ui/background/background_08",
+    "$pressed_button_texture|default": "textures/ui/background/background_08"
+  },
+
+  "button_04@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_04",
+    "$hover_button_texture|default": "textures/ui/background/background_04",
+    "$pressed_button_texture|default": "textures/ui/background/background_04"
+  },
+
+  "button_05@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_17",
+    "$hover_button_texture|default": "textures/ui/background/background_17",
+    "$pressed_button_texture|default": "textures/ui/background/background_17"
+  },
+
+  "button_06@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_01",
+    "$hover_button_texture|default": "textures/ui/background/background_01",
+    "$pressed_button_texture|default": "textures/ui/background/background_01"
+  },
+
+  "button_07@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_24",
+    "$hover_button_texture|default": "textures/ui/background/background_24",
+    "$pressed_button_texture|default": "textures/ui/background/background_24"
+  },
+
+    "button_activated@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_24",
+    "$hover_button_texture|default": "textures/ui/background/background_24",
+    "$pressed_button_texture|default": "textures/ui/background/background_24",
+    "$color_default_button|default": [0.604, 0.902, 0.000],
+    "$color_hover_button|default": [0.604, 0.902, 0.000],
+    "$color_pressed_button|default": [0.604, 0.902, 0.000]
+  },
+
+  "button_09@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_33",
+    "$hover_button_texture|default": "textures/ui/background/background_33",
+    "$pressed_button_texture|default": "textures/ui/background/background_33"
+  },
+
+  "button_10@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_32",
+    "$hover_button_texture|default": "textures/ui/background/background_32",
+    "$pressed_button_texture|default": "textures/ui/background/background_32"
+  },
+
+  "button_11@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_30",
+    "$hover_button_texture|default": "textures/ui/background/background_30",
+    "$pressed_button_texture|default": "textures/ui/background/background_30"
+  },
+
+  "button_15@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_46",
+    "$hover_button_texture|default": "textures/ui/background/background_46",
+    "$pressed_button_texture|default": "textures/ui/background/background_46"
+  },
+
+  "button_16@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_47",
+    "$hover_button_texture|default": "textures/ui/background/background_47",
+    "$pressed_button_texture|default": "textures/ui/background/background_47"
+  },
+
+  "button_17@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_50",
+    "$hover_button_texture|default": "textures/ui/background/background_22",
+    "$pressed_button_texture|default": "textures/ui/background/background_22"
+  },
+
+  "button_18@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_17",
+    "$hover_button_texture|default": "textures/ui/background/background_05",
+    "$pressed_button_texture|default": "textures/ui/background/background_05"
+  },
+
+  "button_19@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_white",
+    "$hover_button_texture|default": "textures/ui/background/background_51",
+    "$pressed_button_texture|default": "textures/ui/background/background_51"
+  },
+
+  "button_20@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_28",
+    "$hover_button_texture|default": "textures/ui/background/background_28",
+    "$pressed_button_texture|default": "textures/ui/background/background_28"
+  },
+
+  "button_21@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_52",
+    "$hover_button_texture|default": "textures/ui/background/background_52",
+    "$pressed_button_texture|default": "textures/ui/background/background_52"
+  },
+
+  "button_22@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_18",
+    "$hover_button_texture|default": "textures/ui/background/background_05",
+    "$pressed_button_texture|default": "textures/ui/background/background_05"
+  },
+
+  "button_23@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_54",
+    "$hover_button_texture|default": "textures/ui/background/background_54",
+    "$pressed_button_texture|default": "textures/ui/background/background_54"
+  },
+
+  "button_24@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_55",
+    "$hover_button_texture|default": "textures/ui/background/background_55",
+    "$pressed_button_texture|default": "textures/ui/background/background_55"
+  },
+
+  "button_25@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_56",
+    "$hover_button_texture|default": "textures/ui/background/background_56",
+    "$pressed_button_texture|default": "textures/ui/background/background_56"
+  },
+
+  "button_26@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_25",
+    "$hover_button_texture|default": "textures/ui/background/background_25",
+    "$pressed_button_texture|default": "textures/ui/background/background_25"
+  },
+
+  "button_27@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_29",
+    "$hover_button_texture|default": "textures/ui/background/background_29",
+    "$pressed_button_texture|default": "textures/ui/background/background_29"
+  },
+
+  "button_28@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_10",
+    "$hover_button_texture|default": "textures/ui/background/background_10",
+    "$pressed_button_texture|default": "textures/ui/background/background_10"
+  },
+
+  "button_29@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_05",
+    "$hover_button_texture|default": "textures/ui/background/background_05",
+    "$pressed_button_texture|default": "textures/ui/background/background_05"
+  },
+
+  "button_30@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_51",
+    "$hover_button_texture|default": "textures/ui/background/background_51",
+    "$pressed_button_texture|default": "textures/ui/background/background_51"
+  },
+
+  "button_31@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_59",
+    "$hover_button_texture|default": "textures/ui/background/background_59",
+    "$pressed_button_texture|default": "textures/ui/background/background_59"
+  },
+
+  "button_32@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_57",
+    "$hover_button_texture|default": "textures/ui/background/background_57",
+    "$pressed_button_texture|default": "textures/ui/background/background_57"
+  },
+
+  "button_33@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_60",
+    "$hover_button_texture|default": "textures/ui/background/background_60",
+    "$pressed_button_texture|default": "textures/ui/background/background_60"
+  },
+
+  "button_34@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_63",
+    "$hover_button_texture|default": "textures/ui/background/background_63",
+    "$pressed_button_texture|default": "textures/ui/background/background_63"
+  },
+
+  "button_35@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_64",
+    "$hover_button_texture|default": "textures/ui/background/background_64",
+    "$pressed_button_texture|default": "textures/ui/background/background_64"
+  },
+
+  "button_36@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_65",
+    "$hover_button_texture|default": "textures/ui/background/background_65",
+    "$pressed_button_texture|default": "textures/ui/background/background_65"
+  },
+
+  "button_37@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_67",
+    "$hover_button_texture|default": "textures/ui/background/background_67",
+    "$pressed_button_texture|default": "textures/ui/background/background_67"
+  },
+
+  "button_38@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_62",
+    "$hover_button_texture|default": "textures/ui/background/background_62",
+    "$pressed_button_texture|default": "textures/ui/background/background_62"
+  },
+
+  "button_39@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_70",
+    "$hover_button_texture|default": "textures/ui/background/background_70",
+    "$pressed_button_texture|default": "textures/ui/background/background_70"
+  },
+
+  "button_40@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_74",
+    "$hover_button_texture|default": "textures/ui/background/background_74",
+    "$pressed_button_texture|default": "textures/ui/background/background_74"
+  },
+
+  "button_41@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_75",
+    "$hover_button_texture|default": "textures/ui/background/background_75",
+    "$pressed_button_texture|default": "textures/ui/background/background_75"
+  },
+
+  "button_42@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_76",
+    "$hover_button_texture|default": "textures/ui/background/background_76",
+    "$pressed_button_texture|default": "textures/ui/background/background_76"
+  },
+
+
+
+
+  // -----------------------------------------------
+  //
+  //                Toggle asset 
+  //
+  // -----------------------------------------------
+
+  "toggle_asset_01": {
+    "$hover_texture": "textures/ui/background/background_01",
+    "$default_texture": "textures/ui/background/background_17",
+    "$pressed_texture":"textures/ui/background/background_17",
+    "$pressed_no_hover_texture": "textures/ui/background/background_01",
+    "$unchecked_locked_texture": "textures/ui/background/background_17",
+    "$checked_locked_texture": "textures/ui/background/background_17"
+  },
+
+  // -----------------------------------------------
+  //
+  //                background 
+  //
+  // -----------------------------------------------
+
+  "background_empty":{
+    "type":"image",
+    "texture":"textures/ui/background/background_empty"
+  },
+
+  "background_white":{
+    "type":"image",
+    "texture":"textures/ui/background/background_white"
+  },
+
+  "background_01":{
+    "type":"image",
+    "texture":"textures/ui/background/background_01"
+  },
+
+  "background_02":{
+    "type":"image",
+    "texture":"textures/ui/background/background_02"
+  },
+
+  "background_03":{
+    "type":"image",
+    "texture":"textures/ui/background/background_03"
+  },
+
+  "background_04":{
+    "type":"image",
+    "texture":"textures/ui/background/background_04"
+  },
+
+  "background_05":{
+    "type":"image",
+    "texture":"textures/ui/background/background_05"
+  },
+
+  "background_06":{
+    "type":"image",
+    "texture":"textures/ui/background/background_06"
+  },
+
+  "background_07":{
+    "type":"image",
+    "texture":"textures/ui/background/background_07"
+  },
+
+  "background_08":{
+    "type":"image",
+    "texture":"textures/ui/background/background_08"
+  },
+
+  "background_09":{
+    "type":"image",
+    "texture":"textures/ui/background/background_09"
+  },
+
+  "background_10":{
+    "type":"image",
+    "texture":"textures/ui/background/background_10"
+  },
+
+  "background_11":{
+    "type":"image",
+    "texture":"textures/ui/background/background_11"
+  },
+
+  "background_12":{
+    "type":"image",
+    "texture":"textures/ui/background/background_12"
+  },
+
+  "background_13":{
+    "type":"image",
+    "texture":"textures/ui/background/background_13"
+  },
+
+  "background_14":{
+    "type":"image",
+    "texture":"textures/ui/background/background_14"
+  },
+
+  "background_15":{
+    "type":"image",
+    "texture":"textures/ui/background/background_15"
+  },
+
+  "background_16":{
+    "type":"image",
+    "texture":"textures/ui/background/background_16"
+  },
+
+  "background_17":{
+    "type":"image",
+    "texture":"textures/ui/background/background_17"
+  },
+  
+  "background_18":{
+    "type":"image",
+    "texture":"textures/ui/background/background_18"
+  },
+
+  "background_19":{
+    "type":"image",
+    "texture":"textures/ui/background/background_19"
+  },
+
+  "background_20":{
+    "type":"image",
+    "texture":"textures/ui/background/background_20"
+  },
+
+  "background_21":{
+    "type":"image",
+    "texture":"textures/ui/background/background_21"
+  },
+
+  "background_22":{
+    "type":"image",
+    "texture":"textures/ui/background/background_22"
+  },
+
+  "background_23":{
+    "type":"image",
+    "texture":"textures/ui/background/background_23"
+  },
+
+  "background_24":{
+    "type":"image",
+    "texture":"textures/ui/background/background_24"
+  },
+
+  "background_25":{
+    "type":"image",
+    "texture":"textures/ui/background/background_25"
+  },
+
+  "background_26":{
+    "type":"image",
+    "texture":"textures/ui/background/background_26"
+  },
+
+  "background_27":{
+    "type":"image",
+    "texture":"textures/ui/background/background_27"
+  },
+
+  "background_28":{
+    "type":"image",
+    "texture":"textures/ui/background/background_28"
+  },
+
+  "background_29":{
+    "type":"image",
+    "texture":"textures/ui/background/background_29"
+  },
+
+  "background_30":{
+    "type":"image",
+    "texture":"textures/ui/background/background_30"
+  },
+
+  "background_31":{
+    "type":"image",
+    "texture":"textures/ui/background/background_31"
+  },
+
+  "background_32":{
+    "type":"image",
+    "texture":"textures/ui/background/background_32"
+  },
+
+  "background_33":{
+    "type":"image",
+    "texture":"textures/ui/background/background_33"
+  },
+
+  "background_34":{
+    "type":"image",
+    "texture":"textures/ui/background/background_34"
+  },
+
+  "background_35":{
+    "type":"image",
+    "texture":"textures/ui/background/background_35"
+  },
+
+  "background_36":{
+    "type":"image",
+    "texture":"textures/ui/background/background_36"
+  },
+
+  "background_37":{
+    "type":"image",
+    "texture":"textures/ui/background/background_37"
+  },
+
+  "background_38":{
+    "type":"image",
+    "texture":"textures/ui/background/background_38"
+  },
+
+  "background_39":{
+    "type":"image",
+    "texture":"textures/ui/background/background_39"
+  },
+
+  "background_40":{
+    "type":"image",
+    "texture":"textures/ui/background/background_40"
+  },
+
+  "background_42":{
+    "type":"image",
+    "texture":"textures/ui/background/background_42"
+  },
+
+  "background_43":{
+    "type":"image",
+    "texture":"textures/ui/background/background_43"
+  },
+
+  "background_44":{
+    "type":"image",
+    "texture":"textures/ui/background/background_44"
+  },
+
+  "background_45":{
+    "type":"image",
+    "texture":"textures/ui/background/background_45"
+  },
+
+  "background_46":{
+    "type":"image",
+    "texture":"textures/ui/background/background_46"
+  },
+
+  "background_47":{
+    "type":"image",
+    "texture":"textures/ui/background/background_47"
+  },
+
+  "background_48":{
+    "type":"image",
+    "texture":"textures/ui/background/background_48"
+  },
+
+  "background_49":{
+    "type":"image",
+    "texture":"textures/ui/background/background_49"
+  },
+
+  "background_50":{
+    "type":"image",
+    "texture":"textures/ui/background/background_50"
+  },
+
+  "background_51":{
+    "type":"image",
+    "texture":"textures/ui/background/background_51"
+  },
+  
+  "background_53":{
+    "type":"image",
+    "texture":"textures/ui/background/background_53"
+  },
+
+  "background_56":{
+    "type":"image",
+    "texture":"textures/ui/background/background_56"
+  },
+
+  "background_57":{
+    "type":"image",
+    "texture":"textures/ui/background/background_57"
+  },
+
+  "background_58":{
+    "type":"image",
+    "texture":"textures/ui/background/background_58"
+  },
+
+  "background_59":{
+    "type":"image",
+    "texture":"textures/ui/background/background_59"
+  },
+
+  "background_60":{
+    "type":"image",
+    "texture":"textures/ui/background/background_60"
+  },
+
+  "background_61":{
+    "type":"image",
+    "texture":"textures/ui/background/background_61"
+  },
+
+  "background_62":{
+    "type":"image",
+    "texture":"textures/ui/background/background_62"
+  },
+
+  "background_66":{
+    "type":"image",
+    "texture":"textures/ui/background/background_66"
+  },
+
+  "background_67":{
+    "type":"image",
+    "texture":"textures/ui/background/background_67"
+  },
+
+  "background_68":{
+    "type":"image",
+    "texture":"textures/ui/background/background_68"
+  },
+
+  "background_69":{
+    "type":"image",
+    "texture":"textures/ui/background/background_69"
+  },
+
+  "background_71":{
+    "type":"image",
+    "texture":"textures/ui/background/background_71"
+  },
+
+  "background_72":{
+    "type":"image",
+    "texture":"textures/ui/background/background_72"
+  },
+
+  "background_73":{
+    "type":"image",
+    "texture":"textures/ui/background/background_73"
+  },
+
+
+  // -----------------------------------------------
+  //
+  //               background losange
+  //
+  // -----------------------------------------------
+
+  "background_custom_01":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_01"
+  },
+
+  "background_custom_02":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_02"
+  },
+
+  "background_custom_03":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_03"
+  },
+
+  // -----------------------------------------------
+  //
+  //               background losange
+  //
+  // -----------------------------------------------
+  
+  "background_losange_01":{
+    "type":"image",
+    "texture":"textures/ui/background/background_losange/background_losange_01"
+  },
+
+  "background_losange_02":{
+    "type":"image",
+    "texture":"textures/ui/background/background_losange/background_losange_02"
+  },
+
+  "background_losange_03":{
+    "type":"image",
+    "texture":"textures/ui/background/background_losange/background_losange_03"
+  },
+
+  "background_losange_04":{
+    "type":"image",
+    "texture":"textures/ui/background/background_losange/background_losange_04"
+  },
+
+  "background_losange_05":{
+    "type":"image",
+    "texture":"textures/ui/background/background_losange/background_losange_05"
+  },
+
+  // -----------------------------------------------
+  //
+  //               NG Asset icon 
+  //
+  // -----------------------------------------------
+
+  "icon_01":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_01"
+  },
+
+  "icon_02":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_02"
+  },
+
+  "icon_03":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_03"
+  },
+
+  "icon_04":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_04"
+  },
+
+  "icon_05":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_05"
+  },
+
+  "icon_07":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_07"
+  },
+
+  "icon_06":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_06"
+  },
+
+  "icon_08":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_08"
+  },
+
+  "icon_09":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_09"
+  },
+
+  "icon_10":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_10"
+  },
+
+  "icon_11":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_11"
+  },
+
+  "icon_12":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_12"
+  },
+
+  "icon_13":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_13"
+  },
+
+  "icon_14":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_14"
+  },
+
+  "icon_15":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_15"
+  },
+
+  "icon_16":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_16"
+  },
+
+  "icon_17":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_17"
+  },
+
+  "icon_18":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_18"
+  },
+
+  "icon_19":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_19"
+  },
+
+  "icon_20":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_20"
+  },
+
+  "icon_21":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_21"
+  },
+
+  "icon_22":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_22"
+  },
+
+  "icon_23":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_23"
+  },
+
+  "icon_24":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_24"
+  },
+
+  "icon_25":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_25"
+  },
+
+  "icon_26":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_26"
+  },
+
+  "icon_27":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_27"
+  },
+
+  "icon_28":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_28"
+  },
+
+  "icon_29":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_29"
+  },
+
+  "icon_30":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_30"
+  },
+
+  "icon_31":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_31"
+  },
+
+  "icon_32":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_32"
+  },
+
+  "icon_33":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_33"
+  },
+
+  "icon_34":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_34"
+  },
+
+  "icon_35":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_35"
+  },
+
+  "icon_36":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_36"
+  },
+
+  "icon_37":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_37"
+  },
+
+  "icon_38":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_38"
+  },
+
+  "icon_39":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_39"
+  },
+
+  "icon_40":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_40"
+  },
+
+  "icon_41":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_41"
+  },
+
+  "icon_42":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_42"
+  },
+
+  "icon_43":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_43"
+  },
+
+  "icon_44":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_44"
+  },
+
+  "icon_45":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_45"
+  },
+
+  "icon_46":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_46"
+  },
+
+  "icon_47":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_47"
+  },
+
+  "icon_48":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_48"
+  },
+
+  "icon_49":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_49"
+  },
+
+  "icon_50":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_50"
+  },
+
+  "icon_51":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_51"
+  },
+
+  "icon_52":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_52"
+  },
+
+  "icon_53":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_53"
+  },
+  
+  "icon_54":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_54"
+  },
+  
+  "icon_55":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_55"
+  },
+  
+  "icon_56":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_56"
+  },
+  
+  "icon_57":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_57"
+  },
+  
+  "icon_58":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_58"
+  },
+
+  "icon_59":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_59"
+  },
+
+  "icon_60":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_60"
+  },
+
+  "icon_61":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_61"
+  },
+
+  "icon_62":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_62"
+  },
+
+  "icon_63":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_63"
+  },
+
+  "icon_64":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_64"
+  },
+
+  "icon_65":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_65"
+  },
+
+  "prime_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/prime_icon"
+  },
+
+  "point_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/point_icon"
+  },
+
+  "warp_conti_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/warp_conti"
+  },
+
+  "localisation_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/localisation_icon"
+  },
+
+  "earth_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/earth_icon"
+  },
+
+  "moon_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/moon_icon"
+  },
+
+  "edora_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/edora_icon"
+  },
+
+  "farmland_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/farmland_icon"
+  },
+
+  "warzone_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/warzone_icon"
+  },
+
+  "capital_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/capital_icon"
+  },
+
+  "event_icon":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/icon/event_icon"
+  },
+
+  // -----------------------------------------------
+  //
+  //                Auther Asset
+  //
+  // -----------------------------------------------
+
+
+  "rank_bronze":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/Auther/rank_bronze"
+  },
+
+  "rank_argent":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/Auther/rank_argent"
+  },
+
+  "rank_master":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/Auther/rank_master"
+  },
+
+  "rank_or":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/Auther/rank_or"
+  },
+
+  // La ligue platine n'a pas de dessin dans Auther : icone faite par tools/league_icons/league_icons.py.
+  "rank_platine":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/league/platinum"
+  },
+
+  "background_screen":{
+    "type":"image",
+    "texture":"textures/ui/loading_screen"
+  },
+
+  "carte":{
+    "type":"image",
+    "texture":"textures/ui/carte"
+  },
+
+  "logo":{
+    "type":"image",
+    "texture":"textures/ui/logo"
+  },
+
+  "banque":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/Auther/banque"
+  },
+
+  "scroll_bar_button":{
+    "type":"image",
+    "size":["100% - 2px","100% - 2px"],
+    "color":  [0.443, 0.443, 0.482],
+    "texture":"textures/ui/background/background_white"
+  }
+
+}

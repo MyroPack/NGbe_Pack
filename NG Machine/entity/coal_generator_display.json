@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:coal_generator_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/coal_generator_off",
+        "on_0": "textures/blocks/coal_generator_on_0",
+        "on_1": "textures/blocks/coal_generator_on_1",
+        "on_2": "textures/blocks/coal_generator_on_2",
+        "on_3": "textures/blocks/coal_generator_on_3"
+      },
+      "geometry": {
+        "default": "geometry.coalgenerator"
+      },
+      "render_controllers": [
+        "controller.render.ng_coal_generator"
+      ]
+    }
+  }
+}

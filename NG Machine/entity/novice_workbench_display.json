@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:novice_workbench_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/novice_workbench"
+			},
+			"geometry": {
+				"default": "geometry.novice_workbench"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

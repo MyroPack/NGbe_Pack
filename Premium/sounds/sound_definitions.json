@@ -1,0 +1,54 @@
+{
+
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"ng.lootbox.open_1": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_1"]},
+		"ng.lootbox.open_2": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_2"]},
+		"ng.lootbox.open_3": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_3"]},
+		"ng.lootbox.open_4": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_4"]},
+		"lootbox_ultimate_idle": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_ultimate_idle"]},
+		"ng.lootbox.ultimate.open_common": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_ultimate_open_common"]},
+		"ng.lootbox.ultimate.open_rare": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_ultimate_open_rare"]},
+		"ng.lootbox.ultimate.open_epic": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_ultimate_open_epic"]},
+		"ng.lootbox.ultimate.open_legendary": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_ultimate_open_legendary"]},
+		"ng.lootbox.megalodon.idle": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_megalodon_idle"]},
+		"ng.lootbox.megalodon.open_common": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_megalodon_open_common"]},
+		"ng.lootbox.megalodon.open_rare": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_megalodon_open_rare"]},
+		"ng.lootbox.megalodon.open_epic": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_megalodon_open_epic"]},
+		"ng.lootbox.megalodon.open_legendary": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_megalodon_open_legendary"]},
+		"ng.lootbox.mega": {"category": "neutral", "sounds": ["sounds/lootbox/mega_lootbox_sound"]},
+		"ng.assault.start": {"category": "hostile", "sounds": ["sounds/assault/assault_start"]},
+		"ng.assault.victory": {"category": "hostile", "sounds": ["sounds/assault/assault_victory"]},
+		"ng.assault.defeat": {"category": "hostile", "sounds": ["sounds/assault/assault_defeat"]},
+		"loot_box.open.legendary" : {
+			"category" : "neutral",
+			"sounds" : [
+				"sounds/SFX_PC_OpenFast_Legendary"
+			]
+		},
+		"loot_box.open.epic" : {
+			"category" : "neutral",
+			"sounds" : [
+				"sounds/SFX_PC_OpenFast_Epic"
+			]
+		},
+		"loot_box.open.rare" : {
+			"category" : "neutral",
+			"sounds" : [
+				"sounds/SFX_PC_OpenFast_Rare"
+			]
+		},
+		"loot_box.open.common" : {
+			"category" : "neutral",
+			"sounds" : [
+				"sounds/SFX_PC_OpenFast_Common"
+			]
+		},
+		"loot_box.idle" : {
+			"category" : "neutral",
+			"sounds" : [
+				"sounds/SFX_PC_Idle"
+			]
+		}
+	}
+}

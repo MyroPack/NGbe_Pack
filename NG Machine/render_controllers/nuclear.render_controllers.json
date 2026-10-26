@@ -1,0 +1,55 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_nuclear_onoff": {
+      "arrays": {
+        "textures": {
+          "array.state": [
+            "Texture.default",
+            "Texture.on"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.state[math.clamp(query.variant, 0, 1)]"
+      ]
+    },
+    "controller.render.ng_nuclear_chamber": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "1": "query.variant >= 1"
+        },
+        {
+          "2": "query.variant >= 2"
+        },
+        {
+          "3": "query.variant >= 3"
+        },
+        {
+          "4": "query.variant >= 4"
+        },
+        {
+          "5": "query.variant >= 5"
+        }
+      ]
+    }
+  }
+}

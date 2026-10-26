@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:pegasus_chinese_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/pegasus_chinese_mount"
+			},
+			"geometry": {
+				"default": "geometry.pegasus_mount"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"idle": "animation.pegasus_mount.idle",
+				"move": "animation.pegasus_mount.walk"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"move": "query.modified_move_speed"
+					},
+					{
+						"idle": "!query.modified_move_speed"
+					}
+				]
+			},
+			"sound_effects": {
+				"idle": "pegasus_mount_idle",
+				"walk": "pegasus_mount_walk"
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:orca",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/orca_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.orca"
+      },
+      "animations": {
+        "idle": "animation.ng.orca.idle",
+        "move": "animation.ng.orca.move",
+        "attack": "animation.ng.orca.attack",
+        "controller": "controller.animation.ng.orca.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.orca"
+      ],
+      "spawn_egg": {
+        "base_color": "#1a1a21",
+        "overlay_color": "#29252a"
+      }
+    }
+  }
+}

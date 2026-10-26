@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.ng_liquid_tank": {
+      "arrays": {
+        "textures": {
+          "array.fill": [
+            "Texture.empty",
+            "Texture.level_1",
+            "Texture.level_2",
+            "Texture.level_3",
+            "Texture.level_4"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "array.fill[math.clamp(query.variant, 0, 4)]"
+      ]
+    }
+  }
+}

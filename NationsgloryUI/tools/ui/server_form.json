@@ -1,0 +1,130 @@
+{
+  "namespace": "server_form",
+
+  // -----------------------------------------------
+  //
+  //        Formulaires serveur (ModalForm)
+  //
+  // -----------------------------------------------
+  //
+  // Un formulaire "long" (boutons) dont le titre contient un marqueur passe par
+  // une mise en page NG ; tous les autres restent vanilla. Les marqueurs sont des
+  // codes de formatage, donc invisibles pour un joueur sans le pack.
+  //
+  //   §q§r§c§r : fenetre QR code de la liaison Recube (ui/Interface/recube_qr.json),
+  //              envoyee par RecubeAuthMod (QrCodeForm.DefaultMarker).
+  //   §m§r§a§r§p§r : carte du monde en jeu (ui/Interface/carte.json), envoyee par
+  //              RecubeDynmap (InGameMapForm.DefaultMarker).
+  //
+  // Seul le factory des formulaires est remplace (modifications) : si Mojang le
+  // renomme, le remplacement ne s'applique pas et tout reste vanilla.
+
+  "main_screen_content": {
+    "size": [ "100%", "100%" ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "server_form_factory",
+        "value": [
+          {
+            "server_form_factory": {
+              "type": "factory",
+              "control_ids": {
+                "long_form": "@server_form.ng_long_form",
+                "custom_form": "@server_form.custom_form"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "ng_long_form": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+
+      // Tout formulaire qui n'est pas la fenetre QR code : le formulaire vanilla, ou la
+      // carte du monde. Chaque test ne porte que sur un marqueur, avec la forme deja en
+      // service pour le QR code.
+      {"not_recube_qr_form": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "bindings": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "((#title_text - '§q§r§c§r') = #title_text)",
+            "target_property_name": "#visible"
+          }
+        ],
+        "controls": [
+
+          {"vanilla_long_form": {
+            "type": "panel",
+            "size": [ "100%", "100%" ],
+            "bindings": [
+              {
+                "binding_name": "#title_text"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "((#title_text - '§m§r§a§r§p§r') = #title_text)",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+              {"long_form@server_form.long_form": {}}
+            ]
+          }},
+
+          {"ng_map_form": {
+            "type": "panel",
+            "size": [ "100%", "100%" ],
+            "bindings": [
+              {
+                "binding_name": "#title_text"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#title_text - '§m§r§a§r§p§r') = #title_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+              // Leurre de focus (ui/Nationsglory/focus_leurre.json) : un clic donne avant d'avoir bouge
+              // la souris ne tombe plus sur la croix quand la carte se recharge.
+              {"leurre@focus_leurre.leurre": {}},
+              {"ng_map@ng_map.main_panel": {}}
+            ]
+          }}
+
+        ]
+      }},
+
+      {"recube_qr_form": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "bindings": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not ((#title_text - '§q§r§c§r') = #title_text))",
+            "target_property_name": "#visible"
+          }
+        ],
+        "controls": [
+          {"leurre@focus_leurre.leurre": {}},
+          {"recube_qr@recube_qr.main_panel": {}}
+        ]
+      }}
+
+    ]
+  }
+}

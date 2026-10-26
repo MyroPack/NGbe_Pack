@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:baby_pig",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/baby_pig_0",
+        "v1": "textures/entity/ngb/baby_pig_1",
+        "v2": "textures/entity/ngb/baby_pig_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.baby_pig"
+      },
+      "animations": {
+        "idle": "animation.ng.pig.idle",
+        "move": "animation.ng.pig.move",
+        "controller": "controller.animation.ng.baby_pig.move",
+        "look": "animation.ng.pig.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.baby_pig"
+      ],
+      "spawn_egg": {
+        "base_color": "#ffada0",
+        "overlay_color": "#ffc0b7"
+      }
+    }
+  }
+}

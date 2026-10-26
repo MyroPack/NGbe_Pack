@@ -1,0 +1,68 @@
+{
+  "format_version" : "1.21.40",
+  "ng:power_bank" : {
+    "textures" : "storage_module_0",
+    "sound" : "place.iron"
+  },
+  "ng:ore_cluster_iron" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_copper" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_gold" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_tin" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_tin_edora" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_aluminium" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_zirconium_edora" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_lead_edora" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_cryolite_edora" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_uranium" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_adamantium" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_silicon" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_quartz" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_quartz_lunar" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_coal" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_redstone" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_lapis" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_diamond" : {
+    "sound" : "stone"
+  },
+  "ng:ore_cluster_emerald" : {
+    "sound" : "stone"
+  },
+  "ng:shadow_ore" : {
+    "textures" : "shadow_ore",
+    "sound" : "stone"
+  }
+}

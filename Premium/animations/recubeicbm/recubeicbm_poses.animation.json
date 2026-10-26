@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.recubeicbm.player.armsup": {
+      "loop": true,
+      "override_previous_animation": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            -143,
+            0,
+            "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"
+          ]
+        },
+        "leftarm": {
+          "rotation": [
+            -143,
+            0,
+            "-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)"
+          ]
+        }
+      }
+    },
+    "animation.recubeicbm.player.heavy": {
+      "loop": true,
+      "override_previous_animation": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            -80,
+            0,
+            0
+          ]
+        },
+        "leftarm": {
+          "rotation": [
+            -100,
+            35,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

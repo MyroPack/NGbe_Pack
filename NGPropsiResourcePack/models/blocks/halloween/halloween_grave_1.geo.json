@@ -1,0 +1,73 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.halloween_grave_1",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8]
+				},
+				{
+					"name": "group",
+					"pivot": [3.5, 19, 0.5],
+					"cubes": [
+						{
+							"origin": [-8, 0, -5],
+							"size": [16, 4, 10],
+							"uv": {
+								"north": {"uv": [24, 14], "uv_size": [16, 4]},
+								"east": {"uv": [24, 24], "uv_size": [10, 4]},
+								"south": {"uv": [24, 19], "uv_size": [16, 4]},
+								"west": {"uv": [13, 28], "uv_size": [10, 4]},
+								"up": {"uv": [0, 0], "uv_size": [16, 10]},
+								"down": {"uv": [0, 21], "uv_size": [16, -10]}
+							}
+						},
+						{
+							"origin": [-6, 4, -3],
+							"size": [12, 13, 6],
+							"uv": {
+								"north": {"uv": [17, 0], "uv_size": [12, 13]},
+								"east": {"uv": [17, 14], "uv_size": [6, 13]},
+								"south": {"uv": [17, 0], "uv_size": [12, 13]},
+								"west": {"uv": [17, 14], "uv_size": [6, 13]},
+								"up": {"uv": [0, 22], "uv_size": [12, 6]}
+							}
+						},
+						{
+							"origin": [-1.5, 17, -1.5],
+							"size": [3, 10, 3],
+							"uv": {
+								"north": {"uv": [0, 29], "uv_size": [3, 10]},
+								"east": {"uv": [4, 29], "uv_size": [3, 10]},
+								"south": {"uv": [0, 29], "uv_size": [3, 10]},
+								"west": {"uv": [4, 29], "uv_size": [3, 10]},
+								"up": {"uv": [13, 22], "uv_size": [3, 3]}
+							}
+						},
+						{
+							"origin": [-4.5, 22, -1.5],
+							"size": [9, 3, 3],
+							"uv": {
+								"north": {"uv": [24, 29], "uv_size": [9, 3]},
+								"east": {"uv": [8, 29], "uv_size": [3, 3]},
+								"south": {"uv": [24, 29], "uv_size": [9, 3]},
+								"west": {"uv": [8, 29], "uv_size": [3, 3]},
+								"up": {"uv": [30, 0], "uv_size": [9, 3]},
+								"down": {"uv": [30, 7], "uv_size": [9, -3]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

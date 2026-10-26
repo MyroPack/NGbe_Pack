@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:rocket_entity",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/rocket"
+      },
+      "geometry": {
+        "default": "geometry.ng_rocket"
+      },
+      "animations": {
+        "off": "animation.fuse.off",
+        "rumble": "animation.fuse.rumble",
+        "fly": "animation.fuse.fly",
+        "start": "animation.fuse.start",
+        "flight": "controller.animation.ng_rocket"
+      },
+      "scripts": {
+        "animate": [
+          "flight"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

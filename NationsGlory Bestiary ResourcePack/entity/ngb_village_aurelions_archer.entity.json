@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:village_aurelions_archer",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/village_aurelions_archer_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.village_aurelions_archer"
+      },
+      "animations": {
+        "idle": "animation.ng.village_aurelions_archer.idle",
+        "move": "animation.ng.village_aurelions_archer.move",
+        "attack": "animation.ng.village_aurelions_archer.attack",
+        "controller": "controller.animation.ng.village_aurelions_archer.move",
+        "look": "animation.ng.village_aurelions_archer.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.village_aurelions_archer"
+      ],
+      "spawn_egg": {
+        "base_color": "#d3c1a6",
+        "overlay_color": "#654d2c"
+      }
+    }
+  }
+}

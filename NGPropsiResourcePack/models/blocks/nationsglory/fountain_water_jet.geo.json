@@ -1,0 +1,33 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fountain_water_jet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [13, -0.5, -13],
+							"size": [0, 30, 40],
+							"pivot": [13, 13.5, -13],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"east": {"uv": [62, 6], "uv_size": [-54, 47]},
+								"west": {"uv": [8, 6], "uv_size": [54, 47]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

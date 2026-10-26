@@ -1,0 +1,25 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.store_counter_pedestal",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{"origin": [-14, 0, -14], "size": [28, 11, 28], "uv": [16, 54]},
+						{"origin": [-15, 11, -15], "size": [30, 5, 30], "uv": [0, 93]}
+					]
+				}
+			]
+		}
+	]
+}

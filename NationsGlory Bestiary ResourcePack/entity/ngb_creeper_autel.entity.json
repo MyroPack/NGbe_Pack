@@ -1,0 +1,37 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:creeper_autel",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/creeper_autel_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.creeper_autel"
+      },
+      "animations": {
+        "idle": "animation.ng.creeper_autel.idle",
+        "move": "animation.ng.creeper_autel.move",
+        "controller": "controller.animation.ng.creeper_autel.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.creeper_autel"
+      ],
+      "spawn_egg": {
+        "base_color": "#04070b",
+        "overlay_color": "#151a1f"
+      }
+    }
+  }
+}

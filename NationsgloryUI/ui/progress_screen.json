@@ -1,0 +1,206 @@
+﻿{
+  "namespace": "progress",
+
+  
+  "world_modal_progress_panel": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "popup_dialog_factory@popup_dialog_factory": {
+          "layer": 10000
+        }
+      },
+      {
+        "background@ng_asset.background_screen": {
+          "size": [
+            "110%",
+            "110%"
+          ]
+        }
+      },
+      {
+        "content@ng_module.panel": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "content@ng_module.stackpanel": {
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "size": [
+                  "95%",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "logo_text@ng_module.stackpanel": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        "100%cm"
+                      ],
+                      "controls": [
+                        {
+                          "logo@ng_asset.logo": {
+                            "size": [
+                              180,
+                              50
+                            ]
+                          }
+                        },
+                        {
+                          "padding@ng_module.panel": {
+                            "size": [
+                              "fill",
+                              0
+                            ]
+                          }
+                        },
+                        {
+                          "text_loading": {
+                            "type": "panel",
+                            "size": [
+                              "100%c",
+                              "100%sm"
+                            ],
+                            "controls": [
+                              {
+                                "panel_title": {
+                                  "max_size": [
+                                    250,
+                                    20
+                                  ],
+                                  "type": "label",
+                                  "font_scale_factor": 0.8,
+                                  "text": "#progress_text",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#progress_text"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding@ng_module.panel": {
+                      "size": [
+                        "100%",
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "loading_bar@ng_asset.background_white": {
+                      "color": [0.094, 0.094, 0.106],
+                      "size": ["100%",4],
+                      "controls": [
+                        {
+                          "load_bar@ng_asset.background_white": {
+                            "color": [0.373, 0.369, 0.412],
+                            "size": [
+                              "100% - 2px",
+                              2
+                            ],
+                            "controls": [
+                              {
+                                "load@ng_asset.background_white": {
+                                  "type": "image",
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "color": [0.408, 0.392, 1.000],
+                                  "size": "@progress.anim_load"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding@ng_module.panel": {
+                      "size": [
+                        "100%",
+                        10
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "world_modal_progress_panel_logout": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [
+            "200%",
+            "200%"
+          ],
+          "texture": "textures/ui/Black"
+        }
+      },
+      {
+        "logout-title": {
+          "type": "label",
+          "text": "Déconnexion du serveur en cours..."
+        }
+      }
+    ]
+  },
+  "anim_load": {
+    "anim_type": "size",
+    "easing": "linear",
+    "duration": 5,
+    "from": [
+      0,
+      2
+    ],
+    "to": [
+      "100%",
+      2
+    ]
+  },
+  "world_convert_modal_progress_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "world_modal_progress_panel@progress.world_modal_progress_panel": {
+          "$modal_button_panel_type": "progress.modal_button_panel"
+        }
+      }
+    ]
+  },
+  "world_save_modal_progress_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "world_modal_progress_panel_logout@progress.world_modal_progress_panel_logout": {
+          "$modal_button_panel_type": "progress.modal_button_panel_with_retry"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:oxygen_collector_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/oxygen_collector",
+        "on": "textures/blocks/oxygen_collector_on"
+      },
+      "geometry": {
+        "default": "geometry.oxygen_collector"
+      },
+      "render_controllers": [
+        "controller.render.ng_oxygen_collector"
+      ]
+    }
+  }
+}

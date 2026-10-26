@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:chicken",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/chicken_0",
+        "v1": "textures/entity/ngb/chicken_1",
+        "v2": "textures/entity/ngb/chicken_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.chicken"
+      },
+      "animations": {
+        "idle": "animation.ng.chicken.idle",
+        "move": "animation.ng.chicken.move",
+        "controller": "controller.animation.ng.chicken.move",
+        "look": "animation.ng.chicken.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.chicken"
+      ],
+      "spawn_egg": {
+        "base_color": "#d3d3d3",
+        "overlay_color": "#e2e2e2"
+      }
+    }
+  }
+}

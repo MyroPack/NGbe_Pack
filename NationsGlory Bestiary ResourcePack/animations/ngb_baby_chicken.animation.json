@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.ng.baby_chicken.idle":{"loop":true,"bones":{"body":{"rotation":[0,0,0]}}},"animation.ng.baby_chicken.move":{"loop":true,"anim_time_update":"query.modified_distance_moved","bones":{"leg0":{"rotation":["math.cos(query.anim_time * 38.17) *  80.0",0,0]},"leg1":{"rotation":["math.cos(query.anim_time * 38.17) * -80.0",0,0]}}}}}

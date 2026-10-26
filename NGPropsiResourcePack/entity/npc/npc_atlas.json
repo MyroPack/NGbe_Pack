@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npc_atlas",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npc/npc_atlas"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npc_atlas"
+      },
+      "animations": {
+        "stand": "animation.propsi_e_npc_atlas.new"
+      },
+      "scripts": {
+        "animate": [
+          "stand"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

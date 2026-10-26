@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npc_skye",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "map_marker"
+      },
+      "textures": {
+        "default": "textures/entity/npc/npc_skye"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npc_skye"
+      },
+      "scripts": {
+        "scale": "1.05",
+        "pre_animation": [
+          "v.rotation_to_camera_0 = -Math.atan2(-q.distance_from_camera * Math.sin(q.rotation_to_camera(0)) - 1, q.distance_from_camera * Math.cos(q.rotation_to_camera(0)));",
+          "v.look_at_entity = Math.abs(Math.abs(q.rotation_to_camera(1) - q.camera_rotation(1)) - 180) < (60 / q.distance_from_camera) && Math.abs(v.rotation_to_camera_0 + q.camera_rotation(0)) < (120 / q.distance_from_camera);"
+        ]
+      },
+      "animations": {
+        "look": "animation.propsi_e_npc_skye.look",
+        "idle": "animation.propsi_e_npc_skye.idle",
+        "talk": "animation.propsi_e_npc_skye.talk"
+      },
+      "animation_controllers": [
+        {
+          "npc_skye": "controller.animation.propsi_e_npc_skye"
+        }
+      ],
+      "particle_effects": {
+        "npc_name": "propsi:npc_skye_name",
+        "npc_talk": "propsi:npc_talk"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

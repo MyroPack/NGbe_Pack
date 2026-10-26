@@ -1,0 +1,11 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "PropsiResourcePack",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"propsi_carton": {
+			"textures": "textures/blocks/propsi_carton"
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:printer_display_on",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/printer"
+      },
+      "geometry": {
+        "default": "geometry.machine_printer"
+      },
+      "animations": {
+        "print": "animation.machine_printer.machine_printer_on"
+      },
+      "scripts": {
+        "animate": [
+          "print"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

@@ -1,0 +1,507 @@
+{
+	"resource_pack_name": "NGResourcePack",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"eco_item": {
+			"textures": "textures/items/eco_item"
+		},
+		"eco_helmet": {
+			"textures": "textures/items/eco_helmet"
+		},
+		"eco_chestplate": {
+			"textures": "textures/items/eco_chestplate"
+		},
+		"eco_leggings": {
+			"textures": "textures/items/eco_leggings"
+		},
+		"eco_boots": {
+			"textures": "textures/items/eco_boots"
+		},
+		"desh_helmet": {
+			"textures": "textures/items/desh_helmet"
+		},
+		"desh_chestplate": {
+			"textures": "textures/items/desh_chestplate"
+		},
+		"desh_leggings": {
+			"textures": "textures/items/desh_leggings"
+		},
+		"desh_boots": {
+			"textures": "textures/items/desh_boots"
+		},
+		"volcanite_helmet": {
+			"textures": "textures/items/volcanite_helmet"
+		},
+		"volcanite_chestplate": {
+			"textures": "textures/items/volcanite_chestplate"
+		},
+		"volcanite_boots": {
+			"textures": "textures/items/volcanite_boots"
+		},
+		"volcanite_leggings": {
+			"textures": "textures/items/volcanite_leggings"
+		},
+		"ragnarok_helmet": {
+			"textures": "textures/items/ragnarok_helmet"
+		},
+		"ragnarok_chestplate": {
+			"textures": "textures/items/ragnarok_chestplate"
+		},
+		"ragnarok_leggings": {
+			"textures": "textures/items/ragnarok_leggings"
+		},
+		"ragnarok_boots": {
+			"textures": "textures/items/ragnarok_boots"
+		},
+		"prototype_helmet": {
+			"textures": "textures/items/prototype_helmet"
+		},
+		"prototype_chestplate": {
+			"textures": "textures/items/prototype_chestplate"
+		},
+		"prototype_leggings": {
+			"textures": "textures/items/prototype_leggings"
+		},
+		"prototype_boots": {
+			"textures": "textures/items/prototype_boots"
+		},
+		"builder_helmet": {
+			"textures": "textures/items/builder_helmet"
+		},
+		"builder_chestplate": {
+			"textures": "textures/items/builder_chestplate"
+		},
+		"builder_leggings": {
+			"textures": "textures/items/builder_leggings"
+		},
+		"builder_boots": {
+			"textures": "textures/items/builder_boots"
+		},
+		"adventurer_helmet": {
+			"textures": "textures/items/adventurer_helmet"
+		},
+		"adventurer_chestplate": {
+			"textures": "textures/items/adventurer_chestplate"
+		},
+		"adventurer_leggings": {
+			"textures": "textures/items/adventurer_leggings"
+		},
+		"adventurer_boots": {
+			"textures": "textures/items/adventurer_boots"
+		},
+		"meteor": {
+			"textures": "textures/items/meteor"
+		},
+		"meteoric_iron_raw": {
+			"textures": "textures/items/meteoric_iron_raw"
+		},
+		"kevlar": {
+			"textures": "textures/items/kevlar"
+		},
+		"caoutchouc": {
+			"textures": "textures/items/caoutchou"
+		},
+		"eco_ingot": {
+			"textures": "textures/items/eco_ingot"
+		},
+		"eco_compressed": {
+			"textures": "textures/items/eco_compressed"
+		},
+		"eco_plate": {
+			"textures": "textures/items/eco_plate"
+		},
+		"cog_aluminium": {
+			"textures": "textures/items/cog_aluminium"
+		},
+		"cog_copper": {
+			"textures": "textures/items/cog_copper"
+		},
+		"cog_desh": {
+			"textures": "textures/items/cog_desh"
+		},
+		"cog_diamond": {
+			"textures": "textures/items/cog_diamond"
+		},
+		"cog_emerald": {
+			"textures": "textures/items/cog_emerald"
+		},
+		"cog_gold": {
+			"textures": "textures/items/cog_gold"
+		},
+		"cog_iron": {
+			"textures": "textures/items/cog_iron"
+		},
+		"cog_lead": {
+			"textures": "textures/items/cog_lead"
+		},
+		"cog_onyx": {
+			"textures": "textures/items/cog_onyx"
+		},
+		"cog_tin": {
+			"textures": "textures/items/cog_tin"
+		},
+		"axe_electric": {
+			"textures": "textures/items/axe_electric"
+		},
+		"pickaxe_electric": {
+			"textures": "textures/items/pickaxe_electric"
+		},
+		"shovel_electric": {
+			"textures": "textures/items/shovel_electric"
+		},
+		"axe_electric_upgraded": {
+			"textures": "textures/items/axe_electric_upgraded"
+		},
+		"pickaxe_electric_upgraded": {
+			"textures": "textures/items/pickaxe_electric_upgraded"
+		},
+		"shovel_electric_upgraded": {
+			"textures": "textures/items/shovel_electric_upgraded"
+		},
+		"multi_tool_electric": {
+			"textures": "textures/items/multi_tool_electric"
+		},
+		"multi_tool_electric_icon": {
+			"textures": "textures/items/multi_tool_electric_icon"
+		},
+		"ng_phone": {
+			"textures": "textures/items/ng_phone"
+		},
+		"server_chooser": {
+			"textures": "textures/items/server_chooser"
+		},
+		"volcanite_plate": {
+			"textures": "textures/items/volcanite_plate"
+		},
+		"tin_plate": {
+			"textures": "textures/items/tin_plate"
+		},
+		"sulfur_plate": {
+			"textures": "textures/items/sulfur_plate"
+		},
+		"niobium_plate": {
+			"textures": "textures/items/niobium_plate"
+		},
+		"meteoric_plate": {
+			"textures": "textures/items/meteoric_plate"
+		},
+		"magnesium_plate": {
+			"textures": "textures/items/magnesium_plate"
+		},
+		"iron_plate": {
+			"textures": "textures/items/iron_plate"
+		},
+		"gallium_plate": {
+			"textures": "textures/items/gallium_plate"
+		},
+		"aluminium_plate": {
+			"textures": "textures/items/aluminium_plate"
+		},
+		"zirconium_plate": {
+			"textures": "textures/items/zirconium_plate"
+		},
+		"gold_compressed": {
+			"textures": "textures/items/gold_compressed"
+		},
+		"desh_compressed": {
+			"textures": "textures/items/desh_compressed"
+		},
+		"copper_compressed": {
+			"textures": "textures/items/copper_compressed"
+		},
+		"zirconium_compressed": {
+			"textures": "textures/items/zirconium_compressed"
+		},
+		"tiber_renforced_compressed": {
+			"textures": "textures/items/tiber_renforced_compressed"
+		},
+		"tiber_compressed": {
+			"textures": "textures/items/tiber_compressed"
+		},
+		"sulfur_compressed": {
+			"textures": "textures/items/sulfur_compressed"
+		},
+		"niobium_compressed": {
+			"textures": "textures/items/niobium_compressed"
+		},
+		"meteoric_compressed": {
+			"textures": "textures/items/meteoric_compressed"
+		},
+		"raw_aluminium": {
+			"textures": "textures/items/raw_aluminium"
+		},
+		"zirconium_ingot": {
+			"textures": "textures/items/zirconium_ingot"
+		},
+		"volcanite_ingot": {
+			"textures": "textures/items/volcanite_ingot"
+		},
+		"tin_ingot": {
+			"textures": "textures/items/tin_ingot"
+		},
+		"sulfur_ingot": {
+			"textures": "textures/items/sulfur_ingot"
+		},
+		"niobium_ingot": {
+			"textures": "textures/items/niobium_ingot"
+		},
+		"meteoric_iron_ingot": {
+			"textures": "textures/items/meteoric_iron_ingot"
+		},
+		"magnesium_ingot": {
+			"textures": "textures/items/magnesium_ingot"
+		},
+		"gallium_ingot": {
+			"textures": "textures/items/gallium_ingot"
+		},
+		"aluminium_ingot": {
+			"textures": "textures/items/aluminium_ingot"
+		},
+		"circuit_basique": {
+			"textures": "textures/items/circuit_basique"
+		},
+		"advanced_circuit": {
+			"textures": "textures/items/advanced_circuit"
+		},
+		"elite_circuit": {
+			"textures": "textures/items/elite_circuit"
+		},
+		"gallium_circuit": {
+			"textures": "textures/items/gallium_circuit"
+		},
+		"zirconium_circuit": {
+			"textures": "textures/items/zirconium_circuit"
+		},
+		"cryolite_circuit": {
+			"textures": "textures/items/cryolite_circuit"
+		},
+		"tiber_circuit": {
+			"textures": "textures/items/tiber_circuit"
+		},
+		"demonic_sword": {
+			"textures": "textures/items/demonic_sword"
+		},
+		"eco_sword": {
+			"textures": "textures/items/eco_sword"
+		},
+		"bronze_raw": {
+			"textures": "textures/items/bronze_raw"
+		},
+		"raw_tin": {
+			"textures": "textures/items/raw_tin"
+		},
+		"magmarock": {
+			"textures": "textures/items/magmarock"
+		},
+		"deuterium": {
+			"textures": "textures/items/deuterium"
+		},
+		"magnesium": {
+			"textures": "textures/items/magnesium"
+		},
+		"niobium": {
+			"textures": "textures/items/niobium"
+		},
+		"gallium": {
+			"textures": "textures/items/gallium"
+		},
+		"raw_desh": {
+			"textures": "textures/items/raw_desh"
+		},
+		"sulfur": {
+			"textures": "textures/items/sulfur"
+		},
+		"zirconium_brut": {
+			"textures": "textures/items/zirconium_brut"
+		},
+		"raw_lead": {
+			"textures": "textures/items/raw_lead"
+		},
+		"raw_cryolite": {
+			"textures": "textures/items/raw_cryolite"
+		},
+		"asteroid_crystal": {
+			"textures": "textures/items/asteroid_crystal"
+		},
+		"onyx_brut": {
+			"textures": "textures/items/onyx_brut"
+		},
+		"uranium_brut": {
+			"textures": "textures/items/uranium_brut"
+		},
+		"steel_dust": {
+			"textures": "textures/items/steel_dust"
+		},
+		"steel_ingot": {
+			"textures": "textures/items/steel_ingot"
+		},
+		"bronze_ingot": {
+			"textures": "textures/items/bronze_ingot"
+		},
+		"deuterium_ingot": {
+			"textures": "textures/items/deuterium_ingot"
+		},
+		"lingot_desh": {
+			"textures": "textures/items/lingot_desh"
+		},
+		"lead_ingot": {
+			"textures": "textures/items/lead_ingot"
+		},
+		"cryolite_ingot": {
+			"textures": "textures/items/cryolite_ingot"
+		},
+		"deuterium_plate": {
+			"textures": "textures/items/deuterium_plate"
+		},
+		"plaque_desh": {
+			"textures": "textures/items/plaque_desh"
+		},
+		"lead_plate": {
+			"textures": "textures/items/lead_plate"
+		},
+		"cryolite_plate": {
+			"textures": "textures/items/cryolite_plate"
+		},
+		"deuterium_compressed": {
+			"textures": "textures/items/deuterium_compressed"
+		},
+		"lead_compressed": {
+			"textures": "textures/items/lead_compressed"
+		},
+		"cryolite_compressed": {
+			"textures": "textures/items/cryolite_compressed"
+		},
+		"crystal_compressed": {
+			"textures": "textures/items/crystal_compressed"
+		},
+		"desh_stick": {
+			"textures": "textures/items/desh_stick"
+		},
+		"ore_cluster_iron": {
+			"textures": "textures/items/ore_cluster_iron"
+		},
+		"ore_cluster_copper": {
+			"textures": "textures/items/ore_cluster_copper"
+		},
+		"ore_cluster_gold": {
+			"textures": "textures/items/ore_cluster_gold"
+		},
+		"ore_cluster_tin": {
+			"textures": "textures/items/ore_cluster_tin"
+		},
+		"ore_cluster_tin_edora": {
+			"textures": "textures/items/ore_cluster_tin_edora"
+		},
+		"ore_cluster_aluminium": {
+			"textures": "textures/items/ore_cluster_aluminium"
+		},
+		"ore_cluster_zirconium_edora": {
+			"textures": "textures/items/ore_cluster_zirconium_edora"
+		},
+		"ore_cluster_lead_edora": {
+			"textures": "textures/items/ore_cluster_lead_edora"
+		},
+		"ore_cluster_cryolite_edora": {
+			"textures": "textures/items/ore_cluster_cryolite_edora"
+		},
+		"ore_cluster_uranium": {
+			"textures": "textures/items/ore_cluster_uranium"
+		},
+		"ore_cluster_adamantium": {
+			"textures": "textures/items/ore_cluster_adamantium"
+		},
+		"ore_cluster_silicon": {
+			"textures": "textures/items/ore_cluster_silicon"
+		},
+		"ore_cluster_quartz": {
+			"textures": "textures/items/ore_cluster_quartz"
+		},
+		"ore_cluster_quartz_lunar": {
+			"textures": "textures/items/ore_cluster_quartz_lunar"
+		},
+		"ore_cluster_coal": {
+			"textures": "textures/items/ore_cluster_coal"
+		},
+		"ore_cluster_redstone": {
+			"textures": "textures/items/ore_cluster_redstone"
+		},
+		"ore_cluster_lapis": {
+			"textures": "textures/items/ore_cluster_lapis"
+		},
+		"ore_cluster_diamond": {
+			"textures": "textures/items/ore_cluster_diamond"
+		},
+		"ore_cluster_emerald": {
+			"textures": "textures/items/ore_cluster_emerald"
+		},
+		"cog_steel": {
+			"textures": "textures/items/cog_steel"
+		},
+		"cog_bronze": {
+			"textures": "textures/items/cog_bronze"
+		},
+		"cog_volcanite": {
+			"textures": "textures/items/cog_volcanite"
+		},
+		"cog_deuterium": {
+			"textures": "textures/items/cog_deuterium"
+		},
+		"cog_magnesium": {
+			"textures": "textures/items/cog_magnesium"
+		},
+		"cog_niobium": {
+			"textures": "textures/items/cog_niobium"
+		},
+		"cog_gallium": {
+			"textures": "textures/items/cog_gallium"
+		},
+		"cog_eco": {
+			"textures": "textures/items/cog_eco"
+		},
+		"cog_meteoric_iron": {
+			"textures": "textures/items/cog_meteoric_iron"
+		},
+		"cog_sulfur": {
+			"textures": "textures/items/cog_sulfur"
+		},
+		"cog_tiber": {
+			"textures": "textures/items/cog_tiber"
+		},
+		"cog_zirconium": {
+			"textures": "textures/items/cog_zirconium"
+		},
+		"cog_cryolite": {
+			"textures": "textures/items/cog_cryolite"
+		},
+		"cog_asteroid_crystal": {
+			"textures": "textures/items/cog_asteroid_crystal"
+		},
+		"cog_uranium": {
+			"textures": "textures/items/cog_uranium"
+		},
+		"cog_ashstone": {
+			"textures": "textures/items/cog_ashstone"
+		},
+		"cog_silicon": {
+			"textures": "textures/items/cog_silicon"
+		},
+		"cog_quartz": {
+			"textures": "textures/items/cog_quartz"
+		},
+		"cog_coal": {
+			"textures": "textures/items/cog_coal"
+		},
+		"cog_redstone": {
+			"textures": "textures/items/cog_redstone"
+		},
+		"cog_lapis": {
+			"textures": "textures/items/cog_lapis"
+		},
+		"fibre_bois": {
+			"textures": "textures/items/fibre_bois"
+		},
+		"carbon_fiber": {
+			"textures": "textures/items/carbon_fiber"
+		}
+	}
+}

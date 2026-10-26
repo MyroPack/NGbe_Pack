@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:crab",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/crab_0",
+        "v1": "textures/entity/ngb/crab_1",
+        "v2": "textures/entity/ngb/crab_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.crab"
+      },
+      "animations": {
+        "idle": "animation.ng.crab.idle",
+        "move": "animation.ng.crab.move",
+        "attack": "animation.ng.crab.attack",
+        "controller": "controller.animation.ng.crab.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.crab"
+      ],
+      "spawn_egg": {
+        "base_color": "#852d29",
+        "overlay_color": "#aa473d"
+      }
+    }
+  }
+}

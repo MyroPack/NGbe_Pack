@@ -1,0 +1,338 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "recubeicbm.usp45.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/usp45_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.desert_eagle.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/desert_eagle_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.ak47.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/ak47_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.m249.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/m249_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.ks23.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/ks23_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.mossberg.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/mossberg_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.reload.pistol": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/reload_pistol",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.reload.automatic": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/reload_automatic",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.reload.shotgun": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/reload_shotgun",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.gun.reload": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/crossbow/loading_middle1",
+          "volume": 1.0,
+          "pitch": 1.2
+        },
+        {
+          "name": "sounds/crossbow/loading_middle2",
+          "volume": 1.0,
+          "pitch": 1.2
+        },
+        {
+          "name": "sounds/crossbow/loading_end",
+          "volume": 1.0,
+          "pitch": 1.2
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.rpg.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/mob/ghast/fireball4",
+          "volume": 1.0,
+          "pitch": 0.8
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.rocket_launcher.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/fireworks/launch1",
+          "volume": 1.0,
+          "pitch": 0.7
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.missile.launch": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fireworks/launch1",
+          "volume": 2.0,
+          "pitch": 0.5
+        }
+      ],
+      "max_distance": 128.0
+    },
+    "recubeicbm.missile.incoming": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mob/phantom/swoop1",
+          "volume": 1.5,
+          "pitch": 0.7
+        },
+        {
+          "name": "sounds/mob/phantom/swoop2",
+          "volume": 1.5,
+          "pitch": 0.7
+        },
+        {
+          "name": "sounds/mob/phantom/swoop3",
+          "volume": 1.5,
+          "pitch": 0.7
+        },
+        {
+          "name": "sounds/mob/phantom/swoop4",
+          "volume": 1.5,
+          "pitch": 0.7
+        }
+      ],
+      "max_distance": 128.0
+    },
+    "recubeicbm.missile.explode": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/random/explode1",
+          "volume": 4.0,
+          "pitch": 0.8
+        },
+        {
+          "name": "sounds/random/explode2",
+          "volume": 4.0,
+          "pitch": 0.8
+        },
+        {
+          "name": "sounds/random/explode3",
+          "volume": 4.0,
+          "pitch": 0.8
+        },
+        {
+          "name": "sounds/random/explode4",
+          "volume": 4.0,
+          "pitch": 0.8
+        }
+      ],
+      "max_distance": 256.0
+    },
+    "recubeicbm.alert.siren": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/event/raid/raidhorn_01",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/event/raid/raidhorn_02",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/event/raid/raidhorn_03",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/event/raid/raidhorn_04",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 256.0
+    },
+    "recubeicbm.countdown.tick": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/note/hat",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 48.0
+    },
+    "recubeicbm.countdown.final": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/random/fuse",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 48.0
+    },
+    "recubeicbm.turret.launch": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fireworks/launch1",
+          "volume": 1.5,
+          "pitch": 1.3
+        }
+      ],
+      "max_distance": 96.0
+    },
+    "recubeicbm.turret.intercept": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/fireworks/largeBlast1",
+          "volume": 3.0,
+          "pitch": 0.8
+        }
+      ],
+      "max_distance": 160.0
+    },
+    "recubeicbm.antimatter.impact": {
+      "category": "weather",
+      "sounds": [
+        {
+          "name": "sounds/ambient/weather/thunder1",
+          "volume": 10.0,
+          "pitch": 0.6
+        },
+        {
+          "name": "sounds/ambient/weather/thunder2",
+          "volume": 10.0,
+          "pitch": 0.6
+        },
+        {
+          "name": "sounds/ambient/weather/thunder3",
+          "volume": 10.0,
+          "pitch": 0.6
+        }
+      ],
+      "max_distance": 512.0
+    },
+    "recubeicbm.redmatter.impact": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/mob/enderdragon/growl1",
+          "volume": 6.0,
+          "pitch": 0.6
+        },
+        {
+          "name": "sounds/mob/enderdragon/growl2",
+          "volume": 6.0,
+          "pitch": 0.6
+        },
+        {
+          "name": "sounds/mob/enderdragon/growl3",
+          "volume": 6.0,
+          "pitch": 0.6
+        },
+        {
+          "name": "sounds/mob/enderdragon/growl4",
+          "volume": 6.0,
+          "pitch": 0.6
+        }
+      ],
+      "max_distance": 256.0
+    },
+    "recubeicbm.antimatter": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/missiles/antimatter",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 256.0
+    }
+  }
+}

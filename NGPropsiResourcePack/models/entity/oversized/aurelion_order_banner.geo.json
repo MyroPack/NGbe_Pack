@@ -1,0 +1,70 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_aurelion_order_banner_display",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4.0,
+				"visible_bounds_height": 5.0,
+				"visible_bounds_offset": [0, -1.09, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [15, -41, 7],
+					"cubes": [
+						{
+							"origin": [-10, 13, 5],
+							"size": [36, 3, 3],
+							"uv": {
+								"north": {
+									"uv": [51, 0],
+									"uv_size": [36, 3]
+								},
+								"east": {
+									"uv": [29, 4],
+									"uv_size": [3, 3]
+								},
+								"south": {
+									"uv": [51, 4],
+									"uv_size": [36, 3]
+								},
+								"west": {
+									"uv": [29, 4],
+									"uv_size": [3, 3]
+								},
+								"up": {
+									"uv": [51, 4],
+									"uv_size": [36, 3]
+								},
+								"down": {
+									"uv": [51, 7],
+									"uv_size": [36, -3]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "banner",
+					"parent": "group",
+					"pivot": [15.19, -2.62, 6.67],
+					"cubes": [
+						{
+							"origin": [-8, -51, 5],
+							"size": [32, 64, 0],
+							"uv": {
+								"north": {
+									"uv": [94, 0],
+									"uv_size": [32, 64]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.recubeicbm.turret": {
+      "initial_state": "active",
+      "states": {
+        "active": {
+          "animations": [
+            "idle"
+          ],
+          "transitions": [
+            {
+              "still": "q.variant == 1"
+            }
+          ]
+        },
+        "still": {
+          "transitions": [
+            {
+              "active": "q.variant != 1"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+map.position=%s, %s, %s
+## Bouton Applications de l'inventaire (ui/inventory_screen.json) : le texte du libelle est aussi sa cle.
+double clic=double clic
+## Ecrans de la fusee (ui/Interface/machine/fusee.json)
+ng.fusee.title=Fusée
+ng.fusee.cargo.title=Fusée cargo
+ng.fusee.fuel=Carburant
+ng.fusee.travel=Voyager
+ng.fusee.unreachable=Pas encore joignable
+ng.fusee.launch=Décoller
+ng.fusee.storage=Stockage
+ng.fusee.liquid=Liquide
+ng.fusee.gas=Gaz
+ng.fusee.energy=Électricité
+ng.fusee.hold=Soute
+ng.fusee.inventory=Inventaire
+ng.fusee.confirm=Confirmer le départ
+## Annuaire (ui/Interface/annuaire.json)
+ng.annuaire.location=Localisation actuelle
+ng.annuaire.country=Pays
+ng.annuaire.company=Entreprise
+ng.annuaire.skill=Compétence
+ng.annuaire.playtime=Temps de jeu
+ng.annuaire.servertime=Temps sur serveur
+ng.annuaire.founder=Fondateur
+ng.annuaire.foundation=Fondation
+ng.annuaire.division=Division
+ng.annuaire.relation=Relation
+ng.annuaire.continent=Continent
+ng.annuaire.recruitment=Recrutement
+ng.competences.niveau=Niveau
+ng.competences.titre=Compétence
+## Ateliers (ui/Interface/machine/workstations.json)
+ng.ateliers.ingredient_hint=Clique une case pour voir son nom

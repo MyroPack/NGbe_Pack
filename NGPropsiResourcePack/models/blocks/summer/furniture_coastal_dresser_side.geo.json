@@ -1,0 +1,59 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.furniture_coastal_dresser_side",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-7, 0, -7],
+							"size": [14, 14, 15],
+							"uv": {
+								"north": {"uv": [8.75, 3.75], "uv_size": [-3.5, 3.5]},
+								"east": {"uv": [5, 0], "uv_size": [-3.75, 3.5]},
+								"south": {"uv": [5.25, 0], "uv_size": [3.5, 3.5]},
+								"west": {"uv": [1.25, 0], "uv_size": [3.75, 3.5]},
+								"up": {"uv": [0.25, 8.5], "uv_size": [-0.25, -0.25], "uv_rotation": 270},
+								"down": {"uv": [5, 3.75], "uv_size": [-3.75, 3.5], "uv_rotation": 90}
+							}
+						},
+						{
+							"origin": [-8, 14, -8],
+							"size": [16, 2, 16],
+							"uv": {
+								"north": {"uv": [12.5, 4.25], "uv_size": [0.5, 4], "uv_rotation": 90},
+								"east": {"uv": [5.25, 7.5], "uv_size": [4, 0.5]},
+								"south": {"uv": [11.75, 4.25], "uv_size": [0.5, 4], "uv_rotation": 90},
+								"west": {"uv": [1.25, 7.5], "uv_size": [4, 0.5]},
+								"up": {"uv": [13, 4], "uv_size": [-4, -4], "uv_rotation": 270},
+								"down": {"uv": [5, 7.25], "uv_size": [-3.75, -3.5], "uv_rotation": 90}
+							}
+						},
+						{
+							"origin": [-6, 6, -8],
+							"size": [12, 8, 0],
+							"uv": {
+								"north": {"uv": [9, 4.25], "uv_size": [2, 3], "uv_rotation": 90},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [9, 4.25], "uv_size": [2, 3], "uv_rotation": 90},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0], "uv_rotation": 270},
+								"down": {"uv": [0, 0], "uv_size": [0, 0], "uv_rotation": 90}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

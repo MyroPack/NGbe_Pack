@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:fridge_display",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/fridge"
+			},
+			"geometry": {
+				"default": "geometry.fridge"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

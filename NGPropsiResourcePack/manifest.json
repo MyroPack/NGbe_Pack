@@ -1,0 +1,34 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "Recube"
+    ]
+  },
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ],
+    "uuid": "432cc8e6-256e-4c23-8453-b13cd2bd80db",
+    "version": [
+      1,
+      1,
+      31
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "9d458797-3ac2-4285-bb1c-620c1faf2bfc",
+      "version": [
+        1,
+        1,
+        31
+      ]
+    }
+  ]
+}

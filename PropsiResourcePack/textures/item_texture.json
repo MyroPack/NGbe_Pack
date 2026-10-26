@@ -1,0 +1,12 @@
+{
+	"resource_pack_name": "PropsiResourcePack",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"propsi_tool": {
+			"textures": "textures/items/propsi_tool"
+		},
+		"rotation_tool": {
+			"textures": "textures/items/rotation_tool"
+		}
+	}
+}

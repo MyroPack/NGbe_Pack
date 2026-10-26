@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:crusher_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/crusher_off",
+        "on": "textures/blocks/crusher_on"
+      },
+      "geometry": {
+        "default": "geometry.crusher"
+      },
+      "animations": {
+        "crush": "animation.crusher.idle"
+      },
+      "scripts": {
+        "animate": [
+          { "crush": "q.variant == 1" }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng_crusher"
+      ]
+    }
+  }
+}

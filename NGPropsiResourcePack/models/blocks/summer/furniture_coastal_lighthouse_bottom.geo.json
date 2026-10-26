@@ -1,0 +1,47 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.furniture_coastal_lighthouse_bottom",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-6, 0, -6],
+							"size": [12, 2, 12],
+							"uv": {
+								"north": {"uv": [13, 12.25], "uv_size": [3, 0.5]},
+								"east": {"uv": [13, 12.25], "uv_size": [3, 0.5]},
+								"south": {"uv": [13, 12.25], "uv_size": [3, 0.5]},
+								"west": {"uv": [13, 12.25], "uv_size": [3, 0.5]},
+								"up": {"uv": [16, 16], "uv_size": [-3, -3]},
+								"down": {"uv": [12.25, 16], "uv_size": [-3, -3]}
+							}
+						},
+						{
+							"origin": [-4, 2, -4],
+							"size": [8, 14, 8],
+							"uv": {
+								"north": {"uv": [9, 8.5], "uv_size": [2, 3.5]},
+								"east": {"uv": [14, 8.5], "uv_size": [2, 3.5]},
+								"south": {"uv": [14, 8.5], "uv_size": [2, 3.5]},
+								"west": {"uv": [14, 8.5], "uv_size": [2, 3.5]},
+								"up": {"uv": [8.75, 7.5], "uv_size": [-2.5, -2.5]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:village_sylvaris_merchant",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/village_sylvaris_merchant_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.village_sylvaris_merchant"
+      },
+      "animations": {
+        "idle": "animation.ng.village_aurelions_merchant.idle",
+        "move": "animation.ng.village_aurelions_merchant.move",
+        "attack": "animation.ng.village_aurelions_merchant.attack",
+        "controller": "controller.animation.ng.village_sylvaris_merchant.move",
+        "look": "animation.ng.village_aurelions_merchant.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.village_sylvaris_merchant"
+      ],
+      "spawn_egg": {
+        "base_color": "#5e2b23",
+        "overlay_color": "#76402c"
+      }
+    }
+  }
+}

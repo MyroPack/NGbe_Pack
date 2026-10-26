@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:gas_tank_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/gas_tank"
+      },
+      "geometry": {
+        "default": "geometry.gas_tank"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

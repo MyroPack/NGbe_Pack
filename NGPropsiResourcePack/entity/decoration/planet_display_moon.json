@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:planet_display_moon",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/decoration/planet_display_moon"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_planet_display"
+      },
+      "animations": {
+        "idle": "animation.propsi_e_planet_display.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

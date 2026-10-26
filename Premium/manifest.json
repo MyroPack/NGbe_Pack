@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "recube"
+    ],
+    "generated_with": {
+      "bridge": [
+        "2.7.46"
+      ],
+      "dash": [
+        "0.11.7"
+      ]
+    }
+  },
+  "header": {
+    "name": "Premium",
+    "description": "pack.description",
+    "uuid": "c1673504-e97f-493d-84be-82f2e25c94e9",
+    "version": [
+      1,
+      1,
+      28
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      80
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "description": "Nationsglory Premium",
+      "uuid": "c567afdd-1af1-44fc-8d79-593727e85524",
+      "version": [
+        1,
+        1,
+        28
+      ]
+    }
+  ]
+}

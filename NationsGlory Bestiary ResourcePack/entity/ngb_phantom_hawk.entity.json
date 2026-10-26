@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:phantom_hawk",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/phantom_hawk_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.phantom_hawk"
+      },
+      "animations": {
+        "idle": "animation.ng.phantom_hawk.idle",
+        "move": "animation.ng.phantom_hawk.move",
+        "fly_idle": "animation.ng.phantom_hawk.fly_idle",
+        "fly_move": "animation.ng.phantom_hawk.fly_move",
+        "attack": "animation.ng.phantom_hawk.attack",
+        "controller": "controller.animation.ng.phantom_hawk.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.phantom_hawk"
+      ],
+      "spawn_egg": {
+        "base_color": "#534543",
+        "overlay_color": "#b4f4f9"
+      }
+    }
+  }
+}

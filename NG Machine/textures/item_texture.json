@@ -1,0 +1,201 @@
+﻿{
+  "resource_pack_name": "NGMachineResourcePack",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "ui": {
+      "textures": "textures/items/ui"
+    },
+    "rocket": {
+      "textures": "textures/items/rocket"
+    },
+    "upgrade_automation": {
+      "textures": "textures/items/upgrade_automation"
+    },
+    "upgrade_consumption": {
+      "textures": "textures/items/upgrade_consumption"
+    },
+    "upgrade_double_loot": {
+      "textures": "textures/items/upgrade_double_loot"
+    },
+    "upgrade_durability": {
+      "textures": "textures/items/upgrade_durability"
+    },
+    "upgrade_fusee": {
+      "textures": "textures/items/upgrade_fusee"
+    },
+    "upgrade_productivity": {
+      "textures": "textures/items/upgrade_productivity"
+    },
+    "upgrade_radius": {
+      "textures": "textures/items/upgrade_radius"
+    },
+    "upgrade_rocket_durability": {
+      "textures": "textures/items/upgrade_rocket_durability"
+    },
+    "ng_novice_workbench": {
+      "textures": "textures/items/ng_novice_workbench"
+    },
+    "ng_weapon_workbench": {
+      "textures": "textures/items/ng_weapon_workbench"
+    },
+    "ng_energy_workbench": {
+      "textures": "textures/items/ng_energy_workbench"
+    },
+    "ng_explosive_workbench": {
+      "textures": "textures/items/ng_explosive_workbench"
+    },
+    "ng_launch_pad": {
+      "textures": "textures/items/ng_launch_pad"
+    },
+    "ng_potion_workbench": {
+      "textures": "textures/items/ng_potion_workbench"
+    },
+    "ng_food_workbench": {
+      "textures": "textures/items/ng_food_workbench"
+    },
+    "steel_plate": {
+      "textures": "textures/items/steel_plate"
+    },
+    "bronze_plate": {
+      "textures": "textures/items/bronze_plate"
+    },
+    "gold_plate": {
+      "textures": "textures/items/gold_plate"
+    },
+    "copper_plate": {
+      "textures": "textures/items/copper_plate"
+    },
+    "steel_compressed": {
+      "textures": "textures/items/steel_compressed"
+    },
+    "bronze_compressed": {
+      "textures": "textures/items/bronze_compressed"
+    },
+    "iron_compressed": {
+      "textures": "textures/items/iron_compressed"
+    },
+    "tin_compressed": {
+      "textures": "textures/items/tin_compressed"
+    },
+    "aluminium_compressed": {
+      "textures": "textures/items/aluminium_compressed"
+    },
+    "magnesium_compressed": {
+      "textures": "textures/items/magnesium_compressed"
+    },
+    "gallium_compressed": {
+      "textures": "textures/items/gallium_compressed"
+    },
+    "volcanite_compressed": {
+      "textures": "textures/items/volcanite_compressed"
+    },
+    "mythril_ingot": {
+      "textures": "textures/items/mythril_ingot"
+    },
+    "ashstone": {
+      "textures": "textures/items/ashstone"
+    },
+    "oxygen_fan": {
+      "textures": "textures/items/oxygen_fan"
+    },
+    "firearm_blueprint": {
+      "textures": "textures/items/firearm_blueprint"
+    },
+    "cartridge_case": {
+      "textures": "textures/items/cartridge_case"
+    },
+    "bullet": {
+      "textures": "textures/items/bullet"
+    },
+    "ng_fridge": {
+      "textures": "textures/items/ng_fridge"
+    },
+    "ng_coal_generator": {
+      "textures": "textures/items/ng_coal_generator"
+    },
+    "ng_bio_generator": {
+      "textures": "textures/items/ng_bio_generator"
+    },
+    "ng_crusher": {
+      "textures": "textures/items/ng_crusher"
+    },
+    "ng_food_preserver": {
+      "textures": "textures/items/ng_food_preserver"
+    },
+    "ng_fuel_generator": {
+      "textures": "textures/items/ng_fuel_generator"
+    },
+    "ng_gas_extractor": {
+      "textures": "textures/items/ng_gas_extractor"
+    },
+    "ng_gas_tank": {
+      "textures": "textures/items/ng_gas_tank"
+    },
+    "ng_oxygen_collector": {
+      "textures": "textures/items/ng_oxygen_collector"
+    },
+    "ng_pumpjack": {
+      "textures": "textures/items/ng_pumpjack"
+    },
+    "ng_nuclear_reactor": {
+      "textures": "textures/items/ng_nuclear_reactor"
+    },
+    "ng_nuclear_chimney": {
+      "textures": "textures/items/ng_nuclear_chimney"
+    },
+    "ng_turbine": {
+      "textures": "textures/items/ng_turbine"
+    },
+    "ng_nuclear_chamber": {
+      "textures": "textures/items/ng_nuclear_chamber"
+    },
+    "ng_radioactive_collector": {
+      "textures": "textures/items/ng_radioactive_collector"
+    },
+    "ng_liquid_azote_generator": {
+      "textures": "textures/items/ng_liquid_azote_generator"
+    },
+    "ng_uranium_rode_235": {
+      "textures": "textures/items/ng_uranium_rode_235"
+    },
+    "ng_nuclear_waste": {
+      "textures": "textures/items/ng_nuclear_waste"
+    },
+    "ng_mark_1": {
+      "textures": "textures/items/ng_mark_1"
+    },
+    "ng_mark_2": {
+      "textures": "textures/items/ng_mark_2"
+    },
+    "ng_mark_3": {
+      "textures": "textures/items/ng_mark_3"
+    },
+    "ng_plasma_resonance": {
+      "textures": "textures/items/ng_plasma_resonance"
+    },
+    "ng_hazmat_helmet": {
+      "textures": "textures/items/ng_hazmat_helmet"
+    },
+    "ng_hazmat_chestplate": {
+      "textures": "textures/items/ng_hazmat_chestplate"
+    },
+    "ng_hazmat_leggings": {
+      "textures": "textures/items/ng_hazmat_leggings"
+    },
+    "ng_hazmat_boots": {
+      "textures": "textures/items/ng_hazmat_boots"
+    },
+    "ng_uranium_rode_238": {
+      "textures": "textures/items/ng_uranium_rode_238"
+    },
+    "ng_nuclear_fuel_loader": {
+      "textures": "textures/items/ng_nuclear_fuel_loader"
+    },
+    "ng_nuclear_forge": {
+      "textures": "textures/items/ng_nuclear_forge"
+    },
+    "ng_forge_catalyst": {
+      "textures": "textures/items/ng_forge_catalyst"
+    }
+  }
+}

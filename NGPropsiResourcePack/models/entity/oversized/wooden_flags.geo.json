@@ -1,0 +1,127 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_wooden_flags_display",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3.0,
+				"visible_bounds_height": 6.5,
+				"visible_bounds_offset": [0, 2.92, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [-13.02, 29.96, 1.776],
+					"cubes": [
+						{
+							"origin": [-3.5, 0, -3.95],
+							"size": [7, 3, 7],
+							"uv": [109, 22]
+						},
+						{
+							"origin": [-2.5, 73, -2.5],
+							"size": [5, 2, 5],
+							"uv": [110, 14]
+						},
+						{
+							"origin": [-2.5, 79, -2.95],
+							"size": [5, 2, 5],
+							"uv": [110, 14]
+						},
+						{
+							"origin": [-2.5, 3, -2.95],
+							"size": [5, 8, 5],
+							"uv": [110, 0]
+						},
+						{
+							"origin": [-2, 11, -2],
+							"size": [4, 77, 4],
+							"uv": [93, 0]
+						},
+						{
+							"origin": [-18.5, 77.5, -0.25],
+							"size": [37, 16, 0],
+							"uv": {
+								"north": {
+									"uv": [110, 41],
+									"uv_size": [37, 16]
+								}
+							}
+						},
+						{
+							"origin": [-2.5, 85, -2.5],
+							"size": [5, 3, 5],
+							"uv": [126, 9]
+						},
+						{
+							"origin": [2, 76, -1],
+							"size": [17, 2, 2],
+							"uv": [110, 59]
+						},
+						{
+							"origin": [-19, 76, -1],
+							"size": [17, 2, 2],
+							"uv": [110, 59],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "root",
+					"pivot": [-11.5, 76, 0],
+					"cubes": [
+						{
+							"origin": [-19, 36, 0],
+							"size": [15, 36, 0.06],
+							"uv": {
+								"north": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								},
+								"south": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								}
+							}
+						},
+						{
+							"origin": [-20, 72, 0],
+							"size": [17, 4, 0],
+							"uv": [110, 64],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "root",
+					"pivot": [11.5, 76, 0],
+					"cubes": [
+						{
+							"origin": [3, 72, 0],
+							"size": [17, 4, 0],
+							"uv": [110, 64]
+						},
+						{
+							"origin": [4, 36, 0],
+							"size": [15, 36, 0.06],
+							"uv": {
+								"north": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								},
+								"south": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

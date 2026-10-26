@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:edora_spider",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/edora_spider_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.edora_spider"
+      },
+      "animations": {
+        "idle": "animation.ng.edora_spider.idle",
+        "move": "animation.ng.edora_spider.move",
+        "attack": "animation.ng.edora_spider.attack",
+        "controller": "controller.animation.ng.edora_spider.move",
+        "look": "animation.ng.edora_spider.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.edora_spider"
+      ],
+      "spawn_egg": {
+        "base_color": "#758db4",
+        "overlay_color": "#57749c"
+      }
+    }
+  }
+}

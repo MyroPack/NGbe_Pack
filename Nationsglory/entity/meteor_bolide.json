@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:meteor_bolide",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"terrestre": "textures/entity/meteor/terrestre",
+				"volcan": "textures/entity/meteor/volcan",
+				"lune": "textures/entity/meteor/lune"
+			},
+			"geometry": {
+				"default": "geometry.meteor_bolide"
+			},
+			"render_controllers": [
+				"controller.render.ng_meteor_bolide"
+			],
+			"particle_effects": {
+				"trail_flame": "ng:meteor_trail_flame",
+				"trail_smoke": "ng:meteor_trail_smoke"
+			},
+			"animations": {
+				"idle": "animation.ng_meteor_display.idle",
+				"trail": "controller.animation.ng_meteor_bolide.trail"
+			},
+			"scripts": {
+				"animate": [
+					"idle",
+					"trail"
+				]
+			}
+		}
+	}
+}

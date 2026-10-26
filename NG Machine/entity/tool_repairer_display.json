@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:tool_repairer_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/tool_repairer_off",
+        "on": "textures/blocks/tool_repairer_on"
+      },
+      "geometry": {
+        "default": "geometry.machine_repair"
+      },
+      "render_controllers": [
+        "controller.render.ng_tool_repairer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:industrial_repairer_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/industrial_repairer_off",
+        "on": "textures/blocks/industrial_repairer_on"
+      },
+      "geometry": {
+        "default": "geometry.machine_reparator"
+      },
+      "render_controllers": [
+        "controller.render.ng_industrial_repairer"
+      ]
+    }
+  }
+}

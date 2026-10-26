@@ -1,0 +1,1693 @@
+{
+  "namespace": "parrot_airline",
+
+  "main_panel":{
+    "type":"panel",
+    "$screen_size|default":["100%","100%"],
+    "size":"$screen_size",
+    "controls":[
+ 
+/*       {"small_chest_grid@chest.small_chest_grid":{
+        "grid_dimensions": [ 9, 18 ],
+        "layer":10,
+        "anchor_from":"left_middle",
+        "anchor_to":"left_middle",
+        "size": [ 162, 324 ]
+      }}, */
+
+      {"stackpanel@ng_module.stackpanel":{ 
+        "size": ["100%","100%"],
+        "controls":[
+
+              {"header@ng_asset.background_white":{ 
+                "color":[0.153, 0.153, 0.165],
+                "size": ["100%",20],
+                "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{ 
+                          "orientation":"horizontal",
+                          "size": ["100% - 4px","100%"],
+                          "controls":[
+
+                                {"inventaire@parrot_airline.categorie_asset_button":{
+                                  "$index":10
+                                }},
+
+                                {"carte@parrot_airline.categorie_asset_button":{
+                                  "$index":11
+                                }},
+
+                                {"competences@parrot_airline.categorie_asset_button":{
+                                  "$index":12
+                                }},
+
+                                {"profil@parrot_airline.categorie_asset_button":{
+                                  "$index":13
+                                }},
+
+                                {"cosmetique@parrot_airline.categorie_asset_button":{
+                                  "$index":14
+                                }},
+
+                                {"padding@ng_module.panel": {
+                                  "size": ["fill", "100%"]
+                                }},
+
+                                {"money@ng_module.panel": {
+                                  "size": ["100%c", "100%"],
+                                  "controls": [
+
+                                  {"background@ng_asset.background_white": {
+                                      "size": ["100%c + 2px", 15],
+                                      "color": [0.094, 0.094, 0.106],
+                                      "controls": [
+
+                                      {"background@ng_asset.background_white": {
+                                        "size": ["100%c + 4px", 13],
+                                        "color": [0.035, 0.035, 0.043],
+                                        "controls": [
+
+                                        {"text@ng_module.Simple_text": {
+                                            "$type_get_text": "Get_text_type_1",
+                                            "$index": 15,
+                                            "offset": [0.8, 0.3],
+                                            "layer": 4,
+                                            "$text_offset": [1, 0.3],
+                                            "size": ["100%c", "100%"],
+                                            "$size_icone_right": [8, 8],
+                                            "$padding_right": [0.1, 0],
+                                            "$offset_icone_right":[-1,0],
+                                            "$color_icone_right": [0.533, 0.941, 0.392],
+                                            "$texture_icone_right": "ng_asset.icon_10",
+                                            "$font_scale_factor": 0.7
+                                        }}
+
+                                        ]
+                                      }}
+
+                                      ]
+                                  }}
+
+                                  ]
+                                }},
+
+                                // Plus de case du losange bleu (case 16, une monnaie sans valeur sur NG) : l'argent puis
+                                // les NGCoins, colles a droite.
+                                {"padding@ng_module.panel": {
+                                  "size": [2.5, "100%"]
+                                }},
+
+                                {"pb@ng_module.panel": {
+                                  "size": ["100%c", "100%"],
+                                  "controls": [
+
+                                  {"background@ng_asset.background_white": {
+                                      "size": ["100%c + 2px", 15],
+                                      "color": [0.094, 0.094, 0.106],
+                                      "controls": [
+
+                                      {"background@ng_asset.background_white": {
+                                        "size": ["100%c + 8px", 13],
+                                        "color": [0.035, 0.035, 0.043],
+                                        "controls": [
+
+                                        {"text@ng_module.Simple_text": {
+                                            "$type_get_text": "Get_text_type_1",
+                                            "$index": 17,
+                                            "offset": [0.8, 0.3],
+                                            "layer": 5,
+                                            "$text_offset": [1, 0.3],
+                                            "size": ["100%c", "100%"],
+                                            "$font_scale_factor": 0.7,
+                                            "$size_icone_right": [8, 8],
+                                            "$padding_right": [0.6, 0],
+                                            // Logo des NGCoins du HUD (scoreboards.json, coin_box).
+                                            "$color_icone_right": [0.945, 0.753, 0.051],
+                                            "$texture_icone_right": "ng_asset.icon_09"
+                                        }}
+
+                                        ]
+                                      }}
+
+                                      ]
+                                  }}
+
+                                  ]
+                                }},
+
+                                {"padding@ng_module.panel": {
+                                  "size": [2, "100%"]
+                                }},
+
+                                // Bouton Home : ferme l'ecran et ouvre le menu rapide (/app), comme dans le menu de pays.
+                                {"home@ng_module.panel":{
+                                  "size":["100%c","100%"],
+                                  "controls":[
+
+                                          {"home_button@ng_module.home_button":{}}
+
+                                ]}},
+
+                                {"padding_home@ng_module.panel": {
+                                  "size": [2, "100%"]
+                                }},
+
+                                {"close_button@ng_module.panel":{
+                                  "size":["100%c","100%"],
+                                  "controls":[
+
+                                          {"close_button@ng_module.close_button":{}}  
+
+                                ]}}
+                        ]}}
+
+              ]}},
+
+              {"content@ng_module.Toggle": {
+                "size": ["100%", "100% - 20px"],
+                "controls":[
+
+                    {"categorie_pays@parrot_airline.categorie_pays":{}}
+
+              ]}}
+            
+      ]}},
+
+      {"content@ng_module.Toggle": {
+        "size": ["100%", "100%"],
+        "$index_page": 10,
+        "layer": 50,
+        "$page1": "parrot_airline.page_xp"
+      }}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //                  Categorie Carte
+  //
+  // -----------------------------------------------
+
+  "categorie_pays@ng_asset.background_white":{ 
+  "color":[0.502, 0.682, 0.929],
+  "size": ["100%","100%"],
+  "controls":[
+
+    {"panel_gestion@ng_module.panel":{
+      "size":[160,"100%"],
+      "max_size":[160,400],
+      "layer":10,
+      "anchor_from":"right_middle",
+      "anchor_to":"right_middle",
+      "controls":[
+
+          {"stakcpanel@ng_module.stackpanel":{
+            "size":["100% - 10px","100% - 10px"],
+            "controls":[
+   
+                {"header@ng_asset.background_white":{
+                  "color":[0.333, 0.333, 0.365],
+                  "size":["100%",20],
+                  "controls":[
+
+                      {"background@ng_asset.background_white":{
+                        "color":[0.247, 0.247, 0.278],
+                        "anchor_from":"bottom_middle",
+                        "anchor_to":"bottom_middle",
+                        "size":["100% - 2px",19],
+                        "controls":[
+                          
+                          {"stakcpanel@ng_module.stackpanel":{
+                            "size":["100% - 10px","100% - 10px"],
+                            "controls":[
+
+                                    {"text@ng_module.Simple_text": {
+                                      "$type_get_text": "Get_text_type_1",
+                                      "$index": 62,
+                                      "layer":5,
+                                      "$text_offset":[0,-1.3],
+                                      "size": ["100%c", "100%"],
+                                      "$font_type":"MinecraftTen"
+                                    }}
+                          ]}}
+                          
+
+                      ]}}
+
+                ]}},
+
+                {"content@ng_asset.background_white":{
+                  "color":[0.235, 0.235, 0.247],
+                  "size":["100%","74% - 20px"],
+                  "controls":[
+
+                      {"background@ng_asset.background_white":{
+                        "color":[0.153, 0.153, 0.165],
+                        "layer":10,
+                        "anchor_from":"top_middle",
+                        "anchor_to":"top_middle",
+                        "size":["100% - 2px","100% - 1px"],
+                        "controls":[
+
+                              {"stakcpanel@ng_module.stackpanel":{
+                                "size":["100% - 20px","100% - 20px"],
+                                "controls":[
+
+                                      {"text@ng_module.Simple_text": {
+                                        "$type_get_text": "Get_text_type_1",
+                                        "$index": 63,
+                                        "layer":5,
+                                        "$max_size":[140,30],
+                                        "$text_color":[0.831, 0.831, 0.847],
+                                        "size": ["100%c", "100%c"],
+                                        "$font_scale_factor": 0.7
+                                      }},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["100%", 10]
+                                      }},
+
+                                      {"information@ng_asset.background_white":{
+                                        "color":[0.094, 0.094, 0.106],
+                                        "size":["100%","48%"],
+                                        "controls":[
+
+                                            {"stackpanel@ng_module.stackpanel":{
+                                              "size":["100% - 20px","100% - 20px"],
+                                              "controls":[
+
+                                                    {"line_number_pays@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%","100%cm"],
+                                                      "controls":[
+
+                                                        {"label@ng_module.label":{
+                                                          "text":"Nombre de pays",
+                                                          "layer":2,
+                                                          "color":[0.443, 0.443, 0.482],
+                                                          "font_scale_factor":0.7
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"text@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 65,
+                                                          "layer":5,
+                                                          "$text_color":[0.000, 0.827, 0.949],
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.7
+                                                        }}
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["100%", 5]
+                                                    }},
+
+                                                    {"line_Ensoleillement@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%","100%cm"],
+                                                      "controls":[
+
+                                                        {"label@ng_module.label":{
+                                                          "text":"Ensoleillement",
+                                                          "layer":2,
+                                                          "color":[0.443, 0.443, 0.482],
+                                                          "font_scale_factor":0.7
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"text@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 67,
+                                                          "layer":5,
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.7
+                                                        }}
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["100%", 5]
+                                                    }},
+
+                                                    {"line_Gaz@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%","100%cm"],
+                                                      "controls":[
+
+                                                        {"label@ng_module.label":{
+                                                          "text":"Gaz",
+                                                          "layer":2,
+                                                          "color":[0.443, 0.443, 0.482],
+                                                          "font_scale_factor":0.7
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"text@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 69,
+                                                          "layer":5,
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.7
+                                                        }}
+                                                    ]}},
+
+                                                    {"padding@ng_module.panel": {
+                                                      "size": ["100%", 5]
+                                                    }},
+
+                                                    {"line_Petrole@ng_module.stackpanel":{
+                                                      "orientation":"horizontal",
+                                                      "size":["100%","100%cm"],
+                                                      "controls":[
+
+                                                        {"label@ng_module.label":{
+                                                          "text":"Petrole",
+                                                          "layer":2,
+                                                          "color":[0.443, 0.443, 0.482],
+                                                          "font_scale_factor":0.7
+                                                        }},
+
+                                                        {"padding@ng_module.panel": {
+                                                          "size": ["fill", 0.1]
+                                                        }},
+
+                                                        {"text@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 71,
+                                                          "layer":5,
+                                                          "size": ["100%c", "100%c"],
+                                                          "$font_scale_factor": 0.7
+                                                        }}
+                                                    ]}}
+                                            ]}}
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["100%", "fill"]
+                                      }},
+
+                                      {"price_billet@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100% ","100%cm"],
+                                        "controls":[
+
+                                                  {"label@ng_module.label":{
+                                                    "text":"Prix du billet :",
+                                                    "layer":2,
+                                                    "color":[0.553, 0.553, 0.569],
+                                                    "font_scale_factor":0.7
+                                                  }},
+
+                                                  {"padding@ng_module.panel": {
+                                                    "size": ["fill", 0.1]
+                                                  }},
+
+                                                  {"text@ng_module.Simple_text": {
+                                                    "$type_get_text": "Get_text_type_1",
+                                                    "$index": 72,
+                                                    "layer":5,
+                                                    "size": ["100%c", "100%c"],
+                                                    "$font_scale_factor": 0.7,
+                                                    "$size_icone_right": [10, 10],
+                                                    "$padding_right": [2, 0],
+                                                    "$offset_icone_right": [0, -1],
+                                                    "$texture_icone_right": "ng_asset.prime_icon"
+                                                  }}
+
+                                      ]}},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["100%", 5]
+                                      }},
+
+                                      {"buttton_voyager@ng_module.Simple_Button":{
+                                        "size":["100%",16],
+                                        "$index": 73,
+                                        "$type_get_text": "Get_text_type_1",
+                                        "$text_color":[0.020, 0.200, 0.271],
+                                        "$font_scale_factor":0.7,
+                                        "$texture_button": "ng_asset.button_31"
+                                      }}
+                              ]}}
+                      ]}}
+                ]}},
+
+                {"padding@ng_module.panel": {
+                  "size": ["fill", 2.5]
+                }},
+
+                {"content@ng_asset.background_white":{
+                  "color":[0.235, 0.235, 0.247],
+                  "size":["100%","26%"],
+                  "controls":[
+
+                      {"background@ng_asset.background_white":{
+                        "color":[0.153, 0.153, 0.165],
+                        "layer":10,
+                        "size":["100% - 2px","100% - 2px"],
+                        "controls":[
+
+                              {"stakcpanel@ng_module.stackpanel":{
+                                "size":["100% - 20px","100% - 20px"],
+                                "controls":[
+
+                                     {"buttton_voyager@ng_module.Simple_Button":{
+                                        "size":["100%","30%"],
+                                        "$index": 80,
+                                        "$text_color":[0.831, 0.831, 0.847],
+                                        "$font_scale_factor":0.7,
+                                        "$type_get_text": "Get_text_type_1",
+                                        "$texture_button": "ng_asset.button_32"
+                                      }},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2.5]
+                                      }},
+
+                                      {"buttton_voyager@ng_module.Simple_Button":{
+                                        "size":["100%","30%"],
+                                        "$index": 81,
+                                        "$text_color":[0.831, 0.831, 0.847],
+                                        "$font_scale_factor":0.7,
+                                        "$type_get_text": "Get_text_type_1",
+                                        "$texture_button": "ng_asset.button_32"
+                                      }},
+
+                                      {"padding@ng_module.panel": {
+                                        "size": ["fill", 2.5]
+                                      }},
+
+                                      {"buttton_voyager@ng_module.Simple_Button":{
+                                        "size":["100%","30%"],
+                                        "$index": 82,
+                                        "$text_color":[0.831, 0.831, 0.847],
+                                        "$font_scale_factor":0.7,
+                                        "$type_get_text": "Get_text_type_1",
+                                        "$texture_button": "ng_asset.button_32"
+                                      }}
+                      ]}}
+
+                ]}}
+                ]}}
+          ]}}
+    ]}},
+
+    // La carte du monde, a gauche du panneau lateral (160 de large) avec une marge de 6 : un cadre au format de
+    // l'image (1920 x 1080, 16/9), aussi grand que la place le permet, que l'image remplit. Chaque point est place en
+    // pourcentage de ce cadre : il reste sur son ile ou son continent a toutes les tailles d'ecran et d'interface.
+    // Les icones : celle du serveur pour la Warzone, le monde minier (farmland) et la capitale (les dessins des
+    // glyphes, comme le HUD), celle des warps de continent pour les continents.
+    {"carte@ng_module.panel":{
+      "size": ["100% - 172px", "100% - 12px"],
+      "anchor_from": "left_middle",
+      "anchor_to": "left_middle",
+      "offset": [6, 0],
+      "controls":[
+
+        // Toute la largeur, une hauteur de 9/16 de la largeur, au plus la hauteur de la place...
+        {"cadre_largeur@ng_module.panel":{
+          "size": ["100%", "56.25%x"],
+          "max_size": ["100%", "100%"],
+          "controls":[
+
+            // ... puis une largeur de 16/9 de cette hauteur, au plus la largeur : le cadre de l'image, centre.
+            {"cadre@ng_module.panel":{
+              "size": ["177.78%y", "100%"],
+              "max_size": ["100%", "100%"],
+              "controls":[
+
+                  {"carte_bg@ng_asset.carte":{
+                    "size": ["100%","100%"],
+                    "keep_ratio": false,
+                    "layer": 0
+                  }},
+
+                  // Warzone (case 50) : le bouton au centre d'un panneau de 14.58% sur 111.11% depuis le coin haut gauche du
+                  // cadre, donc a 7.29% de la largeur et 55.56% de la hauteur de l'image.
+                  {"volcan@ng_module.panel":{
+                    "size":["14.58%","111.11%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"volcan@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 50,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warzone_icon"
+                      }},
+
+                      {"volcan_point@parrot_airline.selection_point":{
+                        "$index": 50,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Farmland (case 51) : le bouton au centre d'un panneau de 30.73% sur 145.74% depuis le coin haut gauche du
+                  // cadre, donc a 15.36% de la largeur et 72.87% de la hauteur de l'image.
+                  {"nether@ng_module.panel":{
+                    "size":["30.73%","145.74%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"nether@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 51,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.farmland_icon"
+                      }},
+
+                      {"nether_point@parrot_airline.selection_point":{
+                        "$index": 51,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Amérique du Sud (case 52) : le bouton au centre d'un panneau de 56.77% sur 133.33% depuis le coin haut gauche du
+                  // cadre, donc a 28.39% de la largeur et 66.67% de la hauteur de l'image.
+                  {"amerique_sud@ng_module.panel":{
+                    "size":["56.77%","133.33%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"amerique_sud@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 52,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"amerique_sud_point@parrot_airline.selection_point":{
+                        "$index": 52,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Amérique du Nord (case 53) : le bouton au centre d'un panneau de 34.38% sur 61.11% depuis le coin haut gauche du
+                  // cadre, donc a 17.19% de la largeur et 30.56% de la hauteur de l'image.
+                  {"amerique_nord@ng_module.panel":{
+                    "size":["34.38%","61.11%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"amerique_nord@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 53,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"amerique_nord_point@parrot_airline.selection_point":{
+                        "$index": 53,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Antarctique Ouest (case 54) : le bouton au centre d'un panneau de 52.08% sur 185.19% depuis le coin haut gauche du
+                  // cadre, donc a 26.04% de la largeur et 92.59% de la hauteur de l'image.
+                  {"entartique_left@ng_module.panel":{
+                    "size":["52.08%","185.19%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"entartique_left@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 54,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"entartique_left_point@parrot_airline.selection_point":{
+                        "$index": 54,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Capitale (case 55) : le bouton au centre d'un panneau de 69.27% sur 66.67% depuis le coin haut gauche du
+                  // cadre, donc a 34.64% de la largeur et 33.33% de la hauteur de l'image.
+                  {"spawn@ng_module.panel":{
+                    "size":["69.27%","66.67%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"spawn@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 55,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.capital_icon"
+                      }},
+
+                      {"spawn_point@parrot_airline.selection_point":{
+                        "$index": 55,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Asie (case 56) : le bouton au centre d'un panneau de 151.04% sur 61.11% depuis le coin haut gauche du
+                  // cadre, donc a 75.52% de la largeur et 30.56% de la hauteur de l'image.
+                  {"asie@ng_module.panel":{
+                    "size":["151.04%","61.11%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"asie@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 56,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"asie_point@parrot_airline.selection_point":{
+                        "$index": 56,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Océanie (case 57) : le bouton au centre d'un panneau de 170.83% sur 148.15% depuis le coin haut gauche du
+                  // cadre, donc a 85.42% de la largeur et 74.07% de la hauteur de l'image.
+                  {"oceanie@ng_module.panel":{
+                    "size":["170.83%","148.15%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"oceanie@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 57,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"oceanie_point@parrot_airline.selection_point":{
+                        "$index": 57,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Antarctique Est (case 58) : le bouton au centre d'un panneau de 145.83% sur 185.19% depuis le coin haut gauche du
+                  // cadre, donc a 72.92% de la largeur et 92.59% de la hauteur de l'image.
+                  {"entartique_right@ng_module.panel":{
+                    "size":["145.83%","185.19%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"entartique_right@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 58,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"entartique_right_point@parrot_airline.selection_point":{
+                        "$index": 58,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}},
+
+                  // Afrique (case 59) : le bouton au centre d'un panneau de 100% sur 118.52% depuis le coin haut gauche du
+                  // cadre, donc a 50% de la largeur et 59.26% de la hauteur de l'image.
+                  {"afrique@ng_module.panel":{
+                    "size":["100%","118.52%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"afrique@ng_module.Simple_Button":{
+                        "size":[15,15],
+                        "$index": 59,
+                        "$texture_button": "ng_asset.button_32",
+                        "$size_icone_right": [13, 13],
+                        "$texture_icone_right": "ng_asset.warp_conti_icon"
+                      }},
+
+                      {"afrique_point@parrot_airline.selection_point":{
+                        "$index": 59,
+                        "anchor_from": "center",
+                        "anchor_to": "bottom_middle",
+                        "offset": [0, -8.5]
+                      }}
+
+                  ]}}
+
+            ]}}
+        ]}}
+    ]}},
+
+    {"choice_carte@ng_asset.background_white":{
+      "size":[27,52],
+      "offset":[5,5],
+      "anchor_from":"top_left",
+      "anchor_to":"top_left",
+      "color":[0.196, 0.196, 0.208],
+      "controls":[
+
+            {"choice_carte@ng_asset.background_white":{
+              "size":["100% - 2px","100% - 2px"],
+              "layer":2,
+              "color":[0.153, 0.153, 0.165],
+              "controls":[
+
+                {"stackpanel@ng_module.stackpanel":{
+                  "size":["100%","100%"],
+                  "controls":[
+
+                      {"terre@ng_module.multiple_status_button": {
+                          "size": ["100%", 25],
+                          "$size_button": ["100%", "100%"],
+                          "$index": 40,
+                          "layer":5,
+
+                          "$S1_size_icone_right": [12,12],
+                          "$S1_color_icone_right": [0.443, 0.443, 0.482],
+                          "$S1_texture_icone_right": "ng_asset.icon_43",
+
+                          "$S0_size_icone_right":[12,12],
+                          "$S0_color_icone_right": [0.094, 0.094, 0.106],
+                          "$S0_texture_icone_right":"ng_asset.icon_43",
+
+                          "$textures_button_S0": "ng_asset.button_33",
+                          "$textures_button_S1": "ng_asset.button_empty",
+
+                          "$fonction_mapping_button_S0": "nonclickable",
+                          "$fonction_mapping_button_S1": "clickable"
+                      }},
+
+                      {"auther@ng_module.multiple_status_button": {
+                          "size": ["100%", 25],
+                          "$size_button": ["100%", "100%"],
+                          "$index": 41,
+                          "layer":5,
+
+                          "$S1_size_icone_right": [12,12],
+                          "$S1_color_icone_right": [0.443, 0.443, 0.482],
+                          "$S1_texture_icone_right": "ng_asset.icon_44",
+
+                          "$S0_size_icone_right": [12,12],
+                          "$S0_color_icone_right": [0.094, 0.094, 0.106],
+                          "$S0_texture_icone_right":"ng_asset.icon_44",
+
+                          "$textures_button_S0": "ng_asset.button_33",
+                          "$textures_button_S1": "ng_asset.button_empty",
+
+                          "$fonction_mapping_button_S0": "nonclickable",
+                          "$fonction_mapping_button_S1": "clickable"
+                      }}
+
+                ]}}
+
+            ]}}
+
+    ]}},
+
+      {"homes_warps_overlay@ng_module.Toggle": {
+        "size": ["100%","100%"],
+        "layer": 50,
+        "$index_page": 83,
+        "$page1": "parrot_airline.page_home",
+        "$page2": "parrot_airline.page_warps",
+        "$page3": "parrot_airline.page_home_solid",
+        "$page4": "parrot_airline.page_warps_solid"
+      }}
+
+  ]},
+
+  // -----------------------------------------------
+  //
+  //                  Categorie homes
+  //
+  // -----------------------------------------------
+
+  "page_home@ng_asset.background_white":{
+    "size":["100%","100%"],
+    "alpha":0.6,
+    "color":[0.051, 0.051, 0.071],
+    "controls":[
+
+      {"test@ng_module.collectionpanel":{
+        "size":["100%","100%"],
+        "collection_name":"container_items",
+        "controls":[
+
+            {"home_panel@ng_module.stackpanel":{
+              "layer":10,
+              "size":[200,248],
+              "controls":[
+
+              {"home@ng_asset.background_white":{
+                "size":[180,"100%c + 2px"],
+                "layer":5,
+                "color":[0.051, 0.051, 0.071],
+                "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100%c"],
+                          "controls":[    
+
+                                  {"header@ng_asset.background_white":{
+                                    "color":[0.302, 0.302, 0.329],
+                                    "size":["100%",20],
+                                    "controls":[
+
+                                          {"content@ng_asset.background_white":{
+                                            "color":[0.247, 0.247, 0.278],
+                                            "anchor_from": "bottom_middle",
+                                            "anchor_to": "bottom_middle",
+                                            "size":["100% - 2px",19],
+                                            "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 2px","100% - 2px"],
+                                                  "controls":[
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [5, "100%"]
+                                                      }},
+
+                                                      {"title@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                              {"title@ng_module.label":{
+                                                                  "text":"Mes homes",
+                                                                  "offset":[0,-1.3],
+                                                                  "layer":5,
+                                                                  "font_type":"MinecraftTen"
+                                                              }}
+
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": ["fill", "100%"]
+                                                      }},
+
+                                                      {"close@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                              {"close_overlay@ng_asset.background_white":{
+                                                                "color": [0.094,0.094,0.106],
+                                                                "size": [14,14],
+                                                                "controls":[
+
+                                                                  {"close_overlay@ng_module.Simple_Button":{
+                                                                    "size": [12,12],
+                                                                    "$index": 111,
+                                                                    "$texture_button": "ng_asset.button_02",
+                                                                    "$texture_icone_right": "ng_asset.icon_01",
+                                                                    "$size_icone_right": [8,8]
+                                                                  }}
+
+                                                              ]}}
+
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [2.5, "100%"]
+                                                      }}
+                                                ]}} 
+                                                      ]}}
+                                  ]}},
+
+                                  {"warp@ng_asset.background_white":{
+                                    "color":[0.196, 0.196, 0.208],
+                                    "size":["100%",210],
+                                    "controls":[
+
+                                          {"content@ng_asset.background_white":{
+                                            "color":[0.153, 0.153, 0.165],
+                                            "size":["100% - 2px","100%"],
+                                            "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "size":["100% - 5px","100% - 10px"],
+                                                  "controls":[
+
+                                                      {"stackpanel@ng_module.stackpanel":{
+                                                        "size":["100%","100%c"],
+                                                        "collection_name": "container_items",
+                                                        "controls":[
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":84,
+                                                            "$row_icon": true
+                                                          }},
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":85,
+                                                            "$row_icon": true
+                                                          }},
+                                                                                                              
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":86,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":87,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":88,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":89,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":90,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":91,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":92,
+                                                            "$row_icon": true
+                                                          }},  
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":93,
+                                                            "$row_icon": true
+                                                          }}, 
+
+                                                          {"button_tp_01@parrot_airline.button_tp":{
+                                                            "$index":94,
+                                                            "$row_icon": true
+                                                          }}
+                                                      ]}}
+                                                ]}}
+                                  ]}}
+
+                                  ]}},
+
+                                  {"paggination@ng_asset.background_white":{
+                                    "color":[0.141, 0.141, 0.153],
+                                    "size":["100%",20],
+                                    "controls":[
+
+                                        {"content@ng_asset.background_white":{
+                                          "color":[0.094, 0.094, 0.106],
+                                          "layer":2,
+                                          "anchor_from":"top_middle",
+                                          "anchor_to":"top_middle",
+                                          "size":["100% - 2px","100% - 1px"],
+                                          "controls":[
+
+                                             {"content@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "size":["100% - 10px","100%"],
+                                                "controls":[
+
+                                                    {"left_button@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size":[11,11],
+                                                              "offset":[0,0.6],
+                                                              "$index":108,
+                                                              "$icon_right_offset":[-0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_34",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+                                                    ]}},
+
+                                                    {"text@ng_module.panel":{
+                                                        "size":["fill","100%"],
+                                                        "controls":[
+
+                                                          {"text@ng_module.Simple_text": {
+                                                              "$type_get_text": "Get_text_type_1",
+                                                              "$index":109,
+                                                              "offset":[0,0.6],
+                                                              "layer":5,
+                                                              "$text_color":[0.443, 0.443, 0.482],
+                                                              "size": ["100%c", "100%"],
+                                                              "$font_scale_factor": 0.7
+                                                          }}
+                                                    ]}},
+
+                                                    {"righ_button@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size":[11,11],
+                                                              "offset":[0,0.6],
+                                                              "$index":110,
+                                                              "$icon_right_offset":[0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_35",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+
+                                                    ]}}
+                                              ]}}
+
+                                        ]}}
+                                    
+
+
+
+                                  ]}}
+                        ]}}
+                        
+           ]}}
+            ]}}
+      ]}}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //                  Categorie Warp
+  //
+  // -----------------------------------------------
+
+  "page_warps@ng_asset.background_white":{
+    "size":["100%","100%"],
+    "alpha":0.6,
+    "color":[0.051, 0.051, 0.071],
+    "controls":[
+
+      {"test@ng_module.collectionpanel":{
+        "size":["100%","100%"],
+        "collection_name":"container_items",
+        "controls":[
+
+            {"home_panel@ng_module.stackpanel":{
+              "layer":10,
+              "size":[300,248],
+              "controls":[
+
+              {"home@ng_asset.background_white":{
+                "size":[300,"100%c + 2px"],
+                "layer":5,
+                "color":[0.051, 0.051, 0.071],
+                "controls":[
+
+                        {"stackpanel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100%c"],
+                          "controls":[    
+
+                                  {"header@ng_asset.background_white":{
+                                    "color":[0.302, 0.302, 0.329],
+                                    "size":["100%",20],
+                                    "controls":[
+
+                                          {"content@ng_asset.background_white":{
+                                            "color":[0.247, 0.247, 0.278],
+                                            "anchor_from": "bottom_middle",
+                                            "anchor_to": "bottom_middle",
+                                            "size":["100% - 2px",19],
+                                            "controls":[
+
+                                                {"stackpanel@ng_module.stackpanel":{
+                                                  "orientation":"horizontal",
+                                                  "size":["100% - 2px","100% - 2px"],
+                                                  "controls":[
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [5, "100%"]
+                                                      }},
+
+                                                      {"title@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+
+                                                              {"title@ng_module.label":{
+                                                                  "text":"Warps",
+                                                                  "offset":[0,-1.3],
+                                                                  "layer":5,
+                                                                  "font_type":"MinecraftTen"
+                                                              }}
+
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": ["fill", "100%"]
+                                                      }},
+
+                                                      {"close@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                              {"close_overlay@ng_asset.background_white":{
+                                                                "color": [0.094,0.094,0.106],
+                                                                "size": [14,14],
+                                                                "controls":[
+
+                                                                  {"close_overlay@ng_module.Simple_Button":{
+                                                                    "size": [12,12],
+                                                                    "$index": 111,
+                                                                    "$texture_button": "ng_asset.button_02",
+                                                                    "$texture_icone_right": "ng_asset.icon_01",
+                                                                    "$size_icone_right": [8,8]
+                                                                  }}
+
+                                                              ]}}
+
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel": {
+                                                        "size": [2.5, "100%"]
+                                                      }}
+                                                ]}} 
+                                                      ]}}
+                                  ]}},
+
+                                  {"warp@ng_asset.background_white":{
+                                    "color":[0.196, 0.196, 0.208],
+                                    "size":["100%",210],
+                                    "controls":[
+
+                                            {"content@ng_asset.background_white":{
+                                              "color":[0.153, 0.153, 0.165],
+                                              "size":["100% - 2px","100%"],
+                                              "controls":[
+
+                                                            {"stackpanel@ng_module.stackpanel":{
+                                                              "orientation":"horizontal",
+                                                              "size":["100% - 10px","100% - 10px"],
+                                                              "controls":[  
+
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "size":["50% - 2px","100%"],
+                                                                    "controls":[
+
+                                                                        {"stackpanel@ng_module.stackpanel":{
+                                                                          "size":["100%","100%c"],
+                                                                          "collection_name": "container_items",
+                                                                          "controls":[
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":84
+                                                                            }},
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":85
+                                                                            }},
+                                                                                                                                
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":86
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":87
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":88
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":89
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":90
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":91
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":92
+                                                                            }},  
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":93
+                                                                            }}, 
+
+                                                                            {"button_tp_01@parrot_airline.button_tp":{
+                                                                              "$index":94
+                                                                            }}
+                                                                        ]}}
+                                                                  ]}},
+
+                                                                  {"padding@ng_module.panel": {
+                                                                    "size": [4, "100%"]
+                                                                  }},
+
+                                                                  {"stackpanel@ng_module.stackpanel":{
+                                                                    "size":["50% - 2px","100%"],
+                                                                    "controls":[
+
+                                                                            {"stakcpanel@ng_module.stackpanel":{
+                                                                              "size":["100%","100%"],
+                                                                              "controls":[
+                                                                        
+                                                                                      {"header@ng_asset.background_white":{
+                                                                                        "color":[0.333, 0.333, 0.365],
+                                                                                        "size":["100%",20],
+                                                                                        "controls":[
+
+                                                                                            {"background@ng_asset.background_white":{
+                                                                                              "color":[0.247, 0.247, 0.278],
+                                                                                              "layer":2,
+                                                                                              "anchor_from":"bottom_middle",
+                                                                                              "anchor_to":"bottom_middle",
+                                                                                              "size":["100% - 2px",19],
+                                                                                              "controls":[
+                                                                                                
+                                                                                                {"stakcpanel@ng_module.stackpanel":{
+                                                                                                  "size":["100% - 10px","100% - 10px"],
+                                                                                                  "controls":[
+
+                                                                                                          {"text@ng_module.Simple_text": {
+                                                                                                            "$type_get_text": "Get_text_type_1",
+                                                                                                            "$index":96,
+                                                                                                            "layer":5,
+                                                                                                            "$text_offset":[0,-1.3],
+                                                                                                            "size": ["100%c", "100%"],
+                                                                                                            "$font_type":"MinecraftTen"
+                                                                                                          }}
+                                                                                                ]}}
+                                                                                              
+                                                                                            ]}}
+                                                                                      ]}},
+
+                                                                                      {"content@ng_asset.background_white":{
+                                                                                        "color":[0.235, 0.235, 0.247],
+                                                                                        "size":["100%","fill"],
+                                                                                        "controls":[
+
+                                                                                            {"background@ng_asset.background_white":{
+                                                                                              "color":[0.153, 0.153, 0.165],
+                                                                                              "layer":10,
+                                                                                              "anchor_from":"top_middle",
+                                                                                              "anchor_to":"top_middle",
+                                                                                              "size":["100% - 2px","100% - 1px"],
+                                                                                              "controls":[
+
+                                                                                                    {"stakcpanel@ng_module.stackpanel":{
+                                                                                                      "size":["100% - 10px","100% - 20px"],
+                                                                                                      "controls":[
+
+                                                                                                            {"text@ng_module.Simple_text": {
+                                                                                                              "$type_get_text": "Get_text_type_1",
+                                                                                                              "$index":97,
+                                                                                                              "layer":5,
+                                                                                                              "$max_size":[130,30],
+                                                                                                              "$text_color":[0.831, 0.831, 0.847],
+                                                                                                              "size": ["100%c", "100%c"],
+                                                                                                              "$font_scale_factor": 0.7
+                                                                                                            }},
+
+                                                                                                            {"padding@ng_module.panel": {
+                                                                                                              "size": ["100%", 10]
+                                                                                                            }},
+
+                                                                                                            {"padding@ng_module.panel": {
+                                                                                                              "size": ["100%", "fill"]
+                                                                                                            }},
+
+                                                                                                            {"price_billet@ng_module.stackpanel":{
+                                                                                                              "orientation":"horizontal",
+                                                                                                              "size":["100% ","100%cm"],
+                                                                                                              "controls":[
+
+                                                                                                                        {"label@ng_module.label":{
+                                                                                                                          "text":"Prix du billet :",
+                                                                                                                          "layer":2,
+                                                                                                                          "color":[0.553, 0.553, 0.569],
+                                                                                                                          "font_scale_factor":0.7
+                                                                                                                        }},
+
+                                                                                                                        {"padding@ng_module.panel": {
+                                                                                                                          "size": ["fill", 0.1]
+                                                                                                                        }},
+
+                                                                                                                        {"text@ng_module.Simple_text": {
+                                                                                                                          "$type_get_text": "Get_text_type_1",
+                                                                                                                          "$index":106,
+                                                                                                                          "layer":5,
+                                                                                                                          "size": ["100%c", "100%c"],
+                                                                                                                          "$font_scale_factor": 0.7
+                                                                                                                        }}
+
+                                                                                                            ]}},
+
+                                                                                                            {"padding@ng_module.panel": {
+                                                                                                              "size": ["100%", 8]
+                                                                                                            }},
+
+                                                                                                            {"buttton_voyager@ng_module.Simple_Button":{
+                                                                                                              "size":["100%",16],
+                                                                                                              "$index":107,
+                                                                                                              "$type_get_text": "Get_text_type_1",
+                                                                                                              "$text_color":[0.020, 0.200, 0.271],
+                                                                                                              "$font_scale_factor":0.7,
+                                                                                                              "$texture_button": "ng_asset.button_31"
+                                                                                                            }}
+                                                                                                    ]}}
+                                                                                            ]}}
+                                                                                      ]}}
+                                                                                                            ]}}
+                                                                  ]}}
+                                                  ]}}
+                                            ]}}
+                                  ]}},
+
+                                  {"paggination@ng_asset.background_white":{
+                                    "color":[0.141, 0.141, 0.153],
+                                    "size":["100%",20],
+                                    "controls":[
+
+                                        {"content@ng_asset.background_white":{
+                                          "color":[0.094, 0.094, 0.106],
+                                          "layer":2,
+                                          "anchor_from":"top_middle",
+                                          "anchor_to":"top_middle",
+                                          "size":["100% - 2px","100% - 1px"],
+                                          "controls":[
+
+                                             {"content@ng_module.stackpanel":{
+                                                "orientation":"horizontal",
+                                                "size":["100% - 10px","100%"],
+                                                "controls":[
+
+                                                    {"left_button@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size":[11,11],
+                                                              "offset":[0,0.6],
+                                                              "$index":108,
+                                                              "$icon_right_offset":[-0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_34",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+                                                    ]}},
+
+                                                    {"text@ng_module.panel":{
+                                                        "size":["fill","100%"],
+                                                        "controls":[
+
+                                                          {"text@ng_module.Simple_text": {
+                                                              "$type_get_text": "Get_text_type_1",
+                                                              "$index":109,
+                                                              "offset":[0,0.6],
+                                                              "layer":5,
+                                                              "$text_color":[0.443, 0.443, 0.482],
+                                                              "size": ["100%c", "100%"],
+                                                              "$font_scale_factor": 0.7
+                                                          }}
+                                                    ]}},
+
+                                                    {"righ_button@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                          {"buttton@ng_module.Simple_Button":{
+                                                              "size":[11,11],
+                                                              "offset":[0,0.6],
+                                                              "$index":110,
+                                                              "$icon_right_offset":[0.3,0],
+                                                              "$size_icone_right": [7,7],
+                                                              "$texture_icone_right": "ng_asset.icon_35",
+                                                              "$texture_button": "ng_asset.button_18"
+                                                          }}
+
+                                                    ]}}
+                                              ]}}
+
+                                        ]}}
+                                  
+                                  ]}}
+                        ]}}
+                        
+           ]}}
+            ]}}
+      ]}}
+  ]},
+
+  // Solid-background variants used when /homes or /warps is typed directly (no Parrot Airline
+  // screen behind to dim - a plain opaque backdrop instead of the 60%-alpha overlay look).
+  "page_home_solid@parrot_airline.page_home": { "alpha": 1 },
+  "page_warps_solid@parrot_airline.page_warps": { "alpha": 1 },
+
+  //Asset
+
+  // Epingle de la destination choisie (case dont le texte porte §1). Calque 30 : au-dessus des boutons des points
+  // (calques 5 a 15), sous les fenetres Mes Homes et Warps (calque 50 de la page). Au calque 100, elle passait
+  // par-dessus ces fenetres.
+  "selection_point@ng_module.collectionpanel":{
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [14, 19],
+    "layer": 30,
+    "controls": [
+      {"button": {
+        "type": "input_panel",
+        "collection_index": "$index",
+        "size": ["100%", "100%"],
+        "focus_enabled": true,
+        "focus_identifier": "$index",
+        "default_focus_precedence": "$index",
+        "controls": [
+          {"pin_visibility": {
+            "type": "panel",
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+              {"pin@ng_asset.point_icon": {
+                "type": "image",
+                "size": ["100%", "100%"],
+                "offset": [1, 0]
+              }}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Une rangee des listes Mes Homes et Warps (cases 84 a 94). Pas de bouton pour une case vide : la rangee n'est
+  // dessinee que si son texte porte l'etat d'une rangee pleine, §0 ou §1 (NGMod envoie de l'air pour une case vide ;
+  // une case vide portait §r, que la condition d'avant ne reconnaissait pas : chaque rangee de la page etait dessinee
+  // en bouton gris vide). Le nom se lit dans les 90 premiers octets du texte (Get_text_type_3) ; avec $row_icon (liste
+  // des homes), l'icone du lieu se lit apres eux (ng_module.icone, comme les drapeaux de l'annuaire).
+  "button_tp@ng_module.collectionpanel":{
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$row_icon|default": false,
+    "size":["100%",18.3],
+    "controls":[
+
+      {"button": {
+        "type": "input_panel",
+        "collection_index": "$index",
+        "size": ["100%","100%"],
+        "focus_enabled": true,
+        "focus_identifier": "$index",
+        "default_focus_precedence": "$index",
+        "focus_change_up": "($index - 1)",
+        "focus_change_down": "($index + 1)",
+        "controls":[
+
+          {"visibility_check": {
+            "type": "panel",
+            "size": ["100%","100%"],
+            "bindings":[
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls":[
+
+              {"content@ng_module.stackpanel": {
+                "size": ["100%","100%"],
+                "controls":[
+
+                  {"button_tp@ng_module.Simple_Button":{
+                    "size":["100%",17],
+                    "$index": "$index",
+                    "$text_color":[0.831, 0.831, 0.847],
+                    "$font_scale_factor":0.7,
+                    "$type_get_text": "Get_text_type_3",
+                    "$texture_button": "ng_asset.button_32"
+                  }},
+
+                  {"padding@ng_module.panel": {
+                    "size": ["100%", 1.3]
+                  }}
+              ]}},
+
+              {"icone@ng_module.icone": {
+                "$index": "$index",
+                "$Get_text_type": "Get_text_type_2",
+                "size": [11, 11],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [4, 3],
+                "layer": 20,
+                "visible": "$row_icon"
+              }}
+          ]}}
+      ]}}
+  ]},
+
+  "categorie_asset_button@ng_module.collectionpanel": {
+    "collection_name": "container_items",
+    "$font_type":"MinecraftTen",
+    "$S1_text_color":[0.443, 0.443, 0.482],
+
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S1_type_get_text": "Get_text_type_1",
+
+    "$font_scale_factor": 0.7,
+    "size": ["100%c","100%"],
+    "$index|default": 0,
+    "controls": [
+
+      {"button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "focus_enabled": true,
+          "focus_identifier": "$index",
+          "default_focus_precedence": "$index",
+          "focus_change_left": "($index - 1)",
+          "focus_change_right": "($index + 1)",
+          "$fonction_mapping_button_S0|default": "nonclickable",
+          "$fonction_mapping_button_S1|default": "clickable",
+          "$textures_button_S0|default": "ng_asset.button_20",
+          "$textures_button_S1|default": "ng_asset.button_empty",
+          "size": ["100%cm","100%"],
+          "controls": [
+
+            {"check_status_S0": {
+                "$mapping_button|default": "$fonction_mapping_button_S0",
+                "type": "panel",
+                "size": ["100%sm","100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S0": {
+                      "layer": 5
+                    }
+                  }
+                ]
+            }},
+
+            {"check_status_S1": {
+                "$mapping_button|default": "$fonction_mapping_button_S1",
+                "type":"panel",
+                "size":["100%sm","100%"],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+
+                  {"texture_button@$textures_button_S1": {
+                      "layer": 5
+                  }}
+            ]}}, 
+
+            {"module_simple_text@ng_module.multiple_status_text": {
+                "layer": 5,
+                "size": ["100%c + 15px","100%"]
+          }}]
+      }}
+  ]}
+}

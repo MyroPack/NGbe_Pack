@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "paladium:chunk_delimiter",
+			"materials": {
+				"default": "entity_emissive"
+			},
+			"textures": {
+				"yellow": "textures/entity/chunk_delimiter/yellow_chunk_delimiter",
+				"blue": "textures/entity/chunk_delimiter/blue_chunk_delimiter",
+				"red": "textures/entity/chunk_delimiter/red_chunk_delimiter"
+			},
+			"geometry": {
+				"default": "geometry.chunk_delimiter"
+			},
+			"render_controllers": [
+				"controller.render.chunk_delimiter"
+			]
+		}
+	}
+}

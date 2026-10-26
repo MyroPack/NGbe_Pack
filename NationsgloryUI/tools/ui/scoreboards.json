@@ -1,0 +1,2596 @@
+{
+  "namespace": "scoreboard",
+  
+  "scoreboard_sidebar": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "bindings": [
+
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ],
+    "controls": [
+
+        // Ecran vert des radiations (NGMachineMod, reacteur nucleaire en marche) : un voile vert sur tout l'ecran pour
+        // la ligne du scoreboard qui porte $flag, comme l'ancien pack NG le faisait par sa ligne « radr ». Sans cette
+        // ligne, rien n'est dessine. Pose en premier : il passe sous les cases du HUD.
+        {"radiation@scoreboard.radiation":{}},
+
+        {"top": {
+          "type": "stack_panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0,5],
+          "orientation": "horizontal",
+          "size": ["100%",18],
+          // Cache pendant la visee a l'appareil photo du bestiaire (tableau de score « ngbcam » dans la barre laterale).
+          "bindings": [
+              {
+                "binding_name": "#objective_sidebar_name",
+                "binding_type": "global"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not (#objective_sidebar_name = 'ngbcam'))",
+                "target_property_name": "#visible"
+              }
+          ],
+          "controls": [
+
+                  {"padding@ng_module.panel": {
+                    "type": "panel",
+                    "size": [5,"100%"]
+                  }},
+
+            {"icone_server@scoreboard.server_icon":{}},  
+
+                  {"padding@ng_module.panel": {
+                    "type": "panel",
+                    "size": [ 2.5, "100%"],
+                    "bindings": [
+                          {
+                            "binding_name": "#player_position_visible",
+                            "binding_name_override": "#visible",
+                            "binding_condition": "always",
+                            "binding_type": "global"
+                          }
+                  ]}},
+            
+                {"cord@ng_asset.background_44":{
+                  "type":"image",
+                  "size":["100%c + 2px",18],
+                  "color":[0.086, 0.082, 0.090],
+                  "bindings": [
+                      {
+                        "binding_name": "#player_position_visible",
+                        "binding_name_override": "#visible",
+                        "binding_condition": "always",
+                        "binding_type": "global"
+                      }
+                  ],
+                  "controls":[
+
+                      {"background@ng_asset.background_white":{
+                        "size":["100%c",16],
+                        "color":[0.247, 0.247, 0.278],
+                        "controls":[
+
+                                {"background@ng_module.stackpanel":{
+                                  "orientation":"horizontal",
+                                  "size":["100%c",14],
+                                  "controls":[
+
+                                        {"padding@ng_module.panel": {
+                                          "size": [1, "100%"]
+                                        }},
+
+                                        {"direction@ng_asset.background_white": {
+                                          "size": [13,"100%"],
+                                          "color":[0.094, 0.094, 0.106],
+                                          "layer": 30,
+                                          "controls": [
+
+                                              {"direction@scoreboard.text_get": {
+                                                  "$flag": "§c§a§r§d§i§n§a§l§r",
+                                                  "offset":[0.3,-1.3],
+                                                  "$font_type":"MinecraftTen",
+                                                  "$text_asset": "Simple_text"
+                                              }}
+                                        ]}},
+                                    
+                                        {"cordonnée@ng_asset.background_white": {
+                                          "color":[0.153, 0.153, 0.165],
+                                          "size": ["100%c + 10px","100%"],
+                                          "controls": [
+
+                                              {"center@ng_module.panel": {
+                                                  "size": ["100%c","100%c"],
+                                                  "offset":[0,0.6],
+                                                  "controls": [
+
+                                                    {"player_position_text": {
+                                                        "type": "label",
+                                                        "text": "#text",
+                                                        "offset":[0,-0.6],
+                                                        "font_scale_factor":0.8,
+                                                        "layer": 20,
+                                                        "bindings": [
+                                                          {
+                                                            "binding_name": "#player_position_text",
+                                                            "binding_name_override": "#text",
+                                                            "binding_condition": "always_when_visible",
+                                                            "binding_type": "global"
+                                                          }
+                                                        ]
+                                                    }}
+                                              ]}}
+                                        ]}},
+
+                                        {"territoire@ng_module.panel": {
+                                          "size": ["100%c + 6px","100%"],
+                                          "controls": [
+
+                                            {"territoire_text@scoreboard.text_get": {
+                                                "$flag": "§t§e§r§r§i§t§o§r§y§r",
+                                                "$font_scale_factor":0.8,
+                                                "offset":[0,-0],
+                                                "$text_asset": "Simple_text"
+                                            }}
+                                        ]}},  
+
+                                        {"padding@ng_module.panel": {
+                                          "size": [1, "100%"]
+                                        }}
+                                ]}}
+                      ]}}
+                ]}},
+
+                  {"padding@ng_module.panel": {
+                      "type": "panel",
+                      "size": [2.5,"100%"]
+                  }},
+            
+              {"combat@scoreboard.combat_logger":{}},
+                  
+                  {"padding@ng_module.panel": {
+                      "type": "panel",
+                      "size": ["fill","100%"]
+                  }},
+
+              // Case de l'argent : dessinee par la ligne vault:money du scoreboard, comme les cases du pseudo et de la
+              // date. Avec la ligne, la meme case qu'avant ; sans elle (pendant un assaut), ni case ni symbole.
+              {"dollar@scoreboard.text_get": {
+                  "$flag": "§p§b§m§o§n§e§y§r",
+                  "$text_asset": "money_box",
+                  "$font_scale_factor":0.8,
+                  "offset":[0,0]
+              }},
+
+                    {"padding@ng_module.panel": {
+                        "type": "panel",
+                        "size": [2.5,"100%"]
+                    }},
+
+              // Case des points : dessinee par la ligne palaui:points, de la meme facon.
+              {"coin@scoreboard.text_get": {
+                  "$flag": "§p§b§p§b§o§i§n§k§e§r",
+                  "$text_asset": "coin_box",
+                  "$font_scale_factor":0.8,
+                  "offset":[0,0]
+              }},
+
+                    {"padding@ng_module.panel": {
+                      "type": "panel",
+                      "size": [5,"100%"]
+                    }}
+        ]}},
+
+        {"armor": {
+            "type": "stack_panel",
+            "offset": [-15,40],
+            "anchor_from": "right_middle",
+            "anchor_to": "right_middle",
+            "size": ["100%cm","100%c"],
+            "controls": [
+
+              {"casque@scoreboard.armor": {
+                  "$flag": "§p§b§h§e§l§m§e§t§r"
+              }},
+              {"casque@scoreboard.armor": {
+                  "$flag": "§p§b§c§h§e§s§t§p§l§a§t§e§r"
+              }},
+
+              {"casque@scoreboard.armor": {
+                  "$flag": "§p§b§l§e§g§g§i§n§g§s§r"
+              }},
+
+              {"casque@scoreboard.armor": {
+                  "$flag": "§p§b§b§o§o§t§s§r"
+              }}
+
+        ]}},
+
+        {"chat@scoreboard.chat":{}},
+
+        // Sous les cases de l'argent et des points, alignes a droite comme elles : le pseudo du joueur
+        // (ligne palaui:player_name de PalaUiMod, pseudo Recube) puis la date et l'heure de Paris
+        // (ligne palaui:date_time, renvoyee a chaque minute). Une case n'apparait que si sa ligne existe.
+        {"player_info@ng_module.stackpanel":{
+          "size":["100%","100%c"],
+          "orientation":"vertical",
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [-5,25.5],
+          // Cache pendant la visee a l'appareil photo du bestiaire, comme la barre du haut.
+          "bindings": [
+              {
+                "binding_name": "#objective_sidebar_name",
+                "binding_type": "global"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not (#objective_sidebar_name = 'ngbcam'))",
+                "target_property_name": "#visible"
+              }
+          ],
+          "controls":[
+
+            {"pseudo@ng_module.stackpanel":{
+              "size":["100%",13],
+              "orientation":"horizontal",
+              "controls":[
+
+                {"padding@ng_module.panel": {
+                  "size": ["fill","100%"]
+                }},
+
+                {"pseudo_box@scoreboard.text_get": {
+                  "$flag": "§p§s§e§u§d§o§r",
+                  "$text_asset": "info_box",
+                  "$box_size": ["100%c + 10px", 13],
+                  "$font_scale_factor":0.8,
+                  "offset":[0,0]
+                }}
+            ]}},
+
+            {"padding@ng_module.panel": {
+              "size": ["100%",2.5]
+            }},
+
+            {"date_time@ng_module.stackpanel":{
+              "size":["100%",11],
+              "orientation":"horizontal",
+              "controls":[
+
+                {"padding@ng_module.panel": {
+                  "size": ["fill","100%"]
+                }},
+
+                {"date_time_box@scoreboard.text_get": {
+                  "$flag": "§d§a§t§e§r",
+                  "$text_asset": "info_box",
+                  "$box_size": ["100%c + 10px", 11],
+                  "$font_scale_factor":0.6,
+                  "$color_text":[0.831, 0.831, 0.847],
+                  "offset":[0,0]
+                }}
+            ]}}
+        ]}},
+
+        // Bandeau de l'assaut en cours (NGCountryMod, lignes factions:battle_* de PalaUiMod) : sous la barre du
+        // haut, au milieu de l'ecran. Rien n'est dessine tant que ces lignes n'existent pas.
+        {"battle@scoreboard.battle":{}}
+  ]},
+  
+  // -----------------------------------------------
+  //
+  //             Differente Type Get text
+  //
+  // -----------------------------------------------
+
+  "chact_section": {
+    "type": "stack_panel",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "$flag|default": "",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.$text_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  "text_get": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "$flag|default": "",
+    "$font_scale_factor|default":1,
+    "$font_type|default":"default",
+    "offset":[0,0.6],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.$text_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  "combat_logger": {
+    "type": "stack_panel",
+    "size": [17,"100%"],
+    "$flag|default": "",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.combat"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  "armor": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "$flag|default": "",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.asset_armor"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  "chat": {
+    "type": "collection_panel",
+    "size": ["100%","100%"],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.chat_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+   "server_icon": {
+    "type": "collection_panel",
+    "size":["100%c","100%c"],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.server_icon_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  
+  // Voile vert des radiations : une case par ligne du scoreboard, de la taille de l'ecran, visible seulement pour
+  // la ligne qui porte $flag (NGMachineMod, ngmachine:radiation, sans texte et au score le plus haut : si le HUD
+  // avait un jour 16 lignes, c'est elle qui tomberait, jamais l'argent, le pseudo, les NGCoins ou la date).
+  "radiation": {
+    "type": "collection_panel",
+    "size": ["100%","100%"],
+    "$flag|default": "§r§a§d§i§o§r",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.radiation_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // La couleur et l'opacite du voile de l'ancien pack NG (2df31a a 20 %).
+  "radiation_asset@ng_asset.background_white": {
+    "size": ["100%","100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "color": [0.176, 0.953, 0.102],
+    "alpha": 0.2,
+    "keep_ratio": false,
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //
+  //             Differente Asset
+  //
+  // -----------------------------------------------
+
+  "combat@ng_asset.background_20": {
+    "size": ["100%","100%"],
+     "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - '§c§o§m§b§a§t§r§1§r') \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ], 
+    "controls": [
+
+      {"icone@ng_asset.icon_14": {
+        "color": [0.275,0.031,0.035],
+        "size": [10, 10]
+      }}
+  ]},
+
+  // Case sous les cases du haut (pseudo, date et heure) : meme fond que les cases de l'argent et des
+  // points, a la largeur du texte, visible seulement pour la ligne du scoreboard qui porte $flag.
+  "info_box@ng_asset.background_21": {
+    "alpha": 0.9,
+    "$box_size|default": ["100%c + 10px", 13],
+    "size": "$box_size",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"text@scoreboard.Simple_text": {
+        "offset": [0, 0.1]
+      }}
+  ]},
+
+  // Onglet du canal du pays dans la barre du tchat : dessine pour la ligne du serveur (palaui:server), sauf quand
+  // son nom contient « lobby » (un lobby n'a pas de pays ; meme regle que l'icone du lobby de server_icon_asset).
+  // Cache, il ne prend aucune place et l'onglet /chat vient contre l'onglet du serveur. Sa surbrillance
+  // (categorie_select_tab) est une fabrique soeur, pas un enfant : une fabrique dans chaque onglet cree par une
+  // fabrique multiplierait les controles du HUD.
+  "chat_tab_country@ng_asset.background_white": {
+    "size": [40, 15],
+    "color": [0.192, 0.188, 0.200],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') = #player_name_sidebar)) and ((#player_name_sidebar - 'lobby') = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"text": {
+        "type": "label",
+        "layer": 300000,
+        "color": [0.800, 0.796, 0.812],
+        "font_scale_factor": 0.8,
+        "offset": [0, 0.3],
+        "text": "$tab_text"
+      }}
+  ]},
+
+  // Surbrillance d'un onglet de 40 de large quand son canal est choisi : celle des autres onglets
+  // (categorie_select), a taille fixe parce qu'elle n'est pas l'enfant de son onglet.
+  "categorie_select_tab@scoreboard.categorie_select": {
+    "size": [40, 15]
+  },
+
+  "asset_armor": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#player_name_sidebar - '§0§r') \u003d #player_name_sidebar)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"content@ng_asset.background_21": {
+        "alpha":0.9,
+        "type": "image",
+        "size": [35,15],
+        "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+              "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+
+                  {"text_red": {
+                    "size": [35,15],
+                    "offset": [-5,0.1],
+                    "type": "panel",
+                    "controls": [
+
+                        {"text": {
+                          "type": "label",
+                          "localize": false,
+                          "layer": 2,
+                          "font_scale_factor":0.7,
+                          "text": "#player_name_sidebar",
+                          "bindings": [
+                              {
+                                "binding_name": "#player_name_sidebar",
+                                "binding_type": "collection",
+                                "binding_collection_name": "scoreboard_players"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+                                "target_property_name": "#visible"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(('%.90s' * #player_name_sidebar) - ':')",
+                                "target_property_name": "#player_name_sidebar"
+                              }
+                        ]}}
+                  ]}},
+
+                  {"icon@ng_asset.background_losange_01": {
+                    "type": "image",
+                    "alpha":0.9,
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": [10,0],
+                    "size": [25,25],
+                    "controls": [
+
+                              {"texture_item": { 
+                                  "type": "image",
+                                  "size": [11,11],
+                                  "layer": 20000000000000000,
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((#player_name_sidebar - ('%.90s' * #player_name_sidebar)) - ':')",
+                                      "target_property_name": "#texture"
+                                    }
+                                  ]
+                              }}
+                  ]}}
+      ]}},
+
+      {"padding@ng_module.panel": {
+          "size": [0,10],
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+              "target_property_name": "#visible"
+            }
+          ]
+      }}
+
+  ]},
+
+  // Barre d'onglets du tchat (HUD bureau, tchat en bas ou en haut) : onglets de 40 sur 15 dans un liseré d'un pixel,
+  // barre de 17 de haut. Le tchat en haut garde ses messages a la meme hauteur (26 au-dessus de la barre).
+  "chat_asset": {
+    "size": ["100%","100%"],
+    "type": "panel",
+    "controls": [
+
+      {"chat_bottom": {
+        "type": "stack_panel",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "size": ["35%","100%"],
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#player_name_sidebar - '§c§h§a§t§p§o§s§r§0§r') \u003d #player_name_sidebar))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+
+            {"padding@ng_module.panel": {
+                "size": ["100%","fill"]
+            }},
+
+            {"padding@ng_module.panel":{
+              "size":["100%",200]
+            }},
+
+            {"chat_categorie@ng_asset.background_44":{
+                  "color":[0.086, 0.082, 0.090],
+                  "size":["100%c + 2px",17],
+                  "controls":[
+
+                    {"stack_panel@ng_module.stackpanel": {
+                      "orientation": "horizontal",
+                      "size": ["100%c",15],
+                      "controls": [
+
+                            {"general@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color":[0.192, 0.188, 0.200],
+                                "controls": [
+
+                                  {"text": {
+                                      "type": "label",
+                                      "layer": 300000,
+                                      "color":[0.800, 0.796, 0.812],
+                                      "font_scale_factor": 0.8,
+                                      "offset": [0,0.3],
+                                      "text": "General"
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§0§r",
+                                      "$text_asset": "categorie_select",
+                                      "size": ["100%","100%"]
+                                  }}
+                            ]}},
+
+                            {"server@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color":[0.192, 0.188, 0.200],
+                                "controls": [
+
+                                  {"text": {
+                                      "type": "label",
+                                      "layer": 300000,
+                                      "color":[0.800, 0.796, 0.812],
+                                      "font_scale_factor": 0.8,
+                                      "offset": [0,0.3],
+                                      "text": "Server"
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§1§r",
+                                      "$text_asset": "categorie_select",
+                                      "size": ["100%","100%"]
+                                  }}
+                            ]}},
+
+                            // Onglet du canal du pays : absent d'un lobby (voir chat_tab_country). Le panneau prend la
+                            // largeur de ce qui s'y voit : 40 avec l'onglet, rien sans lui.
+                            {"faction": {
+                                "type": "panel",
+                                "size": ["100%c","100%"],
+                                "controls": [
+
+                                  {"tab@scoreboard.text_get": {
+                                      "$text_asset": "chat_tab_country",
+                                      "$tab_text": "Pays",
+                                      "offset": [0,0]
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§2§r",
+                                      "$text_asset": "categorie_select_tab"
+                                  }}
+                            ]}},
+
+                            {"/chat@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color": [0.086, 0.082, 0.090],
+                                "controls": [
+
+                                    {"text":{
+                                        "type": "label",
+                                        "layer": 300000,
+                                        "color":[0.800, 0.796, 0.812],
+                                        "font_scale_factor": 0.8,
+                                        "offset": [0,0.3],
+                                        "text": "/chat"
+                                    }}
+                            ]}}
+                    ]}}
+            ]}},
+
+            {"chat_panel@hud.chat_panel": {
+              "size": ["100%","100%c"],
+              "max_size":[]
+            }}
+      ]}},
+
+      {"chat_top": {
+        "size": ["100%","100%"],
+        "type": "panel",
+        "offset":[5],
+        "controls": [
+
+          {"chat_top": {
+            "type": "stack_panel",
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "size": ["50%","100%"],
+            "bindings": [
+                {
+                  "binding_name": "#player_name_sidebar",
+                  "binding_type": "collection",
+                  "binding_collection_name": "scoreboard_players"
+                },
+                {
+                  "binding_type": "view",
+                  "source_property_name": "(not((#player_name_sidebar - '§c§h§a§t§p§o§s§r§1§r') \u003d #player_name_sidebar))",
+                  "target_property_name": "#visible"
+                }
+            ],
+            "controls": [
+
+                {"padding@ng_module.panel":{
+                  "size":["100%",26]
+                }},
+
+                {"chat_categorie@ng_asset.background_44":{
+                  "color":[0.086, 0.082, 0.090],
+                  "size":["100%c + 2px",17],
+                  "controls":[
+
+                    {"stack_panel@ng_module.stackpanel": {
+                      "orientation": "horizontal",
+                      "size": ["100%c",15],
+                      "controls": [
+
+                            {"general@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color":[0.192, 0.188, 0.200],
+                                "controls": [
+
+                                  {"text": {
+                                      "type": "label",
+                                      "layer": 300000,
+                                      "color":[0.800, 0.796, 0.812],
+                                      "font_scale_factor": 0.8,
+                                      "offset": [0,0.3],
+                                      "text": "General"
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§0§r",
+                                      "$text_asset": "categorie_select",
+                                      "size": ["100%","100%"]
+                                  }}
+                            ]}},
+
+                            {"server@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color":[0.192, 0.188, 0.200],
+                                "controls": [
+
+                                  {"text": {
+                                      "type": "label",
+                                      "layer": 300000,
+                                      "color":[0.800, 0.796, 0.812],
+                                      "font_scale_factor": 0.8,
+                                      "offset": [0,0.3],
+                                      "text": "Server"
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§1§r",
+                                      "$text_asset": "categorie_select",
+                                      "size": ["100%","100%"]
+                                  }}
+                            ]}},
+
+                            // Onglet du canal du pays : absent d'un lobby (voir chat_tab_country). Le panneau prend la
+                            // largeur de ce qui s'y voit : 40 avec l'onglet, rien sans lui.
+                            {"faction": {
+                                "type": "panel",
+                                "size": ["100%c","100%"],
+                                "controls": [
+
+                                  {"tab@scoreboard.text_get": {
+                                      "$text_asset": "chat_tab_country",
+                                      "$tab_text": "Pays",
+                                      "offset": [0,0]
+                                  }},
+
+                                  {"categorie_select@scoreboard.chact_section": {
+                                      "$flag": "§c§h§a§t§c§h§a§n§n§e§l§r§m§r§2§r",
+                                      "$text_asset": "categorie_select_tab"
+                                  }}
+                            ]}},
+
+                            {"/chat@ng_asset.background_white": {
+                                "size": [40,"100%"],
+                                "color": [0.086, 0.082, 0.090],
+                                "controls": [
+
+                                    {"text":{
+                                        "type": "label",
+                                        "layer": 300000,
+                                        "color":[0.800, 0.796, 0.812],
+                                        "font_scale_factor": 0.8,
+                                        "offset": [0,0.3],
+                                        "text": "/chat"
+                                    }}
+                            ]}}
+                    ]}}
+                ]}},
+
+                {"chat_panel@hud.chat_panel": {
+                    "max_size":["100%","100%"],
+                    "size": ["100%","100%c"]
+                }}
+
+          ]}}
+
+      ]}}
+
+  ]},
+
+  "server_icon_asset":{
+    "size":["100%c","100%c"],
+    "type":"panel",
+    "controls":[
+
+          {"lobby@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'lobby') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.localisation_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"Earth@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'Earth' - 'earth') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.earth_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"moon@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'moon' - 'Moon') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.moon_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"edora@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'edora' - 'Edora') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.edora_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"farmland@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'farmland') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.farmland_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"warzone@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'warzone') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.warzone_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"capital@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'capital') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.capital_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}},
+
+          {"event@ng_asset.background_44": {
+              "size":[18,18],
+              "color":[0.086, 0.082, 0.090],
+              "bindings": [
+                                    {
+                                      "binding_name": "#player_name_sidebar",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "scoreboard_players"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "((not((#player_name_sidebar - 'event' - 'rp-') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§p§b§s§g§r§o§l§d§r') \u003d #player_name_sidebar)))",
+                                      "target_property_name": "#visible"
+                                    }
+              ],
+              "controls":[
+
+                {"server_icon@ng_asset.background_white": {
+                  "size":[16,16],
+                  "color":[0.247, 0.247, 0.278],
+                  "controls":[
+
+                    {"icon_lobby@ng_asset.event_icon": {
+                      "size":[13.3,13.3]
+                    }}
+
+
+
+
+                  ]}}
+          ]}}
+  ]},
+  
+  // -----------------------------------------------
+  //
+  //             Cases de l'argent et des points
+  //
+  // -----------------------------------------------
+
+  // Les deux cases de droite de la barre du haut, telles qu'elles etaient (meme fond, meme symbole, meme texte),
+  // mais dessinees par leur ligne du scoreboard : une case n'apparait que si sa ligne existe, comme info_box.
+  "money_box@ng_asset.background_21": {
+    "alpha": 0.9,
+    "size": ["100%c + 10px", 18],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c","100%"],
+          "controls": [
+
+            {"center": {
+              "type": "panel",
+              "size": ["100%c","100%"],
+              "controls": [
+
+                  {"test@ng_asset.icon_10": {
+                    "size": [10,10],
+                    "color":[0.596, 0.863, 0.051]
+                  }}
+            ]}},
+
+            {"padding@ng_module.panel": {
+                "size": [1,"100%"]
+            }},
+
+            {"center": {
+                "type": "panel",
+                "size": ["100%c","100%"],
+                "controls": [
+
+                  {"text@scoreboard.Simple_text": {
+                    "offset": [0, 0.1]
+                  }}
+            ]}}
+          ]
+      }}
+  ]},
+  "coin_box@ng_asset.background_21": {
+    "alpha": 0.9,
+    "size": ["100%c + 10px", 18],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c","100%"],
+          "controls": [
+
+            {"center": {
+              "type": "panel",
+              "size": ["100%c","100%"],
+              "controls": [
+
+                  {"test@ng_asset.icon_09": {
+                    "size": [10,10],
+                    "color":[0.945, 0.753, 0.051]
+                  }}
+            ]}},
+
+            {"padding@ng_module.panel": {
+                "size": [2,"100%"]
+            }},
+
+            {"center": {
+                "type": "panel",
+                "size": ["100%c","100%"],
+                "controls": [
+
+                  {"text@scoreboard.Simple_text": {
+                    "offset": [0, 0.1]
+                  }}
+            ]}}
+          ]
+      }}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //             Assaut (Nations Battle)
+  //
+  // -----------------------------------------------
+
+  // Bandeau de l'assaut, sur le modele du bandeau du client Java : l'attaquant a gauche, l'etape et le temps au
+  // milieu, le defenseur a droite. Le client ne garde que 15 lignes d'un scoreboard : NGCountryMod n'en envoie donc
+  // que DEUX pour les dix textes du bandeau. Une ligne est une suite de cases de 90 octets (drapeau compris dans
+  // la premiere, chaque case completee a cette longueur par le mod) ; ce qui suit la derniere case est un texte de plus.
+  //   §b§t§l§5§r  cases : titre | etape | nom, role et score de l'attaquant | nom et role du defenseur ; reste : son score
+  //   §b§t§l§6§r  case : temps de l'etape ; reste : temps de l'assaut, ou la zone et le colis pendant une capture
+  // Chaque morceau est un text_get comme ceux des cases du haut : il n'apparait que si sa ligne existe. Le fond
+  // n'apparait qu'avec la ligne des camps : hors assaut, rien n'est dessine.
+  // Quand le tchat est en haut de l'ecran (ligne §c§h§a§t§p§o§s§r§1§r), deux cales poussent le bandeau a droite
+  // du tchat et sous la case de la date, pour ne recouvrir ni l'un ni l'autre.
+  "battle@ng_module.stackpanel": {
+    "orientation": "horizontal",
+    "size": ["100%c","100%cm"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0,25.5],
+    "bindings": [
+        {
+          "binding_name": "#scoreboard_sidebar_visible",
+          "binding_type": "global",
+          "binding_name_override": "#visible"
+        }
+    ],
+    "controls": [
+
+      // Cale de la largeur du bandeau plus 20 : l'ensemble reste centre, le bandeau commence 10 a droite du milieu.
+      {"cale_droite@scoreboard.battle_shift": {
+        "$shift_size": [292,1]
+      }},
+
+      {"colonne@ng_module.stackpanel": {
+        "orientation": "vertical",
+        "size": ["100%cm","100%c"],
+        "controls": [
+
+          // Cale de la hauteur des cases du pseudo et de la date.
+          {"cale_bas@scoreboard.battle_shift": {
+            "$shift_size": [1,29]
+          }},
+
+          {"bandeau@ng_module.panel": {
+            "size": [272,42],
+            "controls": [
+
+              {"fond@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_fond",
+                "offset": [0,0]
+              }},
+
+              // Colonne de gauche : l'attaquant (FB2C36, sa couleur sur la carte du client Java).
+              {"attaquant_nom@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_2",
+                "$font_scale_factor": 0.8,
+                "$color_text": [0.984, 0.173, 0.212],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [9,4]
+              }},
+              {"attaquant_info@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_3",
+                "$font_scale_factor": 0.6,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [9,14.5]
+              }},
+              {"attaquant_score@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_4",
+                "$font_scale_factor": 0.7,
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [9,23.5]
+              }},
+
+              // Milieu : le titre, l'etape, le temps de l'etape en grand, le temps de l'assaut.
+              {"titre@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_0",
+                "$font_scale_factor": 0.7,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0,4.5]
+              }},
+              {"etape@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_1",
+                "$font_scale_factor": 0.6,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0,14.5]
+              }},
+              {"temps_etape@scoreboard.text_get": {
+                "$flag": "§b§t§l§6§r",
+                "$text_asset": "battle_piece_0",
+                "$font_scale_factor": 1,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0,21.5]
+              }},
+              {"temps_assaut@scoreboard.text_get": {
+                "$flag": "§b§t§l§6§r",
+                "$text_asset": "battle_piece_rest",
+                "$font_scale_factor": 0.6,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [0,33.5]
+              }},
+
+              // Colonne de droite : le defenseur (2B7FFF), texte cale a droite.
+              {"defenseur_nom@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_5",
+                "$font_scale_factor": 0.8,
+                "$color_text": [0.169, 0.498, 1.0],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [-9,4]
+              }},
+              {"defenseur_info@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_6",
+                "$font_scale_factor": 0.6,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [-9,14.5]
+              }},
+              {"defenseur_score@scoreboard.text_get": {
+                "$flag": "§b§t§l§5§r",
+                "$text_asset": "battle_piece_7",
+                "$font_scale_factor": 0.7,
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "offset": [-9,23.5]
+              }}
+          ]}}
+      ]}}
+  ]},
+
+  // Cale du bandeau : une case vide par ligne du scoreboard, visible (donc prise en compte dans la mise en page)
+  // seulement pour la ligne « tchat en haut ». Sans cette ligne, la cale ne prend aucune place.
+  "battle_shift": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "$shift_size|default": [0,0],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.battle_shift_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "battle_shift_asset@ng_module.panel": {
+    "size": "$shift_size",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - '§c§h§a§t§p§o§s§r§1§r') \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // Fond du bandeau : la case sombre des cases du haut (argent, pseudo, date), a la taille du bandeau, avec une
+  // bande a la couleur de chaque camp sur ses bords. Visible seulement pour la ligne qui porte $flag (les camps).
+  "battle_fond@ng_asset.background_21": {
+    "alpha": 0.9,
+    "size": [272,42],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"bande_attaquant@ng_asset.background_white": {
+        "size": [2,36],
+        "layer": 2,
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [3,0],
+        "color": [0.984, 0.173, 0.212]
+      }},
+
+      {"bande_defenseur@ng_asset.background_white": {
+        "size": [2,36],
+        "layer": 2,
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [-3,0],
+        "color": [0.169, 0.498, 1.0]
+      }}
+  ]},
+
+  // Texte d'un morceau du bandeau : Simple_text, qui n'ecrit qu'une case de sa ligne. '%.Ns' garde les N premiers
+  // octets d'un texte (procede des cases d'armure et des ecrans, Get_text_type_2 et 3 de NG_module) ; une case du
+  // milieu est ce qui reste des N premiers octets une fois otes les N - 90 premiers. Seules les lignes de plus de
+  // 90 octets sont coupees, exactement comme par la case d'armure : aucune autre ligne du HUD n'est coupee autrement.
+  "battle_piece_0": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('%.90s' * #player_name_sidebar)",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_1": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.180s' * #player_name_sidebar) - ('%.90s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_2": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.270s' * #player_name_sidebar) - ('%.180s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_3": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.360s' * #player_name_sidebar) - ('%.270s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_4": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.450s' * #player_name_sidebar) - ('%.360s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_5": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.540s' * #player_name_sidebar) - ('%.450s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_6": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.630s' * #player_name_sidebar) - ('%.540s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_7": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#player_name_sidebar - ('%.630s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "battle_piece_rest": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#player_name_sidebar - ('%.90s' * #player_name_sidebar))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //
+  //             Differente asset text
+  //
+  // -----------------------------------------------
+
+
+  "Simple_text": {
+    "font_type":"$font_type",
+    "type": "label",
+    "$color_text|default":"",
+    "color":"$color_text",
+    "font_scale_factor":"$font_scale_factor",
+    "layer": 300000,
+    "text": "#player_name_sidebar",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "categorie_select@ng_asset.background_45": {
+    "layer": 200000000000000000000,
+    "size": ["100%","100%"],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "text_red": {
+    "type": "label",
+    "font_type": "MinecraftTen",
+    "layer": 30,
+    "text": "#player_name_sidebar",
+    "color": [
+      0.725,
+      0.110,
+      0.047
+    ],
+    "font_scale_factor": 0.8,
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "variables": [
+      {
+        "requires": "($text_color = 'green')",
+        "$color_front": [
+          0.051,
+          0.349,
+          0.302
+        ],
+        "$color_shadow": [
+          0.090,
+          0.580,
+          0.498
+        ]
+      },
+      {
+        "requires": "($text_color = 'red')",
+        "$color_front": [
+          0.725,
+          0.110,
+          0.047
+        ],
+        "$color_shadow": [
+          0.937,
+          0.224,
+          0.149
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "shadow": {
+          "type": "label",
+          "layer": 15,
+          "font_type": "MinecraftTen",
+          "text": "#player_name_sidebar",
+          "color": [
+            0.937,
+            0.224,
+            0.149
+          ],
+          "offset": [
+            0,
+            -0.8
+          ],
+          "font_scale_factor": 0.8,
+          "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#player_name_sidebar - $flag) \u003d #player_name_sidebar))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //
+  //      Version mobile (profil d'interface Pocket)
+  //
+  // -----------------------------------------------
+  //
+  // hud.root_panel (ui/hud_screen.json) pose scoreboard_sidebar_pocket a la place de scoreboard_sidebar quand le
+  // joueur est en profil d'interface « Pocket » ($pocket_screen : la variable par laquelle le jeu choisit lui-meme
+  // sa barre d'objets et ses ecrans de telephone). En profil « Classic », rien de cette section n'est cree, et
+  // aucune definition situee plus haut dans ce fichier n'est modifiee.
+  //
+  // En profil Pocket le jeu dessine les coeurs et l'armure en haut a gauche, la faim et les bulles en haut a
+  // droite ; avec les commandes tactiles il ajoute ses boutons (tchat, pause, emotes) en haut au milieu, la manette
+  // en bas a gauche, le saut et les actions en bas a droite. L'ecran d'un telephone ne fait que 180 a 220 de haut
+  // (360 sur un PC). Le HUD mobile se range donc ainsi :
+  //   - une rangee sous les coeurs (y = 24) : icone du serveur, boussole, position et territoire a gauche,
+  //     argent et points a droite (ancres a droite, a part du cote gauche) ;
+  //   - sous cette rangee, a gauche : le canal de tchat en cours, puis les messages du tchat (un seul tchat, en
+  //     haut, quel que soit le reglage haut ou bas du joueur : le bas a gauche est sous la manette) ;
+  //   - sous cette rangee, a droite : le pseudo et la date cote a cote, puis les quatre pieces d'armure ;
+  //   - les bandeaux de notification (hud.root_panel, notif_pocket) se posent 5 secondes sur les cases de droite
+  //     (argent, points, pseudo, date), sans descendre vers le viseur ; l'armure reste visible ;
+  //   - rien dans la moitie basse de l'ecran, et le milieu reste libre.
+  // Aucun texte n'est plus petit que 0.8 (sur le bureau la date est a 0.6 et l'armure a 0.7).
+  // Les cases reprennent les gabarits du bureau (text_get, info_box, server_icon, combat_logger, Simple_text).
+
+  "scoreboard_sidebar_pocket": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "bindings": [
+
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ],
+    "controls": [
+
+        // Ecran vert des radiations, comme sur le bureau (radiation, plus haut dans ce fichier).
+        {"radiation@scoreboard.radiation":{}},
+
+        {"top@scoreboard.pocket_top":{}},
+
+        {"left@scoreboard.pocket_left":{}},
+
+        {"right@scoreboard.pocket_right":{}},
+
+        // Bandeau de l'assaut en cours, en petit (pocket_battle, a la fin du fichier).
+        {"battle@scoreboard.pocket_battle":{}}
+  ]},
+
+  // Rangee du haut, cote gauche : les cases du bureau (memes cases, memes couleurs), descendues sous les coeurs.
+  // L'argent et les points sont a part, ancres a droite (pocket_right) : un cote gauche trop long ne peut pas
+  // les pousser hors de l'ecran.
+  "pocket_top": {
+    "type": "stack_panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 0,24],
+    "orientation": "horizontal",
+    "size": ["100%",18],
+    // Cache pendant la visee a l'appareil photo du bestiaire (tableau de score « ngbcam »), comme le HUD Classique.
+    "bindings": [
+        {
+          "binding_name": "#objective_sidebar_name",
+          "binding_type": "global"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not (#objective_sidebar_name = 'ngbcam'))",
+          "target_property_name": "#visible"
+        }
+    ],
+    "controls": [
+
+            {"padding_left@ng_module.panel": {
+              "type": "panel",
+              "size": [5,"100%"]
+            }},
+
+      {"icone_server@scoreboard.server_icon":{}},
+
+            {"padding_icon@ng_module.panel": {
+              "type": "panel",
+              "size": [ 2.5, "100%"],
+              "bindings": [
+                    {
+                      "binding_name": "#player_position_visible",
+                      "binding_name_override": "#visible",
+                      "binding_condition": "always",
+                      "binding_type": "global"
+                    }
+            ]}},
+
+      {"cord@scoreboard.pocket_cord":{}},
+
+            {"padding_cord@ng_module.panel": {
+                "type": "panel",
+                "size": [2.5,"100%"]
+            }},
+
+      {"combat@scoreboard.combat_logger":{}}
+  ]},
+
+  // Boussole, position et territoire : la case du bureau, mot pour mot. Le texte de la position est celui que le jeu
+  // ecrit, affiche tel quel, sans aucune formule.
+  "pocket_cord@ng_asset.background_44": {
+    "type":"image",
+    "size":["100%c + 2px",18],
+    "color":[0.086, 0.082, 0.090],
+    "bindings": [
+        {
+          "binding_name": "#player_position_visible",
+          "binding_name_override": "#visible",
+          "binding_condition": "always",
+          "binding_type": "global"
+        }
+    ],
+    "controls":[
+
+        {"background@ng_asset.background_white":{
+          "size":["100%c",16],
+          "color":[0.247, 0.247, 0.278],
+          "controls":[
+
+                  {"background@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "size":["100%c",14],
+                    "controls":[
+
+                          {"padding_left@ng_module.panel": {
+                            "size": [1, "100%"]
+                          }},
+
+                          {"direction@ng_asset.background_white": {
+                            "size": [13,"100%"],
+                            "color":[0.094, 0.094, 0.106],
+                            "layer": 30,
+                            "controls": [
+
+                                {"direction@scoreboard.text_get": {
+                                    "$flag": "§c§a§r§d§i§n§a§l§r",
+                                    "offset":[0.3,-1.3],
+                                    "$font_type":"MinecraftTen",
+                                    "$text_asset": "Simple_text"
+                                }}
+                          ]}},
+
+                          {"coordonnees@ng_asset.background_white": {
+                            "color":[0.153, 0.153, 0.165],
+                            "size": ["100%c + 10px","100%"],
+                            "controls": [
+
+                                {"center@ng_module.panel": {
+                                    "size": ["100%c","100%c"],
+                                    "offset":[0,0.6],
+                                    "controls": [
+
+                                      {"player_position_text": {
+                                          "type": "label",
+                                          "text": "#text",
+                                          "offset":[0,-0.6],
+                                          "font_scale_factor":0.8,
+                                          "layer": 20,
+                                          "bindings": [
+                                            {
+                                              "binding_name": "#player_position_text",
+                                              "binding_name_override": "#text",
+                                              "binding_condition": "always_when_visible",
+                                              "binding_type": "global"
+                                            }
+                                          ]
+                                      }}
+                                ]}}
+                          ]}},
+
+                          {"territoire@ng_module.panel": {
+                            "size": ["100%c + 6px","100%"],
+                            "controls": [
+
+                              {"territoire_text@scoreboard.text_get": {
+                                  "$flag": "§t§e§r§r§i§t§o§r§y§r",
+                                  "$font_scale_factor":0.8,
+                                  "offset":[0,-0],
+                                  "$text_asset": "Simple_text"
+                              }}
+                          ]}},
+
+                          {"padding_right@ng_module.panel": {
+                            "size": [1, "100%"]
+                          }}
+                  ]}}
+        ]}}
+  ]},
+
+  // Case de valeur de la rangee du haut (argent, points) : la case du bureau, une icone, un ecart, puis le texte
+  // de la ligne qui porte $flag.
+  "pocket_value@ng_asset.background_21": {
+    "alpha":0.9,
+    "size": ["100%c + 10px","100%"],
+    "controls": [
+
+      {"stack_panel": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": ["100%c","100%"],
+          "controls": [
+
+            {"icon_center": {
+              "type": "panel",
+              "size": ["100%c","100%"],
+              "controls": [
+
+                  {"icon@$value_icon": {
+                    "size": [10,10],
+                    "color":"$value_icon_color"
+                  }}
+            ]}},
+
+            {"gap@ng_module.panel": {
+                "size": "$value_gap"
+            }},
+
+            {"text_center": {
+                "type": "panel",
+                "size": ["100%c","100%"],
+                "controls": [
+
+                  {"value@scoreboard.text_get": {
+                      "$font_scale_factor":0.8,
+                      "offset":[0,0.1],
+                      "$text_asset": "Simple_text"
+                  }}
+            ]}}
+          ]
+      }}
+  ]},
+
+  // Colonne de gauche, sous la rangee du haut : le canal de tchat en cours, puis les messages.
+  // Un seul tchat est cree ici (le bureau en cree deux par ligne du tableau des scores).
+  "pocket_left@ng_module.stackpanel": {
+    "orientation":"vertical",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [5,0],
+    "size": ["40%","100%"],
+    // Cache pendant la visee a l'appareil photo du bestiaire (tableau de score « ngbcam »), comme le HUD Classique.
+    "bindings": [
+        {
+          "binding_name": "#objective_sidebar_name",
+          "binding_type": "global"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not (#objective_sidebar_name = 'ngbcam'))",
+          "target_property_name": "#visible"
+        }
+    ],
+    "controls": [
+
+      {"padding_top@ng_module.panel":{
+        "size":["100%",44.5]
+      }},
+
+      {"chat_categorie@ng_asset.background_44":{
+            "color":[0.086, 0.082, 0.090],
+            "size":["100%c + 2px",18],
+            "controls":[
+
+              {"stack_panel@ng_module.stackpanel": {
+                "orientation": "horizontal",
+                "size": ["100%c",16],
+                "controls": [
+
+                      {"channel@scoreboard.pocket_channel":{}},
+
+                      {"/chat@ng_asset.background_white": {
+                          "size": [45,"100%"],
+                          "color": [0.086, 0.082, 0.090],
+                          "controls": [
+
+                              {"text":{
+                                  "type": "label",
+                                  "layer": 300000,
+                                  "color":[0.800, 0.796, 0.812],
+                                  "font_scale_factor": 0.8,
+                                  "offset": [0,0.3],
+                                  "text": "/chat"
+                              }}
+                      ]}}
+              ]}}
+      ]}},
+
+      {"padding_chat@ng_module.panel":{
+        "size":["100%",2]
+      }},
+
+      {"chat_panel@hud.chat_panel": {
+          "max_size":["100%","40%"],
+          "size": ["100%","100%c"]
+      }}
+  ]},
+
+  // Le canal de tchat en cours : une seule case, celle du canal, au lieu des trois onglets du bureau.
+  // Meme construction que server_icon : une case par ligne du tableau, visible pour la ligne du canal. La ligne
+  // vaut §c§h§a§t§c§h§a§n§n§e§l§r, puis §m§r pour qui a acces au canal de moderation, puis le numero du canal
+  // (§0§r, §1§r ou §2§r). Dans les deux cas elle contient « §r§0§r » pour le canal 0. La condition est
+  // donc : la ligne contient ce morceau ET le drapeau du canal. C'est la forme exacte de la condition de l'icone du
+  // lobby (server_icon_asset), deja en service.
+  "pocket_channel": {
+    "type": "collection_panel",
+    "size":["100%c","100%c"],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.pocket_channel_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "pocket_channel_asset":{
+    "size":["100%c","100%c"],
+    "type":"panel",
+    "controls":[
+
+          {"general@scoreboard.pocket_channel_cell": {
+              "$channel_label": "General",
+              "bindings": [
+                    {
+                      "binding_name": "#player_name_sidebar",
+                      "binding_type": "collection",
+                      "binding_collection_name": "scoreboard_players"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_property_name": "((not((#player_name_sidebar - '§r§0§r') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§c§h§a§t§c§h§a§n§n§e§l§r') \u003d #player_name_sidebar)))",
+                      "target_property_name": "#visible"
+                    }
+              ]
+          }},
+
+          {"server@scoreboard.pocket_channel_cell": {
+              "$channel_label": "Server",
+              "bindings": [
+                    {
+                      "binding_name": "#player_name_sidebar",
+                      "binding_type": "collection",
+                      "binding_collection_name": "scoreboard_players"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_property_name": "((not((#player_name_sidebar - '§r§1§r') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§c§h§a§t§c§h§a§n§n§e§l§r') \u003d #player_name_sidebar)))",
+                      "target_property_name": "#visible"
+                    }
+              ]
+          }},
+
+          {"pays@scoreboard.pocket_channel_cell": {
+              "$channel_label": "Pays",
+              "bindings": [
+                    {
+                      "binding_name": "#player_name_sidebar",
+                      "binding_type": "collection",
+                      "binding_collection_name": "scoreboard_players"
+                    },
+                    {
+                      "binding_type": "view",
+                      "source_property_name": "((not((#player_name_sidebar - '§r§2§r') \u003d #player_name_sidebar)) and (not((#player_name_sidebar - '§c§h§a§t§c§h§a§n§n§e§l§r') \u003d #player_name_sidebar)))",
+                      "target_property_name": "#visible"
+                    }
+              ]
+          }}
+  ]},
+
+  // Case du canal en cours : le fond clair d'un onglet choisi (background_45), le nom du canal par-dessus.
+  "pocket_channel_cell@ng_asset.background_45": {
+    "size": [45,16],
+    "$channel_label|default": "",
+    "controls": [
+
+      {"text": {
+          "type": "label",
+          "layer": 300000,
+          "color":[0.800, 0.796, 0.812],
+          "font_scale_factor": 0.8,
+          "offset": [0,0.3],
+          "text": "$channel_label"
+      }}
+  ]},
+
+  // A droite : une rangee pour l'argent et les points (celle du bureau), une pour le pseudo et la date, une pour
+  // l'armure. Les cases du pseudo et de la date sont celles du bureau (info_box), cote a cote au lieu de l'une sous
+  // l'autre. La date passe de 0.6 a 0.8, sa case de 11 a 13 de haut. Le tout tient entre y = 24 et y = 73.
+  "pocket_right@ng_module.stackpanel": {
+    "size":["100%","100%c"],
+    "orientation":"vertical",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-5,24],
+    // Cache pendant la visee a l'appareil photo du bestiaire (tableau de score « ngbcam »), comme le HUD Classique.
+    "bindings": [
+        {
+          "binding_name": "#objective_sidebar_name",
+          "binding_type": "global"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not (#objective_sidebar_name = 'ngbcam'))",
+          "target_property_name": "#visible"
+        }
+    ],
+    "controls":[
+
+      {"valeurs@ng_module.stackpanel":{
+        "size":["100%",18],
+        "orientation":"horizontal",
+        "controls":[
+
+          {"padding@ng_module.panel": {
+            "size": ["fill","100%"]
+          }},
+
+          {"dollar@scoreboard.pocket_value": {
+              "$flag": "§p§b§m§o§n§e§y§r",
+              "$value_icon": "ng_asset.icon_10",
+              "$value_icon_color": [0.596, 0.863, 0.051],
+              "$value_gap": [1,"100%"]
+          }},
+
+          {"gap@ng_module.panel": {
+            "size": [2.5,"100%"]
+          }},
+
+          {"coin@scoreboard.pocket_value": {
+              "$flag": "§p§b§p§b§o§i§n§k§e§r",
+              "$value_icon": "ng_asset.icon_09",
+              "$value_icon_color": [0.945, 0.753, 0.051],
+              "$value_gap": [2,"100%"]
+          }}
+      ]}},
+
+      {"padding_valeurs@ng_module.panel": {
+        "size": ["100%",2.5]
+      }},
+
+      {"infos@ng_module.stackpanel":{
+        "size":["100%",13],
+        "orientation":"horizontal",
+        "controls":[
+
+          {"padding@ng_module.panel": {
+            "size": ["fill","100%"]
+          }},
+
+          {"pseudo_box@scoreboard.text_get": {
+            "$flag": "§p§s§e§u§d§o§r",
+            "$text_asset": "info_box",
+            "$box_size": ["100%c + 10px", 13],
+            "$font_scale_factor":0.8,
+            "offset":[0,0]
+          }},
+
+          {"gap@ng_module.panel": {
+            "size": [2.5,"100%"]
+          }},
+
+          {"date_time_box@scoreboard.text_get": {
+            "$flag": "§d§a§t§e§r",
+            "$text_asset": "info_box",
+            "$box_size": ["100%c + 10px", 13],
+            "$font_scale_factor":0.8,
+            "$color_text":[0.831, 0.831, 0.847],
+            "offset":[0,0]
+          }}
+      ]}},
+
+      {"padding_infos@ng_module.panel": {
+        "size": ["100%",2.5]
+      }},
+
+      {"armure@ng_module.stackpanel":{
+        "size":["100%",13],
+        "orientation":"horizontal",
+        "controls":[
+
+          {"padding@ng_module.panel": {
+            "size": ["fill","100%"]
+          }},
+
+          {"casque@scoreboard.pocket_armor": {
+              "$flag": "§p§b§h§e§l§m§e§t§r"
+          }},
+
+          {"gap_1@ng_module.panel": {
+            "size": [2.5,"100%"]
+          }},
+
+          {"plastron@scoreboard.pocket_armor": {
+              "$flag": "§p§b§c§h§e§s§t§p§l§a§t§e§r"
+          }},
+
+          {"gap_2@ng_module.panel": {
+            "size": [2.5,"100%"]
+          }},
+
+          {"jambieres@scoreboard.pocket_armor": {
+              "$flag": "§p§b§l§e§g§g§i§n§g§s§r"
+          }},
+
+          {"gap_3@ng_module.panel": {
+            "size": [2.5,"100%"]
+          }},
+
+          {"bottes@scoreboard.pocket_armor": {
+              "$flag": "§p§b§b§o§o§t§s§r"
+          }}
+      ]}}
+  ]},
+
+  // Une piece d'armure : comme armor, avec la case compacte ci-dessous.
+  "pocket_armor": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "$flag|default": "",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.pocket_armor_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Case compacte d'une piece d'armure : l'image de l'objet puis son etat, dans la case de l'argent et des points.
+  // Memes liaisons que asset_armor : rien pour une piece absente (§0§r), le texte est la tete de la ligne (ses 90
+  // premiers octets), la texture est la queue.
+  "pocket_armor_asset": {
+    "type": "stack_panel",
+    "size": ["100%c","100%c"],
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#player_name_sidebar - '§0§r') = #player_name_sidebar)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"content@ng_asset.background_21": {
+        "alpha":0.9,
+        "type": "image",
+        "size": ["100%c + 8px",13],
+        "bindings": [
+            {
+              "binding_name": "#player_name_sidebar",
+              "binding_type": "collection",
+              "binding_collection_name": "scoreboard_players"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+              "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+
+          {"stack_panel@ng_module.stackpanel": {
+            "orientation": "horizontal",
+            "size": ["100%c","100%"],
+            "controls": [
+
+              {"icon_center@ng_module.panel": {
+                "size": ["100%c","100%"],
+                "controls": [
+
+                    {"texture_item": {
+                        "type": "image",
+                        "size": [11,11],
+                        "layer": 2,
+                        "bindings": [
+                          {
+                            "binding_name": "#player_name_sidebar",
+                            "binding_type": "collection",
+                            "binding_collection_name": "scoreboard_players"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_property_name": "((#player_name_sidebar - ('%.90s' * #player_name_sidebar)) - ':')",
+                            "target_property_name": "#texture"
+                          }
+                        ]
+                    }}
+              ]}},
+
+              {"gap@ng_module.panel": {
+                "size": [2,"100%"]
+              }},
+
+              {"text_center@ng_module.panel": {
+                "size": ["100%c","100%"],
+                "controls": [
+
+                    {"text": {
+                      "type": "label",
+                      "localize": false,
+                      "layer": 2,
+                      "font_scale_factor":0.8,
+                      "offset": [0,0.1],
+                      "text": "#player_name_sidebar",
+                      "bindings": [
+                          {
+                            "binding_name": "#player_name_sidebar",
+                            "binding_type": "collection",
+                            "binding_collection_name": "scoreboard_players"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))",
+                            "target_property_name": "#visible"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_property_name": "(('%.90s' * #player_name_sidebar) - ':')",
+                            "target_property_name": "#player_name_sidebar"
+                          }
+                    ]}}
+              ]}}
+          ]}}
+      ]}}
+  ]},
+
+  // Bandeau de l'assaut en profil Poche. Le bandeau du bureau (battle, 272 x 42 sous la barre du haut) couvrirait
+  // sur un telephone la rangee du haut et les boutons tactiles : celui-ci tient dans la rangee de l'argent et des
+  // points (190 x 18, en haut a droite, y = 24 a 42), que NGCountryMod vide pendant un assaut. Deux lignes : le nom
+  // de chaque camp et l'etape, puis leurs scores et le temps de l'etape. Le titre, les roles et la ligne du bas du
+  // bandeau du bureau (temps de l'assaut, zone et colis) n'y sont pas. Les textes sont ceux du bandeau du bureau
+  // (text_get et battle_piece_N, memes lignes du scoreboard) : rien n'apparait hors assaut.
+  "pocket_battle@ng_module.panel": {
+    "size": [190,18],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [-5,24],
+    "bindings": [
+        {
+          "binding_name": "#scoreboard_sidebar_visible",
+          "binding_type": "global",
+          "binding_name_override": "#visible"
+        }
+    ],
+    "controls": [
+
+      {"fond@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "pocket_battle_fond",
+        "offset": [0,0]
+      }},
+
+      {"attaquant_nom@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "battle_piece_2",
+        "$font_scale_factor": 0.6,
+        "$color_text": [0.984, 0.173, 0.212],
+        "anchor_from": "top_left",
+        "offset": [7,2.5]
+      }},
+
+      {"attaquant_score@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "battle_piece_4",
+        "$font_scale_factor": 0.6,
+        "anchor_from": "top_left",
+        "offset": [7,10]
+      }},
+
+      {"etape@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "battle_piece_1",
+        "$font_scale_factor": 0.6,
+        "anchor_from": "top_middle",
+        "offset": [0,2.5]
+      }},
+
+      {"temps_etape@scoreboard.text_get": {
+        "$flag": "§b§t§l§6§r",
+        "$text_asset": "battle_piece_0",
+        "$font_scale_factor": 0.7,
+        "anchor_from": "top_middle",
+        "offset": [0,9.5]
+      }},
+
+      {"defenseur_nom@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "battle_piece_5",
+        "$font_scale_factor": 0.6,
+        "$color_text": [0.169, 0.498, 1.0],
+        "anchor_from": "top_right",
+        "offset": [-7,2.5]
+      }},
+
+      {"defenseur_score@scoreboard.text_get": {
+        "$flag": "§b§t§l§5§r",
+        "$text_asset": "battle_piece_7",
+        "$font_scale_factor": 0.6,
+        "anchor_from": "top_right",
+        "offset": [-7,10]
+      }}
+  ]},
+
+  // Fond du bandeau en profil Poche : celui du bureau (battle_fond, visible avec la ligne des camps), a la taille
+  // du petit bandeau ; ses deux bandes de couleur, plus hautes que lui, sont coupees a ses bords.
+  "pocket_battle_fond@scoreboard.battle_fond": {
+    "size": [190,18],
+    "clips_children": true
+  }
+}

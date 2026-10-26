@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:raccoon",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/raccoon_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.raccoon"
+      },
+      "animations": {
+        "idle": "animation.ng.raccoon.idle",
+        "move": "animation.ng.raccoon.move",
+        "controller": "controller.animation.ng.raccoon.move",
+        "look": "animation.ng.raccoon.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.raccoon"
+      ],
+      "spawn_egg": {
+        "base_color": "#45443f",
+        "overlay_color": "#393834"
+      }
+    }
+  }
+}

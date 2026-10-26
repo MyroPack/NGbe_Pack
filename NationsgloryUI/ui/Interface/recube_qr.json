@@ -1,0 +1,350 @@
+{
+  "namespace": "recube_qr",
+
+  // -----------------------------------------------
+  //
+  //        Fenetre QR code (liaison Recube)
+  //
+  // -----------------------------------------------
+  //
+  // Formulaire simple envoye par RecubeAuthMod et aiguille ici par server_form.json
+  // quand son titre commence par le marqueur §q§r§c§r :
+  //   - titre (#title_text) : marqueur + titre, le marqueur est retire a l'affichage ;
+  //   - texte (#form_text) : explications, lien et code (lisible meme sans l'image) ;
+  //   - bouton 0 : image du QR code (type url) + code en texte, affiches en grand ;
+  //   - boutons suivants, sans image : actions (Actualiser, Fermer).
+  // Le bouton du QR code se reconnait a son image : c'est le seul qui en porte une.
+  // Les deux factories suivent le contrat vanilla depuis la 1.21.70 (verifie sur le
+  // client 1.26.52) : longueur liee a #form_button_contents, element choisi par type
+  // (control_ids, cle "button"). L'ancien #form_button_length n'existe plus en vanilla.
+  // Dependances au pack NG : les textures de flat_image et de l'icone de fermeture.
+
+  "flat_image": {
+    "type": "image",
+    "texture": "textures/ui/background/background_white"
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+
+      {"window_border@recube_qr.flat_image": {
+        "size": [ 264, "100% - 12px" ],
+        "max_size": [ 264, 360 ],
+        "color": [ 0.153, 0.153, 0.165 ],
+        "layer": 1,
+        "controls": [
+
+          {"window@recube_qr.flat_image": {
+            "size": [ "100% - 4px", "100% - 4px" ],
+            "color": [ 0.094, 0.094, 0.106 ],
+            "layer": 1,
+            "controls": [
+              {"layout@recube_qr.layout": {}}
+            ]
+          }}
+
+        ]
+      }}
+
+    ]
+  },
+
+  "layout": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100% - 12px", "100% - 10px" ],
+    "layer": 1,
+    "controls": [
+      {"header@recube_qr.header": {}},
+      {"padding_header": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"qr_area@recube_qr.qr_area": {}},
+      {"padding_qr": { "type": "panel", "size": [ "100%", 4 ] }},
+      {"content_label@recube_qr.content_label": {}},
+      {"padding_content": { "type": "panel", "size": [ "100%", 5 ] }},
+      {"buttons@recube_qr.buttons_panel": {}}
+    ]
+  },
+
+  // -----------------------------------------------
+  //  En-tete : titre sans le marqueur + fermeture
+  // -----------------------------------------------
+
+  "header": {
+    "type": "panel",
+    "size": [ "100%", 16 ],
+    "controls": [
+
+      {"title_label": {
+        "type": "label",
+        "size": [ "100% - 40px", "default" ],
+        "text": "#text",
+        "text_alignment": "center",
+        "font_type": "MinecraftTen",
+        "color": [ 1.0, 1.0, 1.0 ],
+        "shadow": true,
+        "layer": 2,
+        "bindings": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#title_text - '§q§r§c§r')",
+            "target_property_name": "#text"
+          }
+        ]
+      }},
+
+      {"close@recube_qr.close_button": {
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle"
+      }}
+
+    ]
+  },
+
+  "close_button@recube_qr.flat_image": {
+    "size": [ 16, 16 ],
+    "color": [ 0.153, 0.153, 0.165 ],
+    "layer": 2,
+    "controls": [
+
+      {"button@common.button": {
+        "size": [ 14, 14 ],
+        "$pressed_button_name": "button.menu_exit",
+        "controls": [
+          {"default@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.094, 0.094, 0.106 ] }},
+          {"hover@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.576, 0.0, 0.208 ] }},
+          {"pressed@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.576, 0.0, 0.208 ] }},
+          {"icon": {
+            "type": "image",
+            "texture": "textures/ui/icon/icon_01",
+            "size": [ 8, 8 ],
+            "layer": 5
+          }}
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  QR code en grand + code en texte (bouton 0)
+  // -----------------------------------------------
+
+  "qr_area": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "fill" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "recube_qr.qr_item"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "qr_item": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (#texture = ''))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"qr_holder": {
+        "type": "panel",
+        "size": [ "100%", "fill" ],
+        "controls": [
+
+          {"qr_frame@recube_qr.flat_image": {
+            "size": [ "100%y", "100%" ],
+            "max_size": [ 240, 240 ],
+            "color": [ 1.0, 1.0, 1.0 ],
+            "layer": 1,
+            "controls": [
+              {"qr_image@recube_qr.qr_image": {}},
+              {"loading@progress.progress_loading_bars": {
+                "size": [ 30, 4 ],
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_type": "view",
+                    "source_control_name": "qr_image",
+                    "resolve_sibling_scope": true,
+                    "source_property_name": "(#texture = 'loading')",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }}
+            ]
+          }}
+
+        ]
+      }},
+
+      {"padding_code": { "type": "panel", "size": [ "100%", 3 ] }},
+      {"code_label@recube_qr.code_label": {}}
+
+    ]
+  },
+
+  // Calque le plus haut : l'image du QR code passe devant tout le reste de la fenetre.
+  "qr_image": {
+    "type": "image",
+    "texture": "#texture",
+    "keep_ratio": false,
+    "size": [ "100% - 8px", "100% - 8px" ],
+    "layer": 50,
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+         "binding_condition": "always" 
+      },
+      {
+        "binding_name": "#form_button_texture_file_system",
+        "binding_name_override": "#texture_file_system",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+         "binding_condition": "always"
+      },
+      {
+        "binding_type": "view",
+         "binding_condition": "always",     
+        "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "code_label": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text": "#form_button_text",
+    "text_alignment": "center",
+    "font_type": "MinecraftTen",
+    "font_scale_factor": 1.5,
+    "color": [ 0.663, 0.439, 1.0 ], // violet Recube eclairci (#A970FF), lisible sur le fond sombre
+    "shadow": true,
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Explications et lien (#form_text)
+  // -----------------------------------------------
+
+  "content_label": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text": "#form_text",
+    "text_alignment": "center",
+    "color": [ 0.8, 0.8, 0.82 ],
+    "font_scale_factor": 0.8,
+    "layer": 2
+  },
+
+  // -----------------------------------------------
+  //  Boutons d'action (boutons sans image)
+  // -----------------------------------------------
+
+  "buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "recube_qr.action_item"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "action_item": {
+    "type": "panel",
+    "size": [ "100%", 24 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = '')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"action_button@recube_qr.action_button": {}}
+    ]
+  },
+
+  "action_button@common.button": {
+    "size": [ "100%", 20 ],
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.153, 0.153, 0.165 ] }},
+      // Survol et appui : violet Recube (#7B00E6, celui des boutons de recube.gg).
+      {"hover@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.482, 0.0, 0.902 ] }},
+      {"pressed@recube_qr.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.482, 0.0, 0.902 ] }},
+      {"button_label": {
+        "type": "label",
+        "text": "#form_button_text",
+        "color": [ 1.0, 1.0, 1.0 ],
+        "shadow": true,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  }
+}

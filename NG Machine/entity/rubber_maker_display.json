@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:rubber_maker_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "off": "textures/blocks/rubber_maker",
+        "on": "textures/blocks/rubber_maker_on"
+      },
+      "geometry": {
+        "default": "geometry.rubber_maker"
+      },
+      "render_controllers": [
+        "controller.render.ng_rubber_maker"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.furniture_coastal_mirror",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "group",
+					"pivot": [0, 8, 0]
+				},
+				{
+					"name": "group2",
+					"parent": "group",
+					"pivot": [0, 8, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, 6],
+							"size": [16, 16, 2],
+							"uv": {
+								"north": {"uv": [8, 0], "uv_size": [8, 8]},
+								"east": {"uv": [0, 0], "uv_size": [0.5, 8]},
+								"south": {"uv": [0, 0], "uv_size": [8, 8]},
+								"west": {"uv": [0, 0], "uv_size": [0.5, 8]},
+								"up": {"uv": [8, 0.5], "uv_size": [-8, -0.5]},
+								"down": {"uv": [8, 0.5], "uv_size": [-8, -0.5]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

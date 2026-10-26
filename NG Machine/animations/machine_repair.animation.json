@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.machine_repair.idle": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"circle_lower3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -360, 0]
+					},
+					"position": [0, "math.sin((q.anim_time+0.6)*360)*0.5", 0]
+				},
+				"circle_lower": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, -360, 0]
+					},
+					"position": [0, "math.sin((q.anim_time+0.6)*360)*0.5", 0]
+				},
+				"circle_lower2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [0, 360, 0]
+					},
+					"position": [0, "-math.sin((q.anim_time+0.6)*360)*0.5", 0]
+				}
+			}
+		}
+	}
+}

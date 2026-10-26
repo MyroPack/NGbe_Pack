@@ -1,0 +1,115 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_double_wrought_iron_flag_display",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 3.5,
+				"visible_bounds_height": 6.0,
+				"visible_bounds_offset": [0, 2.69, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 49.90455, -0.02182],
+					"cubes": [
+						{
+							"origin": [-2, 16, -2],
+							"size": [4, 64, 4],
+							"uv": [0, 0]
+						},
+						{
+							"origin": [-2.5, 80, -2.5],
+							"size": [5, 3, 5],
+							"uv": [52, 10]
+						},
+						{
+							"origin": [2, 76, -1],
+							"size": [17, 2, 2],
+							"uv": [50, 40]
+						},
+						{
+							"origin": [19, 75, 0],
+							"size": [4, 4, 0],
+							"uv": [52, 19]
+						},
+						{
+							"origin": [-19, 76, -1],
+							"size": [17, 2, 2],
+							"uv": [50, 40],
+							"mirror": true
+						},
+						{
+							"origin": [-23, 75, 0],
+							"size": [4, 4, 0],
+							"uv": [52, 19],
+							"mirror": true
+						},
+						{
+							"origin": [-2, 82, 0],
+							"size": [4, 4, 0],
+							"uv": [52, 19]
+						},
+						{
+							"origin": [-4, 0, -4],
+							"size": [8, 16, 8],
+							"uv": [17, 40]
+						},
+						{
+							"origin": [-3, 17, -3],
+							"size": [6, 4, 6],
+							"uv": [50, 45]
+						}
+					]
+				},
+				{
+					"name": "bone3",
+					"parent": "bone",
+					"pivot": [-11.5, 76, 0],
+					"cubes": [
+						{
+							"origin": [-19, 36, 0],
+							"size": [15, 36, 0],
+							"uv": {
+								"north": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								}
+							}
+						},
+						{
+							"origin": [-20, 72, 0],
+							"size": [17, 4, 0],
+							"uv": [17, 0],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [11.5, 76, 0],
+					"cubes": [
+						{
+							"origin": [3, 72, 0],
+							"size": [17, 4, 0],
+							"uv": [17, 0]
+						},
+						{
+							"origin": [4, 36, 0],
+							"size": [15, 36, 0],
+							"uv": {
+								"north": {
+									"uv": [196, 0],
+									"uv_size": [60, 144]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

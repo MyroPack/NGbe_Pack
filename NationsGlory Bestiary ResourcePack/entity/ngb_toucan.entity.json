@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:toucan",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/toucan_0",
+        "v1": "textures/entity/ngb/toucan_1",
+        "v2": "textures/entity/ngb/toucan_2"
+      },
+      "geometry": {
+        "default": "geometry.ng.toucan"
+      },
+      "animations": {
+        "idle": "animation.ng.toucan.idle",
+        "move": "animation.ng.toucan.move",
+        "fly_idle": "animation.ng.toucan.fly_idle",
+        "fly_move": "animation.ng.toucan.fly_move",
+        "controller": "controller.animation.ng.toucan.move",
+        "look": "animation.ng.toucan.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.toucan"
+      ],
+      "spawn_egg": {
+        "base_color": "#2f2e3f",
+        "overlay_color": "#c3a893"
+      }
+    }
+  }
+}

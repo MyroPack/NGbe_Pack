@@ -1,0 +1,34 @@
+map.position=%s, %s, %s
+## Applications button of the inventory (ui/inventory_screen.json): the text of the label is also its key.
+double clic=double click
+## Ecrans de la fusee (ui/Interface/machine/fusee.json)
+ng.fusee.title=Rocket
+ng.fusee.cargo.title=Cargo rocket
+ng.fusee.fuel=Fuel
+ng.fusee.travel=Travel
+ng.fusee.unreachable=Not reachable yet
+ng.fusee.launch=Launch
+ng.fusee.storage=Storage
+ng.fusee.liquid=Liquid
+ng.fusee.gas=Gas
+ng.fusee.energy=Electricity
+ng.fusee.hold=Hold
+ng.fusee.inventory=Inventory
+ng.fusee.confirm=Confirm the launch
+## Annuaire (ui/Interface/annuaire.json)
+ng.annuaire.location=Current location
+ng.annuaire.country=Country
+ng.annuaire.company=Company
+ng.annuaire.skill=Skill
+ng.annuaire.playtime=Playtime
+ng.annuaire.servertime=Time on server
+ng.annuaire.founder=Founder
+ng.annuaire.foundation=Founded
+ng.annuaire.division=Division
+ng.annuaire.relation=Relation
+ng.annuaire.continent=Continent
+ng.annuaire.recruitment=Recruitment
+ng.competences.niveau=Level
+ng.competences.titre=Skill
+## Workbenches (ui/Interface/machine/workstations.json)
+ng.ateliers.ingredient_hint=Click a slot to see its name

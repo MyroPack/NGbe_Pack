@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:fox",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/fox_0",
+        "v1": "textures/entity/ngb/fox_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.fox"
+      },
+      "animations": {
+        "idle": "animation.ng.fox.idle",
+        "move": "animation.ng.fox.move",
+        "controller": "controller.animation.ng.fox.move",
+        "look": "animation.ng.fox.look"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+        ],
+        "animate": [
+          "controller",
+          "look"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.fox"
+      ],
+      "spawn_egg": {
+        "base_color": "#914320",
+        "overlay_color": "#cc6920"
+      }
+    }
+  }
+}

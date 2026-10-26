@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:electric_compressor_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/electric_compressor"
+      },
+      "geometry": {
+        "default": "geometry.electriccompressor"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

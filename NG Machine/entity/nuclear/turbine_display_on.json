@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:turbine_display_on",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/turbine"
+      },
+      "geometry": {
+        "default": "geometry.ng_turbine"
+      },
+      "animations": {
+        "loop": "animation.ng_turbine.on"
+      },
+      "scripts": {
+        "animate": [
+          "loop"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

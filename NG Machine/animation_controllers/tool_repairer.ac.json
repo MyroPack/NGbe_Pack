@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ng_tool_repairer.hammer": {
+            "initial_state": "idle",
+            "states": {
+                "idle": {
+                    "transitions": [
+                        { "repairing": "q.variant == 1" }
+                    ]
+                },
+                "repairing": {
+                    "animations": [
+                        "hammer"
+                    ],
+                    "transitions": [
+                        { "idle": "q.variant == 0" }
+                    ]
+                }
+            }
+        }
+    }
+}

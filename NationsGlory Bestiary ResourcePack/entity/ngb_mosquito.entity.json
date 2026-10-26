@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:mosquito",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "v0": "textures/entity/ngb/mosquito_0",
+        "v1": "textures/entity/ngb/mosquito_1"
+      },
+      "geometry": {
+        "default": "geometry.ng.mosquito"
+      },
+      "animations": {
+        "idle": "animation.ng.mosquito.idle",
+        "move": "animation.ng.mosquito.move",
+        "fly_idle": "animation.ng.mosquito.fly_idle",
+        "fly_move": "animation.ng.mosquito.fly_move",
+        "controller": "controller.animation.ng.mosquito.move"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;",
+          "variable.ngb_flying = query.mark_variant == 1;"
+        ],
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng.mosquito"
+      ],
+      "spawn_egg": {
+        "base_color": "#34312f",
+        "overlay_color": "#2a1f1e"
+      }
+    }
+  }
+}

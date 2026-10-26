@@ -1,0 +1,1058 @@
+{
+  "namespace": "compresseur_electrique",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+      /* {"small_chest_grid@chest.small_chest_grid":{
+        "grid_dimensions": [ 9, 9 ],
+        "layer":800000,
+        "anchor_from":"bottom_right",
+        "anchor_to":"bottom_right",
+        "size": [ 162, 162 ]
+      }}, */
+
+      {"background_black@ng_asset.background_white":{
+        "color":[0.000, 0.000, 0.000],
+        "size":["150%","150%"],
+        "alpha":0.5
+      }},
+
+      {"stack_panel@ng_module.stackpanel":{
+        "size":[222,"100%c"],
+        "controls":[
+
+          {"gestion_panel@ng_asset.background_white":{
+            "color":[0.153, 0.153, 0.165],
+            "size":["100%",127],
+            "controls":[
+
+              {"stack_panel@ng_module.stackpanel":{
+                "size":["100% - 2px","100% - 2px"],
+                "controls":[
+
+                  {"header@ng_asset.background_01":{
+                    "size": ["100%",20],
+                    "controls":[
+
+                      {"stack_panel@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100% - 4px","100% - 2px"],
+                        "controls":[
+
+                          {"padding@ng_module.panel":{
+                            "size":[5,"100%"]
+                          }},
+
+                          {"centring@ng_module.panel":{
+                            "size":["100%c","100%"],
+                            "controls":[
+
+                              {"title":{
+                                "type":"label",
+                                "font_scale_factor":0.8,
+                                "layer":10,
+                                "offset":[0,-1.3],
+                                "font_type":"MinecraftTen",
+                                "text":"Compresseur électrique"
+                              }}
+                            ]}},
+
+                          {"padding@ng_module.panel":{
+                            "size":["fill","100%"]
+                          }},
+
+                          {"elec@ng_module.panel":{
+                            "size":["100%c","100%"],
+                            "controls":[
+
+                              {"background@ng_asset.background_03":{
+                                "min_size":[20,"100% - 2px"],
+                                "size": ["100%c + 10px","100% - 2px"],
+                                "controls":[
+
+                                  {"text@ng_module.Simple_text": {
+                                    "$type_get_text": "Get_text_type_1",
+                                    "$index": 20,
+                                    "layer":5,
+                                    "$text_offset":[0,0.3],
+                                    "size": ["100%c", "100%"],
+                                    "$size_icone_left|default": [8,8],
+                                    "$color_icone_left|default": [0.910, 0.725, 0.192],
+                                    "$texture_icone_left|default": "ng_asset.icon_03",
+                                    "$font_scale_factor": 0.7
+                                  }}
+                                ]}}
+                            ]}},
+
+                          {"padding@ng_module.panel":{
+                            "size":[1,"100%"]
+                          }},
+
+                          {"centring@ng_module.panel":{
+                            "size":["100%c","100%"],
+                            "controls":[
+
+                              {"close_button@ng_module.close_button":{}}
+
+                            ]}}
+                        ]}}
+                    ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",2]
+                  }},
+
+                  {"content@ng_module.panel":{
+                    "size":["100%",100],
+                    "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100% - 6px","100%"],
+                        "controls":[
+
+                          {"button_toggle@ng_asset.background_15":{
+                            "size":[20,"100%"],
+                            "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                "size":["100% - 4px","100% - 2px"],
+                                "controls":[
+
+                                  {"padding@ng_module.panel":{
+                                    "size":["100%",1]
+                                  }},
+
+                                  {"button_home@ng_module.multiple_status_button": {
+                                    "size": ["100%", 16],
+                                    "$size_button": ["100%", "100%"],
+                                    "$index": 10,
+
+                                    "$S0_texture_icone_right": "ng_asset.icon_06",
+                                    "$S1_texture_icone_right": "ng_asset.icon_06",
+                                    "$S1_color_icone_right": [0.443, 0.443, 0.482],
+                                    "$S0_size_icone_right": [9.5,9.5],
+                                    "$S1_size_icone_right": [9.5,9.5],
+
+
+                                    "$textures_button_S0": "ng_asset.button_05",
+                                    "$textures_button_S1": "ng_asset.button_06",
+
+                                    "$fonction_mapping_button_S0": "clickable",
+                                    "$fonction_mapping_button_S1": "nonclickable"
+                                  }},
+
+                                  {"padding@ng_module.panel":{
+                                    "size":["100%",1]
+                                  }},
+
+                                  {"button_setting@ng_module.multiple_status_button": {
+                                    "size": ["100%", 16],
+                                    "$size_button": ["100%", "100%"],
+                                    "$index": 11,
+
+                                    "$S0_texture_icone_right": "ng_asset.icon_05",
+                                    "$S1_texture_icone_right": "ng_asset.icon_05",
+                                    "$S1_color_icone_right": [0.443, 0.443, 0.482],
+                                    "$S0_size_icone_right": [9.5,9.5],
+                                    "$S1_size_icone_right": [9.5,9.5],
+
+
+                                    "$textures_button_S0": "ng_asset.button_05",
+                                    "$textures_button_S1": "ng_asset.button_06",
+
+                                    "$fonction_mapping_button_S0": "clickable",
+                                    "$fonction_mapping_button_S1": "nonclickable"
+                                  }}
+                                ]}}
+
+                            ]}},
+
+                          {"padding@ng_module.panel":{
+                            "size":[3,"100%"]
+                          }},
+
+                          {"amelioration@ng_module.panel":{
+                            "size":["fill","100%"],
+                            "controls":[
+
+                              {"content@ng_module.Toggle": {
+                                "size": ["100%","100%"],
+                                "$index_page": 19,
+                                "$page1": "compresseur_electrique.page1",
+                                "$page2": "compresseur_electrique.page2"
+                              }}
+                            ]}}
+                        ]}}
+                    ]}}
+                ]}}
+            ]}},
+
+          {"padding@ng_module.panel":{
+            "size":["100%",5]
+          }},
+
+          {"inventory@ng_asset.background_02":{
+            "size": ["100%",113],
+            "controls":[
+
+              {"inventory_content@ng_module.stackpanel":{
+                "size":[208,"100% - 10px"],
+                "controls":[
+
+                  {"title":{
+                    "size":["100%",10],
+                    "type":"label",
+                    "layer":5,
+                    "font_scale_factor":0.6,
+                    "color":[0.443, 0.443, 0.482],
+                    "font_type":"MinecraftTen",
+                    "text":"inventaire"
+                  }},
+
+                  {"inventory@ng_asset.background_white":{
+                    "color":[0.180, 0.180, 0.192],
+                    "size":[208,93],
+                    "controls":[
+
+                      {"inventory_&_hotbar@ng_module.stackpanel":{
+                        "size":[207,92],
+                        "offset":[0.5,0.5],
+                        "controls":[
+
+                          {"complementaroy@ng_module.grid_asset":{
+                            "$size_grid":[207,69],
+                            "$grid_dimensions":[9,3],
+                            "$collection_name":"inventory_items",
+                            "$item_renderer_panel_size":[22,22],
+                            "$cell_image_size":[22,22],
+                            "$textures_slot_hover":"ng_asset.background_10",
+                            "$textures_slot_default":"ng_asset.background_white",
+                            "$color_background_default":[0.094, 0.094, 0.106],
+                            "$slot_size":[22,22]
+                          }},
+
+                          {"complementaroy@ng_module.grid_asset":{
+                            "$size_grid":[207,23],
+                            "$grid_dimensions":[9,1],
+                            "$collection_name":"hotbar_items",
+                            "$item_renderer_panel_size":[22,22],
+                            "$cell_image_size":[22,22],
+                            "$textures_slot_hover":"ng_asset.background_10",
+                            "$textures_slot_default":"ng_asset.background_white",
+                            "$color_background_default":[0.094, 0.094, 0.106],
+                            "$slot_size":[22,22]
+                          }}
+
+                        ]}}
+                    ]}}
+                ]}}
+
+
+            ]}}
+        ]}}
+    ]},
+
+  // -----------------------------------------------
+  //
+  //                        Page
+  //
+  // -----------------------------------------------
+
+  "page1@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100%","100%"],
+    "controls":[
+
+      {"background@ng_asset.background_13":{
+        "size":["100%","100%"],
+        "controls":[
+
+          {"page1@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "size":["100% - 8px","100% - 8px"],
+            "controls":[
+
+              {"content@ng_module.stackpanel":{
+                "size":["50% - 2px","100%"],
+                "controls":[
+
+                  {"header@ng_asset.background_12":{
+                    "size": ["100%",15],
+                    "controls":[
+
+                      {"stack_panel@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100% - 2px","100% - 2px"],
+                        "controls":[
+
+                          {"padding@ng_module.panel":{
+                            "size":[5,"100%"]
+                          }},
+
+                          {"centring@ng_module.panel":{
+                            "size":["100%c","100%"],
+                            "controls":[
+
+                              {"title":{
+                                "type":"label",
+                                "font_scale_factor":0.7,
+                                "layer":10,
+                                "offset":[0,-0.6],
+                                "color":[0.624, 0.624, 0.663],
+                                "font_type":"MinecraftTen",
+                                "text":"Amelioration"
+                              }}
+                            ]}}
+                        ]}}
+                    ]}},
+
+                  {"content@ng_asset.background_11":{
+                    "size": ["100%",35],
+                    "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "collection_name": "container_items",
+                        "size":["100%c",20],
+                        "controls":[
+
+                          {"slot_1@ng_module.custome_slot":{
+                            "$index":16
+                          }},
+
+                          {"padding@ng_module.panel":{
+                            "size":[4,"100%"]
+                          }},
+
+                          {"slot_2@ng_module.custome_slot":{
+                            "$index":17
+                          }},
+
+                          {"padding@ng_module.panel":{
+                            "size":[4,"100%"]
+                          }},
+
+                          {"slot_3@ng_module.custome_slot":{
+                            "$index":18
+                          }}
+                        ]}}
+                    ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",2]
+                  }},
+
+                  {"header@ng_asset.background_12":{
+                    "size": ["100%",15],
+                    "controls":[
+
+                      {"stack_panel@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100% - 2px","100% - 2px"],
+                        "controls":[
+
+                          {"padding@ng_module.panel":{
+                            "size":[5,"100%"]
+                          }},
+
+                          {"centring@ng_module.panel":{
+                            "size":["100%c","100%"],
+                            "controls":[
+
+                              {"title":{
+                                "type":"label",
+                                "font_scale_factor":0.7,
+                                "layer":10,
+                                "offset":[0,-0.6],
+                                "color":[0.624, 0.624, 0.663],
+                                "font_type":"MinecraftTen",
+                                "text":"informations"
+                              }}
+                            ]}}
+                        ]}}
+                    ]}},
+
+                  {"content@ng_asset.background_11":{
+                    "size": ["100%",25],
+                    "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "size":["100% - 8px",20],
+                        "controls":[
+
+                          {"padding@ng_module.panel":{
+                            "size":["100%",1]
+                          }},
+
+                          {"content@ng_module.stackpanel":{
+                            "orientation":"horizontal",
+                            "size":["100%",10],
+                            "controls":[
+
+                              {"text@ng_module.label":{
+                                "text":"Surchauffe",
+                                "font_scale_factor": 0.6
+                              }},
+
+                              {"padding@ng_module.panel":{
+                                "size":["fill","100%"]
+                              }},
+
+                              {"status@ng_module.multiple_status_text": {
+                                "$S0_type_get_text": "Get_text_type_1",
+                                "$S1_type_get_text": "Get_text_type_1",
+                                "$index": 10,
+                                "$S0_text_color": [1.000, 0.537, 0.012],
+                                "$S1_text_color":[0.604, 0.902, 0.000],
+                                "layer":10,
+                                "size": ["100%c", "100%"],
+                                "$font_scale_factor": 0.6,
+                                "$text_offset": [0, -2]
+                              }}
+                            ]}},
+
+                          {"content@ng_module.stackpanel":{
+                            "orientation":"horizontal",
+                            "size":["100%",10],
+                            "controls":[
+
+                              {"center@ng_module.panel":{
+                                "size":["100%c",10],
+                                "controls":[
+
+                                  {"text@ng_module.label":{
+                                    "text":"Consomation",
+                                    "size":["default",10],
+                                    "font_scale_factor": 0.6
+                                  }}
+
+                                ]}},
+
+                              {"padding@ng_module.panel":{
+                                "size":["fill","100%"]
+                              }},
+
+                              {"text@ng_module.Simple_text": {
+                                "$type_get_text": "Get_text_type_1",
+                                "$index": 13,
+                                "layer":10,
+                                "size": ["100%c", "100%"],
+                                "$font_scale_factor": 0.6,
+                                "$text_offset": [0, -2]
+                              }}
+                            ]}}
+                        ]}}
+
+
+
+                    ]}}
+                ]}},
+
+              {"padding@ng_module.panel":{
+                "size":[4,"100%"]
+              }},
+
+              {"text@ng_module.Simple_text": {
+                "$type_get_text": "Get_text_type_1",
+                "$index": 23,
+                "layer":15,
+                "$text_size":[90,92],
+                "size":["100%c","100%"],
+                "$font_scale_factor": 0.7,
+                "$text_color": [0.624, 0.624, 0.663]
+              }}
+            ]}}
+        ]}}
+    ]},
+
+  "page2@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100%","100%"],
+    "controls":[
+
+      {"content@ng_module.stackpanel":{
+        "orientation":"horizontal",
+        "size":["100%","100%"],
+        "controls":[
+
+          {"list_craft@ng_asset.background_13":{
+            "size":["40%","100%"],
+            "controls":[
+
+              {"content@ng_module.stackpanel":{
+                "orientation":"horizontal",
+                "clips_enfants":false,
+                "size":["100% - 8px","100% - 8px"],
+                "controls":[
+
+                  {"scroll@ng_module.scroll":{
+                    "clips_enfants":false,
+                    "$scrolling_content": "compresseur_electrique.list_craft",
+                    "$scroll_size":[4,"100%"],
+                    "$scroll_track_image_control": "compresseur_electrique.background_scroll",
+                    "$scroll_box_mouse_image_control": "compresseur_electrique.scroll_bar"
+                  }}
+                ]}}
+            ]}},
+
+          {"craft@ng_asset.background_13":{
+            "size":["60%","100%"],
+            "controls":[
+
+              {"content@ng_module.stackpanel":{
+                "size":["100% - 10px","100% - 10px"],
+                "controls":[
+
+                  {"content@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "collection_name":"container_items",
+                    "size":["100%",63],
+                    "controls":[
+
+                      {"slot@ng_module.panel":{
+                        "size":["100%cm","100%cm"],
+                        "controls":[
+
+                          {"custome_slot_preview@ng_module.stackpanel":{
+                            "size":["100%cm","100%c"],
+                            "controls":[
+
+                              {"slot_linge_1@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":53,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":54,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":55,
+                                    "layer":11
+                                  }}
+
+
+                                ]}},
+
+                              {"slot_linge_2@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":56,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":57,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":58,
+                                    "layer":11
+                                  }}
+
+
+                                ]}},
+
+                              {"slot_linge_3@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":59,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":60,
+                                    "layer":11
+                                  }},
+
+                                  {"item_1@compresseur_electrique.custome_slot_preview":{
+                                    "$index":61,
+                                    "layer":11
+                                  }}
+
+
+                                ]}}
+                            ]}},
+
+                          {"Custome_slot_craft@ng_module.stackpanel":{
+                            "size":["100%cm","100%c"],
+                            "controls":[
+
+                              {"slot_linge_1@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":21,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":22,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":23,
+                                    "layer":12
+                                  }}
+
+
+                                ]}},
+
+                              {"slot_linge_2@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":24,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":25,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":26,
+                                    "layer":12
+                                  }}
+
+
+                                ]}},
+
+                              {"slot_linge_3@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c","100%cm"],
+                                "controls":[
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":27,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":28,
+                                    "layer":12
+                                  }},
+
+                                  {"item_1@ng_module.custome_slot":{
+                                    "$index":29,
+                                    "layer":12
+                                  }}
+                                ]}}
+                            ]}}
+                        ]}},
+
+                      {"padding@ng_module.panel": {
+                        "size": ["fill", "100%"],
+                        "controls":[
+
+                          {"icon@ng_asset.icon_13":{
+                            "color":[0.322, 0.322, 0.361],
+                            "layer":8,
+                            "size":[15,15]
+                          }}
+                        ]}},
+
+                      {"center@ng_module.collectionpanel":{
+                        "collection_name":"container_items",
+                        "size":["100%c","100%"],
+                        "controls":[
+
+                          {"output@ng_module.custome_slot":{
+                            "$index":30
+                          }}
+
+                        ]}}
+                    ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [0, "fill"]
+                  }},
+
+                  {"content@ng_module.stackpanel":{
+                    "size":["100%","100%c"],
+                    "controls":[
+
+                      {"content@ng_module.stackpanel":{
+                        "orientation":"horizontal",
+                        "size":["100%",8],
+                        "controls":[
+
+                          {"text@ng_module.label":{
+                            "text":"Production",
+                            "font_scale_factor":0.5
+                          }},
+
+                          {"padding@ng_module.panel":{
+                            "size":["fill","100%"]
+                          }},
+
+                          {"text@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 51,
+                            "layer":10,
+                            "size": ["100%c", "100%"],
+                            "$size_icone_right": [6,6],
+                            "$offset_icone_right":[0,-1],
+                            "$text_color":[0.443, 0.443, 0.482],
+                            "$color_icone_right": [0.443, 0.443, 0.482],
+                            "$texture_icone_right": "ng_asset.icon_07",
+                            "$font_scale_factor": 0.5,
+                            "$text_offset": [0, -0.6]
+                          }}
+                        ]}},
+
+                      {"loading_bar@ng_module.loading_bar": {
+                        "size": ["100%",4],
+                        "layer": 5,
+                        "$index": 51,
+                        "$load_bar_size":["100% - 2px",2],
+                        "$orientation": "horizontal",
+                        "$color_border": [0.910, 0.725, 0.192],
+                        "$layer_percent": 3,
+                        "$texture_background_bar":"ng_asset.background_02",
+                        "$texture_background_top": "textures/ui/background/background_white"
+                      }}
+                    ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [0, 3]
+                  }}
+                ]}}
+            ]}}
+        ]}}
+    ]},
+
+  // -----------------------------------------------
+  //
+  //              craft list & asset button
+  //
+  // -----------------------------------------------
+
+  "list_craft@ng_module.stackpanel":{
+    "collection_name": "container_items",
+    "size":["100%","100%c"],
+    "controls":[
+
+      {"craft_062@compresseur_electrique.asset_craft_button":{
+        "$index":62,
+        "$index_item_left":63,
+        "$index_item_right":64
+      }},
+      {"craft_063@compresseur_electrique.asset_craft_button":{
+        "$index":65,
+        "$index_item_left":66,
+        "$index_item_right":67
+      }},
+      {"craft_064@compresseur_electrique.asset_craft_button":{
+        "$index":68,
+        "$index_item_left":69,
+        "$index_item_right":70
+      }},
+      {"craft_065@compresseur_electrique.asset_craft_button":{
+        "$index":71,
+        "$index_item_left":72,
+        "$index_item_right":73
+      }},
+      {"craft_066@compresseur_electrique.asset_craft_button":{
+        "$index":74,
+        "$index_item_left":75,
+        "$index_item_right":76
+      }},
+      {"craft_067@compresseur_electrique.asset_craft_button":{
+        "$index":77,
+        "$index_item_left":78,
+        "$index_item_right":79
+      }},
+      {"craft_068@compresseur_electrique.asset_craft_button":{
+        "$index":80,
+        "$index_item_left":81,
+        "$index_item_right":82
+      }},
+      {"craft_069@compresseur_electrique.asset_craft_button":{
+        "$index":83,
+        "$index_item_left":84,
+        "$index_item_right":85
+      }},
+      {"craft_070@compresseur_electrique.asset_craft_button":{
+        "$index":86,
+        "$index_item_left":87,
+        "$index_item_right":88
+      }},
+      {"craft_071@compresseur_electrique.asset_craft_button":{
+        "$index":89,
+        "$index_item_left":90,
+        "$index_item_right":91
+      }},
+      {"craft_072@compresseur_electrique.asset_craft_button":{
+        "$index":92,
+        "$index_item_left":93,
+        "$index_item_right":94
+      }},
+      {"craft_073@compresseur_electrique.asset_craft_button":{
+        "$index":95,
+        "$index_item_left":96,
+        "$index_item_right":97
+      }},
+      {"craft_074@compresseur_electrique.asset_craft_button":{
+        "$index":98,
+        "$index_item_left":99,
+        "$index_item_right":100
+      }},
+      {"craft_075@compresseur_electrique.asset_craft_button":{
+        "$index":101,
+        "$index_item_left":102,
+        "$index_item_right":103
+      }},
+      {"craft_076@compresseur_electrique.asset_craft_button":{
+        "$index":104,
+        "$index_item_left":105,
+        "$index_item_right":106
+      }},
+
+      {"craft_077@compresseur_electrique.asset_craft_button":{
+        "$index":107,
+        "$index_item_left":108,
+        "$index_item_right":109
+      }},
+      {"craft_078@compresseur_electrique.asset_craft_button":{
+        "$index":110,
+        "$index_item_left":111,
+        "$index_item_right":112
+      }},
+      {"craft_079@compresseur_electrique.asset_craft_button":{
+        "$index":113,
+        "$index_item_left":114,
+        "$index_item_right":115
+      }},
+      {"craft_080@compresseur_electrique.asset_craft_button":{
+        "$index":116,
+        "$index_item_left":117,
+        "$index_item_right":118
+      }},
+      {"craft_081@compresseur_electrique.asset_craft_button":{
+        "$index":119,
+        "$index_item_left":120,
+        "$index_item_right":121
+      }}
+    ]},
+
+  "asset_craft_button@ng_module.conditional":{
+    "collection_index":"$index",
+    "size":["100%","100%c"],
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls":[
+
+      {"asset_button_craft@ng_module.stackpanel": {
+        "size":["100%",21],
+        "layer":5,
+        "collection_name": "container_items",
+        "$index|default": 0,
+        "controls": [
+
+          {"button": {
+            "type": "input_panel",
+            "collection_index": "$index",
+            "$fonction_mapping_button_S0|default": "clickable",
+            "$fonction_mapping_button_S1|default": "nonclickable",
+            "$color_default_button":[0.122, 0.122, 0.137],
+            "$textures_button_S0|default": "ng_asset.button_background_white",
+            "$textures_button_S1|default": "ng_asset.background_22",
+            "size": ["100%",20],
+            "controls": [
+
+              {"check_status_S0": {
+                "$mapping_button|default": "$fonction_mapping_button_S0",
+                "type": "panel",
+                "size": ["100%", "100%"],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+
+                  {"texture_button@$textures_button_S0": {
+                    "color":[0.122, 0.122, 0.137],
+                    "layer": 5
+                  }},
+
+                  {"stack_panel@ng_module.stackpanel":{
+                    "collection_name": "container_items",
+                    "orientation":"horizontal",
+                    "size":["100% - 2px", "100% - 2px"],
+                    "controls":[
+
+                      {"item_1@compresseur_electrique.custome_slot":{
+                        "$index":"$index_item_left",
+                        "layer":10
+                      }},
+
+                      {"padding@ng_module.panel": {
+                        "size": ["fill", "100%"],
+                        "controls":[
+
+                          {"icon@ng_asset.icon_13":{
+                            "color":[0.200, 0.200, 0.220],
+                            "layer":8,
+                            "size":[15,15]
+                          }}
+
+                        ]}},
+
+                      {"item_2@compresseur_electrique.custome_slot":{
+                        "$index":"$index_item_right",
+                        "layer":10
+                      }}
+                    ]}}
+                ]}},
+
+              {"check_status_S1": {
+                "$mapping_button|default": "$fonction_mapping_button_S1",
+                "type":"panel",
+                "size":["100%","100%"],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+
+                  {"texture_button@$textures_button_S1": {
+                    "layer": 50
+                  }},
+
+                  {"stack_panel@ng_module.stackpanel":{
+                    "collection_name": "container_items",
+                    "orientation":"horizontal",
+                    "size":["100% - 2px", "100% - 2px"],
+                    "controls":[
+
+                      {"item_1@compresseur_electrique.custome_slot":{
+                        "$index":"$index_item_left",
+                        "layer":10
+                      }},
+
+                      {"padding@ng_module.panel": {
+                        "size": ["fill", "100%"],
+                        "controls":[
+
+                          {"icon@ng_asset.icon_13":{
+                            "color":[0.200, 0.200, 0.220],
+                            "layer":8,
+                            "size":[15,15]
+                          }}
+
+                        ]}},
+
+                      {"item_2@compresseur_electrique.custome_slot":{
+                        "$index":"$index_item_right",
+                        "layer":10
+                      }}
+                    ]}}
+                ]}}
+
+            ]}}
+        ]}}
+
+    ]},
+
+  // -----------------------------------------------
+  //
+  //                        slot custome
+  //
+  // -----------------------------------------------
+
+  "custome_slot@ng_module.container_item":{
+    "collection_index":"$index",
+    "$font_scale_factor_stack_count_label":0.9,
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[16,16],
+    "$cell_image_size":[16,16],
+    "$slot_size":[18,18],
+    "$mapping_container":"container_mapping_nonclickable",
+    "$item_selected_image":false,
+    "$visible_item_cell_overlay_ref":false,
+    "$container_slot_button_prototype":true,
+    "$background_image_control_name":false
+  },
+
+  "custome_slot_preview@ng_module.container_item":{
+    "collection_index":"$index",
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[16,16],
+    "$cell_image_size":[16,16],
+    "$slot_size":[21,21],
+    "$alpa_testttttt":0.5,
+    "$item_renderer_size": [ 14, 14 ],
+    "$item_selected_image":false,
+    "$visible_stack_count_label":false,
+    "$visible_item_cell_overlay_ref":false,
+    "$container_slot_button_prototype":false,
+    "$background_image_control_name":false
+  },
+
+  "scroll_bar@ng_asset.background_white":{
+    "color":[0.322, 0.322, 0.361]
+  },
+
+  "background_scroll@ng_asset.background_white":{
+    "color":[0.122, 0.122, 0.137]
+  }
+}
+
+
+    

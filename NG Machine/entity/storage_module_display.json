@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:storage_module_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "level_1": "textures/blocks/storage_module_1",
+        "level_2": "textures/blocks/storage_module_2",
+        "level_3": "textures/blocks/storage_module_3",
+        "level_4": "textures/blocks/storage_module_4",
+        "level_5": "textures/blocks/storage_module_5"
+      },
+      "geometry": {
+        "default": "geometry.storage_module"
+      },
+      "render_controllers": [
+        "controller.render.ng_storage_module"
+      ]
+    }
+  }
+}

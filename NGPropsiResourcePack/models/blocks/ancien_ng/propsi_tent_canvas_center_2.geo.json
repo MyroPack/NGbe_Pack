@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.propsi_tent_canvas_center_2",
+				"texture_width": 128,
+				"texture_height": 128
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [0, 22.6, 16],
+							"pivot": [-8, 0, 0],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"east": {
+									"uv": [78.0, 1.0],
+									"uv_size": [16.0, 22.5]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "group2",
+					"pivot": [1.8736, 26.5731, -0.0009]
+				}
+			]
+		}
+	]
+}
