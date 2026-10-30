@@ -33,6 +33,5 @@ Des fichiers Markdown (`.md`) peuvent être ajoutés au dépôt pour documenter 
 - quel fichier correspond à la texture d’un drapeau donné ;
 - où se trouvent les textures, modèles, sons ou fichiers d’interface d’un élément ;
 - à quel pack appartient une ressource ;
-- les conventions de nommage ou les précautions à prendre avant une modification.
 
 Les guides devront citer le chemin du fichier concerné, en partant de la racine du dépôt, afin que l’information soit facile à retrouver.
