@@ -6,13 +6,9 @@
     "$screen_size|default":["100%","100%"],
     "size":"$screen_size",
     "controls":[
- 
-/*       {"small_chest_grid@chest.small_chest_grid":{
-        "grid_dimensions": [ 9, 18 ],
-        "layer":10,
-        "anchor_from":"left_middle",
-        "anchor_to":"left_middle",
-        "size": [ 162, 324 ]
+
+/*       {"hotbar_grid@common.hotbar_grid_template": {
+        "layer":4000000
       }}, */
 
       {"stackpanel@ng_module.stackpanel":{ 
@@ -171,14 +167,7 @@
 
               ]}}
             
-      ]}},
-
-      {"content@ng_module.Toggle": {
-        "size": ["100%", "100%"],
-        "$index_page": 10,
-        "layer": 50,
-        "$page1": "parrot_airline.page_xp"
-      }}
+      ]}}
   ]},
 
   // -----------------------------------------------
@@ -850,15 +839,15 @@
 
     ]}},
 
-      {"homes_warps_overlay@ng_module.Toggle": {
-        "size": ["100%","100%"],
-        "layer": 50,
-        "$index_page": 83,
-        "$page1": "parrot_airline.page_home",
-        "$page2": "parrot_airline.page_warps",
-        "$page3": "parrot_airline.page_home_solid",
-        "$page4": "parrot_airline.page_warps_solid"
-      }}
+    {"homes_warps_overlay@ng_module.Toggle": {
+      "size": ["100%","100%"],
+      "layer": 50,
+      "$index_page": 83,
+      "$page1": "parrot_airline.page_home",
+      "$page2": "parrot_airline.page_warps",
+      "$page3": "parrot_airline.page_home_solid",
+      "$page4": "parrot_airline.page_warps_solid"
+    }}
 
   ]},
 
@@ -1500,6 +1489,7 @@
     "size": [14, 19],
     "layer": 30,
     "controls": [
+
       {"button": {
         "type": "input_panel",
         "collection_index": "$index",
@@ -1508,6 +1498,7 @@
         "focus_identifier": "$index",
         "default_focus_precedence": "$index",
         "controls": [
+
           {"pin_visibility": {
             "type": "panel",
             "size": ["100%", "100%"],
@@ -1524,17 +1515,16 @@
               }
             ],
             "controls": [
+
               {"pin@ng_asset.point_icon": {
                 "type": "image",
                 "size": ["100%", "100%"],
-                "offset": [1, 0]
+                "offset": [0.6, 0]
               }}
-            ]
-          }}
-        ]
-      }}
-    ]
-  },
+
+          ]}}
+      ]}}
+  ]},
 
   // Une rangee des listes Mes Homes et Warps (cases 84 a 94). Pas de bouton pour une case vide : la rangee n'est
   // dessinee que si son texte porte l'etat d'une rangee pleine, §0 ou §1 (NGMod envoie de l'air pour une case vide ;

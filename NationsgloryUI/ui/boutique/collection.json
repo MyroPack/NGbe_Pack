@@ -1,0 +1,2052 @@
+{
+  "namespace": "ng_boutique_collection",
+  "filter_icon_white_0": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/all_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_head_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_2": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_body_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_3": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_suit_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_4": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/cape_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_5": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/kill_animation_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_icon_white_6": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/kill_message_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "player_renderer": {
+    "type": "custom",
+    "renderer": "live_player_renderer",
+    "property_bag": {
+      "#look_at_cursor": false
+    },
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "finisher_skull": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.finisher_icon": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "alpha": 0.25
+        }
+      }
+    ]
+  },
+  "player": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "player@ng_boutique_asset.has_value": {
+          "$index": 83,
+          "$content": "ng_boutique_collection.player_renderer"
+        }
+      }
+    ]
+  },
+  "back_to_skin": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button@ng_boutique_asset.red_button": {
+          "$index": 89
+        }
+      }
+    ]
+  },
+  "turn_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button@ng_boutique_asset.turn_button": {
+          "$index": 81
+        }
+      }
+    ]
+  },
+  "arrow_down": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.dropdown_down": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "arrow_up": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.dropdown_up": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "rarity_options": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "option_0@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 91,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_0": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            0.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 91,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_1@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            10.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 92,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_1": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            10.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 92,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_2@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            20.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 93,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_2": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            20.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 93,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_3@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            30.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 94,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_3": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            30.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 94,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_4@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            40.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 95,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_4": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            40.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 95,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_5@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            50.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 96,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_5": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            50.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 96,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "filter_0@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            27.47
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 22
+        }
+      },
+      {
+        "filter_icon_0": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/all",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            12.3,
+            31.49
+          ],
+          "size": [
+            7.66,
+            7.22
+          ]
+        }
+      },
+      {
+        "filter_selected_0@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            12.3,
+            31.49
+          ],
+          "size": [
+            7.66,
+            7.22
+          ],
+          "$index": 22,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_0",
+          "layer": 21
+        }
+      },
+      {
+        "filter_1@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            47.6
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 23
+        }
+      },
+      {
+        "filter_icon_1": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_head",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.59,
+            50.3
+          ],
+          "size": [
+            9.08,
+            9.84
+          ]
+        }
+      },
+      {
+        "filter_selected_1@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.59,
+            50.3
+          ],
+          "size": [
+            9.08,
+            9.84
+          ],
+          "$index": 23,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_1",
+          "layer": 21
+        }
+      },
+      {
+        "filter_2@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            67.73
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 24
+        }
+      },
+      {
+        "filter_icon_2": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_body",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            70.1
+          ],
+          "size": [
+            10.5,
+            10.5
+          ]
+        }
+      },
+      {
+        "filter_selected_2@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            70.1
+          ],
+          "size": [
+            10.5,
+            10.5
+          ],
+          "$index": 24,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_2",
+          "layer": 21
+        }
+      },
+      {
+        "filter_3@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            87.85
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 25
+        }
+      },
+      {
+        "filter_icon_3": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_suit",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.64,
+            90.22
+          ],
+          "size": [
+            8.99,
+            10.5
+          ]
+        }
+      },
+      {
+        "filter_selected_3@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.64,
+            90.22
+          ],
+          "size": [
+            8.99,
+            10.5
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_3",
+          "layer": 21
+        }
+      },
+      {
+        "filter_4@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            107.98
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 26
+        }
+      },
+      {
+        "filter_icon_4": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/cape",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            110.72
+          ],
+          "size": [
+            10.5,
+            9.76
+          ]
+        }
+      },
+      {
+        "filter_selected_4@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            110.72
+          ],
+          "size": [
+            10.5,
+            9.76
+          ],
+          "$index": 26,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_4",
+          "layer": 21
+        }
+      },
+      {
+        "filter_5@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            128.1
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 27
+        }
+      },
+      {
+        "filter_icon_5": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/kill_animation",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            130.47
+          ],
+          "size": [
+            10.5,
+            10.5
+          ]
+        }
+      },
+      {
+        "filter_selected_5@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            130.47
+          ],
+          "size": [
+            10.5,
+            10.5
+          ],
+          "$index": 27,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_5",
+          "layer": 21
+        }
+      },
+      {
+        "filter_6@ng_boutique_asset.sidebar_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            148.22
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 28
+        }
+      },
+      {
+        "filter_icon_6": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/kill_message",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            151.35
+          ],
+          "size": [
+            10.5,
+            8.99
+          ]
+        }
+      },
+      {
+        "filter_selected_6@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.88,
+            151.35
+          ],
+          "size": [
+            10.5,
+            8.99
+          ],
+          "$index": 28,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_6",
+          "layer": 21
+        }
+      },
+      {
+        "search_background@ng_boutique_asset.input": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.25,
+            29.31
+          ],
+          "size": [
+            95.16,
+            12.91
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "search_text@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            37.19,
+            29.31
+          ],
+          "size": [
+            77.66,
+            12.91
+          ],
+          "$index": 29,
+          "$font_scale": 0.48,
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "left_middle",
+          "layer": 20,
+          "$label_offset": [
+            "0px",
+            "-0.86px"
+          ]
+        }
+      },
+      {
+        "search@ng_boutique_asset.search_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            117.25,
+            30.95
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 29,
+          "layer": 20
+        }
+      },
+      {
+        "rarity_background@ng_boutique_asset.input": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            131.69,
+            29.31
+          ],
+          "size": [
+            54.69,
+            12.91
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "rarity@ng_boutique_asset.toggle_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            131.69,
+            29.31
+          ],
+          "size": [
+            54.69,
+            12.91
+          ],
+          "$index": 90,
+          "layer": 20
+        }
+      },
+      {
+        "rarity_label": {
+          "type": "panel",
+          "size": [
+            37.19,
+            12.91
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            135.62,
+            29.31
+          ],
+          "layer": 21,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  37.19,
+                  12.91
+                ],
+                "$index": 90,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_closed@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            175.22,
+            30.95
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 90,
+          "$flag": "§0",
+          "$content": "ng_boutique_collection.arrow_down",
+          "layer": 21
+        }
+      },
+      {
+        "rarity_open@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            175.22,
+            30.95
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 90,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.arrow_up",
+          "layer": 21
+        }
+      },
+      {
+        "rarity_options@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            131.69,
+            43.0
+          ],
+          "size": [
+            54.69,
+            60.0
+          ],
+          "$index": 90,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.rarity_options",
+          "layer": 100
+        }
+      },
+      {
+        "section_title@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.25,
+            42.66
+          ],
+          "size": [
+            122.5,
+            10.72
+          ],
+          "$index": 30,
+          "$font_scale": 1.12,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "top_left",
+          "layer": 20
+        }
+      },
+      {
+        "pagination": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            159.21,
+            47.03
+          ],
+          "size": [
+            27.39,
+            7.44
+          ],
+          "controls": [
+            {
+              "previous@ng_boutique_asset.outfit_arrow_left_button": {
+                "$index": 67,
+                "size": [
+                  7.44,
+                  "100%"
+                ]
+              }
+            },
+            {
+              "page_panel": {
+                "type": "panel",
+                "size": [
+                  12.51,
+                  7.44
+                ],
+                "controls": [
+                  {
+                    "page@ng_boutique_asset.slot_text": {
+                      "$index": 67,
+                      "$font_scale": 0.5,
+                      "$label_anchor": "center",
+                      "$text_alignment": "center",
+                      "$label_size": [
+                        "default",
+                        "default"
+                      ],
+                      "$label_offset": [
+                        "0px",
+                        "-0.9px"
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "next@ng_boutique_asset.outfit_arrow_right_button": {
+                "$index": 68,
+                "size": [
+                  7.44,
+                  "100%"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "divider_top@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.25,
+            57.53
+          ],
+          "size": [
+            153.12,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "card_0@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.36,
+            64.09
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 31,
+          "$index_info": 32,
+          "$index_button": 33
+        }
+      },
+      {
+        "card_1@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            72.62,
+            64.09
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 34,
+          "$index_info": 35,
+          "$index_button": 36
+        }
+      },
+      {
+        "card_2@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            111.89,
+            64.09
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 37,
+          "$index_info": 38,
+          "$index_button": 39
+        }
+      },
+      {
+        "card_3@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            151.16,
+            64.09
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 40,
+          "$index_info": 41,
+          "$index_button": 42
+        }
+      },
+      {
+        "card_4@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.36,
+            103.25
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 43,
+          "$index_info": 44,
+          "$index_button": 45
+        }
+      },
+      {
+        "card_5@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            72.62,
+            103.25
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 46,
+          "$index_info": 47,
+          "$index_button": 48
+        }
+      },
+      {
+        "card_6@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            111.89,
+            103.25
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 49,
+          "$index_info": 50,
+          "$index_button": 51
+        }
+      },
+      {
+        "card_7@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            151.16,
+            103.25
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 52,
+          "$index_info": 53,
+          "$index_button": 54
+        }
+      },
+      {
+        "card_8@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.36,
+            142.41
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 55,
+          "$index_info": 56,
+          "$index_button": 57
+        }
+      },
+      {
+        "card_9@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            72.62,
+            142.41
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 58,
+          "$index_info": 59,
+          "$index_button": 60
+        }
+      },
+      {
+        "card_10@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            111.89,
+            142.41
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 61,
+          "$index_info": 62,
+          "$index_button": 63
+        }
+      },
+      {
+        "card_11@ng_boutique_asset.collection_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            151.16,
+            142.41
+          ],
+          "size": [
+            35.0,
+            35.0
+          ],
+          "$index_image": 64,
+          "$index_info": 65,
+          "$index_button": 66
+        }
+      },
+      {
+        "divider_bottom@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.25,
+            212.41
+          ],
+          "size": [
+            153.12,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "rarity_gem_common@ng_boutique_asset.gem_common": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            43.96,
+            215.03
+          ],
+          "size": [
+            9.19,
+            12.25
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "rarity_counter_common@ng_boutique_asset.counter": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            43.08,
+            227.94
+          ],
+          "size": [
+            10.94,
+            5.91
+          ],
+          "layer": 20,
+          "controls": [
+            {
+              "count@ng_boutique_asset.slot_text": {
+                "$index": 69,
+                "$font_scale": 0.5,
+                "$label_anchor": "center",
+                "$text_alignment": "center",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-0.9px"
+                ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_gem_rare@ng_boutique_asset.gem_rare": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            74.58,
+            215.03
+          ],
+          "size": [
+            9.19,
+            12.25
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "rarity_counter_rare@ng_boutique_asset.counter": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            73.71,
+            227.94
+          ],
+          "size": [
+            10.94,
+            5.91
+          ],
+          "layer": 20,
+          "controls": [
+            {
+              "count@ng_boutique_asset.slot_text": {
+                "$index": 70,
+                "$font_scale": 0.5,
+                "$label_anchor": "center",
+                "$text_alignment": "center",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-0.9px"
+                ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_gem_epic@ng_boutique_asset.gem_epic": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            105.21,
+            215.03
+          ],
+          "size": [
+            9.19,
+            12.25
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "rarity_counter_epic@ng_boutique_asset.counter": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            104.33,
+            227.94
+          ],
+          "size": [
+            10.94,
+            5.91
+          ],
+          "layer": 20,
+          "controls": [
+            {
+              "count@ng_boutique_asset.slot_text": {
+                "$index": 71,
+                "$font_scale": 0.5,
+                "$label_anchor": "center",
+                "$text_alignment": "center",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-0.9px"
+                ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_gem_legendary@ng_boutique_asset.gem_legendary": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            135.83,
+            215.03
+          ],
+          "size": [
+            9.19,
+            12.25
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "rarity_counter_legendary@ng_boutique_asset.counter": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            134.96,
+            227.94
+          ],
+          "size": [
+            10.94,
+            5.91
+          ],
+          "layer": 20,
+          "controls": [
+            {
+              "count@ng_boutique_asset.slot_text": {
+                "$index": 72,
+                "$font_scale": 0.5,
+                "$label_anchor": "center",
+                "$text_alignment": "center",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-0.9px"
+                ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_gem_limited@ng_boutique_asset.gem_limited": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            166.46,
+            215.03
+          ],
+          "size": [
+            9.19,
+            12.25
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "rarity_counter_limited@ng_boutique_asset.counter": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            165.58,
+            227.94
+          ],
+          "size": [
+            10.94,
+            5.91
+          ],
+          "layer": 20,
+          "controls": [
+            {
+              "count@ng_boutique_asset.slot_text": {
+                "$index": 73,
+                "$font_scale": 0.5,
+                "$label_anchor": "center",
+                "$text_alignment": "center",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-0.9px"
+                ],
+                "layer": 2
+              }
+            }
+          ]
+        }
+      },
+      {
+        "outfit_title@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            216.56,
+            42.66
+          ],
+          "size": [
+            56.88,
+            10.72
+          ],
+          "$index": 85,
+          "$font_scale": 1.12,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "top_left",
+          "layer": 20
+        }
+      },
+      {
+        "save_outfit@ng_boutique_asset.save_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            271.25,
+            45.75
+          ],
+          "size": [
+            9.34,
+            10.0
+          ],
+          "$index": 88
+        }
+      },
+      {
+        "reset_outfit@ng_boutique_asset.reset_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            282.34,
+            45.75
+          ],
+          "size": [
+            9.34,
+            10.0
+          ],
+          "$index": 80
+        }
+      },
+      {
+        "previous_outfit@ng_boutique_asset.outfit_arrow_left_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            378.88,
+            47.03
+          ],
+          "size": [
+            7.44,
+            7.44
+          ],
+          "$index": 86
+        }
+      },
+      {
+        "next_outfit@ng_boutique_asset.outfit_arrow_right_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            388.06,
+            47.03
+          ],
+          "size": [
+            7.44,
+            7.44
+          ],
+          "$index": 87
+        }
+      },
+      {
+        "divider_outfit@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            216.56,
+            57.53
+          ],
+          "size": [
+            178.94,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "player@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            250.91,
+            67.81
+          ],
+          "size": [
+            45.94,
+            76.56
+          ],
+          "$index": 83,
+          "$content": "ng_boutique_collection.player_renderer",
+          "layer": 8
+        }
+      },
+      {
+        "back_to_skin@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            243.25,
+            190.31
+          ],
+          "size": [
+            61.25,
+            14.0
+          ],
+          "$index": 89,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.back_to_skin",
+          "layer": 20
+        }
+      },
+      {
+        "kill_message_preview@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            225.75,
+            72.19
+          ],
+          "size": [
+            96.25,
+            70.0
+          ],
+          "$index": 82,
+          "$text_getter": "get_text_raw",
+          "$font_type": "default",
+          "$font_scale": 0.9,
+          "$label_anchor": "center",
+          "$text_alignment": "center",
+          "$label_size": [
+            "100%",
+            "default"
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "turn@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            304.06,
+            70.0
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 81,
+          "$content": "ng_boutique_collection.turn_content",
+          "layer": 20
+        }
+      },
+      {
+        "finisher_title": {
+          "type": "label",
+          "text": "ngboutique.finishers",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.67,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            339.72,
+            153.12
+          ],
+          "size": [
+            51.19,
+            "default"
+          ],
+          "text_alignment": "center",
+          "localize": true
+        }
+      },
+      {
+        "finisher_box@ng_boutique_asset.finisher_box": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            339.72,
+            162.97
+          ],
+          "size": [
+            51.19,
+            51.19
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "finisher_empty@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            351.75,
+            175.83
+          ],
+          "size": [
+            27.12,
+            27.12
+          ],
+          "$index": 84,
+          "$content": "ng_boutique_collection.finisher_skull",
+          "layer": 3
+        }
+      },
+      {
+        "finisher_thumbnail": {
+          "type": "panel",
+          "size": [
+            51.19,
+            51.19
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            339.72,
+            162.97
+          ],
+          "layer": 4,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": 84
+              }
+            }
+          ]
+        }
+      },
+      {
+        "kill_message@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            332.5,
+            216.56
+          ],
+          "size": [
+            65.62,
+            6.56
+          ],
+          "$index": 79,
+          "$font_scale": 0.42,
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "center",
+          "$text_alignment": "center",
+          "$label_size": [
+            "default",
+            "default"
+          ],
+          "$label_offset": [
+            "0px",
+            "-0.76px"
+          ],
+          "layer": 20
+        }
+      }
+    ]
+  }
+}

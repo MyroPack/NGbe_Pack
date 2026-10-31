@@ -1,0 +1,67 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cosmetic.body.back_blackhole_event": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "cosmetic.body.back_blackhole_event": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "4.0": [
+              -360,
+              360,
+              -360
+            ]
+          }
+        },
+        "cosmetic.body.back_blackhole_event.sphere1": {
+          "rotation": {
+            "0.0": [
+              360,
+              -360,
+              -360
+            ],
+            "4.0": [
+              360,
+              360,
+              360
+            ]
+          }
+        },
+        "cosmetic.body.back_blackhole_event.sphere2": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "4.0": [
+              -360,
+              360,
+              360
+            ]
+          }
+        },
+        "cosmetic.body.back_blackhole_event.sphere3": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "4.0": [
+              360,
+              360,
+              360
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.cosmetic.vanilla_cape": {
+      "loop": true,
+      "bones": {
+        "cape": {
+          "rotation": [ "math.lerp(0.0, -126.0, query.cape_flap_amount) - 6.0", 0.0, 0.0 ]
+        }
+      }
+    }
+  }
+}

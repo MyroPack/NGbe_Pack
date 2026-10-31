@@ -1,4 +1,4 @@
-﻿{
+{
   "format_version": "1.10.0",
   "minecraft:client_entity": {
     "description": {
@@ -10,7 +10,11 @@
         "spectator": "player_spectator",
         "nametag": "nametag",
         "health_bar": "health_bar",
-        "rank_tag": "health_bar"
+        "rank_tag": "health_bar",
+        "animated_texture": "custom_animated",
+        "translucent": "cosmetic_translucent",
+        "cosmetic": "cosmetic",
+        "animated_texture_double": "custom_animated_double"
       },
       "textures": {
         "default": "textures/entity/steve",
@@ -20,7 +24,6 @@
         "legendary_tag": "textures/entity/cosmetic_tag/legend_nametag",
         "premium_tag": "textures/entity/cosmetic_tag/premium_nametag",
         "health_bar": "textures/entity/health_bar",
-
         "dev_rank_tag": "textures/entity/rank_tag/dev_rank_tag",
         "affilate_rank_tag": "textures/entity/rank_tag/affilate_rank_tag",
         "helper_rank_tag": "textures/entity/rank_tag/helper_rank_tag",
@@ -31,7 +34,6 @@
         "player_rank_tag": "textures/entity/rank_tag/player_rank_tag",
         "legendary_rank_tag": "textures/entity/rank_tag/legendary_rank_tag",
         "premium_rank_tag": "textures/entity/rank_tag/premium_rank_tag",
-
         "guide_tag": "textures/entity/cosmetic_tag/guide_nametag",
         "modo_tag": "textures/entity/cosmetic_tag/modo_nametag",
         "premium_plus_tag": "textures/entity/cosmetic_tag/premium_plus_nametag",
@@ -39,7 +41,6 @@
         "recube_tag": "textures/entity/cosmetic_tag/recube_nametag",
         "responsable_tag": "textures/entity/cosmetic_tag/responsable_nametag",
         "super_modo_tag": "textures/entity/cosmetic_tag/super_modo_nametag",
-
         "builder_rank_tag": "textures/entity/rank_tag/builder_rank_tag",
         "designer_rank_tag": "textures/entity/rank_tag/designer_rank_tag",
         "modo_plus_rank_tag": "textures/entity/rank_tag/modo_plus_rank_tag",
@@ -49,7 +50,34 @@
         "recube_rank_tag": "textures/entity/rank_tag/recube_rank_tag",
         "referent_rank_tag": "textures/entity/rank_tag/referent_rank_tag",
         "roleplay_rank_tag": "textures/entity/rank_tag/roleplay_rank_tag",
-        "staff_rank_tag": "textures/entity/rank_tag/staff_rank_tag"
+        "staff_rank_tag": "textures/entity/rank_tag/staff_rank_tag",
+        "cosmetic.head.hat_octopus": "textures/entity/cosmetic/head/hat_octopus",
+        "cosmetic.head.hat_robotic_arm": "textures/entity/cosmetic/head/hat_robotic_arm",
+        "cosmetic.head.hat_bandana_green": "textures/entity/cosmetic/head/hat_bandana_green",
+        "cosmetic.head.hat_frog": "textures/entity/cosmetic/head/hat_frog",
+        "cosmetic.body.back_ancient_bag": "textures/entity/cosmetic/body/back_ancient_bag",
+        "cosmetic.body.back_blackhole_event": "textures/entity/cosmetic/body/back_blackhole_event",
+        "cosmetic.body.back_nimbria_wing": "textures/entity/cosmetic/body/back_nimbria_wing",
+        "cosmetic.body.back_burger": "textures/entity/cosmetic/body/back_burger",
+        "cosmetic.body.back_jetpack": "textures/entity/cosmetic/body/back_jetpack",
+        "cosmetic.body.back_hammer": "textures/entity/cosmetic/body/back_hammer",
+        "cosmetic.body.back_green_shell": "textures/entity/cosmetic/body/back_green_shell",
+        "cosmetic.suit.suit_tree": "textures/entity/cosmetic/suit/suit_tree",
+        "cosmetic.suit.suit_talikus_spider": "textures/entity/cosmetic/suit/suit_talikus_spider",
+        "cosmetic.cape.cape_french": "textures/entity/cosmetic/cape/cape_french",
+        "cosmetic.cape.cape_belgium": "textures/entity/cosmetic/cape/cape_belgium",
+        "cosmetic.cape.cape_canada": "textures/entity/cosmetic/cape/cape_canada",
+        "cosmetic.cape.cape_maroc": "textures/entity/cosmetic/cape/cape_maroc",
+        "cosmetic.kill_animation.kill_animation_sword.vfx": "textures/entity/cosmetic/kill_animation/kill_animation_sword",
+        "cosmetic.kill_animation.kill_animation_firestorm.vfx": "textures/entity/cosmetic/kill_animation/kill_animation_firestorm",
+        "cosmetic.body.back_flying_brooms": "textures/entity/cosmetic/body/back_flying_brooms",
+        "cosmetic.body.back_coffin": "textures/entity/cosmetic/body/back_coffin",
+        "cosmetic.body.back_demon_wings": "textures/entity/cosmetic/body/back_demon_wings",
+        "cosmetic.body.back_unicorn_buoy": "textures/entity/cosmetic/body/back_unicorn_buoy",
+        "cosmetic.head.hat_witch": "textures/entity/cosmetic/head/hat_witch",
+        "cosmetic.head.hat_skull": "textures/entity/cosmetic/head/hat_skull",
+        "cosmetic.suit.supreme_wither_suit": "textures/entity/cosmetic/suit/supreme_wither_suit",
+        "cosmetic.cape.cape_ghost": "textures/entity/cosmetic/cape/cape_ghost"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
@@ -57,7 +85,34 @@
         "nametag": "geometry.nametag",
         "health_bar": "geometry.nametag",
         "rank_tag": "geometry.nametag",
-        "front_nametag": "geometry.front_nametag"
+        "front_nametag": "geometry.front_nametag",
+        "cosmetic.head.hat_octopus": "geometry.cosmetic.head.hat_octopus",
+        "cosmetic.head.hat_robotic_arm": "geometry.cosmetic.head.hat_robotic_arm",
+        "cosmetic.head.hat_bandana_green": "geometry.cosmetic.head.hat_bandana_green",
+        "cosmetic.head.hat_frog": "geometry.cosmetic.head.hat_frog",
+        "cosmetic.body.back_ancient_bag": "geometry.cosmetic.body.back_ancient_bag",
+        "cosmetic.body.back_blackhole_event": "geometry.cosmetic.body.back_blackhole_event",
+        "cosmetic.body.back_nimbria_wing": "geometry.cosmetic.body.back_nimbria_wing",
+        "cosmetic.body.back_burger": "geometry.cosmetic.body.back_burger",
+        "cosmetic.body.back_jetpack": "geometry.cosmetic.body.back_jetpack",
+        "cosmetic.body.back_hammer": "geometry.cosmetic.body.back_hammer",
+        "cosmetic.body.back_green_shell": "geometry.cosmetic.body.back_green_shell",
+        "cosmetic.suit.suit_tree": "geometry.cosmetic.suit.suit_tree",
+        "cosmetic.suit.suit_talikus_spider": "geometry.cosmetic.suit.suit_talikus_spider",
+        "cosmetic.cape": "geometry.cosmetic.cape",
+        "cosmetic.kill_animation.kill_animation_sword.player": "geometry.cosmetic.kill_animation.kill_animation_sword.player",
+        "cosmetic.kill_animation.kill_animation_sword.player.legacy": "geometry.cosmetic.kill_animation.kill_animation_sword.player.legacy",
+        "cosmetic.kill_animation.kill_animation_sword.vfx": "geometry.cosmetic.kill_animation.kill_animation_sword.vfx",
+        "cosmetic.kill_animation.kill_animation_firestorm.player": "geometry.cosmetic.kill_animation.kill_animation_firestorm.player",
+        "cosmetic.kill_animation.kill_animation_firestorm.player.legacy": "geometry.cosmetic.kill_animation.kill_animation_firestorm.player.legacy",
+        "cosmetic.kill_animation.kill_animation_firestorm.vfx": "geometry.cosmetic.kill_animation.kill_animation_firestorm.vfx",
+        "cosmetic.body.back_flying_brooms": "geometry.cosmetic.body.back_flying_brooms",
+        "cosmetic.body.back_coffin": "geometry.cosmetic.body.back_coffin",
+        "cosmetic.body.back_demon_wings": "geometry.cosmetic.body.back_demon_wings",
+        "cosmetic.body.back_unicorn_buoy": "geometry.cosmetic.body.back_unicorn_buoy",
+        "cosmetic.head.hat_witch": "geometry.cosmetic.head.hat_witch",
+        "cosmetic.head.hat_skull": "geometry.cosmetic.head.hat_skull",
+        "cosmetic.suit.supreme_wither_suit": "geometry.cosmetic.suit.supreme_wither_suit"
       },
       "scripts": {
         "scale": "0.9375",
@@ -74,29 +129,27 @@
           "v.is_blinking = 0.0;",
           "v.last_blink_time = 0.0;",
           "v.hand_bob = 0.0;",
-          "v.melee_spear_java_to_bedrock_scale = 40.0;"
+          "v.melee_spear_java_to_bedrock_scale = 40.0;",
+          "v.cosmetic_preview = 0.0;",
+          "v.cosmetic_kill_animation = 0.0;",
+          "v.cosmetic_skin_legacy = 0.0;",
+          "v.cosmetic_kill_preview = 0.0;"
         ],
         "pre_animation": [
-          // Layers
           "v.helmet_layer_visible = !query.has_head_gear;",
           "v.leg_layer_visible = 1.0;",
           "v.boot_layer_visible = 1.0;",
           "v.chest_layer_visible = 1.0;",
-          // Body
           "v.attack_body_rot_y = Math.sin(360 * Math.sqrt(v.attack_time)) * 10.0;",
           "v.tcos0 = math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / v.gliding_speed_value * 57.3;",
           "v.first_person_item_rotation_factor = math.sin((1 - v.attack_time) * 180.0);",
           "v.hand_bob = query.life_time < 0.01 ? 0.0 : v.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - v.hand_bob) * 0.02;",
-          // Items
           "v.map_angle = math.clamp(1 - v.player_x_rotation / 45.1, 0.0, 1.0);",
           "v.item_use_duration = query.main_hand_item_use_duration > 0.0 ? (query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) : 0.0;",
           "v.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
-          // Riding
           "v.riding_y_offset = query.is_riding_any_entity_of_type('minecraft:minecart', 'minecraft:boat', 'minecraft:chest_boat', 'minecraft:strider') ? -3.0 : 0.0;",
-          // Melee spear
           "v.melee_spear_equipped = query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_spear');",
           "v.tp_melee_spear_base_arm_rotation_x = (query.is_swimming || query.is_gliding) ? (-115.0 - query.target_x_rotation) : (query.is_crawling ? -115.0 : -30.0);",
-          // Melee spear use
           "t.melee_spear_use_finish_raise_tick = v.melee_spear_equipped ? query.kinetic_weapon_delay : 0.0;",
           "t.melee_spear_use_start_sway_tick = v.melee_spear_equipped ? t.melee_spear_use_finish_raise_tick + query.kinetic_weapon_dismount_duration : 0.0;",
           "t.melee_spear_use_start_lower_tick = v.melee_spear_equipped ? t.melee_spear_use_finish_raise_tick + query.kinetic_weapon_knockback_duration : 0.0;",
@@ -111,21 +164,18 @@
           "t.melee_spear_use_sway_intensity = math.ease_out_circ(0.0, 2.0, t.melee_spear_use_sway_progress) + math.ease_in_circ(0.0, -2.0, t.melee_spear_use_raise_back_progress);",
           "t.melee_spear_use_sway_scale_slow = math.sin(v.item_use_duration * 19.0) * t.melee_spear_use_sway_intensity;",
           "t.melee_spear_use_sway_scale_fast = math.sin(v.item_use_duration * 30.0) * t.melee_spear_use_sway_intensity;",
-          // First person
           "v.fp_melee_spear_use_item_position_x = (t.melee_spear_use_raise_progress_start * 0.05 + t.melee_spear_use_raise_progress_end * -0.05 + t.melee_spear_use_sway_scale_slow * 0.005) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_use_item_position_y = (t.melee_spear_use_raise_progress_start * -0.075 + t.melee_spear_use_raise_progress_middle * 0.075 + t.melee_spear_use_sway_scale_fast * 0.01) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_use_item_position_z = (t.melee_spear_use_raise_progress_start * 0.05 + t.melee_spear_use_raise_progress_end * -0.05 + t.melee_spear_use_sway_scale_slow * 0.005) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_use_item_rotation_y = t.melee_spear_use_raise_progress * 20.0 + t.melee_spear_use_lower_progress * 20.0 + t.melee_spear_use_sway_scale_slow * 0.5 + t.melee_spear_use_raise_back_progress * -40.0;",
           "v.fp_melee_spear_use_item_rotation_z = math.ease_in_out_back(0.0, -60.0, t.melee_spear_use_raise_progress) + t.melee_spear_use_lower_progress * -25.0 + t.melee_spear_use_raise_back_progress * 85.0 + t.melee_spear_use_sway_scale_fast * 0.5;",
           "v.fp_melee_spear_use_attachable_rotation_z = math.clamp(math.inverse_lerp(0.5, 0.55, t.melee_spear_use_raise_progress), 0.0, 1.0) * -50.0 + t.melee_spear_use_sway_progress * 90.0 + t.melee_spear_use_raise_back_progress * -40.0;",
-          // Third person
           "v.tp_melee_spear_use_arm_rotation_x = t.melee_spear_use_raise_progress_start * -40.0 + t.melee_spear_use_raise_progress_middle * 30.0 + t.melee_spear_use_raise_progress_end * -20.0 + t.melee_spear_use_lower_progress * 20.0 + t.melee_spear_use_raise_back_progress * 10.0;",
           "v.tp_melee_spear_use_arm_rotation_x = v.tp_melee_spear_use_arm_rotation_x + t.melee_spear_use_sway_scale_slow * 0.6;",
           "v.tp_melee_spear_use_arm_rotation_y = t.melee_spear_use_sway_scale_fast * 1.0;",
           "v.tp_melee_spear_use_arm_rotation_z = t.melee_spear_use_sway_scale_slow * 0.5;",
           "v.tp_melee_spear_use_item_rotation_x = t.melee_spear_use_raise_progress * 60.0 + t.melee_spear_use_raise_back_progress * -60.0;",
           "v.tp_melee_spear_use_attachable_rotation_z = t.melee_spear_use_raise_progress * 90.0 + t.melee_spear_use_sway_progress * -90.0;",
-          // Melee spear attack
           "t.melee_spear_attack_duration_ratio = 1.0 / query.base_swing_duration;",
           "t.melee_spear_attack_raise_end = 0.05 * t.melee_spear_attack_duration_ratio;",
           "t.melee_spear_attack_thrust_end = 0.2 * t.melee_spear_attack_duration_ratio;",
@@ -136,26 +186,72 @@
           "t.melee_spear_attack_raise_scale = math.ease_in_out_sine(0.0, 1.0, t.melee_spear_attack_raise_progress);",
           "t.melee_spear_attack_thrust_scale = math.ease_in_quad(0.0, 1.0, t.melee_spear_attack_thrust_progress);",
           "t.melee_spear_attack_recover_scale = math.ease_in_out_expo(0.0, 1.0, t.melee_spear_attack_recover_progress);",
-          // First person
           "v.fp_melee_spear_attack_item_position_x = (t.melee_spear_attack_raise_scale * 0.1 + t.melee_spear_attack_thrust_scale * -0.1) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_attack_item_position_y = (t.melee_spear_attack_raise_scale * -0.075 + t.melee_spear_attack_recover_scale * 0.075) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_attack_item_position_z = (t.melee_spear_attack_raise_scale * 0.65 + t.melee_spear_attack_thrust_scale * -0.65) * v.melee_spear_java_to_bedrock_scale;",
           "v.fp_melee_spear_attack_item_rotation_y = t.melee_spear_attack_raise_scale * 20.0 + t.melee_spear_attack_recover_scale * -20.0;",
           "v.fp_melee_spear_attack_item_rotation_z = t.melee_spear_attack_raise_scale * -60.0 + t.melee_spear_attack_recover_scale * 60.0;",
           "v.fp_melee_spear_attack_attachable_rotation_z = t.melee_spear_attack_raise_scale * 40.0 + t.melee_spear_attack_recover_scale * -40.0;",
-          // Third person
           "v.tp_melee_spear_attack_arm_rotation_x = t.melee_spear_attack_raise_scale * 90.0 + t.melee_spear_attack_thrust_scale * -120.0 + t.melee_spear_attack_recover_scale * 30.0;",
           "v.tp_melee_spear_attack_item_rotation_x = t.melee_spear_attack_thrust_scale * 60.0 + t.melee_spear_attack_recover_scale * -60.0;",
-          "v.tp_melee_spear_attack_attachable_position_z = (t.melee_spear_attack_thrust_scale * -0.15 + t.melee_spear_attack_recover_scale * 0.15) * v.melee_spear_java_to_bedrock_scale;"
+          "v.tp_melee_spear_attack_attachable_position_z = (t.melee_spear_attack_thrust_scale * -0.15 + t.melee_spear_attack_recover_scale * 0.15) * v.melee_spear_java_to_bedrock_scale;",
+          "v.cosmetic_preview = q.has_property('cosmetic:preview') ? q.property('cosmetic:preview') : 0;",
+          "v.cosmetic_preview_type = math.mod(math.floor(math.floor(v.cosmetic_preview / 1000) / 64), 8);",
+          "v.cosmetic_preview_turned = math.floor(math.floor(math.floor(v.cosmetic_preview / 1000) / 64) / 8);",
+          "v.cosmetic_preview_mask = math.mod(math.floor(v.cosmetic_preview / 1000), 64);",
+          "v.cosmetic_preview_value = math.mod(v.cosmetic_preview, 1000);",
+          "v.cosmetic_cape = v.cosmetic_preview_type == 1 ? v.cosmetic_preview_value : (q.has_property('cosmetic:cape') ? q.property('cosmetic:cape') : 0);",
+          "v.cosmetic_head = v.cosmetic_preview_type == 2 ? v.cosmetic_preview_value : (q.has_property('cosmetic:head') ? q.property('cosmetic:head') : 0);",
+          "v.cosmetic_body = v.cosmetic_preview_type == 3 ? v.cosmetic_preview_value : (q.has_property('cosmetic:body') ? q.property('cosmetic:body') : 0);",
+          "v.cosmetic_suit = v.cosmetic_preview_type == 4 ? v.cosmetic_preview_value : (q.has_property('cosmetic:suit') ? q.property('cosmetic:suit') : 0);",
+          "v.cosmetic_hide_bones_mask = v.cosmetic_preview_type > 0 ? v.cosmetic_preview_mask : (q.has_property('cosmetic:hide_bones_mask') ? q.property('cosmetic:hide_bones_mask') : 0);",
+          "v.cosmetic_kill_animation = q.has_property('cosmetic:kill_animation') ? q.property('cosmetic:kill_animation') : 0;",
+          "v.cosmetic_kill_preview = v.cosmetic_preview_type == 5 ? v.cosmetic_preview_value : 0;",
+          "v.cosmetic_skin_legacy = q.has_property('cosmetic:skin_legacy') ? q.property('cosmetic:skin_legacy') : 0;"
         ],
         "animate": [
           "root",
           "target",
-          { "ngpropsi_flag_pose": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'propsi:wall_flag', 'propsi:wall_flag_nova', 'propsi:wall_flag_iris')" },
-          { "recubeicbm_armsup": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:anti_matter', 'ng:red_matter', 'ng:rocket')" },
-          { "recubeicbm_heavy": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:rpg', 'ng:rocket_launcher')" },
-          { "recubeicbm_aim_rifle": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:ak47', 'ng:m249', 'ng:ks23', 'ng:mossberg')" },
-          { "recubeicbm_aim_pistol": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:usp45', 'ng:desert_eagle')" }
+          {
+            "ngpropsi_flag_pose": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'propsi:wall_flag', 'propsi:wall_flag_nova', 'propsi:wall_flag_iris')"
+          },
+          {
+            "recubeicbm_armsup": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:anti_matter', 'ng:red_matter', 'ng:rocket')"
+          },
+          {
+            "recubeicbm_heavy": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:rpg', 'ng:rocket_launcher')"
+          },
+          {
+            "recubeicbm_aim_rifle": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:ak47', 'ng:m249', 'ng:ks23', 'ng:mossberg')"
+          },
+          {
+            "recubeicbm_aim_pistol": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:usp45', 'ng:desert_eagle')"
+          },
+          {
+            "ngvehicle_winch_hanging": "!variable.is_first_person && !variable.is_paperdoll && query.is_riding_any_entity_of_type('nationsglory:winch_hook')"
+          },
+          "cosmetic.head.hat_octopus",
+          "cosmetic.head.hat_robotic_arm",
+          "cosmetic.body.back_blackhole_event",
+          "cosmetic.body.back_nimbria_wing",
+          "cosmetic.body.back_coffin",
+          "cosmetic.body.back_demon_wings",
+          "cosmetic.suit.supreme_wither_suit",
+          {
+            "cosmetic.hide_bones_mask": "v.cosmetic_hide_bones_mask == 63"
+          },
+          "cosmetic.suit.suit_talikus_spider",
+          "cosmetic.cape",
+          {
+            "cosmetic.kill_animation.kill_animation_sword": "v.cosmetic_kill_animation == 1 || v.cosmetic_kill_preview == 1"
+          },
+          {
+            "cosmetic.kill_animation.kill_animation_firestorm": "v.cosmetic_kill_animation == 2 || v.cosmetic_kill_preview == 2"
+          },
+          {
+            "cosmetic.hide_held_items": "v.cosmetic_preview > 0"
+          },
+          "cosmetic.preview_turn"
         ],
         "should_update_effects_offscreen": "1.0"
       },
@@ -166,6 +262,7 @@
         "recubeicbm_heavy": "animation.recubeicbm.player.heavy",
         "recubeicbm_aim_rifle": "animation.recubeicbm.player.aim_rifle",
         "recubeicbm_aim_pistol": "animation.recubeicbm.player.aim_pistol",
+        "ngvehicle_winch_hanging": "animation.ngvehicle.player.winch_hanging",
         "base_controller": "controller.animation.player.base",
         "hudplayer": "controller.animation.player.hudplayer",
         "humanoid_base_pose": "animation.humanoid.base_pose",
@@ -175,7 +272,7 @@
         "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
         "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
         "look_at_target_inverted": "animation.player.look_at_target.inverted",
-        "cape": "animation.player.cape",
+        "cape": "animation.cosmetic.vanilla_cape",
         "move.arms": "animation.player.move.arms",
         "move.legs": "animation.player.move.legs",
         "swimming": "animation.player.swim",
@@ -233,19 +330,130 @@
         "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
         "holding_brush": "animation.humanoid.holding_brush",
         "brushing": "animation.humanoid.brushing",
-        "target": "animation.nametag.target_rotation"
+        "target": "animation.nametag.target_rotation",
+        "cosmetic.head.hat_octopus": "animation.cosmetic.head.hat_octopus",
+        "cosmetic.head.hat_robotic_arm": "animation.cosmetic.head.hat_robotic_arm_v2",
+        "cosmetic.body.back_blackhole_event": "animation.cosmetic.body.back_blackhole_event",
+        "cosmetic.body.back_nimbria_wing": "animation.cosmetic.body.back_nimbria_wing",
+        "cosmetic.hide_bones_mask": "animation.cosmetic.hide_bones_mask",
+        "cosmetic.suit.suit_talikus_spider": "animation.cosmetic.suit.suit_talikus_spider.idle",
+        "cosmetic.cape": "animation.cosmetic.cape",
+        "cosmetic.kill_animation.kill_animation_sword": "animation.cosmetic.kill_animation.kill_animation_sword",
+        "cosmetic.kill_animation.kill_animation_firestorm": "animation.cosmetic.kill_animation.kill_animation_firestorm",
+        "cosmetic.preview_turn": "animation.cosmetic.preview_turn",
+        "cosmetic.body.back_coffin": "animation.cosmetic.body.back_coffin",
+        "cosmetic.body.back_demon_wings": "animation.cosmetic.body.back_demon_wings",
+        "cosmetic.suit.supreme_wither_suit": "animation.cosmetic.suit.supreme_wither_suit",
+        "cosmetic.hide_held_items": "animation.cosmetic.hide_held_items"
       },
       "render_controllers": [
-        { "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator" },
-        { "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator" },
-        { "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator" },
-        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator" },
-        { "controller.render.player.map": "variable.map_face_icon" },
         {
-          "controller.render.rank_tag": "query.show_bottom && !query.is_sneaking && !q.is_in_ui && !q.is_invisible && q.is_alive"
+          "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator"
         },
         {
-          "controller.render.cosmetic_tag": "query.show_bottom && !query.is_sneaking && !q.is_in_ui && !q.is_invisible && q.is_alive"
+          "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator"
+        },
+        {
+          "controller.render.player.first_person": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && variable.is_first_person && !query.is_spectator"
+        },
+        {
+          "controller.render.player.third_person": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !variable.map_face_icon && !query.is_spectator"
+        },
+        {
+          "controller.render.player.map": "variable.map_face_icon"
+        },
+        {
+          "controller.render.rank_tag": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && query.show_bottom && !query.is_sneaking && !q.is_in_ui && !q.is_invisible && q.is_alive"
+        },
+        {
+          "controller.render.cosmetic_tag": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && query.show_bottom && !query.is_sneaking && !q.is_in_ui && !q.is_invisible && q.is_alive"
+        },
+        {
+          "controller.render.cosmetic.cape.cape_french": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_cape == 1"
+        },
+        {
+          "controller.render.cosmetic.cape.cape_belgium": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_cape == 2"
+        },
+        {
+          "controller.render.cosmetic.cape.cape_canada": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_cape == 3"
+        },
+        {
+          "controller.render.cosmetic.cape.cape_maroc": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_cape == 4"
+        },
+        {
+          "controller.render.cosmetic.cape.cape_ghost": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_cape == 5"
+        },
+        {
+          "controller.render.cosmetic.head.hat_octopus": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 1"
+        },
+        {
+          "controller.render.cosmetic.head.hat_robotic_arm": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 2"
+        },
+        {
+          "controller.render.cosmetic.head.hat_bandana_green": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 3"
+        },
+        {
+          "controller.render.cosmetic.head.hat_frog": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 4"
+        },
+        {
+          "controller.render.cosmetic.head.hat_witch": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 5"
+        },
+        {
+          "controller.render.cosmetic.head.hat_skull": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 6"
+        },
+        {
+          "controller.render.cosmetic.body.back_ancient_bag": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 1"
+        },
+        {
+          "controller.render.cosmetic.body.back_blackhole_event_v3": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 2"
+        },
+        {
+          "controller.render.cosmetic.body.back_nimbria_wing": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 3"
+        },
+        {
+          "controller.render.cosmetic.body.back_burger": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 4"
+        },
+        {
+          "controller.render.cosmetic.body.back_jetpack": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 5"
+        },
+        {
+          "controller.render.cosmetic.body.back_hammer": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 6"
+        },
+        {
+          "controller.render.cosmetic.body.back_green_shell": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 7"
+        },
+        {
+          "controller.render.cosmetic.body.back_flying_brooms": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 8"
+        },
+        {
+          "controller.render.cosmetic.body.back_coffin": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 9"
+        },
+        {
+          "controller.render.cosmetic.body.back_demon_wings": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 10"
+        },
+        {
+          "controller.render.cosmetic.body.back_unicorn_buoy": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 11"
+        },
+        {
+          "controller.render.cosmetic.suit.suit_tree": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_suit == 1"
+        },
+        {
+          "controller.render.cosmetic.suit.suit_talikus_spider": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_suit == 2"
+        },
+        {
+          "controller.render.cosmetic.suit.supreme_wither_suit": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_suit == 3"
+        },
+        {
+          "controller.render.cosmetic.kill_animation.kill_animation_sword.player": "!variable.is_first_person && !q.is_spectator && ((v.cosmetic_kill_animation == 1 && q.life_time < 5.5) || (q.is_in_ui && v.cosmetic_kill_preview == 1))"
+        },
+        {
+          "controller.render.cosmetic.kill_animation.kill_animation_sword.vfx": "!variable.is_first_person && !q.is_spectator && ((v.cosmetic_kill_animation == 1 && q.life_time < 5.5) || (q.is_in_ui && v.cosmetic_kill_preview == 1))"
+        },
+        {
+          "controller.render.cosmetic.kill_animation.kill_animation_firestorm.player": "!variable.is_first_person && !q.is_spectator && ((v.cosmetic_kill_animation == 2 && q.life_time < 4.5) || (q.is_in_ui && v.cosmetic_kill_preview == 2))"
+        },
+        {
+          "controller.render.cosmetic.kill_animation.kill_animation_firestorm.vfx": "!variable.is_first_person && !q.is_spectator && ((v.cosmetic_kill_animation == 2 && q.life_time < 4.5) || (q.is_in_ui && v.cosmetic_kill_preview == 2))"
         }
       ],
       "enable_attachables": true

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.cape.cape_maroc": {
+      "geometry": "Geometry.cosmetic.cape",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.cape.cape_maroc"
+      ]
+    }
+  }
+}

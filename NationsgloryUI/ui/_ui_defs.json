@@ -1,5 +1,16 @@
 {
   "ui_defs": [
+      "ui/boutique/boutique.json",
+      "ui/boutique/boutique_asset.json",
+      "ui/boutique/collection.json",
+      "ui/boutique/home.json",
+      "ui/boutique/inventory.json",
+      "ui/boutique/ng_pala_gui.json",
+      "ui/boutique/pack.json",
+      "ui/boutique/product.json",
+      "ui/boutique/store.json",
+      "ui/gamepass/gamepass.json",
+
       "ui/Nationsglory/NG_asset.json",
       "ui/Nationsglory/NG_module.json",
       "ui/Nationsglory/focus_leurre.json",
@@ -12,7 +23,11 @@
       "ui/Interface/annuaire_lobby.json",
       "ui/Interface/ngphone.json",
       "ui/Interface/recube_qr.json",
+      "ui/Interface/gamepass.json",
       "ui/Interface/carte.json",
+      "ui/Interface/backpack.json",
+      "ui/Interface/punisher.json",
+      "ui/Interface/punisher_ng.json",
 
       "ui/Interface/pays/pays_main.json",
       "ui/Interface/pays/pays_statistique.json",

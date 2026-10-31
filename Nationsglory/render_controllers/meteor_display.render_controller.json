@@ -7,7 +7,9 @@
           "array.type": [
             "Texture.terrestre",
             "Texture.volcan",
-            "Texture.lune"
+            "Texture.lune",
+            "Texture.mars",
+            "Texture.edora"
           ]
         }
       },

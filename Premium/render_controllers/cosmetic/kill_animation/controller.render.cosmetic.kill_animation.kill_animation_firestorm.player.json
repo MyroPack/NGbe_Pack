@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.kill_animation.kill_animation_firestorm.player": {
+      "arrays": {
+        "geometries": {
+          "Array.geometries": [
+            "Geometry.cosmetic.kill_animation.kill_animation_firestorm.player",
+            "Geometry.cosmetic.kill_animation.kill_animation_firestorm.player.legacy"
+          ]
+        }
+      },
+      "geometry": "Array.geometries[v.cosmetic_skin_legacy]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    }
+  }
+}

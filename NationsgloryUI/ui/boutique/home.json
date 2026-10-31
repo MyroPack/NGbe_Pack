@@ -1,0 +1,2955 @@
+{
+  "namespace": "ng_boutique_home",
+  "offer_price_22": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "price@ng_boutique_asset.price_offer": {
+          "$index": 25
+        }
+      }
+    ]
+  },
+  "offer_price_27": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "price@ng_boutique_asset.price_offer": {
+          "$index": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_0": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            55.78,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            42.66,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            42.66,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            51.17,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            51.41,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            63.66,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            50.53,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            50.53,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            59.04,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            59.28,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_2": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            71.53,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            58.41,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            58.41,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            66.92,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            67.16,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_3": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            79.41,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            66.28,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            66.28,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            74.79,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            75.03,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_4": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            87.28,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            74.16,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            74.16,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            82.67,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            82.91,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_5": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            95.16,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            82.03,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            82.03,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            90.54,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            90.78,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_6": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            103.03,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            89.91,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            89.91,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            98.42,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            98.66,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer_info_7": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            110.91,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 24,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            97.78,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_22",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            97.78,
+            9.84
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            106.29,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            106.53,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 25,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 26,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "monthly_offer": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "picture_22": {
+          "type": "panel",
+          "size": [
+            248.5,
+            94.28
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image_fill": {
+                "$index": 22
+              }
+            }
+          ]
+        }
+      },
+      {
+        "corners_22@ng_boutique_asset.corner_mask": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            248.5,
+            94.28
+          ],
+          "layer": 14
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            219.84,
+            5.73
+          ],
+          "size": [
+            18.46,
+            24.7
+          ],
+          "$index": 23,
+          "layer": 20
+        }
+      },
+      {
+        "info_0@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            173.25,
+            56.88
+          ],
+          "size": [
+            64.53,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 0,
+          "$content": "ng_boutique_home.monthly_offer_info_0",
+          "layer": 20
+        }
+      },
+      {
+        "info_1@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            165.38,
+            56.88
+          ],
+          "size": [
+            72.41,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 1,
+          "$content": "ng_boutique_home.monthly_offer_info_1",
+          "layer": 20
+        }
+      },
+      {
+        "info_2@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            157.5,
+            56.88
+          ],
+          "size": [
+            80.28,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 2,
+          "$content": "ng_boutique_home.monthly_offer_info_2",
+          "layer": 20
+        }
+      },
+      {
+        "info_3@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            149.62,
+            56.88
+          ],
+          "size": [
+            88.16,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 3,
+          "$content": "ng_boutique_home.monthly_offer_info_3",
+          "layer": 20
+        }
+      },
+      {
+        "info_4@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            141.75,
+            56.88
+          ],
+          "size": [
+            96.03,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 4,
+          "$content": "ng_boutique_home.monthly_offer_info_4",
+          "layer": 20
+        }
+      },
+      {
+        "info_5@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            133.88,
+            56.88
+          ],
+          "size": [
+            103.91,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 5,
+          "$content": "ng_boutique_home.monthly_offer_info_5",
+          "layer": 20
+        }
+      },
+      {
+        "info_6@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            126.0,
+            56.88
+          ],
+          "size": [
+            111.78,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 6,
+          "$content": "ng_boutique_home.monthly_offer_info_6",
+          "layer": 20
+        }
+      },
+      {
+        "info_7@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            118.12,
+            56.88
+          ],
+          "size": [
+            119.66,
+            26.69
+          ],
+          "$index": 26,
+          "$score": 7,
+          "$content": "ng_boutique_home.monthly_offer_info_7",
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "featured_pack_info_0": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            55.78,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            42.66,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            42.66,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            51.17,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            51.41,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            63.66,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            50.53,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            50.53,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            59.04,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            59.28,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_2": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            71.53,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            58.41,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            58.41,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            66.92,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            67.16,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_3": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            79.41,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            66.28,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            66.28,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            74.79,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            75.03,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_4": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            87.28,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            74.16,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            74.16,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            82.67,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            82.91,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_5": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            95.16,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            82.03,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            82.03,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            90.54,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            90.78,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_6": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            103.03,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            89.91,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            89.91,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            98.42,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            98.66,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack_info_7": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "name": {
+          "type": "panel",
+          "size": [
+            110.91,
+            6.12
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            3.5
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "text@ng_boutique_asset.slot_text": {
+                "$index": 29,
+                "$font_scale": 0.56,
+                "$text_color": [
+                  0.694,
+                  0.71,
+                  0.737
+                ],
+                "$text_getter": "get_text_colored",
+                "$label_size": [
+                  "default",
+                  "default"
+                ],
+                "$label_offset": [
+                  "0px",
+                  "-1.01px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            97.78,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_home.offer_price_27",
+          "layer": 2
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            4.38,
+            13.78
+          ],
+          "size": [
+            97.78,
+            9.84
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.offer_bought",
+          "layer": 2
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            106.29,
+            16.03
+          ],
+          "size": [
+            5.69,
+            5.1
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 2
+        }
+      },
+      {
+        "cart_owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            106.53,
+            14.22
+          ],
+          "size": [
+            5.25,
+            7.07
+          ],
+          "$index": 30,
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 2
+        }
+      },
+      {
+        "open@ng_boutique_asset.offer_button": {
+          "$index": 31,
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "featured_pack": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "picture_27": {
+          "type": "panel",
+          "size": [
+            140.44,
+            177.19
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "layer": 2,
+          "clips_children": true,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image_fill": {
+                "$index": 27
+              }
+            }
+          ]
+        }
+      },
+      {
+        "corners_27@ng_boutique_asset.corner_mask": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            140.44,
+            177.19
+          ],
+          "layer": 14
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            111.34,
+            5.73
+          ],
+          "size": [
+            18.46,
+            24.7
+          ],
+          "$index": 28,
+          "layer": 20
+        }
+      },
+      {
+        "info_0@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            65.19,
+            139.78
+          ],
+          "size": [
+            64.53,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 0,
+          "$content": "ng_boutique_home.featured_pack_info_0",
+          "layer": 20
+        }
+      },
+      {
+        "info_1@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            57.31,
+            139.78
+          ],
+          "size": [
+            72.41,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 1,
+          "$content": "ng_boutique_home.featured_pack_info_1",
+          "layer": 20
+        }
+      },
+      {
+        "info_2@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            49.44,
+            139.78
+          ],
+          "size": [
+            80.28,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 2,
+          "$content": "ng_boutique_home.featured_pack_info_2",
+          "layer": 20
+        }
+      },
+      {
+        "info_3@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            41.56,
+            139.78
+          ],
+          "size": [
+            88.16,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 3,
+          "$content": "ng_boutique_home.featured_pack_info_3",
+          "layer": 20
+        }
+      },
+      {
+        "info_4@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.69,
+            139.78
+          ],
+          "size": [
+            96.03,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 4,
+          "$content": "ng_boutique_home.featured_pack_info_4",
+          "layer": 20
+        }
+      },
+      {
+        "info_5@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            25.81,
+            139.78
+          ],
+          "size": [
+            103.91,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 5,
+          "$content": "ng_boutique_home.featured_pack_info_5",
+          "layer": 20
+        }
+      },
+      {
+        "info_6@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            17.94,
+            139.78
+          ],
+          "size": [
+            111.78,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 6,
+          "$content": "ng_boutique_home.featured_pack_info_6",
+          "layer": 20
+        }
+      },
+      {
+        "info_7@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10.06,
+            139.78
+          ],
+          "size": [
+            119.66,
+            26.69
+          ],
+          "$index": 31,
+          "$score": 7,
+          "$content": "ng_boutique_home.featured_pack_info_7",
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "breadcrumb": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            29.75
+          ],
+          "size": [
+            65.62,
+            3.94
+          ],
+          "controls": [
+            {
+              "home": {
+                "type": "label",
+                "text": "ngboutique.accueil",
+                "font_type": "MinecraftTen",
+                "font_scale_factor": 0.42,
+                "color": [
+                  0.612,
+                  0.612,
+                  0.612
+                ],
+                "shadow": false,
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "localize": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "offer_title": {
+          "type": "label",
+          "text": "ngboutique.offre_mois",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.12,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            33.25
+          ],
+          "size": [
+            153.12,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "offer_line@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.41,
+            48.12
+          ],
+          "size": [
+            245.77,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "monthly_offer": {
+          "type": "panel",
+          "size": [
+            248.5,
+            94.28
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.19,
+            52.06
+          ],
+          "controls": [
+            {
+              "content@ng_boutique_asset.has_value": {
+                "$index": 24,
+                "$content": "ng_boutique_home.monthly_offer"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "featured_title": {
+          "type": "label",
+          "text": "ngboutique.offre_moment",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.12,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            268.95,
+            33.25
+          ],
+          "size": [
+            140.0,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "featured_line@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            268.41,
+            48.12
+          ],
+          "size": [
+            140.33,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "featured_pack": {
+          "type": "panel",
+          "size": [
+            140.44,
+            177.19
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            268.41,
+            52.06
+          ],
+          "controls": [
+            {
+              "content@ng_boutique_asset.has_value": {
+                "$index": 29,
+                "$content": "ng_boutique_home.featured_pack"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "daily_title": {
+          "type": "label",
+          "text": "ngboutique.selection_jour",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.12,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            151.81
+          ],
+          "size": [
+            153.12,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "daily_timer@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            192.06,
+            156.62
+          ],
+          "size": [
+            65.62,
+            5.91
+          ],
+          "$index": 32,
+          "$font_scale": 0.62,
+          "$text_color": [
+            0.435,
+            0.467,
+            0.937
+          ],
+          "$text_alignment": "right",
+          "$label_anchor": "right_middle",
+          "$label_offset": [
+            "0px",
+            "-1.12px"
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "daily_line@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.62,
+            166.69
+          ],
+          "size": [
+            248.06,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "card_0@ng_boutique_asset.shop_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.19,
+            172.38
+          ],
+          "size": [
+            45.5,
+            56.88
+          ],
+          "$index_image": 33,
+          "$index_info": 34,
+          "$index_buy": 35
+        }
+      },
+      {
+        "card_1@ng_boutique_asset.shop_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            59.94,
+            172.38
+          ],
+          "size": [
+            45.5,
+            56.88
+          ],
+          "$index_image": 36,
+          "$index_info": 37,
+          "$index_buy": 38
+        }
+      },
+      {
+        "card_2@ng_boutique_asset.shop_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            110.69,
+            172.38
+          ],
+          "size": [
+            45.5,
+            56.88
+          ],
+          "$index_image": 39,
+          "$index_info": 40,
+          "$index_buy": 41
+        }
+      },
+      {
+        "card_3@ng_boutique_asset.shop_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            161.44,
+            172.38
+          ],
+          "size": [
+            45.5,
+            56.88
+          ],
+          "$index_image": 42,
+          "$index_info": 43,
+          "$index_buy": 44
+        }
+      },
+      {
+        "card_4@ng_boutique_asset.shop_card": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            212.19,
+            172.38
+          ],
+          "size": [
+            45.5,
+            56.88
+          ],
+          "$index_image": 45,
+          "$index_info": 46,
+          "$index_buy": 47
+        }
+      }
+    ]
+  }
+}

@@ -1777,6 +1777,32 @@
           "load_on_low_memory": true
         }
       ]
+    },
+    "ngbestiary.village.discovery": {
+      "category": "ui",
+      "sounds": [
+        {
+          "name": "sounds/ngbestiary/villages/discovery",
+          "volume": 1.0
+        }
+      ]
+    },
+    "ngbestiary.village.trade": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/ngbestiary/villages/trade_1",
+          "volume": 1.0
+        },
+        {
+          "name": "sounds/ngbestiary/villages/trade_2",
+          "volume": 1.0
+        },
+        {
+          "name": "sounds/ngbestiary/villages/trade_3",
+          "volume": 1.0
+        }
+      ]
     }
   }
 }

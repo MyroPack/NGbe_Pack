@@ -89,11 +89,29 @@
 		"adventurer_boots": {
 			"textures": "textures/items/adventurer_boots"
 		},
+		"moon_helmet": {
+			"textures": "textures/items/moon_helmet"
+		},
+		"moon_chestplate": {
+			"textures": "textures/items/moon_chestplate"
+		},
+		"moon_leggings": {
+			"textures": "textures/items/moon_leggings"
+		},
+		"moon_boots": {
+			"textures": "textures/items/moon_boots"
+		},
 		"meteor": {
 			"textures": "textures/items/meteor"
 		},
 		"meteoric_iron_raw": {
 			"textures": "textures/items/meteoric_iron_raw"
+		},
+		"tyber": {
+			"textures": "textures/items/tyber"
+		},
+		"backpack": {
+			"textures": "textures/items/backpack"
 		},
 		"kevlar": {
 			"textures": "textures/items/kevlar"

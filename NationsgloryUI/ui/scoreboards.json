@@ -18,6 +18,8 @@
         // la ligne du scoreboard qui porte $flag, comme l'ancien pack NG le faisait par sa ligne « radr ». Sans cette
         // ligne, rien n'est dessine. Pose en premier : il passe sous les cases du HUD.
         {"radiation@scoreboard.radiation":{}},
+        // Chaleur du puits d'un volcan (NGMod, lot 5b) : voile rouge et case de l'effet (chaleur_volcan, en fin de fichier).
+        {"chaleur_volcan@scoreboard.chaleur_volcan":{}},
 
         {"top": {
           "type": "stack_panel",
@@ -1903,6 +1905,8 @@
 
         // Ecran vert des radiations, comme sur le bureau (radiation, plus haut dans ce fichier).
         {"radiation@scoreboard.radiation":{}},
+        // Chaleur du puits d'un volcan (NGMod, lot 5b) : voile rouge et case de l'effet (chaleur_volcan, en fin de fichier).
+        {"chaleur_volcan@scoreboard.chaleur_volcan":{}},
 
         {"top@scoreboard.pocket_top":{}},
 
@@ -2592,5 +2596,108 @@
   "pocket_battle_fond@scoreboard.battle_fond": {
     "size": [190,18],
     "clips_children": true
-  }
+  },
+
+  // ---------------------------------------------------------------------------------------------------------------
+  // Chaleur du puits d'un volcan (NGMod, lot 5b) : le voile rouge des bords de l'ecran, plus fort en descendant, et la
+  // case de l'effet (Chaleur ecrasante I a V, ou Resistance thermique avec l'armure de Volcanite). Le tout vient de la
+  // ligne « ngmod:volcano_heat » du tableau des scores, sans texte et au score le plus haut (1 000 001, apres celle des
+  // radiations) : §c§h§v§1 a §5 pour le voile, §c§h§e§1 a §5 pour l'effet, §c§h§r§t pour la Resistance thermique.
+  // Une collection par marque, chacune sur le modele du voile vert des radiations.
+  // ---------------------------------------------------------------------------------------------------------------
+  "chaleur_volcan": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {"voile_1@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_voile_1"}},
+      {"voile_2@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_voile_2"}},
+      {"voile_3@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_voile_3"}},
+      {"voile_4@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_voile_4"}},
+      {"voile_5@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_voile_5"}},
+      {"effet_1@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_effet_1"}},
+      {"effet_2@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_effet_2"}},
+      {"effet_3@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_effet_3"}},
+      {"effet_4@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_effet_4"}},
+      {"effet_5@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_effet_5"}},
+      {"resistance@scoreboard.chaleur_collection": {"$chaleur_asset": "chaleur_resistance"}}
+    ]
+  },
+
+  "chaleur_collection": {
+    "type": "collection_panel",
+    "size": ["100%", "100%"],
+    "$chaleur_asset|default": "chaleur_voile_1",
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.$chaleur_asset"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Le voile : transparent au centre, rouge vers les bords (textures/ui/ng_catastrophe/voile_chaleur).
+  "chaleur_voile": {
+    "type": "image",
+    "texture": "textures/ui/ng_catastrophe/voile_chaleur",
+    "size": ["100%", "100%"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "keep_ratio": false,
+    "layer": 1,
+    "$flag|default": "§c§h§v§1",
+    "bindings": [
+      {"binding_name": "#player_name_sidebar", "binding_type": "collection", "binding_collection_name": "scoreboard_players"},
+      {"binding_type": "view", "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))", "target_property_name": "#visible"}
+    ]
+  },
+  "chaleur_voile_1@scoreboard.chaleur_voile": {"$flag": "§c§h§v§1", "alpha": 0.25},
+  "chaleur_voile_2@scoreboard.chaleur_voile": {"$flag": "§c§h§v§2", "alpha": 0.4},
+  "chaleur_voile_3@scoreboard.chaleur_voile": {"$flag": "§c§h§v§3", "alpha": 0.55},
+  "chaleur_voile_4@scoreboard.chaleur_voile": {"$flag": "§c§h§v§4", "alpha": 0.75},
+  "chaleur_voile_5@scoreboard.chaleur_voile": {"$flag": "§c§h§v§5", "alpha": 1.0},
+
+  // La case de l'effet, sous la barre du haut a gauche : son icone et son nom (texts/*.lang : ng.volcan.chaleur.N, ng.volcan.resistance).
+  "chaleur_effet@ng_asset.background_white": {
+    "size": ["100%c + 6px", 14],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [5, 26],
+    "color": [0.153, 0.153, 0.165],
+    "layer": 20,
+    "$flag|default": "§c§h§e§1",
+    "$icone|default": "textures/ui/ng_catastrophe/chaleur",
+    "$texte|default": "ng.volcan.chaleur.1",
+    "$couleur|default": [0.98, 0.36, 0.26],
+    "bindings": [
+      {"binding_name": "#player_name_sidebar", "binding_type": "collection", "binding_collection_name": "scoreboard_players"},
+      {"binding_type": "view", "source_property_name": "(not((#player_name_sidebar - $flag) = #player_name_sidebar))", "target_property_name": "#visible"}
+    ],
+    "controls": [
+      {"rangee": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": ["100%c", 10],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [3, 0],
+        "controls": [
+          {"icone": {"type": "image", "texture": "$icone", "size": [10, 10], "layer": 2}},
+          {"espace": {"type": "panel", "size": [3, 10]}},
+          {"nom": {"type": "label", "text": "$texte", "color": "$couleur", "font_scale_factor": 0.8, "size": ["default", 10], "offset": [0, 1.5], "layer": 2}}
+        ]
+      }}
+    ]
+  },
+  "chaleur_effet_1@scoreboard.chaleur_effet": {"$flag": "§c§h§e§1", "$texte": "ng.volcan.chaleur.1"},
+  "chaleur_effet_2@scoreboard.chaleur_effet": {"$flag": "§c§h§e§2", "$texte": "ng.volcan.chaleur.2"},
+  "chaleur_effet_3@scoreboard.chaleur_effet": {"$flag": "§c§h§e§3", "$texte": "ng.volcan.chaleur.3"},
+  "chaleur_effet_4@scoreboard.chaleur_effet": {"$flag": "§c§h§e§4", "$texte": "ng.volcan.chaleur.4"},
+  "chaleur_effet_5@scoreboard.chaleur_effet": {"$flag": "§c§h§e§5", "$texte": "ng.volcan.chaleur.5"},
+  "chaleur_resistance@scoreboard.chaleur_effet": {"$flag": "§c§h§r§t", "$icone": "textures/ui/ng_catastrophe/resistance_thermique", "$texte": "ng.volcan.resistance", "$couleur": [0.976, 0.451, 0.086]}
 }

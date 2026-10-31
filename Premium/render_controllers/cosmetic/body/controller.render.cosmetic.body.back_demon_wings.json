@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.back_demon_wings": {
+      "geometry": "Geometry.cosmetic.body.back_demon_wings",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.back_demon_wings"
+      ]
+    }
+  }
+}

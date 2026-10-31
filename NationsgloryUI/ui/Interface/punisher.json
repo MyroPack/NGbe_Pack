@@ -1,0 +1,1037 @@
+{
+  "namespace": "punisher",
+
+  // -----------------------------------------------
+  //
+  //        Punisher (toxicite de NationsGlory)
+  //
+  // -----------------------------------------------
+  //
+  // Formulaire simple envoye par le ModerationModule du proxy (/punisher, et la pastille « Toxique » de l'annuaire)
+  // et aiguille ici par server_form.json quand son titre commence par le marqueur §p§r§u§r§n§r. Mise en page de
+  // l'ecran NG Java (RE-748) : a gauche les pastilles du palier et des points, le titre, le texte, « Voir le
+  // reglement », puis les cases des malus sur deux rangees ; a droite l'historique des sanctions.
+  //   - titre (#title_text) : marqueur + « Punisher <pseudo> », le marqueur est retire a l'affichage (comme la carte) ;
+  //   - texte (#form_text) : la phrase de la communaute ;
+  //   - boutons, dans cet ordre :
+  //       1. les malus (12 au plus) : image du pack textures/ui/punisher/<malus> (allume) ou <malus>_off (eteint),
+  //          case complete (cadre, fond, losange) ; texte « nom », retour a la ligne, « valeur », couleurs donnees par
+  //          le serveur. Le texte commence par le code de sa rangee, invisible : §1§r (6 premieres cases) ou §2§r ;
+  //       2. les etiquettes (image transparente textures/ui/punisher/id/<nom>, reconnue par egalite) :
+  //          tier (pastille rose « Palier V »), points (pastille « Toxicite 750 pts »), rules (« Voir le reglement »),
+  //          close (Fermer, cache : la croix suffit) ;
+  //       3. l'historique : row_running, row_ended ou row_warning (pastille En cours, Termine, Avertissement, textes du
+  //          pack), texte « sanction », retour a la ligne, « duree · date » ; row_none : une ligne sans pastille
+  //          (« Aucune sanction »). Un clic ouvre le detail de la sanction.
+  // Chaque zone est une pile de tous les boutons dont seuls les siens sont visibles (une ligne cachee ne prend pas de
+  // place), comme la carte. Aucune taille ni couleur par variable. Textes du serveur en localize false : sinon le jeu
+  // traite le « % » comme un format et l'efface.
+  // Sans le pack, le meme formulaire reste lisible en vanilla.
+  // Habillage : celui des maquettes NG (fenetres 27272A, panneaux 18181B, rose FF1F6C des malus actifs).
+
+  "flat_image": {
+    "type": "image",
+    "texture": "textures/ui/background/background_white"
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"bounds": {
+        "type": "panel",
+        "size": [ 420, 222 ],
+        "layer": 1,
+        "controls": [
+          {"left@punisher.left_panel": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 0 ]
+          }},
+          {"right@punisher.right_panel": {
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "offset": [ 0, 0 ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Pile de tous les boutons du formulaire (meme contrat que la carte : longueur liee a #form_button_contents).
+  "slot": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Panneau de gauche : en-tete puis cases des malus
+  // -----------------------------------------------
+
+  "left_panel@punisher.flat_image": {
+    "size": [ 270, "100%" ],
+    "color": [ 0.094, 0.094, 0.106 ],
+    "controls": [
+      {"inner@punisher.flat_image": {
+        "size": [ "100% - 2px", "100% - 2px" ],
+        "color": [ 0.122, 0.122, 0.133 ],
+        "layer": 1,
+        "controls": [
+
+          {"header@punisher.flat_image": {
+            "size": [ "100%", 100 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "color": [ 0.153, 0.153, 0.165 ],
+            "layer": 1,
+            "controls": [
+              // Pastilles du palier (pleine, rose) et des points (contour), dans le cadre, au-dessus du titre.
+              {"tier_cell": {
+                "type": "panel",
+                "size": [ 50, 11 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 10, 9 ],
+                "layer": 2,
+                "controls": [
+                  {"slot@punisher.slot": {
+                    "factory": { "name": "buttons", "control_ids": { "button": "punisher.tier_item" } }
+                  }}
+                ]
+              }},
+              {"points_cell": {
+                "type": "panel",
+                "size": [ 66, 11 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 63, 9 ],
+                "layer": 2,
+                "controls": [
+                  {"slot@punisher.slot": {
+                    "factory": { "name": "buttons", "control_ids": { "button": "punisher.points_item" } }
+                  }}
+                ]
+              }},
+
+              {"title_label": {
+                "type": "label",
+                "size": [ "100% - 20px", "default" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 10, 24 ],
+                "text": "#text",
+                "text_alignment": "left",
+                "font_type": "MinecraftTen",
+                "font_scale_factor": 1.5,
+                "color": [ 0.98, 0.98, 0.98 ],
+                "localize": false,
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#title_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#title_text - '§p§r§u§r§n§r')",
+                    "target_property_name": "#text"
+                  }
+                ]
+              }},
+
+              {"text_label": {
+                "type": "label",
+                "size": [ "100% - 20px", "default" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 10, 43 ],
+                "text": "#form_text",
+                "text_alignment": "left",
+                "font_scale_factor": 0.6,
+                "color": [ 0.631, 0.631, 0.667 ],
+                "localize": false,
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#form_text"
+                  }
+                ]
+              }},
+
+              {"rules_cell": {
+                "type": "panel",
+                "size": [ 72, 14 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 10, -8 ],
+                "layer": 2,
+                "controls": [
+                  {"slot@punisher.slot": {
+                    "factory": { "name": "buttons", "control_ids": { "button": "punisher.rules_item" } }
+                  }}
+                ]
+              }}
+            ]
+          }},
+
+          // Deux rangees de 6 cases (44 x 54) : la premiere porte les cases marquees §1§r, la seconde celles en §2§r.
+          {"row_1": {
+            "type": "panel",
+            "size": [ 264, 54 ],
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "offset": [ 0, -60 ],
+            "layer": 2,
+            "controls": [
+              {"tiles@punisher.tile_row": {
+                "factory": { "name": "buttons", "control_ids": { "button": "punisher.tile_item_1" } }
+              }}
+            ]
+          }},
+          {"row_2": {
+            "type": "panel",
+            "size": [ 264, 54 ],
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "offset": [ 0, -5 ],
+            "layer": 2,
+            "controls": [
+              {"tiles@punisher.tile_row": {
+                "factory": { "name": "buttons", "control_ids": { "button": "punisher.tile_item_2" } }
+              }}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "tile_row": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "100%" ],
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Une case de malus (41 x 51 dans une cellule de 44 x 54) : l'image du bouton, son texte dans le bas de la case,
+  // coupe au bord de la case s'il etait trop long.
+  "tile_item": {
+    "type": "panel",
+    "size": [ 44, 54 ],
+    "controls": [
+      {"picture": {
+        "type": "image",
+        "size": [ 41, 51 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [ 1, 1 ],
+        "texture": "#texture",
+        "layer": 1,
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ],
+        "controls": [
+          {"text_area": {
+            "type": "panel",
+            "size": [ 39, 15 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 1, 34 ],
+            "clips_children": true,
+            "layer": 2,
+            "controls": [
+              {"label": {
+                "type": "label",
+                "size": [ "100%", "default" ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "text": "#form_button_text",
+                "text_alignment": "center",
+                "font_scale_factor": 0.38,
+                "color": [ 1, 1, 1 ],
+                "localize": false,
+                "layer": 3,
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  }
+                ]
+              }}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "tile_item_1@punisher.tile_item": {
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§1§r') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "tile_item_2@punisher.tile_item": {
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§2§r') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Pastilles et « Voir le reglement » (une pile chacun, seul le bouton de l'etiquette est visible)
+  // -----------------------------------------------
+
+  // Palier : pastille pleine rose FF1F6C, texte blanc.
+  "tier_item": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/punisher/id/tier')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"fill@punisher.flat_image": {
+        "size": [ "100%", "100%" ],
+        "color": [ 1.0, 0.122, 0.424 ],
+        "layer": 1
+      }},
+      {"label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "#form_button_text",
+        "font_scale_factor": 0.6,
+        "color": [ 1, 1, 1 ],
+        "localize": false,
+        "layer": 2,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  },
+
+  // Points : pastille en contour (bord 71717B, fond 1F1F22), texte blanc.
+  "points_item": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/punisher/id/points')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"border@punisher.flat_image": {
+        "size": [ "100%", "100%" ],
+        "color": [ 0.443, 0.443, 0.482 ],
+        "layer": 1
+      }},
+      {"fill@punisher.flat_image": {
+        "size": [ "100% - 2px", "100% - 2px" ],
+        "color": [ 0.122, 0.122, 0.133 ],
+        "layer": 2
+      }},
+      {"label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "#form_button_text",
+        "font_scale_factor": 0.6,
+        "color": [ 1, 1, 1 ],
+        "localize": false,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  },
+
+  // « Voir le reglement » : un bouton gris, comme sur l'ecran Java.
+  "rules_item": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/punisher/id/rules')",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"button@common.button": {
+        "size": [ "100%", "100%" ],
+        "$pressed_button_name": "button.form_button_click",
+        "bindings": [
+          {
+            "binding_type": "collection_details",
+            "binding_collection_name": "form_buttons"
+          }
+        ],
+        "controls": [
+          {"default@punisher.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.322, 0.322, 0.361 ] }},
+          {"hover@punisher.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.443, 0.443, 0.482 ] }},
+          {"pressed@punisher.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.443, 0.443, 0.482 ] }},
+          {"label": {
+            "type": "label",
+            "size": [ "default", "default" ],
+            "text": "#form_button_text",
+            "font_scale_factor": 0.65,
+            "color": [ 0.98, 0.98, 0.98 ],
+            "localize": false,
+            "layer": 5,
+            "bindings": [
+              {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+              }
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Panneau de droite : historique des sanctions
+  // -----------------------------------------------
+
+  "right_panel@punisher.flat_image": {
+    "size": [ 144, "100%" ],
+    "color": [ 0.094, 0.094, 0.106 ],
+    "controls": [
+      {"inner@punisher.flat_image": {
+        "size": [ "100% - 2px", "100% - 2px" ],
+        "color": [ 0.153, 0.153, 0.165 ],
+        "layer": 1,
+        "controls": [
+          {"title": {
+            "type": "label",
+            "size": [ "100% - 30px", "default" ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 7, 7 ],
+            "text": "punisher.history",
+            "font_scale_factor": 0.8,
+            "color": [ 0.98, 0.98, 0.98 ],
+            "layer": 2
+          }},
+          {"close@punisher.close_button": {
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "offset": [ -5, 4 ]
+          }},
+          {"line@punisher.flat_image": {
+            "size": [ "100%", 1 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 0, 21 ],
+            "color": [ 0.247, 0.247, 0.275 ],
+            "layer": 2
+          }},
+          {"list@ng_module.scroll_test": {
+            "$size_scroll_bar": [ 3, "100%" ],
+            "$scroll_textures_bar": "ng_asset.background_white",
+            "$scroll_bar_color": [ 0.443, 0.443, 0.482 ],
+            "$scroll_textures_background": "ng_asset.background_white",
+            "$scroll_background_color": [ 0.153, 0.153, 0.165 ],
+            "$scrolling_content": "punisher.history_list",
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 4, 25 ],
+            "size": [ "100% - 8px", "100% - 29px" ],
+            "layer": 3
+          }}
+        ]
+      }}
+    ]
+  },
+
+  "close_button@punisher.flat_image": {
+    "size": [ 14, 14 ],
+    "color": [ 0.094, 0.094, 0.106 ],
+    "layer": 2,
+    "controls": [
+      {"button@common.button": {
+        "size": [ 12, 12 ],
+        "$pressed_button_name": "button.menu_exit",
+        "controls": [
+          {"default": { "type": "image", "texture": "textures/ui/background/background_17", "size": [ "100%", "100%" ] }},
+          {"hover": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+          {"pressed": { "type": "image", "texture": "textures/ui/background/background_05", "size": [ "100%", "100%" ] }},
+          {"icon": {
+            "type": "image",
+            "texture": "textures/ui/icon/icon_01",
+            "size": [ 6, 6 ],
+            "color": [ 0.831, 0.831, 0.847 ],
+            "layer": 5
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // La liste : tous les boutons empiles, seules les lignes de l'historique sont visibles (une ligne cachee ne prend
+  // aucune place dans la pile).
+  "history_list": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "punisher.history_item"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "history_item": {
+    "type": "panel",
+    "size": [ "100%", 17 ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#texture = 'textures/ui/punisher/id/row_running') or (#texture = 'textures/ui/punisher/id/row_ended') or (#texture = 'textures/ui/punisher/id/row_warning') or (#texture = 'textures/ui/punisher/id/row_none'))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {"button@common.button": {
+        "size": [ "100%", 16 ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "$pressed_button_name": "button.form_button_click",
+        "bindings": [
+          {
+            "binding_type": "collection_details",
+            "binding_collection_name": "form_buttons"
+          }
+        ],
+        "controls": [
+          {"default": { "type": "panel", "size": [ "100%", "100%" ] }},
+          {"hover@punisher.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.208, 0.208, 0.224 ] }},
+          {"pressed@punisher.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.208, 0.208, 0.224 ] }}
+        ]
+      }},
+      {"running@punisher.status_running": {
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/row_running')",
+            "target_property_name": "#visible"
+          }
+        ]
+      }},
+      {"ended@punisher.status_ended": {
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/row_ended')",
+            "target_property_name": "#visible"
+          }
+        ]
+      }},
+      {"warning@punisher.status_warning": {
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/row_warning')",
+            "target_property_name": "#visible"
+          }
+        ]
+      }},
+      // Une sanction : le texte apres la pastille.
+      {"text": {
+        "type": "label",
+        "size": [ "100% - 42px", "default" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 40, 0 ],
+        "text": "#form_button_text",
+        "font_scale_factor": 0.5,
+        "color": [ 0.98, 0.98, 0.98 ],
+        "localize": false,
+        "layer": 4,
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(not (#texture = 'textures/ui/punisher/id/row_none'))",
+            "target_property_name": "#visible"
+          }
+        ]
+      }},
+      // « Aucune sanction » : sans pastille, le texte au bord gauche.
+      {"none_text": {
+        "type": "label",
+        "size": [ "100% - 8px", "default" ],
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset": [ 4, 0 ],
+        "text": "#form_button_text",
+        "font_scale_factor": 0.5,
+        "color": [ 0.98, 0.98, 0.98 ],
+        "localize": false,
+        "layer": 4,
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/row_none')",
+            "target_property_name": "#visible"
+          }
+        ]
+      }},
+      {"line@punisher.flat_image": {
+        "size": [ "100%", 1 ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "color": [ 0.247, 0.247, 0.275 ],
+        "layer": 2
+      }}
+    ]
+  },
+
+  // -----------------------------------------------
+  //  « Voir le reglement » (meme habillage que le Punisher)
+  // -----------------------------------------------
+  //
+  // Formulaire simple aiguille ici par server_form.json quand son titre commence par §p§r§u§r§l§r (ModerationModule,
+  // bouton « Voir le reglement » du Punisher) :
+  //   - titre : marqueur + « Voir le reglement » ; texte (#form_text) : la phrase d'explication des points ;
+  //   - boutons : pour chaque sanction, d'abord ses points (image textures/ui/punisher/id/rule_points, « 10 pts »)
+  //     puis son nom (rule_name) ; enfin back (Retour, ramene au Punisher).
+  // Une seule pile (comme l'historique) : la case des points ne prend aucune hauteur et dessine sa pastille rose
+  // sur la ligne du nom qui la suit ; seule la ligne du nom prend sa place. Aucun texte calcule hors du titre (meme
+  // retrait du marqueur que le Punisher), aucune taille ni couleur par variable.
+
+  "rules_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {"bounds@punisher.flat_image": {
+        "size": [ 300, 222 ],
+        "color": [ 0.094, 0.094, 0.106 ],
+        "layer": 1,
+        "controls": [
+          {"inner@punisher.flat_image": {
+            "size": [ "100% - 2px", "100% - 2px" ],
+            "color": [ 0.122, 0.122, 0.133 ],
+            "layer": 1,
+            "controls": [
+
+              {"header@punisher.flat_image": {
+                "size": [ "100%", 48 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "color": [ 0.153, 0.153, 0.165 ],
+                "layer": 1,
+                "controls": [
+                  {"title_label": {
+                    "type": "label",
+                    "size": [ "100% - 40px", "default" ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [ 10, 8 ],
+                    "text": "#text",
+                    "text_alignment": "left",
+                    "font_type": "MinecraftTen",
+                    "font_scale_factor": 1.2,
+                    "color": [ 0.98, 0.98, 0.98 ],
+                    "localize": false,
+                    "layer": 2,
+                    "bindings": [
+                      {
+                        "binding_name": "#title_text"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_property_name": "(#title_text - '§p§r§u§r§l§r')",
+                        "target_property_name": "#text"
+                      }
+                    ]
+                  }},
+                  {"close@punisher.close_button": {
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [ -6, 6 ]
+                  }},
+                  {"text_label": {
+                    "type": "label",
+                    "size": [ "100% - 20px", "default" ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [ 10, 26 ],
+                    "text": "#form_text",
+                    "text_alignment": "left",
+                    "font_scale_factor": 0.6,
+                    "color": [ 0.631, 0.631, 0.667 ],
+                    "localize": false,
+                    "layer": 2,
+                    "bindings": [
+                      {
+                        "binding_name": "#form_text"
+                      }
+                    ]
+                  }}
+                ]
+              }},
+              {"line@punisher.flat_image": {
+                "size": [ "100%", 1 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 0, 48 ],
+                "color": [ 0.247, 0.247, 0.275 ],
+                "layer": 2
+              }},
+
+              {"list@ng_module.scroll_test": {
+                "$size_scroll_bar": [ 3, "100%" ],
+                "$scroll_textures_bar": "ng_asset.background_white",
+                "$scroll_bar_color": [ 0.443, 0.443, 0.482 ],
+                "$scroll_textures_background": "ng_asset.background_white",
+                "$scroll_background_color": [ 0.122, 0.122, 0.133 ],
+                "$scrolling_content": "punisher.rules_list",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ 6, 53 ],
+                "size": [ "100% - 12px", 140 ],
+                "layer": 3
+              }},
+
+              {"back_cell": {
+                "type": "panel",
+                "size": [ 60, 14 ],
+                "anchor_from": "bottom_left",
+                "anchor_to": "bottom_left",
+                "offset": [ 10, -7 ],
+                "layer": 2,
+                "controls": [
+                  {"slot@punisher.slot": {
+                    "factory": { "name": "buttons", "control_ids": { "button": "punisher.back_item" } }
+                  }}
+                ]
+              }}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // « Retour » : le meme bouton gris que « Voir le reglement », reconnu par son etiquette back.
+  "back_item@punisher.rules_item": {
+    "bindings": [
+      {
+        "binding_name": "#form_button_texture",
+        "binding_name_override": "#texture",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#texture = 'textures/ui/punisher/id/back')",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "rules_list": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "punisher.rules_line"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  // Un bouton du reglement : la pastille des points (hauteur nulle, dessinee sur la ligne suivante) ou la ligne du
+  // nom (15 de haut). Les autres boutons (Retour) n'y prennent aucune place.
+  "rules_line": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {"points_part": {
+        "type": "panel",
+        "size": [ "100%", 0 ],
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/rule_points')",
+            "target_property_name": "#visible"
+          }
+        ],
+        "controls": [
+          {"pill@punisher.flat_image": {
+            "size": [ 30, 9 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "offset": [ 3, 3 ],
+            "color": [ 1.0, 0.122, 0.424 ],
+            "layer": 6,
+            "controls": [
+              {"label": {
+                "type": "label",
+                "size": [ "default", "default" ],
+                "text": "#form_button_text",
+                "font_scale_factor": 0.5,
+                "color": [ 1, 1, 1 ],
+                "localize": false,
+                "layer": 7,
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  }
+                ]
+              }}
+            ]
+          }}
+        ]
+      }},
+      {"name_part": {
+        "type": "panel",
+        "size": [ "100%", 15 ],
+        "bindings": [
+          {
+            "binding_name": "#form_button_texture",
+            "binding_name_override": "#texture",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#texture = 'textures/ui/punisher/id/rule_name')",
+            "target_property_name": "#visible"
+          }
+        ],
+        "controls": [
+          {"text": {
+            "type": "label",
+            "size": [ "100% - 44px", "default" ],
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "offset": [ 39, 0 ],
+            "text": "#form_button_text",
+            "font_scale_factor": 0.6,
+            "color": [ 0.98, 0.98, 0.98 ],
+            "localize": false,
+            "layer": 4,
+            "bindings": [
+              {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+              }
+            ]
+          }},
+          {"line@punisher.flat_image": {
+            "size": [ "100%", 1 ],
+            "anchor_from": "bottom_left",
+            "anchor_to": "bottom_left",
+            "color": [ 0.247, 0.247, 0.275 ],
+            "layer": 2
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Pastilles d'etat d'une ligne de l'historique (textes du pack : punisher.status.*), couleurs explicites. Largeur du plus
+  // long tag reel, « Avertissement », qui debordait de 28 sur le vrai client (28/10) ; texte coupe au bord.
+  "status_running@punisher.flat_image": {
+    "size": [ 36, 7 ],
+    "clips_children": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 2, 0 ],
+    "color": [ 1.0, 0.122, 0.424 ],
+    "layer": 3,
+    "controls": [
+      {"label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "punisher.status.running",
+        "font_scale_factor": 0.42,
+        "color": [ 1, 1, 1 ],
+        "layer": 4
+      }}
+    ]
+  },
+
+  "status_ended@punisher.flat_image": {
+    "size": [ 36, 7 ],
+    "clips_children": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 2, 0 ],
+    "color": [ 0.322, 0.322, 0.361 ],
+    "layer": 3,
+    "controls": [
+      {"label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "punisher.status.ended",
+        "font_scale_factor": 0.42,
+        "color": [ 0.831, 0.831, 0.847 ],
+        "layer": 4
+      }}
+    ]
+  },
+
+  "status_warning@punisher.flat_image": {
+    "size": [ 36, 7 ],
+    "clips_children": true,
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [ 2, 0 ],
+    "color": [ 0.851, 0.467, 0.024 ],
+    "layer": 3,
+    "controls": [
+      {"label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "punisher.status.warning",
+        "font_scale_factor": 0.42,
+        "color": [ 1, 1, 1 ],
+        "layer": 4
+      }}
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.kill_animation.kill_animation_firestorm.vfx": {
+      "geometry": "Geometry.cosmetic.kill_animation.kill_animation_firestorm.vfx",
+      "materials": [
+        { "*": "Material.translucent" }
+      ],
+      "textures": [
+        "Texture.cosmetic.kill_animation.kill_animation_firestorm.vfx"
+      ]
+    }
+  }
+}

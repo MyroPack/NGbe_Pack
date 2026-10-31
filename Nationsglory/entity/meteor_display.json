@@ -9,7 +9,9 @@
 			"textures": {
 				"terrestre": "textures/entity/meteor/terrestre",
 				"volcan": "textures/entity/meteor/volcan",
-				"lune": "textures/entity/meteor/lune"
+				"lune": "textures/entity/meteor/lune",
+				"mars": "textures/entity/meteor/mars",
+				"edora": "textures/entity/meteor/edora"
 			},
 			"geometry": {
 				"default": "geometry.meteor_display"

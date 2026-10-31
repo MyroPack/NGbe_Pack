@@ -1,0 +1,831 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.back_nimbria_wing",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 7,
+        "visible_bounds_height": 4.5,
+        "visible_bounds_offset": [
+          0,
+          1.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing",
+          "pivot": [
+            0,
+            23,
+            4
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.bag",
+          "parent": "cosmetic.body.back_nimbria_wing",
+          "pivot": [
+            0,
+            23,
+            4
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.right_wing",
+          "parent": "cosmetic.body.back_nimbria_wing.bag",
+          "pivot": [
+            1,
+            20,
+            3.9
+          ],
+          "rotation": [
+            5,
+            -5,
+            -30
+          ],
+          "cubes": [
+            {
+              "origin": [
+                23,
+                20,
+                4
+              ],
+              "size": [
+                4,
+                7,
+                0
+              ],
+              "pivot": [
+                26,
+                19,
+                4
+              ],
+              "rotation": [
+                0,
+                0,
+                45
+              ],
+              "uv": [
+                11,
+                6
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                1,
+                18,
+                2
+              ],
+              "size": [
+                26,
+                3,
+                3
+              ],
+              "uv": [
+                0,
+                0
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group7",
+          "parent": "cosmetic.body.back_nimbria_wing.right_wing",
+          "pivot": [
+            26,
+            18,
+            4
+          ],
+          "cubes": [
+            {
+              "origin": [
+                25,
+                -2,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                25,
+                -6,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group8",
+          "parent": "cosmetic.body.back_nimbria_wing.group7",
+          "pivot": [
+            31,
+            8,
+            3.9
+          ],
+          "rotation": [
+            0,
+            0,
+            -27.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                27,
+                -1,
+                3.9
+              ],
+              "size": [
+                12,
+                18,
+                0
+              ],
+              "pivot": [
+                31,
+                8,
+                3.9
+              ],
+              "rotation": [
+                0,
+                0,
+                27.5
+              ],
+              "uv": [
+                70,
+                47
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                26.99128,
+                -0.99132,
+                3.80076
+              ],
+              "size": [
+                12,
+                18,
+                0
+              ],
+              "pivot": [
+                31,
+                8,
+                3.9
+              ],
+              "rotation": [
+                0,
+                0,
+                27.5
+              ],
+              "uv": [
+                82,
+                47
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group9",
+          "parent": "cosmetic.body.back_nimbria_wing.right_wing",
+          "pivot": [
+            26,
+            19,
+            4
+          ],
+          "rotation": [
+            0,
+            0,
+            -45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                25,
+                -1,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                25,
+                -5,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group10",
+          "parent": "cosmetic.body.back_nimbria_wing.right_wing",
+          "pivot": [
+            26,
+            19,
+            4
+          ],
+          "rotation": [
+            0,
+            0,
+            45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                25,
+                -1,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                25,
+                -5,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group11",
+          "parent": "cosmetic.body.back_nimbria_wing.group10",
+          "pivot": [
+            29.71231,
+            8.57017,
+            4.9
+          ],
+          "rotation": [
+            0,
+            0,
+            -20
+          ],
+          "cubes": [
+            {
+              "origin": [
+                22.71231,
+                -1.42983,
+                3.9
+              ],
+              "size": [
+                11,
+                18,
+                0
+              ],
+              "pivot": [
+                28.71231,
+                7.57017,
+                3.4
+              ],
+              "rotation": [
+                0,
+                0,
+                -25
+              ],
+              "uv": [
+                72,
+                9
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                22.7036,
+                -1.42114,
+                3.80076
+              ],
+              "size": [
+                11,
+                18,
+                0
+              ],
+              "pivot": [
+                28.71231,
+                7.57017,
+                3.4
+              ],
+              "rotation": [
+                0,
+                0,
+                -25
+              ],
+              "uv": [
+                83,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group12",
+          "parent": "cosmetic.body.back_nimbria_wing.right_wing",
+          "pivot": [
+            14,
+            14,
+            4.9
+          ],
+          "cubes": [
+            {
+              "origin": [
+                1,
+                0,
+                3.9
+              ],
+              "size": [
+                23,
+                18,
+                0
+              ],
+              "uv": [
+                48,
+                28
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                0.99128,
+                0.00868,
+                3.80076
+              ],
+              "size": [
+                23,
+                18,
+                0
+              ],
+              "uv": [
+                71,
+                28
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.left_wing",
+          "parent": "cosmetic.body.back_nimbria_wing.bag",
+          "pivot": [
+            -1,
+            20,
+            3.9
+          ],
+          "rotation": [
+            5,
+            5,
+            30
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -27,
+                20,
+                4
+              ],
+              "size": [
+                4,
+                7,
+                0
+              ],
+              "pivot": [
+                -26,
+                19,
+                4
+              ],
+              "rotation": [
+                0,
+                0,
+                -45
+              ],
+              "uv": [
+                11,
+                6
+              ]
+            },
+            {
+              "origin": [
+                -27,
+                18,
+                2
+              ],
+              "size": [
+                26,
+                3,
+                3
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group2",
+          "parent": "cosmetic.body.back_nimbria_wing.left_wing",
+          "pivot": [
+            -26,
+            18,
+            4
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -27,
+                -2,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ]
+            },
+            {
+              "origin": [
+                -27,
+                -6,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group3",
+          "parent": "cosmetic.body.back_nimbria_wing.group2",
+          "pivot": [
+            -31,
+            8,
+            3.9
+          ],
+          "rotation": [
+            0,
+            0,
+            27.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -39,
+                -1,
+                3.9
+              ],
+              "size": [
+                12,
+                18,
+                0
+              ],
+              "pivot": [
+                -31,
+                8,
+                3.9
+              ],
+              "rotation": [
+                0,
+                0,
+                -27.5
+              ],
+              "uv": [
+                70,
+                47
+              ]
+            },
+            {
+              "origin": [
+                -38.99128,
+                -0.99132,
+                3.80076
+              ],
+              "size": [
+                12,
+                18,
+                0
+              ],
+              "pivot": [
+                -31,
+                8,
+                3.9
+              ],
+              "rotation": [
+                0,
+                0,
+                -27.5
+              ],
+              "uv": [
+                82,
+                47
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group4",
+          "parent": "cosmetic.body.back_nimbria_wing.left_wing",
+          "pivot": [
+            -26,
+            19,
+            4
+          ],
+          "rotation": [
+            0,
+            0,
+            45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -27,
+                -1,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ]
+            },
+            {
+              "origin": [
+                -27,
+                -5,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group5",
+          "parent": "cosmetic.body.back_nimbria_wing.left_wing",
+          "pivot": [
+            -26,
+            19,
+            4
+          ],
+          "rotation": [
+            0,
+            0,
+            -45
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -27,
+                -1,
+                3
+              ],
+              "size": [
+                2,
+                21,
+                1
+              ],
+              "uv": [
+                0,
+                7
+              ]
+            },
+            {
+              "origin": [
+                -27,
+                -5,
+                4
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "uv": [
+                6,
+                7
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group6",
+          "parent": "cosmetic.body.back_nimbria_wing.group5",
+          "pivot": [
+            -29.71231,
+            8.57017,
+            4.9
+          ],
+          "rotation": [
+            0,
+            0,
+            20
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -33.71231,
+                -1.42983,
+                3.9
+              ],
+              "size": [
+                11,
+                18,
+                0
+              ],
+              "pivot": [
+                -28.71231,
+                7.57017,
+                3.4
+              ],
+              "rotation": [
+                0,
+                0,
+                25
+              ],
+              "uv": [
+                72,
+                9
+              ]
+            },
+            {
+              "origin": [
+                -33.7036,
+                -1.42114,
+                3.80076
+              ],
+              "size": [
+                11,
+                18,
+                0
+              ],
+              "pivot": [
+                -28.71231,
+                7.57017,
+                3.4
+              ],
+              "rotation": [
+                0,
+                0,
+                25
+              ],
+              "uv": [
+                83,
+                9
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_nimbria_wing.group13",
+          "parent": "cosmetic.body.back_nimbria_wing.left_wing",
+          "pivot": [
+            -14,
+            14,
+            4.9
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -24,
+                0,
+                3.9
+              ],
+              "size": [
+                23,
+                18,
+                0
+              ],
+              "uv": [
+                48,
+                28
+              ]
+            },
+            {
+              "origin": [
+                -23.99128,
+                0.00868,
+                3.80076
+              ],
+              "size": [
+                23,
+                18,
+                0
+              ],
+              "uv": [
+                71,
+                28
+              ],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

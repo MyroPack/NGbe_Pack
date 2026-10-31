@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.back_flying_brooms": {
+      "geometry": "Geometry.cosmetic.body.back_flying_brooms",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.back_flying_brooms"
+      ]
+    }
+  }
+}

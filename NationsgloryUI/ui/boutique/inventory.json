@@ -1,0 +1,1826 @@
+{
+  "namespace": "ng_boutique_inventory",
+  "row_0": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 33,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  60.38
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "card_0@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        4.38,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 32,
+                      "$index_info": 33,
+                      "$index_button": 34
+                    }
+                  },
+                  {
+                    "card_1@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        54.25,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 35,
+                      "$index_info": 36,
+                      "$index_button": 37
+                    }
+                  },
+                  {
+                    "card_2@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        104.12,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 38,
+                      "$index_info": 39,
+                      "$index_button": 40
+                    }
+                  },
+                  {
+                    "card_3@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        154.0,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 41,
+                      "$index_info": 42,
+                      "$index_button": 43
+                    }
+                  },
+                  {
+                    "card_4@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        203.88,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 44,
+                      "$index_info": 45,
+                      "$index_button": 46
+                    }
+                  },
+                  {
+                    "card_5@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        253.75,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 47,
+                      "$index_info": 48,
+                      "$index_button": 49
+                    }
+                  },
+                  {
+                    "card_6@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        303.62,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 50,
+                      "$index_info": 51,
+                      "$index_button": 52
+                    }
+                  },
+                  {
+                    "card_7@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        353.5,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 53,
+                      "$index_info": 54,
+                      "$index_button": 55
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "row_1": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 57,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  60.38
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "card_0@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        4.38,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 56,
+                      "$index_info": 57,
+                      "$index_button": 58
+                    }
+                  },
+                  {
+                    "card_1@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        54.25,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 59,
+                      "$index_info": 60,
+                      "$index_button": 61
+                    }
+                  },
+                  {
+                    "card_2@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        104.12,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 62,
+                      "$index_info": 63,
+                      "$index_button": 64
+                    }
+                  },
+                  {
+                    "card_3@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        154.0,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 65,
+                      "$index_info": 66,
+                      "$index_button": 67
+                    }
+                  },
+                  {
+                    "card_4@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        203.88,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 68,
+                      "$index_info": 69,
+                      "$index_button": 70
+                    }
+                  },
+                  {
+                    "card_5@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        253.75,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 71,
+                      "$index_info": 72,
+                      "$index_button": 73
+                    }
+                  },
+                  {
+                    "card_6@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        303.62,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 74,
+                      "$index_info": 75,
+                      "$index_button": 76
+                    }
+                  },
+                  {
+                    "card_7@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        353.5,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 77,
+                      "$index_info": 78,
+                      "$index_button": 79
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "row_2": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 81,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  60.38
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "card_0@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        4.38,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 80,
+                      "$index_info": 81,
+                      "$index_button": 82
+                    }
+                  },
+                  {
+                    "card_1@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        54.25,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 83,
+                      "$index_info": 84,
+                      "$index_button": 85
+                    }
+                  },
+                  {
+                    "card_2@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        104.12,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 86,
+                      "$index_info": 87,
+                      "$index_button": 88
+                    }
+                  },
+                  {
+                    "card_3@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        154.0,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 89,
+                      "$index_info": 90,
+                      "$index_button": 91
+                    }
+                  },
+                  {
+                    "card_4@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        203.88,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 92,
+                      "$index_info": 93,
+                      "$index_button": 94
+                    }
+                  },
+                  {
+                    "card_5@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        253.75,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 95,
+                      "$index_info": 96,
+                      "$index_button": 97
+                    }
+                  },
+                  {
+                    "card_6@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        303.62,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 98,
+                      "$index_info": 99,
+                      "$index_button": 100
+                    }
+                  },
+                  {
+                    "card_7@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        353.5,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 101,
+                      "$index_info": 102,
+                      "$index_button": 103
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "row_3": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 105,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  60.38
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "card_0@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        4.38,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 104,
+                      "$index_info": 105,
+                      "$index_button": 106
+                    }
+                  },
+                  {
+                    "card_1@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        54.25,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 107,
+                      "$index_info": 108,
+                      "$index_button": 109
+                    }
+                  },
+                  {
+                    "card_2@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        104.12,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 110,
+                      "$index_info": 111,
+                      "$index_button": 112
+                    }
+                  },
+                  {
+                    "card_3@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        154.0,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 113,
+                      "$index_info": 114,
+                      "$index_button": 115
+                    }
+                  },
+                  {
+                    "card_4@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        203.88,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 116,
+                      "$index_info": 117,
+                      "$index_button": 118
+                    }
+                  },
+                  {
+                    "card_5@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        253.75,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 119,
+                      "$index_info": 120,
+                      "$index_button": 121
+                    }
+                  },
+                  {
+                    "card_6@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        303.62,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 122,
+                      "$index_info": 123,
+                      "$index_button": 124
+                    }
+                  },
+                  {
+                    "card_7@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        353.5,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 125,
+                      "$index_info": 126,
+                      "$index_button": 127
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "row_4": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 129,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  60.38
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "card_0@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        4.38,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 128,
+                      "$index_info": 129,
+                      "$index_button": 130
+                    }
+                  },
+                  {
+                    "card_1@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        54.25,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 131,
+                      "$index_info": 132,
+                      "$index_button": 133
+                    }
+                  },
+                  {
+                    "card_2@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        104.12,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 134,
+                      "$index_info": 135,
+                      "$index_button": 136
+                    }
+                  },
+                  {
+                    "card_3@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        154.0,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 137,
+                      "$index_info": 138,
+                      "$index_button": 139
+                    }
+                  },
+                  {
+                    "card_4@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        203.88,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 140,
+                      "$index_info": 141,
+                      "$index_button": 142
+                    }
+                  },
+                  {
+                    "card_5@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        253.75,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 143,
+                      "$index_info": 144,
+                      "$index_button": 145
+                    }
+                  },
+                  {
+                    "card_6@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        303.62,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 146,
+                      "$index_info": 147,
+                      "$index_button": 148
+                    }
+                  },
+                  {
+                    "card_7@ng_boutique_asset.inventory_card": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        353.5,
+                        2.62
+                      ],
+                      "size": [
+                        46.38,
+                        54.91
+                      ],
+                      "$index_image": 149,
+                      "$index_info": 150,
+                      "$index_button": 151
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scroll_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "message@ng_boutique_inventory.message": {}
+      },
+      {
+        "row_0@ng_boutique_inventory.row_0": {}
+      },
+      {
+        "row_1@ng_boutique_inventory.row_1": {}
+      },
+      {
+        "row_2@ng_boutique_inventory.row_2": {}
+      },
+      {
+        "row_3@ng_boutique_inventory.row_3": {}
+      },
+      {
+        "row_4@ng_boutique_inventory.row_4": {}
+      }
+    ]
+  },
+  "message": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%cm"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": 152,
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "variant_0": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  35.0
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "message@ng_boutique_asset.slot_text": {
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        0.0,
+                        8.75
+                      ],
+                      "size": [
+                        411.25,
+                        8.75
+                      ],
+                      "$index": 152,
+                      "$font_scale": 0.67,
+                      "$text_color": [
+                        0.694,
+                        0.71,
+                        0.737
+                      ],
+                      "$text_getter": "get_text_plain",
+                      "$label_anchor": "center",
+                      "$text_alignment": "center",
+                      "$label_size": [
+                        "default",
+                        "default"
+                      ],
+                      "$label_offset": [
+                        "0px",
+                        "-1.21px"
+                      ],
+                      "layer": 20
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "arrow_down": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.dropdown_down": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "arrow_up": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.dropdown_up": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "rarity_options": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.panel_dark": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "option_0@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 24,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_0": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            0.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 24,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_1@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            10.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 25,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_1": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            10.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 25,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_2@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            20.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 26,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_2": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            20.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 26,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_3@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            30.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 27,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_3": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            30.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 27,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_4@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            40.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 28,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_4": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            40.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 28,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "option_5@ng_boutique_asset.option_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            50.0
+          ],
+          "size": [
+            54.69,
+            10.0
+          ],
+          "$index": 29,
+          "layer": 2
+        }
+      },
+      {
+        "option_label_5": {
+          "type": "panel",
+          "size": [
+            50.75,
+            10.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.94,
+            50.0
+          ],
+          "layer": 3,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  50.75,
+                  10.0
+                ],
+                "$index": 29,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "breadcrumb": {
+          "type": "label",
+          "text": "ngboutique.inventaire",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.42,
+          "color": [
+            0.612,
+            0.612,
+            0.612
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            29.75
+          ],
+          "size": [
+            65.62,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "text": "ngboutique.inventaire",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 1.51,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            33.25
+          ],
+          "size": [
+            153.12,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "search_background@ng_boutique_asset.input": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            258.12,
+            35.0
+          ],
+          "size": [
+            97.34,
+            11.81
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "search_text@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            262.06,
+            35.0
+          ],
+          "size": [
+            79.84,
+            11.81
+          ],
+          "$index": 22,
+          "$font_scale": 0.48,
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "left_middle",
+          "layer": 20,
+          "$label_offset": [
+            "0px",
+            "-0.86px"
+          ]
+        }
+      },
+      {
+        "search@ng_boutique_asset.search_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            344.31,
+            36.09
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 22,
+          "layer": 20
+        }
+      },
+      {
+        "rarity_background@ng_boutique_asset.input": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            358.75,
+            35.0
+          ],
+          "size": [
+            54.69,
+            11.81
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "rarity@ng_boutique_asset.toggle_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            358.75,
+            35.0
+          ],
+          "size": [
+            54.69,
+            11.81
+          ],
+          "$index": 23,
+          "layer": 20
+        }
+      },
+      {
+        "rarity_label": {
+          "type": "panel",
+          "size": [
+            37.19,
+            11.81
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            362.69,
+            35.0
+          ],
+          "layer": 21,
+          "controls": [
+            {
+              "label@ng_boutique_asset.slot_text": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0.0,
+                  0.0
+                ],
+                "size": [
+                  37.19,
+                  11.81
+                ],
+                "$index": 23,
+                "$font_scale": 0.48,
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$text_getter": "get_text_raw",
+                "$label_anchor": "left_middle",
+                "layer": 20,
+                "$label_offset": [
+                  "0px",
+                  "-0.86px"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "rarity_closed@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            402.28,
+            36.09
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 23,
+          "$flag": "§0",
+          "$content": "ng_boutique_inventory.arrow_down",
+          "layer": 21
+        }
+      },
+      {
+        "rarity_open@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            402.28,
+            36.09
+          ],
+          "size": [
+            9.62,
+            9.62
+          ],
+          "$index": 23,
+          "$flag": "§1",
+          "$content": "ng_boutique_inventory.arrow_up",
+          "layer": 21
+        }
+      },
+      {
+        "rarity_options@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            358.75,
+            48.0
+          ],
+          "size": [
+            54.69,
+            60.0
+          ],
+          "$index": 23,
+          "$flag": "§1",
+          "$content": "ng_boutique_inventory.rarity_options",
+          "layer": 100
+        }
+      },
+      {
+        "title_line@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.62,
+            52.5
+          ],
+          "size": [
+            400.75,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "scroll@common.scrolling_panel": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            54.69
+          ],
+          "size": [
+            415.62,
+            161.88
+          ],
+          "layer": 5,
+          "$show_background": false,
+          "$scroll_box_touch_image_control": "ng_boutique_asset.scroll_thumb",
+          "$scroll_box_mouse_image_control": "ng_boutique_asset.scroll_thumb",
+          "$scroll_track_image_control": "ng_boutique_asset.scroll_track",
+          "$scroll_background_image_control": "ng_boutique_asset.scroll_track",
+          "$scrolling_content": "ng_boutique_inventory.scroll_content",
+          "$scroll_size": [
+            3,
+            "100% - 4px"
+          ],
+          "$scrolling_pane_size": [
+            "100% - 6px",
+            "100%"
+          ],
+          "$scrolling_pane_offset": [
+            0,
+            0
+          ],
+          "$scroll_bar_right_padding_size": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "pagination": {
+          "type": "panel",
+          "size": [
+            420.0,
+            19.69
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            216.56
+          ],
+          "controls": [
+            {
+              "type": "panel",
+              "size": [
+                "100%",
+                19.69
+              ],
+              "controls": [
+                {
+                  "pagination": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                      27.39,
+                      7.44
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "controls": [
+                      {
+                        "previous@ng_boutique_asset.outfit_arrow_left_button": {
+                          "$index": 30,
+                          "size": [
+                            7.44,
+                            "100%"
+                          ]
+                        }
+                      },
+                      {
+                        "page_panel": {
+                          "type": "panel",
+                          "size": [
+                            12.51,
+                            7.44
+                          ],
+                          "controls": [
+                            {
+                              "page@ng_boutique_asset.slot_text": {
+                                "$index": 30,
+                                "$font_scale": 0.5,
+                                "$label_anchor": "center",
+                                "$text_alignment": "center",
+                                "$label_size": [
+                                  "default",
+                                  "default"
+                                ],
+                                "$label_offset": [
+                                  "0px",
+                                  "-0.9px"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "next@ng_boutique_asset.outfit_arrow_right_button": {
+                          "$index": 31,
+                          "size": [
+                            7.44,
+                            "100%"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

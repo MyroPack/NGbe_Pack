@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.helicopter": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{ "*": "Material.default" }
+			],
+			"textures": ["Texture.default"],
+			"part_visibility": [
+				{ "*": true },
+				{ "missile1": false },
+				{ "t1_missile1": false },
+				{ "t2_missile1": false },
+				{ "t3_missile1": false },
+				{ "redmatter_missile1": false },
+				{ "antimatter_missile1": false },
+				{ "missile2": false },
+				{ "t1_missile2": false },
+				{ "t2_missile2": false },
+				{ "t3_missile2": false },
+				{ "redmatter_missile2": false },
+				{ "antimatter_missile2": false },
+				{ "missile3": false },
+				{ "t1_missile3": false },
+				{ "t2_missile3": false },
+				{ "t3_missile3": false },
+				{ "redmatter_missile3": false },
+				{ "antimatter_missile3": false },
+				{ "missile4": false },
+				{ "t1_missile4": false },
+				{ "t2_missile4": false },
+				{ "t3_missile4": false },
+				{ "redmatter_missile4": false },
+				{ "antimatter_missile4": false }
+			]
+		}
+	}
+}

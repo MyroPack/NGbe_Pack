@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ngvehicle.player.winch_hanging": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [-180, 0, 0]
+				},
+				"leftarm": {
+					"rotation": [-180, 0, 0]
+				},
+				"rightleg": {
+					"rotation": ["math.sin(query.life_time * 90) * 6", 0, 2]
+				},
+				"leftleg": {
+					"rotation": ["-math.sin(query.life_time * 90) * 6", 0, -2]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.head.hat_robotic_arm": {
+      "geometry": "Geometry.cosmetic.head.hat_robotic_arm",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.head.hat_robotic_arm"
+      ]
+    }
+  }
+}

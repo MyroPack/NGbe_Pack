@@ -32,3 +32,15 @@ ng.competences.niveau=Level
 ng.competences.titre=Skill
 ## Workbenches (ui/Interface/machine/workstations.json)
 ng.ateliers.ingredient_hint=Click a slot to see its name
+## Chaleur du puits des volcans (ui/scoreboards.json, chaleur_effet)
+ng.volcan.chaleur.1=Crushing heat I
+ng.volcan.chaleur.2=Crushing heat II
+ng.volcan.chaleur.3=Crushing heat III
+ng.volcan.chaleur.4=Crushing heat IV
+ng.volcan.chaleur.5=Crushing heat V
+ng.volcan.resistance=Thermal resistance
+## Punisher de la toxicite (ui/Interface/punisher.json)
+punisher.history=Sanction history
+punisher.status.running=Ongoing
+punisher.status.ended=Ended
+punisher.status.warning=Warning

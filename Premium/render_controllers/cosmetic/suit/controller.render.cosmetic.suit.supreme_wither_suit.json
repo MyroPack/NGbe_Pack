@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.suit.supreme_wither_suit": {
+      "geometry": "Geometry.cosmetic.suit.supreme_wither_suit",
+      "materials": [
+        {
+          "*": "Material.animated_texture"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.suit.supreme_wither_suit"
+      ],
+      "uv_anim": {
+        "offset": [
+          0.0,
+          "math.mod(math.floor(q.life_time * 20 / 8), 6) / 6"
+        ],
+        "scale": [
+          1.0,
+          "1 / 6"
+        ]
+      }
+    }
+  }
+}

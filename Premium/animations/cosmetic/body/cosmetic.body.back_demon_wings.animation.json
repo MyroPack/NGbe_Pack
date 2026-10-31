@@ -1,0 +1,107 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cosmetic.body.back_demon_wings": {
+      "loop": true,
+      "animation_length": 10,
+      "bones": {
+        "cosmetic.body.back_demon_wings.right_wing": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "3.0": [
+              0,
+              40,
+              0
+            ],
+            "8.0": [
+              0,
+              -17.5,
+              0
+            ],
+            "10.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cosmetic.body.back_demon_wings.left_wing": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "3.0": [
+              0,
+              -40,
+              0
+            ],
+            "8.0": [
+              0,
+              17.5,
+              0
+            ],
+            "10.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cosmetic.body.back_demon_wings.bone2": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "3.0": [
+              0,
+              15,
+              0
+            ],
+            "8.0": [
+              22.55034,
+              -3.8773,
+              -4.03079
+            ],
+            "10.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cosmetic.body.back_demon_wings.bone4": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "3.0": [
+              0,
+              -15,
+              0
+            ],
+            "8.0": [
+              22.5503,
+              -3.8773,
+              -4.0308
+            ],
+            "10.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

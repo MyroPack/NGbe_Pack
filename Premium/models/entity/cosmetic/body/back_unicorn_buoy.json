@@ -1,0 +1,172 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.back_unicorn_buoy",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [
+          0,
+          0.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.body.back_unicorn_buoy",
+          "pivot": [
+            0,
+            13,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                11,
+                -5
+              ],
+              "size": [
+                10,
+                4,
+                10
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -1,
+                14,
+                3
+              ],
+              "size": [
+                2,
+                3,
+                3
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                0,
+                14,
+                6
+              ],
+              "size": [
+                0,
+                3,
+                3
+              ],
+              "uv": [
+                0,
+                4
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -2,
+                12,
+                -7
+              ],
+              "size": [
+                4,
+                8,
+                3
+              ],
+              "uv": [
+                0,
+                21
+              ]
+            },
+            {
+              "origin": [
+                0,
+                12,
+                -7
+              ],
+              "size": [
+                0,
+                9,
+                4
+              ],
+              "uv": [
+                35,
+                -4
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -2,
+                16,
+                -10
+              ],
+              "size": [
+                4,
+                4,
+                3
+              ],
+              "uv": [
+                0,
+                14
+              ]
+            },
+            {
+              "origin": [
+                -0.5,
+                20,
+                -8
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                6,
+                7
+              ]
+            }
+          ],
+          "parent": "body"
+        }
+      ]
+    }
+  ]
+}

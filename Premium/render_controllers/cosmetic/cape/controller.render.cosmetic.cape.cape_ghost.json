@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.cape.cape_ghost": {
+      "geometry": "Geometry.cosmetic.cape",
+      "materials": [
+        {
+          "*": "Material.animated_texture_double"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.cape.cape_ghost"
+      ],
+      "uv_anim": {
+        "offset": [
+          0.0,
+          "math.mod(math.floor(q.life_time * 20 / 3), 40) / 40"
+        ],
+        "scale": [
+          1.0,
+          "1 / 40"
+        ]
+      }
+    }
+  }
+}

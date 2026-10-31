@@ -1,0 +1,5751 @@
+{
+  "namespace": "ng_pala_gui",
+  "default_button": {},
+  "button@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.button_grid_item"
+  },
+  "text@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.container_text"
+  },
+  "text_color@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.container_text_color"
+  },
+  "button_bindding@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.button_grid_item_bindding"
+  },
+  "button_grid_item_bindding@ng_pala_gui.container_button_binding": {
+    "$item_collection_name": "container_items"
+  },
+  "container_button_binding": {
+    "type": "input_panel",
+    "size": "$size",
+    "layer": 1,
+    "$button_ref|default": "pala_button.red_text_button",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": false,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "tts_ignore_count": true,
+    "controls": [
+      {
+        "item_button_ref@$button_ref": {
+          "layer": 5
+        }
+      }
+    ],
+    "bindings": "$bindings_button"
+  },
+  "image@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.image_grid_item"
+  },
+  "item@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.item_grid_item"
+  },
+  "conditional_visual@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.conditional_visual_grid_item"
+  },
+  "progress_bar@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.progress_bar_grid_item"
+  },
+  "progress_bar_bindding@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.progress_bar_grid_item_bindding"
+  },
+  "locked_item@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.locked_item_grid_item"
+  },
+  "locked_item_with_data@ng_pala_gui.dynamic_slot": {
+    "$content": "ng_pala_gui.locked_item_with_data_grid_item"
+  },
+  "dynamic_slot": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "layer": 1,
+    "$index|default": 0,
+    "$size|default": [
+      0,
+      0
+    ],
+    "$offset|default": [
+      0,
+      0
+    ],
+    "offset": "$offset",
+    "size": "$size",
+    "$content|default": "",
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "grid_item@$content": {
+          "collection_index": "$index"
+        }
+      }
+    ]
+  },
+  "button_grid_item@ng_pala_gui.container_button": {
+    "$item_collection_name": "container_items"
+  },
+  "image_grid_item@ng_pala_gui.container_image": {
+    "$item_collection_name": "container_items"
+  },
+  "container_image": {
+    "type": "image",
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.6s' * #hover_text)) - '§r')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "progress_bar_grid_item@ng_pala_gui.container_progress_bar": {
+    "$item_collection_name": "container_items"
+  },
+  "progress_bar_grid_item_bindding@ng_pala_gui.container_progress_bar_binding": {
+    "$item_collection_name": "container_items"
+  },
+  "container_progress_bar_binding": {
+    "type": "panel",
+    "$bar_size": [
+      "100%",
+      "100%"
+    ],
+    "size": "$bar_size",
+    "$bar_green|default": "pala_asset.bar_green",
+    "$color_border|default": "",
+    "$color_border_empty|default": "",
+    "$bar_empty|default": "pala_asset.bar_empty",
+    "$direction|default": "left",
+    "controls": [
+      {
+        "progress_fill@$bar_green": {
+          "color": "$color_border",
+          "layer": 3,
+          "clip_direction": "$direction",
+          "clip_pixelperfect": false,
+          "$clip_max": 100.0,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hover_text - ('%.6s' * #hover_text) * 1)",
+              "target_property_name": "#string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(($clip_max - #string) / $clip_max)",
+              "target_property_name": "#clip_ratio"
+            }
+          ]
+        }
+      },
+      {
+        "bar_empty@$bar_empty": {
+          "color": "$color_border_empty",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2
+        }
+      }
+    ],
+    "bindings": "$bindings_progress"
+  },
+  "locked_item_grid_item@ng_pala_gui.locked_container_item": {
+    "$item_collection_name": "container_items"
+  },
+  "locked_item_with_data_grid_item@ng_pala_gui.locked_withe_data_container_item": {
+    "$item_collection_name": "container_items"
+  },
+  "item_grid_item@common.container_item": {
+    "$background_images": "pala_asset.slot",
+    "$item_collection_name": "container_items"
+  },
+  "conditional_visual_grid_item@ng_pala_gui.container_conditional_visual": {
+    "$item_collection_name": "container_items"
+  },
+  "container_conditional_visual": {
+    "type": "image",
+    "$true|default": "",
+    "$false|default": "",
+    "controls": [
+      {
+        "true@$true": {
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ($true = '') and (#hover_text - 'false') = #hover_text and not (#hover_text = ''))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "false@$false": {
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "($true = '' or (not ((#hover_text - 'false') = #hover_text)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "locked_withe_data_container_item": {
+    "type": "input_panel",
+    "$size_container|default": [
+      18,
+      18
+    ],
+    "layer": 1,
+    "size": "$size_container",
+    "$cell_image_size|default": [
+      18,
+      18
+    ],
+    "$cell_overlay_ref|default": "common.cell_overlay",
+    "$button_ref|default": "common.container_slot_button_prototype",
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
+    "$item_renderer|default": "common.item_renderer",
+    "$item_renderer_panel_size|default": [
+      18,
+      18
+    ],
+    "$item_renderer_size|default": [
+      16,
+      16
+    ],
+    "$item_renderer_offset|default": [
+      0,
+      0
+    ],
+    "$background_images|default": "pala_asset.slot",
+    "$background_image_control_name|default": "bg",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "tts_ignore_count": true,
+    "controls": [
+      {
+        "item_cell": {
+          "type": "panel",
+          "size": "$cell_image_size",
+          "layer": 0,
+          "controls": [
+            {
+              "item": {
+                "type": "panel",
+                "size": "$item_renderer_panel_size",
+                "layer": 0,
+                "controls": [
+                  {
+                    "stack_count_label@common.stack_count_label": {
+                      "layer": 9
+                    }
+                  },
+                  {
+                    "$item_renderer@$item_renderer": {
+                      "size": "$item_renderer_size",
+                      "offset": "$item_renderer_offset",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "layer": 7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_bar@common.durability_bar": {
+                "layer": 8
+              }
+            },
+            {
+              "storage_bar@common.storage_bar": {
+                "layer": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_button_ref@$button_ref": {
+          "$highlight_control": "ng_pala_gui.highlight_slot_panel",
+          "tts_ignore_count": true,
+          "tts_skip_message": true,
+          "tts_inherit_siblings": true,
+          "layer": 5
+        }
+      }
+    ]
+  },
+  "locked_container_item": {
+    "type": "panel",
+    "$size_container|default": [
+      18,
+      18
+    ],
+    "size": "$size_container",
+    "layer": 1,
+    "$cell_image_size|default": [
+      18,
+      18
+    ],
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
+    "$item_renderer|default": "common.item_renderer",
+    "$item_renderer_panel_size|default": [
+      18,
+      18
+    ],
+    "$item_renderer_size|default": [
+      16,
+      16
+    ],
+    "$item_renderer_offset|default": [
+      0,
+      0
+    ],
+    "controls": [
+      {
+        "item_cell": {
+          "type": "panel",
+          "size": "$cell_image_size",
+          "layer": 0,
+          "controls": [
+            {
+              "item": {
+                "type": "panel",
+                "size": "$item_renderer_panel_size",
+                "layer": 0,
+                "controls": [
+                  {
+                    "stack_count_label@common.stack_count_label": {
+                      "layer": 27
+                    }
+                  },
+                  {
+                    "$item_renderer@$item_renderer": {
+                      "size": "$item_renderer_size",
+                      "offset": "$item_renderer_offset",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "layer": 7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_bar@common.durability_bar": {
+                "layer": 20
+              }
+            },
+            {
+              "storage_bar@common.storage_bar": {
+                "layer": 20
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "container_item": {
+    "type": "input_panel",
+    "$size_container|default": [
+      18,
+      18
+    ],
+    "size": "$size_container",
+    "layer": 1,
+    "$cell_image_size|default": [
+      18,
+      18
+    ],
+    "$cell_overlay_ref|default": "common.cell_overlay",
+    "$button_ref|default": "common.container_slot_button_prototype",
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
+    "$item_renderer|default": "common.item_renderer",
+    "$item_renderer_panel_size|default": [
+      18,
+      18
+    ],
+    "$item_renderer_size|default": [
+      16,
+      16
+    ],
+    "$item_renderer_offset|default": [
+      0,
+      0
+    ],
+    "$background_images|default": "pala_asset.slot",
+    "$background_image_control_name|default": "bg",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "tts_ignore_count": true,
+    "controls": [
+      {
+        "item_cell": {
+          "type": "panel",
+          "size": "$cell_image_size",
+          "layer": 0,
+          "controls": [
+            {
+              "item": {
+                "type": "panel",
+                "size": "$item_renderer_panel_size",
+                "layer": 0,
+                "controls": [
+                  {
+                    "stack_count_label@common.stack_count_label": {
+                      "layer": 27
+                    }
+                  },
+                  {
+                    "$item_renderer@$item_renderer": {
+                      "size": "$item_renderer_size",
+                      "offset": "$item_renderer_offset",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "layer": 7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_bar@common.durability_bar": {
+                "layer": 20
+              }
+            },
+            {
+              "storage_bar@common.storage_bar": {
+                "layer": 20
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_button_ref@$button_ref": {
+          "$highlight_control": "ng_pala_gui.highlight_slot_panel",
+          "tts_ignore_count": true,
+          "tts_skip_message": true,
+          "tts_inherit_siblings": true,
+          "layer": 5
+        }
+      }
+    ]
+  },
+  "highlight_slot_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "highlight": {
+          "type": "panel",
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "layer": 29,
+                "$hover_text_binding_name|default": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_name_override": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#show_persistent_bundle_hover_text",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "container_button": {
+    "type": "input_panel",
+    "size": "$size",
+    "layer": 1,
+    "$button_ref|default": "pala_button.red_text_button",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": false,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": false,
+    "tts_ignore_count": true,
+    "controls": [
+      {
+        "item_button_ref@$button_ref": {
+          "layer": 5
+        }
+      }
+    ]
+  },
+  "container_text": {
+    "type": "label",
+    "$text_size": [
+      "100%",
+      "100%"
+    ],
+    "$offset_texte|default": [
+      "100%",
+      "100%"
+    ],
+    "offset": "$offset_texte",
+    "size": "$text_size",
+    "$font_type|default": "MinecraftTen",
+    "$color_text|default": "white",
+    "$alpha|default": 1,
+    "alpha": "$alpha",
+    "locked_color": "$color_text",
+    "font_type": "$font_type",
+    "color": "$color_text",
+    "$text_alignement|default": "left",
+    "text_alignment": "$text_alignement",
+    "$font_size|default": 1,
+    "font_scale_factor": "$font_size",
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "container_items",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - '§o') - '§r')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "container_text_color": {
+    "type": "label",
+    "$text_size": [
+      "100%",
+      "100%"
+    ],
+    "$offset_texte|default": [
+      "100%",
+      "100%"
+    ],
+    "offset": "$offset_texte",
+    "size": "$text_size",
+    "$font_type|default": "MinecraftTen",
+    "$color_text|default": "white",
+    "$alpha|default": 1,
+    "alpha": "$alpha",
+    "locked_color": "$color_text",
+    "font_type": "$font_type",
+    "color": "$color_text",
+    "$text_alignement|default": "left",
+    "text_alignment": "$text_alignement",
+    "$font_size|default": 1,
+    "font_scale_factor": "$font_size",
+    "text": "#text",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "container_items",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.1s' * #hover_text)) - '§r')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "container_progress_bar": {
+    "type": "panel",
+    "$bar_size": [
+      "100%",
+      "100%"
+    ],
+    "size": "$bar_size",
+    "$bar_green|default": "pala_asset.bar_green",
+    "$color_border|default": "",
+    "$color_border_empty|default": "",
+    "$bar_empty|default": "pala_asset.bar_empty",
+    "$direction|default": "left",
+    "controls": [
+      {
+        "progress_fill@$bar_green": {
+          "color": "$color_border",
+          "layer": 3,
+          "clip_direction": "$direction",
+          "clip_pixelperfect": false,
+          "$clip_max": 100.0,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#hover_text - ('%.6s' * #hover_text) * 1)",
+              "target_property_name": "#string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(($clip_max - #string) / $clip_max)",
+              "target_property_name": "#clip_ratio"
+            }
+          ]
+        }
+      },
+      {
+        "bar_empty@$bar_empty": {
+          "color": "$color_border_empty",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2
+        }
+      }
+    ]
+  },
+  "dynamic_one_value": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.6s' * #hover_text) * 1)",
+        "target_property_name": "#string"
+      }
+    ]
+  },
+  "dynamic_two_value": {
+    "type": "panel",
+    "property_bag": {
+      "#string": "",
+      "#value2_base": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#separator": ";"
+    },
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.6s' * #hover_text) * 1)",
+        "target_property_name": "#string"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #string = #string) and (('%.'+#search+'s') * #string = ('%.'+#search+'s') * #string - #separator) ))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.'+#search+'s') * #string) - #separator)",
+        "target_property_name": "#value1"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#string - ( ('%.'+#search+'s') * #string))",
+        "target_property_name": "#value2_base"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #value2_base = #value2_base) and (('%.'+#search_2+'s') * #value2_base = ('%.'+#search_2+'s') * #value2_base - #separator) ))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.'+#search_2+'s') * #value2_base) - #separator)",
+        "target_property_name": "#value2"
+      }
+    ]
+  },
+  "dynamic_three_value": {
+    "type": "panel",
+    "property_bag": {
+      "#string": "",
+      "#value2_base": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#separator": ";"
+    },
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.6s' * #hover_text) * 1)",
+        "target_property_name": "#string"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #string = #string) and (('%.'+#search+'s') * #string = ('%.'+#search+'s') * #string - #separator) ))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.'+#search+'s') * #string) - #separator)",
+        "target_property_name": "#value1"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#string - ( ('%.'+#search+'s') * #string))",
+        "target_property_name": "#value2_base"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "(#search_2 + 1 * ( not (('%.'+#search_2+'s') * #value2_base = #value2_base) and (('%.'+#search_2+'s') * #value2_base = ('%.'+#search_2+'s') * #value2_base - #separator) ))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.'+#search_2+'s') * #value2_base) - #separator)",
+        "target_property_name": "#value2"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#value2_base - ( ('%.'+#search_2+'s') * #value2_base))",
+        "target_property_name": "#value3"
+      }
+    ]
+  },
+  "pala_inventory": {
+    "type": "panel",
+    "offset": [
+      0,
+      -27
+    ],
+    "controls": [
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 15
+        }
+      },
+      {
+        "inventory_panel_bottom_half@inventory": {
+          "offset": [
+            0,
+            1.5
+          ]
+        }
+      },
+      {
+        "hotbar_grid@hotbar_grid_template": {
+          "offset": [
+            0,
+            2
+          ]
+        }
+      },
+      {
+        "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+      },
+      {
+        "gamepad_cursor@common.gamepad_cursor_button": {}
+      }
+    ]
+  },
+  "inventory": {
+    "type": "panel",
+    "size": [
+      88,
+      83
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {
+        "inventory_grid": {
+          "type": "grid",
+          "size": [
+            162,
+            54
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [
+            0,
+            -26
+          ],
+          "grid_dimensions": [
+            9,
+            3
+          ],
+          "grid_item_template": "palaforge.inventory_grid_item",
+          "collection_name": "inventory_items"
+        }
+      }
+    ]
+  },
+  "inventory_grid_item@common.container_item": {
+    "$background_images": "pala_asset.slot",
+    "$item_collection_name": "inventory_items"
+  },
+  "hotbar_grid_item@common.container_item": {
+    "$background_images": "pala_asset.slot",
+    "$item_collection_name": "hotbar_items"
+  },
+  "hotbar_grid_template": {
+    "type": "grid",
+    "size": [
+      162,
+      18
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      -5
+    ],
+    "grid_dimensions": [
+      9,
+      1
+    ],
+    "grid_item_template": "palaforge.hotbar_grid_item",
+    "collection_name": "hotbar_items"
+  },
+  "container_slot_button_prototype_locked": {
+    "type": "button",
+    "$focus_id|default": "",
+    "$focus_override_down|default": "",
+    "$focus_override_up|default": "",
+    "$focus_override_left|default": "",
+    "$focus_override_right|default": "",
+    "$focus_id_binding_type|default": "collection",
+    "$focus_override_down_binding_type|default": "collection",
+    "$focus_override_up_binding_type|default": "collection",
+    "$focus_override_left_binding_type|default": "collection",
+    "$focus_override_right_binding_type|default": "collection",
+    "focus_identifier": "$focus_id",
+    "focus_change_down": "$focus_override_down",
+    "focus_change_up": "$focus_override_up",
+    "focus_change_left": "$focus_override_left",
+    "focus_change_right": "$focus_override_right",
+    "focus_enabled": true,
+    "focus_wrap_enabled": false,
+    "focus_magnet_enabled": true,
+    "$highlight_control|default": "common.highlight_slot_panel",
+    "default_focus_precedence": 1,
+    "hover_control": "hover",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_id_binding_type",
+        "binding_name": "#focus_identifier",
+        "binding_name_override": "#focus_identifier",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_down_binding_type",
+        "binding_name": "#focus_change_down",
+        "binding_name_override": "#focus_change_down",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_up_binding_type",
+        "binding_name": "#focus_change_up",
+        "binding_name_override": "#focus_change_up",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_left_binding_type",
+        "binding_name": "#focus_change_left",
+        "binding_name_override": "#focus_change_left",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_right_binding_type",
+        "binding_name": "#focus_change_right",
+        "binding_name_override": "#focus_change_right",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      }
+    ],
+    "button_mappings": [
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "hover@$highlight_control": {}
+      }
+    ]
+  },
+  "loading_bar": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$visible|default": true,
+    "controls": [
+      {
+        "loading_bar_horizontal": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "collection_index": "$index",
+          "visible": "$visible",
+          "variables": {
+            "requires": "($orientation = 'vertical')",
+            "$visible": false
+          },
+          "controls": [
+            {
+              "1%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "1%",
+                  "100%"
+                ],
+                "$score": 1
+              }
+            },
+            {
+              "2%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "2%",
+                  "100%"
+                ],
+                "$score": 2
+              }
+            },
+            {
+              "3%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "3%",
+                  "100%"
+                ],
+                "$score": 3
+              }
+            },
+            {
+              "4%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "4%",
+                  "100%"
+                ],
+                "$score": 4
+              }
+            },
+            {
+              "5%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "5%",
+                  "100%"
+                ],
+                "$score": 5
+              }
+            },
+            {
+              "6%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "6%",
+                  "100%"
+                ],
+                "$score": 6
+              }
+            },
+            {
+              "7%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "7%",
+                  "100%"
+                ],
+                "$score": 7
+              }
+            },
+            {
+              "8%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "8%",
+                  "100%"
+                ],
+                "$score": 8
+              }
+            },
+            {
+              "9%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "9%",
+                  "100%"
+                ],
+                "$score": 9
+              }
+            },
+            {
+              "10%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "10%",
+                  "100%"
+                ],
+                "$score": 10
+              }
+            },
+            {
+              "11%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "11%",
+                  "100%"
+                ],
+                "$score": 11
+              }
+            },
+            {
+              "12%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "12%",
+                  "100%"
+                ],
+                "$score": 12
+              }
+            },
+            {
+              "13%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "13%",
+                  "100%"
+                ],
+                "$score": 13
+              }
+            },
+            {
+              "14%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "14%",
+                  "100%"
+                ],
+                "$score": 14
+              }
+            },
+            {
+              "15%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "15%",
+                  "100%"
+                ],
+                "$score": 15
+              }
+            },
+            {
+              "16%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "16%",
+                  "100%"
+                ],
+                "$score": 16
+              }
+            },
+            {
+              "17%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "17%",
+                  "100%"
+                ],
+                "$score": 17
+              }
+            },
+            {
+              "18%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "18%",
+                  "100%"
+                ],
+                "$score": 18
+              }
+            },
+            {
+              "19%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "19%",
+                  "100%"
+                ],
+                "$score": 19
+              }
+            },
+            {
+              "20%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "20%",
+                  "100%"
+                ],
+                "$score": 20
+              }
+            },
+            {
+              "21%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "21%",
+                  "100%"
+                ],
+                "$score": 21
+              }
+            },
+            {
+              "22%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "22%",
+                  "100%"
+                ],
+                "$score": 22
+              }
+            },
+            {
+              "23%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "23%",
+                  "100%"
+                ],
+                "$score": 23
+              }
+            },
+            {
+              "24%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "24%",
+                  "100%"
+                ],
+                "$score": 24
+              }
+            },
+            {
+              "25%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "25%",
+                  "100%"
+                ],
+                "$score": 25
+              }
+            },
+            {
+              "26%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "26%",
+                  "100%"
+                ],
+                "$score": 26
+              }
+            },
+            {
+              "27%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "27%",
+                  "100%"
+                ],
+                "$score": 27
+              }
+            },
+            {
+              "28%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "28%",
+                  "100%"
+                ],
+                "$score": 28
+              }
+            },
+            {
+              "29%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "29%",
+                  "100%"
+                ],
+                "$score": 29
+              }
+            },
+            {
+              "30%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "30%",
+                  "100%"
+                ],
+                "$score": 30
+              }
+            },
+            {
+              "31%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "31%",
+                  "100%"
+                ],
+                "$score": 31
+              }
+            },
+            {
+              "32%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "32%",
+                  "100%"
+                ],
+                "$score": 32
+              }
+            },
+            {
+              "33%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "33%",
+                  "100%"
+                ],
+                "$score": 33
+              }
+            },
+            {
+              "34%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "34%",
+                  "100%"
+                ],
+                "$score": 34
+              }
+            },
+            {
+              "35%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "35%",
+                  "100%"
+                ],
+                "$score": 35
+              }
+            },
+            {
+              "36%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "36%",
+                  "100%"
+                ],
+                "$score": 36
+              }
+            },
+            {
+              "37%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "37%",
+                  "100%"
+                ],
+                "$score": 37
+              }
+            },
+            {
+              "38%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "38%",
+                  "100%"
+                ],
+                "$score": 38
+              }
+            },
+            {
+              "39%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "39%",
+                  "100%"
+                ],
+                "$score": 39
+              }
+            },
+            {
+              "40%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "40%",
+                  "100%"
+                ],
+                "$score": 40
+              }
+            },
+            {
+              "41%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "41%",
+                  "100%"
+                ],
+                "$score": 41
+              }
+            },
+            {
+              "42%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "42%",
+                  "100%"
+                ],
+                "$score": 42
+              }
+            },
+            {
+              "43%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "43%",
+                  "100%"
+                ],
+                "$score": 43
+              }
+            },
+            {
+              "44%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "44%",
+                  "100%"
+                ],
+                "$score": 44
+              }
+            },
+            {
+              "45%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "45%",
+                  "100%"
+                ],
+                "$score": 45
+              }
+            },
+            {
+              "46%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "46%",
+                  "100%"
+                ],
+                "$score": 46
+              }
+            },
+            {
+              "47%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "47%",
+                  "100%"
+                ],
+                "$score": 47
+              }
+            },
+            {
+              "48%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "48%",
+                  "100%"
+                ],
+                "$score": 48
+              }
+            },
+            {
+              "49%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "49%",
+                  "100%"
+                ],
+                "$score": 49
+              }
+            },
+            {
+              "50%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "50%",
+                  "100%"
+                ],
+                "$score": 50
+              }
+            },
+            {
+              "51%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "51%",
+                  "100%"
+                ],
+                "$score": 51
+              }
+            },
+            {
+              "52%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "52%",
+                  "100%"
+                ],
+                "$score": 52
+              }
+            },
+            {
+              "53%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "53%",
+                  "100%"
+                ],
+                "$score": 53
+              }
+            },
+            {
+              "54%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "54%",
+                  "100%"
+                ],
+                "$score": 54
+              }
+            },
+            {
+              "55%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "55%",
+                  "100%"
+                ],
+                "$score": 55
+              }
+            },
+            {
+              "56%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "56%",
+                  "100%"
+                ],
+                "$score": 56
+              }
+            },
+            {
+              "57%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "57%",
+                  "100%"
+                ],
+                "$score": 57
+              }
+            },
+            {
+              "58%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "58%",
+                  "100%"
+                ],
+                "$score": 58
+              }
+            },
+            {
+              "59%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "59%",
+                  "100%"
+                ],
+                "$score": 59
+              }
+            },
+            {
+              "60%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "60%",
+                  "100%"
+                ],
+                "$score": 60
+              }
+            },
+            {
+              "61%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "61%",
+                  "100%"
+                ],
+                "$score": 61
+              }
+            },
+            {
+              "62%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "62%",
+                  "100%"
+                ],
+                "$score": 62
+              }
+            },
+            {
+              "63%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "63%",
+                  "100%"
+                ],
+                "$score": 63
+              }
+            },
+            {
+              "64%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "64%",
+                  "100%"
+                ],
+                "$score": 64
+              }
+            },
+            {
+              "65%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "65%",
+                  "100%"
+                ],
+                "$score": 65
+              }
+            },
+            {
+              "66%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "66%",
+                  "100%"
+                ],
+                "$score": 66
+              }
+            },
+            {
+              "67%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "67%",
+                  "100%"
+                ],
+                "$score": 67
+              }
+            },
+            {
+              "68%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "68%",
+                  "100%"
+                ],
+                "$score": 68
+              }
+            },
+            {
+              "69%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "69%",
+                  "100%"
+                ],
+                "$score": 69
+              }
+            },
+            {
+              "70%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "70%",
+                  "100%"
+                ],
+                "$score": 70
+              }
+            },
+            {
+              "71%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "71%",
+                  "100%"
+                ],
+                "$score": 71
+              }
+            },
+            {
+              "72%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "72%",
+                  "100%"
+                ],
+                "$score": 72
+              }
+            },
+            {
+              "73%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "73%",
+                  "100%"
+                ],
+                "$score": 73
+              }
+            },
+            {
+              "74%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "74%",
+                  "100%"
+                ],
+                "$score": 74
+              }
+            },
+            {
+              "75%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "75%",
+                  "100%"
+                ],
+                "$score": 75
+              }
+            },
+            {
+              "76%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "76%",
+                  "100%"
+                ],
+                "$score": 76
+              }
+            },
+            {
+              "77%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "77%",
+                  "100%"
+                ],
+                "$score": 77
+              }
+            },
+            {
+              "78%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "78%",
+                  "100%"
+                ],
+                "$score": 78
+              }
+            },
+            {
+              "79%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "79%",
+                  "100%"
+                ],
+                "$score": 79
+              }
+            },
+            {
+              "80%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "80%",
+                  "100%"
+                ],
+                "$score": 80
+              }
+            },
+            {
+              "81%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "81%",
+                  "100%"
+                ],
+                "$score": 81
+              }
+            },
+            {
+              "82%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "82%",
+                  "100%"
+                ],
+                "$score": 82
+              }
+            },
+            {
+              "83%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "83%",
+                  "100%"
+                ],
+                "$score": 83
+              }
+            },
+            {
+              "84%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "84%",
+                  "100%"
+                ],
+                "$score": 84
+              }
+            },
+            {
+              "85%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "85%",
+                  "100%"
+                ],
+                "$score": 85
+              }
+            },
+            {
+              "86%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "86%",
+                  "100%"
+                ],
+                "$score": 86
+              }
+            },
+            {
+              "87%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "87%",
+                  "100%"
+                ],
+                "$score": 87
+              }
+            },
+            {
+              "88%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "88%",
+                  "100%"
+                ],
+                "$score": 88
+              }
+            },
+            {
+              "89%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "89%",
+                  "100%"
+                ],
+                "$score": 89
+              }
+            },
+            {
+              "90%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "90%",
+                  "100%"
+                ],
+                "$score": 90
+              }
+            },
+            {
+              "91%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "91%",
+                  "100%"
+                ],
+                "$score": 91
+              }
+            },
+            {
+              "92%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "92%",
+                  "100%"
+                ],
+                "$score": 92
+              }
+            },
+            {
+              "93%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "93%",
+                  "100%"
+                ],
+                "$score": 93
+              }
+            },
+            {
+              "94%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "94%",
+                  "100%"
+                ],
+                "$score": 94
+              }
+            },
+            {
+              "95%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "95%",
+                  "100%"
+                ],
+                "$score": 95
+              }
+            },
+            {
+              "96%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "96%",
+                  "100%"
+                ],
+                "$score": 96
+              }
+            },
+            {
+              "97%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "97%",
+                  "100%"
+                ],
+                "$score": 97
+              }
+            },
+            {
+              "98%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "98%",
+                  "100%"
+                ],
+                "$score": 98
+              }
+            },
+            {
+              "99%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "99%",
+                  "100%"
+                ],
+                "$score": 99
+              }
+            },
+            {
+              "100%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$score": 100
+              }
+            }
+          ]
+        }
+      },
+      {
+        "loading_bar_vertical": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "collection_index": "$index",
+          "visible": "$visible",
+          "variables": {
+            "requires": "($orientation = 'horizontal')",
+            "$visible": false
+          },
+          "controls": [
+            {
+              "fill": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "fill"
+                ]
+              }
+            },
+            {
+              "1%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "10%"
+                ],
+                "$score": 1
+              }
+            },
+            {
+              "2%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "2%"
+                ],
+                "$score": 2
+              }
+            },
+            {
+              "3%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "3%"
+                ],
+                "$score": 3
+              }
+            },
+            {
+              "4%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "4%"
+                ],
+                "$score": 4
+              }
+            },
+            {
+              "5%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "5%"
+                ],
+                "$score": 5
+              }
+            },
+            {
+              "6%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "6%"
+                ],
+                "$score": 6
+              }
+            },
+            {
+              "7%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "7%"
+                ],
+                "$score": 7
+              }
+            },
+            {
+              "8%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "8%"
+                ],
+                "$score": 8
+              }
+            },
+            {
+              "9%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "9%"
+                ],
+                "$score": 9
+              }
+            },
+            {
+              "10%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "10%"
+                ],
+                "$score": 10
+              }
+            },
+            {
+              "11%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "11%"
+                ],
+                "$score": 11
+              }
+            },
+            {
+              "12%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "12%"
+                ],
+                "$score": 12
+              }
+            },
+            {
+              "13%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "13%"
+                ],
+                "$score": 13
+              }
+            },
+            {
+              "14%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "14%"
+                ],
+                "$score": 14
+              }
+            },
+            {
+              "15%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "15%"
+                ],
+                "$score": 15
+              }
+            },
+            {
+              "16%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "16%"
+                ],
+                "$score": 16
+              }
+            },
+            {
+              "17%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "17%"
+                ],
+                "$score": 17
+              }
+            },
+            {
+              "18%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "18%"
+                ],
+                "$score": 18
+              }
+            },
+            {
+              "19%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "19%"
+                ],
+                "$score": 19
+              }
+            },
+            {
+              "20%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "20%"
+                ],
+                "$score": 20
+              }
+            },
+            {
+              "21%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "21%"
+                ],
+                "$score": 21
+              }
+            },
+            {
+              "22%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "22%"
+                ],
+                "$score": 22
+              }
+            },
+            {
+              "23%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "23%"
+                ],
+                "$score": 23
+              }
+            },
+            {
+              "24%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "24%"
+                ],
+                "$score": 24
+              }
+            },
+            {
+              "25%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "25%"
+                ],
+                "$score": 25
+              }
+            },
+            {
+              "26%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "26%"
+                ],
+                "$score": 26
+              }
+            },
+            {
+              "27%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "27%"
+                ],
+                "$score": 27
+              }
+            },
+            {
+              "28%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "28%"
+                ],
+                "$score": 28
+              }
+            },
+            {
+              "29%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "29%"
+                ],
+                "$score": 29
+              }
+            },
+            {
+              "30%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "30%"
+                ],
+                "$score": 30
+              }
+            },
+            {
+              "31%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "31%"
+                ],
+                "$score": 31
+              }
+            },
+            {
+              "32%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "32%"
+                ],
+                "$score": 32
+              }
+            },
+            {
+              "33%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "33%"
+                ],
+                "$score": 33
+              }
+            },
+            {
+              "34%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "34%"
+                ],
+                "$score": 34
+              }
+            },
+            {
+              "35%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "35%"
+                ],
+                "$score": 35
+              }
+            },
+            {
+              "36%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "36%"
+                ],
+                "$score": 36
+              }
+            },
+            {
+              "37%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "37%"
+                ],
+                "$score": 37
+              }
+            },
+            {
+              "38%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "38%"
+                ],
+                "$score": 38
+              }
+            },
+            {
+              "39%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "39%"
+                ],
+                "$score": 39
+              }
+            },
+            {
+              "40%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "40%"
+                ],
+                "$score": 40
+              }
+            },
+            {
+              "41%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "41%"
+                ],
+                "$score": 41
+              }
+            },
+            {
+              "42%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "42%"
+                ],
+                "$score": 42
+              }
+            },
+            {
+              "43%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "43%"
+                ],
+                "$score": 43
+              }
+            },
+            {
+              "44%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "44%"
+                ],
+                "$score": 44
+              }
+            },
+            {
+              "45%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "45%"
+                ],
+                "$score": 45
+              }
+            },
+            {
+              "46%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "46%"
+                ],
+                "$score": 46
+              }
+            },
+            {
+              "47%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "47%"
+                ],
+                "$score": 47
+              }
+            },
+            {
+              "48%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "48%"
+                ],
+                "$score": 48
+              }
+            },
+            {
+              "49%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "49%"
+                ],
+                "$score": 49
+              }
+            },
+            {
+              "50%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "50%"
+                ],
+                "$score": 50
+              }
+            },
+            {
+              "51%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "51%"
+                ],
+                "$score": 51
+              }
+            },
+            {
+              "52%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "52%"
+                ],
+                "$score": 52
+              }
+            },
+            {
+              "53%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "53%"
+                ],
+                "$score": 53
+              }
+            },
+            {
+              "54%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "54%"
+                ],
+                "$score": 54
+              }
+            },
+            {
+              "55%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "55%"
+                ],
+                "$score": 55
+              }
+            },
+            {
+              "56%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "56%"
+                ],
+                "$score": 56
+              }
+            },
+            {
+              "57%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "57%"
+                ],
+                "$score": 57
+              }
+            },
+            {
+              "58%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "58%"
+                ],
+                "$score": 58
+              }
+            },
+            {
+              "59%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "59%"
+                ],
+                "$score": 59
+              }
+            },
+            {
+              "60%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "60%"
+                ],
+                "$score": 60
+              }
+            },
+            {
+              "61%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "61%"
+                ],
+                "$score": 61
+              }
+            },
+            {
+              "62%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "62%"
+                ],
+                "$score": 62
+              }
+            },
+            {
+              "63%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "63%"
+                ],
+                "$score": 63
+              }
+            },
+            {
+              "64%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "64%"
+                ],
+                "$score": 64
+              }
+            },
+            {
+              "65%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "65%"
+                ],
+                "$score": 65
+              }
+            },
+            {
+              "66%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "66%"
+                ],
+                "$score": 66
+              }
+            },
+            {
+              "67%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "67%"
+                ],
+                "$score": 67
+              }
+            },
+            {
+              "68%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "68%"
+                ],
+                "$score": 68
+              }
+            },
+            {
+              "69%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "69%"
+                ],
+                "$score": 69
+              }
+            },
+            {
+              "70%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "70%"
+                ],
+                "$score": 70
+              }
+            },
+            {
+              "71%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "71%"
+                ],
+                "$score": 71
+              }
+            },
+            {
+              "72%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "72%"
+                ],
+                "$score": 72
+              }
+            },
+            {
+              "73%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "73%"
+                ],
+                "$score": 73
+              }
+            },
+            {
+              "74%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "74%"
+                ],
+                "$score": 74
+              }
+            },
+            {
+              "75%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "75%"
+                ],
+                "$score": 75
+              }
+            },
+            {
+              "76%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "76%"
+                ],
+                "$score": 76
+              }
+            },
+            {
+              "77%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "77%"
+                ],
+                "$score": 77
+              }
+            },
+            {
+              "78%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "78%"
+                ],
+                "$score": 78
+              }
+            },
+            {
+              "79%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "79%"
+                ],
+                "$score": 79
+              }
+            },
+            {
+              "80%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "80%"
+                ],
+                "$score": 80
+              }
+            },
+            {
+              "81%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "81%"
+                ],
+                "$score": 81
+              }
+            },
+            {
+              "82%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "82%"
+                ],
+                "$score": 82
+              }
+            },
+            {
+              "83%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "83%"
+                ],
+                "$score": 83
+              }
+            },
+            {
+              "84%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "84%"
+                ],
+                "$score": 84
+              }
+            },
+            {
+              "85%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "85%"
+                ],
+                "$score": 85
+              }
+            },
+            {
+              "86%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "86%"
+                ],
+                "$score": 86
+              }
+            },
+            {
+              "87%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "87%"
+                ],
+                "$score": 87
+              }
+            },
+            {
+              "88%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "88%"
+                ],
+                "$score": 88
+              }
+            },
+            {
+              "89%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "89%"
+                ],
+                "$score": 89
+              }
+            },
+            {
+              "90%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "90%"
+                ],
+                "$score": 90
+              }
+            },
+            {
+              "91%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "91%"
+                ],
+                "$score": 91
+              }
+            },
+            {
+              "92%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "92%"
+                ],
+                "$score": 92
+              }
+            },
+            {
+              "93%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "93%"
+                ],
+                "$score": 93
+              }
+            },
+            {
+              "94%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "94%"
+                ],
+                "$score": 94
+              }
+            },
+            {
+              "95%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "95%"
+                ],
+                "$score": 95
+              }
+            },
+            {
+              "96%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "96%"
+                ],
+                "$score": 96
+              }
+            },
+            {
+              "97%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "97%"
+                ],
+                "$score": 97
+              }
+            },
+            {
+              "98%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "98%"
+                ],
+                "$score": 98
+              }
+            },
+            {
+              "99%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "99%"
+                ],
+                "$score": 99
+              }
+            },
+            {
+              "100%@ng_pala_gui.pourcentage_bar": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$score": 100
+              }
+            }
+          ]
+        }
+      },
+      {
+        "texture_background_bar": {
+          "type": "image",
+          "$keep_edit|default": false,
+          "keep_ratio": "$keep_edit",
+          "$color_border_empty|default": "white",
+          "color": "$color_border_empty",
+          "layer": 0,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "$texture_background_bar"
+        }
+      }
+    ]
+  },
+  "Simple_text@ng_pala_gui.panel": {
+    "$visible|default": true,
+    "$size_icone_right|default": [
+      0,
+      0
+    ],
+    "$color_icone_right|default": "",
+    "$texture_icone_right|default": "",
+    "$size_icone_left|default": [
+      0,
+      0
+    ],
+    "$color_icone_left|default": "",
+    "$texture_icone_left|default": "",
+    "$offset_icone_left|default": [
+      0,
+      0
+    ],
+    "$padding_right|default": [
+      2,
+      0.1
+    ],
+    "$type_get_text|default": "",
+    "$max_size": "",
+    "$font_scale_factor|default": 1,
+    "$text_color": "",
+    "$font_type|default": "default",
+    "$text_offset|default": [
+      0,
+      0
+    ],
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "controls": [
+      {
+        "Simple_text": {
+          "type": "stack_panel",
+          "collection_name": "container_items",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "centring_icone_left@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "icone_left@$texture_icone_left": {
+                      "type": "image",
+                      "offset": "$offset_icone_left",
+                      "layer": 10000000000000000000,
+                      "size": "$size_icone_left",
+                      "color": "$color_icone_left",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($texture_icone_left = '' or (($type_get_text = '') and ($texture_icone_right = '')))",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": [
+                  2,
+                  0.1
+                ],
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($texture_icone_left = '')",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "collection_index": "$index",
+                "size": [
+                  "100%c",
+                  "100%sm"
+                ],
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($type_get_text = '')",
+                  "$visible": false
+                },
+                "controls": [
+                  {
+                    "text@ng_pala_gui.$type_get_text": {
+                      "type": "label",
+                      "layer": 10000000000000000,
+                      "max_size": "$max_size",
+                      "text": "#display_text",
+                      "offset": "$text_offset",
+                      "color": "$text_color",
+                      "font_scale_factor": "$font_scale_factor",
+                      "font_type": "$font_type"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding_right@ng_pala_gui.panel": {
+                "size": "$padding_right",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($texture_icone_right = '' or (($type_get_text = '') and ($texture_icone_left = '')))",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_icone_right@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "icone_right@$texture_icone_right": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$size_icone_right",
+                      "color": "$color_icone_right",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($texture_icone_right = '')",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Simple_Button@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$visible|default": true,
+    "$size_icone_right|default": [
+      0,
+      0
+    ],
+    "$color_icone_right|default": "",
+    "$texture_icone_right|default": "",
+    "$size_icone_left|default": [
+      0,
+      0
+    ],
+    "$color_icone_left|default": "",
+    "$texture_icone_left|default": "",
+    "$offset_icone_left|default": [
+      0,
+      0
+    ],
+    "$type_get_text|default": "",
+    "$max_size": "",
+    "$font_scale_factor|default": 1,
+    "$text_color": "",
+    "$font_type|default": "default",
+    "$text_offset|default": [
+      0,
+      0
+    ],
+    "$padding_right|default": [
+      2,
+      0.1
+    ],
+    "$index|default": 0,
+    "$size_button|default": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "$texture_button|default": "ng_pala_gui.red_button",
+          "$mapping_button|default": "clickable",
+          "size": "$size_button",
+          "controls": [
+            {
+              "texture_button@$texture_button": {
+                "layer": 5
+              }
+            },
+            {
+              "Simple_text@ng_pala_gui.panel": {
+                "layer": 15,
+                "size": [
+                  "100%c",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "Simple_text": {
+                      "type": "stack_panel",
+                      "collection_name": "container_items",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%c",
+                        "100%cm"
+                      ],
+                      "controls": [
+                        {
+                          "centring_icone_left@ng_pala_gui.panel": {
+                            "size": [
+                              "100%c",
+                              "100%c"
+                            ],
+                            "controls": [
+                              {
+                                "icone_left@$texture_icone_left": {
+                                  "type": "image",
+                                  "offset": "$offset_icone_left",
+                                  "layer": 10000000000000000000,
+                                  "size": "$size_icone_left",
+                                  "color": "$color_icone_left",
+                                  "visible": "$visible",
+                                  "variables": {
+                                    "requires": "($texture_icone_left = '' or (($type_get_text = '') and ($texture_icone_right = '')))",
+                                    "$visible": false
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "Padding@ng_pala_gui.panel": {
+                            "size": [
+                              2,
+                              0.1
+                            ],
+                            "visible": "$visible",
+                            "variables": {
+                              "requires": "($texture_icone_left = '')",
+                              "$visible": false
+                            }
+                          }
+                        },
+                        {
+                          "centring_text@ng_pala_gui.panel": {
+                            "collection_index": "$index",
+                            "size": [
+                              "100%c",
+                              "100%c"
+                            ],
+                            "visible": "$visible",
+                            "variables": {
+                              "requires": "($type_get_text = '')",
+                              "$visible": false
+                            },
+                            "controls": [
+                              {
+                                "text@ng_pala_gui.$type_get_text": {
+                                  "type": "label",
+                                  "layer": 10000000000000000,
+                                  "max_size": "$max_size",
+                                  "text": "#text",
+                                  "offset": "$text_offset",
+                                  "color": "$text_color",
+                                  "font_scale_factor": "$font_scale_factor",
+                                  "font_type": "$font_type"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "Padding_right@ng_pala_gui.panel": {
+                            "size": "$padding_right",
+                            "visible": "$visible",
+                            "variables": {
+                              "requires": "($texture_icone_right = '' or (($type_get_text = '') and ($texture_icone_left = '')))",
+                              "$visible": false
+                            }
+                          }
+                        },
+                        {
+                          "centring_icone_right@ng_pala_gui.panel": {
+                            "size": [
+                              "100%c",
+                              "100%c"
+                            ],
+                            "controls": [
+                              {
+                                "icone_right@$texture_icone_right": {
+                                  "type": "image",
+                                  "layer": 1000,
+                                  "size": "$size_icone_right",
+                                  "color": "$color_icone_right",
+                                  "visible": "$visible",
+                                  "variables": {
+                                    "requires": "($texture_icone_right = '')",
+                                    "$visible": false
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "multiple_status_text@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$visible|default": true,
+    "$max_size|default": [
+      "default",
+      "default"
+    ],
+    "$S0_size_icone_right|default": [
+      0,
+      0
+    ],
+    "$S0_color_icone_right|default": "",
+    "$S0_texture_icone_right|default": "",
+    "$S0_size_icone_left|default": [
+      0,
+      0
+    ],
+    "$S0_color_icone_left|default": "",
+    "$S0_texture_icone_left|default": "",
+    "$S0_type_get_text|default": "",
+    "$S0_font_type|default": "default",
+    "$S0_text_color|default": "",
+    "$S0_padding_left|default": [
+      0,
+      0.1
+    ],
+    "$S0_padding_right|default": [
+      0,
+      0.1
+    ],
+    "$font_scale_factor|default": 1,
+    "$text_offset|default": 1,
+    "$font_type|default": "default",
+    "$S1_size_icone_right|default": [
+      0,
+      0
+    ],
+    "$S1_color_icone_right|default": "",
+    "$S1_texture_icone_right|default": "",
+    "$S1_size_icone_left|default": [
+      0,
+      0
+    ],
+    "$S1_color_icone_left|default": "",
+    "$S1_texture_icone_left|default": "",
+    "$S1_type_get_text|default": "",
+    "$S1_font_type|default": "default",
+    "$S1_text_color|default": "",
+    "$S1_padding_left|default": [
+      2,
+      0.1
+    ],
+    "$S1_padding_right|default": [
+      2,
+      0.1
+    ],
+    "$S2_size_icone_right|default": [
+      0,
+      0
+    ],
+    "$S2_color_icone_right|default": "",
+    "$S2_texture_icone_right|default": "",
+    "$S2_size_icone_left|default": [
+      0,
+      0
+    ],
+    "$S2_color_icone_left|default": "",
+    "$S2_texture_icone_left|default": "",
+    "$S2_type_get_text|default": "",
+    "$S2_font_type|default": "default",
+    "$S2_text_color|default": "",
+    "$S2_padding_left|default": [
+      2,
+      0.1
+    ],
+    "$S2_padding_right|default": [
+      2,
+      0.1
+    ],
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "check_status_text_S0": {
+          "type": "stack_panel",
+          "collection_name": "container_items",
+          "collection_index": "$index",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_left@$S0_texture_icone_left": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S0_size_icone_left",
+                      "color": "$S0_color_icone_left",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S0_texture_icone_left = '' or (($S0_type_get_text = '') and ($S0_texture_icone_right = '')))",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S0_padding_left",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S0_texture_icone_left = '')",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "collection_index": "$index",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "text@ng_pala_gui.$S0_type_get_text": {
+                      "type": "label",
+                      "layer": 10000000000000000000000000000000000000000,
+                      "max_size": "$max_size",
+                      "text": "#text",
+                      "offset": "$text_offset",
+                      "color": "$S0_text_color",
+                      "font_scale_factor": "$font_scale_factor",
+                      "font_type": "$font_type"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S0_padding_right",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S0_texture_icone_right = '' or (($S0_type_get_text = '') and ($S0_texture_icone_left = '')))",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_right@$S0_texture_icone_right": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S0_size_icone_right",
+                      "color": "$S0_color_icone_right",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S0_texture_icone_right = '')",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "check_status_text_S1": {
+          "type": "stack_panel",
+          "collection_name": "container_items",
+          "collection_index": "$index",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_left@$S1_texture_icone_left": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S1_size_icone_left",
+                      "color": "$S1_color_icone_left",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S1_texture_icone_left = '' or (($S1_type_get_text = '') and ($S1_texture_icone_right = '')))",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S1_padding_left",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S1_texture_icone_left = '')",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "collection_index": "$index",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "text@ng_pala_gui.$S1_type_get_text": {
+                      "type": "label",
+                      "layer": 10000000000000000000000000000000000000000,
+                      "max_size": "$max_size",
+                      "text": "#text",
+                      "offset": "$text_offset",
+                      "color": "$S1_text_color",
+                      "font_scale_factor": "$font_scale_factor",
+                      "font_type": "$font_type"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S1_padding_right",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S1_texture_icone_right = '' or (($S1_type_get_text = '') and ($S1_texture_icone_left = '')))",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_right@$S1_texture_icone_right": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S1_size_icone_right",
+                      "color": "$S1_color_icone_right",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S1_texture_icone_right = '')",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "check_status_text_S2": {
+          "type": "stack_panel",
+          "collection_name": "container_items",
+          "collection_index": "$index",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - '§2') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_left@$S2_texture_icone_left": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S2_size_icone_left",
+                      "color": "$S2_color_icone_left",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S2_texture_icone_left = '' or (($S2_type_get_text = '') and ($S2_texture_icone_right = '')))",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S2_padding_left",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S2_texture_icone_left = '')",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "collection_index": "$index",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "text@ng_pala_gui.$S2_type_get_text": {
+                      "type": "label",
+                      "layer": 10000000000000000000000000000000000000000,
+                      "max_size": "$max_size",
+                      "offset": "$text_offset",
+                      "text": "#text",
+                      "color": "$S2_text_color",
+                      "font_scale_factor": "$font_scale_factor",
+                      "font_type": "$font_type"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "Padding@ng_pala_gui.panel": {
+                "size": "$S2_padding_right",
+                "visible": "$visible",
+                "variables": {
+                  "requires": "($S2_texture_icone_right = '' or (($S2_type_get_text = '') and ($S2_texture_icone_left = '')))",
+                  "$visible": false
+                }
+              }
+            },
+            {
+              "centring_text@ng_pala_gui.panel": {
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "icone_right@$S2_texture_icone_right": {
+                      "type": "image",
+                      "layer": 1000,
+                      "size": "$S2_size_icone_right",
+                      "color": "$S2_color_icone_right",
+                      "visible": "$visible",
+                      "variables": {
+                        "requires": "($S2_texture_icone_right = '')",
+                        "$visible": false
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "multiple_status_button@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "controls": [
+      {
+        "button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "$fonction_mapping_button_S0|default": "clickable",
+          "$fonction_mapping_button_S1|default": "nonclickable",
+          "$fonction_mapping_button_S2|default": "nonclickable",
+          "$textures_button_S0|default": "pala_asset.white_background",
+          "$textures_button_S1|default": "pala_asset.white_background",
+          "$textures_button_S2|default": "pala_asset.white_background",
+          "size": "$size_button",
+          "controls": [
+            {
+              "check_status_S0": {
+                "$mapping_button|default": "$fonction_mapping_button_S0",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S0": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S1": {
+                "$mapping_button|default": "$fonction_mapping_button_S1",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S1": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S2": {
+                "$mapping_button|default": "$fonction_mapping_button_S2",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§2') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S2": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "module_simple_text@ng_pala_gui.multiple_status_text": {
+                "layer": 150000
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "node_slot_button@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "controls": [
+      {
+        "button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "$fonction_mapping_button_S0|default": "clickable",
+          "$fonction_mapping_button_S1|default": "nonclickable",
+          "$fonction_mapping_button_S2|default": "nonclickable",
+          "$textures_button_S0|default": "pala_asset.white_background",
+          "$textures_button_S1|default": "pala_asset.white_background",
+          "$textures_button_S2|default": "pala_asset.white_background",
+          "size": "$size_button",
+          "controls": [
+            {
+              "check_status_S0": {
+                "$mapping_button|default": "$fonction_mapping_button_S0",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((#hover_text - '§1§r') = #hover_text) and (not ((#hover_text - '/') = #hover_text)))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S0": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S1": {
+                "$mapping_button|default": "$fonction_mapping_button_S1",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((not ((#hover_text - '§1§r') = #hover_text)) and ((#hover_text - '§f§r') = #hover_text)) and (not ((#hover_text - '/') = #hover_text)))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S1": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S2": {
+                "$mapping_button|default": "$fonction_mapping_button_S2",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(((not ((#hover_text - '§1§r') = #hover_text)) and (not ((#hover_text - '§f§r') = #hover_text))) and (not ((#hover_text - '/') = #hover_text)))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S2": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "module_simple_text@ng_pala_gui.multiple_status_text": {
+                "layer": 150000
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "multiple_status_button_f@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "controls": [
+      {
+        "button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "$fonction_mapping_button_S0|default": "clickable",
+          "$fonction_mapping_button_S1|default": "nonclickable",
+          "$fonction_mapping_button_S2|default": "nonclickable",
+          "$textures_button_S0|default": "pala_asset.white_background",
+          "$textures_button_S1|default": "pala_asset.white_background",
+          "$textures_button_S2|default": "pala_asset.white_background",
+          "size": "$size_button",
+          "controls": [
+            {
+              "check_status_S0": {
+                "$mapping_button|default": "$fonction_mapping_button_S0",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§0§r') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S0": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S1": {
+                "$mapping_button|default": "$fonction_mapping_button_S1",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#hover_text - '§1§r') = #hover_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S1": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "check_status_S2": {
+                "$mapping_button|default": "$fonction_mapping_button_S2",
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "none"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not ((#hover_text - '§f§r') = #hover_text)) and (not ((#hover_text - '/') = #hover_text)))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {
+                    "texture_button@$textures_button_S2": {
+                      "layer": 5
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "module_simple_text@ng_pala_gui.multiple_status_text": {
+                "layer": 150000
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Toggle@ng_pala_gui.panel": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$page1|default": "",
+    "$page2|default": "",
+    "$page3|default": "",
+    "$page4|default": "",
+    "$page5|default": "",
+    "$page6|default": "",
+    "controls": [
+      {
+        "toggle": {
+          "type": "stack_panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "collection_name": "container_items",
+          "controls": [
+            {
+              "toggle": {
+                "type": "collection_panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "collection_index": "$index_page",
+                "controls": [
+                  {
+                    "page1@$page1": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '0' - '') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "page2@$page2": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '1') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "page3@$page3": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '4') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "page4@$page4": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '5') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "page5@$page5": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '6') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "page6@$page6": {
+                      "bindings": [
+                        {
+                          "binding_type": "collection",
+                          "binding_collection_name": "container_items",
+                          "binding_name_override": "#hover_text",
+                          "binding_name": "#hover_text"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "(not ((#hover_text - '7') = #hover_text))",
+                          "target_property_name": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scroll@common.scrolling_panel": {
+    "$show_background": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$scroll_size": [
+      3,
+      "100%"
+    ],
+    "$scrolling_pane_size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "icone": {
+    "type": "collection_panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "collection_name": "container_items",
+    "controls": [
+      {
+        "icon_panel": {
+          "type": "collection_panel",
+          "collection_index": "$icone_index",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "icone": {
+                "type": "image",
+                "size": "$icone_size",
+                "layer": 10000000000,
+                "texture": "#texture",
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "container_items"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#hover_text - ('%.6s' * #hover_text)) - '§r')",
+                    "target_property_name": "#texture"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "icone_button@ng_pala_gui.collectionpanel": {
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$hover_texture|default": "pala_asset.background_whit",
+    "$type_get_texture|default": "",
+    "controls": [
+      {
+        "button": {
+          "type": "button",
+          "collection_index": "$index",
+          "hover_control": "hover",
+          "size": "$size_button",
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "container_items",
+              "binding_condition": "once"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_take_all_place_all",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_secondary_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.drop_all",
+              "mapping_type": "pressed",
+              "input_mode_condition": "not_gamepad",
+              "consume_event": true
+            }
+          ],
+          "controls": [
+            {
+              "default@ng_pala_gui.$type_get_texture": {
+                "type": "image",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 20,
+                "texture": "#texture"
+              }
+            },
+            {
+              "hover@$hover_texture": {
+                "type": "image",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 200000
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Get_text_amount": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((#hover_text - ('%.90s' * #hover_text)) - ':') - '§1') - '§2')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_trend": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((#hover_text - §0) - §1) - §2) - §o)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - §o)",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_label": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((#hover_text - '§c') - '§p') - '§0') - '§1') - '§r') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_no_color": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((((#hover_text - '§0') - '§1') - '§a') - '§c') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_no_marker": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((((#hover_text - '§m') - '§n') - '§b') - '§a') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_no_flag": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((((#hover_text - '§0') - '§1') - '§2') - '§r') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_type_1": {
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name_override": "#text",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_type_2": {
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_type_3": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - ':')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_right": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_pipe_1": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - '|')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_pipe_2": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - '|')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_head_16": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.22s' * #hover_text) - '|') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_tail_16": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.22s' * #hover_text))",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_head_12": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((('%.20s' * #hover_text) - '|') - '§o')",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_tail_12": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.20s' * #hover_text))",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_tri_1": {
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#separator": ":"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((('%.'+#search+'s') * #hover_text)) - #separator)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_tri_2": {
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#tail": "",
+      "#sep1": ":",
+      "#sep2": "|"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #sep1) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ((('%.'+#search+'s') * #hover_text)))",
+        "target_property_name": "#tail"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search_2 + 1 * ( not ((('%.'+#search_2+'s') * #tail) = #tail) and ((('%.'+#search_2+'s') * #tail) = (('%.'+#search_2+'s') * #tail) - #sep2) and ( not ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #sep1) ) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((('%.'+#search_2+'s') * #tail)) - #sep2)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_tri_3": {
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#tail": "",
+      "#sep1": ":",
+      "#sep2": "|"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #sep1) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ((('%.'+#search+'s') * #hover_text)))",
+        "target_property_name": "#tail"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search_2 + 1 * ( not ((('%.'+#search_2+'s') * #tail) = #tail) and ((('%.'+#search_2+'s') * #tail) = (('%.'+#search_2+'s') * #tail) - #sep2) and ( not ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #sep1) ) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tail - ((('%.'+#search_2+'s') * #tail)))",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_field_1": {
+    "type": "panel",
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#separator": ";"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((('%.'+#search+'s') * #hover_text)) - #separator)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_field_2": {
+    "type": "panel",
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#tail": "",
+      "#separator": ";"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ((('%.'+#search+'s') * #hover_text)))",
+        "target_property_name": "#tail"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search_2 + 1 * ( not ((('%.'+#search_2+'s') * #tail) = #tail) and ((('%.'+#search_2+'s') * #tail) = (('%.'+#search_2+'s') * #tail) - #separator) and ( not ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) ) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((('%.'+#search_2+'s') * #tail)) - #separator)",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_text_field_3": {
+    "type": "panel",
+    "property_bag": {
+      "#prev_hover": "",
+      "#search": 0,
+      "#search_2": 0,
+      "#tail": "",
+      "#separator": ";"
+    },
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search + 1 * ( not ((('%.'+#search+'s') * #hover_text) = #hover_text) and ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ((('%.'+#search+'s') * #hover_text)))",
+        "target_property_name": "#tail"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "((#search_2 + 1 * ( not ((('%.'+#search_2+'s') * #tail) = #tail) and ((('%.'+#search_2+'s') * #tail) = (('%.'+#search_2+'s') * #tail) - #separator) and ( not ((('%.'+#search+'s') * #hover_text) = (('%.'+#search+'s') * #hover_text) - #separator) ) )) * (#hover_text = #prev_hover))",
+        "target_property_name": "#search_2"
+      },
+      {
+        "binding_condition": "always",
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#prev_hover"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#tail - ((('%.'+#search_2+'s') * #tail)))",
+        "target_property_name": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#text - '§o')",
+        "target_property_name": "#display_text"
+      }
+    ]
+  },
+  "Get_texture_node": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((((#hover_text - '§o') - '§0') - '§1') - '§2') - '§r')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "Get_texture_type_1": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.6s' * #hover_text)) - '§r')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "Get_texture_type_2": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.6s' * #hover_text)) - '§r')",
+        "target_property_name": "#texture_source"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#texture_source - ('%.90s' * #texture_source)) - ':')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "Get_texture_type_3": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.6s' * #hover_text)) - '§r')",
+        "target_property_name": "#texture_source"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #texture_source) - ':')",
+        "target_property_name": "#texture"
+      }
+    ]
+  },
+  "title": {
+    "$text_color": "",
+    "type": "label",
+    "$font|default": "MinecraftTen",
+    "font_type": "$font",
+    "$title|default": "",
+    "layer": 10,
+    "text": "$title",
+    "color": "$color_front",
+    "font_scale_factor": "$font_scale_factor",
+    "variables": [
+      {
+        "requires": "($text_color = 'green')",
+        "$color_front": [
+          0.051,
+          0.349,
+          0.302
+        ],
+        "$color_shadow": [
+          0.09,
+          0.58,
+          0.498
+        ]
+      },
+      {
+        "requires": "($text_color = 'red')",
+        "$color_front": [
+          0.293,
+          0.32,
+          0.725
+        ],
+        "$color_shadow": [
+          0.435,
+          0.467,
+          0.937
+        ]
+      },
+      {
+        "requires": "($text_color = 'diamond')",
+        "$color_front": [
+          0.169,
+          0.651,
+          0.639
+        ],
+        "$color_shadow": [
+          0.29,
+          0.929,
+          0.855
+        ]
+      },
+      {
+        "requires": "($text_color = 'gold')",
+        "$color_front": [
+          0.301,
+          0.326,
+          0.71
+        ],
+        "$color_shadow": [
+          0.996,
+          0.929,
+          0.361
+        ]
+      },
+      {
+        "requires": "($text_color = 'iron')",
+        "$color_front": [
+          0.425,
+          0.437,
+          0.62
+        ],
+        "$color_shadow": [
+          1.0,
+          0.859,
+          0.804
+        ]
+      },
+      {
+        "requires": "($text_color = 'gris')",
+        "$color_front": [
+          0.337,
+          0.337,
+          0.333
+        ],
+        "$color_shadow": [
+          0.647,
+          0.647,
+          0.647
+        ]
+      },
+      {
+        "requires": "($text_color = 'violet')",
+        "$color_front": [
+          0.408,
+          0.122,
+          0.565
+        ],
+        "$color_shadow": [
+          0.745,
+          0.231,
+          0.984
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "shadow": {
+          "type": "label",
+          "layer": 15,
+          "font_type": "MinecraftTen",
+          "text": "$title",
+          "color": "$color_shadow",
+          "offset": [
+            0,
+            -0.8
+          ],
+          "font_scale_factor": "$font_scale_factor"
+        }
+      }
+    ]
+  },
+  "panel": {
+    "type": "panel"
+  },
+  "stackpanel": {
+    "type": "stack_panel"
+  },
+  "collectionpanel": {
+    "type": "collection_panel"
+  },
+  "image": {
+    "type": "image"
+  },
+  "pourcentage_bar": {
+    "type": "image",
+    "$keep_edit|deffault": false,
+    "keep_ratio": "$keep_edit",
+    "$layer_percent|default": 10000,
+    "layer": "$layer_percent",
+    "$color_border|default": "white",
+    "color": "$color_border",
+    "texture": "$texture_background_top",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "container_items",
+        "binding_name": "#hover_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(#hover_text - ('%.6s' * #hover_text) = $score)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mapping_button": {
+    "type": "panel",
+    "$visible|default": true,
+    "$pressed_button_name|default": "",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "nonclickable_button@common.button": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "visible": "$visible",
+          "variables": {
+            "requires": "($mapping_button = 'clickable')",
+            "$visible": false
+          },
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "container_items",
+              "binding_condition": "once"
+            }
+          ],
+          "controls": [
+            {
+              "default": {
+                "type": "image",
+                "texture": "$default_button_texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            },
+            {
+              "hover": {
+                "type": "image",
+                "texture": "$hover_button_texture|default",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            },
+            {
+              "pressed": {
+                "type": "image",
+                "texture": "$pressed_button_texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "clickable_button@common.button": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "visible": "$visible",
+          "variables": [
+            {
+              "requires": "($mapping_button = 'nonclickable')",
+              "$visible": false
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "container_items",
+              "binding_condition": "once"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.container_take_all_place_all",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_secondary_select",
+              "to_button_id": "button.container_take_half_place_one",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.drop_all",
+              "mapping_type": "pressed",
+              "input_mode_condition": "not_gamepad",
+              "consume_event": true
+            }
+          ],
+          "controls": [
+            {
+              "default": {
+                "type": "image",
+                "texture": "$default_button_texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            },
+            {
+              "hover": {
+                "type": "image",
+                "texture": "$hover_button_texture|default",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            },
+            {
+              "pressed": {
+                "type": "image",
+                "texture": "$pressed_button_texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "conditional": {
+    "collection_index": "$index",
+    "type": "stack_panel",
+    "size": [
+      "100%",
+      28
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hover_text",
+        "binding_type": "collection",
+        "binding_collection_name": "container_items"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((not((#hover_text - ('%.90s' * #hover_text)) - ':') = '') or (not ((#hover_text - 'true') = #hover_text)))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "close_button@common.button": {
+    "size": [
+      9,
+      9
+    ],
+    "$pressed_button_name": "button.menu_exit",
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "texture": "textures/ui/paladium_assets/button/close_button"
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/button/close_button_hover"
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/button/close_button_pressed"
+        }
+      }
+    ]
+  },
+  "background": {
+    "type": "image",
+    "$interface": "",
+    "texture": "textures/ui/paladium_assets/background/background",
+    "size": [
+      360,
+      210
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "panel",
+          "size": [
+            "100% - 11.6px",
+            "100% - 11.6px"
+          ],
+          "controls": [
+            {
+              "interface@$interface": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "grid_asset": {
+    "type": "panel",
+    "size": "$size_grid",
+    "$size_grid|default": [
+      72,
+      72
+    ],
+    "$grid_dimensions|default": [
+      3,
+      3
+    ],
+    "$collection_name|default": "hotbar_items",
+    "$grid_item_template": "ng_pala_gui.container_item",
+    "$item_renderer_panel_size|default": [
+      24,
+      24
+    ],
+    "$cell_image_size|default": [
+      24,
+      24
+    ],
+    "$background_images|default": "pala_asset.slot",
+    "$slot_size|default": [
+      24,
+      24
+    ],
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 1400000000000
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {}
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {}
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            },
+            {
+              "panel": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "hotbar_gird": {
+                      "type": "grid",
+                      "size": "$size_grid",
+                      "grid_dimensions": "$grid_dimensions",
+                      "grid_item_template": "$grid_item_template",
+                      "collection_name": "$collection_name",
+                      "$item_collection_name": "$collection_name"
+                    }
+                  },
+                  {
+                    "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "container_item@common.container_item": {
+    "$slot_size|default": [
+      20,
+      20
+    ],
+    "$mapping_container|default": "container_mapping_clickable",
+    "size": "$slot_size",
+    "$cell_image_size|default": [
+      18,
+      18
+    ],
+    "$item_renderer_panel_size|default": [
+      18,
+      18
+    ],
+    "$item_renderer_size|default": [
+      16,
+      16
+    ],
+    "$color_background_default|default": "",
+    "$textures_slot_default|default": "common.cell_image",
+    "$textures_slot_hover|default": "pala_asset.slot_hover",
+    "controls": [
+      {
+        "item_cell": {
+          "type": "panel",
+          "size": "$cell_image_size",
+          "layer": 0,
+          "controls": [
+            {
+              "background_image_control_name@$textures_slot_default": {
+                "layer": 1,
+                "color": "$color_background_default"
+              }
+            },
+            {
+              "item": {
+                "type": "panel",
+                "size": "$item_renderer_panel_size",
+                "layer": 0,
+                "controls": [
+                  {
+                    "stack_count_label@common.stack_count_label": {
+                      "layer": 9
+                    }
+                  },
+                  {
+                    "$item_renderer@$item_renderer": {
+                      "size": "$item_renderer_size",
+                      "offset": "$item_renderer_offset",
+                      "anchor_to": "center",
+                      "anchor_from": "center",
+                      "layer": 7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "durability_bar@common.durability_bar": {
+                "layer": 8
+              }
+            },
+            {
+              "storage_bar@common.storage_bar": {
+                "layer": 8
+              }
+            }
+          ]
+        }
+      },
+      {
+        "item_cell_overlay_ref@$cell_overlay_ref": {
+          "layer": 3
+        }
+      },
+      {
+        "item_selected_image@common.slot_selected": {
+          "layer": 4
+        }
+      },
+      {
+        "container_slot_button_prototype@ng_pala_gui.$mapping_container": {
+          "type": "button",
+          "$focus_id|default": "",
+          "$focus_override_down|default": "",
+          "$focus_override_up|default": "",
+          "$focus_override_left|default": "",
+          "$focus_override_right|default": "",
+          "$focus_id_binding_type|default": "collection",
+          "$focus_override_down_binding_type|default": "collection",
+          "$focus_override_up_binding_type|default": "collection",
+          "$focus_override_left_binding_type|default": "collection",
+          "$focus_override_right_binding_type|default": "collection",
+          "focus_identifier": "$focus_id",
+          "focus_change_down": "$focus_override_down",
+          "focus_change_up": "$focus_override_up",
+          "focus_change_left": "$focus_override_left",
+          "focus_change_right": "$focus_override_right",
+          "focus_enabled": true,
+          "focus_wrap_enabled": false,
+          "focus_magnet_enabled": true,
+          "default_focus_precedence": 1,
+          "hover_control": "hover",
+          "layer": 1
+        }
+      }
+    ]
+  },
+  "container_mapping_nonclickable": {
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_id_binding_type",
+        "binding_name": "#focus_identifier",
+        "binding_name_override": "#focus_identifier",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_down_binding_type",
+        "binding_name": "#focus_change_down",
+        "binding_name_override": "#focus_change_down",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_up_binding_type",
+        "binding_name": "#focus_change_up",
+        "binding_name_override": "#focus_change_up",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_left_binding_type",
+        "binding_name": "#focus_change_left",
+        "binding_name_override": "#focus_change_left",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_right_binding_type",
+        "binding_name": "#focus_change_right",
+        "binding_name_override": "#focus_change_right",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      }
+    ],
+    "controls": [
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            {
+              "hover_text@common.hover_text": {
+                "layer": 29,
+                "$hover_text_binding_name|default": "#hover_text",
+                "bindings": [
+                  {
+                    "binding_name": "$hover_text_binding_name",
+                    "binding_name_override": "#hover_text",
+                    "binding_type": "collection",
+                    "binding_collection_name": "$item_collection_name"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "container_mapping_clickable": {
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_id_binding_type",
+        "binding_name": "#focus_identifier",
+        "binding_name_override": "#focus_identifier",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_down_binding_type",
+        "binding_name": "#focus_change_down",
+        "binding_name_override": "#focus_change_down",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_up_binding_type",
+        "binding_name": "#focus_change_up",
+        "binding_name_override": "#focus_change_up",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_left_binding_type",
+        "binding_name": "#focus_change_left",
+        "binding_name_override": "#focus_change_left",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      },
+      {
+        "binding_type": "$focus_override_right_binding_type",
+        "binding_name": "#focus_change_right",
+        "binding_name_override": "#focus_change_right",
+        "binding_collection_name": "$item_collection_name",
+        "binding_condition": "once"
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_take_all_place_all",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_take_half_place_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.coalesce_stack",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "to_button_id": "button.shape_drawing",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ],
+    "controls": [
+      {
+        "hover": {
+          "type": "panel",
+          "controls": [
+            {
+              "highlight@$textures_slot_hover": {
+                "type": "image",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "hover_text@common.hover_text": {
+                      "layer": 29,
+                      "$hover_text_binding_name|default": "#hover_text",
+                      "bindings": [
+                        {
+                          "binding_name": "$hover_text_binding_name",
+                          "binding_name_override": "#hover_text",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "bundle_tooltip@common.bundle_tooltip": {
+                      "layer": 29,
+                      "$hover_text_binding_name|default": "#hover_text",
+                      "bindings": [
+                        {
+                          "binding_name": "$hover_text_binding_name",
+                          "binding_name_override": "#hover_text",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_name": "#hover_items_id",
+                          "binding_name_override": "#hover_items_id",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#show_persistent_bundle_hover_text",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bundle_popup_factory_control": {
+          "type": "panel",
+          "factory": {
+            "name": "bundle_popup_factory",
+            "control_name": "common.bundle_mode_popup_control",
+            "max_children_size": 1
+          }
+        }
+      }
+    ]
+  },
+  "red_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/paladium_button_default",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/paladium_button_default_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/paladium_button_default_hover"
+  },
+  "empty_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/empty",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/empty",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/empty"
+  },
+  "gray_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/gray_button_default",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/gray_button_default",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/gray_button_default"
+  },
+  "select_button_active@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/select_actif",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/select_actif",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/select_actif"
+  },
+  "select_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/select",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/select_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/select_actif"
+  },
+  "dark_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/background/dark_background",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/background/dark_background_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/background/dark_background_hover"
+  },
+  "gold_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/paladium_button_gold",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/paladium_button_gold_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/paladium_button_gold_hover"
+  },
+  "dark_orange_button@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/dark_orange_button",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/dark_orange_button_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/dark_orange_button_hover"
+  },
+  "label": {
+    "type": "label"
+  },
+  "icone_texture": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$type_get_texture|default": "Get_texture_type_2",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icone@ng_pala_gui.$type_get_texture": {
+          "type": "image",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 5,
+          "texture": "#texture"
+        }
+      }
+    ]
+  }
+}

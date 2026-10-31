@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cosmetic.hide_bones_mask": {
+      "loop": true,
+      "bones": {
+        "head": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 1), 2) == 1 ? 0 : 1" },
+        "body": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 2), 2) == 1 ? 0 : 1" },
+        "leftarm": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 4), 2) == 1 ? 0 : 1" },
+        "rightarm": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 8), 2) == 1 ? 0 : 1" },
+        "leftleg": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 16), 2) == 1 ? 0 : 1" },
+        "rightleg": { "scale": "math.mod(math.floor(v.cosmetic_hide_bones_mask / 32), 2) == 1 ? 0 : 1" }
+      }
+    }
+  }
+}
