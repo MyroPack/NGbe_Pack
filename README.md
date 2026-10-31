@@ -13,14 +13,14 @@ Les dossiers et archives portant le même nom correspondent au même pack. Les a
 
 | Pack |  Version | Dossier | Archive | Contenu / rôle général |
 |---|---|---|---|---|
-| NationsGlory | 1.0.53 |`Nationsglory/` | `Nationsglory.zip` | Pack principal avec le plus gros des textures de NG ( minerais, armures, items) |
-| NationsGlory UI | 1.1.48| `NationsgloryUI/` | `NationsgloryUI.zip` | Assets des interfaces, police d'écriture, drapeaux. |
+| NationsGlory | 1.0.55 |`Nationsglory/` | `Nationsglory.zip` | Pack principal avec le plus gros des textures de NG ( minerais, armures, items) |
+| NationsGlory UI | 1.1.52| `NationsgloryUI/` | `NationsgloryUI.zip` | Assets des interfaces, police d'écriture, drapeaux. |
 | NationsGlory Ambiance | 0.1.0 | `NationsGlory Ambiance ResourcePack/` | `NationsGlory Ambiance ResourcePack.zip` | Sons d’ambiance associés aux biomes. |
-| NationsGlory Bestiary |  0.1.1 |`NationsGlory Bestiary ResourcePack/` | `NationsGlory Bestiary ResourcePack.zip` | Ressources du bestiaire : entités, modèles, textures, animations et sons. |
-| Premium | 1.1.28 | `Premium/` | `Premium.zip` | Ressources du pack regroupant les grades, les différents marker, les lootbox, etc. |
+| NationsGlory Bestiary |  0.1.2 |`NationsGlory Bestiary ResourcePack/` | `NationsGlory Bestiary ResourcePack.zip` | Ressources du bestiaire : entités, modèles, textures, animations et sons. |
+| Premium | 1.1.32 | `Premium/` | `Premium.zip` | Ressources du pack regroupant les grades, les différents marker, les lootbox, etc. |
 | NG Machine | 1.1.20 | `NG Machine/` | `NG Machine.zip` | Ressources associées aux machines, et différents items utilisés à leur création. Nb: la texture de l'ashstone y est présente. |
-| NG Vehicule | 1.0.3 |`NG Vehicule/` | `NG Vehicule.zip` | Modèles des montures. |
-| NG Propsi | 1.1.31 | `NGPropsiResourcePack/` |`NGPropsiResourcePack.zip` | Blocks et décorations disponibles sur les serveurs de NG. |
+| NG Vehicule | 1.0.4 |`NG Vehicule/` | `NG Vehicule.zip` | Modèles des montures. |
+| NG Propsi | 1.1.32 | `NGPropsiResourcePack/` |`NGPropsiResourcePack.zip` | Blocks et décorations disponibles sur les serveurs de NG. |
 | Propsi | 1.0.3| `PropsiResourcePack/` | `PropsiResourcePack.zip` | Modèle des différent portails des hub NG & Recube. |
 | Recube ICBM | 1.0.4 | `RecubeICBM/` | `RecubeICBM.zip` | Pack de ressource avec toutes les texture et les modèles des armes à feu et missiles. |
 
