@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:capture_net",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/capture_net"
+			},
+			"geometry": {
+				"default": "geometry.capture_net"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"capture": "animation.capture_net.capture"
+			},
+			"scripts": {
+				"animate": [
+					"capture"
+				]
+			}
+		}
+	}
+}

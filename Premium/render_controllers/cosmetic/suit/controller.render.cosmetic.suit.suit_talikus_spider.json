@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.suit.suit_talikus_spider": {
+      "geometry": "Geometry.cosmetic.suit.suit_talikus_spider",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.suit.suit_talikus_spider"
+      ]
+    }
+  }
+}

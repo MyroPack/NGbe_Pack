@@ -1,4 +1,16 @@
 {
 	"format_version": "1.14.0",
-	"sound_definitions": {}
+	"sound_definitions": {
+		"ng.helicopter.minigun": {
+			"category": "neutral",
+			"max_distance": 64.0,
+			"sounds": [
+				{
+					"name": "sounds/helicopter/minigun_shoot",
+					"volume": 1.0,
+					"pitch": 1.0
+				}
+			]
+		}
+	}
 }

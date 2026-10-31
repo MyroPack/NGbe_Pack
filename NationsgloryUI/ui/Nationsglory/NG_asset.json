@@ -276,8 +276,43 @@
     "$pressed_button_texture|default": "textures/ui/background/background_76"
   },
 
+  "button_43@ng_module.mapping_button": {
+    "$contour_visible":false,
+    "$default_button_texture|default": "textures/ui/background/background_custom/background_custom_04",
+    "$hover_button_texture|default": "textures/ui/background/background_custom/background_custom_04",
+    "$pressed_button_texture|default": "textures/ui/background/background_custom/background_custom_04"
+  },
 
+  "button_44@ng_module.mapping_button": {
+    "$contour_visible":false,
+    "$default_button_texture|default": "textures/ui/background/background_custom/background_custom_05",
+    "$hover_button_texture|default": "textures/ui/background/background_custom/background_custom_05",
+    "$pressed_button_texture|default": "textures/ui/background/background_custom/background_custom_05"
+  },
 
+  "button_45@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_78",
+    "$hover_button_texture|default": "textures/ui/background/background_78",
+    "$pressed_button_texture|default": "textures/ui/background/background_78"
+  },
+
+  "button_46@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_81",
+    "$hover_button_texture|default": "textures/ui/background/background_81",
+    "$pressed_button_texture|default": "textures/ui/background/background_81"
+  },
+
+  "button_47@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_83",
+    "$hover_button_texture|default": "textures/ui/background/background_83",
+    "$pressed_button_texture|default": "textures/ui/background/background_83"
+  },
+
+  "button_48@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/background/background_82",
+    "$hover_button_texture|default": "textures/ui/background/background_82",
+    "$pressed_button_texture|default": "textures/ui/background/background_82"
+  },
 
   // -----------------------------------------------
   //
@@ -634,7 +669,26 @@
     "type":"image",
     "texture":"textures/ui/background/background_73"
   },
+    
+  "background_79":{
+    "type":"image",
+    "texture":"textures/ui/background/background_79"
+  },
+    
+  "background_82":{
+    "type":"image",
+    "texture":"textures/ui/background/background_82"
+  },
 
+  "background_84":{
+    "type":"image",
+    "texture":"textures/ui/background/background_84"
+  },
+
+  "background_83":{
+    "type":"image",
+    "texture":"textures/ui/background/background_83"
+  },
 
   // -----------------------------------------------
   //
@@ -655,6 +709,26 @@
   "background_custom_03":{
     "type":"image",
     "texture":"textures/ui/background/background_custom/background_custom_03"
+  },
+
+  "background_custom_04":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_04"
+  },
+
+  "background_custom_05":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_05"
+  },
+
+  "background_custom_06":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_06"
+  },
+
+  "background_custom_07":{
+    "type":"image",
+    "texture":"textures/ui/background/background_custom/background_custom_07"
   },
 
   // -----------------------------------------------
@@ -1019,6 +1093,16 @@
     "texture":"textures/ui/icon/icon_65"
   },
 
+  "icon_67":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_67"
+  },
+
+  "icon_68":{
+    "type":"image",
+    "texture":"textures/ui/icon/icon_68"
+  },
+
   "prime_icon":{
     "type":"image",
     "texture":"textures/ui/ng_assets/icon/prime_icon"
@@ -1110,6 +1194,16 @@
   "background_screen":{
     "type":"image",
     "texture":"textures/ui/loading_screen"
+  },
+
+  "pause_screen":{
+    "type":"image",
+    "texture":"textures/ui/pause_screen"
+  },
+
+  "gamepass_screen":{
+    "type":"image",
+    "texture":"textures/ui/gamepass_screen"
   },
 
   "carte":{

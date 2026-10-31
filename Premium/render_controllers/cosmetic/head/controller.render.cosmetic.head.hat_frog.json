@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.head.hat_frog": {
+      "geometry": "Geometry.cosmetic.head.hat_frog",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.head.hat_frog"
+      ]
+    }
+  }
+}

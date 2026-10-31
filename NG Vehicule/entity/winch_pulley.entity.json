@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:winch_pulley",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/winch_hook"
+			},
+			"geometry": {
+				"default": "geometry.winch_pulley"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -186,7 +186,10 @@
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "workstations.main_panel"
           },
-          ////////////////////////////////////////////////////
+          {
+            "requires": "($new_container_title = 'recube:gamepass')",
+            "$screen_content": "gamepass.main_panel"
+          },
           {
             "requires": "($new_container_title = 'ng:parrot_airline')",
             "$screen_content": "focus_leurre.contenu",
@@ -218,9 +221,22 @@
             "$focus_leurre_contenu": "annuaire.main_panel"
           },
           {
+            "requires": "($new_container_title = 'ng:punisher')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "punisher_ng.main_panel"
+          },
+          {
             "requires": "($new_container_title = 'ng:annuaire_lobby')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "annuaire_lobby.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'recube:boutique')",
+            "$screen_content": "ng_boutique.cadre"
+          },
+          {
+            "requires": "($new_container_title = 'recube:gamepass')",
+            "$screen_content": "ng_boutique.cadre_gamepass"
           },
           {
             "requires": "($new_container_title = 'ng:ngphone')",
@@ -286,6 +302,10 @@
             "requires": "($new_container_title = 'premium:daily_reward_ui')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "ng_daily_reward.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:backpack')",
+            "$screen_content": "backpack.main_panel"
           }
   ]}
 }

@@ -1,0 +1,3583 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.suit.suit_talikus_spider",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                24,
+                -4
+              ],
+              "size": [
+                8,
+                8,
+                8
+              ],
+              "uv": [
+                0,
+                18
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                26,
+                -5
+              ],
+              "size": [
+                10,
+                7,
+                10
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                23,
+                -5
+              ],
+              "size": [
+                10,
+                10,
+                10
+              ],
+              "inflate": 0.24,
+              "uv": [
+                88,
+                108
+              ]
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow1",
+          "parent": "head",
+          "properties": {
+            "lightmap": false,
+            "lighting": false
+          },
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                23,
+                -5
+              ],
+              "size": [
+                10,
+                10,
+                10
+              ],
+              "inflate": 0.24,
+              "uv": [
+                0,
+                51
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.Head2",
+          "parent": "head",
+          "pivot": [
+            5.5,
+            26.5,
+            -3.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                26,
+                -3
+              ],
+              "size": [
+                1,
+                1,
+                1
+              ],
+              "pivot": [
+                5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                -40.26223,
+                -30.66076
+              ],
+              "uv": [
+                52,
+                7
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -1,
+                26,
+                -4
+              ],
+              "size": [
+                2,
+                1,
+                1
+              ],
+              "pivot": [
+                5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                -40.26223,
+                -30.66076
+              ],
+              "uv": [
+                45,
+                7
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                1,
+                25,
+                -5
+              ],
+              "size": [
+                5,
+                3,
+                3
+              ],
+              "pivot": [
+                5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                -40.26223,
+                -30.66076
+              ],
+              "uv": [
+                41,
+                0
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.Head3",
+          "parent": "head",
+          "pivot": [
+            -5.5,
+            26.5,
+            -3.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                26,
+                -3
+              ],
+              "size": [
+                1,
+                1,
+                1
+              ],
+              "pivot": [
+                -5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                40.26223,
+                30.66076
+              ],
+              "uv": [
+                52,
+                7
+              ]
+            },
+            {
+              "origin": [
+                -1,
+                26,
+                -4
+              ],
+              "size": [
+                2,
+                1,
+                1
+              ],
+              "pivot": [
+                -5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                40.26223,
+                30.66076
+              ],
+              "uv": [
+                45,
+                7
+              ]
+            },
+            {
+              "origin": [
+                -6,
+                25,
+                -5
+              ],
+              "size": [
+                5,
+                3,
+                3
+              ],
+              "pivot": [
+                -5.5,
+                26.5,
+                -3.5
+              ],
+              "rotation": [
+                13.2798,
+                40.26223,
+                30.66076
+              ],
+              "uv": [
+                41,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                12,
+                -2
+              ],
+              "size": [
+                8,
+                12,
+                4
+              ],
+              "uv": [
+                33,
+                18
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                19,
+                1
+              ],
+              "size": [
+                10,
+                5,
+                4
+              ],
+              "uv": [
+                89,
+                69
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -5,
+                19,
+                1
+              ],
+              "size": [
+                10,
+                5,
+                4
+              ],
+              "inflate": 0.24,
+              "uv": [
+                89,
+                69
+              ],
+              "mirror": true
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.Left_spider_leg",
+          "parent": "body",
+          "pivot": [
+            4.9,
+            17,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            -90
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_leg_up",
+          "parent": "cosmetic.suit.suit_talikus_spider.Left_spider_leg",
+          "pivot": [
+            9,
+            15,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8.05,
+                5.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    101,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    104,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    95,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    11
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_up3",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_leg_up",
+          "pivot": [
+            9,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                8,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    92,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    88,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    118,
+                    39
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    119,
+                    58
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_up3",
+          "pivot": [
+            6,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_leg_midle",
+          "parent": "cosmetic.suit.suit_talikus_spider.Left_spider_leg",
+          "pivot": [
+            6,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5.05,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    101,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    104,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    95,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    11
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_midle3",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_leg_midle",
+          "pivot": [
+            6,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                5,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    92,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    88,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    118,
+                    39
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    119,
+                    58
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow2",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_midle3",
+          "pivot": [
+            3,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_leg_midle2",
+          "parent": "cosmetic.suit.suit_talikus_spider.Left_spider_leg",
+          "pivot": [
+            3,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                2.05,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    101,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    104,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    95,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    11
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_midle5",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_leg_midle2",
+          "pivot": [
+            3,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                2,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    92,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    88,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    118,
+                    39
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    119,
+                    58
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                2,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow3",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_midle5",
+          "pivot": [
+            0,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                2,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_leg_down",
+          "parent": "cosmetic.suit.suit_talikus_spider.Left_spider_leg",
+          "pivot": [
+            0,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.95,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    101,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    104,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    95,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    11
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_frontfoot9",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_leg_down",
+          "pivot": [
+            0,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    92,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    88,
+                    0
+                  ],
+                  "uv_size": [
+                    -3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    118,
+                    39
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    119,
+                    58
+                  ],
+                  "uv_size": [
+                    -3,
+                    0
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -1,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow4",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_frontfoot9",
+          "pivot": [
+            -3,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    74,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    77,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    80,
+                    6
+                  ],
+                  "uv_size": [
+                    -2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    83,
+                    0
+                  ],
+                  "uv_size": [
+                    -2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    83,
+                    5
+                  ],
+                  "uv_size": [
+                    -2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.Right_spider_leg",
+          "parent": "body",
+          "pivot": [
+            -4.9,
+            17,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            90
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_leg_up",
+          "parent": "cosmetic.suit.suit_talikus_spider.Right_spider_leg",
+          "pivot": [
+            -9,
+            15,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10.05,
+                5.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    93,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    102,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    99,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    11
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_up3",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_leg_up",
+          "pivot": [
+            -9,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -11,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    89,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    85,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    115,
+                    39
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    116,
+                    58
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow8",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_up3",
+          "pivot": [
+            -6,
+            35.5,
+            5.5
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow13",
+          "parent": "cosmetic.suit.suit_talikus_spider.glow8",
+          "pivot": [
+            -6,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow9",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_up3",
+          "pivot": [
+            -6,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -10,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_leg_midle",
+          "parent": "cosmetic.suit.suit_talikus_spider.Right_spider_leg",
+          "pivot": [
+            -6,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7.05,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    93,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    102,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    99,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    11
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_midle3",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_leg_midle",
+          "pivot": [
+            -6,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    89,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    85,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    115,
+                    39
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    116,
+                    58
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -7,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow12",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_midle3",
+          "pivot": [
+            -3,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_leg_midle2",
+          "parent": "cosmetic.suit.suit_talikus_spider.Right_spider_leg",
+          "pivot": [
+            -3,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.05,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    93,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    102,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    99,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    11
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_midle5",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_leg_midle2",
+          "pivot": [
+            -3,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    89,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    85,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    115,
+                    39
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    116,
+                    58
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -4,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow11",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_midle5",
+          "pivot": [
+            0,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.right_leg_down",
+          "parent": "cosmetic.suit.suit_talikus_spider.Right_spider_leg",
+          "pivot": [
+            0,
+            17,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.05,
+                6.05,
+                2.05
+              ],
+              "size": [
+                2,
+                11,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    93,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    102,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    99,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    11
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    11
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.left_frontfoot9",
+          "parent": "cosmetic.suit.suit_talikus_spider.right_leg_down",
+          "pivot": [
+            0,
+            6.5,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                -11,
+                3
+              ],
+              "size": [
+                3,
+                18,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    89,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    51,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    85,
+                    0
+                  ],
+                  "uv_size": [
+                    3,
+                    33
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    14,
+                    95
+                  ],
+                  "uv_size": [
+                    0,
+                    33
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    115,
+                    39
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    116,
+                    58
+                  ],
+                  "uv_size": [
+                    3,
+                    0
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -1,
+                0,
+                2
+              ],
+              "size": [
+                2,
+                6,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow10",
+          "parent": "cosmetic.suit.suit_talikus_spider.left_frontfoot9",
+          "pivot": [
+            3,
+            35.5,
+            5.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                -9,
+                2
+              ],
+              "size": [
+                2,
+                9,
+                2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    69,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    78,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    75,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    72,
+                    6
+                  ],
+                  "uv_size": [
+                    2,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    81,
+                    0
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    81,
+                    5
+                  ],
+                  "uv_size": [
+                    2,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.back",
+          "parent": "body",
+          "pivot": [
+            0,
+            13.5,
+            1.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.5,
+                8,
+                2
+              ],
+              "size": [
+                11,
+                11,
+                11
+              ],
+              "uv": [
+                46,
+                36
+              ]
+            },
+            {
+              "origin": [
+                -5.5,
+                8,
+                2
+              ],
+              "size": [
+                11,
+                11,
+                11
+              ],
+              "inflate": 0.25,
+              "uv": [
+                84,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leftleg",
+          "pivot": [
+            1.9,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -0.1,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    21,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    17,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    29,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    25,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    21,
+                    35
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    25,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                2.5,
+                -2,
+                -3.5
+              ],
+              "size": [
+                0,
+                8,
+                3
+              ],
+              "uv": [
+                0,
+                95
+              ]
+            },
+            {
+              "origin": [
+                -0.5,
+                -0.5,
+                -2.5
+              ],
+              "size": [
+                5,
+                6,
+                5
+              ],
+              "uv": [
+                42,
+                61
+              ]
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "rightleg",
+          "pivot": [
+            -1.9,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3.9,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    4,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    12,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    8,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    12
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    4,
+                    35
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    8,
+                    39
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -4.5,
+                -0.5,
+                -2.5
+              ],
+              "size": [
+                5,
+                6,
+                5
+              ],
+              "uv": [
+                42,
+                61
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -2.5,
+                -2.5,
+                -3.5
+              ],
+              "size": [
+                0,
+                8,
+                3
+              ],
+              "uv": [
+                0,
+                95
+              ]
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "rightarm",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                35
+              ]
+            },
+            {
+              "origin": [
+                -9,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                6,
+                5
+              ],
+              "inflate": 0.25,
+              "uv": [
+                0,
+                86
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -6.5,
+                9,
+                -3.5
+              ],
+              "size": [
+                0,
+                8,
+                3
+              ],
+              "uv": [
+                0,
+                95
+              ],
+              "mirror": true
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow6",
+          "parent": "rightarm",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -9,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                4,
+                5
+              ],
+              "uv": [
+                0,
+                74
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftarm",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                17,
+                35
+              ]
+            },
+            {
+              "origin": [
+                6.5,
+                9,
+                -3.5
+              ],
+              "size": [
+                0,
+                8,
+                3
+              ],
+              "uv": [
+                0,
+                95
+              ]
+            },
+            {
+              "origin": [
+                4,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                6,
+                5
+              ],
+              "inflate": 0.25,
+              "uv": [
+                0,
+                86
+              ]
+            }
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "cosmetic.suit.suit_talikus_spider.glow7",
+          "parent": "leftarm",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                4,
+                5
+              ],
+              "uv": [
+                0,
+                74
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

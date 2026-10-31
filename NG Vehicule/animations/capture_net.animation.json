@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.capture_net.capture": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": [0.5, 0.5, 0.5],
+						"0.5": [1.5, 1.5, 1.5]
+					}
+				}
+			}
+		}
+	}
+}

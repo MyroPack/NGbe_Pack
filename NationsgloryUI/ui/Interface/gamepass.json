@@ -1,0 +1,1394 @@
+{
+   "namespace": "gamepass",
+
+   "main_panel": {
+      "type": "panel",
+      "size": ["100%", "100%"],
+      "controls": [
+
+/*          {"small_chest_grid@chest.small_chest_grid": {
+            "grid_dimensions": [9, 15],
+            "layer": 200000,
+            "offset": [0, 0],
+            "anchor_from": "bottom_right",
+            "anchor_to": "bottom_right",
+            "size": [170, 265]
+         }},
+
+         {"hotbar_grid@common.hotbar_grid_template": {
+            "layer": 4000000
+         }}, */
+
+         {"background@ng_asset.background_white": {
+            "color": [0.019, 0.059, 0.059],
+            "size": ["100%", "100%"],
+            "controls": [
+
+               {"background@ng_asset.gamepass_screen": {
+                  "anchor_from": "top_middle",
+                  "anchor_to": "top_middle",
+                  "size": ["100%", "100%"],
+                  "alpha": 0.8,
+                  "controls": [
+
+                     {"green": {
+                        "type": "custom",
+                        "anchor_from": "bottom_middle",
+                        "anchor_to": "bottom_middle",
+                        "renderer": "gradient_renderer",
+                        "gradient_direction": "vertical",
+                        "color1": [0.029, 0.029, 0.060, 0],
+                        "color2": [0.019, 0.059, 0.059],
+                        "size": ["100%", "100%"],
+                        "layer": 10
+                     }}
+
+               ]}},
+
+               {"background@ng_module.collectionpanel": {
+                  "collection_name": "container_items",
+                  "size": ["100%", "100%"],
+                  "layer": 11,
+                  "controls": [
+
+                     {"quest@ng_asset.background_white": {
+                        "size": ["35%", "38%"],
+                        "color": [0, 0, 0],
+                        "alpha": 0.7,
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "controls": [
+
+                           {"background@ng_module.stackpanel": {
+                              "offset": [0, -1],
+                              "collection_name": "container_items",
+                              "size": ["90%", "90%"],
+                              "controls": [
+
+                                 {"label@ng_module.label": {
+                                    "text": "Quetes",
+                                    "font_type": "MinecraftTen"
+                                 }},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["fill", "2%"]
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 42,
+                                    "$index_progression": 43
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 44,
+                                    "$index_progression": 45
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 46,
+                                    "$index_progression": 47
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 48,
+                                    "$index_progression": 49
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 50,
+                                    "$index_progression": 51
+                                 }},
+
+                                 {"queste_asset@gamepass.queste_asset": {
+                                    "$index_description_point": 52,
+                                    "$index_progression": 53
+                                 }},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "fill"]
+                                 }},
+
+                                 {"background@ng_module.stackpanel": {
+                                    "collection_name": "container_items",
+                                    "orientation": "horizontal",
+                                    "size": ["100%", "15%"],
+                                    "controls": [
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["fill", "100%"]
+                                       }},
+
+                                       {"conditional@ng_module.conditional": {
+                                          "size": ["30%", "100%"],
+                                          "collection_index": 18,
+                                          "type": "stack_panel",
+                                          "bindings": [
+                                             {
+                                                "binding_type": "collection",
+                                                "binding_collection_name": "container_items",
+                                                "binding_name_override": "#hover_text",
+                                                "binding_name": "#hover_text"
+                                             },
+                                             {
+                                                "binding_type": "view",
+                                                "source_property_name": "(((#hover_text - '§0§r') = #hover_text))",
+                                                "target_property_name": "#visible"
+                                             }
+                                          ],
+                                          "controls": [
+
+                                             {"voir_plus@ng_module.Simple_Button": {
+                                                "size": ["100%", "100%"],
+                                                "$size_button": ["100%", "80%"],
+                                                "$index": 18,
+                                                "$text_offset": [1, 0],
+                                                "$texture_button": "ng_asset.button_47",
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.6
+                                             }}
+
+                                       ]}}
+
+                                 ]}}
+
+                           ]}}
+
+                     ]}},
+
+                     {"conditional@ng_module.conditional": {
+                        "size": ["21%", "38%"],
+                        "offset": ["-36%"],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "collection_index": 13,
+                        "type": "stack_panel",
+                        "bindings": [
+                           {
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items",
+                              "binding_name_override": "#hover_text",
+                              "binding_name": "#hover_text"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(((#hover_text - '§0§r') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"nex_step@ng_asset.background_white": {
+                              "size": ["100%", "100%"],
+                              "color": [0, 0, 0],
+                              "alpha": 0.7,
+                              "controls": [
+
+                                 {"stackpanel@ng_module.stackpanel": {
+                                    "size": ["90%", "90%"],
+                                    "controls": [
+
+                                       {"stackpanel@ng_module.stackpanel": {
+                                          "size": ["100%", "10%"],
+                                          "orientation": "horizontal",
+                                          "controls": [
+
+                                             {"label@ng_module.label": {
+                                                "text": "étape suivante",
+                                                "layer": 10,
+                                                "font_scale_factor": 0.75,
+                                                "font_type": "MinecraftTen"
+                                             }},
+
+                                             {"padding@ng_module.panel": {
+                                                "size": ["fill", "100%"]
+                                             }},
+
+                                             {"text@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_3",
+                                                "$index": 13,
+                                                "layer": 30,
+                                                "$text_color": [0.580, 0.580, 0.584],
+                                                "$text_offset": [0, 0],
+                                                "$font_type": "MinecraftTen",
+                                                "size": ["100%c", "100%c"],
+                                                "$font_scale_factor": 0.75
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["100%", "2%"]
+                                       }},
+
+                                       {"background@ng_asset.background_82": {
+                                          "size": ["35%", "10%"],
+                                          "controls": [
+
+                                             {"label@ng_module.label": {
+                                                "text": "Premium",
+                                                "layer": 10,
+                                                "font_type": "MinecraftTen",
+                                                "offset": [0, -1.3],
+                                                "color": [0.169, 0.098, 0.000],
+                                                "font_scale_factor": 0.55
+                                             }}
+
+                                       ]}}
+
+                                 ]}},
+
+                                 {"item_and_itemname": {
+                                    "type": "collection_panel",
+                                    "size": ["100%", "100%"],
+                                    "controls": [
+
+                                       {"icone@ng_module.icone": {
+                                          "size": ["50%", "50%"],
+                                          "$index": 13,
+                                          "$Get_text_type": "Get_text_type_2"
+                                       }},
+
+                                       {"text@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_2",
+                                          "$index": 14,
+                                          "offset": [0, -20.5],
+                                          "layer": 10,
+                                          "$text_color": [0.659, 0.659, 0.659],
+                                          "$font_type": "MinecraftTen",
+                                          "anchor_from": "bottom_middle",
+                                          "anchor_to": "bottom_middle",
+                                          "size": ["100%c", "100%c"],
+                                          "$font_scale_factor": 0.6
+                                       }},
+
+                                       {"text@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_3",
+                                          "$index": 14,
+                                          "offset": [0, -10.5],
+                                          "layer": 10,
+                                          "$font_type": "MinecraftTen",
+                                          "anchor_from": "bottom_middle",
+                                          "anchor_to": "bottom_middle",
+                                          "size": ["100%c", "100%c"],
+                                          "$font_scale_factor": 0.8
+                                       }}
+
+                                 ]}}
+
+                           ]}}
+
+                     ]}},
+
+                     {"logo@ng_asset.logo": {
+                        "size": ["20%", "10%"],
+                        "offset": ["2.6%", "0%"],
+                        "anchor_from": "top_left",
+                        "anchor_to": "top_left"
+                     }},
+
+                     {"stackpanel@ng_module.stackpanel": {
+                        "size": ["95%", "90%"],
+                        "layer": 50,
+                        "controls": [
+
+                           {"stackpanel@ng_module.stackpanel": {
+                              "collection_name": "container_items",
+                              "size": ["100%", "50%"],
+                              "layer": 50,
+                              "controls": [
+
+                                 {"background@ng_module.panel": {
+                                    "size": ["100%", "12%"]
+                                 }},
+
+                                 {"text_gammepass@ng_module.stackpanel": {
+                                    "size": ["100%", "14%"],
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"center@ng_module.panel": {
+                                          "size": ["100%c", "100%"],
+                                          "controls": [
+
+                                             {"text_gamepass": {
+                                                "type": "label",
+                                                "offset": [0, -1.74],
+                                                "text": "Gamepass",
+                                                "font_type": "MinecraftTen",
+                                                "font_scale_factor": 2.8
+                                             }}
+
+                                       ]}}
+
+                                 ]}},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "4%"]
+                                 }},
+
+                                 {"text_saison@ng_module.stackpanel": {
+                                    "size": ["100%", "14%"],
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"center@ng_module.panel": {
+                                          "size": ["100%c", "100%"],
+                                          "controls": [
+
+                                             {"text@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_3",
+                                                "$index": 10,
+                                                "layer": 30,
+                                                "$text_color": [0.463, 0.204, 0.933],
+                                                "$text_offset": [0, -1.3],
+                                                "$font_type": "MinecraftTen",
+                                                "size": ["100%c", "100%c"],
+                                                "$font_scale_factor": 2.6
+                                             }}
+
+                                       ]}}
+
+                                 ]}},
+
+                                 {"background@ng_module.stackpanel": {
+                                    "size": ["100%", "22%"],
+                                    "controls": [
+
+                                       {"time@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_2",
+                                          "$index": 10,
+                                          "layer": 30,
+                                          "$text_color": [0.561, 0.549, 0.627],
+                                          "$size_icone_left": [15, 15],
+                                          "$color_icone_left": [0.561, 0.549, 0.627],
+                                          "$offset_icone_left": [0, 0.3],
+                                          "$texture_icone_left": "ng_asset.icon_68",
+                                          "$text_offset": [0, 2.3],
+                                          "size": ["100%c", "100%"],
+                                          "$font_scale_factor": 1.3
+                                       }}
+
+                                 ]}},
+
+                                 {"conditional@ng_module.conditional": {
+                                    "size": ["18%", "12%"],
+                                    "collection_index": 15,
+                                    "type": "stack_panel",
+                                    "bindings": [
+                                       {
+                                          "binding_type": "collection",
+                                          "binding_collection_name": "container_items",
+                                          "binding_name_override": "#hover_text",
+                                          "binding_name": "#hover_text"
+                                       },
+                                       {
+                                          "binding_type": "view",
+                                          "source_property_name": "(((#hover_text - '§0§r') = #hover_text))",
+                                          "target_property_name": "#visible"
+                                       }
+                                    ],
+                                    "controls": [
+
+                                       {"debloquer@ng_module.Simple_Button": {
+                                          "size": ["100%", "100%"],
+                                          "$size_button": ["100%", "90%"],
+                                          "$index": 15,
+                                          "$font_type": "MinecraftTen",
+                                          "$text_offset": [0, -1.3],
+                                          "$text_color": [0.169, 0.098, 0.000],
+                                          "$texture_button": "ng_asset.button_48",
+                                          "$type_get_text": "Get_text_type_1",
+                                          "$font_scale_factor": 0.7
+                                       }}
+
+                                 ]}},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "fill"]
+                                 }},
+
+                                 {"stackpanel@ng_module.stackpanel": {
+                                    "size": ["100%", "13%"],
+                                    "collection_name": "container_items",
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"text_level": {
+                                          "type": "panel",
+                                          "size": ["100%c", "100%"],
+                                          "controls": [
+
+                                             {"text@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_3",
+                                                "$index": 11,
+                                                "layer": 5,
+                                                "$text_offset": [0, -1.3],
+                                                "$font_type": "MinecraftTen",
+                                                "size": ["100%c", "100%c"],
+                                                "$font_scale_factor": 2
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["1%", "100%"]
+                                       }},
+
+                                       {"loading_bar": {
+                                          "type": "panel",
+                                          "size": ["40%", "100%"],
+                                          "controls": [
+
+                                             {"xp@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_3",
+                                                "$index": 12,
+                                                "layer": 30,
+                                                "$size_icone_left": [7, 7],
+                                                "$texture_icone_left": "ng_asset.icon_67",
+                                                "$text_offset": [0, 0.3],
+                                                "size": ["100%c", "100%c"],
+                                                "$font_scale_factor": 0.6
+                                             }},
+
+                                             {"loading_bar@ng_module.loading_bar": {
+                                                "size": ["100%", 13],
+                                                "layer": 5,
+                                                "$index": 12,
+                                                "$load_bar_size": ["100%", 13],
+                                                "$orientation": "horizontal",
+                                                "$color_border": [0.525, 0.235, 0.941],
+                                                "$layer_percent": 3,
+                                                "$color_border_empty": [0.067, 0.067, 0.067],
+                                                "$texture_background_bar": "ng_asset.background_white",
+                                                "$texture_background_top": "textures/ui/background/background_white"
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["1%", "100%"]
+                                       }},
+
+                                       {"text_next_level": {
+                                          "type": "panel",
+                                          "size": ["100%c", "100%"],
+                                          "controls": [
+
+                                             {"text@ng_module.Simple_text": {
+                                                "$type_get_text": "Get_text_type_2",
+                                                "$index": 11,
+                                                "layer": 5,
+                                                "$text_offset": [0, -1.3],
+                                                "$text_color": [0.714, 0.702, 0.718],
+                                                "$font_type": "MinecraftTen",
+                                                "size": ["100%c", "100%c"],
+                                                "$font_scale_factor": 1
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["fill", "100%"]
+                                       }},
+
+                                       {"conditional@ng_module.conditional": {
+                                          "size": ["19%", "100%"],
+                                          "collection_index": 16,
+                                          "type": "stack_panel",
+                                          "bindings": [
+                                             {
+                                                "binding_type": "collection",
+                                                "binding_collection_name": "container_items",
+                                                "binding_name_override": "#hover_text",
+                                                "binding_name": "#hover_text"
+                                             },
+                                             {
+                                                "binding_type": "view",
+                                                "source_property_name": "(((#hover_text - '§0§r') = #hover_text))",
+                                                "target_property_name": "#visible"
+                                             }
+                                          ],
+                                          "controls": [
+
+                                             {"recompense@ng_module.Simple_Button": {
+                                                "size": ["100%", "100%"],
+                                                "$index": 16,
+                                                "$text_offset": [1, 0],
+                                                "$text_color": [0.071, 0.071, 0.071],
+                                                "$texture_button": "ng_asset.button_47",
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$font_scale_factor": 0.7
+                                             }}
+
+                                       ]}}
+
+                                 ]}},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "5%"]
+                                 }}
+
+                           ]}},
+
+                           {"stackpanel@ng_module.stackpanel": {
+                              "size": ["100%", "50%"],
+                              "layer": 50,
+                              "controls": [
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "fill"]
+                                 }},
+
+                                 {"niv@ng_module.stackpanel": {
+                                    "size": ["100%", "8%"],
+                                    "collection_name": "container_items",
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"background_84@ng_asset.background_84": {
+                                          "size": ["7.5%", "100%"],
+                                          "controls": []
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 21
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 24
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 27
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 30
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 33
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 36
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_niv@gamepass.button_niv": {
+                                          "layer": 100,
+                                          "$index": 39
+                                       }}
+
+                                 ]}},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", "2%"]
+                                 }},
+
+                                 {"stackpanel@ng_module.stackpanel": {
+                                    "size": ["100%", "44%"],
+                                    "collection_name": "container_items",
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"background_custom_06@ng_asset.background_custom_06": {
+                                          "size": ["7.5%", "100%"],
+                                          "controls": [
+
+                                             {"label@ng_module.label": {
+                                                "text": "Premium",
+                                                "layer": 10,
+                                                "offset": [0, 5],
+                                                "color": [0.996, 0.780, 0.216],
+                                                "font_scale_factor": 0.75,
+                                                "font_type": "MinecraftTen"
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 22
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 25
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 28
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 31
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 34
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 37
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_gold": {
+                                          "$index": 40
+                                       }}
+
+                                 ]}},
+
+                                 {"padding@ng_module.panel": {
+                                    "size": ["100%", 5]
+                                 }},
+
+                                 {"stackpanel@ng_module.stackpanel": {
+                                    "size": ["100%", "44%"],
+                                    "collection_name": "container_items",
+                                    "orientation": "horizontal",
+                                    "controls": [
+
+                                       {"background_custom_06@ng_asset.background_custom_07": {
+                                          "size": ["7.5%", "100%"],
+                                          "controls": [
+
+                                             {"label@ng_module.label": {
+                                                "text": "Gratuit",
+                                                "layer": 10,
+                                                "font_scale_factor": 0.75,
+                                                "font_type": "MinecraftTen"
+                                             }}
+
+                                       ]}},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 23
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 26
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 29
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 32
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 35
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 38
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                          "size": ["0.8%", "100%"]
+                                       }},
+
+                                       {"button_loot@gamepass.button_loot_black": {
+                                          "$index": 41
+                                       }}
+
+                                 ]}}
+
+                           ]}}
+
+                     ]}}
+
+               ]}}
+
+         ]}}
+
+      ]
+   },
+
+   //asset
+
+   "button_loot_gold@ng_module.stackpanel": {
+      "collection_index": "$index",
+      "size": ["12.4%", "100%"],
+      "controls": [
+
+         {"button": {
+            "type": "input_panel",
+            "$textures_button_S0": "ng_asset.button_43",
+            "$textures_button_S1": "ng_asset.button_43",
+            "$fonction_mapping_button_S1": "clickable",
+            "$fonction_mapping_button_S2": "nonclickable",
+            "size": ["100%", "100%"],
+            "controls": [
+
+               {"texture_button": {
+                  "type": "panel",
+                  "size": ["100%", "100%"],
+                  "controls": [
+
+                     {"deja recuperé": {
+                        "$mapping_button|default": "$fonction_mapping_button_S2",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }},
+
+                           {"background@ng_asset.background_white": {
+                              "size": ["100%", "100%"],
+                              "alpha": 0.7,
+                              "layer": 20,
+                              "color": [0.000, 0.000, 0.000],
+                              "controls": [
+
+                                 {"icon_65@ng_asset.icon_65": {
+                                    "size": [20, 20]
+                                 }}
+
+                           ]}},
+
+                           {"item_and_itemname": {
+                              "type": "collection_panel",
+                              "size": ["100%", "100%"],
+                              "controls": [
+
+                                 {"icone@ng_module.icone": {
+                                    "size": ["50%", "50%"],
+                                    "$index": "$index",
+                                    "offset": [0, -5],
+                                    "$Get_text_type": "Get_text_type_2"
+                                 }},
+
+                                 {"text@ng_module.Simple_text": {
+                                    "$type_get_text": "Get_text_type_3",
+                                    "$index": "$index",
+                                    "offset": [0, -6.5],
+                                    "layer": 10,
+                                    "anchor_from": "bottom_middle",
+                                    "anchor_to": "bottom_middle",
+                                    "size": ["100%c", "100%c"],
+                                    "$font_scale_factor": 0.8
+                                 }}
+
+                           ]}}
+
+                     ]}},
+
+                     {"selectionner + a recuperé": {
+                        "$mapping_button": "$fonction_mapping_button_S1",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }},
+
+                           {"item_and_itemname": {
+                              "type": "collection_panel",
+                              "size": ["100%", "100%"],
+                              "controls": [
+
+                                 {"icone@ng_module.icone": {
+                                    "size": ["50%", "50%"],
+                                    "$index": "$index",
+                                    "offset": [0, -3],
+                                    "$Get_text_type": "Get_text_type_2"
+                                 }},
+
+                                 {"text@ng_module.Simple_text": {
+                                    "$type_get_text": "Get_text_type_3",
+                                    "$index": "$index",
+                                    "offset": [0, -6.5],
+                                    "layer": 10,
+                                    "anchor_from": "bottom_middle",
+                                    "anchor_to": "bottom_middle",
+                                    "size": ["100%c", "100%c"],
+                                    "$font_scale_factor": 0.8
+                                 }}
+
+                           ]}},
+
+                           {"selecte@ng_asset.background_22": {
+                              "size": ["100%", "100%"],
+                              "layer": 20,
+                              "color": [0.478, 0.212, 0.937],
+                              "bindings": [
+                                 {
+                                    "binding_name": "#hover_text",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "container_items"
+                                 },
+                                 {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#hover_text - '§s') = #hover_text))",
+                                    "target_property_name": "#visible"
+                                 }
+                           ]}},
+
+                           {"a reucperer@ng_asset.background_white": {
+                              "size": ["100%", "15%"],
+                              "layer": 20,
+                              "anchor_from": "top_middle",
+                              "anchor_to": "top_middle",
+                              "color": [0.478, 0.212, 0.937],
+                              "bindings": [
+                                 {
+                                    "binding_name": "#hover_text",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "container_items"
+                                 },
+                                 {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#hover_text - '§a') = #hover_text))",
+                                    "target_property_name": "#visible"
+                                 }
+                              ],
+                              "controls": [
+
+                                 {"label@ng_module.label": {
+                                    "text": "a récupérer",
+                                    "offset": [0, -1],
+                                    "font_type": "MinecraftTen",
+                                    "font_scale_factor": 0.65
+                                 }}
+
+                           ]}}
+
+                     ]}},
+
+                     {"no item": {
+                        "$mapping_button": "$fonction_mapping_button_S2",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§2') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }}
+
+                     ]}}
+
+               ]}}
+
+         ]}}
+
+      ]
+   },
+
+   "button_loot_black@ng_module.stackpanel": {
+      "collection_index": "$index",
+      "size": ["12.4%", "100%"],
+      "bindings": [
+         {
+            "binding_name": "#hover_text",
+            "binding_type": "collection",
+            "binding_collection_name": "container_items"
+         },
+         {
+            "binding_type": "view",
+            "source_property_name": "(not((#hover_text) = ''))",
+            "target_property_name": "#visible"
+         }
+      ],
+      "controls": [
+
+         {"button": {
+            "type": "input_panel",
+            "$textures_button_S0": "ng_asset.button_44",
+            "$textures_button_S1": "ng_asset.button_44",
+            "$fonction_mapping_button_S1": "clickable",
+            "$fonction_mapping_button_S2": "nonclickable",
+            "size": ["100%", "100%"],
+            "controls": [
+
+               {"texture_button": {
+                  "type": "panel",
+                  "size": ["100%", "100%"],
+                  "controls": [
+
+                     {"deja recuperé": {
+                        "$mapping_button|default": "$fonction_mapping_button_S2",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§0') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }},
+
+                           {"background@ng_asset.background_white": {
+                              "size": ["100%", "100%"],
+                              "alpha": 0.7,
+                              "layer": 20,
+                              "color": [0.000, 0.000, 0.000],
+                              "controls": [
+
+                                 {"icon_65@ng_asset.icon_65": {
+                                    "size": [20, 20]
+                                 }}
+
+                           ]}},
+
+                           {"item_and_itemname": {
+                              "type": "collection_panel",
+                              "size": ["100%", "100%"],
+                              "controls": [
+
+                                 {"icone@ng_module.icone": {
+                                    "size": ["50%", "50%"],
+                                    "$index": "$index",
+                                    "offset": [0, -5],
+                                    "$Get_text_type": "Get_text_type_2"
+                                 }},
+
+                                 {"text@ng_module.Simple_text": {
+                                    "$type_get_text": "Get_text_type_3",
+                                    "$index": "$index",
+                                    "offset": [0, -6.5],
+                                    "layer": 10,
+                                    "anchor_from": "bottom_middle",
+                                    "anchor_to": "bottom_middle",
+                                    "size": ["100%c", "100%c"],
+                                    "$font_scale_factor": 0.8
+                                 }}
+
+                           ]}}
+
+                     ]}},
+
+                     {"selectionner + a recuperé": {
+                        "$mapping_button": "$fonction_mapping_button_S1",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }},
+
+                           {"item_and_itemname": {
+                              "type": "collection_panel",
+                              "size": ["100%", "100%"],
+                              "controls": [
+
+                                 {"icone@ng_module.icone": {
+                                    "size": ["50%", "50%"],
+                                    "$index": "$index",
+                                    "offset": [0, -3],
+                                    "$Get_text_type": "Get_text_type_2"
+                                 }},
+
+                                 {"text@ng_module.Simple_text": {
+                                    "$type_get_text": "Get_text_type_3",
+                                    "$index": "$index",
+                                    "offset": [0, -6.5],
+                                    "layer": 10,
+                                    "anchor_from": "bottom_middle",
+                                    "anchor_to": "bottom_middle",
+                                    "size": ["100%c", "100%c"],
+                                    "$font_scale_factor": 0.8
+                                 }}
+
+                           ]}},
+
+                           {"selecte@ng_asset.background_22": {
+                              "size": ["100%", "100%"],
+                              "layer": 20,
+                              "color": [0.478, 0.212, 0.937],
+                              "bindings": [
+                                 {
+                                    "binding_name": "#hover_text",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "container_items"
+                                 },
+                                 {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#hover_text - '§s') = #hover_text))",
+                                    "target_property_name": "#visible"
+                                 }
+                           ]}},
+
+                           {"a reucperer@ng_asset.background_white": {
+                              "size": ["100%", "15%"],
+                              "layer": 20,
+                              "anchor_from": "top_middle",
+                              "anchor_to": "top_middle",
+                              "color": [0.478, 0.212, 0.937],
+                              "bindings": [
+                                 {
+                                    "binding_name": "#hover_text",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "container_items"
+                                 },
+                                 {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not ((#hover_text - '§a') = #hover_text))",
+                                    "target_property_name": "#visible"
+                                 }
+                              ],
+                              "controls": [
+
+                                 {"label@ng_module.label": {
+                                    "text": "a récupérer",
+                                    "offset": [0, -1],
+                                    "font_type": "MinecraftTen",
+                                    "font_scale_factor": 0.65
+                                 }}
+
+                           ]}}
+
+                     ]}},
+
+                     {"no item": {
+                        "$mapping_button": "$fonction_mapping_button_S2",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§2') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }}
+
+                     ]}}
+
+               ]}}
+
+         ]}}
+
+      ]
+   },
+
+   "button_niv@ng_module.stackpanel": {
+      "collection_index": "$index",
+      "size": ["12.4%", "100%"],
+      "bindings": [
+         {
+            "binding_name": "#hover_text",
+            "binding_type": "collection",
+            "binding_collection_name": "container_items"
+         },
+         {
+            "binding_type": "view",
+            "source_property_name": "(not((#hover_text) = ''))",
+            "target_property_name": "#visible"
+         }
+      ],
+      "controls": [
+
+         {"button": {
+            "type": "input_panel",
+            "$textures_button_S0": "ng_asset.button_45",
+            "$textures_button_S1": "ng_asset.button_46",
+            "$fonction_mapping_button_S0": "nonclickable",
+            "$fonction_mapping_button_S1": "nonclickable",
+            "size": ["100%", "100%"],
+            "controls": [
+
+               {"texture_button": {
+                  "type": "panel",
+                  "size": ["100%", "100%"],
+                  "controls": [
+
+                     {"check_status_S0": {
+                        "$mapping_button|default": "$fonction_mapping_button_S0",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§r4') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S0": {
+                              "layer": 4
+                           }},
+
+                           {"text@ng_module.Simple_text": {
+                              "$type_get_text": "Get_text_type_1",
+                              "$index": "$index",
+                              "layer": 50,
+                              "offset": [0, -0.3],
+                              "size": ["100%c", "100%c"],
+                              "$font_scale_factor": 0.65
+                           }}
+
+                     ]}},
+
+                     {"check_status_S1": {
+                        "$mapping_button|default": "$fonction_mapping_button_S1",
+                        "type": "panel",
+                        "size": ["100%", "100%"],
+                        "bindings": [
+                           {
+                              "binding_name": "#hover_text",
+                              "binding_type": "collection",
+                              "binding_collection_name": "container_items"
+                           },
+                           {
+                              "binding_type": "view",
+                              "source_property_name": "(not ((#hover_text - '§c§r§r4') = #hover_text))",
+                              "target_property_name": "#visible"
+                           }
+                        ],
+                        "controls": [
+
+                           {"texture_button@$textures_button_S1": {
+                              "layer": 4
+                           }},
+
+                           {"text@ng_module.Simple_text": {
+                              "$type_get_text": "Get_text_type_1",
+                              "$index": "$index",
+                              "layer": 50,
+                              "offset": [0, -0.3],
+                              "size": ["100%c", "100%c"],
+                              "$font_scale_factor": 0.65
+                           }}
+
+                     ]}}
+
+               ]}}
+
+         ]}}
+
+      ]
+   },
+
+   "queste_asset@ng_module.stackpanel": {
+      "collection_index": "$index_description_point",
+      "orientation": "horizontal",
+      "size": ["100%", 10],
+      "bindings": [
+         {
+            "binding_name": "#hover_text",
+            "binding_type": "collection",
+            "binding_collection_name": "container_items"
+         },
+         {
+            "binding_type": "view",
+            "source_property_name": "(not((#hover_text) = ''))",
+            "target_property_name": "#visible"
+         }
+      ],
+      "controls": [
+
+         {"descirption@ng_module.Simple_text": {
+            "$type_get_text": "Get_text_type_3",
+            "$index": "$index_description_point",
+            "layer": 50,
+            "size": ["100%c", "100%"],
+            "$font_scale_factor": 0.6
+         }},
+
+         {"padding@ng_module.panel": {
+            "size": ["2%", "100%"]
+         }},
+
+         {"point@ng_module.panel": {
+            "size": ["30%", "100%"],
+            "controls": [
+
+               {"background@ng_asset.background_83": {
+                  "size": ["100%", "85%"],
+                  "controls": [
+
+                     {"xp@ng_module.Simple_text": {
+                        "$type_get_text": "Get_text_type_2",
+                        "$index": "$index_description_point",
+                        "layer": 30,
+                        "$size_icone_left": [7, 7],
+                        "$offset_icone_left": [0, -0.3],
+                        "$texture_icone_left": "ng_asset.icon_67",
+                        "$text_offset": [0, 0.3],
+                        "size": ["100%c", "100%"],
+                        "$font_scale_factor": 0.5
+                     }}
+
+               ]}}
+
+         ]}},
+
+         {"padding@ng_module.panel": {
+            "size": ["fill", "100%"]
+         }},
+
+         {"point@ng_module.Simple_text": {
+            "$type_get_text": "Get_text_type_1",
+            "$index": "$index_progression",
+            "layer": 50,
+            "$text_color": [0.639, 0.639, 0.651],
+            "size": ["100%c", "100%"],
+            "$font_scale_factor": 0.6
+         }}
+
+      ]
+   }
+}

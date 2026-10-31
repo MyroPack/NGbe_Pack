@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.back_green_shell": {
+      "geometry": "Geometry.cosmetic.body.back_green_shell",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.back_green_shell"
+      ]
+    }
+  }
+}

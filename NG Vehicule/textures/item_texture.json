@@ -49,6 +49,9 @@
 		},
 		"bike_pegasus_chinese": {
 			"textures": "textures/items/bike_pegasus_chinese"
+		},
+		"helicopter": {
+			"textures": "textures/items/helicopter"
 		}
 	}
 }

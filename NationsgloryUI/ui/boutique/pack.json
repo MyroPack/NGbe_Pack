@@ -1,0 +1,1057 @@
+{
+  "namespace": "ng_boutique_pack",
+  "discount": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "original_price@ng_boutique_asset.price_pack_original": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.75,
+            0.0
+          ],
+          "size": [
+            35.0,
+            6.34
+          ],
+          "$index": 45,
+          "layer": 20
+        }
+      },
+      {
+        "strike@ng_boutique_asset.fill": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.77,
+            3.17
+          ],
+          "size": [
+            15.97,
+            0.44
+          ],
+          "$fill_color": [
+            0.757,
+            0.757,
+            0.757
+          ],
+          "layer": 25
+        }
+      }
+    ]
+  },
+  "discount_badge": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "star@ng_boutique_asset.icon_discount": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "price_red": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "text": "ngboutique.prix_pack",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.56,
+          "color": [
+            0.757,
+            0.757,
+            0.757
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            43.75,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "price@ng_boutique_asset.price_pack_red": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            6.56
+          ],
+          "size": [
+            56.88,
+            12.91
+          ],
+          "$index": 44,
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "price_white": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "text": "ngboutique.prix_pack",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.56,
+          "color": [
+            0.757,
+            0.757,
+            0.757
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            43.75,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "price@ng_boutique_asset.price_pack": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            6.56
+          ],
+          "size": [
+            56.88,
+            12.91
+          ],
+          "$index": 44,
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "timer": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.fill": {
+          "$fill_color": [
+            0.133,
+            0.141,
+            0.153
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "value@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.19,
+            0.0
+          ],
+          "size": [
+            26.25,
+            6.78
+          ],
+          "$index": 50,
+          "$font_scale": 0.4,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "left_middle",
+          "layer": 20,
+          "$label_offset": [
+            "0px",
+            "-0.72px"
+          ]
+        }
+      },
+      {
+        "icon@ng_boutique_asset.icon_clock": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            27.12,
+            1.42
+          ],
+          "size": [
+            3.94,
+            3.94
+          ],
+          "keep_ratio": true,
+          "layer": 2
+        }
+      }
+    ]
+  },
+  "stock_value": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.stock_badge": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "value@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            19.69,
+            6.34
+          ],
+          "$index": 48,
+          "$font_scale": 0.4,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "center",
+          "$text_alignment": "center",
+          "$label_size": [
+            "default",
+            "default"
+          ],
+          "$label_offset": [
+            "0px",
+            "-0.72px"
+          ],
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "stock_fill": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "fill@ng_boutique_asset.fill": {
+          "$fill_color": [
+            0.435,
+            0.467,
+            0.937
+          ]
+        }
+      }
+    ]
+  },
+  "stock": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "title": {
+          "type": "label",
+          "text": "ngboutique.stock",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.36,
+          "color": [
+            0.757,
+            0.757,
+            0.757
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            26.25,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "timer@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            4.81
+          ],
+          "size": [
+            32.81,
+            6.78
+          ],
+          "$index": 50,
+          "$content": "ng_boutique_pack.timer"
+        }
+      },
+      {
+        "badge@ng_boutique_pack.stock_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            36.93,
+            4.81
+          ],
+          "size": [
+            19.69,
+            6.78
+          ]
+        }
+      },
+      {
+        "bar_background@ng_boutique_asset.fill": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            56.61,
+            3.06
+          ],
+          "$fill_color": [
+            0.133,
+            0.141,
+            0.153
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "bar_1@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            5.66,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 1,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_2@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            11.32,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 2,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_3@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            16.98,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 3,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_4@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            22.65,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 4,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_5@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            28.31,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 5,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_6@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            33.97,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 6,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_7@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            39.63,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 7,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_8@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            45.29,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 8,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_9@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            50.95,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 9,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      },
+      {
+        "bar_10@ng_boutique_asset.has_number": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            14.44
+          ],
+          "size": [
+            56.61,
+            3.06
+          ],
+          "$index": 49,
+          "$score": 10,
+          "$content": "ng_boutique_pack.stock_fill",
+          "layer": 3
+        }
+      }
+    ]
+  },
+  "content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "breadcrumb": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            29.75
+          ],
+          "size": [
+            240.62,
+            3.94
+          ],
+          "controls": [
+            {
+              "home@ng_boutique_asset.link_button": {
+                "$index": 47,
+                "$link_text": "ACCUEIL",
+                "$link_scale": 0.42
+              }
+            },
+            {
+              "separator": {
+                "type": "label",
+                "text": " > ",
+                "font_type": "MinecraftTen",
+                "font_scale_factor": 0.42,
+                "color": [
+                  0.612,
+                  0.612,
+                  0.612
+                ],
+                "shadow": false,
+                "size": [
+                  "default",
+                  "default"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            },
+            {
+              "name_panel": {
+                "type": "panel",
+                "size": [
+                  "fill",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "name@ng_boutique_asset.slot_text": {
+                      "$index": 24,
+                      "$font_scale": 0.42,
+                      "$text_color": [
+                        0.612,
+                        0.612,
+                        0.612
+                      ],
+                      "$label_anchor": "top_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.95,
+            33.25
+          ],
+          "size": [
+            240.62,
+            14.44
+          ],
+          "$index": 24,
+          "$font_scale": 1.51,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "top_left",
+          "layer": 20
+        }
+      },
+      {
+        "title_line@ng_boutique_asset.separator": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            9.62,
+            52.5
+          ],
+          "size": [
+            400.75,
+            0.44
+          ],
+          "layer": 3
+        }
+      },
+      {
+        "banner": {
+          "type": "panel",
+          "size": [
+            420.0,
+            102.81
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            57.31
+          ],
+          "layer": 1,
+          "clips_children": true,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image_fill": {
+                "$index": 26
+              }
+            }
+          ]
+        }
+      },
+      {
+        "overlay@ng_boutique_asset.banner_overlay": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            57.31
+          ],
+          "size": [
+            420.0,
+            102.81
+          ],
+          "layer": 15
+        }
+      },
+      {
+        "glow@ng_boutique_asset.glow_line": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            159.69
+          ],
+          "size": [
+            420.0,
+            0.88
+          ],
+          "layer": 16
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            389.59,
+            61.25
+          ],
+          "size": [
+            23.62,
+            23.62
+          ],
+          "$index": 22,
+          "layer": 20
+        }
+      },
+      {
+        "rarity@ng_boutique_asset.rarity_label": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            256.16,
+            91.88
+          ],
+          "size": [
+            40.47,
+            12.69
+          ],
+          "$index": 22,
+          "layer": 20
+        }
+      },
+      {
+        "name@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            256.16,
+            109.38
+          ],
+          "size": [
+            153.12,
+            13.34
+          ],
+          "$index": 23,
+          "$font_scale": 1.34,
+          "$text_color": [
+            1,
+            1,
+            1
+          ],
+          "$text_getter": "get_text_plain",
+          "$label_anchor": "top_left",
+          "layer": 20
+        }
+      },
+      {
+        "description@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            256.16,
+            125.78
+          ],
+          "size": [
+            150.94,
+            30.62
+          ],
+          "$index": 25,
+          "$font_scale": 0.55,
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$text_getter": "get_text_colored",
+          "$label_anchor": "top_left",
+          "layer": 20,
+          "$font_type": "default"
+        }
+      },
+      {
+        "contents_title": {
+          "type": "label",
+          "text": "ngboutique.pack_contient",
+          "font_type": "MinecraftTen",
+          "font_scale_factor": 0.56,
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.81,
+            169.53
+          ],
+          "size": [
+            109.38,
+            "default"
+          ],
+          "localize": true
+        }
+      },
+      {
+        "scroll_previous@ng_boutique_asset.outfit_arrow_left_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            223.34,
+            167.78
+          ],
+          "size": [
+            7.44,
+            7.44
+          ],
+          "$index": 42,
+          "layer": 20
+        }
+      },
+      {
+        "scroll_next@ng_boutique_asset.outfit_arrow_right_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            232.53,
+            167.78
+          ],
+          "size": [
+            7.44,
+            7.44
+          ],
+          "$index": 43,
+          "layer": 20
+        }
+      },
+      {
+        "card_0@ng_boutique_asset.shop_card_small": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11.81,
+            178.06
+          ],
+          "size": [
+            42.66,
+            53.38
+          ],
+          "$index_image": 27,
+          "$index_info": 28,
+          "$index_buy": 29
+        }
+      },
+      {
+        "card_1@ng_boutique_asset.shop_card_small": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            58.19,
+            178.06
+          ],
+          "size": [
+            42.66,
+            53.38
+          ],
+          "$index_image": 30,
+          "$index_info": 31,
+          "$index_buy": 32
+        }
+      },
+      {
+        "card_2@ng_boutique_asset.shop_card_small": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            104.56,
+            178.06
+          ],
+          "size": [
+            42.66,
+            53.38
+          ],
+          "$index_image": 33,
+          "$index_info": 34,
+          "$index_buy": 35
+        }
+      },
+      {
+        "card_3@ng_boutique_asset.shop_card_small": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            150.94,
+            178.06
+          ],
+          "size": [
+            42.66,
+            53.38
+          ],
+          "$index_image": 36,
+          "$index_info": 37,
+          "$index_buy": 38
+        }
+      },
+      {
+        "card_4@ng_boutique_asset.shop_card_small": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            197.31,
+            178.06
+          ],
+          "size": [
+            42.66,
+            53.38
+          ],
+          "$index_image": 39,
+          "$index_info": 40,
+          "$index_buy": 41
+        }
+      },
+      {
+        "stock@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            350.22,
+            184.84
+          ],
+          "size": [
+            56.61,
+            17.5
+          ],
+          "$index": 48,
+          "$content": "ng_boutique_pack.stock"
+        }
+      },
+      {
+        "discount_badge@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            280.0,
+            206.06
+          ],
+          "size": [
+            11.81,
+            11.81
+          ],
+          "$index": 45,
+          "$content": "ng_boutique_pack.discount_badge",
+          "layer": 20
+        }
+      },
+      {
+        "price_red@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            295.31,
+            196.88
+          ],
+          "size": [
+            52.5,
+            19.69
+          ],
+          "$index": 44,
+          "$flag": "§1",
+          "$content": "ng_boutique_pack.price_red"
+        }
+      },
+      {
+        "price_white@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            295.31,
+            204.53
+          ],
+          "size": [
+            52.5,
+            19.69
+          ],
+          "$index": 44,
+          "$flag": "§2",
+          "$content": "ng_boutique_pack.price_white"
+        }
+      },
+      {
+        "discount@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            295.31,
+            216.56
+          ],
+          "size": [
+            43.75,
+            6.34
+          ],
+          "$index": 45,
+          "$content": "ng_boutique_pack.discount"
+        }
+      },
+      {
+        "buy@ng_boutique_asset.red_buy_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            350.22,
+            210.22
+          ],
+          "size": [
+            56.61,
+            14.44
+          ],
+          "$index": 46,
+          "layer": 20
+        }
+      }
+    ]
+  }
+}

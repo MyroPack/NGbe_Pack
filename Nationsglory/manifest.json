@@ -22,13 +22,13 @@
       80
     ],
     "uuid": "bd0b6948-4d3a-42ab-a34a-cff5b4613aed",
-    "version": [1, 0, 53]
+    "version": [1, 0, 55]
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "235bd165-0f71-4361-bb37-c889b452e3c6",
-      "version": [1, 0, 53]
+      "version": [1, 0, 55]
     }
   ]
 }

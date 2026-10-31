@@ -1,0 +1,847 @@
+{
+  "namespace": "backpack",
+
+  // Le sac a dos de NGMod (Service/Backpack), ouvert sous le titre ng:backpack.
+  // A gauche l'inventaire du joueur et l'encart d'agrandissement, a droite le sac, son tri et la croix.
+  //
+  // Cases du conteneur (container_items) :
+  //   0 a 53 : les 6 lignes du sac.
+  //   54 : le titre (« Sac à dos », ou « Sac de <joueur> » pour le staff)
+  //   55 : le remplissage (« 12/27 » : cases occupees / cases achetees)
+  //   56 : le bouton de tri (le clic jette l'objet de la case, le serveur le refuse et trie)
+  //   57 : le bouton d'agrandissement : §0 achetable (cliquable), §1 grade insuffisant, §2 taille maximale
+  //   58 : l'argent du joueur
+  //   59 : les lignes achetees (« 3/6 »), 60 : le maximum du grade (« 4 lignes »), 61 : le prix de la ligne suivante
+  //   62 : les lignes pas encore achetees (« L4L5L6 ») : un cadenas couvre chacune d'elles (backpack.locks).
+  // Les cases 54 a 62 portent de vrais objets paladium:ui du conteneur, renommes par le serveur.
+  // Un clic sur une case du sac, de l'inventaire ou de la barre fait le shift-clic du jeu
+  // (ng_module.container_mapping_quick_move) : l'objet change de cote sans passer par le curseur, ce qui ferait
+  // redessiner l'ecran et perdre ses textes.
+
+  "main_panel": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+
+      {"background_black@ng_asset.background_white": {
+        "color": [0.000, 0.000, 0.000],
+        "size": ["150%", "150%"],
+        "alpha": 0.5
+      }},
+
+      {"content@ng_module.stackpanel": {
+        "orientation": "horizontal",
+        "size": ["100%c", 185],
+        "controls": [
+
+          {"inventory@backpack.inventory_panel": {}},
+
+          {"padding@ng_module.panel": {
+            "size": [5, "100%"]
+          }},
+
+          {"backpack@backpack.backpack_panel": {}}
+      ]}}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //               Inventaire (gauche)
+  //
+  // -----------------------------------------------
+
+  "inventory_panel@ng_asset.background_white": {
+    "color": [0.153, 0.153, 0.165],
+    "size": [200, "100%"],
+    "controls": [
+
+      {"content@ng_module.stackpanel": {
+        "size": ["100% - 2px", "100% - 2px"],
+        "controls": [
+
+          {"header@ng_asset.background_01": {
+            "size": ["100%", 20],
+            "controls": [
+
+              {"stack_panel@ng_module.stackpanel": {
+                "orientation": "horizontal",
+                "size": ["100% - 4px", "100% - 2px"],
+                "controls": [
+
+                  {"padding@ng_module.panel": {
+                    "size": [5, "100%"]
+                  }},
+
+                  {"text@ng_module.panel": {
+                    "size": ["100%c", "100%"],
+                    "controls": [
+
+                      {"title": {
+                        "type": "label",
+                        "font_scale_factor": 0.9,
+                        "layer": 10,
+                        "offset": [0, -1.3],
+                        "font_type": "MinecraftTen",
+                        "text": "inventaire"
+                      }}
+                  ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": ["fill", "100%"]
+                  }},
+
+                  {"money@ng_module.panel": {
+                    "size": ["100%c", "100%"],
+                    "controls": [
+
+                      {"background@ng_asset.background_03": {
+                        "min_size": [25, "100% - 2px"],
+                        "size": ["100%c + 10px", "100% - 2px"],
+                        "controls": [
+
+                          {"text@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 58,
+                            "$size_icone_right": [8, 8],
+                            "$padding_right": [1.5, 0],
+                            "$text_offset": [0, 0.6],
+                            "$color_icone_right": [0.533, 0.941, 0.392],
+                            "$texture_icone_right": "ng_asset.icon_10",
+                            "layer": 100,
+                            "size": ["100%c", "100%"],
+                            "$font_scale_factor": 0.7
+                          }}
+                      ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [1, "100%"]
+                  }}
+              ]}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%", 4]
+          }},
+
+          // Les elements de 190 de large sont centres dans un panneau de toute la largeur : une pile les colle a gauche.
+          {"inventory_area@ng_module.panel": {
+            "size": ["100%", 85],
+            "controls": [
+
+              {"inventory@ng_asset.background_white": {
+                "color": [0.180, 0.180, 0.192],
+                "size": [190, 85],
+                "controls": [
+
+                  {"inventory_&_hotbar@ng_module.stackpanel": {
+                    "size": [189, 84],
+                    "offset": [0, 0.5],
+                    "controls": [
+
+                      {"inventory@ng_module.grid_asset": {
+                        "$size_grid": [189, 63],
+                        "$grid_dimensions": [9, 3],
+                        "$collection_name": "inventory_items",
+                    "$mapping_container": "container_mapping_quick_move",
+                        "$item_renderer_panel_size": [20, 20],
+                        "$cell_image_size": [20, 20],
+                        "$slot_size": [20, 20],
+                        "$textures_slot_hover": "ng_asset.background_10",
+                        "$textures_slot_default": "ng_asset.background_white",
+                        "$color_background_default": [0.094, 0.094, 0.106]
+                      }},
+
+                      {"hotbar@ng_module.grid_asset": {
+                        "$size_grid": [189, 21],
+                        "$grid_dimensions": [9, 1],
+                        "$collection_name": "hotbar_items",
+                    "$mapping_container": "container_mapping_quick_move",
+                        "$item_renderer_panel_size": [20, 20],
+                        "$cell_image_size": [20, 20],
+                        "$slot_size": [20, 20],
+                        "$textures_slot_hover": "ng_asset.background_10",
+                        "$textures_slot_default": "ng_asset.background_white",
+                        "$color_background_default": [0.094, 0.094, 0.106]
+                      }}
+                  ]}}
+              ]}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%", 4]
+          }},
+
+          {"informations_area@ng_module.panel": {
+            "size": ["100%", "fill"],
+            "controls": [
+
+              {"informations@backpack.informations": {}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%", 4]
+          }}
+      ]}}
+  ]},
+
+  // L'encart d'agrandissement, sous l'inventaire : lignes achetees, maximum du grade, prix de la ligne suivante.
+  "informations@ng_module.stackpanel": {
+    "size": [190, "100%"],
+    "controls": [
+
+      {"header@ng_asset.background_17": {
+        "size": ["100%", 14],
+        "controls": [
+
+          {"title@ng_module.label": {
+            "text": "agrandissement",
+            "font_scale_factor": 0.7,
+            "layer": 10,
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "font_type": "MinecraftTen",
+            "offset": [5, -1],
+            "color": [0.624, 0.624, 0.663]
+          }}
+      ]}},
+
+      {"body@ng_asset.background_white": {
+        "size": ["100%", "fill"],
+        "color": [0.200, 0.200, 0.220],
+        "controls": [
+
+          {"content@ng_asset.background_white": {
+            "size": ["100% - 2px", "100% - 1px"],
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "layer": 1,
+            "color": [0.094, 0.094, 0.106],
+            "controls": [
+
+              {"lines@ng_module.stackpanel": {
+                "size": ["100% - 12px", "100%c"],
+                "layer": 2,
+                "controls": [
+
+                  {"rows@backpack.information_line": {
+                    "$line_text": "Lignes débloquées",
+                    "$index": 59
+                  }},
+
+                  {"rank@backpack.information_line": {
+                    "$line_text": "Maximum de ton grade",
+                    "$index": 60
+                  }},
+
+                  {"price@backpack.information_line": {
+                    "$line_text": "Prochaine ligne",
+                    "$index": 61
+                  }}
+              ]}}
+          ]}}
+      ]}}
+  ]},
+
+  "information_line@ng_module.stackpanel": {
+    "$line_text|default": "",
+    "$index|default": 0,
+    "orientation": "horizontal",
+    "size": ["100%", 14],
+    "controls": [
+
+      {"centring@ng_module.panel": {
+        "size": ["100%c", "100%"],
+        "controls": [
+
+          {"text@ng_module.label": {
+            "text": "$line_text",
+            "font_scale_factor": 0.65,
+            "layer": 5,
+            "color": [0.624, 0.624, 0.663]
+          }}
+      ]}},
+
+      {"padding@ng_module.panel": {
+        "size": ["fill", "100%"]
+      }},
+
+      // $index : celui de la ligne (information_line), qui descend jusqu'au texte.
+      {"value@ng_module.Simple_text": {
+        "$type_get_text": "Get_text_type_1",
+        "layer": 5,
+        "size": ["100%c", "100%"],
+        "$font_scale_factor": 0.65
+      }}
+  ]},
+
+  // -----------------------------------------------
+  //
+  //               Sac (droite)
+  //
+  // -----------------------------------------------
+
+  "backpack_panel@ng_asset.background_white": {
+    "color": [0.153, 0.153, 0.165],
+    "size": [200, "100%"],
+    "controls": [
+
+      {"content@ng_module.stackpanel": {
+        "size": ["100% - 2px", "100% - 2px"],
+        "controls": [
+
+          {"header@ng_asset.background_01": {
+            "size": ["100%", 20],
+            "controls": [
+
+              {"stack_panel@ng_module.stackpanel": {
+                "orientation": "horizontal",
+                "size": ["100% - 4px", "100% - 2px"],
+                "controls": [
+
+                  {"padding@ng_module.panel": {
+                    "size": [5, "100%"]
+                  }},
+
+                  {"title@ng_module.Simple_text": {
+                    "$type_get_text": "Get_text_type_1",
+                    "$index": 54,
+                    "layer": 10,
+                    "size": ["100%c", "100%"],
+                    "$font_type": "MinecraftTen",
+                    "$font_scale_factor": 0.9,
+                    "$text_offset": [0, -1.3]
+                  }},
+
+                  {"padding@ng_module.panel": {
+                    "size": ["fill", "100%"]
+                  }},
+
+                  {"filling@ng_module.panel": {
+                    "size": ["100%c", "100%"],
+                    "controls": [
+
+                      {"background@ng_asset.background_03": {
+                        "min_size": [25, "100% - 2px"],
+                        "size": ["100%c + 10px", "100% - 2px"],
+                        "controls": [
+
+                          {"text@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 55,
+                            "layer": 100,
+                            "$text_offset": [0, 0.6],
+                            "$size_icone_left": [8, 8],
+                            "$padding_left": [1.5, 0.1],
+                            "$color_icone_left": [1.000, 0.573, 0.173],
+                            "$texture_icone_left": "ng_asset.icon_38",
+                            "size": ["100%c", "100%"],
+                            "$font_scale_factor": 0.7
+                          }}
+                      ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [2.5, "100%"]
+                  }},
+
+                  {"sort@ng_module.panel": {
+                    "size": ["100%c", "100%"],
+                    "controls": [
+
+                      {"sort_button@backpack.sort_button": {}}
+                  ]}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [2.5, "100%"]
+                  }},
+
+                  {"centring@ng_module.panel": {
+                    "size": ["100%c", "100%"],
+                    "controls": [
+
+                      {"close_button@ng_module.close_button": {}}
+                  ]}}
+              ]}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%", 4]
+          }},
+
+          {"grid_area@ng_module.panel": {
+            "size": ["100%", 128],
+            "controls": [
+
+              {"grid_background@ng_asset.background_white": {
+                "color": [0.180, 0.180, 0.192],
+                "size": [190, 128],
+                "controls": [
+
+                  {"grid@backpack.backpack_grid": {}},
+                  {"locks@backpack.locks": {}}
+              ]}}
+          ]}},
+
+          {"padding@ng_module.panel": {
+            "size": ["100%", 4]
+          }},
+
+          {"upgrade_area@ng_module.panel": {
+            "size": ["100%", 22],
+            "controls": [
+
+              {"upgrade_button@backpack.upgrade_button": {}}
+          ]}}
+      ]}}
+  ]},
+
+  // Le bouton de tri, a cote de la croix : meme cadre et memes fonds que close_button. Le clic jette l'objet de la
+  // case 56 ; le serveur refuse le jet (rien ne bouge) et trie le sac.
+  "sort_button@ng_asset.background_white": {
+    "color": [0.094, 0.094, 0.106],
+    "size": [16, 16],
+    "controls": [
+
+      {"sort_cell": {
+        "type": "collection_panel",
+        "collection_name": "container_items",
+        "size": [14, 14],
+        "controls": [
+
+          {"sort_button": {
+            "type": "button",
+            "collection_index": 56,
+            "size": ["100%", "100%"],
+            "default_control": "default",
+            "hover_control": "hover",
+            "pressed_control": "pressed",
+            "focus_enabled": true,
+            "sound_name": "random.click",
+            "sound_volume": 1.0,
+            "sound_pitch": 1.0,
+            "bindings": [
+              {
+                "binding_type": "collection_details",
+                "binding_collection_name": "container_items",
+                "binding_condition": "once"
+              }
+            ],
+            "button_mappings": [
+              {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.drop_all",
+                "mapping_type": "pressed",
+                "consume_event": true
+              },
+              {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.drop_all",
+                "mapping_type": "pressed",
+                "consume_event": true
+              }
+            ],
+            "controls": [
+              {"default": {"type": "image", "size": ["100%", "100%"], "texture": "textures/ui/background/background_01"}},
+              {"hover": {"type": "image", "size": ["100%", "100%"], "texture": "textures/ui/background/background_05"}},
+              {"pressed": {"type": "image", "size": ["100%", "100%"], "texture": "textures/ui/background/background_05"}},
+              {"icone@ng_asset.icon_40": {"size": [8, 8], "layer": 3}}
+            ]
+          }}
+      ]}}
+  ]},
+
+  // Les 54 cases du sac : 6 rangees de 9, chaque case a son index (comme les cases du troc et des machines). Pas
+  // de grille sur container_items : aucun ecran NG n'en pose, les cases sont toujours nommees une a une.
+  "backpack_grid@ng_module.stackpanel": {
+    "size": [189, 126],
+    "controls": [
+
+      {"row_1": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_0@backpack.backpack_slot": {"$index": 0}},
+          {"slot_1@backpack.backpack_slot": {"$index": 1}},
+          {"slot_2@backpack.backpack_slot": {"$index": 2}},
+          {"slot_3@backpack.backpack_slot": {"$index": 3}},
+          {"slot_4@backpack.backpack_slot": {"$index": 4}},
+          {"slot_5@backpack.backpack_slot": {"$index": 5}},
+          {"slot_6@backpack.backpack_slot": {"$index": 6}},
+          {"slot_7@backpack.backpack_slot": {"$index": 7}},
+          {"slot_8@backpack.backpack_slot": {"$index": 8}}
+      ]}},
+
+      {"row_2": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_9@backpack.backpack_slot": {"$index": 9}},
+          {"slot_10@backpack.backpack_slot": {"$index": 10}},
+          {"slot_11@backpack.backpack_slot": {"$index": 11}},
+          {"slot_12@backpack.backpack_slot": {"$index": 12}},
+          {"slot_13@backpack.backpack_slot": {"$index": 13}},
+          {"slot_14@backpack.backpack_slot": {"$index": 14}},
+          {"slot_15@backpack.backpack_slot": {"$index": 15}},
+          {"slot_16@backpack.backpack_slot": {"$index": 16}},
+          {"slot_17@backpack.backpack_slot": {"$index": 17}}
+      ]}},
+
+      {"row_3": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_18@backpack.backpack_slot": {"$index": 18}},
+          {"slot_19@backpack.backpack_slot": {"$index": 19}},
+          {"slot_20@backpack.backpack_slot": {"$index": 20}},
+          {"slot_21@backpack.backpack_slot": {"$index": 21}},
+          {"slot_22@backpack.backpack_slot": {"$index": 22}},
+          {"slot_23@backpack.backpack_slot": {"$index": 23}},
+          {"slot_24@backpack.backpack_slot": {"$index": 24}},
+          {"slot_25@backpack.backpack_slot": {"$index": 25}},
+          {"slot_26@backpack.backpack_slot": {"$index": 26}}
+      ]}},
+
+      {"row_4": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_27@backpack.backpack_slot": {"$index": 27}},
+          {"slot_28@backpack.backpack_slot": {"$index": 28}},
+          {"slot_29@backpack.backpack_slot": {"$index": 29}},
+          {"slot_30@backpack.backpack_slot": {"$index": 30}},
+          {"slot_31@backpack.backpack_slot": {"$index": 31}},
+          {"slot_32@backpack.backpack_slot": {"$index": 32}},
+          {"slot_33@backpack.backpack_slot": {"$index": 33}},
+          {"slot_34@backpack.backpack_slot": {"$index": 34}},
+          {"slot_35@backpack.backpack_slot": {"$index": 35}}
+      ]}},
+
+      {"row_5": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_36@backpack.backpack_slot": {"$index": 36}},
+          {"slot_37@backpack.backpack_slot": {"$index": 37}},
+          {"slot_38@backpack.backpack_slot": {"$index": 38}},
+          {"slot_39@backpack.backpack_slot": {"$index": 39}},
+          {"slot_40@backpack.backpack_slot": {"$index": 40}},
+          {"slot_41@backpack.backpack_slot": {"$index": 41}},
+          {"slot_42@backpack.backpack_slot": {"$index": 42}},
+          {"slot_43@backpack.backpack_slot": {"$index": 43}},
+          {"slot_44@backpack.backpack_slot": {"$index": 44}}
+      ]}},
+
+      {"row_6": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"slot_45@backpack.backpack_slot": {"$index": 45}},
+          {"slot_46@backpack.backpack_slot": {"$index": 46}},
+          {"slot_47@backpack.backpack_slot": {"$index": 47}},
+          {"slot_48@backpack.backpack_slot": {"$index": 48}},
+          {"slot_49@backpack.backpack_slot": {"$index": 49}},
+          {"slot_50@backpack.backpack_slot": {"$index": 50}},
+          {"slot_51@backpack.backpack_slot": {"$index": 51}},
+          {"slot_52@backpack.backpack_slot": {"$index": 52}},
+          {"slot_53@backpack.backpack_slot": {"$index": 53}}
+      ]}}
+  ]},
+
+  // Une case du sac. L'index est sur la case elle-meme, enfant direct de la rangee qui nomme la collection (comme
+  // dans tous les composants NG) ; plus bas, l'objet n'est pas dessine.
+  "backpack_slot": {
+    "type": "panel",
+    "size": [21, 21],
+    "$index|default": 0,
+    "collection_index": "$index",
+    "controls": [
+
+      {"slot@ng_module.container_item": {
+        "$item_collection_name": "container_items",
+        "$mapping_container": "container_mapping_quick_move",
+        "$slot_size": [20, 20],
+        "$cell_image_size": [20, 20],
+        "$item_renderer_panel_size": [20, 20],
+        "$textures_slot_hover": "ng_asset.background_10",
+        "$textures_slot_default": "ng_asset.background_white",
+        "$color_background_default": [0.094, 0.094, 0.106]
+      }}
+  ]},
+
+  // Les cadenas, par-dessus la grille : une ligne de cadenas pour chaque ligne que la case 62 nomme (« L4 »). Un
+  // objet laisse dans une ligne retiree par le staff reste visible au travers et peut etre sorti.
+  "locks@ng_module.stackpanel": {
+    "size": [189, 126],
+    "layer": 50,
+    "controls": [
+
+      // La premiere ligne est toujours achetee.
+      {"row_1@ng_module.panel": {
+        "size": ["100%", 21]
+      }},
+
+      {"row_2@ng_module.collectionpanel": {
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"lock": {
+            "type": "stack_panel",
+            "orientation": "horizontal",
+            "collection_name": "container_items",
+            "collection_index": 62,
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - 'L2') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+
+              {"cell_1@backpack.lock_cell": {}},
+              {"cell_2@backpack.lock_cell": {}},
+              {"cell_3@backpack.lock_cell": {}},
+              {"cell_4@backpack.lock_cell": {}},
+              {"cell_5@backpack.lock_cell": {}},
+              {"cell_6@backpack.lock_cell": {}},
+              {"cell_7@backpack.lock_cell": {}},
+              {"cell_8@backpack.lock_cell": {}},
+              {"cell_9@backpack.lock_cell": {}}
+          ]}}
+      ]}},
+
+      {"row_3@ng_module.collectionpanel": {
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"lock": {
+            "type": "stack_panel",
+            "orientation": "horizontal",
+            "collection_name": "container_items",
+            "collection_index": 62,
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - 'L3') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+
+              {"cell_1@backpack.lock_cell": {}},
+              {"cell_2@backpack.lock_cell": {}},
+              {"cell_3@backpack.lock_cell": {}},
+              {"cell_4@backpack.lock_cell": {}},
+              {"cell_5@backpack.lock_cell": {}},
+              {"cell_6@backpack.lock_cell": {}},
+              {"cell_7@backpack.lock_cell": {}},
+              {"cell_8@backpack.lock_cell": {}},
+              {"cell_9@backpack.lock_cell": {}}
+          ]}}
+      ]}},
+
+      {"row_4@ng_module.collectionpanel": {
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"lock": {
+            "type": "stack_panel",
+            "orientation": "horizontal",
+            "collection_name": "container_items",
+            "collection_index": 62,
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - 'L4') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+
+              {"cell_1@backpack.lock_cell": {}},
+              {"cell_2@backpack.lock_cell": {}},
+              {"cell_3@backpack.lock_cell": {}},
+              {"cell_4@backpack.lock_cell": {}},
+              {"cell_5@backpack.lock_cell": {}},
+              {"cell_6@backpack.lock_cell": {}},
+              {"cell_7@backpack.lock_cell": {}},
+              {"cell_8@backpack.lock_cell": {}},
+              {"cell_9@backpack.lock_cell": {}}
+          ]}}
+      ]}},
+
+      {"row_5@ng_module.collectionpanel": {
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"lock": {
+            "type": "stack_panel",
+            "orientation": "horizontal",
+            "collection_name": "container_items",
+            "collection_index": 62,
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - 'L5') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+
+              {"cell_1@backpack.lock_cell": {}},
+              {"cell_2@backpack.lock_cell": {}},
+              {"cell_3@backpack.lock_cell": {}},
+              {"cell_4@backpack.lock_cell": {}},
+              {"cell_5@backpack.lock_cell": {}},
+              {"cell_6@backpack.lock_cell": {}},
+              {"cell_7@backpack.lock_cell": {}},
+              {"cell_8@backpack.lock_cell": {}},
+              {"cell_9@backpack.lock_cell": {}}
+          ]}}
+      ]}},
+
+      {"row_6@ng_module.collectionpanel": {
+        "collection_name": "container_items",
+        "size": ["100%", 21],
+        "controls": [
+
+          {"lock": {
+            "type": "stack_panel",
+            "orientation": "horizontal",
+            "collection_name": "container_items",
+            "collection_index": 62,
+            "size": ["100%", "100%"],
+            "bindings": [
+              {
+                "binding_name": "#hover_text",
+                "binding_type": "collection",
+                "binding_collection_name": "container_items"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hover_text - 'L6') = #hover_text))",
+                "target_property_name": "#visible"
+              }
+            ],
+            "controls": [
+
+              {"cell_1@backpack.lock_cell": {}},
+              {"cell_2@backpack.lock_cell": {}},
+              {"cell_3@backpack.lock_cell": {}},
+              {"cell_4@backpack.lock_cell": {}},
+              {"cell_5@backpack.lock_cell": {}},
+              {"cell_6@backpack.lock_cell": {}},
+              {"cell_7@backpack.lock_cell": {}},
+              {"cell_8@backpack.lock_cell": {}},
+              {"cell_9@backpack.lock_cell": {}}
+          ]}}
+      ]}}
+  ]},
+
+  "lock_cell@ng_module.panel": {
+    "size": [21, 21],
+    "controls": [
+
+      {"shade@ng_asset.background_white": {
+        "size": [20, 20],
+        "color": [0.125, 0.125, 0.137],
+        "alpha": 0.85,
+        "layer": 1
+      }},
+
+      {"icon@ng_asset.icon_27": {
+        "size": [8, 8],
+        "color": [0.322, 0.322, 0.361],
+        "layer": 2
+      }}
+  ]},
+
+  // Le gros bouton sous le sac : §0 « Débloquer une ligne : 2 000 $ » (cliquable), §1 grade insuffisant, §2 taille
+  // maximale.
+  "upgrade_button@ng_module.multiple_status_button": {
+    "size": [190, 22],
+    "$size_button": ["100%", "100%"],
+    "$index": 57,
+
+    "$textures_button_S0": "ng_asset.button_31",
+    "$textures_button_S1": "ng_asset.button_04",
+    "$textures_button_S2": "ng_asset.button_04",
+
+    "$fonction_mapping_button_S0": "clickable",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$fonction_mapping_button_S2": "nonclickable",
+
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S2_type_get_text": "Get_text_type_1",
+
+    "$S0_text_color": [0.020, 0.200, 0.271],
+    "$S1_text_color": [0.443, 0.443, 0.482],
+    "$S2_text_color": [0.604, 0.902, 0.000],
+
+    "$S0_size_icone_left": [9, 9],
+    "$S0_color_icone_left": [0.020, 0.200, 0.271],
+    "$S0_texture_icone_left": "ng_asset.icon_27",
+    "$S0_padding_left": [3, 0.1],
+
+    "$S1_size_icone_left": [9, 9],
+    "$S1_color_icone_left": [0.443, 0.443, 0.482],
+    "$S1_texture_icone_left": "ng_asset.icon_27",
+    "$S1_padding_left": [3, 0.1],
+
+    "$S2_size_icone_left": [9, 9],
+    "$S2_color_icone_left": [0.604, 0.902, 0.000],
+    "$S2_texture_icone_left": "ng_asset.icon_28",
+    "$S2_padding_left": [3, 0.1],
+
+    "$font_scale_factor": 0.75,
+    "$text_offset": [0, 0]
+  }
+}

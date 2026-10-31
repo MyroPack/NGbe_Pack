@@ -419,7 +419,8 @@
           "factory": {
             "name": "hud_title_text_factory",
             "control_ids": {
-              "hud_title_text": "hud_title_text@hud.hud_title_text"
+              // Le titre du jeu, ou l'ecran de decouverte des catastrophes (ng_hud_title_text, en fin de fichier).
+              "hud_title_text": "hud_title_text@hud.ng_hud_title_text"
             }
           }
         }
@@ -1060,42 +1061,48 @@
                           "size": ["100%", 1]
                         }},
 
-                        {"content": {
-                            "type": "label",
-                            "text": "#text",
-                            "font_scale_factor": 0.6,
-                            "layer": 1000000,
-                            "max_size":["100%",14],
-                            "property_bag": {
-                              "#search": 0,
-                              "#separator": ";"
-                            },
-                            "bindings": [
-                              {
-                                "binding_collection_name": "chat_text_grid",
-                                "binding_condition": "once",
-                                "binding_name_override": "#text",
-                                "binding_name": "#chat_text",
-                                "binding_type": "collection"
-                              },
-                              {
-                                "binding_condition": "always",
-                                "binding_type": "view",
-                                "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
-                                "target_property_name": "#search"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "((('%.'+#search+'s') * #text) - #separator)",
-                                "target_property_name": "#text"
-                              },
-                              {
-                                "binding_type": "view",
-                                "source_property_name": "(#text - '§o')",
-                                "target_property_name": "#display_text"
-                              }
-                            ]
-                        }}
+                        {"center@ng_module.panel": {
+                          "size": ["100%", "100%c"],
+                          "controls":[
+
+                            {"content": {
+                                "type": "label",
+                                "text": "#text",
+                                "font_scale_factor": 0.6,
+                                "layer": 1000000,
+                                "min_size":["100%",6.3],
+                                "max_size":["100%",14],
+                                "property_bag": {
+                                  "#search": 0,
+                                  "#separator": ";"
+                                },
+                                "bindings": [
+                                  {
+                                    "binding_collection_name": "chat_text_grid",
+                                    "binding_condition": "once",
+                                    "binding_name_override": "#text",
+                                    "binding_name": "#chat_text",
+                                    "binding_type": "collection"
+                                  },
+                                  {
+                                    "binding_condition": "always",
+                                    "binding_type": "view",
+                                    "source_property_name": "(#search + 1 * ( not (('%.'+#search+'s') * #text = #text) and (('%.'+#search+'s') * #text = ('%.'+#search+'s') * #text - #separator) ))",
+                                    "target_property_name": "#search"
+                                  },
+                                  {
+                                    "binding_type": "view",
+                                    "source_property_name": "((('%.'+#search+'s') * #text) - #separator)",
+                                    "target_property_name": "#text"
+                                  },
+                                  {
+                                    "binding_type": "view",
+                                    "source_property_name": "(#text - '§o')",
+                                    "target_property_name": "#display_text"
+                                  }
+                                ]
+                            }}
+                        ]}}
                   ]}}
             ]}}
       ]}}
@@ -1280,5 +1287,221 @@
     "from": [-5,-3],
     "to": [288,-3],
     "destroy_at_end": "chat_grid_item"
+  },
+
+  // ---------------------------------------------------------------------------------------------------------------
+  // Ecran de decouverte des catastrophes de NationsGlory Java (NGMod, lot 6 : maquette notification_decouverte_modele) :
+  // titre orange au centre, sous-titre blanc, entre deux filets blancs, avec le losange orange au pictogramme du type.
+  // NGMod l'envoie par le titre du jeu, marque a la fin de codes de format invisibles : §r§d§c§v§1§r (meteorite),
+  // §r§d§c§v§2§r (volcan), §r§d§c§v§3§r (faille). Sans marque, le titre du jeu est montre tel quel.
+  // Le meme ecran sert a la decouverte des villages PvE de NGBestiaryMod : §r§d§c§v§4§r a §9 (jungle, medieval, nomade,
+  // pirate, terra, viking), le logo du peuple (textures de NGBestiaryResourcePack) a la place du losange et le nom du
+  // peuple dans sa couleur (code de couleur en tete du titre).
+  // ---------------------------------------------------------------------------------------------------------------
+  "ng_hud_title_text": {
+    "type": "panel",
+    "size": ["100%", "100%"],
+    "controls": [
+      {"titre_du_jeu@hud.hud_title_text": {
+        "bindings": [
+          {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+          {"binding_type": "view", "source_property_name": "((#hud_title_text_string - '§d§c§v') = #hud_title_text_string)", "target_property_name": "#visible"}
+        ]
+      }},
+      {"ecran_decouverte@hud.ng_decouverte_ecran": {}}
+    ]
+  },
+
+  // L'apparition, la tenue et la disparition de l'ecran : celles du titre du jeu (memes durees, memes fins).
+  "ng_decouverte_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@hud.ng_decouverte_alpha_stay"
+  },
+  "ng_decouverte_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.ng_decouverte_alpha_out"
+  },
+  "ng_decouverte_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+
+  "ng_decouverte_ecran": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": ["120px", "100%c"],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [0, -6],
+    "layer": 2,
+    "alpha": "@hud.ng_decouverte_alpha_in",
+    "propagate_alpha": true,
+    "bindings": [
+      {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+      {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v') = #hud_title_text_string))", "target_property_name": "#visible"}
+    ],
+    "controls": [
+      {"rangee_haut": {
+        "type": "panel",
+        "size": ["100%", 12],
+        "controls": [
+          {"filet_gauche@ng_asset.background_white": {"size": ["50% - 14px", 1], "anchor_from": "left_middle", "anchor_to": "left_middle"}},
+          {"filet_droit@ng_asset.background_white": {"size": ["50% - 14px", 1], "anchor_from": "right_middle", "anchor_to": "right_middle"}},
+          {"vide_gauche": {"type": "image", "texture": "textures/ui/ng_catastrophe/petit_losange_vide", "size": [3, 3], "anchor_from": "center", "anchor_to": "center", "offset": [-12, 0]}},
+          {"plein_gauche": {"type": "image", "texture": "textures/ui/ng_catastrophe/petit_losange_plein", "size": [3, 3], "anchor_from": "center", "anchor_to": "center", "offset": [-9, 0]}},
+          {"plein_droit": {"type": "image", "texture": "textures/ui/ng_catastrophe/petit_losange_plein", "size": [3, 3], "anchor_from": "center", "anchor_to": "center", "offset": [9, 0]}},
+          {"vide_droit": {"type": "image", "texture": "textures/ui/ng_catastrophe/petit_losange_vide", "size": [3, 3], "anchor_from": "center", "anchor_to": "center", "offset": [12, 0]}},
+          {"losange_meteorite": {
+            "type": "image",
+            "texture": "textures/ui/ng_catastrophe/losange_meteorite",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§1') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]
+          }},
+          {"losange_volcan": {
+            "type": "image",
+            "texture": "textures/ui/ng_catastrophe/losange_volcan",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§2') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]
+          }},
+          {"losange_faille": {
+            "type": "image",
+            "texture": "textures/ui/ng_catastrophe/losange_faille",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§3') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_jungle": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_jungle",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§4') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_medieval": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_medieval",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§5') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_nomade": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_nomade",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§6') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_pirate": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_pirate",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§7') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_terra": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_terra",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§8') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]          }},
+          {"logo_village_viking": {
+            "type": "image",
+            "texture": "textures/ui/ngbestiary/villages/logo_viking",
+            "size": [12, 12],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "(not((#hud_title_text_string - '§d§c§v§9') = #hud_title_text_string))", "target_property_name": "#visible"}
+            ]
+          }}
+        ]
+      }},
+      {"espace_titre": {"type": "panel", "size": ["100%", 3]}},
+      {"zone_titre": {
+        "type": "panel",
+        "size": ["100%", "100%c"],
+        "controls": [
+          {"titre": {
+            "type": "label",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "text": "#text",
+            "localize": false,
+            "font_size": "normal",
+            "font_scale_factor": 1.1,
+            "text_alignment": "center",
+            "color": [0.976, 0.451, 0.086],
+            "shadow": false,
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_name_override": "#text", "binding_type": "global"}
+            ]
+          }}
+        ]
+      }},
+      {"espace_sous_titre": {"type": "panel", "size": ["100%", 2]}},
+      {"zone_sous_titre": {
+        "type": "panel",
+        "size": ["100%", "100%c"],
+        "controls": [
+          {"sous_titre": {
+            "type": "label",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "size": ["100%", "default"],
+            "text": "#text",
+            "localize": false,
+            "font_scale_factor": 0.75,
+            "text_alignment": "center",
+            "color": [1, 1, 1],
+            "shadow": false,
+            "bindings": [
+              {"binding_name": "#hud_subtitle_text_string", "binding_name_override": "#text", "binding_type": "global"}
+            ]
+          }}
+        ]
+      }},
+      {"espace_bas": {"type": "panel", "size": ["100%", 4]}},
+      {"filet_bas@ng_asset.background_white": {"size": ["100%", 1]}}
+    ]
   }
 }

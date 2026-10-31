@@ -2988,6 +2988,9 @@
           "collection_index": "$index",
           "hover_control": "hover",
           "size": "$size_button",
+          // Manette : le bouton prend le focus et le curseur s'aimante dessus, comme les cases de conteneur du jeu.
+          "focus_enabled": true,
+          "focus_magnet_enabled": true,
           "bindings": [
             {
               "binding_type": "collection_details",
@@ -2995,6 +2998,9 @@
               "binding_condition": "once"
             }
           ],
+          // Souris et toucher : menu_select. Manette (et touche Entree) : menu_ok. Jusqu'a NGUI 1.1.49 la
+          // ligne menu_ok etait en commentaire : a la manette, les icones du menu rapide (/app) s'eclairaient
+          // mais l'appui ne faisait rien (bug 10 d'Iris). Meme envoi (drop_all) que les autres boutons NG.
           "button_mappings": [
 /*             {
               "from_button_id": "button.menu_select",
@@ -3007,12 +3013,13 @@
               "mapping_type": "pressed",
               "input_mode_condition": "not_gamepad",
               "consume_event": true
-            }
-/*             {
+            },
+            {
               "from_button_id": "button.menu_ok",
-              "to_button_id": "button.container_take_all_place_all",
-              "mapping_type": "pressed"
-            }, */
+              "to_button_id": "button.drop_all",
+              "mapping_type": "pressed",
+              "consume_event": true
+            }
     /*         {
               "from_button_id": "button.menu_secondary_select",
               "to_button_id": "button.container_take_half_place_one",
@@ -3790,6 +3797,70 @@
 
   ]},
 
+  // Une case ou le clic deplace l'objet tout de suite, comme le shift-clic du jeu (button.container_auto_place) : de
+  // l'inventaire vers le conteneur, du conteneur vers l'inventaire. L'objet ne passe jamais par le curseur : prendre un
+  // objet au curseur fait redessiner l'ecran au client, et les textes lus dans les cases disparaissent (sac a dos).
+  // Pour une case : "$mapping_container": "container_mapping_quick_move" (sur la grille de ng_module.grid_asset, il
+  // descend jusqu'a ses cases).
+  // Le client n'execute qu'une correspondance par clic, la premiere de l'entree : le clic est donc le shift-clic. Le clic
+  // droit aussi (pas de demi-pile au curseur) ; le double clic ne regroupe plus et rien ne se repartit en glissant (sans
+  // objet tenu, ils n'ont plus lieu d'etre). Jeter un objet (touches de jet) reste possible.
+  "container_mapping_quick_move@ng_module.container_mapping_clickable": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_back",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed",
+        "ignored": "(not $is_ps4)"
+      },
+      {
+        "from_button_id": "button.menu_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_auto_place",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.controller_secondary_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop",
+        "to_button_id": "button.drop_one",
+        "mapping_type": "pressed",
+        "ignored": "$blocked_drop_one_item"
+      },
+      {
+        "from_button_id": "button.menu_inventory_drop_all",
+        "to_button_id": "button.drop_all",
+        "mapping_type": "pressed"
+      },
+      {
+        "to_button_id": "button.container_slot_hovered",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
   "container_mapping_nonclickable": {
     "$visible_hover_text|default": "",
     "bindings": [
@@ -4407,8 +4478,18 @@
 
   "controls": [
 
+    // Ecran tactile ($touch) : jusqu'a NGUI 1.1.49 cette zone etait retiree ("ignored": "$touch") sans
+    // rien a la place, donc toute liste posee dans scroll_test etait vide sur telephone, en profil
+    // Classique comme en profil Poche (bug 26 d'Iris : annuaire /list et /f list, livre de recettes de
+    // l'inventaire). La zone reste maintenant, en mode tactile (glisser au doigt), comme la version
+    // tactile de common.scrolling_panel du jeu. A la souris et a la manette ($touch faux) rien ne change.
     {"scroll_mouse": {
-        "ignored": "$touch",
+        "variables": [
+          {
+            "requires": "$touch",
+            "$use_touch_mode": true
+          }
+        ],
         "size": ["100%", "100%"],
         "type": "input_panel",
         "tts_ignore_count": true,

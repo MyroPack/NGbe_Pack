@@ -1,0 +1,4464 @@
+{
+  "namespace": "ng_boutique_asset",
+  "get_text_plain": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((#hover_text - '§o') - '§f') - '§e') - '§d') - '§0') - '§1') - '§2') - '§3') - '§a') - '§b') - '§5') - '§c') - '§9') - '§6')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_raw": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "#hover_text",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_colored": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((((((((((((((((((((((((((((#hover_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_left_colored": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((((((((((((((((((((((((((((#raw_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_red": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§c' + ((((((((((((((((((((((((((((((((((((((((#hover_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_gray": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§7' + ((((((((((((((((((((((((((((((((((((((((#hover_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_left_raw": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - ':')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_right_raw": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_left_plain": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((#raw_text - '§o') - '§f') - '§e') - '§d') - '§0') - '§1') - '§2') - '§3') - '§a') - '§b') - '§5') - '§c') - '§9') - '§6')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_right_plain": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((#raw_text - '§o') - '§f') - '§e') - '§d') - '§0') - '§1') - '§2') - '§3') - '§a') - '§b') - '§5') - '§c') - '§9') - '§6')",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_texture_plain": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((((((((((((((((((((((((((((((((((((#hover_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z')",
+        "target_property_name": "#texture"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hover_text - '/') = #hover_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "get_text_safe": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§r' + (((((((((((((((((((((((((((((((((((#hover_text - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_left_safe": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(('%.90s' * #hover_text) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§r' + (((((((((((((((((((((((((((((((((((#raw_text - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_right_plus": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§r+' + (((((((((((((((((((((((((((((((((((#raw_text - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "get_text_right_safe": {
+    "bindings": [
+      {
+        "binding_collection_name": "container_items",
+        "binding_condition": "none",
+        "binding_name": "#hover_text",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#hover_text - ('%.90s' * #hover_text)) - ':')",
+        "target_property_name": "#raw_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "('§r' + (((((((((((((((((((((((((((((((((((#raw_text - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z'))",
+        "target_property_name": "#text"
+      }
+    ]
+  },
+  "slot_text": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$text_getter|default": "get_text_plain",
+    "$text_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$font_scale|default": 0.5,
+    "$text_alignment|default": "left",
+    "$label_anchor|default": "left_middle",
+    "$label_size|default": [
+      "100%",
+      "default"
+    ],
+    "$label_max_size|default": [
+      "100000px",
+      "100000px"
+    ],
+    "$shadow|default": false,
+    "$font_type|default": "MinecraftTen",
+    "$label_offset|default": [
+      "0px",
+      "0px"
+    ],
+    "$slot_size|default": [
+      "100%",
+      "100%"
+    ],
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": "$slot_size",
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "label@ng_boutique_asset.$text_getter": {
+                "type": "label",
+                "text": "#text",
+                "color": "$text_color",
+                "shadow": "$shadow",
+                "font_scale_factor": "$font_scale",
+                "font_type": "$font_type",
+                "text_alignment": "$text_alignment",
+                "anchor_from": "$label_anchor",
+                "anchor_to": "$label_anchor",
+                "size": "$label_size",
+                "max_size": "$label_max_size",
+                "offset": "$label_offset",
+                "layer": 20
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot_text_fit": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$text_getter|default": "get_text_plain",
+    "$text_color|default": [
+      1,
+      1,
+      1
+    ],
+    "$font_scale|default": 0.5,
+    "$text_alignment|default": "left",
+    "$label_anchor|default": "left_middle",
+    "$label_size|default": [
+      "default",
+      "default"
+    ],
+    "$label_max_size|default": [
+      "100000px",
+      "100000px"
+    ],
+    "$shadow|default": false,
+    "$font_type|default": "MinecraftTen",
+    "$label_offset|default": [
+      "0px",
+      "0px"
+    ],
+    "$slot_size|default": [
+      "100%",
+      "100%"
+    ],
+    "size": [
+      "100%cm",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%cm",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "label@ng_boutique_asset.$text_getter": {
+                "type": "label",
+                "text": "#text",
+                "color": "$text_color",
+                "shadow": "$shadow",
+                "font_scale_factor": "$font_scale",
+                "font_type": "$font_type",
+                "text_alignment": "$text_alignment",
+                "anchor_from": "$label_anchor",
+                "anchor_to": "$label_anchor",
+                "size": "$label_size",
+                "max_size": "$label_max_size",
+                "offset": "$label_offset",
+                "layer": 20
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot_image": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - '/') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "image@ng_boutique_asset.get_texture_plain": {
+                "type": "image",
+                "texture": "#texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 10,
+                "keep_ratio": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot_image_fill": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - '/') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "image@ng_boutique_asset.get_texture_plain": {
+                "type": "image",
+                "texture": "#texture",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 10,
+                "keep_ratio": true,
+                "fill": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_value": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_text_thumbnail": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = ''))) and ((#hover_text - '/') = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_right_field": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = ''))) and (not (((((((((((((((((((((((((((((((((((((((((((#hover_text - ('%.90s' * #hover_text)) - ':') - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z') = '')))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_flag": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "$flag|default": "§1",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hover_text - $flag) = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_no_value": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = ''))))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_not_flag": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "$flag|default": "§1",
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = ''))) and ((#hover_text - $flag) = #hover_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has_number": {
+    "$index|default": 0,
+    "$content|default": "pala_asset.void",
+    "$score|default": 0,
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((((((((((((((((((((((((((((((((((((((((#hover_text - '§r') - '§r') - '§r') - '§r') - '§0') - '§1') - '§2') - '§3') - '§4') - '§5') - '§6') - '§7') - '§8') - '§9') - '§a') - '§b') - '§c') - '§d') - '§e') - '§f') - '§g') - '§h') - '§i') - '§j') - '§k') - '§l') - '§m') - '§n') - '§o') - '§p') - '§q') - '§r') - '§s') - '§t') - '§u') - '§v') - '§w') - '§x') - '§y') - '§z') = $score)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "content@$content": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "logo": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/header/logo",
+    "keep_ratio": false
+  },
+  "icon_box": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/header/icon_box",
+    "keep_ratio": false
+  },
+  "tab_gradient": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/header/tab_gradient",
+    "keep_ratio": false
+  },
+  "tab_notch": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/header/tab_notch",
+    "keep_ratio": false
+  },
+  "store_point": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/currency/store_point",
+    "keep_ratio": false
+  },
+  "store_point_small": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/currency/store_point_small",
+    "keep_ratio": false
+  },
+  "seasonal_point": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/currency/seasonal_point",
+    "keep_ratio": false
+  },
+  "icon_cart": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/cart",
+    "keep_ratio": false
+  },
+  "icon_cart_white": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/cart_white",
+    "keep_ratio": false
+  },
+  "icon_discount": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/discount",
+    "keep_ratio": false
+  },
+  "icon_cart_owned": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/cart_owned",
+    "keep_ratio": false
+  },
+  "dropdown_down": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/dropdown_down",
+    "keep_ratio": false
+  },
+  "dropdown_up": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/dropdown_up",
+    "keep_ratio": false
+  },
+  "panel": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/panel",
+    "keep_ratio": false
+  },
+  "panel_dark": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/panel_dark",
+    "keep_ratio": false
+  },
+  "card": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/card",
+    "keep_ratio": false
+  },
+  "card_top": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/card_top",
+    "keep_ratio": false
+  },
+  "card_inner": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/card_inner",
+    "keep_ratio": false
+  },
+  "input": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/input",
+    "keep_ratio": false
+  },
+  "scroll_track": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/scroll_track",
+    "keep_ratio": false
+  },
+  "scroll_thumb": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/scroll_thumb",
+    "keep_ratio": false
+  },
+  "counter": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/counter",
+    "keep_ratio": false
+  },
+  "stock_fill": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/stock_fill",
+    "keep_ratio": false
+  },
+  "stock_badge": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/stock_badge",
+    "keep_ratio": false
+  },
+  "glow_line": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/glow_line",
+    "keep_ratio": false
+  },
+  "icon_clock": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/clock",
+    "keep_ratio": false
+  },
+  "banner_overlay": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/banner_overlay",
+    "keep_ratio": false
+  },
+  "corner_mask": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/corner_mask",
+    "keep_ratio": false
+  },
+  "corner_mask_small": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/corner_mask_small",
+    "keep_ratio": false
+  },
+  "finisher_box": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/collection/finisher_box",
+    "keep_ratio": false
+  },
+  "finisher_icon": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/collection/finisher_icon",
+    "keep_ratio": false
+  },
+  "icon_close": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/x",
+    "keep_ratio": false
+  },
+  "check": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/button/check_red_button",
+    "keep_ratio": false
+  },
+  "icon_equipped": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/icon/equipped",
+    "keep_ratio": false
+  },
+  "icon_time": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/icon_time",
+    "keep_ratio": false
+  },
+  "separator": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/divider",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "fill": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/shape/solid",
+    "$fill_color|default": [
+      1,
+      1,
+      1
+    ],
+    "color": "$fill_color",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_red@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/square_red",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/square_red_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/square_red_pressed"
+  },
+  "texture_tab@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab_hover"
+  },
+  "texture_tab_selected@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab_selected",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab_selected",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/tab_selected"
+  },
+  "texture_category@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/category",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/category_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/category_hover"
+  },
+  "texture_category_selected@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/category_selected",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/category_selected",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/category_selected"
+  },
+  "texture_transparent@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent_hover"
+  },
+  "texture_outline@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/selected_outline",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/selected_outline"
+  },
+  "texture_selected@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/selected_outline",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/selected_outline",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/selected_outline"
+  },
+  "texture_card@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/box_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/box_hover"
+  },
+  "texture_offer@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/transparent",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/offer_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/offer_hover"
+  },
+  "texture_reset@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/reset",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/reset",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/reset"
+  },
+  "texture_save@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/save",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/save",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/save"
+  },
+  "texture_outfit_arrow_left@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_left",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_left",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_left"
+  },
+  "texture_outfit_arrow_right@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_right",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_right",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/boutique/button/outfit_arrow_right"
+  },
+  "texture_arrow_left@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_left",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_left",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_left"
+  },
+  "texture_arrow_right@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_right",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_right",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/icon/enable_arrow_right"
+  },
+  "texture_turn@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/reload",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/reload_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/reload_hover"
+  },
+  "texture_search@ng_pala_gui.mapping_button": {
+    "$default_button_texture|default": "textures/ui/paladium_assets/button/look",
+    "$hover_button_texture|default": "textures/ui/paladium_assets/button/look_hover",
+    "$pressed_button_texture|default": "textures/ui/paladium_assets/button/look_hover"
+  },
+  "texture_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/disabled",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_none": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_outfit_arrow_left_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/outfit_arrow_left_disabled",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_arrow_left_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/disable_arrow_left",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_outfit_arrow_right_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/outfit_arrow_right_disabled",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_arrow_right_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/disable_arrow_right",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_reset_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/reset",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "color": [
+      0.4,
+      0.4,
+      0.45
+    ]
+  },
+  "texture_tab_disabled": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/tab",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  },
+  "texture_header_selected": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "gradient@ng_boutique_asset.tab_gradient": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "underline@ng_boutique_asset.fill": {
+          "$fill_color": [
+            0.435,
+            0.467,
+            0.937
+          ],
+          "size": [
+            "100%",
+            1.31
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 2
+        }
+      },
+      {
+        "notch@ng_boutique_asset.tab_notch": {
+          "size": [
+            9.47,
+            4.73
+          ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "layer": 2
+        }
+      }
+    ]
+  },
+  "header_tab_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_header_selected",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.42,
+    "$text_offset": [
+      0,
+      0
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      0.988,
+      0.988,
+      0.988
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      0.988,
+      0.988,
+      0.988
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ]
+  },
+  "header_icon_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_header_selected",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "tab_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_tab",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_tab_selected",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_tab_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.45,
+    "$text_offset": [
+      0,
+      0
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ]
+  },
+  "category_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_category",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_category_selected",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_category",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.45,
+    "$text_offset": [
+      0,
+      -1
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ]
+  },
+  "red_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_red",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.56,
+    "$text_offset": [
+      0,
+      -1
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ]
+  },
+  "red_buy_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_red",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.56,
+    "$text_offset": [
+      0,
+      -1
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      0.45,
+      0.46,
+      0.5
+    ],
+    "$S1_texture_icone_right": "ng_boutique_asset.icon_cart_white",
+    "$S1_size_icone_right": [
+      5.42,
+      4.88
+    ],
+    "$S1_padding_right": [
+      2.19,
+      4.88
+    ]
+  },
+  "outfit_arrow_left_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_outfit_arrow_left_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_outfit_arrow_left",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_outfit_arrow_left_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "arrow_left_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_arrow_left_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_arrow_left",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_arrow_left_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "outfit_arrow_right_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_outfit_arrow_right_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_outfit_arrow_right",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_outfit_arrow_right_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "arrow_right_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_arrow_right_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_arrow_right",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_arrow_right_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "turn_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_turn",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_turn",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_turn",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "reset_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_reset_disabled",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_reset",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_reset_disabled",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "save_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_save",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_save",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_save",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "card_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_outline",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_outline",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_outline",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "shop_card_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_card",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_card",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_card",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "panel_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "offer_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_offer",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_offer",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_offer",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "link_button": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$link_text|default": "",
+    "$link_scale|default": 0.5,
+    "size": [
+      "100%cm",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%cm",
+            "100%"
+          ],
+          "controls": [
+            {
+              "button@common.button": {
+                "size": [
+                  "100%cm",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "once"
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.container_take_all_place_all",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.container_take_half_place_one",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.drop_all",
+                    "mapping_type": "pressed",
+                    "input_mode_condition": "not_gamepad",
+                    "consume_event": true
+                  }
+                ],
+                "controls": [
+                  {
+                    "default": {
+                      "type": "label",
+                      "text": "$link_text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        0.612,
+                        0.612,
+                        0.612
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  },
+                  {
+                    "hover": {
+                      "type": "label",
+                      "text": "$link_text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  },
+                  {
+                    "pressed": {
+                      "type": "label",
+                      "text": "$link_text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        0.694,
+                        0.71,
+                        0.737
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot_link_button": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "$link_text|default": "",
+    "$link_scale|default": 0.5,
+    "size": [
+      "100%cm",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%cm",
+            "100%"
+          ],
+          "controls": [
+            {
+              "button@common.button": {
+                "size": [
+                  "100%cm",
+                  "100%"
+                ],
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "container_items",
+                    "binding_condition": "once"
+                  }
+                ],
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.container_take_all_place_all",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_secondary_select",
+                    "to_button_id": "button.container_take_half_place_one",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.drop_all",
+                    "mapping_type": "pressed",
+                    "input_mode_condition": "not_gamepad",
+                    "consume_event": true
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@ng_boutique_asset.get_text_plain": {
+                      "type": "label",
+                      "text": "#text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        0.612,
+                        0.612,
+                        0.612
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  },
+                  {
+                    "hover@ng_boutique_asset.get_text_plain": {
+                      "type": "label",
+                      "text": "#text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        1,
+                        1,
+                        1
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  },
+                  {
+                    "pressed@ng_boutique_asset.get_text_plain": {
+                      "type": "label",
+                      "text": "#text",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": "$link_scale",
+                      "color": [
+                        0.694,
+                        0.71,
+                        0.737
+                      ],
+                      "shadow": false,
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(((#hover_text - 'paladium:ui') = #hover_text) and (not (#hover_text = '')))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cart_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "scroll_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S0": "nonclickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "texture_sidebar_selected": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "triangle": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/button/side_triangle",
+          "keep_ratio": false,
+          "size": [
+            1.97,
+            3.5
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            -4.81,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "sidebar_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_sidebar_selected",
+    "$fonction_mapping_button_S1": "nonclickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "rarity_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_selected",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "search_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_search",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_search",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_search",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "label_background_common": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/label_common",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_common": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_common",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "label_background_rare": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/label_rare",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_rare": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_rare",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "label_background_epic": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/label_epic",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_epic": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_epic",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "label_background_legendary": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/label_legendary",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_legendary": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_legendary",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "label_background_limited": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/label_limited",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_limited": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_limited",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "rarity_label": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "label_common@ng_boutique_asset.has_flag": {
+          "$flag": "§a",
+          "$content": "ng_boutique_asset.label_background_common"
+        }
+      },
+      {
+        "label_rare@ng_boutique_asset.has_flag": {
+          "$flag": "§b",
+          "$content": "ng_boutique_asset.label_background_rare"
+        }
+      },
+      {
+        "label_epic@ng_boutique_asset.has_flag": {
+          "$flag": "§5",
+          "$content": "ng_boutique_asset.label_background_epic"
+        }
+      },
+      {
+        "label_legendary@ng_boutique_asset.has_flag": {
+          "$flag": "§c",
+          "$content": "ng_boutique_asset.label_background_legendary"
+        }
+      },
+      {
+        "label_limited@ng_boutique_asset.has_flag": {
+          "$flag": "§6",
+          "$content": "ng_boutique_asset.label_background_limited"
+        }
+      }
+    ]
+  },
+  "rarity_gem": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "gem_common@ng_boutique_asset.has_flag": {
+          "$flag": "§a",
+          "$content": "ng_boutique_asset.gem_common"
+        }
+      },
+      {
+        "gem_rare@ng_boutique_asset.has_flag": {
+          "$flag": "§b",
+          "$content": "ng_boutique_asset.gem_rare"
+        }
+      },
+      {
+        "gem_epic@ng_boutique_asset.has_flag": {
+          "$flag": "§5",
+          "$content": "ng_boutique_asset.gem_epic"
+        }
+      },
+      {
+        "gem_legendary@ng_boutique_asset.has_flag": {
+          "$flag": "§c",
+          "$content": "ng_boutique_asset.gem_legendary"
+        }
+      },
+      {
+        "gem_limited@ng_boutique_asset.has_flag": {
+          "$flag": "§6",
+          "$content": "ng_boutique_asset.gem_limited"
+        }
+      }
+    ]
+  },
+  "price_card": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "row": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "label@ng_boutique_asset.get_text_right_plain": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": [
+                              1,
+                              1,
+                              1
+                            ],
+                            "shadow": false,
+                            "font_scale_factor": 0.57,
+                            "font_type": "MinecraftTen",
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-1.03px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        "1.75px",
+                        "100%"
+                      ]
+                    }
+                  },
+                  {
+                    "icon_panel": {
+                      "type": "panel",
+                      "size": [
+                        "4.24px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "icon@ng_boutique_asset.store_point_small": {
+                            "size": [
+                              "4.24px",
+                              "4.24px"
+                            ],
+                            "keep_ratio": true,
+                            "offset": [
+                              "0px",
+                              "0px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "price_offer": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "row": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "label@ng_boutique_asset.get_text_plain": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": [
+                              1,
+                              1,
+                              1
+                            ],
+                            "shadow": false,
+                            "font_scale_factor": 0.84,
+                            "font_type": "MinecraftTen",
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-1.51px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        "2.19px",
+                        "100%"
+                      ]
+                    }
+                  },
+                  {
+                    "icon_panel": {
+                      "type": "panel",
+                      "size": [
+                        "5.47px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "icon@ng_boutique_asset.store_point": {
+                            "size": [
+                              "5.47px",
+                              "5.47px"
+                            ],
+                            "keep_ratio": true,
+                            "offset": [
+                              "0px",
+                              "0px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "price_pack": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "row": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "label@ng_boutique_asset.get_text_plain": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": [
+                              1,
+                              1,
+                              1
+                            ],
+                            "shadow": false,
+                            "font_scale_factor": 1.34,
+                            "font_type": "MinecraftTen",
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-2.41px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        "2.62px",
+                        "100%"
+                      ]
+                    }
+                  },
+                  {
+                    "icon_panel": {
+                      "type": "panel",
+                      "size": [
+                        "8.75px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "icon@ng_boutique_asset.store_point": {
+                            "size": [
+                              "8.75px",
+                              "8.75px"
+                            ],
+                            "keep_ratio": true,
+                            "offset": [
+                              "0px",
+                              "0px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "price_pack_red": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "row": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "label@ng_boutique_asset.get_text_red": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": [
+                              1,
+                              1,
+                              1
+                            ],
+                            "shadow": false,
+                            "font_scale_factor": 1.34,
+                            "font_type": "MinecraftTen",
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-2.41px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        "2.62px",
+                        "100%"
+                      ]
+                    }
+                  },
+                  {
+                    "icon_panel": {
+                      "type": "panel",
+                      "size": [
+                        "8.75px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "icon@ng_boutique_asset.store_point": {
+                            "size": [
+                              "8.75px",
+                              "8.75px"
+                            ],
+                            "keep_ratio": true,
+                            "offset": [
+                              "0px",
+                              "0px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "price_pack_original": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "$index|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "slot": {
+          "type": "panel",
+          "collection_index": "$index",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "row": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "controls": [
+                  {
+                    "label_panel": {
+                      "type": "panel",
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "label@ng_boutique_asset.get_text_gray": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": [
+                              1,
+                              1,
+                              1
+                            ],
+                            "shadow": false,
+                            "font_scale_factor": 0.67,
+                            "font_type": "MinecraftTen",
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-1.21px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "gap": {
+                      "type": "panel",
+                      "size": [
+                        "2.19px",
+                        "100%"
+                      ]
+                    }
+                  },
+                  {
+                    "icon_panel": {
+                      "type": "panel",
+                      "size": [
+                        "5.82px",
+                        "100%"
+                      ],
+                      "controls": [
+                        {
+                          "icon@ng_boutique_asset.store_point": {
+                            "size": [
+                              "5.82px",
+                              "5.82px"
+                            ],
+                            "keep_ratio": true,
+                            "offset": [
+                              "0px",
+                              "0px"
+                            ],
+                            "layer": 20
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "card_price": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "price@ng_boutique_asset.has_right_field": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.price_card"
+        }
+      }
+    ]
+  },
+  "card_bought": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "ngboutique.achete",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.57,
+          "font_type": "MinecraftTen",
+          "size": [
+            "default",
+            "default"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            "0px",
+            "-1.03px"
+          ],
+          "layer": 20,
+          "localize": true
+        }
+      }
+    ]
+  },
+  "offer_bought": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "text": {
+          "type": "label",
+          "text": "ngboutique.achete",
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "shadow": false,
+          "font_scale_factor": 0.84,
+          "font_type": "MinecraftTen",
+          "size": [
+            "default",
+            "default"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            "0px",
+            "-1.51px"
+          ],
+          "layer": 20,
+          "localize": true
+        }
+      }
+    ]
+  },
+  "store_cart": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "cart@ng_boutique_asset.has_right_field": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.cart_icon"
+        }
+      }
+    ]
+  },
+  "cart_owned": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.icon_cart_owned": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "owned_check": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.icon_equipped": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "cart_icon": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon@ng_boutique_asset.icon_cart": {
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "shop_card_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.card": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "top@ng_boutique_asset.card_top": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            45.5,
+            36.86
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "price_box@ng_boutique_asset.card_inner": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.86,
+            38.72
+          ],
+          "size": [
+            41.78,
+            16.34
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "image_zone": {
+          "type": "panel",
+          "size": [
+            35.0,
+            35.0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5.36,
+            1.86
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": "$index_image"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "message@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.06,
+            3.94
+          ],
+          "size": [
+            39.38,
+            28.88
+          ],
+          "$index": "$index_image",
+          "$content": "ng_boutique_asset.message_thumbnail",
+          "layer": 6
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            35.92,
+            2.49
+          ],
+          "size": [
+            6.37,
+            8.51
+          ],
+          "$index": "$index_info",
+          "layer": 20
+        }
+      },
+      {
+        "name@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.3,
+            40.47
+          ],
+          "size": [
+            35.0,
+            3.94
+          ],
+          "$index": "$index_info",
+          "$text_getter": "get_text_left_colored",
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$font_scale": 0.36,
+          "$label_offset": [
+            "0px",
+            "-0.65px"
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.3,
+            46.81
+          ],
+          "size": [
+            26.25,
+            6.56
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_price",
+          "layer": 20
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.3,
+            46.81
+          ],
+          "size": [
+            26.25,
+            6.56
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_bought",
+          "layer": 20
+        }
+      },
+      {
+        "owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            35.0,
+            46.59
+          ],
+          "size": [
+            4.59,
+            6.19
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 20
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            35.22,
+            48.43
+          ],
+          "size": [
+            4.16,
+            3.74
+          ],
+          "$index": "$index_buy",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 21
+        }
+      },
+      {
+        "buy@ng_boutique_asset.cart_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.25,
+            46.38
+          ],
+          "size": [
+            8.09,
+            7.88
+          ],
+          "$index": "$index_buy",
+          "layer": 25
+        }
+      },
+      {
+        "open@ng_boutique_asset.shop_card_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.86,
+            38.72
+          ],
+          "size": [
+            41.78,
+            16.34
+          ],
+          "$index": "$index_info",
+          "layer": 24
+        }
+      }
+    ]
+  },
+  "shop_card_content_small": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.card": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "top@ng_boutique_asset.card_top": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            42.66,
+            34.56
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "price_box@ng_boutique_asset.card_inner": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.74,
+            36.3
+          ],
+          "size": [
+            39.17,
+            15.32
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "image_zone": {
+          "type": "panel",
+          "size": [
+            32.81,
+            32.81
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5.02,
+            1.74
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": "$index_image"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "message@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.87,
+            3.69
+          ],
+          "size": [
+            36.91,
+            27.07
+          ],
+          "$index": "$index_image",
+          "$content": "ng_boutique_asset.message_thumbnail",
+          "layer": 6
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.67,
+            2.34
+          ],
+          "size": [
+            5.97,
+            7.98
+          ],
+          "$index": "$index_info",
+          "layer": 20
+        }
+      },
+      {
+        "name@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5.91,
+            37.94
+          ],
+          "size": [
+            32.81,
+            3.69
+          ],
+          "$index": "$index_info",
+          "$text_getter": "get_text_left_colored",
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$font_scale": 0.36,
+          "$label_offset": [
+            "0px",
+            "-0.65px"
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5.91,
+            43.89
+          ],
+          "size": [
+            24.61,
+            6.15
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_price",
+          "layer": 20
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            5.91,
+            43.89
+          ],
+          "size": [
+            24.61,
+            6.15
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_bought",
+          "layer": 20
+        }
+      },
+      {
+        "owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            32.81,
+            43.68
+          ],
+          "size": [
+            4.31,
+            5.8
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 20
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            33.02,
+            45.4
+          ],
+          "size": [
+            3.9,
+            3.51
+          ],
+          "$index": "$index_buy",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_icon",
+          "layer": 21
+        }
+      },
+      {
+        "buy@ng_boutique_asset.cart_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            31.17,
+            43.48
+          ],
+          "size": [
+            7.59,
+            7.38
+          ],
+          "$index": "$index_buy",
+          "layer": 25
+        }
+      },
+      {
+        "open@ng_boutique_asset.shop_card_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.74,
+            36.3
+          ],
+          "size": [
+            39.17,
+            15.32
+          ],
+          "$index": "$index_info",
+          "layer": 24
+        }
+      }
+    ]
+  },
+  "store_card_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.card": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "top@ng_boutique_asset.card_top": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            52.5,
+            39.5
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "price_box@ng_boutique_asset.card_inner": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.15,
+            41.65
+          ],
+          "size": [
+            48.21,
+            21.88
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "image_zone": {
+          "type": "panel",
+          "size": [
+            37.36,
+            37.36
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            7.7,
+            2.15
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": "$index_image"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "message@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.53,
+            4.54
+          ],
+          "size": [
+            45.43,
+            33.32
+          ],
+          "$index": "$index_image",
+          "$content": "ng_boutique_asset.message_thumbnail",
+          "layer": 6
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            41.44,
+            2.88
+          ],
+          "size": [
+            7.34,
+            9.82
+          ],
+          "$index": "$index_info",
+          "layer": 20
+        }
+      },
+      {
+        "name@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            7.27,
+            44.67
+          ],
+          "size": [
+            40.38,
+            9.09
+          ],
+          "$index": "$index_info",
+          "$text_getter": "get_text_left_raw",
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$font_type": "default",
+          "$font_scale": 0.4,
+          "$label_anchor": "top_left",
+          "layer": 20
+        }
+      },
+      {
+        "price@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            7.27,
+            54.01
+          ],
+          "size": [
+            30.29,
+            7.57
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_price",
+          "layer": 20
+        }
+      },
+      {
+        "bought@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            7.27,
+            54.01
+          ],
+          "size": [
+            30.29,
+            7.57
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.card_bought",
+          "layer": 20
+        }
+      },
+      {
+        "owned@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            40.38,
+            53.76
+          ],
+          "size": [
+            5.3,
+            7.14
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.cart_owned",
+          "layer": 20
+        }
+      },
+      {
+        "cart@ng_boutique_asset.has_not_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            40.64,
+            55.88
+          ],
+          "size": [
+            4.8,
+            4.32
+          ],
+          "$index": "$index_image",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.store_cart",
+          "layer": 21
+        }
+      },
+      {
+        "open@ng_boutique_asset.shop_card_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.15,
+            41.65
+          ],
+          "size": [
+            48.21,
+            21.88
+          ],
+          "$index": "$index_info",
+          "layer": 24
+        }
+      }
+    ]
+  },
+  "shop_card": {
+    "type": "panel",
+    "$index_image|default": 0,
+    "$index_info|default": 0,
+    "$index_buy|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "card@ng_boutique_asset.has_value": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.shop_card_content"
+        }
+      }
+    ]
+  },
+  "shop_card_small": {
+    "type": "panel",
+    "$index_image|default": 0,
+    "$index_info|default": 0,
+    "$index_buy|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "card@ng_boutique_asset.has_value": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.shop_card_content_small"
+        }
+      }
+    ]
+  },
+  "store_card": {
+    "type": "panel",
+    "$index_image|default": 0,
+    "$index_info|default": 0,
+    "$index_buy|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "card@ng_boutique_asset.has_value": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.store_card_content"
+        }
+      }
+    ]
+  },
+  "collection_card": {
+    "type": "panel",
+    "$index_image|default": 0,
+    "$index_info|default": 0,
+    "$index_button|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "card@ng_boutique_asset.has_value": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.collection_card_content"
+        }
+      }
+    ]
+  },
+  "collection_card_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.card_top": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "image_zone": {
+          "type": "panel",
+          "size": [
+            31.5,
+            31.5
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.75,
+            1.75
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": "$index_image"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "message@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.62,
+            4.38
+          ],
+          "size": [
+            29.75,
+            22.75
+          ],
+          "$index": "$index_image",
+          "$content": "ng_boutique_asset.message_thumbnail",
+          "layer": 6
+        }
+      },
+      {
+        "equipped@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.19,
+            2.19
+          ],
+          "size": [
+            5.81,
+            6.12
+          ],
+          "$index": "$index_button",
+          "$flag": "§1",
+          "$content": "ng_boutique_asset.owned_check",
+          "layer": 20
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            27.34,
+            2.19
+          ],
+          "size": [
+            5.69,
+            7.61
+          ],
+          "$index": "$index_info",
+          "layer": 20
+        }
+      },
+      {
+        "button@ng_boutique_asset.card_button": {
+          "$index": "$index_button",
+          "layer": 30
+        }
+      }
+    ]
+  },
+  "inventory_card": {
+    "type": "panel",
+    "$index_image|default": 0,
+    "$index_info|default": 0,
+    "$index_button|default": 0,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "card@ng_boutique_asset.has_value": {
+          "$index": "$index_info",
+          "$content": "ng_boutique_asset.inventory_card_content"
+        }
+      }
+    ]
+  },
+  "inventory_card_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.card": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "top@ng_boutique_asset.card_top": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "size": [
+            46.38,
+            32.81
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "info_box@ng_boutique_asset.card_inner": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.97,
+            34.34
+          ],
+          "size": [
+            42.44,
+            18.59
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "image_zone": {
+          "type": "panel",
+          "size": [
+            32.81,
+            31.06
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.78,
+            1.31
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "image@ng_boutique_asset.slot_image": {
+                "$index": "$index_image"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "message@ng_boutique_asset.has_text_thumbnail": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            3.06,
+            3.94
+          ],
+          "size": [
+            40.25,
+            28.44
+          ],
+          "$index": "$index_image",
+          "$content": "ng_boutique_asset.message_thumbnail",
+          "layer": 6
+        }
+      },
+      {
+        "gem@ng_boutique_asset.rarity_gem": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            39.38,
+            2.19
+          ],
+          "size": [
+            4.81,
+            6.43
+          ],
+          "$index": "$index_info",
+          "layer": 20
+        }
+      },
+      {
+        "type@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.12,
+            35.88
+          ],
+          "size": [
+            37.19,
+            4.38
+          ],
+          "$index": "$index_info",
+          "$text_getter": "get_text_left_plain",
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$font_scale": 0.36,
+          "$label_offset": [
+            "0px",
+            "-0.65px"
+          ],
+          "layer": 20
+        }
+      },
+      {
+        "name_clip": {
+          "type": "panel",
+          "size": [
+            37.19,
+            10.5
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            6.12,
+            41.34
+          ],
+          "layer": 20,
+          "clips_children": true,
+          "controls": [
+            {
+              "name@ng_boutique_asset.slot_text": {
+                "$index": "$index_info",
+                "$text_getter": "get_text_right_plain",
+                "$text_color": [
+                  1,
+                  1,
+                  1
+                ],
+                "$font_type": "default",
+                "$font_scale": 0.5,
+                "$label_anchor": "top_left",
+                "$label_size": [
+                  "100%",
+                  "default"
+                ],
+                "$label_max_size": [
+                  "100%",
+                  "100%"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "open@ng_boutique_asset.shop_card_button": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            1.97,
+            34.34
+          ],
+          "size": [
+            42.44,
+            18.59
+          ],
+          "$index": "$index_button",
+          "layer": 24
+        }
+      }
+    ]
+  },
+  "texture_option_selected": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "background@ng_boutique_asset.fill": {
+          "$fill_color": [
+            0.09,
+            0.094,
+            0.106
+          ]
+        }
+      }
+    ]
+  },
+  "option_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_option_selected",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_none",
+    "$fonction_mapping_button_S2": "nonclickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "toggle_button@ng_pala_gui.multiple_status_button": {
+    "$size_button": [
+      "100%",
+      "100%"
+    ],
+    "$textures_button_S0": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S0": "clickable",
+    "$textures_button_S1": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S1": "clickable",
+    "$textures_button_S2": "ng_boutique_asset.texture_transparent",
+    "$fonction_mapping_button_S2": "clickable",
+    "$font_type": "MinecraftTen",
+    "$font_scale_factor": 0.01,
+    "$text_offset": [
+      "0px",
+      "5000px"
+    ],
+    "$max_size": [
+      "0px",
+      "0px"
+    ],
+    "$S0_type_get_text": "Get_text_type_1",
+    "$S0_font_type": "MinecraftTen",
+    "$S0_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S1_type_get_text": "Get_text_type_1",
+    "$S1_font_type": "MinecraftTen",
+    "$S1_text_color": [
+      1,
+      1,
+      1
+    ],
+    "$S2_type_get_text": "Get_text_type_1",
+    "$S2_font_type": "MinecraftTen",
+    "$S2_text_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "message_thumbnail": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "text@ng_boutique_asset.slot_text": {
+          "$text_getter": "get_text_colored",
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$font_scale": 0.4,
+          "$text_alignment": "center",
+          "$label_anchor": "center"
+        }
+      }
+    ]
+  },
+  "selected_frame": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/boutique/button/selected_outline",
+    "keep_ratio": false,
+    "size": [
+      "100%",
+      "100%"
+    ]
+  }
+}

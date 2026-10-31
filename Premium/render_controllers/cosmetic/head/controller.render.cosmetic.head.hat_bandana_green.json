@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.head.hat_bandana_green": {
+      "geometry": "Geometry.cosmetic.head.hat_bandana_green",
+      "materials": [
+        { "*": "Material.default" }
+      ],
+      "textures": [
+        "Texture.cosmetic.head.hat_bandana_green"
+      ]
+    }
+  }
+}

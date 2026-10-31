@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.back_blackhole_event_v3": {
+      "geometry": "Geometry.cosmetic.body.back_blackhole_event",
+      "materials": [
+        { "*": "Material.translucent" }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.back_blackhole_event"
+      ]
+    }
+  }
+}

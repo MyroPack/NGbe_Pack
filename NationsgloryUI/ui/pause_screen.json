@@ -1,0 +1,78 @@
+{
+  "namespace": "pause_screen",
+
+
+
+  "pause_button_template@common_buttons.light_text_button": {
+    "size": ["100%",28],
+    "$default_text_color": "white",
+    "$border_visible": false,
+    "$button_font_scale_factor": 0.85,
+    "$default_button_texture|default": "textures/ui/background/background_80",
+    "$hover_button_texture|default": "textures/ui/background/background_79",
+    "$pressed_button_texture|default": "textures/ui/background/background_79",
+    "focus_identifier": "$pressed_button_name",
+    "focus_change_right": "$focus_override_right",
+    "focus_change_left": "$pressed_button_name",
+    "$new_ui_label_offset": [0,-0]
+  },
+
+  "pause_screen_content": {
+    "type": "panel",
+    "size": ["100%","100%"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 1,
+    "controls": [
+
+      {"background@ng_asset.pause_screen":{
+        "size":["110%","110%"]
+      }},
+
+      {"button_panel": {
+        "type": "stack_panel",
+        "anchor_from": "left_middle",
+        "anchor_to": "left_middle",
+        "offset":[35],
+        "size": ["22%","100%c"],
+        "controls": [
+
+            {"return_to_game_button@pause.return_to_game_button": {
+              "$default_button_texture":"textures/ui/background/background_78",
+              "$button_text": "Reprendre"
+            }},
+
+            {"padding@ng_module.panel":{
+              "size":["100%",2.5]
+            }},
+
+            {"settings_button@pause.settings_button": {}},
+
+            {"padding@ng_module.panel":{
+              "size":["100%",2.5]
+            }},
+
+            {"dressing_room_button_gamepad@pause.pause_button_template": {
+              "$pressed_button_name": "button.to_profile_or_skins_screen",
+              "$button_text": "Vestiaire"
+
+            }},
+
+            {"padding@ng_module.panel":{
+              "size":["100%",7.5]
+            }},
+
+            {"quit_button@pause.quit_button": {
+                  "$button_text": "Quitter"
+            }}
+            
+
+          ]
+        }
+      }
+
+      
+
+  ]}
+
+}

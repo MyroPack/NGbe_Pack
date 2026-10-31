@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.helicopter.minigun": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": ["idle"],
+					"transitions": [
+						{ "firing": "q.property('ng:firing')" }
+					]
+				},
+				"firing": {
+					"animations": ["shoot"],
+					"transitions": [
+						{ "idle": "!q.property('ng:firing')" }
+					]
+				}
+			}
+		},
+		"controller.animation.helicopter.winch": {
+			"initial_state": "still",
+			"states": {
+				"still": {
+					"transitions": [
+						{ "pulling": "q.property('ng:winch')" }
+					]
+				},
+				"pulling": {
+					"animations": ["pull"],
+					"transitions": [
+						{ "still": "!q.property('ng:winch')" }
+					]
+				}
+			}
+		}
+	}
+}

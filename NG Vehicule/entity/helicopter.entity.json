@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:helicopter",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/helicopter"
+			},
+			"geometry": {
+				"default": "geometry.helicopter"
+			},
+			"render_controllers": [
+				"controller.render.helicopter"
+			],
+			"animations": {
+				"rotor": "animation.helicopter.rotor",
+				"idle": "animation.helicopter.idle",
+				"shoot": "animation.helicopter.shoot",
+				"pull": "animation.helicopter.pull",
+				"minigun": "controller.animation.helicopter.minigun",
+				"winch": "controller.animation.helicopter.winch"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					{
+						"rotor": "q.property('ng:engine')"
+					},
+					"minigun",
+					"winch"
+				]
+			}
+		}
+	}
+}

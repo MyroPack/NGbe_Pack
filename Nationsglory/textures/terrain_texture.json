@@ -72,6 +72,12 @@
     },
     "meteor_lune" : {
       "textures" : "textures/blocks/meteor/meteor_lune"
+    },
+    "meteor_mars" : {
+      "textures" : "textures/blocks/meteor/meteor_mars"
+    },
+    "meteor_edora" : {
+      "textures" : "textures/blocks/meteor/meteor_edora"
     }
   }
 }

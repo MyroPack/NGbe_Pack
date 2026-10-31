@@ -1,0 +1,404 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.kill_animation.kill_animation_sword.player.legacy",
+        "texture_width": 64,
+        "texture_height": 32,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [
+          0,
+          1.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerskin",
+          "pivot": [
+            0,
+            14,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.pbody_driverbody",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerskin",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                12,
+                -2
+              ],
+              "size": [
+                8,
+                12,
+                4
+              ],
+              "uv": [
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.h_phead_driverhead",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.pbody_driverbody",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                24,
+                -4
+              ],
+              "size": [
+                8,
+                8,
+                8
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -4,
+                24,
+                -4
+              ],
+              "size": [
+                8,
+                8,
+                8
+              ],
+              "inflate": 0.5,
+              "uv": [
+                32,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.prarm_driverright_arm",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.pbody_driverbody",
+          "pivot": [
+            -4,
+            23,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                40,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.plarm_driverleft_arm",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.pbody_driverbody",
+          "pivot": [
+            4,
+            23,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                40,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.prleg_driverright_leg",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerskin",
+          "pivot": [
+            -2,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.plleg_driverleft_leg",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerskin",
+          "pivot": [
+            2,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.sword",
+          "pivot": [
+            -20,
+            12,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.sword",
+          "pivot": [
+            0,
+            14,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_body",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                12,
+                -2
+              ],
+              "size": [
+                8,
+                12,
+                4
+              ],
+              "uv": [
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_body2",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                24,
+                -4
+              ],
+              "size": [
+                8,
+                8,
+                8
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -4,
+                24,
+                -4
+              ],
+              "size": [
+                8,
+                8,
+                8
+              ],
+              "inflate": 0.5,
+              "uv": [
+                32,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_right_arm",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_body",
+          "pivot": [
+            -4,
+            23,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                40,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_left_arm",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_body",
+          "pivot": [
+            4,
+            23,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                40,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_right_leg",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath",
+          "pivot": [
+            -2,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath_left_leg",
+          "parent": "cosmetic.kill_animation.kill_animation_sword.player.playerdeath",
+          "pivot": [
+            2,
+            12,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                0,
+                -2
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "uv": [
+                0,
+                16
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

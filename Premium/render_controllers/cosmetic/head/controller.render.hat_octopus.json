@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.head.hat_octopus": {
+      "geometry": "Geometry.cosmetic.head.hat_octopus",
+      "materials": [
+        {
+          "*": "Material.animated_texture_double"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.head.hat_octopus"
+      ],
+      "uv_anim": {
+        "offset": [0.0, "math.mod(math.floor(q.life_time * 7), 30) / 30"],
+        "scale": [1.0, "1 / 30"]
+      }
+    }
+  }
+}

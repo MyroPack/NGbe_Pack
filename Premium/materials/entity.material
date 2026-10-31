@@ -2,8 +2,12 @@
     "materials": {
         "version": "1.0.0",
         "a:entity_beam_additive": {
-             "+defines": ["ENABLE_FOG", "ENABLE_LIGHT", "USE_ONLY_EMISSIVE"],
-             "+states":[
+            "+defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ],
+            "+states": [
                 "DisableCulling",
                 "EnableAlphaToCoverage"
             ]
@@ -12,19 +16,37 @@
             "depthBias": 99999500
         },
         "lootbox_holo:entity_beam_additive": {
-             "+defines": ["ENABLE_FOG", "ENABLE_LIGHT", "USE_ONLY_EMISSIVE"],
-             "+states":[
+            "+defines": [
+                "ENABLE_FOG",
+                "ENABLE_LIGHT",
+                "USE_ONLY_EMISSIVE"
+            ],
+            "+states": [
                 "DisableCulling",
                 "EnableAlphaToCoverage"
             ]
         },
         "nametag:name_tag": {
             "+defines": [
-                "USE_UV_ANIM", "USE_EMISSIVE", "ALPHA_TEST"
+                "USE_UV_ANIM",
+                "USE_EMISSIVE",
+                "ALPHA_TEST"
             ]
         },
         "health_bar:nametag": {
-            "depthBias":  99999999
+            "depthBias": 99999999
+        },
+        "custom_animated:entity_alphatest_one_sided": {
+            "+defines": [
+                "USE_UV_ANIM"
+            ]
+        },
+        "cosmetic_translucent:entity_alphatest_one_sided": {},
+        "cosmetic:entity_alphatest_one_sided": {},
+        "custom_animated_double:entity_alphatest": {
+            "+defines": [
+                "USE_UV_ANIM"
+            ]
         }
     }
 }

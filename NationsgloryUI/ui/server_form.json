@@ -15,6 +15,10 @@
   //              envoyee par RecubeAuthMod (QrCodeForm.DefaultMarker).
   //   §m§r§a§r§p§r : carte du monde en jeu (ui/Interface/carte.json), envoyee par
   //              RecubeDynmap (InGameMapForm.DefaultMarker).
+  //   §p§r§u§r§n§r : Punisher de la toxicite (ui/Interface/punisher.json), envoye par le
+  //              ModerationModule du proxy (/punisher, bouton de toxicite de l'annuaire).
+  //   §p§r§u§r§l§r : « Voir le reglement » du Punisher (ui/Interface/punisher.json, rules_panel),
+  //              meme habillage, envoye par le meme module.
   //
   // Seul le factory des formulaires est remplace (modifications) : si Mojang le
   // renomme, le remplacement ne s'applique pas et tout reste vanilla.
@@ -78,7 +82,83 @@
               }
             ],
             "controls": [
-              {"long_form@server_form.long_form": {}}
+
+              // Ni carte ni Punisher : le formulaire vanilla.
+              {"not_punisher_form": {
+                "type": "panel",
+                "size": [ "100%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#title_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((#title_text - '§p§r§u§r§n§r') = #title_text)",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+
+                  // Ni « Voir le reglement » du Punisher : le formulaire vanilla.
+                  {"not_punisher_rules_form": {
+                    "type": "panel",
+                    "size": [ "100%", "100%" ],
+                    "bindings": [
+                      {
+                        "binding_name": "#title_text"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_property_name": "((#title_text - '§p§r§u§r§l§r') = #title_text)",
+                        "target_property_name": "#visible"
+                      }
+                    ],
+                    "controls": [
+                      {"long_form@server_form.long_form": {}}
+                    ]
+                  }},
+
+                  {"punisher_rules_form": {
+                    "type": "panel",
+                    "size": [ "100%", "100%" ],
+                    "bindings": [
+                      {
+                        "binding_name": "#title_text"
+                      },
+                      {
+                        "binding_type": "view",
+                        "source_property_name": "(not ((#title_text - '§p§r§u§r§l§r') = #title_text))",
+                        "target_property_name": "#visible"
+                      }
+                    ],
+                    "controls": [
+                      {"leurre@focus_leurre.leurre": {}},
+                      {"rules@punisher.rules_panel": {}}
+                    ]
+                  }}
+
+                ]
+              }},
+
+              {"punisher_form": {
+                "type": "panel",
+                "size": [ "100%", "100%" ],
+                "bindings": [
+                  {
+                    "binding_name": "#title_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#title_text - '§p§r§u§r§n§r') = #title_text))",
+                    "target_property_name": "#visible"
+                  }
+                ],
+                "controls": [
+                  {"leurre@focus_leurre.leurre": {}},
+                  {"punisher@punisher.main_panel": {}}
+                ]
+              }}
+
             ]
           }},
 
