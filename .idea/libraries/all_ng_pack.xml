@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="all_ng_pack">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/RecubeICBM.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NG Vehicule.zip!/" />
+      <root url="jar://$PROJECT_DIR$/PropsiResourcePack.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Premium.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NationsgloryUI.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NGPropsiResourcePack.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NG Machine.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NationsGlory Ambiance ResourcePack.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NationsGlory Bestiary ResourcePack.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Nationsglory.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
