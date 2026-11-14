@@ -1,3 +1,4 @@
+# PAS A JOUR UN PEU LA FLEMME J'AVOUE DONC BON VOILÀ 
 # Packs par défaut — NationsGlory Bedrock V2
 
 Ce dépôt rassemble les packs de ressources par défaut utilisés par **NationsGlory Bedrock V2**. Il sert de point de référence pour retrouver les différents packs, consulter leurs fichiers et partager des informations utiles à leur modification.
