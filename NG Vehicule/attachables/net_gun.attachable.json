@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "ng:net_gun",
+			"item": {
+				"ng:net_gun": "query.is_owner_identifier_any('minecraft:player')"
+			},
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/items/net_gun_model",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.ng.net_gun"
+			},
+			"animations": {
+				"first_person_hold": "animation.ng.net_gun.first_person",
+				"third_person_hold": "animation.ng.net_gun.third_person",
+				"idle": "animation.ng.net_gun.idle",
+				"fire": "animation.ng.net_gun.fire",
+				"idle_nonet": "animation.ng.net_gun.idle_nonet",
+				"reload": "animation.ng.net_gun.reload",
+				"pistolet": "controller.animation.ng.net_gun"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person_hold": "c.is_first_person"
+					},
+					{
+						"third_person_hold": "!c.is_first_person"
+					},
+					"pistolet"
+				]
+			},
+			"render_controllers": [
+				"controller.render.item_default"
+			]
+		}
+	}
+}

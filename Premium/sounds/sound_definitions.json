@@ -2,6 +2,7 @@
 
 	"format_version": "1.14.0",
 	"sound_definitions": {
+		"ngpremium.drone_kit": {"category": "neutral", "sounds": [{"name": "sounds/drone_kit/drone_kit", "volume": 1.0}]},
 		"ng.lootbox.open_1": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_1"]},
 		"ng.lootbox.open_2": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_2"]},
 		"ng.lootbox.open_3": {"category": "neutral", "sounds": ["sounds/lootbox/lootbox_anniv_3"]},

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:harvester_header",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/harvester_header"
+			},
+			"geometry": {
+				"default": "geometry.harvester_header"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"harvest": "animation.harvester_header.harvest"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					"harvest"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,652 @@
+// Moulin a farine (agriculture NG, lot B) : copie de concasseur.json, meme mise en page (cereale en 21, farines
+// de 22 a 29, progression en 30). Seuls le titre et les images des cases vides changent. Elargi a 300 (retour de Leo
+// du 05/11 14 h 24) : les cases a gauche, et a droite les recettes (« recettes », produit par tools/silo/silo.py).
+{
+  "namespace": "moulin",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+  
+/*             {"small_chest_grid@chest.small_chest_grid":{
+              "grid_dimensions": [ 9, 9 ],
+              "layer":800000,
+              "anchor_from":"bottom_right",
+              "anchor_to":"bottom_right",
+              "size": [ 162, 162 ]
+            }},
+ */
+
+            {"background_black@ng_asset.background_white":{
+              "color":[0.000, 0.000, 0.000],
+              "size":["150%","150%"],
+              "alpha":0.5
+            }},
+
+            {"stack_panel@ng_module.stackpanel":{
+              "size":[300,"100%c"],
+              "controls":[
+
+                  {"gestion_panel@ng_asset.background_white":{
+                    "color":[0.153, 0.153, 0.165],
+                    "size":["100%",127],
+                    "controls":[
+
+                        {"stack_panel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                    {"header@ng_asset.background_01":{
+                                      "size": ["100%",20],
+                                      "controls":[
+
+                                          {"stack_panel@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":["100% - 4px","100% - 2px"],
+                                            "controls":[
+
+                                                     {"padding@ng_module.panel":{
+                                                        "size":[5,"100%"]
+                                                     }},
+
+                                                     {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+                                                         
+                                                                      {"title":{
+                                                                        "type":"label",
+                                                                        "font_scale_factor":0.8,
+                                                                        "layer":10,
+                                                                        "offset":[0,-1.3],
+                                                                        "font_type":"MinecraftTen",
+                                                                        "text":"moulin"
+                                                                      }}
+                                                     ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":["fill","100%"]
+                                                      }},
+
+                                                      {"elec@ng_module.panel":{
+                                                       "size":["100%c","100%"],
+                                                       "controls":[
+                                                              
+                                                          {"background@ng_asset.background_03":{
+                                                            "min_size":[20,"100% - 2px"],
+                                                            "size": ["100%c + 10px","100% - 2px"],
+                                                            "controls":[
+
+                                                                      {"text@ng_module.Simple_text": {
+                                                                        "$type_get_text": "Get_text_type_1",
+                                                                        "$index": 20,
+                                                                        "layer":5,
+                                                                        "$text_offset":[0,0.3],
+                                                                        "size": ["100%c", "100%"],
+                                                                        "$size_icone_left|default": [8,8],
+                                                                        "$color_icone_left|default": [0.910, 0.725, 0.192],
+                                                                        "$texture_icone_left|default": "ng_asset.icon_03",
+                                                                        "$font_scale_factor": 0.7
+                                                                      }}
+                                                            ]}}
+                                                      ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[1,"100%"]
+                                                      }},
+
+                                                      {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                              {"close_button@ng_module.close_button":{}}  
+                                                              
+                                                      ]}}
+                                          ]}}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",2]
+                                    }},
+
+                                    {"content@ng_module.panel":{
+                                      "size":["100%",100],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100% - 6px","100%"],
+                                              "controls":[
+
+                                                  {"button_toggle@ng_asset.background_15":{
+                                                    "size":[20,"100%"],
+                                                    "controls":[
+
+                                                            {"content@ng_module.stackpanel":{
+                                                              "size":["100% - 4px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"homme_button@ng_module.section_toggle_button": { 
+                                                                      "toggle_group_forced_index": 0, 
+                                                                      "$section_topic": "page_1",
+
+                                                                      "$is_default_toggle": true,
+                                                                      "$sibling_toggle_1": "page_2_button_toggle",
+
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_06",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }},
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"setting@ng_module.section_toggle_button": { 
+                                                                      "$toggle_group_forced_index": 1, 
+                                                                      "$section_topic": "page_2",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_05",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }}
+                                                            ]}}
+
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel":{
+                                                    "size":[3,"100%"]
+                                                  }},
+
+                                                  {"amelioration@ng_module.stackpanel":{
+                                                      "size":["fill","100%"],
+                                                      "controls":[
+
+                                                              {"page1@moulin.page1":{}},
+                                                              {"page2@moulin.page2":{}}
+                                                  ]}}
+                                            ]}}
+                                    ]}}
+                        ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",5]
+                  }},
+
+                  {"inventory@ng_asset.background_02":{
+                    "size": ["100%",113],
+                    "controls":[
+
+                                {"inventory_content@ng_module.stackpanel":{
+                                  "size":[208,"100% - 10px"],
+                                  "controls":[           
+
+                                              {"title":{
+                                                  "size":["100%",10],
+                                                  "type":"label",
+                                                  "layer":5,
+                                                  "font_scale_factor":0.6,
+                                                  "color":[0.443, 0.443, 0.482],
+                                                  "font_type":"MinecraftTen",
+                                                  "text":"inventaire"
+                                              }},
+
+                                              {"inventory@ng_asset.background_white":{
+                                                "color":[0.180, 0.180, 0.192],
+                                                "size":[208,93],
+                                                "controls":[
+
+                                                    {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                      "size":[207,92],
+                                                      "offset":[0.5,0.5],
+                                                      "controls":[
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,69],
+                                                            "$grid_dimensions":[9,3],
+                                                            "$collection_name":"inventory_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }},
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,23],
+                                                            "$grid_dimensions":[9,1],
+                                                            "$collection_name":"hotbar_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }}
+
+                                                    ]}}
+                                              ]}}
+                                ]}}
+
+
+                  ]}}
+            ]}}    
+  ]},
+
+  "page1@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100%","100%"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+   ], 
+    "controls":[
+
+            {"background@ng_asset.background_13":{
+              "size":["100%","100%"],
+              "controls":[
+
+                {"page1@ng_module.stackpanel":{
+                  "orientation":"horizontal",
+                  "size":["100% - 8px","100% - 8px"],
+                  "controls":[
+
+                          {"content@ng_module.stackpanel":{
+                            "size":["50% - 2px","100%"],
+                            "controls":[
+
+                                    {"header@ng_asset.background_12":{
+                                      "size": ["100%",15],
+                                      "controls":[
+
+                                            {"stack_panel@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100% - 2px","100% - 2px"],
+                                              "controls":[
+
+                                                        {"padding@ng_module.panel":{
+                                                          "size":[5,"100%"]
+                                                        }},
+
+                                                        {"centring@ng_module.panel":{
+                                                          "size":["100%c","100%"],
+                                                          "controls":[
+                                                                                                                
+                                                                  {"title":{
+                                                                    "type":"label",
+                                                                    "font_scale_factor":0.7,
+                                                                    "layer":10,
+                                                                    "offset":[0,-0.6],
+                                                                    "color":[0.624, 0.624, 0.663],
+                                                                    "font_type":"MinecraftTen",
+                                                                    "text":"Amelioration"
+                                                                  }}
+                                                        ]}}
+                                            ]}}
+                                    ]}},
+
+                                    {"content@ng_asset.background_11":{
+                                      "size": ["100%",35],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "collection_name": "container_items",
+                                              "size":["100%c",20],
+                                              "controls":[
+
+                                                          {"slot_1@ng_module.custome_slot":{
+                                                            "$index":16
+                                                          }},
+
+                                                          {"padding@ng_module.panel":{
+                                                            "size":[4,"100%"]
+                                                          }},
+
+                                                          {"slot_2@ng_module.custome_slot":{
+                                                            "$index":17
+                                                          }},
+
+                                                          {"padding@ng_module.panel":{
+                                                            "size":[4,"100%"]
+                                                          }},
+
+                                                          {"slot_3@ng_module.custome_slot":{
+                                                            "$index":18
+                                                          }}
+                                            ]}}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",2]
+                                    }},
+
+                                    {"header@ng_asset.background_12":{
+                                      "size": ["100%",15],
+                                      "controls":[
+
+                                            {"stack_panel@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100% - 2px","100% - 2px"],
+                                              "controls":[
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":[5,"100%"]
+                                                      }},
+
+                                                      {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+                                                                                                                
+                                                                {"title":{
+                                                                  "type":"label",
+                                                                  "font_scale_factor":0.7,
+                                                                  "layer":10,
+                                                                  "offset":[0,-0.6],
+                                                                  "color":[0.624, 0.624, 0.663],
+                                                                  "font_type":"MinecraftTen",
+                                                                  "text":"informations"
+                                                                }}
+                                                      ]}}
+                                            ]}}
+                                    ]}},
+
+                                    {"content@ng_asset.background_11":{
+                                      "size": ["100%",25],
+                                      "controls":[
+
+                                          {"content@ng_module.stackpanel":{
+                                            "size":["100% - 8px",20],
+                                            "controls":[
+                                                                                                    
+                                                  {"padding@ng_module.panel":{
+                                                    "size":["100%",1]
+                                                  }},
+
+                                                  {"content@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100%",10],
+                                                    "controls":[
+
+                                                        {"text@ng_module.label":{
+                                                          "text":"ng.machine.overheat",
+                                                          "font_scale_factor": 0.6    
+                                                        }},
+
+                                                        {"padding@ng_module.panel":{
+                                                          "size":["fill","100%"]
+                                                        }},
+
+                                                        {"heat_bar@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 14, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.6, "$text_offset": [0, -2] }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
+                                                  ]}},
+
+                                                  {"content@ng_module.stackpanel":{
+                                                    "orientation":"horizontal",
+                                                    "size":["100%",10],
+                                                    "controls":[
+
+                                                        {"center@ng_module.panel":{
+                                                          "size":["100%c",10],
+                                                          "controls":[
+
+                                                                {"text@ng_module.label":{
+                                                                  "text":"ng.machine.consumption",
+                                                                  "size":["default",10],
+                                                                  "font_scale_factor": 0.6    
+                                                                }}
+                                                        ]}},
+
+                                                        {"padding@ng_module.panel":{
+                                                          "size":["fill","100%"]
+                                                        }},
+
+                                                       {"text@ng_module.Simple_text": {
+                                                          "$type_get_text": "Get_text_type_1",
+                                                          "$index": 13,
+                                                          "layer":10,
+                                                          "size": ["100%c", "100%"],
+                                                          "$font_scale_factor": 0.6,
+                                                          "$text_offset": [0, -2]
+                                                        }}
+                                                  ]}}
+                                          ]}}
+                                    ]}}
+                          ]}},
+
+                          {"padding@ng_module.panel":{
+                            "size":[4,"100%"]
+                          }},
+
+                          {"text@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 15,
+                            "layer":15,
+                            "$text_size":[90,92],
+                            "size":["100%c","100%"],
+                            "$font_scale_factor": 0.7,
+                            "$text_color": [0.624, 0.624, 0.663]    
+                          }}
+                ]}}
+            ]}}
+  ]},
+
+  "page2@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100%","100%"],
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "page_2_button_toggle",
+          "source_property_name": "(not #toggle_state)",
+          "target_property_name": "#visible"
+        }
+    ], 
+    "controls":[
+
+            {"content@ng_asset.background_13":{
+              "size":["100% - 10px ","100%"],
+              "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "size":[84,"100%c"],
+                          "anchor_from":"left_middle",
+                          "anchor_to":"left_middle",
+                          "offset":[8,0],
+                          "controls":[
+
+                                    {"slot@ng_module.collectionpanel":{
+                                      "collection_name": "container_items",
+                                      "size":["100%","100%c"],
+                                      "controls":[
+
+                                            {"slot_1@moulin.slot_with_ghost":{ "$slot_index":21, "$ghost_texture":"textures/items/wheat" }}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",5]
+                                    }},
+
+                                    {"content@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "size":["100%",8],
+                                      "controls":[
+
+                                            {"text@ng_module.label":{
+                                              "text":"Progression",
+                                              "font_scale_factor":0.5
+                                            }},
+
+                                            {"padding@ng_module.panel":{
+                                              "size":["fill","100%"]
+                                            }},
+
+                                            {"text@ng_module.Simple_text": {
+                                              "$type_get_text": "Get_text_type_1",
+                                              "$index": 30,
+                                              "layer":10,
+                                              "size": ["100%c", "100%"],
+                                              "$text_color":[0.443, 0.443, 0.482],
+                                              "$font_scale_factor": 0.5,
+                                              "$text_offset": [0, -1.3]
+                                            }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
+                                    ]}},
+
+                                    {"loading_bar@ng_module.loading_bar": {
+                                      "size": ["100%",4],
+                                      "layer": 5,
+                                      "$index": 30,
+                                      "$load_bar_size":["100% - 2px",2],
+                                      "$orientation": "horizontal",
+                                      "$color_border": [0.980, 0.980, 0.980],
+                                      "$layer_percent": 3,
+                                      "$texture_background_bar":"ng_asset.background_02",
+                                      "$texture_background_top": "textures/ui/background/background_white"
+                                    }},
+
+                                    {"padding@ng_module.panel": {
+                                      "size": ["100%", 5]
+                                    }},
+
+                                    {"slot_ligne_1@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "collection_name":"container_items",
+                                      "size":["100%","100%cm"],
+                                      "controls":[
+
+                                            {"slot_1@moulin.slot_with_ghost":{ "$slot_index":22, "$ghost_texture":"textures/items/ng_agriculture/wheat_flour" }},
+
+                                            {"slot_1@moulin.slot_with_ghost":{ "$slot_index":23, "$ghost_texture":"textures/items/ng_agriculture/barley_flour" }},
+
+                                            {"slot_1@moulin.slot_with_ghost":{ "$slot_index":24, "$ghost_texture":"textures/items/ng_agriculture/corn_flour" }},
+
+                                            {"slot_1@ng_module.custome_slot":{
+                                              "$index":25
+                                            }}
+                                            
+                                    ]}},
+
+                                    {"slot_ligne_1@ng_module.stackpanel":{
+                                      "orientation":"horizontal",
+                                      "collection_name":"container_items",
+                                      "size":["100%","100%cm"],
+                                      "controls":[
+
+                                            {"slot_1@ng_module.custome_slot":{
+                                              "$index":26
+                                            }},
+
+                                            {"slot_1@ng_module.custome_slot":{
+                                              "$index":27
+                                            }},
+
+                                            {"slot_1@ng_module.custome_slot":{
+                                              "$index":28
+                                            }},
+
+                                            {"slot_1@ng_module.custome_slot":{
+                                              "$index":29
+                                            }}
+                                            
+                                    ]}}
+                        ]}},
+
+                        // ce qui donne de la farine, a droite des cases (tools/silo/silo.py)
+                        {"recettes@moulin.recettes":{}}
+            ]}},
+
+            {"padding@ng_module.panel": {
+              "size": [1, "100%"]
+            }},
+
+            {"background_icon@ng_asset.background_white":{
+                            "size":[9,"100%"],
+                            "color":[0.094, 0.094, 0.106],
+                            "controls":[
+
+                                  {"stackpanel@ng_module.stackpanel":{
+                                    "size":["100% - 2px","100% - 2px"],
+                                    "controls":[
+
+                                       {"loading_bar@ng_module.loading_bar": {
+                                          "size": ["100%","100% - 8px"],
+                                          "layer": 5,
+                                          "$index": 14,
+                                          "$load_bar_size":["100%","100%"],
+                                          "$orientation": "vertical",
+                                          "$color_border": [1.000, 0.122, 0.294],
+                                          "$color_border_empty":[0.188, 0.004, 0.059],
+                                          "$layer_percent": 3,
+                                          "$texture_background_bar":"ng_asset.background_white",
+                                          "$texture_background_top": "textures/ui/background/background_white"
+                                       }},
+
+                                       {"padding@ng_module.panel": {
+                                        "size": ["100%", 0.6]
+                                       }},
+
+                                       {"icon@ng_asset.icon_15":{
+                                        "size":["100%",8],
+                                        "color":[1.000, 0.122, 0.294]
+                                       }}
+
+                                  ]}}
+
+
+
+            ]}}
+  ]},
+
+  // Une case avec, tant qu'elle est vide, l'image de l'objet attendu (ou produit) en transparence : une image fixe du
+  // pack ($ghost_texture). Le rendu d'objet lu dans une case cachee ne se voyait pas en jeu (31/10, 16 h 41).
+  "slot_with_ghost@ng_module.panel":{
+    "size":[21,21],
+    "$ghost_texture|default":"",
+    "controls":[
+      {"cell@ng_module.collectionpanel":{
+        "collection_name":"container_items",
+        "size":["100%","100%"],
+        "controls":[
+          {"slot@ng_module.custome_slot":{ "$index":"$slot_index" }},
+          {"ghost@moulin.ghost_image":{ "$index":"$slot_index", "layer":10 }}
+        ]
+      }}
+    ]
+  },
+
+  // L'image de l'objet attendu, sur la case $index tant qu'elle est vide : texte de survol de la case vide, le test des
+  // cartes de la boutique (boutique/inventory.json). Une image ne prend ni clic ni survol : la case dessous les garde.
+  "ghost_image@ng_module.panel":{
+    "size":["100%","100%"],
+    "collection_index":"$index",
+    "controls":[
+      {"image":{
+        "type":"image",
+        "texture":"$ghost_texture",
+        "size":[16,16],
+        "alpha":0.4,
+        "bindings":[
+          {"binding_name":"#hover_text","binding_type":"collection","binding_collection_name":"container_items"},
+          {"binding_type":"view","source_property_name":"(#hover_text = '')","target_property_name":"#visible"}
+        ]
+      }}
+    ]
+  },
+
+  // DEBUT silo.py : produit par tools/silo/silo.py, ne pas modifier a la main jusqu'a FIN silo.py
+  "recettes":{"type":"panel","anchor_from":"right_middle","anchor_to":"right_middle","offset":[-4,0],"size":[155,92],"controls":[{"i_56":{"type":"image","texture":"textures/ui/background/background_12","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":[155,13],"layer":1}},{"i_57":{"type":"image","texture":"textures/ui/background/background_11","anchor_from":"top_left","anchor_to":"top_left","offset":[0,13],"size":[155,79],"layer":1}},{"l_58":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[4,3.8],"size":[100,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.recettes","size":[100,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.624,0.624,0.663],"font_scale_factor":0.55,"font_type":"MinecraftTen","shadow":false,"localize":true}}]}},{"l_59":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[111,4.5],"size":[40,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.duree","size":[40,"default"],"anchor_from":"top_right","anchor_to":"top_right","text_alignment":"right","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_60":{"type":"image","texture":"textures/items/wheat","anchor_from":"top_left","anchor_to":"top_left","offset":[4,16.0],"size":[8,8],"layer":4}},{"l_61":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,17.5],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.wheat","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_62":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,17.5],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_63":{"type":"image","texture":"textures/items/ng_agriculture/wheat_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,16.0],"size":[8,8],"layer":4}},{"l_64":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,17.5],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.wheat","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_65":{"type":"image","texture":"textures/items/ng_agriculture/corn","anchor_from":"top_left","anchor_to":"top_left","offset":[4,25.4],"size":[8,8],"layer":4}},{"l_66":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,26.9],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.corn","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_67":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,26.9],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_68":{"type":"image","texture":"textures/items/ng_agriculture/corn_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,25.4],"size":[8,8],"layer":4}},{"l_69":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,26.9],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.corn","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_70":{"type":"image","texture":"textures/items/ng_agriculture/oat","anchor_from":"top_left","anchor_to":"top_left","offset":[4,34.8],"size":[8,8],"layer":4}},{"l_71":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,36.3],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.oat","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_72":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,36.3],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_73":{"type":"image","texture":"textures/items/ng_agriculture/oat_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,34.8],"size":[8,8],"layer":4}},{"l_74":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,36.3],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.oat","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_75":{"type":"image","texture":"textures/items/ng_agriculture/rye","anchor_from":"top_left","anchor_to":"top_left","offset":[4,44.2],"size":[8,8],"layer":4}},{"l_76":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,45.7],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.rye","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_77":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,45.7],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_78":{"type":"image","texture":"textures/items/ng_agriculture/rye_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,44.2],"size":[8,8],"layer":4}},{"l_79":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,45.7],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.rye","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_80":{"type":"image","texture":"textures/items/ng_agriculture/soy","anchor_from":"top_left","anchor_to":"top_left","offset":[4,53.6],"size":[8,8],"layer":4}},{"l_81":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,55.1],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.soy","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_82":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,55.1],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_83":{"type":"image","texture":"textures/items/ng_agriculture/soy_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,53.6],"size":[8,8],"layer":4}},{"l_84":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,55.1],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.soy","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_85":{"type":"image","texture":"textures/items/ng_agriculture/barley","anchor_from":"top_left","anchor_to":"top_left","offset":[4,63.0],"size":[8,8],"layer":4}},{"l_86":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,64.5],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.barley","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_87":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,64.5],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_88":{"type":"image","texture":"textures/items/ng_agriculture/barley_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,63.0],"size":[8,8],"layer":4}},{"l_89":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,64.5],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.barley","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_90":{"type":"image","texture":"textures/items/ng_agriculture/glazed_spelt","anchor_from":"top_left","anchor_to":"top_left","offset":[4,72.4],"size":[8,8],"layer":4}},{"l_91":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,73.9],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.glazed_spelt","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_92":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,73.9],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_93":{"type":"image","texture":"textures/items/ng_agriculture/glazed_spelt_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,72.4],"size":[8,8],"layer":4}},{"l_94":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,73.9],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.glazed_spelt","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_95":{"type":"image","texture":"textures/items/ng_agriculture/arctic_oats","anchor_from":"top_left","anchor_to":"top_left","offset":[4,81.8],"size":[8,8],"layer":4}},{"l_96":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[14,83.3],"size":[48,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.entree.arctic_oats","size":[48,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"l_97":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[62,83.3],"size":[6,8],"layer":4,"controls":[{"label":{"type":"label","text":"=","size":[6,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.624,0.624,0.663],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_98":{"type":"image","texture":"textures/items/ng_agriculture/arctic_oat_flour","anchor_from":"top_left","anchor_to":"top_left","offset":[69,81.8],"size":[8,8],"layer":4}},{"l_99":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[79,83.3],"size":[74,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.moulin.sortie.arctic_oats","size":[74,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}}]}
+  // FIN silo.py
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:laser_assault_rifle",
+      "item": {
+        "ng:laser_assault_rifle": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/weapon/laser_assault_rifle",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.laser_assault_rifle"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.laser_assault_rifle.first_person",
+        "third_person_hold": "animation.recubeicbm.held.laser_assault_rifle.third_person",
+        "no_accessories": "animation.recubeicbm.weapon.no_accessories",
+        "idle": "animation.recubeicbm.weapon.laser_assault_rifle.idle",
+        "fire": "animation.recubeicbm.weapon.laser_assault_rifle.fire",
+        "reload": "animation.recubeicbm.weapon.laser_assault_rifle.reload",
+        "weapon": "controller.animation.recubeicbm.weapon"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          },
+          "no_accessories",
+          "weapon"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

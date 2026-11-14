@@ -3,6 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "ng:tool_repairer_display_on",
+      "enable_attachables": true,
       "materials": {
         "default": "entity_alphatest"
       },
@@ -14,11 +15,13 @@
         "default": "geometry.machine_repair"
       },
       "animations": {
-        "hammer": "animation.machine_repair.on"
+        "hammer": "animation.machine_repair.on",
+        "held_item": "animation.ng_machine.held_item"
       },
       "scripts": {
         "animate": [
-          "hammer"
+          "hammer",
+          "held_item"
         ]
       },
       "render_controllers": [

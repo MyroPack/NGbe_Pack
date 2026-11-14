@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tractor.roues": {
+			"loop": true,
+			"bones": {
+				"right_back_wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 68",
+						0,
+						0
+					]
+				},
+				"left_back_wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 68",
+						0,
+						0
+					]
+				},
+				"right_front_wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 108",
+						0,
+						0
+					]
+				},
+				"left_front_wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 108",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

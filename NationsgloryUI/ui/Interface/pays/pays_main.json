@@ -213,7 +213,74 @@
 
                                         "$page15": "pays_classement.classement_main"
 
-                                    }}
+                                    }},
+
+                                    // Seizieme page, 'z' en case 14 : la declaration de guerre (PaysGuerreDeclarationUi de
+                                    // NGCountryMod, produite par tools/guerre/declaration.py). Le Toggle de NG_module n'a
+                                    // que 15 pages : celle-ci est lue de la meme facon, a cote de lui, sans le toucher.
+                                    // Jamais 'f' : avec 'f', la page sortait sur toutes les pages du menu (retour de Leo
+                                    // du 05/11 a 9 h 18), tres probablement par le code couleur « §f » du texte des cases.
+                                    {"declaration": {
+                                        "type": "stack_panel",
+                                        "size": ["100%","100%"],
+                                        "collection_name": "container_items",
+                                        "controls": [
+
+                                            {"declaration": {
+                                                "type": "collection_panel",
+                                                "size": ["100%","100%"],
+                                                "collection_index": 14,
+                                                "controls": [
+
+                                                    {"page16@pays_guerre_declaration.guerre_declaration": {
+                                                        "bindings": [
+                                                            {
+                                                              "binding_type": "collection",
+                                                              "binding_collection_name": "container_items",
+                                                              "binding_name_override": "#hover_text",
+                                                              "binding_name": "#hover_text"
+                                                            },
+                                                            {
+                                                              "binding_type": "view",
+                                                              "source_property_name": "(not ((#hover_text - 'z') = #hover_text))",
+                                                              "target_property_name": "#visible"
+                                                            }
+                                                    ]}}
+                                            ]}}
+                                    ]}},
+
+                                    // Dix-septieme page, 'y' en case 14 : les conditions d'une guerre, negociees entre la
+                                    // declaration et son debut (PaysGuerreConditionsUi de NGCountryMod, produite par
+                                    // tools/guerre/conditions.py, retour de Leo du 05/11 a 9 h 57). Lue comme la page 'z'.
+                                    // Jamais une lettre de code couleur (0-9, a-f, k-o, r).
+                                    {"conditions": {
+                                        "type": "stack_panel",
+                                        "size": ["100%","100%"],
+                                        "collection_name": "container_items",
+                                        "controls": [
+
+                                            {"conditions": {
+                                                "type": "collection_panel",
+                                                "size": ["100%","100%"],
+                                                "collection_index": 14,
+                                                "controls": [
+
+                                                    {"page17@pays_guerre_conditions.guerre_conditions": {
+                                                        "bindings": [
+                                                            {
+                                                              "binding_type": "collection",
+                                                              "binding_collection_name": "container_items",
+                                                              "binding_name_override": "#hover_text",
+                                                              "binding_name": "#hover_text"
+                                                            },
+                                                            {
+                                                              "binding_type": "view",
+                                                              "source_property_name": "(not ((#hover_text - 'y') = #hover_text))",
+                                                              "target_property_name": "#visible"
+                                                            }
+                                                    ]}}
+                                            ]}}
+                                    ]}}
                             ]}}
                     ]}}
             ]}}

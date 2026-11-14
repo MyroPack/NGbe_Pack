@@ -8,5 +8,10 @@
     "flipbook_texture": "textures/blocks/shadow_ore",
     "atlas_tile": "shadow_ore",
     "ticks_per_frame": 4
+  },
+  {
+    "flipbook_texture": "textures/blocks/edora_zirconium_ore",
+    "atlas_tile": "edora_zirconium_ore",
+    "ticks_per_frame": 2
   }
 ]

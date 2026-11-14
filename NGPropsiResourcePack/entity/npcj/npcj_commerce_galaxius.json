@@ -1,0 +1,34 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npcj_commerce_galaxius",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npcj/npcj_commerce_galaxius"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npcj_commerce_galaxius"
+      },
+      "animations": {
+        "near": "animation.propsi_e_npcj_commerce_galaxius.near",
+        "talk": "animation.propsi_e_npcj_commerce_galaxius.talk",
+        "idle": "animation.propsi_e_npcj_commerce_galaxius.idle",
+        "controleur": "controller.animation.propsi_e_npcj_commerce_galaxius"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.npcj_proche = q.distance_from_camera <= 4.0;"
+        ],
+        "animate": [
+          "controleur"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

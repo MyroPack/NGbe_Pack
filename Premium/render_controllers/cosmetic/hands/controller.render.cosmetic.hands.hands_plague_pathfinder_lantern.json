@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.hands.hands_plague_pathfinder_lantern": {
+      "geometry": "Geometry.cosmetic.hands.hands_plague_pathfinder_lantern",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.hands.hands_plague_pathfinder_lantern"
+      ]
+    }
+  }
+}

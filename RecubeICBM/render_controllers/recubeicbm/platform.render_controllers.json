@@ -19,7 +19,15 @@
             "Texture.drill",
             "Texture.endothermique",
             "Texture.anti_matter",
-            "Texture.red_matter"
+            "Texture.red_matter",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.conventionnel",
+            "Texture.endbringer"
           ]
         },
         "geometries": {
@@ -38,18 +46,26 @@
             "Geometry.drill",
             "Geometry.endothermique",
             "Geometry.anti_matter",
-            "Geometry.red_matter"
+            "Geometry.red_matter",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.conventionnel",
+            "Geometry.endbringer"
           ]
         }
       },
-      "geometry": "Array.geos[math.clamp(q.variant - 1, 0, 14)]",
+      "geometry": "Array.geos[math.clamp(q.variant - 1, 0, 22)]",
       "materials": [
         {
           "*": "Material.default"
         }
       ],
       "textures": [
-        "Array.skins[math.clamp(q.variant - 1, 0, 14)]"
+        "Array.skins[math.clamp(q.variant - 1, 0, 22)]"
       ]
     }
   }

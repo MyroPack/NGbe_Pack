@@ -1,0 +1,1160 @@
+{
+    "namespace": "ng_leaderboard",
+
+    // ------------------------------------------------------------------------
+    //
+    //      Classement des joueurs : conteneur paladium:leaderboard de LeaderboardMod
+    //
+    // ------------------------------------------------------------------------
+    //
+    // D'apres la maquette « LIGUE », comme pays_classement.json, en classement simple : le bandeau des
+    // categories en haut, la liste a gauche, le panneau du joueur a droite.
+    //
+    // Cases de LeaderboardUi (LeaderboardMod), les 10 a 68 sont aussi celles de l'ecran de Paladium :
+    //   1        bouton Home (PalaUiMod)
+    //   10 / 11  groupe de categories precedent / suivant, §1 quand il existe
+    //   12       numero de page, §1 quand une page la precede (son clic y revient) ; 13 page suivante, §1 si elle existe
+    //   14-19    categories : §1 la choisie, §0 les autres, « » sans categorie
+    //   20       nom du classement (son clic passe au suivant de la categorie) ; 21 « true » s'il y en a plusieurs
+    //   22 / 23  Global / Semaine, §1 le choisi ; 24 « true » quand le classement a les deux
+    //   25 / 26  nom des colonnes (joueur / score)
+    //   27 / 28  ligne du joueur : nom + 90 ':' + sous-titre (son pays) / rang + 90 ':' + score
+    //   29-68    les 20 lignes, deux cases chacune comme celle du joueur ; un pays porte son drapeau (glyphe du
+    //            texte) devant son nom lisible
+    //   69 / 70  nom du joueur / classement montre (global ou de la semaine)
+    //   71 / 72  sa position / son score ; 78 le nom du score
+    //   73 / 74  l'ecart avec le joueur au-dessus : son titre / sa valeur
+    //   75-77    les trois premiers : nom + 90 ':' + score
+    //   79       page/pages, sous la liste
+    //   80       drapeau du pays de la ligne du joueur, 81-100 ceux des 20 lignes, 101-103 ceux des trois premiers ;
+    //   104      logo a cote du nom de la ligne du joueur (logo de sa ligue, onglet MMR), 105-124 ceux des lignes.
+    //            Une image est le chemin de sa texture apres 90 octets (ng_module.icone, Get_text_type_2), comme le
+    //            drapeau du menu du pays ; sans image, la case vaut « §r » et sa colonne reste vide. Les drapeaux sont
+    //            ceux du menu du pays (textures/ui/country_flags), les logos ceux des ligues (textures/ui/ng_assets/league) :
+    //            le glyphe du drapeau du tchat n'est pas dans la police MinecraftTen de l'ecran (un « ? » le 04/11).
+    //            Colonnes d'une ligne : N° (14 %), drapeau (20), nom (le reste, coupe s'il est trop long), logo (16),
+    //            sous-titre (16 %), score avec son unite (20 %).
+
+    "main_panel": {
+        "type": "panel",
+        "size": ["100%","100%"],
+        "controls": [
+
+            {"main@ng_module.stackpanel":{
+                "size": ["100%","100%"],
+                "controls": [
+
+                    {"header@ng_asset.background_white":{
+                        "color": [0.153,0.153,0.165],
+                        "size": ["100%",20],
+                        "controls": [
+
+                            {"title@ng_module.label":{
+                                "text": "Classement",
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [10,-1.3],
+                                "layer": 10,
+                                "font_type": "MinecraftTen",
+                                "font_scale_factor": 0.9
+                            }},
+
+                            {"tabs@ng_leaderboard.category_tabs":{}},
+
+                            {"buttons@ng_module.stackpanel":{
+                                "orientation": "horizontal",
+                                "size": ["100%c","100%"],
+                                "anchor_from": "right_middle",
+                                "anchor_to": "right_middle",
+                                "offset": [-5,0],
+                                "controls": [
+
+                                    // Bouton Home : ferme le menu et ouvre le telephone (/app).
+                                    {"home@ng_module.panel":{
+                                        "size": ["100%c","100%"],
+                                        "controls": [
+
+                                            {"home_button@ng_module.home_button":{}}
+                                    ]}},
+
+                                    {"padding_home@ng_module.panel":{
+                                        "size": [2,"100%"]
+                                    }},
+
+                                    {"close@ng_module.panel":{
+                                        "size": ["100%c","100%"],
+                                        "controls": [
+
+                                            {"close_button@ng_module.close_button":{}}
+                                    ]}}
+                            ]}}
+                    ]}},
+
+                    {"content@ng_asset.background_white":{
+                        "size": ["100%","fill"],
+                        "alpha": 0.6,
+                        "color": [0.000, 0.000, 0.000],
+                        "controls": [
+
+                            {"classement@ng_leaderboard.classement_main":{}}
+                    ]}}
+            ]}}
+    ]},
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Bandeau : les categories
+    //
+    // ------------------------------------------------------------------------
+
+    // Les onglets des categories, au milieu du bandeau : la choisie (§1) comme l'onglet ouvert de l'annuaire, les
+    // autres (§0) en gris et cliquables. Une case sans categorie cache son onglet. Les fleches des cases 10 et 11
+    // ne se montrent qu'au-dela de six categories (§1).
+
+    "category_tabs@ng_module.stackpanel":{
+      "orientation": "horizontal",
+      "collection_name": "container_items",
+      "size": ["100%c","100%"],
+      "controls": [
+
+        {"previous@ng_leaderboard.group_arrow":{ "$arrow_index": 10, "$arrow_icon": "ng_asset.icon_34" }},
+        {"tab_1@ng_leaderboard.category_tab":{ "$tab_index": 14 }},
+        {"tab_2@ng_leaderboard.category_tab":{ "$tab_index": 15 }},
+        {"tab_3@ng_leaderboard.category_tab":{ "$tab_index": 16 }},
+        {"tab_4@ng_leaderboard.category_tab":{ "$tab_index": 17 }},
+        {"tab_5@ng_leaderboard.category_tab":{ "$tab_index": 18 }},
+        {"tab_6@ng_leaderboard.category_tab":{ "$tab_index": 19 }},
+        {"next@ng_leaderboard.group_arrow":{ "$arrow_index": 11, "$arrow_icon": "ng_asset.icon_35" }}
+    ]},
+
+    "category_tab": {
+      "type": "panel",
+      "collection_index": "$tab_index",
+      "size": [52,"100%"],
+      "bindings": [
+        {
+          "binding_name": "#hover_text",
+          "binding_type": "collection",
+          "binding_collection_name": "container_items"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not ((#hover_text - '§r') = #hover_text))",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+
+        {"tab@ng_module.multiple_status_button":{
+          "size": ["100%","100%"],
+          "$size_button": ["100%","100%"],
+          "$index": "$tab_index",
+          "$textures_button_S0": "ng_asset.button_empty",
+          "$textures_button_S1": "ng_asset.button_20",
+          "$font_type": "MinecraftTen",
+          "$S0_text_color": [0.443,0.443,0.482],
+          "$fonction_mapping_button_S0": "clickable",
+          "$fonction_mapping_button_S1": "nonclickable",
+          "$S0_type_get_text": "Get_text_type_1",
+          "$S1_type_get_text": "Get_text_type_1",
+          "$font_scale_factor": 0.7
+        }}
+    ]},
+
+    "group_arrow": {
+      "type": "panel",
+      "collection_index": "$arrow_index",
+      "size": [14,"100%"],
+      "bindings": [
+        {
+          "binding_name": "#hover_text",
+          "binding_type": "collection",
+          "binding_collection_name": "container_items"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+
+        {"button@ng_module.Simple_Button":{
+          "size": [10,10],
+          "$index": "$arrow_index",
+          "$size_icone_right": [7,7],
+          "$texture_icone_right": "$arrow_icon",
+          "$texture_button": "ng_asset.button_26"
+        }}
+    ]},
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Contenu
+    //
+    // ------------------------------------------------------------------------
+
+    "classement_main@ng_module.panel":{
+      "size":[460,230],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "size":["100%","100%"],
+            "controls":[
+
+                  {"list@ng_leaderboard.list_block":{}},
+
+                  {"padding@ng_module.panel": {
+                    "size": [4, "100%"]
+                  }},
+
+                  {"right_part@ng_leaderboard.player_block":{}}
+          ]}}
+    ]},
+
+    // La liste : le nom du classement et ses boutons, les 20 lignes de la page, la ligne du joueur, puis les pages
+    // sur leur bandeau, en bas du cadre.
+
+    "list_block@ng_module.stackpanel":{
+      "size":["71% - 2px","100%"],
+      "controls":[
+
+        {"content@ng_asset.background_white":{
+          "color":[0.153, 0.153, 0.165],
+          "size":["100%","100%"],
+          "layer":15,
+          "controls":[
+
+              {"content@ng_module.stackpanel":{
+                "size":["100% - 2px","100% - 2px"],
+                "controls":[
+
+                  {"header@ng_leaderboard.list_header":{}},
+
+                  {"rows@ng_asset.background_white": {
+                    "size": ["100%", "fill"],
+                    "color":[0.094, 0.094, 0.106],
+                    "controls":[
+
+                        {"content@ng_module.stackpanel":{
+                          "size":["100% - 10px","100%"],
+                          "controls":[
+
+                              {"padding@ng_module.panel": {
+                                "size": ["fill",4]
+                              }},
+
+                              {"scroll@ng_module.scroll_test":{
+                                "size":["100%","fill"],
+                                "layer":10,
+                                "$size_scroll_bar":[5,"100%"],
+                                "$scroll_textures_bar": "ng_asset.background_white",
+                                "$scroll_bar_color":[0.322, 0.322, 0.361],
+                                "$scroll_textures_background": "ng_asset.background_white",
+                                "$scroll_background_color":[0.153, 0.153, 0.165],
+                                "$scrolling_content": "ng_leaderboard.rows"
+                              }},
+
+                              {"label@ng_module.panel":{
+                                "size":["100%",16],
+                                "controls":[
+
+                                  {"label@ng_module.label":{
+                                    "text":"Votre position",
+                                    "anchor_from": "left_middle",
+                                    "anchor_to": "left_middle",
+                                    "offset":[7.3,-1.3],
+                                    "font_scale_factor":0.7,
+                                    "layer":10,
+                                    "font_type":"MinecraftTen"
+                                  }}
+                              ]}},
+
+                              {"own@ng_leaderboard.own_row":{}},
+
+                              {"padding@ng_module.panel": {
+                                "size": ["100%", 3]
+                              }}
+                        ]}}
+                  ]}},
+
+                  {"pagination@ng_leaderboard.pagination":{}}
+              ]}}
+        ]}}
+    ]},
+
+    // Le nom du classement (case 20), puis « Changer » (le clic de la case 20, quand la categorie en a plusieurs)
+    // et Global / Semaine (cases 22 et 23, quand le classement a les deux).
+
+    "list_header@ng_asset.background_62":{
+      "size":["100%",20],
+      "controls":[
+
+          {"content@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "collection_name": "container_items",
+            "size":["100% - 6px","100% - 2px"],
+            "controls":[
+
+              {"padding@ng_module.panel":{
+                "size":[5,"100%"]
+              }},
+
+              {"title@ng_module.Simple_text":{
+                "$type_get_text": "Get_text_type_1",
+                "$index": 20,
+                "layer": 6,
+                "$text_offset":[0,-1.3],
+                "$font_type":"MinecraftTen",
+                "size": ["100%c","100%"],
+                "$font_scale_factor": 0.9
+              }},
+
+              {"padding@ng_module.panel":{
+                "size":["fill","100%"]
+              }},
+
+              {"change@ng_leaderboard.visible_if_true":{
+                "$flag_index": 21,
+                "size": ["100%c","100%"],
+                "controls":[
+
+                  {"button@ng_leaderboard.text_button":{
+                    "size": [42,"100%"],
+                    "$button_index": 20,
+                    "$button_text": "Changer"
+                  }},
+
+                  {"padding@ng_module.panel":{
+                    "size":[5,"100%"]
+                  }}
+              ]}},
+
+              {"types@ng_leaderboard.visible_if_true":{
+                "$flag_index": 24,
+                "size": ["100%c","100%"],
+                "controls":[
+
+                  {"global@ng_leaderboard.type_button":{ "$type_index": 22 }},
+
+                  {"padding@ng_module.panel":{
+                    "size":[3,"100%"]
+                  }},
+
+                  {"weekly@ng_leaderboard.type_button":{ "$type_index": 23 }}
+              ]}}
+          ]}}
+    ]},
+
+    // Un groupe de controles montre seulement quand sa case vaut « true » (BoolUiComponent).
+    "visible_if_true": {
+      "type": "stack_panel",
+      "orientation": "horizontal",
+      "collection_index": "$flag_index",
+      "bindings": [
+        {
+          "binding_name": "#hover_text",
+          "binding_type": "collection",
+          "binding_collection_name": "container_items"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not ((#hover_text - 'true') = #hover_text))",
+          "target_property_name": "#visible"
+        }
+      ]
+    },
+
+    // Un bouton de la case $button_index au texte fixe.
+    "text_button@ng_module.panel":{
+      "$button_text|default": "",
+      "controls":[
+
+        {"button@ng_module.Simple_Button":{
+          "size": ["100%","100%"],
+          "$size_button":["100%",13],
+          "$index": "$button_index",
+          "$texture_button": "ng_asset.button_29"
+        }},
+
+        {"label@ng_module.label":{
+          "text": "$button_text",
+          "offset": [0,0.2],
+          "layer": 30,
+          "font_scale_factor": 0.7
+        }}
+    ]},
+
+    // Global ou Semaine : le texte de sa case sur un bouton, comme « Rechercher » du classement des pays. Le choisi
+    // (§1) est souligne, l'autre (§0) assombri.
+    "type_button@ng_module.panel":{
+      "size": [40,"100%"],
+      "controls":[
+
+        {"button@ng_module.Simple_Button":{
+          "size": ["100%","100%"],
+          "$size_button":["100%",13],
+          "$index": "$type_index",
+          "$text_offset":[0,0.2],
+          "$type_get_text":"Get_text_type_1",
+          "$font_scale_factor":0.7,
+          "$texture_button": "ng_asset.button_29"
+        }},
+
+        {"state@ng_module.collectionpanel":{
+          "collection_name": "container_items",
+          "size": ["100%",13],
+          "layer": 40,
+          "controls":[
+
+            {"selected":{
+              "type": "image",
+              "texture": "textures/ui/background/background_white",
+              "color": [0.980, 0.980, 0.980],
+              "size": ["100% - 8px",1],
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "offset": [0,-1.5],
+              "collection_index": "$type_index",
+              "bindings": [
+                { "binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items" },
+                { "binding_type": "view", "source_property_name": "(not ((#hover_text - '§1') = #hover_text))", "target_property_name": "#visible" }
+              ]
+            }},
+
+            {"other":{
+              "type": "image",
+              "texture": "textures/ui/background/background_white",
+              "color": [0.000, 0.000, 0.000],
+              "alpha": 0.45,
+              "size": ["100%","100%"],
+              "collection_index": "$type_index",
+              "bindings": [
+                { "binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items" },
+                { "binding_type": "view", "source_property_name": "(not ((#hover_text - '§0') = #hover_text))", "target_property_name": "#visible" }
+              ]
+            }}
+        ]}}
+    ]},
+
+    // Les 20 lignes de la page. Les trois premieres sont le podium sur la premiere page.
+    "rows@ng_module.stackpanel":{
+      "collection_name": "container_items",
+      "size":["100%","100%c"],
+      "controls":[
+
+        {"row_1@ng_leaderboard.podium_row":{ "$row_title": 29, "$row_score": 30, "$row_flag": 81, "$row_badge": 105, "$podium_color": [0.961, 0.773, 0.259] }},
+        {"row_2@ng_leaderboard.podium_row":{ "$row_title": 31, "$row_score": 32, "$row_flag": 82, "$row_badge": 106, "$podium_color": [0.784, 0.812, 0.851] }},
+        {"row_3@ng_leaderboard.podium_row":{ "$row_title": 33, "$row_score": 34, "$row_flag": 83, "$row_badge": 107, "$podium_color": [0.804, 0.498, 0.196] }},
+        {"row_4@ng_leaderboard.row":{ "$row_title": 35, "$row_score": 36, "$row_flag": 84, "$row_badge": 108 }},
+        {"row_5@ng_leaderboard.row":{ "$row_title": 37, "$row_score": 38, "$row_flag": 85, "$row_badge": 109 }},
+        {"row_6@ng_leaderboard.row":{ "$row_title": 39, "$row_score": 40, "$row_flag": 86, "$row_badge": 110 }},
+        {"row_7@ng_leaderboard.row":{ "$row_title": 41, "$row_score": 42, "$row_flag": 87, "$row_badge": 111 }},
+        {"row_8@ng_leaderboard.row":{ "$row_title": 43, "$row_score": 44, "$row_flag": 88, "$row_badge": 112 }},
+        {"row_9@ng_leaderboard.row":{ "$row_title": 45, "$row_score": 46, "$row_flag": 89, "$row_badge": 113 }},
+        {"row_10@ng_leaderboard.row":{ "$row_title": 47, "$row_score": 48, "$row_flag": 90, "$row_badge": 114 }},
+        {"row_11@ng_leaderboard.row":{ "$row_title": 49, "$row_score": 50, "$row_flag": 91, "$row_badge": 115 }},
+        {"row_12@ng_leaderboard.row":{ "$row_title": 51, "$row_score": 52, "$row_flag": 92, "$row_badge": 116 }},
+        {"row_13@ng_leaderboard.row":{ "$row_title": 53, "$row_score": 54, "$row_flag": 93, "$row_badge": 117 }},
+        {"row_14@ng_leaderboard.row":{ "$row_title": 55, "$row_score": 56, "$row_flag": 94, "$row_badge": 118 }},
+        {"row_15@ng_leaderboard.row":{ "$row_title": 57, "$row_score": 58, "$row_flag": 95, "$row_badge": 119 }},
+        {"row_16@ng_leaderboard.row":{ "$row_title": 59, "$row_score": 60, "$row_flag": 96, "$row_badge": 120 }},
+        {"row_17@ng_leaderboard.row":{ "$row_title": 61, "$row_score": 62, "$row_flag": 97, "$row_badge": 121 }},
+        {"row_18@ng_leaderboard.row":{ "$row_title": 63, "$row_score": 64, "$row_flag": 98, "$row_badge": 122 }},
+        {"row_19@ng_leaderboard.row":{ "$row_title": 65, "$row_score": 66, "$row_flag": 99, "$row_badge": 123 }},
+        {"row_20@ng_leaderboard.row":{ "$row_title": 67, "$row_score": 68, "$row_flag": 100, "$row_badge": 124 }}
+    ]},
+
+    // Une des trois premieres lignes : sur la premiere page (la case 12 porte §0), le podium, avec un contour, un fond
+    // teinte, le rang et le nom de sa couleur ; sur les autres pages (§1), une ligne comme les autres.
+    "podium_row@ng_module.collectionpanel": {
+      "collection_name": "container_items",
+      "size": ["100%","100%c"],
+      "controls": [
+
+        {"first_page": {
+          "type": "panel",
+          "collection_index": 12,
+          "size": ["100%","100%c"],
+          "bindings": [
+            { "binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items" },
+            { "binding_type": "view", "source_property_name": "(not ((#hover_text - '§0') = #hover_text))", "target_property_name": "#visible" }
+          ],
+          "controls": [
+
+            {"rows@ng_module.collectionpanel": {
+              "collection_name": "container_items",
+              "size": ["100%","100%c"],
+              "controls": [
+
+                {"row@ng_leaderboard.row": {
+                  "$row_accent": "$podium_color",
+                  "$row_outline_alpha": 1,
+                  "$row_tint_alpha": 0.12
+                }}
+            ]}}
+        ]}},
+
+        {"other_pages": {
+          "type": "panel",
+          "collection_index": 12,
+          "size": ["100%","100%c"],
+          "bindings": [
+            { "binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items" },
+            { "binding_type": "view", "source_property_name": "(not ((#hover_text - '§1') = #hover_text))", "target_property_name": "#visible" }
+          ],
+          "controls": [
+
+            {"rows@ng_module.collectionpanel": {
+              "collection_name": "container_items",
+              "size": ["100%","100%c"],
+              "controls": [
+
+                {"row@ng_leaderboard.row": {}}
+            ]}}
+        ]}}
+    ]},
+
+    // La ligne du joueur (cases 27 et 28), plus claire : sa collection est declaree ici, la pile qui la tient n'en a pas.
+    "own_row@ng_module.collectionpanel": {
+      "collection_name": "container_items",
+      "size": ["100%","100%c"],
+      "controls": [
+
+        {"row@ng_leaderboard.row": {
+          "$row_title": 27,
+          "$row_score": 28,
+          "$row_flag": 80,
+          "$row_badge": 104,
+          "$row_color": [0.247, 0.247, 0.275]
+        }}
+    ]},
+
+    // Une ligne : N° et rang, nom, sous-titre (le pays du joueur avec son drapeau, les membres d'un pays), score.
+    // Cachee tant que sa case du rang est vide (pas de ':'). $row_accent colore le rang et le nom, le contour
+    // ($row_outline_alpha) et le fond teinte ($row_tint_alpha) : rien de tout cela sur une ligne ordinaire.
+    "row@ng_module.stackpanel": {
+      "$row_color|default": [0.153, 0.153, 0.165],
+      "$row_accent|default": [0.980, 0.980, 0.980],
+      "$row_outline_alpha|default": 0,
+      "$row_tint_alpha|default": 0,
+      "$row_flag|default": 0,
+      "$row_badge|default": 0,
+      "collection_index": "$row_score",
+      "size": ["100%",18],
+      "bindings": [
+        {
+          "binding_name": "#hover_text",
+          "binding_type": "collection",
+          "binding_collection_name": "container_items"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(not((#hover_text - ':') = #hover_text))",
+          "target_property_name": "#visible"
+        }
+      ],
+      "controls": [
+
+        {"row@ng_asset.background_white":{
+          "size":["100%",17],
+          "color":"$row_color",
+          "controls":[
+
+            {"tint@ng_asset.background_white":{
+              "size":["100%","100%"],
+              "layer": 1,
+              "color": "$row_accent",
+              "alpha": "$row_tint_alpha"
+            }},
+
+            {"outline":{
+              "type": "image",
+              "texture": "textures/ui/background/background_22",
+              "size":["100%","100%"],
+              "layer": 2,
+              "color": "$row_accent",
+              "alpha": "$row_outline_alpha"
+            }},
+
+            {"columns@ng_module.stackpanel":{
+              "orientation": "horizontal",
+              "collection_name": "container_items",
+              "size": ["100% - 15px","100%"],
+              "layer": 3,
+              "controls": [
+
+                  {"number@ng_module.stackpanel":{
+                    "orientation": "horizontal",
+                    "size":["14%","100%"],
+                    "controls":[
+
+                        {"prefix@ng_module.panel":{
+                          "size": ["100%c","100%"],
+                          "controls":[
+
+                            {"label@ng_module.label":{
+                              "text": "N°",
+                              "offset": [0,-1.3],
+                              "layer": 6,
+                              "color": "$row_accent",
+                              "font_type": "MinecraftTen",
+                              "font_scale_factor": 0.8
+                            }}
+                        ]}},
+
+                        {"rank@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_3",
+                          "$index": "$row_score",
+                          "layer": 6,
+                          "$text_color": "$row_accent",
+                          "$text_offset":[0,-1.3],
+                          "$font_type":"MinecraftTen",
+                          "size": ["100%c","100%"],
+                          "$font_scale_factor": 0.8
+                        }}
+                  ]}},
+
+                  // Le drapeau du pays (case $row_flag), vide pour un joueur.
+                  {"flag@ng_module.panel":{
+                    "size":[20,"100%"],
+                    "controls":[
+
+                        {"flag@ng_module.panel":{
+                          "size":[16,8],
+                          "anchor_from": "left_middle",
+                          "anchor_to": "left_middle",
+                          "offset":[0,-0.5],
+                          "controls":[
+
+                            {"flag@ng_module.icone":{
+                              "$index": "$row_flag",
+                              "$Get_text_type": "Get_text_type_2",
+                              "size":["100%","100%"]
+                            }}
+                        ]}}
+                  ]}},
+
+                  // Le nom, un seul, cale a gauche dans le reste de la ligne et coupe s'il est trop long : il ne touche
+                  // jamais le logo.
+                  {"name@ng_module.panel":{
+                    "size":["fill","100%"],
+                    "clips_children": true,
+                    "controls":[
+
+                        {"name@ng_module.stackpanel":{
+                          "orientation": "horizontal",
+                          "size":["100%","100%"],
+                          "controls":[
+
+                            {"name@ng_module.Simple_text":{
+                              "$type_get_text": "Get_text_type_3",
+                              "$index": "$row_title",
+                              "layer": 6,
+                              "$text_color": "$row_accent",
+                              "$text_offset":[0,-1.3],
+                              "$font_type":"MinecraftTen",
+                              "size": ["100%c","100%"],
+                              "$font_scale_factor": 0.8
+                            }}
+                        ]}}
+                  ]}},
+
+                  {"gap@ng_module.panel":{
+                    "size":[4,"100%"]
+                  }},
+
+                  // Le logo de la ligue (case $row_badge, onglet MMR), vide sinon.
+                  {"badge@ng_module.panel":{
+                    "size":[16,"100%"],
+                    "controls":[
+
+                        {"badge@ng_module.panel":{
+                          "size":[12,12],
+                          "controls":[
+
+                            {"badge@ng_module.icone":{
+                              "$index": "$row_badge",
+                              "$Get_text_type": "Get_text_type_2",
+                              "size":["100%","100%"]
+                            }}
+                        ]}}
+                  ]}},
+
+                  {"subtitle@ng_module.panel":{
+                    "size":["16%","100%"],
+                    "controls":[
+
+                        {"subtitle@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_2",
+                          "$index": "$row_title",
+                          "layer": 6,
+                          "$text_color":[0.624, 0.624, 0.663],
+                          "size": ["100%c","100%"],
+                          "$font_scale_factor": 0.7
+                        }}
+                  ]}},
+
+                  // Le score et son unite (« 840 000 $ », « 2383 MMR »), cale a droite : 20 %, de quoi tenir
+                  // « 99 999 999 $ » sans atteindre le sous-titre ni le nom.
+                  {"score@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "size":["20%","100%"],
+                    "controls":[
+
+                        {"padding@ng_module.panel": {
+                          "size": ["fill", "100%"]
+                        }},
+
+                        {"score@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_2",
+                          "$index": "$row_score",
+                          "layer": 6,
+                          "$text_color":[0.831, 0.831, 0.847],
+                          "size": ["100%c","100%"],
+                          "$font_scale_factor": 0.7
+                        }}
+                  ]}}
+            ]}}
+        ]}},
+
+        {"padding@ng_module.panel": {
+          "size": ["100%", 1]
+        }}
+    ]},
+
+    // Les pages, sur leur bandeau au bas du cadre, comme celles du classement des pays : la fleche de gauche est le
+    // clic de la case 12 (page precedente), celle de droite la case 13, entre elles « page/pages » (case 79).
+    "pagination@ng_asset.background_62": {
+      "size": ["100%", 18],
+      "controls":[
+
+        {"pagination@ng_module.stackpanel":{
+          "size":["100%c",10],
+          "orientation":"horizontal",
+          "controls":[
+
+              {"left_button@ng_module.panel":{
+                "size": ["100%c","100%"],
+                "controls": [
+
+                    {"button@ng_module.Simple_Button":{
+                        "size": [10,10],
+                        "offset": [0,0.6],
+                        "$index": 12,
+                        "$icon_right_offset": [-0.3,0],
+                        "$size_icone_right": [7,7],
+                        "$texture_icone_right": "ng_asset.icon_34",
+                        "$texture_button": "ng_asset.button_26"
+                    }}
+              ]}},
+
+              {"text@ng_module.panel":{
+                "size": ["100%c + 6px","100%"],
+                "controls": [
+
+                    {"text@ng_module.Simple_text":{
+                        "$type_get_text": "Get_text_type_1",
+                        "$index": 79,
+                        "offset": [0,0.8],
+                        "size": ["100%c","100%"],
+                        "$font_scale_factor": 0.7
+                    }}
+              ]}},
+
+              {"right_button@ng_module.panel":{
+                "size": ["100%c","100%"],
+                "controls": [
+
+                    {"button@ng_module.Simple_Button":{
+                        "size": [10,10],
+                        "offset": [0,0.6],
+                        "$index": 13,
+                        "$icon_right_offset": [0.3,0],
+                        "$size_icone_right": [7,7],
+                        "$texture_icone_right": "ng_asset.icon_35",
+                        "$texture_button": "ng_asset.button_26"
+                    }}
+              ]}}
+        ]}}
+    ]},
+
+    // ------------------------------------------------------------------------
+    //
+    //                  Le panneau du joueur
+    //
+    // ------------------------------------------------------------------------
+
+    // Serre : son nom, sa position et son score cote a cote, l'ecart avec le joueur au-dessus, le podium.
+    "player_block@ng_module.stackpanel":{
+      "size":["29% - 2px","100%"],
+      "controls":[
+
+        {"content@ng_asset.background_16":{
+          "layer":15,
+          "size":["100%","100%"],
+          "controls":[
+
+            {"content@ng_module.stackpanel":{
+              "size":["100% - 10px","100% - 8px"],
+              "collection_name": "container_items",
+              "controls":[
+
+                // Le nom du joueur et le classement montre (cases 69 et 70).
+                {"player@ng_module.panel":{
+                  "size":["100%",25],
+                  "controls":[
+
+                    {"lines@ng_module.stackpanel":{
+                      "size":["100% - 8px","100%c"],
+                      "controls":[
+
+                        {"name@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_1",
+                          "$index": 69,
+                          "layer": 6,
+                          "$text_offset":[0,-0.6],
+                          "$font_type":"MinecraftTen",
+                          "size": ["100%c","100%c"],
+                          "$font_scale_factor": 0.9
+                        }},
+
+                        {"view@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_1",
+                          "$index": 70,
+                          "layer": 6,
+                          "$text_color":[0.443, 0.443, 0.482],
+                          "$text_offset":[0,-0.6],
+                          "size": ["100%c","100%c"],
+                          "$font_scale_factor": 0.7
+                        }}
+                    ]}}
+                ]}},
+
+                {"line@ng_asset.background_white":{
+                  "size":["100%",1],
+                  "layer":10,
+                  "color":[0.153, 0.153, 0.165]
+                }},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", "fill"]
+                }},
+
+                // Sa position (case 71) et son score (case 72, sous son nom, case 78), cote a cote.
+                {"stats@ng_asset.background_40":{
+                  "size":["100%",34],
+                  "controls":[
+
+                    {"columns@ng_module.stackpanel":{
+                      "orientation": "horizontal",
+                      "size":["100%","100%"],
+                      "controls":[
+
+                        // Chaque moitie dans un panneau de toute la hauteur, qui la centre : la pile la colle en haut.
+                        {"position@ng_module.panel":{
+                          "size":["50% - 1px","100%"],
+                          "controls":[
+
+                            {"stat@ng_leaderboard.stat":{ "$stat_label": "Position", "$stat_value": 71 }}
+                        ]}},
+
+                        {"divider@ng_module.panel":{
+                          "size":[1,"100%"],
+                          "controls":[
+
+                            {"line@ng_asset.background_white":{
+                              "size":[1,"100% - 10px"],
+                              "layer": 5,
+                              "color":[0.247, 0.247, 0.275]
+                            }}
+                        ]}},
+
+                        {"score@ng_module.panel":{
+                          "size":["50% - 1px","100%"],
+                          "controls":[
+
+                            {"stat@ng_leaderboard.stat_named":{ "$stat_name": 78, "$stat_value": 72 }}
+                        ]}}
+                    ]}}
+                ]}},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", 3]
+                }},
+
+                {"gap@ng_leaderboard.slot_box":{ "$label_index": 73, "$value_index": 74 }},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", "fill"]
+                }},
+
+                // Le podium : les trois premiers du classement (cases 75 a 77), en or, argent et bronze.
+                {"title@ng_module.panel":{
+                  "size":["100%",10],
+                  "controls":[
+
+                    {"title@ng_module.label":{
+                      "text": "Podium",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [1,-0.6],
+                      "layer": 10,
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": 0.75
+                    }}
+                ]}},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", 2]
+                }},
+
+                {"first@ng_leaderboard.podium_line":{ "$podium_index": 75, "$podium_flag": 101, "$podium_place": "1", "$podium_color": [0.961, 0.773, 0.259] }},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", 2]
+                }},
+
+                {"second@ng_leaderboard.podium_line":{ "$podium_index": 76, "$podium_flag": 102, "$podium_place": "2", "$podium_color": [0.784, 0.812, 0.851] }},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", 2]
+                }},
+
+                {"third@ng_leaderboard.podium_line":{ "$podium_index": 77, "$podium_flag": 103, "$podium_place": "3", "$podium_color": [0.804, 0.498, 0.196] }},
+
+                {"padding@ng_module.panel": {
+                  "size": ["100%", "fill"]
+                }}
+            ]}}
+        ]}}
+    ]},
+
+    // Une moitie de l'encadre des chiffres : un titre fixe, puis la valeur de la case $stat_value.
+    "stat@ng_module.stackpanel":{
+      "size":["100%","100%c"],
+      "collection_name": "container_items",
+      "controls":[
+
+        {"label@ng_module.panel":{
+          "size":["100%","100%c"],
+          "controls":[
+
+            {"label@ng_module.label":{
+              "text": "$stat_label",
+              "layer": 10,
+              "color": [0.624, 0.624, 0.663],
+              "font_scale_factor": 0.65
+            }}
+        ]}},
+
+        {"padding@ng_module.panel": {
+          "size": ["100%", 3]
+        }},
+
+        {"value@ng_module.panel":{
+          "size":["100%","100%c"],
+          "controls":[
+
+            {"value@ng_module.Simple_text":{
+              "$type_get_text": "Get_text_type_1",
+              "$index": "$stat_value",
+              "layer": 10,
+              "$font_type": "MinecraftTen",
+              "size": ["100%c","100%c"],
+              "$font_scale_factor": 0.9
+            }}
+        ]}}
+    ]},
+
+    // Comme « stat », le titre lu dans la case $stat_name (le nom du score du classement).
+    "stat_named@ng_module.stackpanel":{
+      "size":["100%","100%c"],
+      "collection_name": "container_items",
+      "controls":[
+
+        {"label@ng_module.panel":{
+          "size":["100%","100%c"],
+          "controls":[
+
+            {"label@ng_module.Simple_text":{
+              "$type_get_text": "Get_text_type_1",
+              "$index": "$stat_name",
+              "layer": 10,
+              "$text_color": [0.624, 0.624, 0.663],
+              "size": ["100%c","100%c"],
+              "$font_scale_factor": 0.65
+            }}
+        ]}},
+
+        {"padding@ng_module.panel": {
+          "size": ["100%", 3]
+        }},
+
+        {"value@ng_module.panel":{
+          "size":["100%","100%c"],
+          "controls":[
+
+            {"value@ng_module.Simple_text":{
+              "$type_get_text": "Get_text_type_1",
+              "$index": "$stat_value",
+              "layer": 10,
+              "$font_type": "MinecraftTen",
+              "size": ["100%c","100%c"],
+              "$font_scale_factor": 0.9
+            }}
+        ]}}
+    ]},
+
+    // Une ligne du podium : sa place, le nom (avec son drapeau pour un pays) et le score, a la couleur de la place.
+    // Cachee tant que sa case est vide.
+    "podium_line@ng_module.collectionpanel": {
+      "$podium_flag|default": 0,
+      "collection_name": "container_items",
+      "size": ["100%", 18],
+      "controls": [
+
+        {"line": {
+          "type": "panel",
+          "collection_index": "$podium_index",
+          "size": ["100%","100%"],
+          "bindings": [
+            { "binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items" },
+            { "binding_type": "view", "source_property_name": "(not((#hover_text - ':') = #hover_text))", "target_property_name": "#visible" }
+          ],
+          "controls": [
+
+            {"background@ng_asset.background_white":{
+              "size":["100%","100%"],
+              "color":[0.122, 0.122, 0.137]
+            }},
+
+            {"tint@ng_asset.background_white":{
+              "size":["100%","100%"],
+              "layer": 1,
+              "color": "$podium_color",
+              "alpha": 0.12
+            }},
+
+            {"outline":{
+              "type": "image",
+              "texture": "textures/ui/background/background_22",
+              "size":["100%","100%"],
+              "layer": 2,
+              "color": "$podium_color"
+            }},
+
+            {"content@ng_module.stackpanel":{
+              "orientation": "horizontal",
+              "collection_name": "container_items",
+              "size": ["100% - 8px","100%"],
+              "layer": 3,
+              "controls": [
+
+                {"place@ng_module.panel":{
+                  "size": [10,"100%"],
+                  "controls": [
+
+                    {"place@ng_module.label":{
+                      "text": "$podium_place",
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [0,-1.3],
+                      "layer": 6,
+                      "color": "$podium_color",
+                      "font_type": "MinecraftTen",
+                      "font_scale_factor": 0.8
+                    }}
+                ]}},
+
+                // Le drapeau du pays (case $podium_flag), vide pour un joueur.
+                {"flag@ng_module.panel":{
+                  "size": [16,"100%"],
+                  "controls": [
+
+                    {"flag@ng_module.panel":{
+                      "size":[12,6],
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset":[0,-0.5],
+                      "controls":[
+
+                        {"flag@ng_module.icone":{
+                          "$index": "$podium_flag",
+                          "$Get_text_type": "Get_text_type_2",
+                          "size":["100%","100%"]
+                        }}
+                    ]}}
+                ]}},
+
+                // Le nom, un seul, coupe s'il est trop long.
+                {"name@ng_module.panel":{
+                  "size": ["fill","100%"],
+                  "clips_children": true,
+                  "controls": [
+
+                    {"name@ng_module.stackpanel":{
+                      "orientation": "horizontal",
+                      "size":["100%","100%"],
+                      "controls":[
+
+                        {"name@ng_module.Simple_text":{
+                          "$type_get_text": "Get_text_type_3",
+                          "$index": "$podium_index",
+                          "layer": 6,
+                          "$text_color": "$podium_color",
+                          "$text_offset":[0,-1.3],
+                          "$font_type":"MinecraftTen",
+                          "size": ["100%c","100%"],
+                          "$font_scale_factor": 0.7
+                        }}
+                    ]}}
+                ]}},
+
+                {"padding@ng_module.panel": {
+                  "size": [3, "100%"]
+                }},
+
+                {"score@ng_module.Simple_text":{
+                  "$type_get_text": "Get_text_type_2",
+                  "$index": "$podium_index",
+                  "layer": 6,
+                  "$text_color":[0.831, 0.831, 0.847],
+                  "size": ["100%c","100%"],
+                  "$font_scale_factor": 0.6
+                }}
+            ]}}
+        ]}}
+    ]},
+
+    // Un encadre du panneau du joueur : son titre lu dans la case $label_index, puis le texte de la case $value_index.
+    "slot_box@ng_asset.background_40":{
+      "size":["100%",22],
+      "controls":[
+
+        {"content@ng_module.stackpanel":{
+          "size":["100% - 8px","100%c"],
+          "collection_name": "container_items",
+          "controls":[
+
+              {"label@ng_module.Simple_text":{
+                "$type_get_text": "Get_text_type_1",
+                "$index": "$label_index",
+                "layer": 15,
+                "$text_color":[0.624, 0.624, 0.663],
+                "size": ["100%c","100%c"],
+                "$font_scale_factor": 0.65
+              }},
+
+              {"value@ng_module.Simple_text":{
+                "$type_get_text": "Get_text_type_1",
+                "$index": "$value_index",
+                "layer": 6,
+                "$font_type":"MinecraftTen",
+                "size": ["100%c","100%c"],
+                "$font_scale_factor": 0.7
+              }}
+        ]}}
+    ]}
+}

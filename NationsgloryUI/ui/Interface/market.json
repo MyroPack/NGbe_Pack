@@ -48,8 +48,11 @@
 
                                             ]}},
 
+                                            // Marge entre le titre et les onglets : c'est elle qui retrecit quand les soldes
+                                            // s'allongent (50000 $, 1250 NGCoins). Fixee a 10 %, elle poussait la croix hors
+                                            // de l'ecran (retour de Leo du 07/11 sur le banc 28510).
                                             {"padding@ng_module.panel":{
-                                                "size": ["10%","100%"]}},
+                                                "size": ["fill","100%"]}},
 
                                             {"achat_button@ng_module.multiple_status_button":{
                                                 "size": ["10%","100%"],
@@ -112,7 +115,7 @@
                                             }},
 
                                             {"padding@ng_module.panel":{
-                                                "size": ["fill","100%"]}},
+                                                "size": ["0.5%","100%"]}},
 
                                             {"money@ng_module.panel":{
                                                 "size": ["100%c","100%"],
@@ -276,6 +279,7 @@
 
                             {"left_part@ng_module.stackpanel":{
                                 "size": ["100% - 8px","100% - 8px"],
+                                "collection_name": "container_items",
                                 "controls": [
 
                                     {"mes_offre@ng_module.multiple_status_button":{
@@ -327,7 +331,54 @@
                                         "$S0_type_get_text": "Get_text_type_1",
                                         "$S1_type_get_text": "Get_text_type_1",
                                         "$font_scale_factor": 0.7
-                                    }}
+                                    }},
+
+                                    {"padding@ng_module.panel":{
+                                        "size": ["100%","fill"]}},
+
+                                    // Places de vente (vue Mes offres seulement, case 184 vide ailleurs) : places prises sur
+                                    // places ouvertes (184) et comment en débloquer (185). Même montage que les lignes :
+                                    // contrôle à collection_index dans une stack_panel qui porte la collection.
+                                    {"places@ng_module.stackpanel":{
+                                        "collection_name": "container_items",
+                                        "collection_index": 184,
+                                        "size": ["100%","100%c"],
+                                        "bindings": [
+                                            {
+                                                "binding_name": "#hover_text",
+                                                "binding_type": "collection",
+                                                "binding_collection_name": "container_items"
+                                            },
+                                            {
+                                                "binding_type": "view",
+                                                "source_property_name": "(not((#hover_text) = ''))",
+                                                "target_property_name": "#visible"
+                                            }
+                                        ],
+                                        "controls": [
+
+                                            {"places_titre@ng_module.Simple_text":{
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$index": 184,
+                                                "$font_type": "MinecraftTen",
+                                                "$max_size": [77,10],
+                                                "size": ["100%c","100%c"],
+                                                "$font_scale_factor": 0.7
+                                            }},
+
+                                            {"padding@ng_module.panel":{
+                                                "size": ["100%",2]}},
+
+                                            {"places_aide@ng_module.Simple_text":{
+                                                "$type_get_text": "Get_text_type_1",
+                                                "$index": 185,
+                                                "$text_color": [0.831,0.831,0.847],
+                                                "$max_size": [77,48],
+                                                "size": ["100%c","100%c"],
+                                                "$font_scale_factor": 0.55
+                                            }}
+
+                                        ]}}
 
                                 ]}}
 
@@ -763,7 +814,9 @@
                                                         "size": ["100%c","100%"],
                                                         "controls": [
 
-                                                            {"item_name_clip@ng_module.panel":{
+                                                            // Case du nom : une collection_panel, sinon le repli ci-dessous ne lit pas la case de l'objet
+                                                            // (une simple panel ne porte pas de collection) et s'affiche par-dessus le nom du jeu.
+                                                            {"item_name_clip@ng_module.collectionpanel":{
                                                                 "size": ["100%c",10],
                                                                 "offset": [0,-1],
                                                                 "clips_children": true,
@@ -791,10 +844,12 @@
                                                                             {
                                                                                 "binding_name": "#hover_text",
                                                                                 "binding_type": "collection",
-                                                                                "binding_collection_name": "container_items"
+                                                                                "binding_collection_name": "container_items",
+                                                                                "binding_condition": "always"
                                                                             },
                                                                             {
                                                                                 "binding_type": "view",
+                                                                                "binding_condition": "always",
                                                                                 "source_property_name": "((#hover_text) = '')",
                                                                                 "target_property_name": "#visible"
                                                                             }
@@ -1104,7 +1159,9 @@
                                                         "size": ["100%cm","100%c"],
                                                         "controls": [
 
-                                                            {"item_name_clip@ng_module.panel":{
+                                                            // Case du nom : une collection_panel, sinon le repli ci-dessous ne lit pas la case de l'objet
+                                                            // (une simple panel ne porte pas de collection) et s'affiche par-dessus le nom du jeu.
+                                                            {"item_name_clip@ng_module.collectionpanel":{
                                                                 "size": ["100%c",8],
                                                                 "clips_children": true,
                                                                 "collection_name": "container_items",
@@ -1130,10 +1187,12 @@
                                                                             {
                                                                                 "binding_name": "#hover_text",
                                                                                 "binding_type": "collection",
-                                                                                "binding_collection_name": "container_items"
+                                                                                "binding_collection_name": "container_items",
+                                                                                "binding_condition": "always"
                                                                             },
                                                                             {
                                                                                 "binding_type": "view",
+                                                                                "binding_condition": "always",
                                                                                 "source_property_name": "((#hover_text) = '')",
                                                                                 "target_property_name": "#visible"
                                                                             }
@@ -1407,9 +1466,10 @@
 
                                         ]}},
 
+                                    // Bande de l'objet : 6 points plus haute qu'avant, pour un nom sur deux lignes.
                                     {"item_part@ng_asset.background_white":{
                                         "color": [0.239,0.239,0.259],
-                                        "size": ["100%",51],
+                                        "size": ["100%",57],
                                         "controls": [
 
                                             {"content@ng_asset.background_white":{
@@ -1447,8 +1507,11 @@
                                                                 "size": ["fill","100%"],
                                                                 "controls": [
 
+                                                                    // Nom de l'objet : MinecraftTen à 0,75, coupé à 89 points de large et sur deux lignes
+                                                                    // au plus (« ... » au-delà) ; la colonne prend la hauteur de son contenu et reste
+                                                                    // centrée en face de la case.
                                                                     {"stackpanel@ng_module.stackpanel":{
-                                                                        "size": ["100%",42],
+                                                                        "size": ["100%","100%c"],
                                                                         "offset": [0,-1],
                                                                         "controls": [
 
@@ -1456,15 +1519,13 @@
                                                                                 "$type_get_text": "Get_text_type_1",
                                                                                 "$index": 19,
                                                                                 "layer": 60,
-                                                                                "$max_size": [95,10],
+                                                                                "$max_size": [89,16],
                                                                                 "$font_type": "MinecraftTen",
-                                                                                "size": ["100%c",8]}},
+                                                                                "$font_scale_factor": 0.75,
+                                                                                "size": ["100%c","100%c"]}},
 
                                                                             {"padding@ng_module.panel":{
                                                                                 "size": ["100%",2]}},
-
-                                                                            {"padding@ng_module.panel":{
-                                                                                "size": ["100%",1]}},
 
                                                                             {"name_vendeur@ng_module.Simple_text":{
                                                                                 "$type_get_text": "Get_text_type_1",
@@ -2436,13 +2497,14 @@
 
                                                 ]}},
 
+                                            // Bande de l'objet : 6 points plus haute qu'avant, pour un nom sur deux lignes.
                                             {"item@ng_asset.background_white":{
-                                                "size": ["100%",48],
+                                                "size": ["100%",54],
                                                 "color": [0.239,0.239,0.259],
                                                 "controls": [
 
                                                     {"content@ng_asset.background_white":{
-                                                        "size": ["100% - 2px",48],
+                                                        "size": ["100% - 2px",54],
                                                         "color": [0.2,0.2,0.22],
                                                         "controls": [
 
@@ -2482,8 +2544,10 @@
                                                                                 "size": ["fill","100%"],
                                                                                 "controls": [
 
+                                                                                    // Nom de l'objet : MinecraftTen à 0,75, deux lignes au plus ; la colonne
+                                                                                    // prend la hauteur de son contenu et reste centrée en face de la case.
                                                                                     {"stackpanel@ng_module.stackpanel":{
-                                                                                        "size": ["100%",42],
+                                                                                        "size": ["100%","100%c"],
                                                                                         "offset": [0,-1],
                                                                                         "controls": [
 
@@ -2491,15 +2555,13 @@
                                                                                                 "$type_get_text": "Get_text_type_1",
                                                                                                 "$index": 19,
                                                                                                 "layer": 5,
-                                                                                                "$max_size": [100,10],
+                                                                                                "$max_size": [150,16],
                                                                                                 "$font_type": "MinecraftTen",
-                                                                                                "size": ["100%c",8]}},
+                                                                                                "$font_scale_factor": 0.75,
+                                                                                                "size": ["100%c","100%c"]}},
 
                                                                                             {"padding@ng_module.panel":{
                                                                                                 "size": ["100%",2]}},
-
-                                                                                            {"padding@ng_module.panel":{
-                                                                                                "size": ["100%",1]}},
 
                                                                                             {"name_vendeur@ng_module.Simple_text":{
                                                                                                 "$type_get_text": "Get_text_type_1",
@@ -3076,14 +3138,15 @@
                                                                                     {"padding@ng_module.panel":{
                                                                                         "size": [5,0.1]}},
 
+                                                                                    // Nom de l'objet : MinecraftTen à 0,75, deux lignes au plus (avant : 0,9 sur une ligne).
                                                                                     {"item_name@ng_module.Simple_text":{
                                                                                         "$type_get_text": "Get_text_type_1",
                                                                                         "$index": 19,
                                                                                         "layer": 6,
-                                                                                        "$max_size": [80,10],
+                                                                                        "$max_size": [80,16],
                                                                                         "$font_type": "MinecraftTen",
-                                                                                        "size": ["100%c",8],
-                                                                                        "$font_scale_factor": 0.9
+                                                                                        "size": ["100%c","100%c"],
+                                                                                        "$font_scale_factor": 0.75
                                                                                     }}
 
                                                                                 ]}},
@@ -3849,14 +3912,15 @@
                                                                                     {"padding@ng_module.panel":{
                                                                                         "size": [5,0.1]}},
 
+                                                                                    // Nom de l'objet : MinecraftTen à 0,75, deux lignes au plus (avant : 0,9 sur une ligne).
                                                                                     {"item_name@ng_module.Simple_text":{
                                                                                         "$type_get_text": "Get_text_type_1",
                                                                                         "$index": 19,
                                                                                         "layer": 6,
-                                                                                        "$max_size": [70,10],
+                                                                                        "$max_size": [70,16],
                                                                                         "$font_type": "MinecraftTen",
-                                                                                        "size": ["100%c",8],
-                                                                                        "$font_scale_factor": 0.9
+                                                                                        "size": ["100%c","100%c"],
+                                                                                        "$font_scale_factor": 0.75
                                                                                     }}
 
                                                                                 ]}},
@@ -5633,7 +5697,9 @@
                                                         "size": ["100%cm","100%c"],
                                                         "controls": [
 
-                                                            {"item_name_clip@ng_module.panel":{
+                                                            // Case du nom : une collection_panel, sinon le repli ci-dessous ne lit pas la case de l'objet
+                                                            // (une simple panel ne porte pas de collection) et s'affiche par-dessus le nom du jeu.
+                                                            {"item_name_clip@ng_module.collectionpanel":{
                                                                 "size": ["100%c",8],
                                                                 "clips_children": true,
                                                                 "collection_name": "container_items",
@@ -5658,10 +5724,12 @@
                                                                             {
                                                                                 "binding_name": "#hover_text",
                                                                                 "binding_type": "collection",
-                                                                                "binding_collection_name": "container_items"
+                                                                                "binding_collection_name": "container_items",
+                                                                                "binding_condition": "always"
                                                                             },
                                                                             {
                                                                                 "binding_type": "view",
+                                                                                "binding_condition": "always",
                                                                                 "source_property_name": "((#hover_text) = '')",
                                                                                 "target_property_name": "#visible"
                                                                             }

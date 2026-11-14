@@ -401,7 +401,7 @@
                                                                                                     "controls":[
 
                                                                                                       {"text@ng_module.label":{
-                                                                                                        "text":"Consomation",
+                                                                                                        "text":"ng.machine.consumption",
                                                                                                         "size":["default",10],
                                                                                                         "font_scale_factor": 0.6    
                                                                                                       }}

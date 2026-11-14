@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:enclosure_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_enclosure",
+        "adaptateurs": "textures/blocks/rubber_maker"
+      },
+      "geometry": {
+        "default": "geometry.ng_enclosure",
+        "adaptateurs": "geometry.ng_enclosure_adaptateurs"
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.ng_agri_adaptateurs"
+      ],
+      "animations": {
+        "idle": "animation.ng_enclosure.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}

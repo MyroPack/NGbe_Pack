@@ -1,0 +1,1101 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.chestplates_gingerbread_backpack",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.0,
+        "visible_bounds_height": 2.26,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "jacket",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group2",
+          "parent": "jacket",
+          "pivot": [
+            -1,
+            10.39686,
+            5.0979
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group4",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group2",
+          "pivot": [
+            0,
+            19.4,
+            2.6
+          ],
+          "cubes": [
+            {
+              "origin": [
+                2.5,
+                19.4,
+                -3.4
+              ],
+              "size": [
+                2,
+                6,
+                7
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    116,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    88,
+                    95
+                  ],
+                  "uv_size": [
+                    7,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    116,
+                    87
+                  ],
+                  "uv_size": [
+                    2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    108,
+                    92
+                  ],
+                  "uv_size": [
+                    7,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    88,
+                    102
+                  ],
+                  "uv_size": [
+                    2,
+                    7
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    91,
+                    109
+                  ],
+                  "uv_size": [
+                    2,
+                    -7
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -4.5,
+                19.4,
+                -3.4
+              ],
+              "size": [
+                2,
+                6,
+                7
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    118,
+                    80
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    115,
+                    92
+                  ],
+                  "uv_size": [
+                    -7,
+                    6
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    118,
+                    87
+                  ],
+                  "uv_size": [
+                    -2,
+                    6
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    95,
+                    95
+                  ],
+                  "uv_size": [
+                    -7,
+                    6
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    90,
+                    102
+                  ],
+                  "uv_size": [
+                    -2,
+                    7
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    93,
+                    109
+                  ],
+                  "uv_size": [
+                    -2,
+                    -7
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group5",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group2",
+          "pivot": [
+            0.5,
+            11.4,
+            2.6
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3.5,
+                11.4,
+                2.6
+              ],
+              "size": [
+                7,
+                8,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    75
+                  ],
+                  "uv_size": [
+                    7,
+                    8
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    108,
+                    99
+                  ],
+                  "uv_size": [
+                    4,
+                    8
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    98,
+                    84
+                  ],
+                  "uv_size": [
+                    7,
+                    8
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    112,
+                    99
+                  ],
+                  "uv_size": [
+                    -4,
+                    8
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    113,
+                    79
+                  ],
+                  "uv_size": [
+                    7,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -4.51,
+                18.05061,
+                1.32358
+              ],
+              "size": [
+                9.02,
+                9.02,
+                6.02
+              ],
+              "pivot": [
+                0,
+                18.06061,
+                5.83358
+              ],
+              "rotation": [
+                -22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    88,
+                    75
+                  ],
+                  "uv_size": [
+                    9,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    106,
+                    75
+                  ],
+                  "uv_size": [
+                    6,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    88,
+                    85
+                  ],
+                  "uv_size": [
+                    9,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    112,
+                    75
+                  ],
+                  "uv_size": [
+                    -6,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    98,
+                    93
+                  ],
+                  "uv_size": [
+                    9,
+                    6
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    106,
+                    91
+                  ],
+                  "uv_size": [
+                    9,
+                    -6
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group6",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group5",
+          "pivot": [
+            6.32843,
+            8.91472,
+            2.6
+          ],
+          "cubes": [
+            {
+              "origin": [
+                7.32843,
+                11.91472,
+                3.6
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                6.32843,
+                8.91472,
+                2.6
+              ],
+              "rotation": [
+                0,
+                0,
+                -45
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    104,
+                    100
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    113,
+                    105
+                  ],
+                  "uv_size": [
+                    2,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    113,
+                    99
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    119,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    5
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    102,
+                    108
+                  ],
+                  "uv_size": [
+                    3,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -10.32843,
+                11.91472,
+                3.6
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                -6.32843,
+                8.91472,
+                2.6
+              ],
+              "rotation": [
+                0,
+                0,
+                45
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    107,
+                    100
+                  ],
+                  "uv_size": [
+                    -3,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    121,
+                    80
+                  ],
+                  "uv_size": [
+                    -2,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    116,
+                    99
+                  ],
+                  "uv_size": [
+                    -3,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    115,
+                    105
+                  ],
+                  "uv_size": [
+                    -2,
+                    5
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    105,
+                    108
+                  ],
+                  "uv_size": [
+                    -3,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group7",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group5",
+          "pivot": [
+            -1,
+            10.39686,
+            5.0979
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0.5,
+                6.89686,
+                4.0979
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                1,
+                10.39686,
+                5.0979
+              ],
+              "rotation": [
+                22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    100
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    117,
+                    94
+                  ],
+                  "uv_size": [
+                    2,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    100,
+                    100
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    117,
+                    100
+                  ],
+                  "uv_size": [
+                    2,
+                    5
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    119,
+                    88
+                  ],
+                  "uv_size": [
+                    3,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -3.5,
+                6.89686,
+                4.0979
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                -1,
+                10.39686,
+                5.0979
+              ],
+              "rotation": [
+                22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    99,
+                    100
+                  ],
+                  "uv_size": [
+                    -3,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    119,
+                    100
+                  ],
+                  "uv_size": [
+                    -2,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    103,
+                    100
+                  ],
+                  "uv_size": [
+                    -3,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    119,
+                    94
+                  ],
+                  "uv_size": [
+                    -2,
+                    5
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    122,
+                    88
+                  ],
+                  "uv_size": [
+                    -3,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group8",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group5",
+          "pivot": [
+            0,
+            17.4,
+            -0.7
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                14.4,
+                6.6
+              ],
+              "size": [
+                2,
+                2,
+                1
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    120,
+                    96
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    96,
+                    95
+                  ],
+                  "uv_size": [
+                    1,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    120,
+                    99
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    94,
+                    102
+                  ],
+                  "uv_size": [
+                    1,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    120,
+                    102
+                  ],
+                  "uv_size": [
+                    2,
+                    1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    120,
+                    105
+                  ],
+                  "uv_size": [
+                    2,
+                    -1
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                1,
+                14.4,
+                5.6
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "pivot": [
+                1,
+                15.9,
+                7.6
+              ],
+              "rotation": [
+                0,
+                -22.5,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    94,
+                    106
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    119,
+                    89
+                  ],
+                  "uv_size": [
+                    2,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    98,
+                    106
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    116,
+                    106
+                  ],
+                  "uv_size": [
+                    2,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    119,
+                    106
+                  ],
+                  "uv_size": [
+                    3,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    120,
+                    95
+                  ],
+                  "uv_size": [
+                    3,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                0,
+                10.4,
+                7.1
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "pivot": [
+                0,
+                14.4,
+                7.1
+              ],
+              "rotation": [
+                0,
+                0,
+                -22.5
+              ],
+              "uv": {
+                "south": {
+                  "uv": [
+                    115,
+                    80
+                  ],
+                  "uv_size": [
+                    -2,
+                    4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -2,
+                10.4,
+                7.1
+              ],
+              "size": [
+                2,
+                4,
+                0
+              ],
+              "pivot": [
+                0,
+                14.4,
+                7.1
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "south": {
+                  "uv": [
+                    113,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -4,
+                14.4,
+                5.6
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "pivot": [
+                -1,
+                15.9,
+                7.6
+              ],
+              "rotation": [
+                0,
+                22.5,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    97,
+                    106
+                  ],
+                  "uv_size": [
+                    -3,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    118,
+                    106
+                  ],
+                  "uv_size": [
+                    -2,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    101,
+                    106
+                  ],
+                  "uv_size": [
+                    -3,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    121,
+                    89
+                  ],
+                  "uv_size": [
+                    -2,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    122,
+                    106
+                  ],
+                  "uv_size": [
+                    -3,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    123,
+                    95
+                  ],
+                  "uv_size": [
+                    -3,
+                    -2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_gingerbread_backpack.group9",
+          "parent": "cosmetic.body.chestplates_gingerbread_backpack.group5",
+          "pivot": [
+            -1,
+            16.4,
+            3.1
+          ],
+          "cubes": [
+            {
+              "origin": [
+                1,
+                16.4,
+                3.1
+              ],
+              "size": [
+                6,
+                6,
+                0
+              ],
+              "pivot": [
+                1,
+                16.4,
+                3.1
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    128,
+                    81
+                  ],
+                  "uv_size": [
+                    -6,
+                    -6
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -7,
+                16.4,
+                3.1
+              ],
+              "size": [
+                6,
+                6,
+                0
+              ],
+              "pivot": [
+                -1,
+                16.4,
+                3.1
+              ],
+              "rotation": [
+                0,
+                0,
+                -22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    122,
+                    81
+                  ],
+                  "uv_size": [
+                    6,
+                    -6
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

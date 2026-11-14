@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:garage_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_garage",
+        "adaptateurs": "textures/blocks/rubber_maker"
+      },
+      "geometry": {
+        "default": "geometry.ng_garage",
+        "adaptateurs": "geometry.ng_garage_adaptateurs"
+      },
+      "animations": {
+        "close": "animation.ng_garage.close",
+        "open": "animation.ng_garage.open",
+        "close_to_open": "animation.ng_garage.close_to_open",
+        "open_to_close": "animation.ng_garage.open_to_close",
+        "porte": "controller.animation.ng_garage.porte"
+      },
+      "scripts": {
+        "animate": [
+          "porte"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.ng_garage_adaptateurs"
+      ]
+    }
+  }
+}

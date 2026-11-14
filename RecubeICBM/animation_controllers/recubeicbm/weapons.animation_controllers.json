@@ -10,10 +10,10 @@
           ],
           "transitions": [
             {
-              "reload": "c.owning_entity->query.mark_variant == 2"
+              "reload": "c.owning_entity->query.skin_id == 2"
             },
             {
-              "fire": "c.owning_entity->query.mark_variant == 1"
+              "fire": "c.owning_entity->query.skin_id == 1"
             }
           ]
         },
@@ -23,10 +23,10 @@
           ],
           "transitions": [
             {
-              "reload": "c.owning_entity->query.mark_variant == 2"
+              "reload": "c.owning_entity->query.skin_id == 2"
             },
             {
-              "default": "c.owning_entity->query.mark_variant != 1"
+              "default": "c.owning_entity->query.skin_id != 1"
             }
           ]
         },
@@ -36,10 +36,10 @@
           ],
           "transitions": [
             {
-              "fire": "c.owning_entity->query.mark_variant == 1"
+              "fire": "c.owning_entity->query.skin_id == 1"
             },
             {
-              "default": "c.owning_entity->query.mark_variant != 2"
+              "default": "c.owning_entity->query.skin_id != 2"
             }
           ]
         }

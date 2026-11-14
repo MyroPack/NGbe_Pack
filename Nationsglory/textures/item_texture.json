@@ -2,6 +2,447 @@
 	"resource_pack_name": "NGResourcePack",
 	"texture_name": "atlas.items",
 	"texture_data": {
+		"ngagri_wheat_seeds": {
+			"textures": "textures/items/ng_agriculture/wheat_seeds"
+		},
+		"ngagri_carrot_seed": {
+			"textures": "textures/items/ng_agriculture/carrot_seed"
+		},
+		"ngagri_potato_seed": {
+			"textures": "textures/items/ng_agriculture/potato_seed"
+		},
+		"ngagri_manure": {
+			"textures": "textures/items/ng_agriculture/manure"
+		},
+		"ngagri_rotten_food": {
+			"textures": "textures/items/ng_agriculture/rotten_food"
+		},
+		"ngagri_barley_seeds": {
+			"textures": "textures/items/ng_agriculture/barley_seeds"
+		},
+		"ngagri_oat_seeds": {
+			"textures": "textures/items/ng_agriculture/oat_seeds"
+		},
+		"ngagri_soy_seeds": {
+			"textures": "textures/items/ng_agriculture/soy_seeds"
+		},
+		"ngagri_corn_seeds": {
+			"textures": "textures/items/ng_agriculture/corn_seeds"
+		},
+		"ngagri_rye_seeds": {
+			"textures": "textures/items/ng_agriculture/rye_seeds"
+		},
+		"ngagri_glazed_spelt_seeds": {
+			"textures": "textures/items/ng_agriculture/glazed_spelt_seeds"
+		},
+		"ngagri_arctic_oat_seeds": {
+			"textures": "textures/items/ng_agriculture/arctic_oat_seeds"
+		},
+		"ngagri_tomato_seed": {
+			"textures": "textures/items/ng_agriculture/tomato_seed"
+		},
+		"ngagri_spinach_seed": {
+			"textures": "textures/items/ng_agriculture/spinach_seed"
+		},
+		"ngagri_cabbage_seed": {
+			"textures": "textures/items/ng_agriculture/cabbage_seed"
+		},
+		"ngagri_onion_seed": {
+			"textures": "textures/items/ng_agriculture/onion_seed"
+		},
+		"ngagri_lentil_seed": {
+			"textures": "textures/items/ng_agriculture/lentil_seed"
+		},
+		"ngagri_zucchini_seed": {
+			"textures": "textures/items/ng_agriculture/zucchini_seed"
+		},
+		"ngagri_bell_pepper_seed": {
+			"textures": "textures/items/ng_agriculture/bell_pepper_seed"
+		},
+		"ngfood_neblion_meat": {
+			"textures": "textures/items/ng_nourriture/neblion_meat"
+		},
+		"ngfood_neblion_meat_cooked": {
+			"textures": "textures/items/ng_nourriture/neblion_meat_cooked"
+		},
+		"ngfood_saline_meat": {
+			"textures": "textures/items/ng_nourriture/saline_meat"
+		},
+		"ngfood_cooked_saline_meat": {
+			"textures": "textures/items/ng_nourriture/cooked_saline_meat"
+		},
+		"ngfood_barley_bread": {
+			"textures": "textures/items/ng_nourriture/barley_bread"
+		},
+		"ngfood_veggie_bread": {
+			"textures": "textures/items/ng_nourriture/veggie_bread"
+		},
+		"ngfood_consistent_bread": {
+			"textures": "textures/items/ng_nourriture/consistent_bread"
+		},
+		"ngfood_protein_bread": {
+			"textures": "textures/items/ng_nourriture/protein_bread"
+		},
+		"ngfood_gre_bread": {
+			"textures": "textures/items/ng_nourriture/gre_bread"
+		},
+		"ngfood_bloody_bread": {
+			"textures": "textures/items/ng_nourriture/bloody_bread"
+		},
+		"ngfood_golden_bread": {
+			"textures": "textures/items/ng_nourriture/golden_bread"
+		},
+		"ngfood_energy_bread": {
+			"textures": "textures/items/ng_nourriture/energy_bread"
+		},
+		"ngfood_gingerbread": {
+			"textures": "textures/items/ng_nourriture/gingerbread"
+		},
+		"ngfood_martian_bread": {
+			"textures": "textures/items/ng_nourriture/martian_bread"
+		},
+		"ngfood_tahde_bread": {
+			"textures": "textures/items/ng_nourriture/tahde_bread"
+		},
+		"ngfood_frozen_bread": {
+			"textures": "textures/items/ng_nourriture/frozen_bread"
+		},
+		"ngfood_gas_bread": {
+			"textures": "textures/items/ng_nourriture/gas_bread"
+		},
+		"ngpotion_antidote": {
+			"textures": "textures/items/ng_potions/antidote"
+		},
+		"ngfood_firm_meat": {
+			"textures": "textures/items/ng_nourriture/firm_meat"
+		},
+		"ngfood_tender_meat": {
+			"textures": "textures/items/ng_nourriture/tender_meat"
+		},
+		"ngfood_seal_fat": {
+			"textures": "textures/items/ng_nourriture/seal_fat"
+		},
+		"ngfood_monkey_brain": {
+			"textures": "textures/items/ng_nourriture/monkey_brain"
+		},
+		"ngfood_shark_fin": {
+			"textures": "textures/items/ng_nourriture/shark_fin"
+		},
+		"ngfood_vegetable_food_bag": {
+			"textures": "textures/items/ng_nourriture/vegetable_food_bag"
+		},
+		"ngfood_meat_food_bag": {
+			"textures": "textures/items/ng_nourriture/meat_food_bag"
+		},
+		"ngfood_seafood_bag": {
+			"textures": "textures/items/ng_nourriture/seafood_bag"
+		},
+		"ngfood_sea_treat": {
+			"textures": "textures/items/ng_nourriture/sea_treat"
+		},
+		"ngfood_meat_treat": {
+			"textures": "textures/items/ng_nourriture/meat_treat"
+		},
+		"ngfood_plant_treat": {
+			"textures": "textures/items/ng_nourriture/plant_treat"
+		},
+		"ngfood_cooked_tender_meat": {
+			"textures": "textures/items/ng_nourriture/cooked_tender_meat"
+		},
+		"ngfood_cooked_firm_meat": {
+			"textures": "textures/items/ng_nourriture/cooked_firm_meat"
+		},
+		"ngfood_eggplant": {
+			"textures": "textures/items/ng_nourriture/eggplant"
+		},
+		"ngfood_bell_pepper": {
+			"textures": "textures/items/ng_nourriture/bell_pepper"
+		},
+		"ngfood_cabbage": {
+			"textures": "textures/items/ng_nourriture/cabbage"
+		},
+		"ngfood_zucchini": {
+			"textures": "textures/items/ng_nourriture/zucchini"
+		},
+		"ngfood_spinach": {
+			"textures": "textures/items/ng_nourriture/spinach"
+		},
+		"ngfood_lentils": {
+			"textures": "textures/items/ng_nourriture/lentils"
+		},
+		"ngfood_onions": {
+			"textures": "textures/items/ng_nourriture/onions"
+		},
+		"ngfood_tomato_sauce": {
+			"textures": "textures/items/ng_nourriture/tomato_sauce"
+		},
+		"ngfood_zucchini_gratin": {
+			"textures": "textures/items/ng_nourriture/zucchini_gratin"
+		},
+		"ngfood_salt_pork_lentils": {
+			"textures": "textures/items/ng_nourriture/salt_pork_lentils"
+		},
+		"ngfood_grated_carrots": {
+			"textures": "textures/items/ng_nourriture/grated_carrots"
+		},
+		"ngfood_caponata": {
+			"textures": "textures/items/ng_nourriture/caponata"
+		},
+		"ngfood_sauerkraut": {
+			"textures": "textures/items/ng_nourriture/sauerkraut"
+		},
+		"ngfood_stuffed_peppers": {
+			"textures": "textures/items/ng_nourriture/stuffed_peppers"
+		},
+		"ngfood_creamed_spinach": {
+			"textures": "textures/items/ng_nourriture/creamed_spinach"
+		},
+		"ngfood_tomato": {
+			"textures": "textures/items/ng_nourriture/tomato"
+		},
+		"ngfood_burger": {
+			"textures": "textures/items/ng_nourriture/burger"
+		},
+		"ngfood_giga_tacos": {
+			"textures": "textures/items/ng_nourriture/giga_tacos"
+		},
+		"ngfood_extreme_chili": {
+			"textures": "textures/items/ng_nourriture/extreme_chili"
+		},
+		"ngfood_bouillabaisse": {
+			"textures": "textures/items/ng_nourriture/bouillabaisse"
+		},
+		"ngfood_honey_drop": {
+			"textures": "textures/items/ng_nourriture/honey_drop"
+		},
+		"ngfood_poison_pouch": {
+			"textures": "textures/items/ng_nourriture/poison_pouch"
+		},
+		"ngpotion_invisibility_potion_1": {
+			"textures": "textures/items/ng_potions/invisibility_potion_1"
+		},
+		"ngpotion_invisibility_potion_2": {
+			"textures": "textures/items/ng_potions/invisibility_potion_2"
+		},
+		"ngpotion_speed_potion_1": {
+			"textures": "textures/items/ng_potions/speed_potion_1"
+		},
+		"ngpotion_speed_potion_2": {
+			"textures": "textures/items/ng_potions/speed_potion_2"
+		},
+		"ngpotion_healing_potion_1": {
+			"textures": "textures/items/ng_potions/healing_potion_1"
+		},
+		"ngpotion_healing_potion_2": {
+			"textures": "textures/items/ng_potions/healing_potion_2"
+		},
+		"ngpotion_regeneration_potion_1": {
+			"textures": "textures/items/ng_potions/regeneration_potion_1"
+		},
+		"ngpotion_regeneration_potion_2": {
+			"textures": "textures/items/ng_potions/regeneration_potion_2"
+		},
+		"ngpotion_strength_potion_1": {
+			"textures": "textures/items/ng_potions/strength_potion_1"
+		},
+		"ngpotion_strength_potion_2": {
+			"textures": "textures/items/ng_potions/strength_potion_2"
+		},
+		"ngpotion_fire_resistance_potion_1": {
+			"textures": "textures/items/ng_potions/fire_resistance_potion_1"
+		},
+		"ngpotion_fire_resistance_potion_2": {
+			"textures": "textures/items/ng_potions/fire_resistance_potion_2"
+		},
+		"ngpotion_night_vision_potion_1": {
+			"textures": "textures/items/ng_potions/night_vision_potion_1"
+		},
+		"ngpotion_night_vision_potion_2": {
+			"textures": "textures/items/ng_potions/night_vision_potion_2"
+		},
+		"ngpotion_water_breathing_potion_1": {
+			"textures": "textures/items/ng_potions/water_breathing_potion_1"
+		},
+		"ngpotion_water_breathing_potion_2": {
+			"textures": "textures/items/ng_potions/water_breathing_potion_2"
+		},
+		"ngpotion_bulletproof_potion_2": {
+			"textures": "textures/items/ng_potions/bulletproof_potion_2"
+		},
+		"ngpotion_animal_neutrality_potion_1": {
+			"textures": "textures/items/ng_potions/animal_neutrality_potion_1"
+		},
+		"ngpotion_animal_neutrality_potion_2": {
+			"textures": "textures/items/ng_potions/animal_neutrality_potion_2"
+		},
+		"ngpotion_jam_resistance_potion_1": {
+			"textures": "textures/items/ng_potions/jam_resistance_potion_1"
+		},
+		"ngpotion_jam_resistance_potion_2": {
+			"textures": "textures/items/ng_potions/jam_resistance_potion_2"
+		},
+		"ngpotion_buoyancy_potion_1": {
+			"textures": "textures/items/ng_potions/buoyancy_potion_1"
+		},
+		"ngpotion_buoyancy_potion_2": {
+			"textures": "textures/items/ng_potions/buoyancy_potion_2"
+		},
+		"ngpotion_animal_protection_potion_1": {
+			"textures": "textures/items/ng_potions/animal_protection_potion_1"
+		},
+		"ngpotion_animal_protection_potion_2": {
+			"textures": "textures/items/ng_potions/animal_protection_potion_2"
+		},
+		"ngpotion_animal_protection_potion_3": {
+			"textures": "textures/items/ng_potions/animal_protection_potion_3"
+		},
+		"ngpotion_volcanic_resistance_potion_1": {
+			"textures": "textures/items/ng_potions/volcanic_resistance_potion_1"
+		},
+		"ngpotion_carrion_serum": {
+			"textures": "textures/items/ng_potions/carrion_serum"
+		},
+		"ngpotion_healing_splash_potion_1": {
+			"textures": "textures/items/ng_potions/healing_splash_potion_1"
+		},
+		"ngpotion_healing_splash_potion_2": {
+			"textures": "textures/items/ng_potions/healing_splash_potion_2"
+		},
+		"ngpotion_strength_splash_potion_1": {
+			"textures": "textures/items/ng_potions/strength_splash_potion_1"
+		},
+		"ngpotion_strength_splash_potion_2": {
+			"textures": "textures/items/ng_potions/strength_splash_potion_2"
+		},
+		"ngpotion_fire_resistance_splash_potion_1": {
+			"textures": "textures/items/ng_potions/fire_resistance_splash_potion_1"
+		},
+		"ngpotion_fire_resistance_splash_potion_2": {
+			"textures": "textures/items/ng_potions/fire_resistance_splash_potion_2"
+		},
+		"ngpotion_night_vision_splash_potion_1": {
+			"textures": "textures/items/ng_potions/night_vision_splash_potion_1"
+		},
+		"ngpotion_night_vision_splash_potion_2": {
+			"textures": "textures/items/ng_potions/night_vision_splash_potion_2"
+		},
+		"ngpotion_water_breathing_splash_potion_1": {
+			"textures": "textures/items/ng_potions/water_breathing_splash_potion_1"
+		},
+		"ngpotion_water_breathing_splash_potion_2": {
+			"textures": "textures/items/ng_potions/water_breathing_splash_potion_2"
+		},
+		"ngpotion_poison_splash_potion_1": {
+			"textures": "textures/items/ng_potions/poison_splash_potion_1"
+		},
+		"ngpotion_poison_splash_potion_2": {
+			"textures": "textures/items/ng_potions/poison_splash_potion_2"
+		},
+		"ngpotion_weakness_splash_potion_1": {
+			"textures": "textures/items/ng_potions/weakness_splash_potion_1"
+		},
+		"ngpotion_weakness_splash_potion_2": {
+			"textures": "textures/items/ng_potions/weakness_splash_potion_2"
+		},
+		"ngpotion_slowness_splash_potion_1": {
+			"textures": "textures/items/ng_potions/slowness_splash_potion_1"
+		},
+		"ngpotion_slowness_splash_potion_2": {
+			"textures": "textures/items/ng_potions/slowness_splash_potion_2"
+		},
+		"ngpotion_harming_splash_potion_1": {
+			"textures": "textures/items/ng_potions/harming_splash_potion_1"
+		},
+		"ngpotion_harming_splash_potion_2": {
+			"textures": "textures/items/ng_potions/harming_splash_potion_2"
+		},
+		"ngpotion_bulletproof_splash_potion_2": {
+			"textures": "textures/items/ng_potions/bulletproof_splash_potion_2"
+		},
+		"ngpotion_jam_resistance_splash_potion_1": {
+			"textures": "textures/items/ng_potions/jam_resistance_splash_potion_1"
+		},
+		"ngpotion_jam_resistance_splash_potion_2": {
+			"textures": "textures/items/ng_potions/jam_resistance_splash_potion_2"
+		},
+		"ngpotion_sinking_splash_potion_1": {
+			"textures": "textures/items/ng_potions/sinking_splash_potion_1"
+		},
+		"ngpotion_buoyancy_splash_potion_1": {
+			"textures": "textures/items/ng_potions/buoyancy_splash_potion_1"
+		},
+		"ngpotion_regeneration_splash_potion_1": {
+			"textures": "textures/items/ng_potions/regeneration_splash_potion_1"
+		},
+		"ngpotion_regeneration_splash_potion_2": {
+			"textures": "textures/items/ng_potions/regeneration_splash_potion_2"
+		},
+		"ngpotion_speed_splash_potion_1": {
+			"textures": "textures/items/ng_potions/speed_splash_potion_1"
+		},
+		"ngpotion_speed_splash_potion_2": {
+			"textures": "textures/items/ng_potions/speed_splash_potion_2"
+		},
+		"ngpotion_drink_energy": {
+			"textures": "textures/items/ng_potions/drink_energy"
+		},
+		"ngpotion_drink_spy": {
+			"textures": "textures/items/ng_potions/drink_spy"
+		},
+		"ngpotion_drink_construct": {
+			"textures": "textures/items/ng_potions/drink_construct"
+		},
+		"ngagri_barley": {
+			"textures": "textures/items/ng_agriculture/barley"
+		},
+		"ngagri_oat": {
+			"textures": "textures/items/ng_agriculture/oat"
+		},
+		"ngagri_soy": {
+			"textures": "textures/items/ng_agriculture/soy"
+		},
+		"ngagri_rye": {
+			"textures": "textures/items/ng_agriculture/rye"
+		},
+		"ngagri_corn": {
+			"textures": "textures/items/ng_agriculture/corn"
+		},
+		"ngagri_arctic_oats": {
+			"textures": "textures/items/ng_agriculture/arctic_oats"
+		},
+		"ngagri_glazed_spelt": {
+			"textures": "textures/items/ng_agriculture/glazed_spelt"
+		},
+		"ngagri_eggplant_seed": {
+			"textures": "textures/items/ng_agriculture/eggplant_seed"
+		},
+		"ngagri_wheat_flour": {
+			"textures": "textures/items/ng_agriculture/wheat_flour"
+		},
+		"ngagri_corn_flour": {
+			"textures": "textures/items/ng_agriculture/corn_flour"
+		},
+		"ngagri_sunflower_flour": {
+			"textures": "textures/items/ng_agriculture/sunflower_flour"
+		},
+		"ngagri_oat_flour": {
+			"textures": "textures/items/ng_agriculture/oat_flour"
+		},
+		"ngagri_rye_flour": {
+			"textures": "textures/items/ng_agriculture/rye_flour"
+		},
+		"ngagri_soy_flour": {
+			"textures": "textures/items/ng_agriculture/soy_flour"
+		},
+		"ngagri_barley_flour": {
+			"textures": "textures/items/ng_agriculture/barley_flour"
+		},
+		"ngagri_glazed_spelt_flour": {
+			"textures": "textures/items/ng_agriculture/glazed_spelt_flour"
+		},
+		"ngagri_arctic_oat_flour": {
+			"textures": "textures/items/ng_agriculture/arctic_oat_flour"
+		},
 		"eco_item": {
 			"textures": "textures/items/eco_item"
 		},
@@ -29,6 +470,63 @@
 		"desh_boots": {
 			"textures": "textures/items/desh_boots"
 		},
+		"ashstone_pickaxe": {
+			"textures": "textures/items/ng_outils/ashstone_pickaxe"
+		},
+		"ashstone_axe": {
+			"textures": "textures/items/ng_outils/ashstone_axe"
+		},
+		"ashstone_shovel": {
+			"textures": "textures/items/ng_outils/ashstone_shovel"
+		},
+		"ashstone_hoe": {
+			"textures": "textures/items/ng_outils/ashstone_hoe"
+		},
+		"zirconium_pickaxe": {
+			"textures": "textures/items/ng_outils/zirconium_pickaxe"
+		},
+		"zirconium_axe": {
+			"textures": "textures/items/ng_outils/zirconium_axe"
+		},
+		"country_axe": {
+			"textures": "textures/items/ng_outils/country_axe"
+		},
+		"zirconium_shovel": {
+			"textures": "textures/items/ng_outils/zirconium_shovel"
+		},
+		"zirconium_hoe": {
+			"textures": "textures/items/ng_outils/zirconium_hoe"
+		},
+		"zirconium_sword": {
+			"textures": "textures/items/ng_outils/zirconium_sword"
+		},
+		"zirconium_helmet": {
+			"textures": "textures/items/ng_outils/zirconium_helmet"
+		},
+		"zirconium_chestplate": {
+			"textures": "textures/items/ng_outils/zirconium_chestplate"
+		},
+		"zirconium_leggings": {
+			"textures": "textures/items/ng_outils/zirconium_leggings"
+		},
+		"zirconium_boots": {
+			"textures": "textures/items/ng_outils/zirconium_boots"
+		},
+		"gas_helmet": {
+			"textures": "textures/items/ng_armure_gaz/gas_helmet"
+		},
+		"gas_chestplate": {
+			"textures": "textures/items/ng_armure_gaz/gas_chestplate"
+		},
+		"gas_leggings": {
+			"textures": "textures/items/ng_armure_gaz/gas_leggings"
+		},
+		"gas_boots": {
+			"textures": "textures/items/ng_armure_gaz/gas_boots"
+		},
+		"onyx_rod": {
+			"textures": "textures/items/ng_outils/onyx_rod"
+		},
 		"volcanite_helmet": {
 			"textures": "textures/items/volcanite_helmet"
 		},
@@ -41,6 +539,18 @@
 		"volcanite_leggings": {
 			"textures": "textures/items/volcanite_leggings"
 		},
+		"onyx_helmet": {
+			"textures": "textures/items/onyx_helmet"
+		},
+		"onyx_chestplate": {
+			"textures": "textures/items/onyx_chestplate"
+		},
+		"onyx_leggings": {
+			"textures": "textures/items/onyx_leggings"
+		},
+		"onyx_boots": {
+			"textures": "textures/items/onyx_boots"
+		},
 		"ragnarok_helmet": {
 			"textures": "textures/items/ragnarok_helmet"
 		},
@@ -52,6 +562,18 @@
 		},
 		"ragnarok_boots": {
 			"textures": "textures/items/ragnarok_boots"
+		},
+		"vanguard_helmet": {
+			"textures": "textures/items/vanguard_helmet"
+		},
+		"vanguard_chestplate": {
+			"textures": "textures/items/vanguard_chestplate"
+		},
+		"vanguard_leggings": {
+			"textures": "textures/items/vanguard_leggings"
+		},
+		"vanguard_boots": {
+			"textures": "textures/items/vanguard_boots"
 		},
 		"prototype_helmet": {
 			"textures": "textures/items/prototype_helmet"
@@ -180,6 +702,9 @@
 			"textures": "textures/items/multi_tool_electric"
 		},
 		"multi_tool_electric_icon": {
+			"textures": "textures/items/multi_tool_electric_icon"
+		},
+		"multi_tool_icon": {
 			"textures": "textures/items/multi_tool_electric_icon"
 		},
 		"ng_phone": {
@@ -338,6 +863,9 @@
 		"raw_cryolite": {
 			"textures": "textures/items/raw_cryolite"
 		},
+		"raw_silicon": {
+			"textures": "textures/items/raw_silicon"
+		},
 		"asteroid_crystal": {
 			"textures": "textures/items/asteroid_crystal"
 		},
@@ -394,6 +922,9 @@
 		},
 		"desh_stick": {
 			"textures": "textures/items/desh_stick"
+		},
+		"volcanite_stick": {
+			"textures": "textures/items/volcanite_stick"
 		},
 		"ore_cluster_iron": {
 			"textures": "textures/items/ore_cluster_iron"
@@ -520,6 +1051,138 @@
 		},
 		"carbon_fiber": {
 			"textures": "textures/items/carbon_fiber"
+		},
+		"frag_meteor": {
+			"textures": "textures/items/frag_meteor"
+		},
+		"moteur": {
+			"textures": "textures/items/moteur"
+		},
+		"nuclear_reactor_blueprint": {
+			"textures": "textures/items/nuclear_reactor_blueprint"
+		},
+		"plasmic_accumulator_blueprint": {
+			"textures": "textures/items/plasmic_accumulator_blueprint"
+		},
+		"nuclear_forgeblueprint": {
+			"textures": "textures/items/nuclear_forgeblueprint"
+		},
+		"nuclear_batteryblueprint": {
+			"textures": "textures/items/nuclear_batteryblueprint"
+		},
+		"solar_generator_blueprint": {
+			"textures": "textures/items/solar_generator_blueprint"
+		},
+		"yellow_cake_uranium_235": {
+			"textures": "textures/items/yellow_cake_uranium_235"
+		},
+		"ghost_wings": {
+			"textures": "textures/items/ghost_wings"
+		},
+		"ngarme_volcanite_sword": {
+			"textures": "textures/items/ng_armes/volcanite_sword"
+		},
+		"ngarme_megalodon_sword": {
+			"textures": "textures/items/ng_armes/megalodon_sword"
+		},
+		"ngarme_onyx_sword": {
+			"textures": "textures/items/ng_armes/onyx_sword"
+		},
+		"ngarme_ragnarock_hammer": {
+			"textures": "textures/items/ng_armes/ragnarock_hammer"
+		},
+		"ngarme_aurelions_trainer_spear": {
+			"textures": "textures/items/ng_armes/aurelions_trainer_spear"
+		},
+		"ngarme_aurelions_officer_scepter": {
+			"textures": "textures/items/ng_armes/aurelions_officer_scepter"
+		},
+		"ngarme_aurelions_soldier_sword": {
+			"textures": "textures/items/ng_armes/aurelions_soldier_sword"
+		},
+		"ngarme_aurelions_bow": {
+			"textures": "textures/items/ng_armes/aurelions_bow"
+		},
+		"ngarme_solkhars_trainer_halberd": {
+			"textures": "textures/items/ng_armes/solkhars_trainer_halberd"
+		},
+		"ngarme_solkhars_blade": {
+			"textures": "textures/items/ng_armes/solkhars_blade"
+		},
+		"ngarme_solkhars_bow": {
+			"textures": "textures/items/ng_armes/solkhars_bow"
+		},
+		"ngarme_noctembruns_trainer_anchor": {
+			"textures": "textures/items/ng_armes/noctembruns_trainer_anchor"
+		},
+		"ngarme_noctembruns_officer_saber": {
+			"textures": "textures/items/ng_armes/noctembruns_officer_saber"
+		},
+		"ngarme_noctembruns_soldier_saber": {
+			"textures": "textures/items/ng_armes/noctembruns_soldier_saber"
+		},
+		"ngarme_noctembruns_bow": {
+			"textures": "textures/items/ng_armes/noctembruns_bow"
+		},
+		"ngarme_terrakins_spear": {
+			"textures": "textures/items/ng_armes/terrakins_spear"
+		},
+		"ngarme_terrakins_bone_staff": {
+			"textures": "textures/items/ng_armes/terrakins_bone_staff"
+		},
+		"ngarme_terrakins_bow": {
+			"textures": "textures/items/ng_armes/terrakins_bow"
+		},
+		"ngarme_skjornars_trainer_poleaxe": {
+			"textures": "textures/items/ng_armes/skjornars_trainer_poleaxe"
+		},
+		"ngarme_skjornars_officer_axe": {
+			"textures": "textures/items/ng_armes/skjornars_officer_axe"
+		},
+		"ngarme_skjornars_soldier_axe": {
+			"textures": "textures/items/ng_armes/skjornars_soldier_axe"
+		},
+		"ngarme_skjornars_bow": {
+			"textures": "textures/items/ng_armes/skjornars_bow"
+		},
+		"ngarme_sylvaris_spear": {
+			"textures": "textures/items/ng_armes/sylvaris_spear"
+		},
+		"ngarme_sylvaris_officer_sword": {
+			"textures": "textures/items/ng_armes/sylvaris_officer_sword"
+		},
+		"ngarme_sylvaris_bow": {
+			"textures": "textures/items/ng_armes/sylvaris_bow"
+		},
+		"ngarme_eco_bow": {
+			"textures": "textures/items/ng_armes/eco_bow"
+		},
+		"ngarme_onyx_bow": {
+			"textures": "textures/items/ng_armes/onyx_bow"
+		},
+		"ngarme_blueprint_cargorocket": {
+			"textures": "textures/items/ng_armes/blueprint_cargorocket"
+		},
+		"ngarme_blueprint_garage": {
+			"textures": "textures/items/ng_armes/blueprint_garage"
+		},
+		"ngarme_blueprint_enclos": {
+			"textures": "textures/items/ng_armes/blueprint_enclos"
+		},
+		"ngarme_blueprint_parabolle": {
+			"textures": "textures/items/ng_armes/blueprint_parabolle"
+		},
+		"ngarme_blueprint_helicopter": {
+			"textures": "textures/items/ng_armes/blueprint_helicopter"
+		},
+		"ngarme_blueprint_launch_platform": {
+			"textures": "textures/items/ng_armes/blueprint_launch_platform"
+		},
+		"ngarme_blueprint_lunar_shuttle": {
+			"textures": "textures/items/ng_armes/blueprint_lunar_shuttle"
+		},
+		"ngarme_blueprint_lunar_bike": {
+			"textures": "textures/items/ng_armes/blueprint_lunar_bike"
 		}
 	}
 }

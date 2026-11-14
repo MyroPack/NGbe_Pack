@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ng_garage.porte": {
+      "initial_state": "fermee",
+      "states": {
+        "fermee": {
+          "animations": ["close"],
+          "transitions": [{ "ouverture": "q.variant == 1" }]
+        },
+        "ouverture": {
+          "animations": ["close_to_open"],
+          "transitions": [{ "ouverte": "q.all_animations_finished" }, { "fermeture": "q.variant != 1" }]
+        },
+        "ouverte": {
+          "animations": ["open"],
+          "transitions": [{ "fermeture": "q.variant != 1" }]
+        },
+        "fermeture": {
+          "animations": ["open_to_close"],
+          "transitions": [{ "fermee": "q.all_animations_finished" }, { "ouverture": "q.variant == 1" }]
+        }
+      }
+    }
+  }
+}

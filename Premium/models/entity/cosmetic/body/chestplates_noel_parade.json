@@ -1,0 +1,690 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.chestplates_noel_parade",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.4,
+        "visible_bounds_height": 2.3,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "jacket",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.body.chestplates_noel_parade.back",
+          "parent": "jacket",
+          "pivot": [
+            0.15714,
+            13.48846,
+            1.99809
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6.05,
+                5.3,
+                5
+              ],
+              "size": [
+                12.1,
+                15.4,
+                0.22
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    81,
+                    93
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    81,
+                    93
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -6.05,
+                5.3,
+                5
+              ],
+              "size": [
+                12.1,
+                15.4,
+                0.22
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    93,
+                    74
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    93,
+                    74
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -6.05,
+                5.3,
+                5
+              ],
+              "size": [
+                12.1,
+                15.4,
+                0.22
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    93,
+                    74
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    93,
+                    74
+                  ],
+                  "uv_size": [
+                    11,
+                    14
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_noel_parade.group3",
+          "parent": "cosmetic.body.chestplates_noel_parade.back",
+          "pivot": [
+            0,
+            24.44921,
+            4.00885
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.5,
+                20.59,
+                0.16
+              ],
+              "size": [
+                11,
+                3.30921,
+                7.7
+              ],
+              "pivot": [
+                0,
+                24.99921,
+                4.00885
+              ],
+              "rotation": [
+                22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    60,
+                    119
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    105,
+                    83
+                  ],
+                  "uv_size": [
+                    7,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    117,
+                    74
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    71,
+                    121
+                  ],
+                  "uv_size": [
+                    7,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    113,
+                    106
+                  ],
+                  "uv_size": [
+                    10,
+                    -7
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.775,
+                20.225,
+                -0.225
+              ],
+              "size": [
+                11.55,
+                7.15,
+                8.25
+              ],
+              "pivot": [
+                0,
+                25.20921,
+                3.89885
+              ],
+              "rotation": [
+                22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    113,
+                    83
+                  ],
+                  "uv_size": [
+                    10.95,
+                    7.15
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    62,
+                    84
+                  ],
+                  "uv_size": [
+                    8,
+                    6.5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    113,
+                    91
+                  ],
+                  "uv_size": [
+                    10.95,
+                    7.15
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    62,
+                    84
+                  ],
+                  "uv_size": [
+                    8,
+                    6.5
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    105,
+                    74
+                  ],
+                  "uv_size": [
+                    11,
+                    8
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    60,
+                    116
+                  ],
+                  "uv_size": [
+                    10,
+                    -7
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.5,
+                23.89921,
+                0.16
+              ],
+              "size": [
+                11,
+                3.29079,
+                7.7
+              ],
+              "pivot": [
+                0,
+                24.99921,
+                4.00885
+              ],
+              "rotation": [
+                22.5,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    117,
+                    78
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    63,
+                    93
+                  ],
+                  "uv_size": [
+                    7,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    60,
+                    123
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    63,
+                    97
+                  ],
+                  "uv_size": [
+                    7,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    60,
+                    101
+                  ],
+                  "uv_size": [
+                    10,
+                    7
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_noel_parade.group",
+          "parent": "cosmetic.body.chestplates_noel_parade.back",
+          "pivot": [
+            -6.98254,
+            7.39,
+            -0.3911
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.78254,
+                6.29,
+                -3.69
+              ],
+              "size": [
+                9.9,
+                18.7,
+                8.8
+              ],
+              "pivot": [
+                6.98254,
+                7.39,
+                -6.9889
+              ],
+              "rotation": [
+                0,
+                0,
+                -22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    93,
+                    89
+                  ],
+                  "uv_size": [
+                    9,
+                    17
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    103,
+                    89
+                  ],
+                  "uv_size": [
+                    9,
+                    17
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    93,
+                    107
+                  ],
+                  "uv_size": [
+                    8,
+                    17
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    71,
+                    112
+                  ],
+                  "uv_size": [
+                    9,
+                    8
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                4.23254,
+                5.74,
+                -4.24
+              ],
+              "size": [
+                11,
+                19.8,
+                9.9
+              ],
+              "pivot": [
+                6.98254,
+                7.39,
+                -6.9889
+              ],
+              "rotation": [
+                0,
+                0,
+                -22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    71,
+                    74
+                  ],
+                  "uv_size": [
+                    10,
+                    18
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    82,
+                    74
+                  ],
+                  "uv_size": [
+                    10,
+                    18
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    71,
+                    93
+                  ],
+                  "uv_size": [
+                    9,
+                    18
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    60,
+                    109
+                  ],
+                  "uv_size": [
+                    10,
+                    9
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_noel_parade.group5",
+          "parent": "cosmetic.body.chestplates_noel_parade.back",
+          "pivot": [
+            6.98254,
+            7.39,
+            -0.3911
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -14.68254,
+                6.29,
+                -3.69
+              ],
+              "size": [
+                9.9,
+                18.7,
+                8.8
+              ],
+              "pivot": [
+                -6.98254,
+                7.39,
+                -6.9889
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    102,
+                    89
+                  ],
+                  "uv_size": [
+                    -9,
+                    17
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    101,
+                    107
+                  ],
+                  "uv_size": [
+                    -8,
+                    17
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    112,
+                    89
+                  ],
+                  "uv_size": [
+                    -9,
+                    17
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    80,
+                    112
+                  ],
+                  "uv_size": [
+                    -9,
+                    8
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -15.23254,
+                5.74,
+                -4.24
+              ],
+              "size": [
+                11,
+                19.8,
+                9.9
+              ],
+              "pivot": [
+                -6.98254,
+                7.39,
+                -6.9889
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    81,
+                    74
+                  ],
+                  "uv_size": [
+                    -10,
+                    18
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    80,
+                    93
+                  ],
+                  "uv_size": [
+                    -9,
+                    18
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    92,
+                    74
+                  ],
+                  "uv_size": [
+                    -10,
+                    18
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    70,
+                    118
+                  ],
+                  "uv_size": [
+                    -10,
+                    -9
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

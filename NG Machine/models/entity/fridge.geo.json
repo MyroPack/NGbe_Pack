@@ -1432,6 +1432,16 @@
 							}
 						}
 					]
+				},
+				{
+					"name": "gaz_in_right",
+					"parent": "root",
+					"pivot": [0, 8, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [-5.025, 3, 7], "size": [10, 10, 3], "inflate": -0.025, "uv": [64, 104]},
+						{"origin": [-4.025, 4, 9], "size": [8, 8, 1], "inflate": -0.025, "uv": [92, 104]}
+					]
 				}
 			]
 		}

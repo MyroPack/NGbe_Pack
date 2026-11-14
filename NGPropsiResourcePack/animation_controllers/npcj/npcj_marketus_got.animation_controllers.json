@@ -1,0 +1,101 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.propsi_e_npcj_marketus_got": {
+      "initial_state": "idle",
+      "states": {
+        "talk": {
+          "animations": [
+            "talk"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            },
+            {
+              "idle": "q.variant != 1 && !v.npcj_proche"
+            }
+          ]
+        },
+        "near": {
+          "animations": [
+            "near"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "idle": "q.variant != 1 && !v.npcj_proche"
+            }
+          ]
+        },
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "blend_transition": 0.25,
+          "on_entry": [
+            "v.npcj_tirage = math.random(0, 10);"
+          ],
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            },
+            {
+              "idle_bis": "q.all_animations_finished && q.variant != 1 && !v.npcj_proche && v.npcj_tirage >= 0 && v.npcj_tirage < 9"
+            },
+            {
+              "idle2": "q.all_animations_finished && q.variant != 1 && !v.npcj_proche && v.npcj_tirage >= 9"
+            }
+          ]
+        },
+        "idle_bis": {
+          "animations": [
+            "idle"
+          ],
+          "blend_transition": 0.25,
+          "on_entry": [
+            "v.npcj_tirage = math.random(0, 10);"
+          ],
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            },
+            {
+              "idle": "q.all_animations_finished && q.variant != 1 && !v.npcj_proche && v.npcj_tirage >= 0 && v.npcj_tirage < 9"
+            },
+            {
+              "idle2": "q.all_animations_finished && q.variant != 1 && !v.npcj_proche && v.npcj_tirage >= 9"
+            }
+          ]
+        },
+        "idle2": {
+          "animations": [
+            "idle2"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            },
+            {
+              "idle": "q.all_animations_finished && q.variant != 1 && !v.npcj_proche"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

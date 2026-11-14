@@ -702,7 +702,7 @@
 					]
 				},
 				{
-					"name": "bone2",
+					"name": "lootbox_megalodon_bone2",
 					"parent": "fin",
 					"pivot": [5.8687, 11.8574, -11.93717],
 					"rotation": [0, -50, 0],

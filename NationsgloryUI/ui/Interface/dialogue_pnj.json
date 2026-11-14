@@ -1,0 +1,222 @@
+{
+  "namespace": "dialogue_pnj",
+
+  // -----------------------------------------------
+  //
+  //        Dialogue d'un PNJ (tuto de NationsGlory)
+  //
+  // -----------------------------------------------
+  //
+  // Formulaire simple envoye par TutoMod (mode parcours) et aiguille ici par server_form.json quand son
+  // titre porte le marqueur §d§l§g§r. Mise en page de NG Java : un cadre sombre en bas de l'ecran, le
+  // portrait du PNJ a gauche, son nom dans une pastille de sa couleur, la replique, puis les boutons.
+  //   - titre (#title_text) : §d§l§g§r + marqueur du PNJ + nom ; le marqueur est retire a l'affichage (meme
+  //     forme que la fenetre QR code) et le marqueur du PNJ, fait de codes de formatage, reste invisible ;
+  //   - marqueur du PNJ (portrait et couleur de la pastille) : §1§g§r Guideon, §2§g§r Marketus,
+  //     §3§g§r Pierre, §4§g§r Skye ; un seul marqueur par expression (piege du 20/10, PalaUi 1.0.45) ;
+  //   - texte (#form_text) : la replique ;
+  //   - boutons : Suivant (ou Continuer), Passer, dans une vraie liste (piege du 23/10, PalaUi 1.0.58).
+  // Dependances au pack NG : textures/ui/background/background_white et textures/ui/tuto/portrait_*.
+
+  "flat_image": {
+    "type": "image",
+    "texture": "textures/ui/background/background_white"
+  },
+
+  "main_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+
+      {"window@dialogue_pnj.window": {}},
+      {"buttons@dialogue_pnj.buttons_panel": {}}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Cadre de la replique
+  // -----------------------------------------------
+
+  "window": {
+    "type": "panel",
+    "size": [ "70%", 86 ],
+    "max_size": [ 470, 86 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 18, -30 ],
+    "layer": 1,
+    "controls": [
+
+      {"border@dialogue_pnj.flat_image": {
+        "size": [ "100%", "100%" ],
+        "color": [ 0.18, 0.18, 0.2 ],
+        "alpha": 0.95,
+        "layer": 1
+      }},
+
+      {"inner@dialogue_pnj.flat_image": {
+        "size": [ "100% - 2px", "100% - 2px" ],
+        "color": [ 0.1, 0.1, 0.12 ],
+        "alpha": 0.95,
+        "layer": 2
+      }},
+
+      // Le portrait deborde du cadre par le haut et par la gauche, comme sur NG Java.
+      {"portrait@dialogue_pnj.portraits": {
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": [ -34, 0 ],
+        "layer": 4
+      }},
+
+      {"text_area": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [ "100% - 76px", "100% - 14px" ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "offset": [ 64, 8 ],
+        "layer": 3,
+        "controls": [
+          {"name@dialogue_pnj.name_pill": {}},
+          {"gap": { "type": "panel", "size": [ "100%", 5 ] }},
+          {"line@dialogue_pnj.line_label": {}}
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Portraits : un par PNJ, choisi par son marqueur
+  // -----------------------------------------------
+
+  "portraits": {
+    "type": "panel",
+    "size": [ 84, 84 ],
+    "controls": [
+      {"guideon": { "type": "image", "size": [ 84, 84 ], "texture": "textures/ui/tuto/portrait_guideon", "filter": false, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§1§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"marketus": { "type": "image", "size": [ 84, 84 ], "texture": "textures/ui/tuto/portrait_marketus", "filter": false, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§2§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"pierre": { "type": "image", "size": [ 84, 84 ], "texture": "textures/ui/tuto/portrait_pierre", "filter": false, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§3§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"skye": { "type": "image", "size": [ 84, 84 ], "texture": "textures/ui/tuto/portrait_skye", "filter": false, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§4§g§r') = #title_text))", "target_property_name": "#visible" } ] }}
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Nom du PNJ dans sa pastille
+  // -----------------------------------------------
+
+  "name_pill": {
+    "type": "panel",
+    "size": [ "100%c + 12px", 13 ],
+    "controls": [
+
+      // Fond gris (PNJ sans marqueur), puis la couleur du PNJ par-dessus.
+      {"base@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.42, 0.45, 0.5 ], "layer": 1 }},
+      {"guideon@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.231, 0.482, 0.918 ], "layer": 2, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§1§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"marketus@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.165, 0.553, 0.341 ], "layer": 2, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§2§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"pierre@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.42, 0.45, 0.5 ], "layer": 2, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§3§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+      {"skye@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.098, 0.71, 0.788 ], "layer": 2, "bindings": [ { "binding_name": "#title_text" }, { "binding_type": "view", "source_property_name": "(not ((#title_text - '§4§g§r') = #title_text))", "target_property_name": "#visible" } ] }},
+
+      {"name_label": {
+        "type": "label",
+        "size": [ "default", "default" ],
+        "text": "#text",
+        "color": [ 1.0, 1.0, 1.0 ],
+        "shadow": false,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#title_text"
+          },
+          {
+            "binding_type": "view",
+            "source_property_name": "(#title_text - '§d§l§g§r')",
+            "target_property_name": "#text"
+          }
+        ]
+      }}
+
+    ]
+  },
+
+  // -----------------------------------------------
+  //  Replique (#form_text)
+  // -----------------------------------------------
+
+  "line_label": {
+    "type": "label",
+    "size": [ "100%", "default" ],
+    "text": "#form_text",
+    "color": [ 1.0, 1.0, 1.0 ],
+    "shadow": true,
+    "layer": 3
+  },
+
+  // -----------------------------------------------
+  //  Boutons : Suivant (ou Continuer), Passer
+  // -----------------------------------------------
+
+  "buttons_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 18 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 18, -8 ],
+    "layer": 1,
+    "factory": {
+      "name": "buttons",
+      "control_ids": {
+        "button": "dialogue_pnj.button_item"
+      }
+    },
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_contents",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+
+  "button_item": {
+    "type": "panel",
+    "size": [ 104, 18 ],
+    "controls": [
+      {"button@dialogue_pnj.action_button": {}}
+    ]
+  },
+
+  "action_button@common.button": {
+    "size": [ 98, 16 ],
+    "$pressed_button_name": "button.form_button_click",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {"default@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.18, 0.18, 0.2 ], "alpha": 0.95 }},
+      // Survol et appui : le bleu NG (#6E76EE).
+      {"hover@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.431, 0.463, 0.933 ] }},
+      {"pressed@dialogue_pnj.flat_image": { "size": [ "100%", "100%" ], "color": [ 0.431, 0.463, 0.933 ] }},
+      {"button_label": {
+        "type": "label",
+        "text": "#form_button_text",
+        "color": [ 1.0, 1.0, 1.0 ],
+        "shadow": true,
+        "layer": 3,
+        "bindings": [
+          {
+            "binding_name": "#form_button_text",
+            "binding_type": "collection",
+            "binding_collection_name": "form_buttons"
+          }
+        ]
+      }}
+    ]
+  }
+}

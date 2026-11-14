@@ -119,6 +119,12 @@
     "ng_crusher": {
       "textures": "textures/items/ng_crusher"
     },
+    "ng_tannery": {
+      "textures": "textures/items/ng_tannery"
+    },
+    "ng_parabole": {
+      "textures": "textures/items/ng_parabole"
+    },
     "ng_food_preserver": {
       "textures": "textures/items/ng_food_preserver"
     },
@@ -191,11 +197,92 @@
     "ng_nuclear_fuel_loader": {
       "textures": "textures/items/ng_nuclear_fuel_loader"
     },
+    "ng_tritium_synthesizer": {
+      "textures": "textures/items/ng_tritium_synthesizer"
+    },
+    "ng_uranium_extractor": {
+      "textures": "textures/items/ng_uranium_extractor"
+    },
+    "ng_powder_uranium_235": {
+      "textures": "textures/items/ng_powder_uranium_235"
+    },
+    "ng_powder_uranium_238": {
+      "textures": "textures/items/ng_powder_uranium_238"
+    },
+    "ng_refinery_uranium": {
+      "textures": "textures/items/ng_refinery_uranium"
+    },
+    "ng_centrifuge": {
+      "textures": "textures/items/ng_centrifuge"
+    },
+    "ng_uranium_compactor": {
+      "textures": "textures/items/ng_uranium_compactor"
+    },
+    "ng_powder_purify_uranium_235": {
+      "textures": "textures/items/ng_powder_purify_uranium_235"
+    },
+    "ng_powder_purify_uranium_238": {
+      "textures": "textures/items/ng_powder_purify_uranium_238"
+    },
+    "ng_yellow_cake_uranium_235": {
+      "textures": "textures/items/ng_yellow_cake_uranium_235"
+    },
+    "ng_yellow_cake_uranium_238": {
+      "textures": "textures/items/ng_yellow_cake_uranium_238"
+    },
     "ng_nuclear_forge": {
       "textures": "textures/items/ng_nuclear_forge"
     },
     "ng_forge_catalyst": {
       "textures": "textures/items/ng_forge_catalyst"
+    },
+    "ng_cog_assembler": {
+      "textures": "textures/items/ng_cog_assembler"
+    },
+    "ng_craft_station": {
+      "textures": "textures/items/ng_craft_station"
+    },
+    "ng_ecotron": {
+      "textures": "textures/items/ng_ecotron"
+    },
+    "ng_electric_charger": {
+      "textures": "textures/items/ng_electric_charger"
+    },
+    "ng_electric_compressor": {
+      "textures": "textures/items/ng_electric_compressor"
+    },
+    "ng_industrial_repairer": {
+      "textures": "textures/items/ng_industrial_repairer"
+    },
+    "ng_liquid_tank": {
+      "textures": "textures/items/ng_liquid_tank"
+    },
+    "ng_printer": {
+      "textures": "textures/items/ng_printer"
+    },
+    "ng_refinery": {
+      "textures": "textures/items/ng_refinery"
+    },
+    "ng_solar_panel_advanced": {
+      "textures": "textures/items/ng_solar_panel_advanced"
+    },
+    "ng_garage": {
+      "textures": "textures/items/ng_garage"
+    },
+    "ng_flour_machine": {
+      "textures": "textures/items/ng_flour_machine"
+    },
+    "ng_silo": {
+      "textures": "textures/items/ng_silo"
+    },
+    "ng_feeder_cereal": {
+      "textures": "textures/items/ng_feeder_cereal"
+    },
+    "ng_enclosure": {
+      "textures": "textures/items/ng_enclosure"
+    },
+    "ng_vehicle_workbench": {
+      "textures": "textures/items/ng_vehicle_workbench"
     }
   }
 }

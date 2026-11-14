@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ng_agri_adaptateurs": {
+      "geometry": "Geometry.adaptateurs",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.adaptateurs"
+      ]
+    },
+    "controller.render.ng_feeder_level": {
+      "geometry": "Geometry.niveaux",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.niveaux"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "level_30": "q.variant == 1"
+        },
+        {
+          "level_60": "q.variant == 2"
+        },
+        {
+          "level_100": "q.variant == 3"
+        }
+      ]
+    }
+  }
+}

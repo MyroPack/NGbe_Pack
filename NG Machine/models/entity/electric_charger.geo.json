@@ -24,6 +24,20 @@
           ]
         },
         {
+          "name": "rightItem",
+          "parent": "root",
+          "pivot": [
+            0,
+            21.5,
+            0.5
+          ],
+          "rotation": [
+            -90,
+            0,
+            0
+          ]
+        },
+        {
           "name": "table",
           "parent": "root",
           "pivot": [

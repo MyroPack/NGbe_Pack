@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ngpremium:megalodon_chestplate.player",
+      "item": {
+        "ngpremium:megalodon_chestplate": "query.owner_identifier == 'minecraft:player'"
+      },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/megalodon_armor",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.player.armor.megalodon_chestplate"
+      },
+      "animations": {
+        "idle": "animation.ngpremium.megalodon_armor.idle",
+        "shoot": "animation.ngpremium.megalodon_armor.shoot"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0; variable.shoot_timer = 0.0;",
+        "pre_animation": [
+          "variable.shoot_timer = query.is_sneaking ? (variable.shoot_timer + query.delta_time) : 0.0;"
+        ],
+        "animate": [
+          {
+            "shoot": "variable.shoot_timer > 0.0 && variable.shoot_timer < 2.875"
+          },
+          {
+            "idle": "variable.shoot_timer == 0.0 || variable.shoot_timer >= 2.875"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.armor"
+      ]
+    }
+  }
+}

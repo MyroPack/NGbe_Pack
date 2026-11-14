@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npcj_atlas",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npcj/npcj_atlas"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npcj_atlas"
+      },
+      "animations": {
+        "idle": "animation.propsi_e_npcj_atlas.idle",
+        "near": "animation.propsi_e_npcj_atlas.near",
+        "talk": "animation.propsi_e_npcj_atlas.talk",
+        "controleur": "controller.animation.propsi_e_npcj_atlas",
+        "titre": "animation.propsi_e_npcj_atlas.titre"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.npcj_proche = q.distance_from_camera <= 4.0;"
+        ],
+        "animate": [
+          "controleur",
+          "titre"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "particle_effects": {
+        "titre": "propsi:npcj_atlas_titre"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ngpremium:drone_kit_premium_plus",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/drone_kit/drone_kit_premium_plus"
+      },
+      "geometry": {
+        "default": "geometry.ng_drone_kit"
+      },
+      "animations": {
+        "delivery": "animation.ng_drone_kit_premium_plus.delivery"
+      },
+      "scripts": {
+        "animate": [
+          "delivery"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

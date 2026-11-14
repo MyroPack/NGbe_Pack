@@ -318,5 +318,10 @@
 		"flipbook_texture": "textures/blocks/ancien_ng/asteroid_crystal_ore",
 		"atlas_tile": "asteroid_crystal_ore",
 		"ticks_per_frame": 2
+	},
+	{
+		"flipbook_texture": "textures/blocks/ancien_ng/zirconium_ore",
+		"atlas_tile": "zirconium_ore",
+		"ticks_per_frame": 2
 	}
 ]

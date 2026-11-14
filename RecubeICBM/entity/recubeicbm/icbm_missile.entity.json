@@ -23,7 +23,8 @@
         "anti_matter": "textures/recubeicbm/missile/anti_matter",
         "red_matter": "textures/recubeicbm/missile/red_matter",
         "interceptor": "textures/recubeicbm/missile/interceptor",
-        "rpg_rocket": "textures/recubeicbm/missile/rpg_rocket"
+        "rpg_rocket": "textures/recubeicbm/missile/rpg_rocket",
+        "endbringer": "textures/recubeicbm/missile/endbringer"
       },
       "geometry": {
         "conventionnel": "geometry.recubeicbm.flight.conventionnel",
@@ -42,7 +43,8 @@
         "anti_matter": "geometry.recubeicbm.flight.anti_matter",
         "red_matter": "geometry.recubeicbm.flight.red_matter",
         "interceptor": "geometry.recubeicbm.flight.interceptor",
-        "rpg_rocket": "geometry.recubeicbm.flight.rpg_rocket"
+        "rpg_rocket": "geometry.recubeicbm.flight.rpg_rocket",
+        "endbringer": "geometry.recubeicbm.flight.endbringer"
       },
       "animations": {
         "flight": "animation.recubeicbm.missile.flight"

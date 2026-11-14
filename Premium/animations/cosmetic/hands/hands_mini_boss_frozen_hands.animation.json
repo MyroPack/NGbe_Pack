@@ -1,0 +1,60 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.cosmetic.hands.hands_mini_boss_frozen_hands.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "cosmetic.hands.hands_mini_boss_frozen_hands.left.body5": {
+          "scale": [
+            "1+math.sin((query.life_time)*180)*0.025",
+            1,
+            1
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.left.body6": {
+          "scale": [
+            "1+math.sin((query.life_time)*180+45)*0.025",
+            1,
+            1
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.right.body2": {
+          "scale": [
+            "1+math.sin((query.life_time)*180)*0.025",
+            1,
+            1
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.right.body3": {
+          "scale": [
+            "1+math.sin((query.life_time)*180+45)*0.025",
+            1,
+            1
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm3": {
+          "rotation": [
+            0,
+            0,
+            "5+math.sin((query.life_time)*180)*5"
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm5": {
+          "rotation": [
+            0,
+            0,
+            "5+math.sin((query.life_time)*180+90)*5"
+          ]
+        },
+        "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm4": {
+          "rotation": [
+            0,
+            0,
+            "5+math.sin((query.life_time)*180-90)*5"
+          ]
+        }
+      }
+    }
+  }
+}

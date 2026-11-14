@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npcj_skye_onboarding",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npcj/npcj_skye_onboarding"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npcj_skye_onboarding"
+      },
+      "animations": {
+        "near": "animation.propsi_e_npcj_skye_onboarding.near",
+        "talk": "animation.propsi_e_npcj_skye_onboarding.talk",
+        "idle": "animation.propsi_e_npcj_skye_onboarding.idle",
+        "forward": "animation.propsi_e_npcj_skye_onboarding.forward",
+        "controleur": "controller.animation.propsi_e_npcj_skye_onboarding",
+        "titre": "animation.propsi_e_npcj_skye_onboarding.titre"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.npcj_proche = q.distance_from_camera <= 5.0;"
+        ],
+        "animate": [
+          "controleur",
+          "titre"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "particle_effects": {
+        "titre": "propsi:npcj_skye_onboarding_titre"
+      }
+    }
+  }
+}

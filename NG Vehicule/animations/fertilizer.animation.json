@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fertilizer.roues": {
+			"loop": true,
+			"bones": {
+				"wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				},
+				"wheel2": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

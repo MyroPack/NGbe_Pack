@@ -1,0 +1,931 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.hands.hands_bamboo_lantern_staff",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.55,
+        "visible_bounds_height": 2.14,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "leftArm",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "leftSleeve",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "leftArm"
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group",
+          "parent": "leftSleeve",
+          "pivot": [
+            5,
+            16,
+            -16
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group2",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group",
+          "pivot": [
+            14.00071,
+            29.06066,
+            -6.78788
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group3",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group2",
+          "pivot": [
+            -2,
+            29.23223,
+            -5.96016
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5,
+                18,
+                -12
+              ],
+              "size": [
+                2,
+                2,
+                22
+              ],
+              "pivot": [
+                1.95711,
+                22,
+                -3.95711
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    29,
+                    69
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    19,
+                    73
+                  ],
+                  "uv_size": [
+                    22,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    30,
+                    65
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    41,
+                    73
+                  ],
+                  "uv_size": [
+                    -22,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    19,
+                    76
+                  ],
+                  "uv_size": [
+                    2,
+                    22
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    11,
+                    105
+                  ],
+                  "uv_size": [
+                    2,
+                    -22
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                4.75,
+                17.75,
+                -0.25
+              ],
+              "size": [
+                2.5,
+                2.5,
+                7.5
+              ],
+              "pivot": [
+                1.95711,
+                22,
+                -3.95711
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    21,
+                    65
+                  ],
+                  "uv_size": [
+                    8,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    29,
+                    65
+                  ],
+                  "uv_size": [
+                    -8,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    14,
+                    83
+                  ],
+                  "uv_size": [
+                    3,
+                    8
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    22,
+                    84
+                  ],
+                  "uv_size": [
+                    3,
+                    -8
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                5.96904,
+                20.61612,
+                -1.20127
+              ],
+              "size": [
+                0,
+                3,
+                3
+              ],
+              "pivot": [
+                -2,
+                29.23223,
+                -5.96016
+              ],
+              "rotation": [
+                0,
+                45,
+                0
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    27,
+                    86
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group4",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group2",
+          "pivot": [
+            1.95711,
+            22,
+            -3.95711
+          ],
+          "cubes": [
+            {
+              "origin": [
+                6.76537,
+                14.15224,
+                -10.5
+              ],
+              "size": [
+                0,
+                5,
+                1
+              ],
+              "pivot": [
+                6.76537,
+                17.15224,
+                -10
+              ],
+              "rotation": [
+                0,
+                0,
+                -22.5
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    8,
+                    86
+                  ],
+                  "uv_size": [
+                    1,
+                    5
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                6,
+                19,
+                -10.5
+              ],
+              "size": [
+                0,
+                4,
+                1
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    7,
+                    92
+                  ],
+                  "uv_size": [
+                    1,
+                    4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                4.75,
+                17.75,
+                -10.25
+              ],
+              "size": [
+                2.5,
+                2.5,
+                2.5
+              ],
+              "pivot": [
+                1.95711,
+                22,
+                -3.95711
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    21,
+                    69
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    24,
+                    69
+                  ],
+                  "uv_size": [
+                    -3,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    25,
+                    69
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    27,
+                    85
+                  ],
+                  "uv_size": [
+                    3,
+                    -3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                5.23463,
+                14.15224,
+                -10.5
+              ],
+              "size": [
+                0,
+                5,
+                1
+              ],
+              "pivot": [
+                5.23463,
+                17.15224,
+                -10
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    9,
+                    86
+                  ],
+                  "uv_size": [
+                    -1,
+                    5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group5",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group",
+          "pivot": [
+            5.23463,
+            17.15224,
+            -10
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group6",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group5",
+          "pivot": [
+            6.5,
+            14,
+            -11.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                13.5,
+                -12
+              ],
+              "size": [
+                4,
+                1,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    13,
+                    73
+                  ],
+                  "uv_size": [
+                    4,
+                    1
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    13,
+                    73
+                  ],
+                  "uv_size": [
+                    4,
+                    1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    13,
+                    73
+                  ],
+                  "uv_size": [
+                    4,
+                    1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    13,
+                    73
+                  ],
+                  "uv_size": [
+                    4,
+                    1
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    22,
+                    85
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                4,
+                2.3,
+                -12
+              ],
+              "size": [
+                4,
+                1,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    14,
+                    92
+                  ],
+                  "uv_size": [
+                    4,
+                    1
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    18,
+                    93
+                  ],
+                  "uv_size": [
+                    -4,
+                    -1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    18,
+                    93
+                  ],
+                  "uv_size": [
+                    -4,
+                    -1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    18,
+                    93
+                  ],
+                  "uv_size": [
+                    -4,
+                    -1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    3,
+                    90
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                2.4,
+                3.3,
+                -13.6
+              ],
+              "size": [
+                7.2,
+                10.2,
+                7.2
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    3,
+                    75
+                  ],
+                  "uv_size": [
+                    7,
+                    10
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    3,
+                    75
+                  ],
+                  "uv_size": [
+                    7,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    3,
+                    75
+                  ],
+                  "uv_size": [
+                    7,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    3,
+                    75
+                  ],
+                  "uv_size": [
+                    7,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    13,
+                    65
+                  ],
+                  "uv_size": [
+                    7,
+                    7
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    11,
+                    82
+                  ],
+                  "uv_size": [
+                    7,
+                    -7
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.glow1",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group6",
+          "pivot": [
+            5.23463,
+            17.15224,
+            -10
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.5,
+                3.5,
+                -11.5
+              ],
+              "size": [
+                3,
+                5,
+                3
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    26,
+                    76
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    26,
+                    76
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    26,
+                    76
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    26,
+                    76
+                  ],
+                  "uv_size": [
+                    3,
+                    5
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    22,
+                    90
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    26,
+                    93
+                  ],
+                  "uv_size": [
+                    3,
+                    -3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                4.5,
+                8.5,
+                -10
+              ],
+              "size": [
+                3,
+                3,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    3,
+                    91
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    3,
+                    91
+                  ],
+                  "uv_size": [
+                    3,
+                    3
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_bamboo_lantern_staff.group7",
+          "parent": "cosmetic.hands.hands_bamboo_lantern_staff.group6",
+          "pivot": [
+            6,
+            8.22911,
+            -10
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1.24246,
+                4.25,
+                -13.5
+              ],
+              "size": [
+                9,
+                9,
+                0
+              ],
+              "pivot": [
+                5.25754,
+                11.8,
+                -13.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -45
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    3,
+                    65
+                  ],
+                  "uv_size": [
+                    9,
+                    9
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -1.24246,
+                4.25,
+                -6.5
+              ],
+              "size": [
+                9,
+                9,
+                0
+              ],
+              "pivot": [
+                5.25754,
+                11.8,
+                -6.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -45
+              ],
+              "uv": {
+                "south": {
+                  "uv": [
+                    12,
+                    65
+                  ],
+                  "uv_size": [
+                    -9,
+                    9
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                9.5,
+                3.72911,
+                -14.5
+              ],
+              "size": [
+                0,
+                9,
+                9
+              ],
+              "pivot": [
+                6,
+                8.22911,
+                -10
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    12,
+                    65
+                  ],
+                  "uv_size": [
+                    -9,
+                    9
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                2.5,
+                3.72911,
+                -14.5
+              ],
+              "size": [
+                0,
+                9,
+                9
+              ],
+              "pivot": [
+                6,
+                8.22911,
+                -10
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    3,
+                    65
+                  ],
+                  "uv_size": [
+                    9,
+                    9
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

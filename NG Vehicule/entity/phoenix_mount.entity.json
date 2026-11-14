@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:phoenix_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/phoenix_mount"
+			},
+			"geometry": {
+				"default": "geometry.ng_bike_phoenix"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"flame_spin": "animation.ng_bike_phoenix.flame_spin",
+				"fly_forward": "animation.ng_bike_phoenix.fly_forward",
+				"fly_idle": "animation.ng_bike_phoenix.fly_idle",
+				"grab": "animation.ng_bike_phoenix.grab",
+				"terre_forward": "animation.ng_bike_phoenix.terre_forward",
+				"terre_idle": "animation.ng_bike_phoenix.terre_idle",
+				"ambient": "animation.ng_bike_phoenix.ambient",
+				"move": "controller.animation.ng_bike_phoenix.move",
+				"ambient_ctrl": "controller.animation.ng_bike_phoenix.ambient"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.env = math.clamp(q.mark_variant, 0, 2);",
+					"v.moving = (q.modified_move_speed > 0.05 || (v.env != 0 && math.abs(q.vertical_speed) > 0.05)) ? 1 : 0;",
+					"v.mounted = q.has_rider ? 1 : 0;",
+					"v.etat = v.env * 4 + v.moving * 2 + v.mounted;",
+					"v.capacite = q.variant;"
+				],
+				"animate": [
+					"move",
+					"ambient_ctrl"
+				]
+			},
+			"sound_effects": {
+				"ambient": "ng_bike.eagle.ambient",
+				"fly_idle": "ng_bike.eagle.fly_idle",
+				"grab": "ng_bike.eagle.grab",
+				"ground_forward": "ng_bike.eagle.ground_forward"
+			}
+		}
+	}
+}

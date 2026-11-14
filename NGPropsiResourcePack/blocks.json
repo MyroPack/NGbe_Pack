@@ -7218,6 +7218,17 @@
     "textures" : "propsi_invisible",
     "sound" : "wood"
   },
+  "propsi:atm" : {
+    "textures" : "propsi_invisible",
+    "sound" : "metal"
+  },
+  "propsi:atm_wood" : {
+    "textures" : "propsi_invisible",
+    "sound" : "wood"
+  },
+  "propsi:oversized_part_atm" : {
+    "textures" : "propsi_invisible"
+  },
   "propsi:acacia_trim" : {
     "textures" : {
       "up" : "acacia_trim_top",

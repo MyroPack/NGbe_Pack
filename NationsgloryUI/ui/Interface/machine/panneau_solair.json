@@ -342,7 +342,7 @@
                                         "controls":[
 
                                               {"text@ng_module.label":{
-                                                "text":"Surchauffe",
+                                                "text":"ng.machine.overheat",
                                                 "font_scale_factor": 0.6    
                                               }},
 
@@ -357,7 +357,7 @@
                                                   "size": ["100%c", "100%"],
                                                   "$font_scale_factor": 0.6,
                                                   "$text_offset": [0, -2]
-                                              }}
+                                              }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                                       ]}},
 
                                       {"content@ng_module.stackpanel":{
@@ -370,7 +370,7 @@
                                                   "controls":[
 
                                                         {"text@ng_module.label":{
-                                                          "text":"Consomation",
+                                                          "text":"ng.machine.consumption",
                                                           "size":["default",10],
                                                           "font_scale_factor": 0.6    
                                                         }}

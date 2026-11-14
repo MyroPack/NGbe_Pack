@@ -463,6 +463,147 @@
     },
     "ngb_bestiary_book": {
       "textures": "textures/items/ngb/bestiary_book"
+    },
+    "ngb_loot_hawk_wings": {
+      "textures": "textures/items/ngb/loot/hawk_wings"
+    },
+    "ngb_loot_skjornars_shield": {
+      "textures": "textures/items/ngb/loot/skjornars_shield"
+    },
+    "ngb_loot_infection": {
+      "textures": "textures/items/ngb/loot/infection"
+    },
+    "ngb_loot_ants_shell": {
+      "textures": "textures/items/ngb/loot/ants_shell"
+    },
+    "ngb_loot_animal_shell": {
+      "textures": "textures/items/ngb/loot/animal_shell"
+    },
+    "ngb_loot_scorpio_shell": {
+      "textures": "textures/items/ngb/loot/scorpio_shell"
+    },
+    "ngb_loot_turtle_shell": {
+      "textures": "textures/items/ngb/loot/turtle_shell"
+    },
+    "ngb_loot_toxic_shroom": {
+      "textures": "textures/items/ngb/loot/toxic_shroom"
+    },
+    "ngb_loot_corne_dantilope": {
+      "textures": "textures/items/ngb/loot/corne_dantilope"
+    },
+    "ngb_loot_ibex_horn": {
+      "textures": "textures/items/ngb/loot/ibex_horn"
+    },
+    "ngb_loot_animal_horn": {
+      "textures": "textures/items/ngb/loot/animal_horn"
+    },
+    "ngb_loot_lion_tooth": {
+      "textures": "textures/items/ngb/loot/lion_tooth"
+    },
+    "ngb_loot_animal_tusk": {
+      "textures": "textures/items/ngb/loot/animal_tusk"
+    },
+    "ngb_loot_warthog_tusk": {
+      "textures": "textures/items/ngb/loot/warthog_tusk"
+    },
+    "ngb_loot_animal_tooth": {
+      "textures": "textures/items/ngb/loot/animal_tooth"
+    },
+    "ngb_loot_orca_tooth": {
+      "textures": "textures/items/ngb/loot/orca_tooth"
+    },
+    "ngb_loot_shark_tooth": {
+      "textures": "textures/items/ngb/loot/shark_tooth"
+    },
+    "ngb_loot_scale": {
+      "textures": "textures/items/ngb/loot/scale"
+    },
+    "ngb_loot_alligator_scale": {
+      "textures": "textures/items/ngb/loot/alligator_scale"
+    },
+    "ngb_loot_glow_ink": {
+      "textures": "textures/items/ngb/loot/glow_ink"
+    },
+    "ngb_loot_bison_fur": {
+      "textures": "textures/items/ngb/loot/bison_fur"
+    },
+    "ngb_loot_jellyfish_jelly": {
+      "textures": "textures/items/ngb/loot/jellyfish_jelly"
+    },
+    "ngb_loot_animal_claw": {
+      "textures": "textures/items/ngb/loot/animal_claw"
+    },
+    "ngb_loot_seahorse": {
+      "textures": "textures/items/ngb/loot/seahorse"
+    },
+    "ngb_loot_ivory": {
+      "textures": "textures/items/ngb/loot/ivory"
+    },
+    "ngb_loot_simple_solar_module": {
+      "textures": "textures/items/ngb/loot/simple_solar_module"
+    },
+    "ngb_loot_global_bones": {
+      "textures": "textures/items/ngb/loot/global_bones"
+    },
+    "ngb_loot_bear_paw": {
+      "textures": "textures/items/ngb/loot/bear_paw"
+    },
+    "ngb_loot_donkeys_hide": {
+      "textures": "textures/items/ngb/loot/donkeys_hide"
+    },
+    "ngb_loot_bear_hide": {
+      "textures": "textures/items/ngb/loot/bear_hide"
+    },
+    "ngb_loot_capybara_hide": {
+      "textures": "textures/items/ngb/loot/capybara_hide"
+    },
+    "ngb_loot_horse_hide": {
+      "textures": "textures/items/ngb/loot/horse_hide"
+    },
+    "ngb_loot_giraffe_hide": {
+      "textures": "textures/items/ngb/loot/giraffe_hide"
+    },
+    "ngb_loot_rabbit_hide": {
+      "textures": "textures/items/ngb/loot/rabbit_hide"
+    },
+    "ngb_loot_sheep_hide": {
+      "textures": "textures/items/ngb/loot/sheep_hide"
+    },
+    "ngb_loot_monkey_hide": {
+      "textures": "textures/items/ngb/loot/monkey_hide"
+    },
+    "ngb_loot_tiger_hide": {
+      "textures": "textures/items/ngb/loot/tiger_hide"
+    },
+    "ngb_loot_cow_hide": {
+      "textures": "textures/items/ngb/loot/cow_hide"
+    },
+    "ngb_loot_zebra_hide": {
+      "textures": "textures/items/ngb/loot/zebra_hide"
+    },
+    "ngb_loot_hedgehog_spine": {
+      "textures": "textures/items/ngb/loot/hedgehog_spine"
+    },
+    "ngb_loot_rapace_feather": {
+      "textures": "textures/items/ngb/loot/rapace_feather"
+    },
+    "ngb_loot_ink_bag": {
+      "textures": "textures/items/ngb/loot/ink_bag"
+    },
+    "ngb_loot_animal_fur": {
+      "textures": "textures/items/ngb/loot/animal_fur"
+    },
+    "ngb_loot_insect_powder": {
+      "textures": "textures/items/ngb/loot/insect_powder"
+    },
+    "ngb_loot_squirrel_tail": {
+      "textures": "textures/items/ngb/loot/squirrel_tail"
+    },
+    "ngb_loot_honeycomb": {
+      "textures": "textures/items/ngb/loot/honeycomb"
+    },
+    "ngb_loot_jellyfish_residue": {
+      "textures": "textures/items/ngb/loot/jellyfish_residue"
     }
   }
 }

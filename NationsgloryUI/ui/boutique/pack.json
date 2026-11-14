@@ -730,7 +730,7 @@
         }
       },
       {
-        "gem@ng_boutique_asset.rarity_gem": {
+        "gem@ng_boutique_asset.rarity_gem_large": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [

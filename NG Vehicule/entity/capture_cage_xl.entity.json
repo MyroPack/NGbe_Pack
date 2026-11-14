@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:capture_cage_xl",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/capture_cage_xl"
+			},
+			"geometry": {
+				"default": "geometry.capture_cage_xl"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

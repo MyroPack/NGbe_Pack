@@ -20,8 +20,11 @@
         "controller": "controller.animation.ng.baby_chicken.move"
       },
       "scripts": {
+        "initialize": [
+          "variable.ngb_moving = 0.0;"
+        ],
         "pre_animation": [
-          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+          "variable.ngb_moving = variable.ngb_moving ? query.modified_move_speed > 0.02 : query.modified_move_speed > 0.05;"
         ],
         "animate": [
           "controller"

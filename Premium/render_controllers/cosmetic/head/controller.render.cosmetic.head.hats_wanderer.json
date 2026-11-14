@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.head.hats_wanderer": {
+      "geometry": "Geometry.cosmetic.head.hats_wanderer",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.head.hats_wanderer"
+      ]
+    }
+  }
+}

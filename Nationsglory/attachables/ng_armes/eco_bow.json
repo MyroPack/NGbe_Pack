@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:eco_bow",
+      "item": {
+        "ng:eco_bow": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/items/ng_armes/eco_bow_standby",
+        "bow_pulling_0": "textures/items/ng_armes/eco_bow_pulling_0",
+        "bow_pulling_1": "textures/items/ng_armes/eco_bow_pulling_1",
+        "bow_pulling_2": "textures/items/ng_armes/eco_bow_pulling_2",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.ng_arme.eco_bow_standby",
+        "bow_pulling_0": "geometry.ng_arme.eco_bow_pulling_0",
+        "bow_pulling_1": "geometry.ng_arme.eco_bow_pulling_1",
+        "bow_pulling_2": "geometry.ng_arme.eco_bow_pulling_2"
+      },
+      "animations": {
+        "wield": "animation.ng_arme.arc.wield",
+        "wield_first_person_pull": "animation.ng_arme.arc.wield_first_person_pull"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.use = math.max(query.main_hand_item_use_duration, c.owning_entity->query.main_hand_item_use_duration);",
+          "variable.bow_frame = variable.use <= 0.0 ? 0 : (variable.use < 0.65 ? 1 : (variable.use < 0.9 ? 2 : 3));"
+        ],
+        "animate": [
+          "wield",
+          {
+            "wield_first_person_pull": "variable.use > 0.0 && c.is_first_person"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng_arme.arc"
+      ]
+    }
+  }
+}

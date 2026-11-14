@@ -53,13 +53,64 @@
                                     "controls":[
 
                                         {"title@ng_module.label":{
-                                          "text":"- Statistiques",
+                                          "text":"ng.pays.stats.titre",
                                           "offset":[0,1.9],
                                           "font_type":"MinecraftTen",
                                           "font_scale_factor":0.9
                                         }} 
                                   ]}}
-                            ]}}         
+                            ]}},
+
+                            {"padding@ng_module.panel": {
+                              "size": ["fill", "100%"]
+                            }},
+
+                            {"serie_75@ng_module.multiple_status_button":{
+                              "size":[44,"100%"],
+                              "$size_button":["100%","100%"],
+                              "$index": 75,
+                              "$textures_button_S0": "ng_asset.button_20",
+                              "$textures_button_S1": "ng_asset.button_empty",
+                              "$font_type":"MinecraftTen",
+                              "$S1_text_color":[0.443, 0.443, 0.482],
+                              "$fonction_mapping_button_S0": "nonclickable",
+                              "$fonction_mapping_button_S1": "clickable",
+                              "$S0_type_get_text": "Get_text_type_1",
+                              "$S1_type_get_text": "Get_text_type_1",
+                              "$font_scale_factor": 0.7
+                            }},
+                            {"serie_76@ng_module.multiple_status_button":{
+                              "size":[44,"100%"],
+                              "$size_button":["100%","100%"],
+                              "$index": 76,
+                              "$textures_button_S0": "ng_asset.button_20",
+                              "$textures_button_S1": "ng_asset.button_empty",
+                              "$font_type":"MinecraftTen",
+                              "$S1_text_color":[0.443, 0.443, 0.482],
+                              "$fonction_mapping_button_S0": "nonclickable",
+                              "$fonction_mapping_button_S1": "clickable",
+                              "$S0_type_get_text": "Get_text_type_1",
+                              "$S1_type_get_text": "Get_text_type_1",
+                              "$font_scale_factor": 0.7
+                            }},
+                            {"serie_77@ng_module.multiple_status_button":{
+                              "size":[44,"100%"],
+                              "$size_button":["100%","100%"],
+                              "$index": 77,
+                              "$textures_button_S0": "ng_asset.button_20",
+                              "$textures_button_S1": "ng_asset.button_empty",
+                              "$font_type":"MinecraftTen",
+                              "$S1_text_color":[0.443, 0.443, 0.482],
+                              "$fonction_mapping_button_S0": "nonclickable",
+                              "$fonction_mapping_button_S1": "clickable",
+                              "$S0_type_get_text": "Get_text_type_1",
+                              "$S1_type_get_text": "Get_text_type_1",
+                              "$font_scale_factor": 0.7
+                            }},
+
+                            {"padding@ng_module.panel": {
+                              "size": [3, "100%"]
+                            }}
                       ]}}
 
                 ]}},
@@ -516,7 +567,7 @@
 
                                                                               {"label@ng_module.label":{
                                                                                 "font_type":"MinecraftTen",
-                                                                                "text":"legende",
+                                                                                "text":"ng.pays.stats.legende",
                                                                                 "offset":[0,-1.3],
                                                                                 "font_scale_factor":0.8,
                                                                                 "color":[0.624, 0.624, 0.663]
@@ -543,11 +594,13 @@
                                                                           "size": ["100%c", "100%"],
                                                                           "controls":[
 
-                                                                              {"label@ng_module.label":{
-                                                                                "text":"Note",
+                                                                              {"label@ng_module.Simple_text":{
+                                                                                "$type_get_text": "Get_text_type_1",
+                                                                                "$index": 78,
                                                                                 "layer":4,
-                                                                                "offset":[0,-0.7],
-                                                                                "font_scale_factor":0.7
+                                                                                "$text_offset":[0,-0.7],
+                                                                                "size": ["100%c","100%"],
+                                                                                "$font_scale_factor":0.7
                                                                               }}
                                                                         ]}},
 
@@ -656,7 +709,7 @@
                                                           "$load_bar_size": ["100%","100%"],
                                                           "$orientation": "vertical",
                                                           "$color_border": [0.604,0.902,0.0],
-                                                          "$layer_percent": 30,
+                                                          "$layer_percent": 7,
                                                           "$texture_background_bar": "ng_asset.background_empty",
                                                           "$texture_background_top": "textures/ui/background/background_white"
                                                         }},

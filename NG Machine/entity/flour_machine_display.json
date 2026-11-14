@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:flour_machine_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_flour_machine",
+        "adaptateurs": "textures/blocks/rubber_maker"
+      },
+      "geometry": {
+        "default": "geometry.ng_flour_machine",
+        "adaptateurs": "geometry.ng_flour_machine_adaptateurs"
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.ng_agri_adaptateurs"
+      ],
+      "animations": {
+        "working": "animation.ng_flour_machine.working"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "working": "q.variant == 1"
+          }
+        ]
+      }
+    }
+  }
+}

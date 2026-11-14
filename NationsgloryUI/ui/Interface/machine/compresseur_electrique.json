@@ -394,7 +394,7 @@
                             "controls":[
 
                               {"text@ng_module.label":{
-                                "text":"Surchauffe",
+                                "text":"ng.machine.overheat",
                                 "font_scale_factor": 0.6
                               }},
 
@@ -402,17 +402,7 @@
                                 "size":["fill","100%"]
                               }},
 
-                              {"status@ng_module.multiple_status_text": {
-                                "$S0_type_get_text": "Get_text_type_1",
-                                "$S1_type_get_text": "Get_text_type_1",
-                                "$index": 10,
-                                "$S0_text_color": [1.000, 0.537, 0.012],
-                                "$S1_text_color":[0.604, 0.902, 0.000],
-                                "layer":10,
-                                "size": ["100%c", "100%"],
-                                "$font_scale_factor": 0.6,
-                                "$text_offset": [0, -2]
-                              }}
+                              {"heat_bar@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 14, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.6, "$text_offset": [0, -2] }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                             ]}},
 
                           {"content@ng_module.stackpanel":{
@@ -425,7 +415,7 @@
                                 "controls":[
 
                                   {"text@ng_module.label":{
-                                    "text":"Consomation",
+                                    "text":"ng.machine.consumption",
                                     "size":["default",10],
                                     "font_scale_factor": 0.6
                                   }}
@@ -458,7 +448,7 @@
 
               {"text@ng_module.Simple_text": {
                 "$type_get_text": "Get_text_type_1",
-                "$index": 23,
+                "$index": 15,
                 "layer":15,
                 "$text_size":[90,92],
                 "size":["100%c","100%"],
@@ -720,14 +710,10 @@
                             "$index": 51,
                             "layer":10,
                             "size": ["100%c", "100%"],
-                            "$size_icone_right": [6,6],
-                            "$offset_icone_right":[0,-1],
                             "$text_color":[0.443, 0.443, 0.482],
-                            "$color_icone_right": [0.443, 0.443, 0.482],
-                            "$texture_icone_right": "ng_asset.icon_07",
                             "$font_scale_factor": 0.5,
                             "$text_offset": [0, -0.6]
-                          }}
+                          }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                         ]}},
 
                       {"loading_bar@ng_module.loading_bar": {

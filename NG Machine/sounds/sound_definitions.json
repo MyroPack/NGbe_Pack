@@ -15,6 +15,18 @@
       "sounds": [
         { "name": "sounds/rocket/rocket_liftoff", "stream": true, "volume": 1.0 }
       ]
+    },
+    "ng.parabole.missile_alert": {
+      "category": "hostile",
+      "sounds": [
+        { "name": "sounds/parabole/missile_alert", "stream": true, "volume": 1.0 }
+      ]
+    },
+    "ng.parabole.intrusion_alert": {
+      "category": "hostile",
+      "sounds": [
+        { "name": "sounds/parabole/intrusion_alert", "volume": 1.0 }
+      ]
     }
   }
 }

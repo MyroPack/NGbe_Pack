@@ -379,7 +379,7 @@
                                                     "controls":[
 
                                                         {"text@ng_module.label":{
-                                                          "text":"Surchauffe",
+                                                          "text":"ng.machine.overheat",
                                                           "font_scale_factor": 0.6    
                                                         }},
 
@@ -387,17 +387,7 @@
                                                           "size":["fill","100%"]
                                                         }},
 
-                                                        {"status@ng_module.multiple_status_text": {
-                                                          "$S0_type_get_text": "Get_text_type_1",
-                                                          "$S1_type_get_text": "Get_text_type_1",
-                                                          "$index": 10,
-                                                          "$S0_text_color": [1.000, 0.537, 0.012],
-                                                          "$S1_text_color":[0.604, 0.902, 0.000],
-                                                          "layer":10,
-                                                          "size": ["100%c", "100%"],
-                                                          "$font_scale_factor": 0.6,  
-                                                          "$text_offset": [0, -2]                                  
-                                                        }}
+                                                        {"heat_bar@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 14, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.6, "$text_offset": [0, -2] }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                                                   ]}},
 
                                                   {"content@ng_module.stackpanel":{
@@ -410,7 +400,7 @@
                                                           "controls":[
 
                                                                 {"text@ng_module.label":{
-                                                                  "text":"Consomation",
+                                                                  "text":"ng.machine.consumption",
                                                                   "size":["default",10],
                                                                   "font_scale_factor": 0.6    
                                                                 }}
@@ -485,9 +475,7 @@
                                                       "size":["100%",20],
                                                       "controls":[
 
-                                                              {"slot_1@ng_module.custome_slot":{
-                                                                  "$index":21
-                                                              }},
+                                                              {"slot_1@ecotron.slot_with_ghost":{ "$slot_index":21, "$ghost_texture":"textures/items/iron_chestplate" }},
 
                                                               {"padding@ng_module.panel": {
                                                                 "size": ["fill", "100%"],
@@ -499,9 +487,7 @@
                                                                   }}
                                                               ]}},
 
-                                                              {"slot_1@ng_module.custome_slot":{
-                                                                  "$index":22
-                                                              }}
+                                                              {"slot_1@ecotron.slot_with_ghost":{ "$slot_index":22, "$ghost_texture":"textures/items/eco_item" }}
                                                     ]}},
 
                                                     {"padding@ng_module.panel":{
@@ -527,14 +513,10 @@
                                                               "$index": 23,
                                                               "layer":10,
                                                               "size": ["100%c", "100%"],
-                                                              "$size_icone_right": [6,6],
-                                                              "$offset_icone_right":[0,-1],
                                                               "$text_color":[0.443, 0.443, 0.482],
-                                                              "$color_icone_right": [0.443, 0.443, 0.482],
-                                                              "$texture_icone_right": "ng_asset.icon_07",
                                                               "$font_scale_factor": 0.5,
                                                               "$text_offset": [0, -0.6]
-                                                            }}
+                                                            }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                                                     ]}},
 
                                                     {"loading_bar@ng_module.loading_bar": {
@@ -600,11 +582,42 @@
 
 
                   ]}}
-  ]}}
+  ]},
 
+  // Une case avec, tant qu'elle est vide, l'image de l'objet attendu (ou produit) en transparence : une image fixe du
+  // pack ($ghost_texture). Le rendu d'objet lu dans une case cachee ne se voyait pas en jeu (31/10, 16 h 41).
+  "slot_with_ghost@ng_module.panel":{
+    "size":[21,21],
+    "$ghost_texture|default":"",
+    "controls":[
+      {"cell@ng_module.collectionpanel":{
+        "collection_name":"container_items",
+        "size":["100%","100%"],
+        "controls":[
+          {"slot@ng_module.custome_slot":{ "$index":"$slot_index" }},
+          {"ghost@ecotron.ghost_image":{ "$index":"$slot_index", "layer":10 }}
+        ]
+      }}
+    ]
+  },
 
+  // L'image de l'objet attendu, sur la case $index tant qu'elle est vide : texte de survol de la case vide, le test des
+  // cartes de la boutique (boutique/inventory.json). Une image ne prend ni clic ni survol : la case dessous les garde.
+  "ghost_image@ng_module.panel":{
+    "size":["100%","100%"],
+    "collection_index":"$index",
+    "controls":[
+      {"image":{
+        "type":"image",
+        "texture":"$ghost_texture",
+        "size":[16,16],
+        "alpha":0.4,
+        "bindings":[
+          {"binding_name":"#hover_text","binding_type":"collection","binding_collection_name":"container_items"},
+          {"binding_type":"view","source_property_name":"(#hover_text = '')","target_property_name":"#visible"}
+        ]
+      }}
+    ]
+  }
 
-
-
-
-
+}

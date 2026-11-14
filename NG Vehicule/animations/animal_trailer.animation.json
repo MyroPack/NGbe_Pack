@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.animal_trailer.roues": {
+			"loop": true,
+			"bones": {
+				"wheel": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				},
+				"wheel2": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				},
+				"wheel3": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				},
+				"wheel4": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

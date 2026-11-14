@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.cosmetic.head.hats_demon_king_helmet.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "cosmetic.head.hats_demon_king_helmet.crown": {
+          "position": [
+            0,
+            "0+math.sin((query.life_time)*360/2)*0.5",
+            0
+          ]
+        }
+      }
+    }
+  }
+}

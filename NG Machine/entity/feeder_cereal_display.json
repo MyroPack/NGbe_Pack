@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:feeder_cereal_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_feeder_cereal",
+        "niveaux": "textures/entity/ng_feeder_cereal_level"
+      },
+      "geometry": {
+        "default": "geometry.ng_feeder_cereal",
+        "niveaux": "geometry.ng_feeder_cereal_level"
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.ng_feeder_level"
+      ]
+    }
+  }
+}

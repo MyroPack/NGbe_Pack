@@ -1,6 +1,297 @@
 {
   "texture_name" : "atlas.terrain",
   "texture_data" : {
+    "ngcrop_eggplant_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/eggplant_crop/stage15"
+    },
+    "ngcrop_oat_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/oat_crop/stage15"
+    },
+    "ngcrop_arctic_oat_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/arctic_oat_crop/stage15"
+    },
+    "ngcrop_wheat_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage0"
+    },
+    "ngcrop_wheat_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage1"
+    },
+    "ngcrop_wheat_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage2"
+    },
+    "ngcrop_wheat_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage3"
+    },
+    "ngcrop_wheat_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage4"
+    },
+    "ngcrop_wheat_crop_s5" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage5"
+    },
+    "ngcrop_wheat_crop_s6" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage6"
+    },
+    "ngcrop_wheat_crop_s7" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage7"
+    },
+    "ngcrop_wheat_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/wheat_crop/stage15"
+    },
+    "ngcrop_carrot_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/carrot_crop/stage0"
+    },
+    "ngcrop_carrot_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/carrot_crop/stage1"
+    },
+    "ngcrop_carrot_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/carrot_crop/stage2"
+    },
+    "ngcrop_carrot_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/carrot_crop/stage3"
+    },
+    "ngcrop_carrot_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/carrot_crop/stage15"
+    },
+    "ngcrop_cabbage_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage15"
+    },
+    "ngcrop_zucchini_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/zucchini_crop/stage15"
+    },
+    "ngcrop_glazed_spelt_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/glazed_spelt_crop/stage15"
+    },
+    "ngcrop_spinach_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage15"
+    },
+    "ngcrop_lentil_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage15"
+    },
+    "ngcrop_corn_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage15"
+    },
+    "ngcrop_onion_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/onion_crop/stage15"
+    },
+    "ngcrop_barley_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage15"
+    },
+    "ngcrop_bell_pepper_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/bell_pepper_crop/stage15"
+    },
+    "ngcrop_potato_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/potato_crop/stage0"
+    },
+    "ngcrop_potato_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/potato_crop/stage1"
+    },
+    "ngcrop_potato_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/potato_crop/stage2"
+    },
+    "ngcrop_potato_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/potato_crop/stage3"
+    },
+    "ngcrop_potato_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/potato_crop/stage15"
+    },
+    "ngcrop_rye_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage15"
+    },
+    "ngcrop_soybean_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/soybean_crop/stage15"
+    },
+    "ngcrop_tomato_crop_s15" : {
+      "textures" : "textures/blocks/ng_cultures/tomato_crop/stage15"
+    },
+    "ngcrop_barley_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage0"
+    },
+    "ngcrop_barley_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage1"
+    },
+    "ngcrop_barley_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage2"
+    },
+    "ngcrop_barley_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage3"
+    },
+    "ngcrop_barley_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/barley_crop/stage4"
+    },
+    "ngcrop_oat_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/oat_crop/stage0"
+    },
+    "ngcrop_oat_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/oat_crop/stage1"
+    },
+    "ngcrop_oat_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/oat_crop/stage3"
+    },
+    "ngcrop_soybean_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/soybean_crop/stage0"
+    },
+    "ngcrop_soybean_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/soybean_crop/stage1"
+    },
+    "ngcrop_soybean_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/soybean_crop/stage2"
+    },
+    "ngcrop_soybean_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/soybean_crop/stage3"
+    },
+    "ngcrop_corn_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage0"
+    },
+    "ngcrop_corn_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage1"
+    },
+    "ngcrop_corn_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage2"
+    },
+    "ngcrop_corn_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage3"
+    },
+    "ngcrop_corn_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/corn_crop/stage4"
+    },
+    "ngcrop_rye_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage0"
+    },
+    "ngcrop_rye_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage1"
+    },
+    "ngcrop_rye_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage2"
+    },
+    "ngcrop_rye_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage3"
+    },
+    "ngcrop_rye_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/rye_crop/stage4"
+    },
+    "ngcrop_glazed_spelt_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/glazed_spelt_crop/stage0"
+    },
+    "ngcrop_glazed_spelt_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/glazed_spelt_crop/stage1"
+    },
+    "ngcrop_glazed_spelt_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/glazed_spelt_crop/stage2"
+    },
+    "ngcrop_arctic_oat_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/arctic_oat_crop/stage0"
+    },
+    "ngcrop_arctic_oat_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/arctic_oat_crop/stage1"
+    },
+    "ngcrop_arctic_oat_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/arctic_oat_crop/stage2"
+    },
+    "ngcrop_eggplant_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/eggplant_crop/stage0"
+    },
+    "ngcrop_eggplant_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/eggplant_crop/stage1"
+    },
+    "ngcrop_eggplant_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/eggplant_crop/stage2"
+    },
+    "ngcrop_eggplant_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/eggplant_crop/stage3"
+    },
+    "ngcrop_tomato_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/tomato_crop/stage0"
+    },
+    "ngcrop_tomato_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/tomato_crop/stage1"
+    },
+    "ngcrop_tomato_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/tomato_crop/stage2"
+    },
+    "ngcrop_tomato_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/tomato_crop/stage3"
+    },
+    "ngcrop_spinach_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage0"
+    },
+    "ngcrop_spinach_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage1"
+    },
+    "ngcrop_spinach_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage2"
+    },
+    "ngcrop_spinach_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage3"
+    },
+    "ngcrop_spinach_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/spinach_crop/stage4"
+    },
+    "ngcrop_cabbage_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage0"
+    },
+    "ngcrop_cabbage_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage1"
+    },
+    "ngcrop_cabbage_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage2"
+    },
+    "ngcrop_cabbage_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage3"
+    },
+    "ngcrop_cabbage_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/cabbage_crop/stage4"
+    },
+    "ngcrop_onion_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/onion_crop/stage0"
+    },
+    "ngcrop_onion_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/onion_crop/stage1"
+    },
+    "ngcrop_onion_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/onion_crop/stage2"
+    },
+    "ngcrop_onion_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/onion_crop/stage3"
+    },
+    "ngcrop_lentil_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage0"
+    },
+    "ngcrop_lentil_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage1"
+    },
+    "ngcrop_lentil_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage2"
+    },
+    "ngcrop_lentil_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage3"
+    },
+    "ngcrop_lentil_crop_s4" : {
+      "textures" : "textures/blocks/ng_cultures/lentil_crop/stage4"
+    },
+    "ngcrop_zucchini_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/zucchini_crop/stage0"
+    },
+    "ngcrop_zucchini_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/zucchini_crop/stage1"
+    },
+    "ngcrop_zucchini_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/zucchini_crop/stage2"
+    },
+    "ngcrop_zucchini_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/zucchini_crop/stage3"
+    },
+    "ngcrop_bell_pepper_crop_s0" : {
+      "textures" : "textures/blocks/ng_cultures/bell_pepper_crop/stage0"
+    },
+    "ngcrop_bell_pepper_crop_s1" : {
+      "textures" : "textures/blocks/ng_cultures/bell_pepper_crop/stage1"
+    },
+    "ngcrop_bell_pepper_crop_s2" : {
+      "textures" : "textures/blocks/ng_cultures/bell_pepper_crop/stage2"
+    },
+    "ngcrop_bell_pepper_crop_s3" : {
+      "textures" : "textures/blocks/ng_cultures/bell_pepper_crop/stage3"
+    },
     "storage_module_0" : {
       "textures" : "textures/blocks/storage_module_0"
     },
@@ -63,6 +354,27 @@
     },
     "shadow_ore" : {
       "textures" : "textures/blocks/shadow_ore"
+    },
+    "moon_copper_ore" : {
+      "textures" : "textures/blocks/moon_copper_ore"
+    },
+    "moon_tin_ore" : {
+      "textures" : "textures/blocks/moon_tin_ore"
+    },
+    "mars_copper_ore" : {
+      "textures" : "textures/blocks/mars_copper_ore"
+    },
+    "mars_tin_ore" : {
+      "textures" : "textures/blocks/mars_tin_ore"
+    },
+    "mars_iron_ore" : {
+      "textures" : "textures/blocks/mars_iron_ore"
+    },
+    "edora_tin_ore" : {
+      "textures" : "textures/blocks/edora_tin_ore"
+    },
+    "edora_zirconium_ore" : {
+      "textures" : "textures/blocks/edora_zirconium_ore"
     },
     "meteor_terrestre" : {
       "textures" : "textures/blocks/meteor/meteor_terrestre"

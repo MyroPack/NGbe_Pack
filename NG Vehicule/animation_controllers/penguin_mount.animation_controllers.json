@@ -1,0 +1,217 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng_bike_penguin.move": {
+			"initial_state": "terre_idle",
+			"states": {
+				"terre_idle": {
+					"animations": [
+						"terre_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_idle_mount": {
+					"animations": [
+						"terre_idle_mount"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_forward": {
+					"animations": [
+						"terre_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"aqua_idle": {
+					"animations": [
+						"aqua_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"aqua_forward": {
+					"animations": [
+						"aqua_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"slide": {
+					"animations": [
+						"slide"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"death": {
+					"animations": [
+						"death"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4) && !(v.capacite == 3)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5) && !(v.capacite == 3)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_idle": "q.is_alive && (v.etat == 8 || v.etat == 9) && !(v.capacite == 3)"
+						},
+						{
+							"aqua_forward": "q.is_alive && (v.etat == 10 || v.etat == 11) && !(v.capacite == 3)"
+						},
+						{
+							"slide": "q.is_alive && v.capacite == 3"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ng_bike_penguin.ambient": {
+			"initial_state": "attente",
+			"states": {
+				"attente": {
+					"on_entry": [
+						"v.ambiance_fin = q.life_time + math.random(10, 20);"
+					],
+					"transitions": [
+						{
+							"son": "q.life_time >= v.ambiance_fin"
+						}
+					]
+				},
+				"son": {
+					"animations": [
+						"ambient"
+					],
+					"transitions": [
+						{
+							"attente": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,187 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ngcrop_cabbage_crop_s2",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [
+          0,
+          0.75,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "base",
+          "pivot": [
+            0,
+            8,
+            0
+          ]
+        },
+        {
+          "name": "group2",
+          "parent": "base",
+          "pivot": [
+            5.30401,
+            4.30259,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5.30401,
+                -3.19741,
+                -7
+              ],
+              "size": [
+                0,
+                15,
+                14
+              ],
+              "pivot": [
+                5.30401,
+                4.30259,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                45
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    14,
+                    15
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.30401,
+                -3.19741,
+                -7
+              ],
+              "size": [
+                0,
+                15,
+                14
+              ],
+              "pivot": [
+                -5.30401,
+                4.30259,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                -45
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    14,
+                    0
+                  ],
+                  "uv_size": [
+                    -14,
+                    15
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "group",
+          "parent": "base",
+          "pivot": [
+            0,
+            4.3033,
+            -5.3033
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7,
+                -3.1967,
+                5.3033
+              ],
+              "size": [
+                14,
+                15,
+                0
+              ],
+              "pivot": [
+                0,
+                4.3033,
+                5.3033
+              ],
+              "rotation": [
+                -45,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    14,
+                    0
+                  ],
+                  "uv_size": [
+                    -14,
+                    15
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -7,
+                -3.1967,
+                -5.3033
+              ],
+              "size": [
+                14,
+                15,
+                0
+              ],
+              "pivot": [
+                0,
+                4.3033,
+                -5.3033
+              ],
+              "rotation": [
+                45,
+                0,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    14,
+                    15
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

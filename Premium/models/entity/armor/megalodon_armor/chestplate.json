@@ -1,0 +1,657 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.player.armor.megalodon_chestplate",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 6,
+        "visible_bounds_offset": [
+          0,
+          1,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                17.2,
+                -4
+              ],
+              "size": [
+                10,
+                8,
+                7
+              ],
+              "inflate": 0.1,
+              "uv": [
+                0,
+                20
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                11,
+                -3
+              ],
+              "size": [
+                10,
+                6,
+                6
+              ],
+              "inflate": 0.1,
+              "uv": [
+                34,
+                33
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                12,
+                -3.3
+              ],
+              "size": [
+                4,
+                4,
+                1
+              ],
+              "uv": [
+                83,
+                40
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                8,
+                -4.3
+              ],
+              "size": [
+                4,
+                4,
+                2
+              ],
+              "uv": [
+                85,
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_glow5",
+          "parent": "body",
+          "pivot": [
+            0,
+            20.2,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                17.2,
+                -4
+              ],
+              "size": [
+                10,
+                8,
+                7
+              ],
+              "inflate": 0.1,
+              "uv": [
+                48,
+                80
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_missile_launch",
+          "parent": "body",
+          "pivot": [
+            0,
+            20.2,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                17.2,
+                -4
+              ],
+              "size": [
+                10,
+                8,
+                2
+              ],
+              "inflate": 0.125,
+              "uv": [
+                104,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_trapdoor",
+          "parent": "megalodon_missile_launch",
+          "pivot": [
+            0,
+            17.1,
+            -4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                17.2,
+                -4
+              ],
+              "size": [
+                10,
+                5,
+                2
+              ],
+              "inflate": 0.15,
+              "uv": [
+                104,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_launcher",
+          "parent": "megalodon_missile_launch",
+          "pivot": [
+            0,
+            21.25,
+            3
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3,
+                17,
+                -16
+              ],
+              "size": [
+                6,
+                6,
+                3
+              ],
+              "uv": [
+                94,
+                50
+              ]
+            },
+            {
+              "origin": [
+                -4,
+                17,
+                -13
+              ],
+              "size": [
+                8,
+                6,
+                9
+              ],
+              "uv": [
+                89,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_glow6",
+          "parent": "megalodon_launcher",
+          "pivot": [
+            0,
+            20,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                17,
+                -13
+              ],
+              "size": [
+                8,
+                8,
+                9
+              ],
+              "uv": [
+                82,
+                81
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_target",
+          "parent": "megalodon_launcher",
+          "pivot": [
+            0,
+            23,
+            -11.9
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                23,
+                -12
+              ],
+              "size": [
+                8,
+                1,
+                0
+              ],
+              "uv": [
+                110,
+                42
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_glow9",
+          "parent": "megalodon_target",
+          "pivot": [
+            0,
+            23,
+            -11.9
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4,
+                24,
+                -12
+              ],
+              "size": [
+                8,
+                4,
+                0
+              ],
+              "uv": [
+                110,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_group3",
+          "parent": "body",
+          "pivot": [
+            0,
+            19,
+            -1.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                16,
+                3
+              ],
+              "size": [
+                10,
+                7,
+                3
+              ],
+              "uv": [
+                66,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_group5",
+          "parent": "megalodon_group3",
+          "pivot": [
+            0,
+            18.5,
+            6.5
+          ],
+          "rotation": [
+            -30,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -1,
+                15.5,
+                4.11603
+              ],
+              "size": [
+                2,
+                6,
+                7
+              ],
+              "uv": [
+                75,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -1,
+                17.5,
+                11.11603
+              ],
+              "size": [
+                2,
+                4,
+                1
+              ],
+              "uv": [
+                76,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_group6",
+          "parent": "body",
+          "pivot": [
+            0,
+            12,
+            3.2
+          ],
+          "rotation": [
+            0,
+            180,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                12,
+                3.2
+              ],
+              "size": [
+                4,
+                4,
+                1
+              ],
+              "uv": [
+                83,
+                40
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                8,
+                2.2
+              ],
+              "size": [
+                4,
+                4,
+                2
+              ],
+              "uv": [
+                85,
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leftArm",
+          "parent": "body",
+          "pivot": [
+            6,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                3.5,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                14,
+                5
+              ],
+              "inflate": 0.1,
+              "uv": [
+                40,
+                0
+              ]
+            },
+            {
+              "origin": [
+                6.35,
+                14.15,
+                -3.5
+              ],
+              "size": [
+                4,
+                4,
+                7
+              ],
+              "pivot": [
+                8.35,
+                16.15,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                15
+              ],
+              "uv": [
+                54,
+                45
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_group7",
+          "parent": "leftArm",
+          "pivot": [
+            9.5,
+            24.1,
+            -0.5
+          ],
+          "rotation": [
+            0,
+            0,
+            15
+          ],
+          "cubes": [
+            {
+              "origin": [
+                6,
+                21.1,
+                -3.5
+              ],
+              "size": [
+                7,
+                5,
+                7
+              ],
+              "inflate": 0.1,
+              "uv": [
+                0,
+                35
+              ]
+            },
+            {
+              "origin": [
+                8,
+                26.1,
+                -1.5
+              ],
+              "size": [
+                4,
+                3,
+                2
+              ],
+              "inflate": 0.1,
+              "uv": [
+                30,
+                62
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_glow3",
+          "parent": "megalodon_group7",
+          "pivot": [
+            9.5,
+            24.1,
+            -0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                6,
+                21.1,
+                -3.5
+              ],
+              "size": [
+                7,
+                5,
+                7
+              ],
+              "inflate": 0.1,
+              "uv": [
+                100,
+                116
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightArm",
+          "parent": "body",
+          "pivot": [
+            -6,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.5,
+                11,
+                -2.5
+              ],
+              "size": [
+                5,
+                14,
+                5
+              ],
+              "inflate": 0.1,
+              "uv": [
+                40,
+                0
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "megalodon_group8",
+          "parent": "rightArm",
+          "pivot": [
+            -8.58287,
+            16.82782,
+            -0.1
+          ],
+          "rotation": [
+            0,
+            0,
+            -15
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -11.58287,
+                12.82782,
+                -3.6
+              ],
+              "size": [
+                4,
+                8,
+                7
+              ],
+              "uv": [
+                0,
+                47
+              ]
+            }
+          ]
+        },
+        {
+          "name": "megalodon_glow4",
+          "parent": "megalodon_group8",
+          "pivot": [
+            -8.58287,
+            16.82782,
+            -0.1
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -11.58287,
+                12.82782,
+                -3.6
+              ],
+              "size": [
+                4,
+                8,
+                7
+              ],
+              "uv": [
+                78,
+                98
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

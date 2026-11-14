@@ -60,6 +60,14 @@
     "textures": "crusher_off",
     "sound": "place.iron"
   },
+  "ng:tannery": {
+    "textures": "ng_invisible",
+    "sound": "wood"
+  },
+  "ng:parabole": {
+    "textures": "ng_invisible",
+    "sound": "metal"
+  },
   "ng:electric_compressor": {
     "textures": "electric_compressor",
     "sound": "place.iron"
@@ -216,8 +224,52 @@
     "textures": "ng_invisible",
     "sound": "place.iron"
   },
+  "ng:tritium_synthesizer": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:uranium_extractor": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:refinery_uranium": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:centrifuge": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:uranium_compactor": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
   "ng:nuclear_forge": {
     "textures": "ng_invisible",
     "sound": "place.iron"
+  },
+  "ng:garage": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:flour_machine": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:silo": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:feeder_cereal": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:enclosure": {
+    "textures": "ng_invisible",
+    "sound": "place.iron"
+  },
+  "ng:vehicle_workbench": {
+    "textures": "ng_invisible",
+    "sound": "wood"
   }
 }

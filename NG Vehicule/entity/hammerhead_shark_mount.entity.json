@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:hammerhead_shark_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/hammerhead_shark_mount"
+			},
+			"geometry": {
+				"default": "geometry.ng_bike_hammerhead_shark"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"aqua_forward": "animation.ng_bike_hammerhead_shark.aqua_forward",
+				"aqua_idle": "animation.ng_bike_hammerhead_shark.aqua_idle",
+				"bite": "animation.ng_bike_hammerhead_shark.bite",
+				"terre_forward": "animation.ng_bike_hammerhead_shark.terre_forward",
+				"terre_idle": "animation.ng_bike_hammerhead_shark.terre_idle",
+				"ambient": "animation.ng_bike_hammerhead_shark.ambient",
+				"move": "controller.animation.ng_bike_hammerhead_shark.move",
+				"ambient_ctrl": "controller.animation.ng_bike_hammerhead_shark.ambient"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.env = math.clamp(q.mark_variant, 0, 2);",
+					"v.moving = (q.modified_move_speed > 0.05 || (v.env != 0 && math.abs(q.vertical_speed) > 0.05)) ? 1 : 0;",
+					"v.mounted = q.has_rider ? 1 : 0;",
+					"v.etat = v.env * 4 + v.moving * 2 + v.mounted;",
+					"v.capacite = q.variant;"
+				],
+				"animate": [
+					"move",
+					"ambient_ctrl"
+				]
+			},
+			"sound_effects": {
+				"ambient": "ng_bike.hammerhead_shark.ambient",
+				"bite": "ng_bike.hammerhead_shark.bite",
+				"ground_forward": "ng_bike.hammerhead_shark.ground_forward",
+				"ground_idle": "ng_bike.hammerhead_shark.ground_idle",
+				"water_forward": "ng_bike.hammerhead_shark.water_forward",
+				"water_idle": "ng_bike.hammerhead_shark.water_idle"
+			}
+		}
+	}
+}

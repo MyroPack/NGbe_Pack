@@ -11007,6 +11007,14 @@
     "$hover_button_texture|default": "textures/ui/paladium_assets/button/home_hover",
     "$pressed_button_texture|default": "textures/ui/paladium_assets/button/home_hover"
   },
+  "arrow_left": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/arrow_left"
+  },
+  "arrow_right": {
+    "type": "image",
+    "texture": "textures/ui/paladium_assets/icon/arrow_right"
+  },
   "close_mapping@ng_pala_gui.mapping_button": {
     "$default_button_texture|default": "textures/ui/paladium_assets/button/close_button",
     "$hover_button_texture|default": "textures/ui/paladium_assets/button/close_button_hover",
@@ -11015,6 +11023,13 @@
   "all_quests_window": {
     "type": "input_panel",
     "modal": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ],
     "size": [
       "300%",
       "300%"
@@ -14713,7 +14728,7 @@
       10,
       10
     ],
-    "$arrow|default": "pala_asset.arrow_left",
+    "$arrow|default": "ng_gamepass.arrow_left",
     "controls": [
       {
         "button@ng_pala_gui.multiple_status_button": {
@@ -16452,7 +16467,7 @@
                         {
                           "previous@ng_gamepass.page_button": {
                             "$index": 19,
-                            "$arrow": "pala_asset.arrow_left"
+                            "$arrow": "ng_gamepass.arrow_left"
                           }
                         },
                         {
@@ -16477,7 +16492,7 @@
                         {
                           "next@ng_gamepass.page_button": {
                             "$index": 20,
-                            "$arrow": "pala_asset.arrow_right"
+                            "$arrow": "ng_gamepass.arrow_right"
                           }
                         }
                       ]

@@ -3,5 +3,44 @@
 		1,
 		1,
 		0
-	]
+	],
+	"propsi:recube_poster_7x4_1": {
+		"textures": "recube_invisible"
+	},
+	"propsi:recube_poster_7x4_2": {
+		"textures": "recube_invisible"
+	},
+	"propsi:recube_oversized_part_poster": {
+		"textures": "recube_invisible"
+	},
+	"propsi:recube_panel_center_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_left_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_right_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_botom_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_botom_left_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_botom_right_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_top_roof_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_top_left_roof_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_corner_top_right_roof_wood": {
+		"textures": "recube_panel_wood"
+	},
+	"propsi:recube_panel_pillard_wood": {
+		"textures": "recube_panel_wood"
+	}
 }

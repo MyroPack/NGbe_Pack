@@ -14,10 +14,14 @@
 #     rank_or 128 x 122, rank_master 127 x 128) : dessines dans un carre ils sont etires. Ici chaque dessin est pose
 #     au centre d'un carre transparent de 128 x 128, sans etre redimensionne.
 #   - Le mod retrouve le fichier par le nom de la ligue, sans table a tenir.
-#   - Il y a cinq ligues (bronze, argent, or, platine, diamant) et quatre dessins. La ligue platine n'en a pas : son
-#     icone est le dessin de la ligue or repeint en bleu glace (PLATINUM ci-dessous : la lumiere de chaque pixel
-#     choisit sa teinte dans un degrade, du bleu sombre au blanc). La ligue diamant, la plus haute,
-#     garde le dessin le plus riche, rank_master. Un pays non classe a le medaillon gris rank_mistaire.
+#   - Il y a cinq ligues (bronze, argent, or, puis les deux plus hautes) et quatre dessins. Sur NG les deux plus hautes
+#     s'appellent Master (la ligue « platinum » de l'API, le top 15 %) et Challenger (sa ligue « diamond », le top 5 %),
+#     choix de Leo du 04/11 a la place de Platine et Diamant : les fichiers gardent les noms de l'API (platinum.png,
+#     diamond.png) que NGCountryMod ecrit dans les cases, seuls les dessins changent. Les deux ont le dessin le plus riche,
+#     rank_master (l'hexagone a ailes), repeint (MASTER et CHALLENGER ci-dessous : la lumiere de chaque pixel choisit sa
+#     teinte dans un degrade) : violet amethyste pour Master, braise et or pour Challenger. Jusqu'au 04/11, platinum etait
+#     le dessin de la ligue or repeint en bleu glace et diamond le dessin rank_master tel quel (lavande). Un pays non
+#     classe a le medaillon gris rank_mistaire.
 #     Quand un vrai dessin de la ligue platine existera : le poser dans ng_assets/Auther, le nommer dans SOURCES a la
 #     place de la recoloration, relancer ce script.
 #
@@ -35,14 +39,20 @@ SIZE = 128
 # points sont poses sur les lumieres du dessin de la ligue or : son lisere orange (160), son fond jaune (205), ses
 # ailes creme (245), son etoile blanche (255).
 PLATINUM = [(0, (10, 45, 60)), (160, (64, 168, 198)), (205, (118, 218, 238)), (245, (224, 246, 250)), (255, (255, 255, 255))]
+# Degrades de Master et de Challenger, poses sur les lumieres du dessin rank_master : son lisere sombre (80 a 100), le
+# fond de l'hexagone (120 a 140), son cadre (160 a 170), les ailes et l'etoile (190 a 230).
+MASTER = [(0, (18, 4, 36)), (85, (70, 20, 140)), (125, (118, 48, 200)), (165, (160, 96, 236)), (205, (212, 184, 252)),
+          (235, (246, 236, 255)), (255, (255, 255, 255))]
+CHALLENGER = [(0, (40, 6, 4)), (85, (150, 24, 18)), (125, (210, 58, 28)), (165, (240, 128, 40)), (205, (255, 206, 96)),
+              (235, (255, 240, 190)), (255, (255, 255, 255))]
 # ligue -> (dessin, degrade de recoloration ou None)
 SOURCES = {
     "unranked": ("rank_mistaire", None),
     "bronze": ("rank_bronze", None),
     "silver": ("rank_argent", None),
     "gold": ("rank_or", None),
-    "platinum": ("rank_or", PLATINUM),
-    "diamond": ("rank_master", None),
+    "platinum": ("rank_master", MASTER),
+    "diamond": ("rank_master", CHALLENGER),
 }
 
 

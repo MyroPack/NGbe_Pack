@@ -1,0 +1,198 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng_bike_wolf.move": {
+			"initial_state": "terre_idle",
+			"states": {
+				"terre_idle": {
+					"animations": [
+						"terre_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						},
+						{
+							"death": "!q.is_alive"
+						},
+						{
+							"terre_idle2": "q.life_time >= v.repos_fin && v.repos < 1 && q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_b": "q.life_time >= v.repos_fin && v.repos >= 1 && q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						}
+					],
+					"blend_transition": 0.2,
+					"on_entry": [
+						"v.repos = math.random(0, 10);",
+						"v.repos_fin = q.life_time + 9.25;"
+					]
+				},
+				"terre_idle_mount": {
+					"animations": [
+						"terre_idle_mount"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_forward": {
+					"animations": [
+						"terre_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"jump": {
+					"animations": [
+						"jump"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"death": "!q.is_alive"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"death": {
+					"animations": [
+						"death"
+					],
+					"transitions": [
+						{
+							"terre_idle": "q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_idle_b": {
+					"animations": [
+						"terre_idle"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						},
+						{
+							"death": "!q.is_alive"
+						},
+						{
+							"terre_idle2": "q.life_time >= v.repos_fin && v.repos < 1 && q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle": "q.life_time >= v.repos_fin && v.repos >= 1 && q.is_alive && (v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						}
+					],
+					"on_entry": [
+						"v.repos = math.random(0, 10);",
+						"v.repos_fin = q.life_time + 9.25;"
+					]
+				},
+				"terre_idle2": {
+					"animations": [
+						"terre_idle2"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"terre_idle_mount": "q.is_alive && (v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "q.is_alive && (v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "q.is_alive && v.capacite == 4"
+						},
+						{
+							"death": "!q.is_alive"
+						},
+						{
+							"terre_idle": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.ng_bike_wolf.ambient": {
+			"initial_state": "attente",
+			"states": {
+				"attente": {
+					"on_entry": [
+						"v.ambiance_fin = q.life_time + math.random(10, 20);"
+					],
+					"transitions": [
+						{
+							"son": "q.life_time >= v.ambiance_fin"
+						}
+					]
+				},
+				"son": {
+					"animations": [
+						"ambient"
+					],
+					"transitions": [
+						{
+							"attente": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

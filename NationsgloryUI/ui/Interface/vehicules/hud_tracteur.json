@@ -1,0 +1,1004 @@
+{
+  "namespace": "ng_hud_tracteur",
+  "alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@ng_hud_tracteur.alpha_stay"
+  },
+  "alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@ng_hud_tracteur.alpha_out"
+  },
+  "alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+  "panneau": {
+    "type": "panel",
+    "size": [
+      250,
+      "100%c"
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [
+      0,
+      4
+    ],
+    "layer": 2,
+    "alpha": "@ng_hud_tracteur.alpha_in",
+    "propagate_alpha": true,
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#hud_title_text_string - '§t§q§t') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "cadre": {
+          "type": "image",
+          "texture": "textures/ui/background/background_white",
+          "color": [
+            0.247,
+            0.247,
+            0.275
+          ],
+          "size": [
+            "100%",
+            "100%c + 8px"
+          ],
+          "layer": 5,
+          "controls": [
+            {
+              "fond": {
+                "type": "image",
+                "texture": "textures/ui/background/background_white",
+                "color": [
+                  0.153,
+                  0.153,
+                  0.165
+                ],
+                "alpha": 0.92,
+                "size": [
+                  "100% - 2px",
+                  "100% - 2px"
+                ],
+                "layer": 1
+              }
+            },
+            {
+              "contenu": {
+                "type": "stack_panel",
+                "orientation": "vertical",
+                "size": [
+                  "100% - 8px",
+                  "100%c"
+                ],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [
+                  0,
+                  4
+                ],
+                "controls": [
+                  {
+                    "entete": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        12
+                      ],
+                      "controls": [
+                        {
+                          "icone_tracteur": {
+                            "type": "image",
+                            "texture": "textures/ui/garage/icones/tractor",
+                            "size": [
+                              10,
+                              10
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "layer": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "#hud_title_text_string",
+                                "binding_type": "global"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((#hud_title_text_string - '§u§2') = #hud_title_text_string)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "icone_helico": {
+                            "type": "image",
+                            "texture": "textures/ui/garage/icones/helicopter",
+                            "size": [
+                              10,
+                              10
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "layer": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "#hud_title_text_string",
+                                "binding_type": "global"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not((#hud_title_text_string - '§u§2') = #hud_title_text_string))",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "titre_tracteur": {
+                            "type": "label",
+                            "text": "ng.hud.tracteur.titre",
+                            "localize": true,
+                            "color": [
+                              0.98,
+                              0.98,
+                              0.98
+                            ],
+                            "shadow": false,
+                            "size": [
+                              "100% - 14px",
+                              "default"
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [
+                              14,
+                              0
+                            ],
+                            "layer": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "#hud_title_text_string",
+                                "binding_type": "global"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "((#hud_title_text_string - '§u§2') = #hud_title_text_string)",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "titre_helico": {
+                            "type": "label",
+                            "text": "ng.hud.helico.titre",
+                            "localize": true,
+                            "color": [
+                              0.98,
+                              0.98,
+                              0.98
+                            ],
+                            "shadow": false,
+                            "size": [
+                              "100% - 14px",
+                              "default"
+                            ],
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [
+                              14,
+                              0
+                            ],
+                            "layer": 7,
+                            "bindings": [
+                              {
+                                "binding_name": "#hud_title_text_string",
+                                "binding_type": "global"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not((#hud_title_text_string - '§u§2') = #hud_title_text_string))",
+                                "target_property_name": "#visible"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "filet": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        5
+                      ],
+                      "controls": [
+                        {
+                          "l": {
+                            "type": "image",
+                            "texture": "textures/ui/background/background_white",
+                            "color": [
+                              0.247,
+                              0.247,
+                              0.275
+                            ],
+                            "size": [
+                              "100%",
+                              1
+                            ],
+                            "layer": 7
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "jauges": {
+                      "type": "stack_panel",
+                      "orientation": "horizontal",
+                      "size": [
+                        "100%",
+                        9
+                      ],
+                      "controls": [
+                        {
+                          "carburant": {
+                            "type": "panel",
+                            "size": [
+                              "48%",
+                              9
+                            ],
+                            "controls": [
+                              {
+                                "icone": {
+                                  "type": "image",
+                                  "texture": "textures/ui/garage/icones/petrol",
+                                  "size": [
+                                    7,
+                                    7
+                                  ],
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "layer": 7
+                                }
+                              },
+                              {
+                                "barre": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100% - 11px",
+                                    5
+                                  ],
+                                  "anchor_from": "right_middle",
+                                  "anchor_to": "right_middle",
+                                  "controls": [
+                                    {
+                                      "fond": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.094,
+                                          0.094,
+                                          0.106
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ],
+                                        "layer": 7
+                                      }
+                                    },
+                                    {
+                                      "n1": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "10%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§1') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n2": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "20%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§2') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n3": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "30%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§3') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n4": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "40%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§4') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n5": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "50%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§5') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n6": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "60%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§6') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n7": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "70%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§7') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n8": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "80%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§8') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n9": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "90%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§9') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "na": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.96,
+                                          0.62,
+                                          0.04
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§h§a') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "entre": {
+                            "type": "panel",
+                            "size": [
+                              "4%",
+                              9
+                            ]
+                          }
+                        },
+                        {
+                          "durabilite": {
+                            "type": "panel",
+                            "size": [
+                              "48%",
+                              9
+                            ],
+                            "controls": [
+                              {
+                                "icone": {
+                                  "type": "image",
+                                  "texture": "textures/ui/garage/icones/wrench",
+                                  "size": [
+                                    7,
+                                    7
+                                  ],
+                                  "anchor_from": "left_middle",
+                                  "anchor_to": "left_middle",
+                                  "layer": 7
+                                }
+                              },
+                              {
+                                "barre": {
+                                  "type": "panel",
+                                  "size": [
+                                    "100% - 11px",
+                                    5
+                                  ],
+                                  "anchor_from": "right_middle",
+                                  "anchor_to": "right_middle",
+                                  "controls": [
+                                    {
+                                      "fond": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.094,
+                                          0.094,
+                                          0.106
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ],
+                                        "layer": 7
+                                      }
+                                    },
+                                    {
+                                      "n1": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "10%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§1') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n2": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "20%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§2') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n3": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "30%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§3') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n4": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "40%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§4') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n5": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "50%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§5') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n6": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "60%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§6') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n7": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "70%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§7') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n8": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "80%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§8') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "n9": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "90%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§9') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "na": {
+                                        "type": "image",
+                                        "texture": "textures/ui/background/background_white",
+                                        "color": [
+                                          0.604,
+                                          0.902,
+                                          0.0
+                                        ],
+                                        "size": [
+                                          "100%",
+                                          "100%"
+                                        ],
+                                        "layer": 8,
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#hud_title_text_string",
+                                            "binding_type": "global"
+                                          },
+                                          {
+                                            "binding_type": "view",
+                                            "source_property_name": "(not((#hud_title_text_string - '§j§a') = #hud_title_text_string))",
+                                            "target_property_name": "#visible"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "espace": {
+                      "type": "panel",
+                      "size": [
+                        "100%",
+                        3
+                      ]
+                    }
+                  },
+                  {
+                    "lignes": {
+                      "type": "label",
+                      "text": "#hud_title_text_string",
+                      "localize": false,
+                      "color": [
+                        0.831,
+                        0.831,
+                        0.847
+                      ],
+                      "shadow": false,
+                      "font_scale_factor": 0.7,
+                      "size": [
+                        "100%",
+                        "default"
+                      ],
+                      "layer": 7,
+                      "bindings": [
+                        {
+                          "binding_name": "#hud_title_text_string",
+                          "binding_type": "global"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

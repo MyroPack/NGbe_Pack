@@ -15,5 +15,13 @@
   "ng:tourelle_anti_missile_part": {
     "textures": "recubeicbm_invisible",
     "sound": "metal"
+  },
+  "ng:terminal_lancement": {
+    "textures": "recubeicbm_terminal",
+    "sound": "metal"
+  },
+  "ng:flammes_missile": {
+    "textures": "fire_0",
+    "sound": "cloth"
   }
 }

@@ -18,13 +18,13 @@
         "default": "geometry.ng_rocket_held"
       },
       "animations": {
-        "anim_1": "animation.fuse.new",
-        "anim_2": "animation.fuse.new2",
-        "anim_3": "animation.fuse.start",
-        "anim_4": "animation.fuse.fly",
-        "anim_5": "animation.fuse.off",
-        "first_person_hold": "animation.fuse.first_person_hold",
-        "third_person_hold": "animation.fuse.third_person_hold"
+        "anim_1": "animation.fuse.held.new",
+        "anim_2": "animation.fuse.held.new2",
+        "anim_3": "animation.fuse.held.start",
+        "anim_4": "animation.fuse.held.fly",
+        "anim_5": "animation.fuse.held.off",
+        "first_person_hold": "animation.fuse.held.first_person_hold",
+        "third_person_hold": "animation.fuse.held.third_person_hold"
       },
       "scripts": {
         "animate": [

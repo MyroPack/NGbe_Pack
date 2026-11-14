@@ -1,0 +1,103 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng_bike_lion.move": {
+			"initial_state": "terre_idle",
+			"states": {
+				"terre_idle": {
+					"animations": [
+						"terre_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle_mount": "(v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "v.capacite == 4"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_idle_mount": {
+					"animations": [
+						"terre_idle_mount"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "v.capacite == 4"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_forward": {
+					"animations": [
+						"terre_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_mount": "(v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"jump": "v.capacite == 4"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"jump": {
+					"animations": [
+						"jump"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 4 || v.etat == 8) && !(v.capacite == 4)"
+						},
+						{
+							"terre_idle_mount": "(v.etat == 1 || v.etat == 5 || v.etat == 9) && !(v.capacite == 4)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7 || v.etat == 10 || v.etat == 11) && !(v.capacite == 4)"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ng_bike_lion.ambient": {
+			"initial_state": "attente",
+			"states": {
+				"attente": {
+					"on_entry": [
+						"v.ambiance_fin = q.life_time + math.random(10, 20);"
+					],
+					"transitions": [
+						{
+							"son": "q.life_time >= v.ambiance_fin"
+						}
+					]
+				},
+				"son": {
+					"animations": [
+						"ambient"
+					],
+					"transitions": [
+						{
+							"attente": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

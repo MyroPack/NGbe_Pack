@@ -1,0 +1,56 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ng_arme.ragnarock_hammer",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [-0.5, 5, -7],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)"
+				},
+				{
+					"name": "wrapper",
+					"parent": "root_item",
+					"pivot": [-6.5, 18.5, -14.5]
+				},
+				{
+					"name": "align",
+					"parent": "wrapper",
+					"pivot": [-6.5, 17, -2],
+					"rotation": [65, 0, 0]
+				},
+				{
+					"name": "nga_axe",
+					"parent": "align",
+					"pivot": [-6.5, 2.38, -7.63],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-8.5, 3.70893, -9.61369], "size": [4, 3, 3], "uv": [20, 33]},
+						{"origin": [-7.5, 6.70893, -9.61369], "size": [2, 12, 3], "uv": [0, 33]},
+						{"origin": [-6.5, 13.70893, -18.61369], "size": [0, 12, 21], "uv": [3, -12]},
+						{"origin": [-7.5, 23.70893, -9.61369], "size": [2, 4, 3], "uv": [36, 0]},
+						{"origin": [-7.5, 18.70893, -11.61369], "size": [2, 5, 7], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "nga_overlay",
+					"parent": "nga_axe",
+					"pivot": [-6.5, 2.38, -7.13],
+					"cubes": [
+						{"origin": [-7.5, 23.70893, -9.61369], "size": [2, 4, 3], "inflate": 0.5, "uv": [46, 0]},
+						{"origin": [-7.5, 6.70893, -9.61369], "size": [2, 12, 3], "inflate": 0.5, "uv": [10, 33]},
+						{"origin": [-8.5, 3.70893, -9.61369], "size": [4, 3, 3], "inflate": 0.5, "uv": [34, 33]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -47,6 +47,9 @@
     "recubeicbm_red_matter": {
       "textures": "textures/recubeicbm/items/red_matter"
     },
+    "recubeicbm_endbringer": {
+      "textures": "textures/recubeicbm/items/endbringer"
+    },
     "recubeicbm_plateforme": {
       "textures": "textures/recubeicbm/items/plateforme"
     },
@@ -139,6 +142,81 @@
     },
     "recubeicbm_mossberg": {
       "textures": "textures/recubeicbm/items/mossberg"
+    },
+    "recubeicbm_antimatter": {
+      "textures": "textures/recubeicbm/items/antimatter"
+    },
+    "recubeicbm_tritium_cell": {
+      "textures": "textures/recubeicbm/items/tritium_cell"
+    },
+    "recubeicbm_gas_bottle": {
+      "textures": "textures/recubeicbm/items/gas_bottle"
+    },
+    "recubeicbm_laser_pistol": {
+      "textures": "textures/recubeicbm/items/laser_pistol"
+    },
+    "recubeicbm_laser_assault_rifle": {
+      "textures": "textures/recubeicbm/items/laser_assault_rifle"
+    },
+    "recubeicbm_laser_shotgun": {
+      "textures": "textures/recubeicbm/items/laser_shotgun"
+    },
+    "recubeicbm_chargeur_laser_pistol": {
+      "textures": "textures/recubeicbm/items/chargeur_laser_pistol"
+    },
+    "recubeicbm_chargeur_laser_assault_rifle": {
+      "textures": "textures/recubeicbm/items/chargeur_laser_assault_rifle"
+    },
+    "recubeicbm_chargeur_laser_shotgun": {
+      "textures": "textures/recubeicbm/items/chargeur_laser_shotgun"
+    },
+    "recubeicbm_laser_bullet": {
+      "textures": "textures/recubeicbm/items/laser_bullet"
+    },
+    "recubeicbm_laser_weapon_blueprint": {
+      "textures": "textures/recubeicbm/items/laser_weapon_blueprint"
+    },
+    "recubeicbm_medkit": {
+      "textures": "textures/recubeicbm/items/medkit"
+    },
+    "recubeicbm_laser_viewfinder": {
+      "textures": "textures/recubeicbm/items/laser_viewfinder"
+    },
+    "recubeicbm_cross_viewfinder": {
+      "textures": "textures/recubeicbm/items/cross_viewfinder"
+    },
+    "recubeicbm_laserpoint_viewfinder": {
+      "textures": "textures/recubeicbm/items/laserpoint_viewfinder"
+    },
+    "recubeicbm_underwater_adapter": {
+      "textures": "textures/recubeicbm/items/underwater_adapter"
+    },
+    "recubeicbm_night_vision_adapter": {
+      "textures": "textures/recubeicbm/items/night_vision_adapter"
+    },
+    "recubeicbm_stock_zirconium": {
+      "textures": "textures/recubeicbm/items/stock_zirconium"
+    },
+    "recubeicbm_stock_onyx": {
+      "textures": "textures/recubeicbm/items/stock_onyx"
+    },
+    "recubeicbm_stock_cryolite": {
+      "textures": "textures/recubeicbm/items/stock_cryolite"
+    },
+    "recubeicbm_grip_onyx": {
+      "textures": "textures/recubeicbm/items/grip_onyx"
+    },
+    "recubeicbm_grip_zirconium": {
+      "textures": "textures/recubeicbm/items/grip_zirconium"
+    },
+    "recubeicbm_grip_cryolite": {
+      "textures": "textures/recubeicbm/items/grip_cryolite"
+    },
+    "recubeicbm_suppressor": {
+      "textures": "textures/recubeicbm/items/suppressor"
+    },
+    "recubeicbm_terminal_lancement": {
+      "textures": "textures/recubeicbm/items/terminal_lancement"
     }
   }
 }

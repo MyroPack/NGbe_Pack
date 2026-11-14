@@ -22,7 +22,8 @@
         "drill": "textures/recubeicbm/missile/drill",
         "endothermique": "textures/recubeicbm/missile/endothermique",
         "anti_matter": "textures/recubeicbm/missile/anti_matter",
-        "red_matter": "textures/recubeicbm/missile/red_matter"
+        "red_matter": "textures/recubeicbm/missile/red_matter",
+        "endbringer": "textures/recubeicbm/missile/endbringer"
       },
       "geometry": {
         "default": "geometry.recubeicbm.platform",
@@ -40,7 +41,8 @@
         "drill": "geometry.recubeicbm.mounted.drill",
         "endothermique": "geometry.recubeicbm.mounted.endothermique",
         "anti_matter": "geometry.recubeicbm.mounted.anti_matter",
-        "red_matter": "geometry.recubeicbm.mounted.red_matter"
+        "red_matter": "geometry.recubeicbm.mounted.red_matter",
+        "endbringer": "geometry.recubeicbm.mounted.endbringer"
       },
       "animations": {
         "default": "animation.recubeicbm.platform.default",

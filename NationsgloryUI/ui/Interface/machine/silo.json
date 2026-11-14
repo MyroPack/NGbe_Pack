@@ -1,0 +1,420 @@
+// Silo a cereales (agriculture NG, lot B) : copie de citerne.json (en-tete, pages, informations), elargie a 300 pour la
+// page de la machine (retour de Leo du 05/11 14 h 24, « interface pas claire »). Cette page (page2) est produite par
+// tools/silo/silo.py : case de depot (26) et son aide (30), contenu (27 cereale, 25 nom, 21 kg, 28 objets, 29 %, 24 jauge),
+// boutons « Retirer 64 » (22) et « Tout retirer » (23), cereales acceptees.
+{
+  "namespace": "silo",
+
+  "main_panel":{
+    "type":"panel",
+    "size":["100%","100%"],
+    "controls":[
+
+ 
+/*             {"small_chest_grid@chest.small_chest_grid":{
+              "grid_dimensions": [ 9, 9 ],
+              "layer":800000,
+              "anchor_from":"bottom_right",
+              "anchor_to":"bottom_right",
+              "size": [ 162, 162 ]
+            }},
+ */
+
+            {"background_black@ng_asset.background_white":{
+              "color":[0.000, 0.000, 0.000],
+              "size":["150%","150%"],
+              "alpha":0.5
+            }},
+
+            {"stack_panel@ng_module.stackpanel":{
+              "size":[300,"100%c"],
+              "controls":[
+
+                  {"gestion_panel@ng_asset.background_white":{
+                    "color":[0.153, 0.153, 0.165],
+                    "size":["100%",127],
+                    "controls":[
+
+                        {"stack_panel@ng_module.stackpanel":{
+                          "size":["100% - 2px","100% - 2px"],
+                          "controls":[
+
+                                    {"header@ng_asset.background_01":{
+                                      "size": ["100%",20],
+                                      "controls":[
+
+                                          {"stack_panel@ng_module.stackpanel":{
+                                            "orientation":"horizontal",
+                                            "size":["100% - 4px","100% - 2px"],
+                                            "controls":[
+
+                                                     {"padding@ng_module.panel":{
+                                                        "size":[5,"100%"]
+                                                     }},
+
+                                                     {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+                                                         
+                                                                      {"title":{
+                                                                        "type":"label",
+                                                                        "font_scale_factor":0.8,
+                                                                        "layer":10,
+                                                                        "offset":[0,-1.3],
+                                                                        "font_type":"MinecraftTen",
+                                                                        "text":"Silo"
+                                                                      }}
+                                                     ]}},
+
+                                                      {"padding@ng_module.panel":{
+                                                        "size":["fill","100%"]
+                                                      }},
+
+                                                      {"centring@ng_module.panel":{
+                                                        "size":["100%c","100%"],
+                                                        "controls":[
+
+                                                              {"close_button@ng_module.close_button":{}}  
+                                                              
+                                                      ]}}
+                                          ]}}
+                                    ]}},
+
+                                    {"padding@ng_module.panel":{
+                                      "size":["100%",2]
+                                    }},
+
+                                    {"content@ng_module.panel":{
+                                      "size":["100%",100],
+                                      "controls":[
+
+                                            {"content@ng_module.stackpanel":{
+                                              "orientation":"horizontal",
+                                              "size":["100% - 6px","100%"],
+                                              "controls":[
+
+                                                  {"button_toggle@ng_asset.background_15":{
+                                                    "size":[20,"100%"],
+                                                    "controls":[
+
+                                                            {"content@ng_module.stackpanel":{
+                                                              "size":["100% - 4px","100% - 2px"],
+                                                              "controls":[
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"homme_button@ng_module.section_toggle_button": { 
+                                                                      "toggle_group_forced_index": 0, 
+                                                                      "$section_topic": "page_1",
+
+                                                                      "$is_default_toggle": true,
+                                                                      "$sibling_toggle_1": "page_2_button_toggle",
+
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_06",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }},
+
+                                                                  {"padding@ng_module.panel":{
+                                                                    "size":["100%",1]
+                                                                  }},
+
+                                                                  {"setting@ng_module.section_toggle_button": { 
+                                                                      "$toggle_group_forced_index": 1, 
+                                                                      "$section_topic": "page_2",
+                                                                      "$button_asset":"ng_asset.toggle_asset_01",
+                                                                      "$size_icon":[9.5,9.5],
+                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
+                                                                      "$texture_icon":"ng_asset.icon_05",
+                                                                      "size": [ "100%", 16 ]
+                                                                  }}
+                                                            ]}}
+
+                                                  ]}},
+
+                                                  {"padding@ng_module.panel":{
+                                                    "size":[3,"100%"]
+                                                  }},
+
+                                                  {"amelioration@ng_asset.background_13":{
+                                                      "size":["fill","100%"],
+                                                      "controls":[
+
+                                                              {"page1@silo.page1":{}},
+                                                              {"page2@silo.page2":{}}
+                                                  ]}}
+                                            ]}}
+                                    ]}}
+                        ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel":{
+                    "size":["100%",5]
+                  }},
+
+                  {"inventory@ng_asset.background_02":{
+                    "size": ["100%",113],
+                    "controls":[
+
+                                {"inventory_content@ng_module.stackpanel":{
+                                  "size":[208,"100% - 10px"],
+                                  "controls":[           
+
+                                              {"title":{
+                                                  "size":["100%",10],
+                                                  "type":"label",
+                                                  "layer":5,
+                                                  "font_scale_factor":0.6,
+                                                  "color":[0.443, 0.443, 0.482],
+                                                  "font_type":"MinecraftTen",
+                                                  "text":"inventaire"
+                                              }},
+
+                                              {"inventory@ng_asset.background_white":{
+                                                "color":[0.180, 0.180, 0.192],
+                                                "size":[208,93],
+                                                "controls":[
+
+                                                    {"inventory_&_hotbar@ng_module.stackpanel":{
+                                                      "size":[207,92],
+                                                      "offset":[0.5,0.5],
+                                                      "controls":[
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,69],
+                                                            "$grid_dimensions":[9,3],
+                                                            "$collection_name":"inventory_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }},
+
+                                                          {"complementaroy@ng_module.grid_asset":{
+                                                            "$size_grid":[207,23],
+                                                            "$grid_dimensions":[9,1],
+                                                            "$collection_name":"hotbar_items",
+                                                            "$item_renderer_panel_size":[22,22],
+                                                            "$cell_image_size":[22,22],
+                                                            "$textures_slot_hover":"ng_asset.background_10",
+                                                            "$textures_slot_default":"ng_asset.background_white",
+                                                            "$color_background_default":[0.094, 0.094, 0.106],
+                                                            "$slot_size":[22,22]
+                                                          }}
+
+                                                    ]}}
+                                              ]}}
+                                ]}}
+
+
+                  ]}}
+            ]}}    
+  ]},
+
+  "page1@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "size":["100% - 8px","100% - 8px"],
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ], 
+    "controls":[
+
+            {"left_part@ng_module.stackpanel":{
+              "size":["50% - 2px","100%"],
+              "controls":[
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+
+                              {"stack_panel@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100% - 2px","100% - 2px"],
+                                "controls":[
+
+                                          {"padding@ng_module.panel":{
+                                            "size":[5,"100%"]
+                                          }},
+
+                                          {"centring@ng_module.panel":{
+                                            "size":["100%c","100%"],
+                                            "controls":[
+                                                                                                  
+                                                    {"title":{
+                                                      "type":"label",
+                                                      "font_scale_factor":0.7,
+                                                      "layer":10,
+                                                      "offset":[0,-0.6],
+                                                      "color":[0.624, 0.624, 0.663],
+                                                      "font_type":"MinecraftTen",
+                                                      "text":"Amelioration"
+                                                    }}
+                                          ]}}
+                              ]}}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",35],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "collection_name": "container_items",
+                                "size":["100%c",20],
+                                "controls":[
+
+                                        {"slot_1@ng_module.custome_slot":{
+                                          "$index":16
+                                        }},
+
+                                        {"padding@ng_module.panel":{
+                                          "size":[4,"100%"]
+                                        }},
+
+                                        {"slot_2@ng_module.custome_slot":{
+                                          "$index":17
+                                        }},
+
+                                        {"padding@ng_module.panel":{
+                                          "size":[4,"100%"]
+                                        }},
+
+                                        {"slot_3@ng_module.custome_slot":{
+                                          "$index":18
+                                        }}
+                              ]}}
+                      ]}},
+
+                      {"padding@ng_module.panel":{
+                        "size":["100%",2]
+                      }},
+
+                      {"header@ng_asset.background_12":{
+                        "size": ["100%",15],
+                        "controls":[
+
+                              {"stack_panel@ng_module.stackpanel":{
+                                "orientation":"horizontal",
+                                "size":["100% - 2px","100% - 2px"],
+                                "controls":[
+
+                                              {"padding@ng_module.panel":{
+                                                "size":[5,"100%"]
+                                              }},
+
+                                              {"centring@ng_module.panel":{
+                                                "size":["100%c","100%"],
+                                                "controls":[
+                                                                                                  
+                                                        {"title":{
+                                                          "type":"label",
+                                                          "font_scale_factor":0.7,
+                                                          "layer":10,
+                                                          "offset":[0,-0.6],
+                                                          "color":[0.624, 0.624, 0.663],
+                                                          "font_type":"MinecraftTen",
+                                                          "text":"informations"
+                                                        }}
+                                              ]}}
+                              ]}}
+                      ]}},
+
+                      {"content@ng_asset.background_11":{
+                        "size": ["100%",25],
+                        "controls":[
+
+                              {"content@ng_module.stackpanel":{
+                                  "size":["100% - 8px",20],
+                                  "controls":[
+                                                                                      
+                                      {"padding@ng_module.panel":{
+                                          "size":["100%",1]
+                                      }},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+
+                                              {"text@ng_module.label":{
+                                                "text":"ng.machine.overheat",
+                                                "font_scale_factor": 0.6    
+                                              }},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":["fill","100%"]
+                                              }},
+
+                                              {"heat_bar@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 14,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                              }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
+                                      ]}},
+
+                                      {"content@ng_module.stackpanel":{
+                                        "orientation":"horizontal",
+                                        "size":["100%",10],
+                                        "controls":[
+
+                                                {"text@ng_module.panel":{
+                                                  "size":["100%c",10],
+                                                  "controls":[
+
+                                                        {"text@ng_module.label":{
+                                                          "text":"ng.machine.consumption",
+                                                          "size":["default",10],
+                                                          "font_scale_factor": 0.6    
+                                                        }}
+                                                ]}},
+
+                                                {"padding@ng_module.panel":{
+                                                  "size":["fill","100%"]
+                                                }},
+
+                                                {"consumption_label@ng_module.Simple_text": {
+                                                  "$type_get_text": "Get_text_type_1",
+                                                  "$index": 13,
+                                                  "layer":10,
+                                                  "size": ["100%c", "100%"],
+                                                  "$font_scale_factor": 0.6,
+                                                  "$text_offset": [0, -2]
+                                               }}
+                                      ]}}
+                              ]}}
+                      ]}}
+            ]}},
+
+            {"padding@ng_module.panel":{
+              "size":[4,"100%"]
+            }},
+
+            {"description@ng_module.Simple_text": {
+              "$type_get_text": "Get_text_type_1",
+              "$index": 15,
+              "layer":15,
+              "$text_size":[90,92],
+              "size":["100%c","100%"],
+              "$font_scale_factor": 0.7,
+              "$text_color": [0.624, 0.624, 0.663]    
+            }}
+  ]},
+
+  // DEBUT silo.py : produit par tools/silo/silo.py, ne pas modifier a la main jusqu'a FIN silo.py
+  "page2":{"type":"panel","size":[261,92],"bindings":[{"binding_type":"view","source_control_name":"page_2_button_toggle","source_property_name":"(not #toggle_state)","target_property_name":"#visible"}],"controls":[{"i_1":{"type":"image","texture":"textures/ui/background/background_12","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":[86,14],"layer":1}},{"i_2":{"type":"image","texture":"textures/ui/background/background_11","anchor_from":"top_left","anchor_to":"top_left","offset":[0,14],"size":[86,49],"layer":1}},{"l_3":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[4,4.3],"size":[78,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.deposer","size":[78,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.624,0.624,0.663],"font_scale_factor":0.6,"font_type":"MinecraftTen","shadow":false,"localize":true}}]}},{"t_4":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[4,17.5],"size":[78,16],"layer":4,"controls":[{"cell":{"type":"panel","size":["100%","100%"],"collection_index":30,"controls":[{"label":{"type":"label","text":"#text","size":["100%","default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":false,"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#text"}]}}]}}]}},{"r_5":{"type":"image","texture":"textures/ui/background/background_white","color":[0.322,0.322,0.361],"anchor_from":"top_left","anchor_to":"top_left","offset":[31,36],"size":[24,24],"layer":3}},{"r_6":{"type":"image","texture":"textures/ui/background/background_white","color":[0.094,0.094,0.106],"anchor_from":"top_left","anchor_to":"top_left","offset":[32,37],"size":[22,22],"layer":4}},{"s_7":{"type":"stack_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[32,37],"size":[22,22],"layer":5,"controls":[{"case@ng_module.container_item":{"collection_index":26,"$item_collection_name":"container_items","$item_renderer_panel_size":[22,22],"$cell_image_size":[22,22],"$textures_slot_hover":"ng_asset.background_10","$textures_slot_default":"ng_asset.background_empty","$slot_size":[22,22]}}]}},{"i_8":{"type":"image","texture":"textures/ui/background/background_12","anchor_from":"top_left","anchor_to":"top_left","offset":[89,0],"size":[172,14],"layer":1}},{"i_9":{"type":"image","texture":"textures/ui/background/background_11","anchor_from":"top_left","anchor_to":"top_left","offset":[89,14],"size":[172,49],"layer":1}},{"l_10":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[93,4.3],"size":[164,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.contenu","size":[164,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.624,0.624,0.663],"font_scale_factor":0.6,"font_type":"MinecraftTen","shadow":false,"localize":true}}]}},{"t_11":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[207,4],"size":[50,8],"layer":5,"controls":[{"cell":{"type":"panel","size":["100%","100%"],"collection_index":29,"controls":[{"label":{"type":"label","text":"#text","size":["100%","default"],"anchor_from":"top_right","anchor_to":"top_right","text_alignment":"right","color":[0.98,0.98,0.98],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":false,"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#text"}]}}]}}]}},{"r_12":{"type":"image","texture":"textures/ui/background/background_white","color":[0.322,0.322,0.361],"anchor_from":"top_left","anchor_to":"top_left","offset":[93,18],"size":[24,24],"layer":3}},{"r_13":{"type":"image","texture":"textures/ui/background/background_white","color":[0.094,0.094,0.106],"anchor_from":"top_left","anchor_to":"top_left","offset":[94,19],"size":[22,22],"layer":4}},{"s_14":{"type":"stack_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[94,19],"size":[22,22],"layer":5,"controls":[{"case@ng_module.container_item":{"collection_index":27,"$item_collection_name":"container_items","$item_renderer_panel_size":[22,22],"$cell_image_size":[22,22],"$textures_slot_hover":"ng_asset.background_10","$textures_slot_default":"ng_asset.background_empty","$slot_size":[22,22]}}]}},{"t_15":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[121,19.5],"size":[76,8],"layer":4,"controls":[{"cell":{"type":"panel","size":["100%","100%"],"collection_index":25,"controls":[{"label":{"type":"label","text":"#text","size":["100%","default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.98,0.98,0.98],"font_scale_factor":0.6,"font_type":"default","shadow":false,"localize":false,"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#text"}]}}]}}]}},{"t_16":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[121,29],"size":[76,8],"layer":4,"controls":[{"cell":{"type":"panel","size":["100%","100%"],"collection_index":21,"controls":[{"label":{"type":"label","text":"#text","size":["100%","default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":false,"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#text"}]}}]}}]}},{"t_17":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[121,37],"size":[76,8],"layer":4,"controls":[{"cell":{"type":"panel","size":["100%","100%"],"collection_index":28,"controls":[{"label":{"type":"label","text":"#text","size":["100%","default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.624,0.624,0.663],"font_scale_factor":0.45,"font_type":"default","shadow":false,"localize":false,"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#text"}]}}]}}]}},{"w_22":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":["100%","100%"],"layer":3,"controls":[{"cell":{"type":"collection_panel","size":["100%","100%"],"collection_index":22,"controls":[{"on":{"type":"panel","size":["100%","100%"],"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#hover_text"},{"binding_type":"view","source_property_name":"(not ((#hover_text - '§1') = #hover_text))","target_property_name":"#visible"}],"controls":[{"r_18":{"type":"image","texture":"textures/ui/background/background_white","color":[0.443,0.443,0.482],"anchor_from":"top_left","anchor_to":"top_left","offset":[200,18],"size":[57,12],"layer":1}},{"r_19":{"type":"image","texture":"textures/ui/background/background_white","color":[0.322,0.322,0.361],"anchor_from":"top_left","anchor_to":"top_left","offset":[201,19],"size":[55,10],"layer":2}},{"c_20":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[200,18],"size":[57,12],"layer":3,"controls":[{"button":{"type":"button","collection_index":22,"size":["100%","100%"],"default_control":"default","hover_control":"hover","pressed_control":"pressed","focus_enabled":true,"focus_magnet_enabled":true,"sound_name":"random.click","sound_volume":1.0,"sound_pitch":1.0,"bindings":[{"binding_type":"collection_details","binding_collection_name":"container_items","binding_condition":"once"}],"button_mappings":[{"from_button_id":"button.menu_select","to_button_id":"button.drop_all","mapping_type":"pressed","consume_event":true},{"from_button_id":"button.menu_ok","to_button_id":"button.drop_all","mapping_type":"pressed","consume_event":true}],"controls":[{"default":{"type":"panel","size":["100%","100%"]}},{"hover":{"type":"image","texture":"textures/ui/background/background_white","color":[1,1,1],"alpha":0.08,"size":["100%","100%"]}},{"pressed":{"type":"image","texture":"textures/ui/background/background_white","color":[1,1,1],"alpha":0.16,"size":["100%","100%"]}}]}}]}},{"l_21":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[200,21.5],"size":[57,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.retirer64","size":[57,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.98,0.98,0.98],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":true}}]}}]}}]}}]}},{"w_26":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":["100%","100%"],"layer":4,"controls":[{"cell":{"type":"collection_panel","size":["100%","100%"],"collection_index":22,"controls":[{"on":{"type":"panel","size":["100%","100%"],"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#hover_text"},{"binding_type":"view","source_property_name":"((#hover_text - '§1') = #hover_text)","target_property_name":"#visible"}],"controls":[{"r_23":{"type":"image","texture":"textures/ui/background/background_white","color":[0.094,0.094,0.106],"anchor_from":"top_left","anchor_to":"top_left","offset":[200,18],"size":[57,12],"layer":1}},{"r_24":{"type":"image","texture":"textures/ui/background/background_white","color":[0.035,0.035,0.043],"anchor_from":"top_left","anchor_to":"top_left","offset":[201,19],"size":[55,10],"layer":2}},{"l_25":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[200,21.5],"size":[57,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.retirer64","size":[57,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.322,0.322,0.361],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":true}}]}}]}}]}}]}},{"w_31":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":["100%","100%"],"layer":3,"controls":[{"cell":{"type":"collection_panel","size":["100%","100%"],"collection_index":23,"controls":[{"on":{"type":"panel","size":["100%","100%"],"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#hover_text"},{"binding_type":"view","source_property_name":"(not ((#hover_text - '§1') = #hover_text))","target_property_name":"#visible"}],"controls":[{"r_27":{"type":"image","texture":"textures/ui/background/background_white","color":[0.486,0.812,0.0],"anchor_from":"top_left","anchor_to":"top_left","offset":[200,32],"size":[57,12],"layer":1}},{"r_28":{"type":"image","texture":"textures/ui/background/background_white","color":[0.604,0.902,0.0],"anchor_from":"top_left","anchor_to":"top_left","offset":[201,33],"size":[55,10],"layer":2}},{"c_29":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[200,32],"size":[57,12],"layer":3,"controls":[{"button":{"type":"button","collection_index":23,"size":["100%","100%"],"default_control":"default","hover_control":"hover","pressed_control":"pressed","focus_enabled":true,"focus_magnet_enabled":true,"sound_name":"random.click","sound_volume":1.0,"sound_pitch":1.0,"bindings":[{"binding_type":"collection_details","binding_collection_name":"container_items","binding_condition":"once"}],"button_mappings":[{"from_button_id":"button.menu_select","to_button_id":"button.drop_all","mapping_type":"pressed","consume_event":true},{"from_button_id":"button.menu_ok","to_button_id":"button.drop_all","mapping_type":"pressed","consume_event":true}],"controls":[{"default":{"type":"panel","size":["100%","100%"]}},{"hover":{"type":"image","texture":"textures/ui/background/background_white","color":[1,1,1],"alpha":0.08,"size":["100%","100%"]}},{"pressed":{"type":"image","texture":"textures/ui/background/background_white","color":[1,1,1],"alpha":0.16,"size":["100%","100%"]}}]}}]}},{"l_30":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[200,35.5],"size":[57,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.tout_retirer","size":[57,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.094,0.094,0.106],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":true}}]}}]}}]}}]}},{"w_35":{"type":"collection_panel","collection_name":"container_items","anchor_from":"top_left","anchor_to":"top_left","offset":[0,0],"size":["100%","100%"],"layer":4,"controls":[{"cell":{"type":"collection_panel","size":["100%","100%"],"collection_index":23,"controls":[{"on":{"type":"panel","size":["100%","100%"],"bindings":[{"binding_type":"collection","binding_collection_name":"container_items","binding_name":"#hover_text","binding_name_override":"#hover_text"},{"binding_type":"view","source_property_name":"((#hover_text - '§1') = #hover_text)","target_property_name":"#visible"}],"controls":[{"r_32":{"type":"image","texture":"textures/ui/background/background_white","color":[0.094,0.094,0.106],"anchor_from":"top_left","anchor_to":"top_left","offset":[200,32],"size":[57,12],"layer":1}},{"r_33":{"type":"image","texture":"textures/ui/background/background_white","color":[0.035,0.035,0.043],"anchor_from":"top_left","anchor_to":"top_left","offset":[201,33],"size":[55,10],"layer":2}},{"l_34":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[200,35.5],"size":[57,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.tout_retirer","size":[57,"default"],"anchor_from":"top_middle","anchor_to":"top_middle","text_alignment":"center","color":[0.322,0.322,0.361],"font_scale_factor":0.5,"font_type":"default","shadow":false,"localize":true}}]}}]}}]}}]}},{"p_36@ng_module.loading_bar":{"$index":24,"$load_bar_size":["100%","100%"],"$orientation":"horizontal","$color_border":[0.91,0.725,0.192],"$layer_percent":1,"$texture_background_bar":"ng_asset.background_white","$color_border_empty":[0.322,0.322,0.361],"$texture_background_top":"textures/ui/background/background_white","anchor_from":"top_left","anchor_to":"top_left","offset":[93,48],"size":[164,9],"layer":4}},{"i_37":{"type":"image","texture":"textures/ui/background/background_11","anchor_from":"top_left","anchor_to":"top_left","offset":[0,66],"size":[261,26],"layer":1}},{"l_38":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[4,73],"size":[42,14],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.acceptees","size":[42,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.624,0.624,0.663],"font_scale_factor":0.55,"font_type":"MinecraftTen","shadow":false,"localize":true}}]}},{"r_39":{"type":"image","texture":"textures/ui/background/background_white","color":[0.247,0.247,0.275],"anchor_from":"top_left","anchor_to":"top_left","offset":[52,69],"size":[1,20],"layer":3}},{"i_40":{"type":"image","texture":"textures/items/wheat","anchor_from":"top_left","anchor_to":"top_left","offset":[57,70],"size":[8,8],"layer":4}},{"l_41":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[67,71.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.wheat","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_42":{"type":"image","texture":"textures/items/ng_agriculture/barley","anchor_from":"top_left","anchor_to":"top_left","offset":[107,70],"size":[8,8],"layer":4}},{"l_43":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[117,71.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.barley","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_44":{"type":"image","texture":"textures/items/ng_agriculture/oat","anchor_from":"top_left","anchor_to":"top_left","offset":[157,70],"size":[8,8],"layer":4}},{"l_45":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[167,71.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.oat","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_46":{"type":"image","texture":"textures/items/ng_agriculture/soy","anchor_from":"top_left","anchor_to":"top_left","offset":[207,70],"size":[8,8],"layer":4}},{"l_47":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[217,71.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.soy","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_48":{"type":"image","texture":"textures/items/ng_agriculture/rye","anchor_from":"top_left","anchor_to":"top_left","offset":[57,80],"size":[8,8],"layer":4}},{"l_49":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[67,81.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.rye","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_50":{"type":"image","texture":"textures/items/ng_agriculture/corn","anchor_from":"top_left","anchor_to":"top_left","offset":[107,80],"size":[8,8],"layer":4}},{"l_51":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[117,81.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.corn","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_52":{"type":"image","texture":"textures/items/ng_agriculture/glazed_spelt","anchor_from":"top_left","anchor_to":"top_left","offset":[157,80],"size":[8,8],"layer":4}},{"l_53":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[167,81.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.glazed_spelt","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}},{"i_54":{"type":"image","texture":"textures/items/ng_agriculture/arctic_oats","anchor_from":"top_left","anchor_to":"top_left","offset":[207,80],"size":[8,8],"layer":4}},{"l_55":{"type":"panel","anchor_from":"top_left","anchor_to":"top_left","offset":[217,81.5],"size":[38,8],"layer":4,"controls":[{"label":{"type":"label","text":"ng.silo.cereale.arctic_oats","size":[38,"default"],"anchor_from":"top_left","anchor_to":"top_left","text_alignment":"left","color":[0.831,0.831,0.847],"font_scale_factor":0.42,"font_type":"default","shadow":false,"localize":true}}]}}]}
+  // FIN silo.py
+}

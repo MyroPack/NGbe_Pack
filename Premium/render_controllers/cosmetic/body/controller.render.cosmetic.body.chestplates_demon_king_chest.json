@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.chestplates_demon_king_chest": {
+      "geometry": "Geometry.cosmetic.body.chestplates_demon_king_chest",
+      "materials": [
+        {
+          "*": "Material.animated_texture_double"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.chestplates_demon_king_chest"
+      ],
+      "uv_anim": {
+        "offset": [
+          0.0,
+          "math.mod(math.floor(q.life_time * 4), 5) / 5"
+        ],
+        "scale": [
+          1.0,
+          "1 / 5"
+        ]
+      }
+    }
+  }
+}

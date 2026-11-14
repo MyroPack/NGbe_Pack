@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.cosmetic.head.hats_mini_boss_corrupted_ice_horns.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "bones": {
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns.left_horn": {
+          "rotation": [
+            0,
+            0,
+            "0+math.sin((query.life_time)*180)*2"
+          ]
+        },
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns.horn_outline": {
+          "scale": "1.025+math.sin((query.life_time)*180)*0.025"
+        },
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns.right_horn": {
+          "rotation": [
+            0,
+            0,
+            "0+math.sin((query.life_time)*180)*-2"
+          ]
+        },
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns.horn_outline2": {
+          "scale": "1.025+math.sin((query.life_time)*180)*0.025"
+        },
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns.glow1": {
+          "rotation": [
+            "-0-math.sin((query.life_time)*180)*2",
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:water_pump",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/water_pump"
+			},
+			"geometry": {
+				"default": "geometry.water_pump"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"roues": "animation.water_pump.roues"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					"roues"
+				]
+			}
+		}
+	}
+}

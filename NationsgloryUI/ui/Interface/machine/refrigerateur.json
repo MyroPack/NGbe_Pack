@@ -371,7 +371,7 @@
                                                                                               "controls":[
 
                                                                                                   {"text@ng_module.label":{
-                                                                                                    "text":"Surchauffe",
+                                                                                                    "text":"ng.machine.overheat",
                                                                                                     "font_scale_factor": 0.6    
                                                                                                   }},
 
@@ -379,17 +379,7 @@
                                                                                                     "size":["fill","100%"]
                                                                                                   }},
 
-                                                                                                  {"status@ng_module.multiple_status_text": {
-                                                                                                    "$S0_type_get_text": "Get_text_type_1",
-                                                                                                    "$S1_type_get_text": "Get_text_type_1",
-                                                                                                    "$index": 20,
-                                                                                                    "$S0_text_color": [1.000, 0.537, 0.012],
-                                                                                                    "$S1_text_color":[0.604, 0.902, 0.000],
-                                                                                                    "layer":5,
-                                                                                                    "size": ["100%c", "100%"],
-                                                                                                    "$font_scale_factor": 0.6,  
-                                                                                                    "$text_offset": [0, -2]                                  
-                                                                                                  }}
+                                                                                                  {"heat_bar@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 14, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.6, "$text_offset": [0, -2] }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                                                                                             ]}},
 
                                                                                             {"content@ng_module.stackpanel":{
@@ -402,7 +392,7 @@
                                                                                                     "controls":[
 
                                                                                                       {"text@ng_module.label":{
-                                                                                                        "text":"Consomation",
+                                                                                                        "text":"ng.machine.consumption",
                                                                                                         "size":["default",10],
                                                                                                         "font_scale_factor": 0.6    
                                                                                                       }}
@@ -416,7 +406,7 @@
                                                                                                   {"status@ng_module.multiple_status_text": {
                                                                                                     "$S0_type_get_text": "Get_text_type_1",
                                                                                                     "$S1_type_get_text": "Get_text_type_1",
-                                                                                                    "$index": 10,
+                                                                                                    "$index": 13,
                                                                                                     "$S0_text_color": [1.000, 0.537, 0.012],
                                                                                                     "$S1_text_color":[0.604, 0.902, 0.000],
                                                                                                     "layer":10,
@@ -465,7 +455,7 @@
                                                       "offset":[0,-0.6],
                                                       "color":[0.624, 0.624, 0.663],
                                                       "font_type":"MinecraftTen",
-                                                      "text":"Consomation"
+                                                      "text":"ng.machine.consumption"
                                                     }}
                                           ]}},
 

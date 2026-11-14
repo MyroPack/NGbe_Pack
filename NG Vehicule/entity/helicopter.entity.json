@@ -21,7 +21,8 @@
 				"shoot": "animation.helicopter.shoot",
 				"pull": "animation.helicopter.pull",
 				"minigun": "controller.animation.helicopter.minigun",
-				"winch": "controller.animation.helicopter.winch"
+				"winch": "controller.animation.helicopter.winch",
+				"tilt": "animation.helicopter.tilt"
 			},
 			"scripts": {
 				"should_update_bones_and_effects_offscreen": true,
@@ -30,7 +31,8 @@
 						"rotor": "q.property('ng:engine')"
 					},
 					"minigun",
-					"winch"
+					"winch",
+					"tilt"
 				]
 			}
 		}

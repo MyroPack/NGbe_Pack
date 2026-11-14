@@ -1,0 +1,368 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.hands.hands_soda",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.0,
+        "visible_bounds_height": 2.0,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "leftArm",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.hands.hands_soda.soda",
+          "parent": "leftArm",
+          "pivot": [
+            5.975,
+            14.89268,
+            -5.07071
+          ],
+          "rotation": [
+            90,
+            -45,
+            -90
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                7.75,
+                -6.5
+              ],
+              "size": [
+                3.25,
+                7.25,
+                3
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    4,
+                    77
+                  ],
+                  "uv_size": [
+                    4,
+                    9
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    77
+                  ],
+                  "uv_size": [
+                    4,
+                    9
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    12,
+                    77
+                  ],
+                  "uv_size": [
+                    4,
+                    9
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    8,
+                    77
+                  ],
+                  "uv_size": [
+                    4,
+                    9
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    4,
+                    73
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    8,
+                    77
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                3.25,
+                13.5,
+                -7.5
+              ],
+              "size": [
+                4.75,
+                0.75,
+                5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    6,
+                    71
+                  ],
+                  "uv_size": [
+                    6,
+                    1
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    71
+                  ],
+                  "uv_size": [
+                    6,
+                    1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    18,
+                    71
+                  ],
+                  "uv_size": [
+                    6,
+                    1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    12,
+                    71
+                  ],
+                  "uv_size": [
+                    6,
+                    1
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    6,
+                    65
+                  ],
+                  "uv_size": [
+                    6,
+                    6
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    12,
+                    71
+                  ],
+                  "uv_size": [
+                    6,
+                    -6
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                5.25,
+                15,
+                -5.5
+              ],
+              "size": [
+                0.75,
+                3.25,
+                1
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    18,
+                    74
+                  ],
+                  "uv_size": [
+                    1,
+                    4
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    17,
+                    74
+                  ],
+                  "uv_size": [
+                    1,
+                    4
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    20,
+                    74
+                  ],
+                  "uv_size": [
+                    1,
+                    4
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    19,
+                    74
+                  ],
+                  "uv_size": [
+                    1,
+                    4
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    18,
+                    73
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    20,
+                    74
+                  ],
+                  "uv_size": [
+                    -1,
+                    -1
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                6,
+                17.5,
+                -5.5
+              ],
+              "size": [
+                1.75,
+                0.75,
+                1
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    18,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    1
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    17,
+                    80
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    21,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    20,
+                    80
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    18,
+                    79
+                  ],
+                  "uv_size": [
+                    2,
+                    1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    20,
+                    80
+                  ],
+                  "uv_size": [
+                    2,
+                    -1
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

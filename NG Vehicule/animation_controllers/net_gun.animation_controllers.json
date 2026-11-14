@@ -1,0 +1,74 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng.net_gun": {
+			"initial_state": "charge",
+			"states": {
+				"charge": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"tir": "c.owning_entity->query.skin_id == 1"
+						},
+						{
+							"recharge": "c.owning_entity->query.skin_id == 2"
+						},
+						{
+							"vide": "c.owning_entity->query.skin_id == 3"
+						}
+					]
+				},
+				"tir": {
+					"animations": [
+						"fire"
+					],
+					"transitions": [
+						{
+							"recharge": "c.owning_entity->query.skin_id == 2"
+						},
+						{
+							"vide": "c.owning_entity->query.skin_id == 3"
+						},
+						{
+							"charge": "c.owning_entity->query.skin_id == 0"
+						}
+					]
+				},
+				"vide": {
+					"animations": [
+						"idle_nonet"
+					],
+					"transitions": [
+						{
+							"recharge": "c.owning_entity->query.skin_id == 2"
+						},
+						{
+							"tir": "c.owning_entity->query.skin_id == 1"
+						},
+						{
+							"charge": "c.owning_entity->query.skin_id == 0"
+						}
+					]
+				},
+				"recharge": {
+					"animations": [
+						"reload"
+					],
+					"transitions": [
+						{
+							"charge": "c.owning_entity->query.skin_id == 0"
+						},
+						{
+							"tir": "c.owning_entity->query.skin_id == 1"
+						},
+						{
+							"vide": "c.owning_entity->query.skin_id == 3"
+						}
+					]
+				}
+			}
+		}
+	}
+}

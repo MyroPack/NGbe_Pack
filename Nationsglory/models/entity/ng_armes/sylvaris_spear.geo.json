@@ -1,0 +1,255 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ng_arme.sylvaris_spear",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [
+          0,
+          1,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root_item",
+          "pivot": [
+            0,
+            0,
+            -1
+          ],
+          "binding": "q.item_slot_to_bone_name(c.item_slot)"
+        },
+        {
+          "name": "wrapper",
+          "parent": "root_item",
+          "pivot": [
+            -6,
+            13.5,
+            -8.5
+          ]
+        },
+        {
+          "name": "align",
+          "parent": "wrapper",
+          "pivot": [
+            -6,
+            12,
+            4
+          ],
+          "rotation": [
+            65,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "nga_pose",
+          "parent": "align",
+          "pivot": [
+            -6,
+            29.5,
+            4
+          ],
+          "rotation": [
+            -90,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "nga_arme_dresseur_sylvaris",
+          "parent": "nga_pose",
+          "pivot": [
+            -6,
+            29,
+            6.75
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7,
+                28,
+                -8.5
+              ],
+              "size": [
+                2,
+                2,
+                31
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    31,
+                    14
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    2,
+                    2
+                  ],
+                  "uv_size": [
+                    31,
+                    2
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    20,
+                    25
+                  ],
+                  "uv_size": [
+                    2,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    2,
+                    8
+                  ],
+                  "uv_size": [
+                    31,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    2,
+                    14
+                  ],
+                  "uv_size": [
+                    2,
+                    31
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    8,
+                    45
+                  ],
+                  "uv_size": [
+                    2,
+                    -31
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -6,
+                25.5,
+                20.5
+              ],
+              "size": [
+                0,
+                7,
+                7
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    20,
+                    14
+                  ],
+                  "uv_size": [
+                    7,
+                    7
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -7,
+                28,
+                -8.5
+              ],
+              "size": [
+                2,
+                2,
+                31
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    2,
+                    49
+                  ],
+                  "uv_size": [
+                    31,
+                    2
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    2,
+                    55
+                  ],
+                  "uv_size": [
+                    31,
+                    2
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    14,
+                    14
+                  ],
+                  "uv_size": [
+                    2,
+                    31
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    14,
+                    45
+                  ],
+                  "uv_size": [
+                    2,
+                    -31
+                  ]
+                }
+              },
+              "inflate": 0.2
+            },
+            {
+              "origin": [
+                -6,
+                24.5,
+                -19.5
+              ],
+              "size": [
+                0,
+                10,
+                20
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    57,
+                    2
+                  ],
+                  "uv_size": [
+                    -20,
+                    10
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

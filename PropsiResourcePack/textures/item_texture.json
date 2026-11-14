@@ -7,6 +7,12 @@
 		},
 		"rotation_tool": {
 			"textures": "textures/items/rotation_tool"
+		},
+		"propsi_oversized_recube_poster_7x4_1": {
+			"textures": "textures/items/recube/recube_poster_7x4_1"
+		},
+		"propsi_oversized_recube_poster_7x4_2": {
+			"textures": "textures/items/recube/recube_poster_7x4_2"
 		}
 	}
 }

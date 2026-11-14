@@ -2421,7 +2421,17 @@
   },
   "gem_common": {
     "type": "image",
-    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_common",
+    "texture": "textures/ui/rarete/boutique/petit/cristal_commun",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_common_large": {
+    "type": "image",
+    "texture": "textures/ui/rarete/boutique/grand/cristal_commun",
     "keep_ratio": true,
     "size": [
       "100%",
@@ -2441,7 +2451,17 @@
   },
   "gem_rare": {
     "type": "image",
-    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_rare",
+    "texture": "textures/ui/rarete/boutique/petit/cristal_rare",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_rare_large": {
+    "type": "image",
+    "texture": "textures/ui/rarete/boutique/grand/cristal_rare",
     "keep_ratio": true,
     "size": [
       "100%",
@@ -2461,7 +2481,17 @@
   },
   "gem_epic": {
     "type": "image",
-    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_epic",
+    "texture": "textures/ui/rarete/boutique/petit/cristal_epique",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_epic_large": {
+    "type": "image",
+    "texture": "textures/ui/rarete/boutique/grand/cristal_epique",
     "keep_ratio": true,
     "size": [
       "100%",
@@ -2481,7 +2511,17 @@
   },
   "gem_legendary": {
     "type": "image",
-    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_legendary",
+    "texture": "textures/ui/rarete/boutique/petit/cristal_legendaire",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_legendary_large": {
+    "type": "image",
+    "texture": "textures/ui/rarete/boutique/grand/cristal_legendaire",
     "keep_ratio": true,
     "size": [
       "100%",
@@ -2501,7 +2541,17 @@
   },
   "gem_limited": {
     "type": "image",
-    "texture": "textures/ui/paladium_assets/boutique/rarity/gem_limited",
+    "texture": "textures/ui/rarete/boutique/petit/cristal_ultime",
+    "keep_ratio": true,
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 5
+  },
+  "gem_limited_large": {
+    "type": "image",
+    "texture": "textures/ui/rarete/boutique/grand/cristal_ultime",
     "keep_ratio": true,
     "size": [
       "100%",
@@ -2583,6 +2633,45 @@
         "gem_limited@ng_boutique_asset.has_flag": {
           "$flag": "§6",
           "$content": "ng_boutique_asset.gem_limited"
+        }
+      }
+    ]
+  },
+  "rarity_gem_large": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "gem_common@ng_boutique_asset.has_flag": {
+          "$flag": "§a",
+          "$content": "ng_boutique_asset.gem_common_large"
+        }
+      },
+      {
+        "gem_rare@ng_boutique_asset.has_flag": {
+          "$flag": "§b",
+          "$content": "ng_boutique_asset.gem_rare_large"
+        }
+      },
+      {
+        "gem_epic@ng_boutique_asset.has_flag": {
+          "$flag": "§5",
+          "$content": "ng_boutique_asset.gem_epic_large"
+        }
+      },
+      {
+        "gem_legendary@ng_boutique_asset.has_flag": {
+          "$flag": "§c",
+          "$content": "ng_boutique_asset.gem_legendary_large"
+        }
+      },
+      {
+        "gem_limited@ng_boutique_asset.has_flag": {
+          "$flag": "§6",
+          "$content": "ng_boutique_asset.gem_limited_large"
         }
       }
     ]
@@ -3354,11 +3443,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            35.92,
+            33.78,
             2.49
           ],
           "size": [
-            6.37,
+            8.51,
             8.51
           ],
           "$index": "$index_info",
@@ -3589,11 +3678,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            33.67,
+            31.66,
             2.34
           ],
           "size": [
-            5.97,
+            7.98,
             7.98
           ],
           "$index": "$index_info",
@@ -3824,11 +3913,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            41.44,
+            38.96,
             2.88
           ],
           "size": [
-            7.34,
+            9.82,
             9.82
           ],
           "$index": "$index_info",
@@ -4101,11 +4190,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            27.34,
+            25.42,
             2.19
           ],
           "size": [
-            5.69,
+            7.61,
             7.61
           ],
           "$index": "$index_info",
@@ -4229,11 +4318,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            39.38,
+            37.76,
             2.19
           ],
           "size": [
-            4.81,
+            6.43,
             6.43
           ],
           "$index": "$index_info",

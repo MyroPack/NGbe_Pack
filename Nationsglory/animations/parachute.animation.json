@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ng.parachute.balance": {
+			"loop": true,
+			"animation_length": 6,
+			"bones": {
+				"parachute": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.5": [
+							3,
+							0,
+							5
+						],
+						"3.0": [
+							0,
+							0,
+							0
+						],
+						"4.5": [
+							-3,
+							0,
+							-5
+						],
+						"6.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

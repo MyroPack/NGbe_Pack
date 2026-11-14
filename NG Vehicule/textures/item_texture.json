@@ -52,6 +52,159 @@
 		},
 		"helicopter": {
 			"textures": "textures/items/helicopter"
+		},
+		"bike_eagle": {
+			"textures": "textures/items/bike_eagle"
+		},
+		"bike_lion": {
+			"textures": "textures/items/bike_lion"
+		},
+		"bike_wolf": {
+			"textures": "textures/items/bike_wolf"
+		},
+		"bike_horse": {
+			"textures": "textures/items/bike_horse"
+		},
+		"bike_hammerhead_shark": {
+			"textures": "textures/items/bike_hammerhead_shark"
+		},
+		"bike_penguin": {
+			"textures": "textures/items/bike_penguin"
+		},
+		"bike_griffin": {
+			"textures": "textures/items/bike_griffin"
+		},
+		"bike_phoenix": {
+			"textures": "textures/items/bike_phoenix"
+		},
+		"tractor": {
+			"textures": "textures/items/tractor"
+		},
+		"plow": {
+			"textures": "textures/items/plow"
+		},
+		"seeder": {
+			"textures": "textures/items/seeder"
+		},
+		"fertilizer": {
+			"textures": "textures/items/fertilizer"
+		},
+		"water_pump": {
+			"textures": "textures/items/water_pump"
+		},
+		"grain_trailer": {
+			"textures": "textures/items/grain_trailer"
+		},
+		"animal_trailer": {
+			"textures": "textures/items/animal_trailer"
+		},
+		"snow_plow_blade": {
+			"textures": "textures/items/snow_plow_blade"
+		},
+		"harvester_header": {
+			"textures": "textures/items/harvester_header"
+		},
+		"upgrade_armor_onyx": {
+			"textures": "textures/items/upgrade_armor_onyx"
+		},
+		"upgrade_armor_zirconium": {
+			"textures": "textures/items/upgrade_armor_zirconium"
+		},
+		"upgrade_armor_cryolite": {
+			"textures": "textures/items/upgrade_armor_cryolite"
+		},
+		"upgrade_onboard_computer": {
+			"textures": "textures/items/upgrade_onboard_computer"
+		},
+		"upgrade_onyx_fuel_tank": {
+			"textures": "textures/items/upgrade_onyx_fuel_tank"
+		},
+		"upgrade_zirconium_fuel_tank": {
+			"textures": "textures/items/upgrade_zirconium_fuel_tank"
+		},
+		"upgrade_cryolite_fuel_tank": {
+			"textures": "textures/items/upgrade_cryolite_fuel_tank"
+		},
+		"upgrade_missile_launcher_t1": {
+			"textures": "textures/items/upgrade_missile_launcher_t1"
+		},
+		"upgrade_missile_launcher_t2": {
+			"textures": "textures/items/upgrade_missile_launcher_t2"
+		},
+		"upgrade_missile_launcher_t3": {
+			"textures": "textures/items/upgrade_missile_launcher_t3"
+		},
+		"upgrade_missile_launcher_t4": {
+			"textures": "textures/items/upgrade_missile_launcher_t4"
+		},
+		"upgrade_engine_onyx": {
+			"textures": "textures/items/upgrade_engine_onyx"
+		},
+		"upgrade_engine_zirconium": {
+			"textures": "textures/items/upgrade_engine_zirconium"
+		},
+		"upgrade_engine_cryolite": {
+			"textures": "textures/items/upgrade_engine_cryolite"
+		},
+		"upgrade_rotor_onyx": {
+			"textures": "textures/items/upgrade_rotor_onyx"
+		},
+		"upgrade_rotor_zirconium": {
+			"textures": "textures/items/upgrade_rotor_zirconium"
+		},
+		"upgrade_rotor_cryolite": {
+			"textures": "textures/items/upgrade_rotor_cryolite"
+		},
+		"upgrade_thruster_onyx": {
+			"textures": "textures/items/upgrade_thruster_onyx"
+		},
+		"upgrade_thruster_zirconium": {
+			"textures": "textures/items/upgrade_thruster_zirconium"
+		},
+		"upgrade_thruster_cryolite": {
+			"textures": "textures/items/upgrade_thruster_cryolite"
+		},
+		"upgrade_wheels_onyx": {
+			"textures": "textures/items/upgrade_wheels_onyx"
+		},
+		"upgrade_wheels_zirconium": {
+			"textures": "textures/items/upgrade_wheels_zirconium"
+		},
+		"upgrade_wheels_cryolite": {
+			"textures": "textures/items/upgrade_wheels_cryolite"
+		},
+		"upgrade_noise_reducer": {
+			"textures": "textures/items/upgrade_noise_reducer"
+		},
+		"upgrade_oxygen_generator": {
+			"textures": "textures/items/upgrade_oxygen_generator"
+		},
+		"upgrade_navigation_radar": {
+			"textures": "textures/items/upgrade_navigation_radar"
+		},
+		"upgrade_helicopter_turret": {
+			"textures": "textures/items/upgrade_helicopter_turret"
+		},
+		"upgrade_helicopter_winch": {
+			"textures": "textures/items/upgrade_helicopter_winch"
+		},
+		"capture_cage_s": {
+			"textures": "textures/items/capture_cage_s"
+		},
+		"capture_cage_m": {
+			"textures": "textures/items/capture_cage_m"
+		},
+		"capture_cage_l": {
+			"textures": "textures/items/capture_cage_l"
+		},
+		"capture_cage_xl": {
+			"textures": "textures/items/capture_cage_xl"
+		},
+		"net_gun": {
+			"textures": "textures/items/net_gun"
+		},
+		"capture_net_item": {
+			"textures": "textures/items/capture_net_item"
 		}
 	}
 }

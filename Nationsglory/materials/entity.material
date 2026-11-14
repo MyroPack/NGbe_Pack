@@ -1,0 +1,8 @@
+{
+	"materials": {
+		"version": "1.0.0",
+		"ng_ore_glow:entity_beam_additive": {
+			"+states": ["DisableDepthTest", "DisableCulling"]
+		}
+	}
+}

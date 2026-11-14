@@ -5,7 +5,7 @@
       "description": {
         "identifier": "geometry.ng_liquid_azote_generator",
         "texture_width": 256,
-        "texture_height": 256,
+        "texture_height": 280,
         "visible_bounds_width": 4,
         "visible_bounds_height": 6.5,
         "visible_bounds_offset": [
@@ -442,6 +442,249 @@
                 152
               ]
             }
+          ]
+        },
+        {
+          "name": "prise_elec_in_back",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.025,
+                3,
+                13.0
+              ],
+              "size": [
+                10,
+                10,
+                10.0
+              ],
+              "inflate": -0.025,
+              "uv": {
+                "north": {
+                  "uv": [
+                    3,
+                    259
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    16,
+                    259
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    259
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    13,
+                    259
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    3,
+                    256
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    13,
+                    256
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.025,
+                3,
+                23
+              ],
+              "size": [
+                10,
+                10,
+                3
+              ],
+              "inflate": -0.025,
+              "uv": [
+                0,
+                256
+              ]
+            },
+            {
+              "origin": [
+                -4.025,
+                4,
+                25
+              ],
+              "size": [
+                8,
+                8,
+                1
+              ],
+              "inflate": -0.025,
+              "uv": [
+                0,
+                269
+              ]
+            }
+          ]
+        },
+        {
+          "name": "prise_gaz_in_left",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.025,
+                3,
+                13.0
+              ],
+              "size": [
+                10,
+                10,
+                10.0
+              ],
+              "inflate": -0.025,
+              "uv": {
+                "north": {
+                  "uv": [
+                    29,
+                    259
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    42,
+                    259
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    26,
+                    259
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    39,
+                    259
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    29,
+                    256
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    39,
+                    256
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.025,
+                3,
+                23
+              ],
+              "size": [
+                10,
+                10,
+                3
+              ],
+              "inflate": -0.025,
+              "uv": [
+                26,
+                256
+              ]
+            },
+            {
+              "origin": [
+                -4.025,
+                4,
+                25
+              ],
+              "size": [
+                8,
+                8,
+                1
+              ],
+              "inflate": -0.025,
+              "uv": [
+                26,
+                269
+              ]
+            }
+          ],
+          "rotation": [
+            0,
+            90,
+            0
           ]
         }
       ]

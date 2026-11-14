@@ -1,0 +1,52 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.propsi_e_npcj_commerce_haldor": {
+      "initial_state": "idle",
+      "states": {
+        "talk": {
+          "animations": [
+            "talk"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            },
+            {
+              "idle": "q.variant != 1 && !v.npcj_proche"
+            }
+          ]
+        },
+        "near": {
+          "animations": [
+            "near"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "idle": "q.variant != 1 && !v.npcj_proche"
+            }
+          ]
+        },
+        "idle": {
+          "animations": [
+            "idle"
+          ],
+          "blend_transition": 0.25,
+          "transitions": [
+            {
+              "talk": "q.variant == 1"
+            },
+            {
+              "near": "q.variant != 1 && v.npcj_proche"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

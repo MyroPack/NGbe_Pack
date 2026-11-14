@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.body.chestplates_hotdog_ketchup": {
+      "geometry": "Geometry.cosmetic.body.chestplates_hotdog",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.body.chestplates_hotdog_ketchup"
+      ]
+    }
+  }
+}

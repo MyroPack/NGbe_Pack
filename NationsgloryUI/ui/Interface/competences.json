@@ -32,24 +32,11 @@
                           "size": ["100% - 4px","100% - 2px"],
                           "controls":[
 
-                                {"inventaire@competences.categorie_asset_button":{
-                                  "$index":10
-                                }},
-
-                                {"carte@competences.categorie_asset_button":{
-                                  "$index":11
-                                }},
-
+                                // Seul l'onglet Competences reste, en titre de l'ecran : plus d'onglets Inventaire,
+                                // Carte, Profil et Cosmetique (cases 10, 11, 13 et 14 de RecubeJobsMod, qui lancaient
+                                // /inventaire, /carte, /profil et /cosmetique ; demande de Leo du 01/11).
                                 {"competences@competences.categorie_asset_button":{
                                   "$index":12
-                                }},
-
-                                {"profil@competences.categorie_asset_button":{
-                                  "$index":13
-                                }},
-
-                                {"cosmetique@competences.categorie_asset_button":{
-                                  "$index":14
                                 }},
 
                                 {"padding@ng_module.panel": {
@@ -729,13 +716,15 @@
                                                                   "size":["100%c","100%"],
                                                                   "controls":[
                                                                                 
-                                                                              {"title":{
-                                                                                "type":"label",
-                                                                                "font_scale_factor":0.8,
+                                                                              // Titre envoye par le serveur (case 62) : « Experience » ou « Deblocages » (RecubeJobsMod 0.0.13)
+                                                                              {"title@ng_module.Simple_text": {
+                                                                                "$type_get_text": "Get_text_type_1",
+                                                                                "$index": 62,
                                                                                 "layer":5,
-                                                                                "offset":[0,-1.3],
-                                                                                "font_type":"MinecraftTen",
-                                                                                "text":"Experience"
+                                                                                "$font_type":"MinecraftTen",
+                                                                                "$text_offset":[0,1],
+                                                                                "size": ["100%c", 12],
+                                                                                "$font_scale_factor":0.8
                                                                               }}
                                                                 ]}},
 
@@ -833,9 +822,13 @@
                                                                                       "size":["100% - 15px","100% - 2px"],
                                                                                       "controls":[
 
-                                                                                            {"label@ng_module.label":{
-                                                                                              "text":"Item",
-                                                                                              "font_scale_factor":0.7,
+                                                                                            // En-tetes envoyes par le serveur (cases 63 a 65) : Item / Action / Experience ou Recette / Atelier / R&D
+                                                                                            {"label@ng_module.Simple_text":{
+                                                                                              "$type_get_text": "Get_text_type_1",
+                                                                                              "$index": 63,
+                                                                                              "$padding_left": [0,0.1],
+                                                                                              "size": ["100%c", "100%"],
+                                                                                              "$font_scale_factor":0.7,
                                                                                               "anchor_from":"left_middle",
                                                                                               "anchor_to":"left_middle"
                                                                                             }},
@@ -847,19 +840,24 @@
                                                                                               "offset":[92.5, 0],
                                                                                               "size":[32, "100%"],
                                                                                               "controls":[
-                                                                                                {"label@ng_module.label":{
-                                                                                                  "text":"Action",
+                                                                                                {"label@ng_module.Simple_text":{
+                                                                                                  "$type_get_text": "Get_text_type_1",
+                                                                                                  "$index": 64,
+                                                                                                  "size": ["100%c", "100%"],
                                                                                                   "anchor_from":"center",
                                                                                                   "anchor_to":"center",
-                                                                                                  "font_scale_factor":0.7
+                                                                                                  "$font_scale_factor":0.7
                                                                                                 }}
                                                                                               ]
                                                                                             }},
 
-                                                                                            {"label@ng_module.label":{
-                                                                                              "text":"Experience",
+                                                                                            {"label@ng_module.Simple_text":{
+                                                                                              "$type_get_text": "Get_text_type_1",
+                                                                                              "$index": 65,
+                                                                                              "$padding_right": [0,0.1],
+                                                                                              "size": ["100%c", "100%"],
                                                                                               "offset":[2],
-                                                                                              "font_scale_factor":0.7,
+                                                                                              "$font_scale_factor":0.7,
                                                                                               "anchor_from":"right_middle",
                                                                                               "anchor_to":"right_middle"
                                                                                             }}

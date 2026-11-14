@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ng:laser_shotgun",
+      "item": {
+        "ng:laser_shotgun": "query.is_owner_identifier_any('minecraft:player')"
+      },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/recubeicbm/weapon/laser_shotgun",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.recubeicbm.weapon.laser_shotgun"
+      },
+      "animations": {
+        "first_person_hold": "animation.recubeicbm.held.laser_shotgun.first_person",
+        "third_person_hold": "animation.recubeicbm.held.laser_shotgun.third_person",
+        "no_accessories": "animation.recubeicbm.weapon.no_accessories",
+        "idle": "animation.recubeicbm.weapon.laser_shotgun.idle",
+        "fire": "animation.recubeicbm.weapon.laser_shotgun.fire",
+        "reload": "animation.recubeicbm.weapon.laser_shotgun.reload",
+        "weapon": "controller.animation.recubeicbm.weapon"
+      },
+      "scripts": {
+        "animate": [
+          {
+            "first_person_hold": "c.is_first_person"
+          },
+          {
+            "third_person_hold": "!c.is_first_person"
+          },
+          "no_accessories",
+          "weapon"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.item_default"
+      ]
+    }
+  }
+}

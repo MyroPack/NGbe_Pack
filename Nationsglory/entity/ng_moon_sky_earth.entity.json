@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:moon_sky_earth",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_moon_sky_earth"
+      },
+      "geometry": {
+        "default": "geometry.ng_moon_sky_body"
+      },
+      "animations": {
+        "suivi": "animation.ng_moon_sky_body.suivi"
+      },
+      "scripts": {
+        "animate": [
+          "suivi"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.ng_moon_sky_body"
+      ]
+    }
+  }
+}

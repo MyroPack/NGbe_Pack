@@ -1,0 +1,23 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:vehicle_workbench_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/ng_vehicle_workbench",
+        "adaptateurs": "textures/blocks/rubber_maker"
+      },
+      "geometry": {
+        "default": "geometry.ng_vehicle_workbench",
+        "adaptateurs": "geometry.ng_vehicle_workbench_adaptateurs"
+      },
+      "render_controllers": [
+        "controller.render.default",
+        "controller.render.ng_agri_adaptateurs"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npcj_guideon_got",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npcj/npcj_guideon_got"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npcj_guideon_got"
+      },
+      "animations": {
+        "idle": "animation.propsi_e_npcj_guideon_got.idle",
+        "near": "animation.propsi_e_npcj_guideon_got.near",
+        "talk": "animation.propsi_e_npcj_guideon_got.talk",
+        "forward": "animation.propsi_e_npcj_guideon_got.forward",
+        "controleur": "controller.animation.propsi_e_npcj_guideon_got",
+        "titre": "animation.propsi_e_npcj_guideon_got.titre"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.npcj_proche = q.distance_from_camera <= 4.0;"
+        ],
+        "animate": [
+          "controleur",
+          "titre"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "particle_effects": {
+        "titre": "propsi:npcj_guideon_got_titre"
+      }
+    }
+  }
+}

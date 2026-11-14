@@ -1148,6 +1148,12 @@
     "propsi_oversized_bank_stand" : {
       "textures" : "textures/items/oversized/bank_stand"
     },
+    "propsi_oversized_atm" : {
+      "textures" : "textures/items/oversized/atm"
+    },
+    "propsi_oversized_atm_wood" : {
+      "textures" : "textures/items/oversized/atm_wood"
+    },
     "propsi_oversized_wooden_covered_wagon" : {
       "textures" : "textures/items/oversized/wooden_covered_wagon"
     },
@@ -1261,6 +1267,132 @@
     },
     "propsi_oversized_furniture_coastal_hammock" : {
       "textures" : "textures/items/oversized/furniture_coastal_hammock"
+    },
+    "staff_easter_egg_1" : {
+      "textures" : "textures/items/staff_easter_egg_1"
+    },
+    "staff_easter_egg_4" : {
+      "textures" : "textures/items/staff_easter_egg_4"
+    },
+    "staff_easteregg_0" : {
+      "textures" : "textures/items/staff_easteregg_0"
+    },
+    "staff_easteregg_1" : {
+      "textures" : "textures/items/staff_easteregg_1"
+    },
+    "staff_easteregg_2" : {
+      "textures" : "textures/items/staff_easteregg_2"
+    },
+    "staff_easteregg_3" : {
+      "textures" : "textures/items/staff_easteregg_3"
+    },
+    "staff_dust_0" : {
+      "textures" : "textures/items/staff_dust_0"
+    },
+    "staff_dust_1" : {
+      "textures" : "textures/items/staff_dust_1"
+    },
+    "staff_dust_4" : {
+      "textures" : "textures/items/staff_dust_4"
+    },
+    "staff_dust_5" : {
+      "textures" : "textures/items/staff_dust_5"
+    },
+    "staff_dust_6" : {
+      "textures" : "textures/items/staff_dust_6"
+    },
+    "staff_dust_7" : {
+      "textures" : "textures/items/staff_dust_7"
+    },
+    "staff_dust_9" : {
+      "textures" : "textures/items/staff_dust_9"
+    },
+    "staff_dust_10" : {
+      "textures" : "textures/items/staff_dust_10"
+    },
+    "staff_stocking" : {
+      "textures" : "textures/items/staff_stocking"
+    },
+    "staff_star" : {
+      "textures" : "textures/items/staff_star"
+    },
+    "staff_snowflake" : {
+      "textures" : "textures/items/staff_snowflake"
+    },
+    "staff_milk" : {
+      "textures" : "textures/items/staff_milk"
+    },
+    "staff_candycane_0" : {
+      "textures" : "textures/items/staff_candycane_0"
+    },
+    "staff_candycane_1" : {
+      "textures" : "textures/items/staff_candycane_1"
+    },
+    "staff_candycane_2" : {
+      "textures" : "textures/items/staff_candycane_2"
+    },
+    "staff_biscuit" : {
+      "textures" : "textures/items/staff_biscuit"
+    },
+    "staff_epice" : {
+      "textures" : "textures/items/staff_epice"
+    },
+    "staff_epice_rare" : {
+      "textures" : "textures/items/staff_epice_rare"
+    },
+    "npcj_atlas_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_atlas"
+    },
+    "npcj_guideon_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_guideon"
+    },
+    "npcj_marketus_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_marketus"
+    },
+    "npcj_skye_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_skye"
+    },
+    "npcj_vote_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_vote"
+    },
+    "npcj_atlas_got_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_atlas_got"
+    },
+    "npcj_guideon_got_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_guideon_got"
+    },
+    "npcj_marketus_got_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_marketus_got"
+    },
+    "npcj_skye_got_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_skye_got"
+    },
+    "npcj_vote_got_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_vote_got"
+    },
+    "npcj_commerce_oliver_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_commerce_oliver"
+    },
+    "npcj_commerce_ornella_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_commerce_ornella"
+    },
+    "npcj_commerce_haldor_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_commerce_haldor"
+    },
+    "npcj_commerce_galaxius_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_commerce_galaxius"
+    },
+    "npcj_guideon_onboarding_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_guideon_onboarding"
+    },
+    "npcj_marketus_onboarding_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_marketus_onboarding"
+    },
+    "npcj_skye_onboarding_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_skye_onboarding"
+    },
+    "npcj_pierre_onboarding_spawn_egg" : {
+      "textures" : "textures/items/npcj/npcj_pierre_onboarding"
     }
   }
 }

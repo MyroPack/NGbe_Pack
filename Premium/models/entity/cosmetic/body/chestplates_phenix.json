@@ -1,0 +1,204 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.chestplates_phenix",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.86,
+        "visible_bounds_height": 2.36,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "jacket",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.body.chestplates_phenix.wings",
+          "parent": "jacket",
+          "pivot": [
+            -0.15707,
+            25.43554,
+            13
+          ],
+          "rotation": [
+            0,
+            45,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.25,
+                15.25,
+                5.25
+              ],
+              "size": [
+                7,
+                7,
+                2
+              ],
+              "pivot": [
+                7.75,
+                20.75,
+                6.25
+              ],
+              "rotation": [
+                0,
+                -45,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    121,
+                    72
+                  ],
+                  "uv_size": [
+                    7,
+                    7
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    121,
+                    79
+                  ],
+                  "uv_size": [
+                    2,
+                    7
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    121,
+                    72
+                  ],
+                  "uv_size": [
+                    7,
+                    7
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    121,
+                    86
+                  ],
+                  "uv_size": [
+                    2,
+                    7
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    121,
+                    93
+                  ],
+                  "uv_size": [
+                    7,
+                    2
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    121,
+                    97
+                  ],
+                  "uv_size": [
+                    7,
+                    -2
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                9,
+                10.71424,
+                7.5
+              ],
+              "size": [
+                0,
+                19,
+                23
+              ],
+              "uv": {
+                "west": {
+                  "uv": [
+                    121,
+                    91
+                  ],
+                  "uv_size": [
+                    -23,
+                    19
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -16.5,
+                10.71424,
+                5
+              ],
+              "size": [
+                23,
+                19,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    98,
+                    72
+                  ],
+                  "uv_size": [
+                    23,
+                    19
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

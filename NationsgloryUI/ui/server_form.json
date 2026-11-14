@@ -19,6 +19,8 @@
   //              ModerationModule du proxy (/punisher, bouton de toxicite de l'annuaire).
   //   §p§r§u§r§l§r : « Voir le reglement » du Punisher (ui/Interface/punisher.json, rules_panel),
   //              meme habillage, envoye par le meme module.
+  //   §d§l§g§r : dialogue d'un PNJ du tuto (ui/Interface/dialogue_pnj.json), envoye par TutoMod en mode
+  //              parcours (serveur tuto de NationsGlory).
   //
   // Seul le factory des formulaires est remplace (modifications) : si Mojang le
   // renomme, le remplacement ne s'applique pas et tout reste vanilla.
@@ -114,7 +116,45 @@
                       }
                     ],
                     "controls": [
-                      {"long_form@server_form.long_form": {}}
+
+                      // Ni dialogue de PNJ du tuto : le formulaire vanilla.
+                      {"not_dialogue_pnj_form": {
+                        "type": "panel",
+                        "size": [ "100%", "100%" ],
+                        "bindings": [
+                          {
+                            "binding_name": "#title_text"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_property_name": "((#title_text - '§d§l§g§r') = #title_text)",
+                            "target_property_name": "#visible"
+                          }
+                        ],
+                        "controls": [
+                          {"long_form@server_form.long_form": {}}
+                        ]
+                      }},
+
+                      {"dialogue_pnj_form": {
+                        "type": "panel",
+                        "size": [ "100%", "100%" ],
+                        "bindings": [
+                          {
+                            "binding_name": "#title_text"
+                          },
+                          {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '§d§l§g§r') = #title_text))",
+                            "target_property_name": "#visible"
+                          }
+                        ],
+                        "controls": [
+                          {"leurre@focus_leurre.leurre": {}},
+                          {"dialogue@dialogue_pnj.main_panel": {}}
+                        ]
+                      }}
+
                     ]
                   }},
 

@@ -4,7 +4,8 @@
     "description": {
       "identifier": "ngpremium:lootbox_ultimate",
       "materials": {
-        "default": "entity_alphatest"
+        "default": "entity_alphatest",
+        "transparent": "entity_alphablend"
       },
       "textures": {
         "default": "textures/entity/lootbox_ultimate"
@@ -32,7 +33,7 @@
       "sound_effects": {
 				"lootbox_ultimate_idle": "lootbox_ultimate_idle"
 			},
-      "render_controllers": ["controller.render.default"]
+      "render_controllers": ["controller.render.ngpremium_lootbox_ultimate"]
     }
   }
 }

@@ -1,20 +1,20 @@
 {
   "namespace": "tannage",
 
+  // Atelier de tannage (NGMachineMod, TanneryUi, porte de NG Java, bloc 3085), sur la capture de Leo du 01/11 13 h 12 :
+  // fenetre couleur cuir de 222 de large (en-tete avec le nom, le livre des recettes et la croix ; bande d'etat avec la
+  // peau en cours, l'etat, la barre et la ligne dessous ; Depot 4 x 2 a gauche, fleche, Sortie 4 x 2 a droite), puis
+  // l'inventaire du joueur dessous. Les blocs (en-tete, case d'objet, barre, Toggle, inventaire) sont ceux des ecrans
+  // d'atelier de NG (workstations.json), seules les couleurs changent.
+  // Cases de l'ecran (NGMachineMod, TanneryUi) : 10 livre (§0, §2 enfonce), 11 page (1 machine, 0 recettes), 12 etat,
+  // 13 ligne sous la barre, 14 avancement, 15-22 depot, 23-30 sortie, 31 peau en cours, 32-43 entrees des recettes,
+  // 44-55 leurs resultats. Le depot est le premier groupe de cases vides : un shift-clic depuis l'inventaire y arrive.
+
   "main_panel":{
     "type":"panel",
     "size":["100%","100%"],
     "controls":[
 
-/*             {"small_chest_grid@chest.small_chest_grid":{
-              "grid_dimensions": [ 9, 9 ],
-              "layer":800000,
-              "anchor_from":"bottom_right",
-              "anchor_to":"bottom_right",
-              "size": [ 162, 162 ]
-            }},
- */
-            
             {"background_black@ng_asset.background_white":{
               "color":[0.000, 0.000, 0.000],
               "size":["150%","150%"],
@@ -25,602 +25,563 @@
               "size":[222,"100%c"],
               "controls":[
 
-                  {"gestion_panel@ng_asset.background_white":{
-                    "color":[0.153, 0.153, 0.165],
-                    "size":["100%",127],
+                  {"fenetre@tannage.image_fenetre":{
+                    "size":["100%",131],
                     "controls":[
 
                         {"stack_panel@ng_module.stackpanel":{
                           "size":["100% - 2px","100% - 2px"],
                           "controls":[
 
-                                    {"header@ng_asset.background_01":{
-                                      "size": ["100%",20],
-                                      "controls":[
+                                    {"entete@tannage.entete":{}},
 
-                                          {"stack_panel@ng_module.stackpanel":{
-                                            "orientation":"horizontal",
-                                            "size":["100% - 4px","100% - 2px"],
-                                            "controls":[
+                                    {"bande_etat@tannage.bande_etat":{}},
 
-                                                     {"padding@ng_module.panel":{
-                                                        "size":[5,"100%"]
-                                                     }},
-
-                                                     {"centring@ng_module.panel":{
-                                                        "size":["100%c","100%"],
-                                                        "controls":[
-                                                         
-                                                                      {"title":{
-                                                                        "type":"label",
-                                                                        "font_scale_factor":0.8,
-                                                                        "layer":10,
-                                                                        "offset":[0,-1.3],
-                                                                        "font_type":"MinecraftTen",
-                                                                        "text":"tannage"
-                                                                      }}
-                                                     ]}},
-
-                                                      {"padding@ng_module.panel":{
-                                                        "size":["fill","100%"]
-                                                      }},
-
-                                                      {"centring@ng_module.panel":{
-                                                        "size":["100%c","100%"],
-                                                        "controls":[
-
-                                                              {"close_button@ng_module.close_button":{}}  
-                                                              
-                                                      ]}}
-                                          ]}}
-                                    ]}},
-
-                                    {"padding@ng_module.panel":{
-                                      "size":["100%",2]
+                                    {"separateur@ng_asset.background_white":{
+                                      "size":["100%",1],
+                                      "color":[0.612, 0.502, 0.349]
                                     }},
 
-                                    {"content@ng_module.panel":{
-                                      "size":["100%",100],
+                                    {"contenu@ng_module.panel":{
+                                      "size":["100%","fill"],
                                       "controls":[
 
-                                            {"content@ng_module.stackpanel":{
-                                              "orientation":"horizontal",
-                                              "size":["100% - 6px","100%"],
-                                              "controls":[
-
-                                                  {"button_toggle@ng_asset.background_15":{
-                                                    "size":[20,"100%"],
-                                                    "controls":[
-
-                                                            {"content@ng_module.stackpanel":{
-                                                              "size":["100% - 4px","100% - 2px"],
-                                                              "controls":[
-
-                                                                  {"padding@ng_module.panel":{
-                                                                    "size":["100%",1]
-                                                                  }},
-
-                                                                  {"homme_button@ng_module.section_toggle_button": { 
-                                                                      "toggle_group_forced_index": 0, 
-                                                                      "$section_topic": "page_1",
-                                                                     
-                                                                      "$is_default_toggle": true,
-                                                                      "$sibling_toggle_1": "page_2_button_toggle",
-
-                                                                      "$size_icon":[9.5,9.5],
-                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
-                                                                      "$texture_icon":"ng_asset.icon_06",
-                                                                      "$button_asset":"ng_asset.toggle_asset_01",
-                                                                      "size": [ "100%", 16 ]
-                                                                  }},
-
-                                                                  {"padding@ng_module.panel":{
-                                                                    "size":["100%",1]
-                                                                  }},
-
-                                                                  {"setting@ng_module.section_toggle_button": { 
-                                                                      "$toggle_group_forced_index": 1, 
-                                                                      "$section_topic": "page_2",
-
-                                                                      "$button_asset":"ng_asset.toggle_asset_01",
-                                                                      "$size_icon":[9.5,9.5],
-                                                                      "$color_icon_S1":[0.443, 0.443, 0.482],
-                                                                      "$texture_icon":"ng_asset.icon_05",
-                                                                      "size": [ "100%", 16 ]
-                                                                  }}
-                                                            ]}}
-
-                                                  ]}},
-
-                                                  {"padding@ng_module.panel":{
-                                                    "size":[3,"100%"]
-                                                  }},
-
-                                                  {"amelioration@ng_asset.background_13":{
-                                                      "size":["fill","100%"],
-                                                      "controls":[
-
-                                                              {"page1@tannage.page1":{}},
-                                                              {"page2@tannage.page2":{}}
-                                                  ]}}
-                                            ]}}
-                                    ]}}
-                        ]}}
+                                            {"pages@ng_module.Toggle": {
+                                              "size": ["100%","100%"],
+                                              "$index_page": 11,
+                                              "$page1": "tannage.page_recettes",
+                                              "$page2": "tannage.page_machine"
+                                            }}
+                                      ]}}
+                          ]}}
                   ]}},
 
                   {"padding@ng_module.panel":{
                     "size":["100%",5]
                   }},
 
-                  {"inventory@ng_asset.background_02":{
-                    "size": ["100%",113],
-                    "controls":[
-
-                                {"inventory_content@ng_module.stackpanel":{
-                                  "size":[208,"100% - 10px"],
-                                  "controls":[           
-
-                                              {"title":{
-                                                  "size":["100%",10],
-                                                  "type":"label",
-                                                  "layer":5,
-                                                  "font_scale_factor":0.6,
-                                                  "color":[0.443, 0.443, 0.482],
-                                                  "font_type":"MinecraftTen",
-                                                  "text":"inventaire"
-                                              }},
-
-                                              {"inventory@ng_asset.background_white":{
-                                                "color":[0.180, 0.180, 0.192],
-                                                "size":[208,93],
-                                                "controls":[
-
-                                                    {"inventory_&_hotbar@ng_module.stackpanel":{
-                                                      "size":[207,92],
-                                                      "offset":[0.5,0.5],
-                                                      "controls":[
-
-                                                          {"complementaroy@ng_module.grid_asset":{
-                                                            "$size_grid":[207,69],
-                                                            "$grid_dimensions":[9,3],
-                                                            "$collection_name":"inventory_items",
-                                                            "$item_renderer_panel_size":[22,22],
-                                                            "$cell_image_size":[22,22],
-                                                            "$textures_slot_hover":"ng_asset.background_10",
-                                                            "$textures_slot_default":"ng_asset.background_white",
-                                                            "$color_background_default":[0.094, 0.094, 0.106],
-                                                            "$slot_size":[22,22]
-                                                          }},
-
-                                                          {"complementaroy@ng_module.grid_asset":{
-                                                            "$size_grid":[207,23],
-                                                            "$grid_dimensions":[9,1],
-                                                            "$collection_name":"hotbar_items",
-                                                            "$item_renderer_panel_size":[22,22],
-                                                            "$cell_image_size":[22,22],
-                                                            "$textures_slot_hover":"ng_asset.background_10",
-                                                            "$textures_slot_default":"ng_asset.background_white",
-                                                            "$color_background_default":[0.094, 0.094, 0.106],
-                                                            "$slot_size":[22,22]
-                                                          }}
-
-                                                    ]}}
-                                              ]}}
-                                ]}}
-
-
-                  ]}}
-            ]}}    
+                  {"inventaire@tannage.inventaire":{}}
+            ]}}
   ]},
 
-  "page1@ng_module.stackpanel":{
-    "orientation":"horizontal",
-    "size":["100% - 8px","100% - 8px"],
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "page_2_button_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-   ], 
+  // ---------------------------------------------------------------- en-tete : icone, nom, livre, croix
+
+  "entete@ng_asset.background_white":{
+    "size":["100%",21],
+    "color":[0.631, 0.498, 0.322],
     "controls":[
 
-            {"left_part@ng_module.stackpanel":{
-              "size":["50% - 2px","100%"],
-              "controls":[
+        {"stack_panel@ng_module.stackpanel":{
+          "orientation":"horizontal",
+          "size":["100% - 4px","100%"],
+          "controls":[
 
-                      {"header@ng_asset.background_12":{
-                        "size": ["100%",15],
-                        "controls":[
+                {"padding@ng_module.panel":{
+                  "size":[4,"100%"]
+                }},
 
-                              {"stack_panel@ng_module.stackpanel":{
-                                "orientation":"horizontal",
-                                "size":["100% - 2px","100% - 2px"],
-                                "controls":[
+                {"centrage_icone@ng_module.panel":{
+                  "size":[11,"100%"],
+                  "controls":[
 
-                                          {"padding@ng_module.panel":{
-                                            "size":[5,"100%"]
-                                          }},
+                        {"carre@tannage.image_carre_icone":{
+                          "size":[11,11],
+                          "controls":[
+                                {"icone@tannage.image_icone":{
+                                  "size":[8,8],
+                                  "layer":2,
+                                  "color":[0.118, 0.082, 0.071]
+                                }}
+                          ]
+                        }}
+                  ]}},
 
-                                          {"centring@ng_module.panel":{
-                                            "size":["100%c","100%"],
-                                            "controls":[
-                                                                                                  
-                                                    {"title":{
-                                                      "type":"label",
-                                                      "font_scale_factor":0.7,
-                                                      "layer":10,
-                                                      "offset":[0,-0.6],
-                                                      "color":[0.624, 0.624, 0.663],
-                                                      "font_type":"MinecraftTen",
-                                                      "text":"Amelioration"
-                                                    }}
-                                          ]}}
-                              ]}}
-                      ]}},
+                {"padding@ng_module.panel":{
+                  "size":[4,"100%"]
+                }},
 
-                      {"content@ng_asset.background_11":{
-                        "size": ["100%",35],
-                        "controls":[
+                {"centrage_titre@ng_module.panel":{
+                  "size":["100%c","100%"],
+                  "controls":[
 
-                              {"content@ng_module.stackpanel":{
-                                "orientation":"horizontal",
-                                "collection_name": "container_items",
-                                "size":["100%c",20],
-                                "controls":[
+                        {"titre":{
+                          "type":"label",
+                          "font_scale_factor":0.8,
+                          "layer":10,
+                          "offset":[0,-0.6],
+                          "color":[0.231, 0.165, 0.137],
+                          "font_type":"MinecraftTen",
+                          "text":"ng.tannage.titre"
+                        }}
+                  ]}},
 
-                                        {"slot_1@ng_module.custome_slot":{
-                                          "$index":16
-                                        }},
+                {"padding@ng_module.panel":{
+                  "size":["fill","100%"]
+                }},
 
-                                        {"padding@ng_module.panel":{
-                                          "size":[4,"100%"]
-                                        }},
+                {"centrage_livre@ng_module.panel":{
+                  "size":[11,"100%"],
+                  "controls":[
 
-                                        {"slot_2@ng_module.custome_slot":{
-                                          "$index":17
-                                        }},
+                        {"livre@ng_module.multiple_status_button": {
+                          "size": [11,11],
+                          "$size_button": ["100%","100%"],
+                          "$index": 10,
 
-                                        {"padding@ng_module.panel":{
-                                          "size":[4,"100%"]
-                                        }},
+                          "$S0_texture_icone_right": "ng_asset.icon_38",
+                          "$S2_texture_icone_right": "ng_asset.icon_38",
+                          "$S0_color_icone_right": [0.678, 0.569, 0.396],
+                          "$S2_color_icone_right": [0.784, 0.718, 0.588],
+                          "$S0_size_icone_right": [7,7],
+                          "$S2_size_icone_right": [7,7],
+                          "$S0_padding_right": [0,0],
+                          "$S2_padding_right": [0,0],
+                          "$S0_padding_left": [0,0],
+                          "$S2_padding_left": [0,0],
 
-                                        {"slot_3@ng_module.custome_slot":{
-                                          "$index":18
-                                        }}
-                              ]}}
-                      ]}},
+                          "$textures_button_S0": "tannage.bouton_brun",
+                          "$textures_button_S2": "tannage.bouton_brun_actif",
 
-                      {"padding@ng_module.panel":{
-                        "size":["100%",2]
-                      }},
+                          "$fonction_mapping_button_S0": "clickable",
+                          "$fonction_mapping_button_S2": "clickable"
+                        }}
+                  ]}},
 
-                      {"header@ng_asset.background_12":{
-                        "size": ["100%",15],
-                        "controls":[
+                {"padding@ng_module.panel":{
+                  "size":[2,"100%"]
+                }},
 
-                              {"stack_panel@ng_module.stackpanel":{
-                                "orientation":"horizontal",
-                                "size":["100% - 2px","100% - 2px"],
-                                "controls":[
+                {"centrage_croix@ng_module.panel":{
+                  "size":[11,"100%"],
+                  "controls":[
+                        {"croix@tannage.bouton_fermer":{}}
+                  ]}},
 
-                                              {"padding@ng_module.panel":{
-                                                "size":[5,"100%"]
-                                              }},
+                {"padding@ng_module.panel":{
+                  "size":[2,"100%"]
+                }}
+          ]}}
+    ]},
 
-                                              {"centring@ng_module.panel":{
-                                                "size":["100%c","100%"],
-                                                "controls":[
-                                                                                                  
-                                                        {"title":{
-                                                          "type":"label",
-                                                          "font_scale_factor":0.7,
-                                                          "layer":10,
-                                                          "offset":[0,-0.6],
-                                                          "color":[0.624, 0.624, 0.663],
-                                                          "font_type":"MinecraftTen",
-                                                          "text":"informations"
-                                                        }}
-                                              ]}}
-                              ]}}
-                      ]}},
+  // ---------------------------------------------------------------- bande d'etat : peau en cours, etat, barre, ligne
 
-                      {"content@ng_asset.background_11":{
-                        "size": ["100%",25],
-                        "controls":[
-
-                              {"content@ng_module.stackpanel":{
-                                  "size":["100% - 8px",20],
-                                  "controls":[
-                                                                                      
-                                      {"padding@ng_module.panel":{
-                                          "size":["100%",1]
-                                      }},
-
-                                      {"content@ng_module.stackpanel":{
-                                        "orientation":"horizontal",
-                                        "size":["100%",10],
-                                        "controls":[
-
-                                              {"text@ng_module.label":{
-                                                "text":"Surchauffe",
-                                                "font_scale_factor": 0.6    
-                                              }},
-
-                                              {"padding@ng_module.panel":{
-                                                "size":["fill","100%"]
-                                              }},
-
-                                              {"heat_bar@ng_module.Simple_text": {
-                                                  "$type_get_text": "Get_text_type_1",
-                                                  "$index": 14,
-                                                  "layer":10,
-                                                  "size": ["100%c", "100%"],
-                                                  "$font_scale_factor": 0.6,
-                                                  "$text_offset": [0, -2]
-                                              }}
-                                      ]}},
-
-                                      {"content@ng_module.stackpanel":{
-                                        "orientation":"horizontal",
-                                        "size":["100%",10],
-                                        "controls":[
-
-                                                {"text@ng_module.panel":{
-                                                  "size":["100%c",10],
-                                                  "controls":[
-
-                                                        {"text@ng_module.label":{
-                                                          "text":"Consomation",
-                                                          "size":["default",10],
-                                                          "font_scale_factor": 0.6    
-                                                        }}
-                                                ]}},
-
-                                                {"padding@ng_module.panel":{
-                                                  "size":["fill","100%"]
-                                                }},
-
-                                                {"consumption_label@ng_module.Simple_text": {
-                                                  "$type_get_text": "Get_text_type_1",
-                                                  "$index": 13,
-                                                  "layer":10,
-                                                  "size": ["100%c", "100%"],
-                                                  "$font_scale_factor": 0.6,
-                                                  "$text_offset": [0, -2]
-                                               }}
-                                      ]}}
-                              ]}}
-                      ]}}
-            ]}},
-
-            {"padding@ng_module.panel":{
-              "size":[4,"100%"]
-            }},
-
-            {"description@ng_module.Simple_text": {
-              "$type_get_text": "Get_text_type_1",
-              "$index": 15,
-              "layer":15,
-              "$text_size":[90,92],
-              "size":["100%c","100%"],
-              "$font_scale_factor": 0.7,
-              "$text_color": [0.624, 0.624, 0.663]    
-            }}
-  ]},
-
-  "page2@ng_module.stackpanel":{
-    "orientation":"horizontal",
-    "size":["100% - 8px","100% - 8px"],
-      "bindings": [
-        {
-          "binding_type": "view",
-          "source_control_name": "page_2_button_toggle",
-          "source_property_name": "(not #toggle_state)",
-          "target_property_name": "#visible"
-        }
-    ], 
+  "bande_etat@ng_asset.background_white":{
+    "size":["100%",32],
+    "color":[0.459, 0.345, 0.239],
     "controls":[
 
-            {"content@ng_module.panel":{
-              "size":["100%","100%"],
-              "controls":[
+        {"stack_panel@ng_module.stackpanel":{
+          "orientation":"horizontal",
+          "collection_name":"container_items",
+          "size":["100%","100%"],
+          "controls":[
 
-                        {"content@ng_module.stackpanel":{
-                          "size":[150,"100%c"],
+                {"padding@ng_module.panel":{
+                  "size":[8,"100%"]
+                }},
+
+                // la case de l'objet en cours des ateliers (workstations.json, case 21), telle quelle, sans bouton ; le
+                // carre est le fond de la case. Le jeu pose un enfant de pile en haut de la bande (capture de Leo du
+                // 02/11 15 h 50) : la case est dans un panneau de toute la hauteur, qui la centre.
+                {"centrage_peau@ng_module.collectionpanel":{
+                  "collection_name":"container_items",
+                  "size":[17,"100%"],
+                  "controls":[
+
+                        {"peau@ng_module.container_item":{
+                          "collection_index":31,
+                          "$item_collection_name": "container_items",
+                          "$item_renderer_panel_size":[17,17],
+                          "$textures_slot_hover":"tannage.image_carre_statut",
+                          "$textures_slot_default":"tannage.image_carre_statut",
+                          "$cell_image_size":[17,17],
+                          "$slot_size":[17,17],
+                          "$item_renderer_size":[14,14],
+                          "$item_selected_image":false,
+                          "$container_slot_button_prototype":false
+                        }}
+                  ]}},
+
+                {"padding@ng_module.panel":{
+                  "size":[6,"100%"]
+                }},
+
+                {"textes@ng_module.panel":{
+                  "size":["fill","100%"],
+                  "controls":[
+
+                        {"pile@ng_module.stackpanel":{
+                          "size":["100%",24],
+                          "collection_name":"container_items",
                           "controls":[
 
-                                    {"slot@ng_module.stackpanel":{
-                                      "orientation":"horizontal",
-                                      "collection_name": "container_items",
-                                      "size":["100%",15],
-                                      "controls":[
+                                {"etat@ng_module.panel":{
+                                  "size":["100%",9],
+                                  "controls":[
+                                        {"texte@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_1",
+                                          "$index": 12,
+                                          "layer":10,
+                                          "size": ["100%c", "100%"],
+                                          "anchor_from":"left_middle",
+                                          "anchor_to":"left_middle",
+                                          "$padding_left":[0,0.1],
+                                          "$font_scale_factor": 0.75,
+                                          "$text_color": [0.796, 0.729, 0.596]
+                                        }}
+                                  ]}},
 
-                                        {"text_depot@ng_module.panel":{
-                                          "size":[63,"100%"],
-                                          "controls":[
+                                {"padding@ng_module.panel":{
+                                  "size":["100%",3]
+                                }},
 
-                                              {"title@ng_module.label":{
-                                                "text":"Depot",
-                                                "font_scale_factor":0.6,
-                                                "font_type":"MinecraftTen"
-                                              }}
-                                        ]}},
+                                // la barre des ateliers (workstations.json, case 23), telle quelle : ng_module.loading_bar
+                                {"barre@ng_module.loading_bar": {
+                                  "size": ["100%",4],
+                                  "layer": 5,
+                                  "$index": 14,
+                                  "$load_bar_size":["100% - 2px",2],
+                                  "$orientation": "horizontal",
+                                  "$color_border": [0.851, 0.690, 0.451],
+                                  "$layer_percent": 3,
+                                  "$texture_background_bar":"tannage.image_barre_vide",
+                                  "$texture_background_top": "textures/ui/background/background_white"
+                                }},
 
-                                        {"padding@ng_module.panel": {
-                                          "size": ["fill", "100%"]
-                                        }},
+                                {"padding@ng_module.panel":{
+                                  "size":["100%",2]
+                                }},
 
-                                        {"text_sortie@ng_module.panel":{
-                                          "size":[63,"100%"],
-                                          "controls":[
+                                {"ligne@ng_module.panel":{
+                                  "size":["100%",6],
+                                  "controls":[
+                                        {"texte@ng_module.Simple_text": {
+                                          "$type_get_text": "Get_text_type_1",
+                                          "$index": 13,
+                                          "layer":10,
+                                          "size": ["100%c", "100%"],
+                                          "anchor_from":"left_middle",
+                                          "anchor_to":"left_middle",
+                                          "$padding_left":[0,0.1],
+                                          "$font_scale_factor": 0.55,
+                                          "$text_color": [0.259, 0.184, 0.149]
+                                        }}
+                                  ]}}
+                          ]}}
+                  ]}},
 
-                                              {"title@ng_module.label":{
-                                                "text":"sortie",
-                                                "font_scale_factor":0.6,
-                                                "font_type":"MinecraftTen"
-                                              }}
-                                        ]}}
+                {"padding@ng_module.panel":{
+                  "size":[7,"100%"]
+                }}
+          ]}}
+    ]},
 
-                                    ]}},
+  // ---------------------------------------------------------------- page machine : Depot, fleche, Sortie
 
-                                    {"slot@ng_module.stackpanel":{
-                                      "orientation":"horizontal",
-                                      "collection_name": "container_items",
-                                      "size":["100%",42],
-                                      "controls":[
+  // La rangee des deux panneaux (65 de haut) est centree dans la zone de 75 : le jeu la posait en haut, avec 10 de vide
+  // dessous (capture de Leo du 02/11 15 h 50).
+  "page_machine@ng_module.collectionpanel":{
+    "collection_name":"container_items",
+    "size":["100%","100%"],
+    "controls":[
 
-                                          {"depot@ng_module.stackpanel":{
-                                            "collection_name": "container_items",
-                                            "size":["100%cm",42],
-                                            "controls":[
+    {"rangee@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "collection_name":"container_items",
+    "size":["100%",65],
+    "controls":[
 
-                                                {"depot_ligne_01@ng_module.stackpanel":{
-                                                  "orientation":"horizontal",
-                                                  "collection_name": "container_items",
-                                                  "size":["100%c",21],
-                                                  "controls":[
+          {"padding@ng_module.panel":{
+            "size":[7,"100%"]
+          }},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+          {"depot@tannage.image_panneau_depot":{
+            "size":[98,65],
+            "controls":[
+                  {"contenu@tannage.panneau_cases":{
+                    "$titre":"ng.tannage.depot",
+                    "$c1":15, "$c2":16, "$c3":17, "$c4":18, "$c5":19, "$c6":20, "$c7":21, "$c8":22,
+                    "$case":"tannage.image_case_depot"
+                  }}
+            ]}},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+          {"fleche@ng_module.panel":{
+            "size":["fill","100%"],
+            "controls":[
+                  {"icone@ng_asset.icon_35":{
+                    "size":[4,6],
+                    "color":[0.035, 0.035, 0.043]
+                  }}
+            ]}},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }}
-                                                ]}},
+          {"sortie@tannage.image_panneau_sortie":{
+            "size":[98,65],
+            "controls":[
+                  {"contenu@tannage.panneau_cases":{
+                    "$titre":"ng.tannage.sortie",
+                    "$c1":23, "$c2":24, "$c3":25, "$c4":26, "$c5":27, "$c6":28, "$c7":29, "$c8":30,
+                    "$case":"tannage.image_case_sortie"
+                  }}
+            ]}},
 
-                                                {"depot_ligne_02@ng_module.stackpanel":{
-                                                  "orientation":"horizontal",
-                                                  "collection_name": "container_items",
-                                                  "size":["100%c",21],
-                                                  "controls":[
+          {"padding@ng_module.panel":{
+            "size":[7,"100%"]
+          }}
+    ]}}
+    ]},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+  // Titre et grille 4 x 2 d'un panneau : $c1 a $c8, les cases de gauche a droite puis de haut en bas. La pile a
+  // exactement la taille de son contenu (4 cases de 21 et 3 ecarts de 1 ; titre 10, ecart 2, deux rangees de 21 et un
+  // ecart de 1) : centree dans le panneau, la grille a autant de marge a gauche qu'a droite, en haut qu'en bas.
+  "panneau_cases@ng_module.stackpanel":{
+    "size":[87,55],
+    "collection_name":"container_items",
+    "controls":[
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+          {"titre@ng_module.panel":{
+            "size":["100%",10],
+            "controls":[
+                  {"texte":{
+                    "type":"label",
+                    "anchor_from":"left_middle",
+                    "anchor_to":"left_middle",
+                    "font_scale_factor":0.7,
+                    "layer":5,
+                    "color":[0.231, 0.165, 0.137],
+                    "text":"$titre"
+                  }}
+            ]}},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }}
-                                                ]}}
-                                          ]}},
+          {"padding@ng_module.panel":{
+            "size":["100%",2]
+          }},
 
-                                          {"padding@ng_module.panel": {
-                                            "size": ["fill", "100%"],
-                                            "controls":[
+          {"ligne_1@tannage.ligne_cases":{ "$a":"$c1", "$b":"$c2", "$c":"$c3", "$d":"$c4" }},
 
-                                                  {"icon@ng_asset.icon_13":{
-                                                    "size":[15,15],
-                                                    "color":[0.322, 0.322, 0.361]
-                                                  }}
-                                          ]}},
+          {"padding@ng_module.panel":{
+            "size":["100%",1]
+          }},
 
-                                          {"sortie@ng_module.stackpanel":{
-                                            "collection_name": "container_items",
-                                            "size":["100%cm",42],
-                                            "controls":[
+          {"ligne_2@tannage.ligne_cases":{ "$a":"$c5", "$b":"$c6", "$c":"$c7", "$d":"$c8" }}
+    ]},
 
-                                                {"depot_ligne_01@ng_module.stackpanel":{
-                                                  "orientation":"horizontal",
-                                                  "collection_name": "container_items",
-                                                  "size":["100%c",21],
-                                                  "controls":[
+  "ligne_cases@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "collection_name":"container_items",
+    "size":["100%c",21],
+    "controls":[
+          {"case_1@tannage.case":{ "$index":"$a" }},
+          {"padding@ng_module.panel":{ "size":[1,"100%"] }},
+          {"case_2@tannage.case":{ "$index":"$b" }},
+          {"padding@ng_module.panel":{ "size":[1,"100%"] }},
+          {"case_3@tannage.case":{ "$index":"$c" }},
+          {"padding@ng_module.panel":{ "size":[1,"100%"] }},
+          {"case_4@tannage.case":{ "$index":"$d" }}
+    ]},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+  "case@ng_module.container_item":{
+    "collection_index":"$index",
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[21,21],
+    "$cell_image_size":[21,21],
+    "$slot_size":[21,21],
+    "$textures_slot_hover":"ng_asset.background_10",
+    "$textures_slot_default":"$case"
+  },
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+  // ---------------------------------------------------------------- page recettes (livre) : 12 recettes, 3 x 4
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }}
-                                                ]}},
+  "page_recettes@ng_module.panel":{
+    "size":["100%","100%"],
+    "controls":[
 
-                                                {"depot_ligne_02@ng_module.stackpanel":{
-                                                  "orientation":"horizontal",
-                                                  "collection_name": "container_items",
-                                                  "size":["100%c",21],
-                                                  "controls":[
+          {"grille@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "collection_name":"container_items",
+            "size":["100% - 14px",70],
+            "controls":[
+                  {"colonne_1@tannage.colonne_recettes_1":{}},
+                  {"colonne_2@tannage.colonne_recettes_2":{}},
+                  {"colonne_3@tannage.colonne_recettes_3":{}}
+            ]}}
+    ]},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+  "colonne_recettes_1@ng_module.stackpanel":{
+    "collection_name":"container_items",
+    "size":["33.33%","100%"],
+    "controls":[
+          {"recette_1@tannage.recette":{ "$entree":32, "$sortie":44 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_2@tannage.recette":{ "$entree":33, "$sortie":45 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_3@tannage.recette":{ "$entree":34, "$sortie":46 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_4@tannage.recette":{ "$entree":35, "$sortie":47 }}
+    ]},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }},
+  "colonne_recettes_2@ng_module.stackpanel":{
+    "collection_name":"container_items",
+    "size":["33.33%","100%"],
+    "controls":[
+          {"recette_1@tannage.recette":{ "$entree":36, "$sortie":48 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_2@tannage.recette":{ "$entree":37, "$sortie":49 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_3@tannage.recette":{ "$entree":38, "$sortie":50 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_4@tannage.recette":{ "$entree":39, "$sortie":51 }}
+    ]},
 
-                                                        {"slot_1@ng_module.custome_slot":{
-                                                          "$index":17
-                                                        }}
-                                                ]}}
-                                          ]}}
+  "colonne_recettes_3@ng_module.stackpanel":{
+    "collection_name":"container_items",
+    "size":["33.33%","100%"],
+    "controls":[
+          {"recette_1@tannage.recette":{ "$entree":40, "$sortie":52 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_2@tannage.recette":{ "$entree":41, "$sortie":53 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_3@tannage.recette":{ "$entree":42, "$sortie":54 }},
+          {"padding@ng_module.panel":{ "size":["100%",2] }},
+          {"recette_4@tannage.recette":{ "$entree":43, "$sortie":55 }}
+    ]},
+
+  // Une recette : la peau ($entree, cases 32 a 43) et ce qu'elle donne ($sortie, cases 44 a 55), le nombre de chaque
+  // pile est la quantite. Une recette vide (au-dela de la derniere) n'a pas de fleche : elle n'apparait que si la case
+  // d'entree a un nom.
+  "recette@ng_module.stackpanel":{
+    "orientation":"horizontal",
+    "collection_name":"container_items",
+    "size":["100%c",16],
+    "controls":[
+
+          {"entree@tannage.case_recette":{ "$index":"$entree" }},
+
+          {"fleche@ng_module.collectionpanel":{
+            "collection_name":"container_items",
+            "size":[12,"100%"],
+            "controls":[
+                  {"si_recette":{
+                    "type":"panel",
+                    "collection_index":"$entree",
+                    "size":["100%","100%"],
+                    "bindings":[
+                      { "binding_type": "collection", "binding_collection_name": "container_items", "binding_name": "#hover_text" },
+                      { "binding_type": "view", "source_property_name": "(not (#hover_text = ''))", "target_property_name": "#visible" }
+                    ],
+                    "controls":[
+                          {"icone@ng_asset.icon_35":{
+                            "size":[3,5],
+                            "color":[0.231, 0.165, 0.137]
+                          }}
+                    ]
+                  }}
+            ]}},
+
+          {"sortie@tannage.case_recette":{ "$index":"$sortie" }}
+    ]},
+
+  "case_recette@ng_module.container_item":{
+    "collection_index":"$index",
+    "$item_collection_name": "container_items",
+    "$item_renderer_panel_size":[16,16],
+    "$cell_image_size":[16,16],
+    "$slot_size":[16,16],
+    "$item_renderer_size":[14,14],
+    "$textures_slot_hover":"tannage.image_case_sortie",
+    "$textures_slot_default":"tannage.image_case_sortie",
+    "$item_selected_image":false,
+    "$container_slot_button_prototype":false
+  },
 
 
-                                    ]}},
+  // ---------------------------------------------------------------- inventaire du joueur
 
-                                    {"padding@ng_module.panel":{
-                                      "size":["100%",10]
-                                    }},
+  "inventaire@tannage.image_inventaire":{
+    "size":["100%",113],
+    "controls":[
 
-                                    {"content@ng_module.stackpanel":{
-                                      "orientation":"horizontal",
-                                      "size":["100%",8],
-                                      "controls":[
+          {"inventory_content@ng_module.stackpanel":{
+            "size":[208,"100% - 10px"],
+            "controls":[
 
-                                            {"text@ng_module.label":{
-                                              "text":"Production",
-                                              "font_scale_factor":0.5
-                                            }},
+                  {"title":{
+                    "size":["100%",10],
+                    "type":"label",
+                    "layer":5,
+                    "font_scale_factor":0.6,
+                    "color":[1.000, 1.000, 1.000],
+                    "font_type":"MinecraftTen",
+                    "text":"ng.tannage.inventaire"
+                  }},
 
-                                            {"padding@ng_module.panel":{
-                                              "size":["fill","100%"]
-                                            }},
+                  {"inventory_&_hotbar@ng_module.stackpanel":{
+                    "size":[207,92],
+                    "controls":[
 
-                                            {"text@ng_module.Simple_text": {
-                                              "$type_get_text": "Get_text_type_1",
-                                              "$index": 25,
-                                              "layer":10,
-                                              "size": ["100%c", "100%"],
-                                              "$text_color":[0.443, 0.443, 0.482],
-                                              "$font_scale_factor": 0.5,
-                                              "$text_offset": [0, -0.6]
-                                            }}
-                                    ]}},
+                        {"inventaire@ng_module.grid_asset":{
+                          "$size_grid":[207,69],
+                          "$grid_dimensions":[9,3],
+                          "$collection_name":"inventory_items",
+                          "$item_renderer_panel_size":[22,22],
+                          "$cell_image_size":[22,22],
+                          "$textures_slot_hover":"ng_asset.background_10",
+                          "$textures_slot_default":"ng_asset.background_white",
+                          "$color_background_default":[0.094, 0.094, 0.106],
+                          "$slot_size":[22,22]
+                        }},
 
-                                    {"loading_bar@ng_module.loading_bar": {
-                                      "size": ["100%",4],
-                                      "layer": 5,
-                                      "$index": 25,
-                                      "$load_bar_size":["100% - 2px",2],
-                                      "$orientation": "horizontal",
-                                      "$color_border": [0.533, 0.941, 0.392],
-                                      "$layer_percent": 3,
-                                      "$texture_background_bar":"ng_asset.background_02",
-                                      "$texture_background_top": "textures/ui/background/background_white"
-                                    }}
-                        ]}}
-  ]}}
+                        {"barre_rapide@ng_module.grid_asset":{
+                          "$size_grid":[207,23],
+                          "$grid_dimensions":[9,1],
+                          "$collection_name":"hotbar_items",
+                          "$item_renderer_panel_size":[22,22],
+                          "$cell_image_size":[22,22],
+                          "$textures_slot_hover":"ng_asset.background_10",
+                          "$textures_slot_default":"ng_asset.background_white",
+                          "$color_background_default":[0.094, 0.094, 0.106],
+                          "$slot_size":[22,22]
+                        }}
+                  ]}}
+          ]}}
+    ]},
 
-  ]}
-                                  
+  // ---------------------------------------------------------------- boutons et images (couleurs du cuir)
+
+  "bouton_fermer@ng_module.panel":{
+    "size":[11,11],
+    "controls":[
+        {"close_button@common.button": {
+          "size": ["100%","100%"],
+          "$pressed_button_name": "button.menu_exit",
+          "controls": [
+            {"default": { "type": "image", "size": ["100%","100%"], "texture": "textures/ui/tannage/bouton" }},
+            {"hover": { "type": "image", "size": ["100%","100%"], "texture": "textures/ui/tannage/bouton_survol" }},
+            {"pressed": { "type": "image", "size": ["100%","100%"], "texture": "textures/ui/tannage/bouton_survol" }},
+            {"icone@ng_asset.icon_01":{ "size":[6,6], "layer":5, "color":[0.784, 0.718, 0.588] }}
+          ]
+        }}
+    ]},
+
+  "bouton_brun@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/tannage/bouton",
+    "$hover_button_texture|default": "textures/ui/tannage/bouton_survol",
+    "$pressed_button_texture|default": "textures/ui/tannage/bouton_survol"
+  },
+
+  "bouton_brun_actif@ng_module.mapping_button": {
+    "$default_button_texture|default": "textures/ui/tannage/bouton_actif",
+    "$hover_button_texture|default": "textures/ui/tannage/bouton_actif",
+    "$pressed_button_texture|default": "textures/ui/tannage/bouton_actif"
+  },
+
+  "image_fenetre": { "type":"image", "texture":"textures/ui/tannage/fenetre" },
+  "image_carre_icone": { "type":"image", "texture":"textures/ui/tannage/carre_icone" },
+  "image_icone": { "type":"image", "texture":"textures/ui/tannage/icone_tannage" },
+  "image_carre_statut": { "type":"image", "texture":"textures/ui/tannage/carre_statut" },
+  "image_barre_vide": { "type":"image", "texture":"textures/ui/tannage/barre_vide" },
+  "image_panneau_depot": { "type":"image", "texture":"textures/ui/tannage/panneau_depot" },
+  "image_panneau_sortie": { "type":"image", "texture":"textures/ui/tannage/panneau_sortie" },
+  "image_case_depot": { "type":"image", "texture":"textures/ui/tannage/case_depot" },
+  "image_case_sortie": { "type":"image", "texture":"textures/ui/tannage/case_sortie" },
+  "image_inventaire": { "type":"image", "texture":"textures/ui/tannage/inventaire" }
 }
-
-
-
-
-
-    

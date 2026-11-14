@@ -33,7 +33,15 @@
 						"Texture.staff_rank_tag",
 						"Texture.prime_rank_tag",
 						"Texture.premium_plus_rank_tag",
-						"Texture.roleplay_rank_tag"
+						"Texture.roleplay_rank_tag",
+						"Texture.creator_rank_tag",
+						"Texture.affiliate_tier_rank_tag",
+						"Texture.partner_rank_tag",
+						"Texture.ambassador_rank_tag",
+						"Texture.creator_en_rank_tag",
+						"Texture.affiliate_tier_en_rank_tag",
+						"Texture.partner_en_rank_tag",
+						"Texture.ambassador_en_rank_tag"
 					]
 				}
 			}

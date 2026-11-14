@@ -25,24 +25,11 @@
                           "size": ["100% - 4px","100%"],
                           "controls":[
 
-                                {"inventaire@parrot_airline.categorie_asset_button":{
-                                  "$index":10
-                                }},
-
+                                // Seul l'onglet Carte reste, en titre de l'ecran : plus d'onglets Inventaire,
+                                // Competences, Profil et Cosmetique (cases 10, 12, 13 et 14, que NGMod envoie encore
+                                // sans action ; demande de Leo du 01/11).
                                 {"carte@parrot_airline.categorie_asset_button":{
                                   "$index":11
-                                }},
-
-                                {"competences@parrot_airline.categorie_asset_button":{
-                                  "$index":12
-                                }},
-
-                                {"profil@parrot_airline.categorie_asset_button":{
-                                  "$index":13
-                                }},
-
-                                {"cosmetique@parrot_airline.categorie_asset_button":{
-                                  "$index":14
                                 }},
 
                                 {"padding@ng_module.panel": {
@@ -241,11 +228,14 @@
                                 "size":["100% - 20px","100% - 20px"],
                                 "controls":[
 
+                                      // Description de la destination : retour a la ligne a 128, la largeur de la
+                                      // pile (160 - 10 - 2 - 20) ; a 140 la fin des lignes sortait du cadre (capture de
+                                      // Leo du 02/11 15 h 50, fiche WARZONE).
                                       {"text@ng_module.Simple_text": {
                                         "$type_get_text": "Get_text_type_1",
                                         "$index": 63,
                                         "layer":5,
-                                        "$max_size":[140,30],
+                                        "$max_size":[128,30],
                                         "$text_color":[0.831, 0.831, 0.847],
                                         "size": ["100%c", "100%c"],
                                         "$font_scale_factor": 0.7
@@ -767,6 +757,59 @@
                         "offset": [0, -8.5]
                       }}
 
+                  ]}},
+
+                  // Europe (case 60, 11e destination de ParrotAirlineSettings) : le bouton au centre d'un panneau de 98% sur
+                  // 56% depuis le coin haut gauche du cadre, donc a 49% de la largeur et 28% de la hauteur de l'image (centre
+                  // de l'Europe, sur l'Allemagne). Meme bouton et meme icone que les autres warps de continent. Dessine
+                  // seulement quand NGMod envoie la destination (texte en §0 ou §1) : un serveur dont la config n'a pas
+                  // encore l'Europe n'affiche pas de point mort.
+                  {"europe@ng_module.panel":{
+                    "size":["98%","56%"],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "controls":[
+
+                      {"europe_cases@ng_module.collectionpanel":{
+                        "collection_name": "container_items",
+                        "size": ["100%","100%"],
+                        "controls":[
+
+                          {"europe_si_envoyee":{
+                            "type": "panel",
+                            "collection_index": 60,
+                            "size": ["100%","100%"],
+                            "bindings": [
+                              {
+                                "binding_name": "#hover_text",
+                                "binding_type": "collection",
+                                "binding_collection_name": "container_items"
+                              },
+                              {
+                                "binding_type": "view",
+                                "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))",
+                                "target_property_name": "#visible"
+                              }
+                            ],
+                            "controls":[
+
+                              {"europe@ng_module.Simple_Button":{
+                                "size":[15,15],
+                                "$index": 60,
+                                "$texture_button": "ng_asset.button_32",
+                                "$size_icone_right": [13, 13],
+                                "$texture_icone_right": "ng_asset.warp_conti_icon"
+                              }},
+
+                              {"europe_point@parrot_airline.selection_point":{
+                                "$index": 60,
+                                "anchor_from": "center",
+                                "anchor_to": "bottom_middle",
+                                "offset": [0, -8.5]
+                              }}
+
+                          ]}}
+                      ]}}
                   ]}}
 
             ]}}

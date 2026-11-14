@@ -156,11 +156,20 @@
                   }},
             
               {"combat@scoreboard.combat_logger":{}},
-                  
+
                   {"padding@ng_module.panel": {
                       "type": "panel",
                       "size": ["fill","100%"]
                   }},
+
+              // Mode modo (ModerationMod 0.0.33, /modo on) : bouclier dessine par la ligne moderation:modo du scoreboard,
+              // presente seulement pendant le mode. Sans elle, rien n'est dessine (la place est prise sur le vide de gauche).
+              {"modo@scoreboard.modo_logger":{}},
+
+                    {"padding@ng_module.panel": {
+                        "type": "panel",
+                        "size": [2.5,"100%"]
+                    }},
 
               // Case de l'argent : dessinee par la ligne vault:money du scoreboard, comme les cases du pseudo et de la
               // date. Avec la ligne, la meme case qu'avant ; sans elle (pendant un assaut), ni case ni symbole.
@@ -279,6 +288,31 @@
                   "$color_text":[0.831, 0.831, 0.847],
                   "offset":[0,0]
                 }}
+            ]}},
+
+            {"padding_file@ng_module.panel": {
+              "size": ["100%",2.5]
+            }},
+
+            // File d'attente (QueueMod 0.1.0) : la ligne palaui:queue de PalaUiMod, seulement quand QueueMod y a ecrit
+            // son texte apres son marqueur (§q§v§2§r) : la file, la place sur le total, Basique ou Prioritaire. Sans
+            // cette ligne (le joueur n'attend pas), aucune case.
+            {"file_attente@ng_module.stackpanel":{
+              "size":["100%",13],
+              "orientation":"horizontal",
+              "controls":[
+
+                {"padding@ng_module.panel": {
+                  "size": ["fill","100%"]
+                }},
+
+                {"file_attente_box@scoreboard.text_get": {
+                  "$flag": "§p§b§o§q§u§e§u§e§r§q§v§2§r",
+                  "$text_asset": "info_box",
+                  "$box_size": ["100%c + 10px", 13],
+                  "$font_scale_factor":0.8,
+                  "offset":[0,0]
+                }}
             ]}}
         ]}},
 
@@ -341,6 +375,23 @@
     "factory": {
       "name": "player_list_factory",
       "control_name": "scoreboard.combat"
+    },
+    "bindings": [
+      {
+        "binding_name": "#scoreboard_sidebar_size",
+        "binding_type": "global",
+        "binding_name_override": "#collection_length"
+      }
+    ]
+  },
+  // Meme gabarit que combat_logger : une case par ligne du scoreboard, seule celle du mode modo est visible.
+  "modo_logger": {
+    "type": "stack_panel",
+    "size": [17,"100%"],
+    "collection_name": "scoreboard_players",
+    "factory": {
+      "name": "player_list_factory",
+      "control_name": "scoreboard.modo"
     },
     "bindings": [
       {
@@ -468,6 +519,32 @@
 
       {"icone@ng_asset.icon_14": {
         "color": [0.275,0.031,0.035],
+        "size": [10, 10]
+      }}
+  ]},
+
+  // Mode modo : la case du combat en bleu NG, avec un bouclier (icon_12), pour la ligne qui porte le marqueur de
+  // ModerationMod (texte vide derriere lui).
+  "modo": {
+    "type": "image",
+    "texture": "textures/ui/background/background_modo",
+    "size": ["100%","100%"],
+     "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#player_name_sidebar - '§m§o§d§e§r§a§t§o§r§r') = #player_name_sidebar))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+
+      {"icone@ng_asset.icon_12": {
+        "color": [0.086,0.094,0.278],
         "size": [10, 10]
       }}
   ]},
@@ -1291,11 +1368,16 @@
   // n'apparait qu'avec la ligne des camps : hors assaut, rien n'est dessine.
   // Quand le tchat est en haut de l'ecran (ligne §c§h§a§t§p§o§s§r§1§r), deux cales poussent le bandeau a droite
   // du tchat et sous la case de la date, pour ne recouvrir ni l'un ni l'autre.
+  // Ecran etroit (bug 5 d'Iris du 05/11 : avec le tchat en haut, le bandeau sortait a moitie de l'ecran). La ligne
+  // prend toute la largeur et centre la cale et le bandeau entre deux marges egales ; la cale ne depasse jamais la
+  // largeur de l'ecran moins 282 (bandeau 272 et deux marges de 5). Ecran de 574 points ou plus : la meme place
+  // qu'avant (le bandeau commence 10 a droite du milieu). Plus etroit : le bandeau colle au bord droit, 5 points
+  // avant lui, au lieu d'en sortir. Sans tchat en haut, la cale est vide : bandeau au milieu, comme avant.
   "battle@ng_module.stackpanel": {
     "orientation": "horizontal",
-    "size": ["100%c","100%cm"],
-    "anchor_from": "top_middle",
-    "anchor_to": "top_middle",
+    "size": ["100%","100%cm"],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
     "offset": [0,25.5],
     "bindings": [
         {
@@ -1306,9 +1388,14 @@
     ],
     "controls": [
 
+      {"marge_gauche@ng_module.panel": {
+        "size": ["fill",1]
+      }},
+
       // Cale de la largeur du bandeau plus 20 : l'ensemble reste centre, le bandeau commence 10 a droite du milieu.
       {"cale_droite@scoreboard.battle_shift": {
-        "$shift_size": [292,1]
+        "$shift_size": [292,1],
+        "max_size": ["100% - 282px","100%c"]
       }},
 
       {"colonne@ng_module.stackpanel": {
@@ -1419,7 +1506,11 @@
                 "offset": [-9,23.5]
               }}
           ]}}
-      ]}}
+      ]}},
+
+      {"marge_droite@ng_module.panel": {
+        "size": ["fill",1]
+      }}
   ]},
 
   // Cale du bandeau : une case vide par ligne du scoreboard, visible (donc prise en compte dans la mise en page)
@@ -1968,7 +2059,10 @@
                 "size": [2.5,"100%"]
             }},
 
-      {"combat@scoreboard.combat_logger":{}}
+      {"combat@scoreboard.combat_logger":{}},
+
+      // Mode modo (ModerationMod 0.0.33) : le bouclier de la barre du bureau, seulement pendant /modo on.
+      {"modo@scoreboard.modo_logger":{}}
   ]},
 
   // Boussole, position et territoire : la case du bureau, mot pour mot. Le texte de la position est celui que le jeu
@@ -2388,6 +2482,29 @@
 
           {"bottes@scoreboard.pocket_armor": {
               "$flag": "§p§b§b§o§o§t§s§r"
+          }}
+      ]}},
+
+      {"padding_file@ng_module.panel": {
+        "size": ["100%",2.5]
+      }},
+
+      // File d'attente (QueueMod 0.1.0), comme sur le bureau : la derniere rangee, rien ne bouge au-dessus.
+      {"file_attente@ng_module.stackpanel":{
+        "size":["100%",13],
+        "orientation":"horizontal",
+        "controls":[
+
+          {"padding@ng_module.panel": {
+            "size": ["fill","100%"]
+          }},
+
+          {"file_attente_box@scoreboard.text_get": {
+            "$flag": "§p§b§o§q§u§e§u§e§r§q§v§2§r",
+            "$text_asset": "info_box",
+            "$box_size": ["100%c + 10px", 13],
+            "$font_scale_factor":0.8,
+            "offset":[0,0]
           }}
       ]}}
   ]},

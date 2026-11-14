@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:fertilizer",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/fertilizer"
+			},
+			"geometry": {
+				"default": "geometry.fertilizer"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"roues": "animation.fertilizer.roues"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					"roues"
+				]
+			}
+		}
+	}
+}

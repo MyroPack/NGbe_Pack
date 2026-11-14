@@ -1,0 +1,107 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.player.armor.zirconium_leg",
+                "texture_width": 128,
+                "texture_height": 128,
+                "visible_bounds_width": 3,
+                "visible_bounds_height": 3.5,
+                "visible_bounds_offset": [
+                    0,
+                    1.25,
+                    0
+                ]
+            },
+            "bones": [
+                {
+                    "name": "rightLeg",
+                    "pivot": [
+                        -1.9,
+                        12,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -4.71844,
+                                10.00125,
+                                -2.625
+                            ],
+                            "size": [
+                                5.25,
+                                2.1,
+                                5.25
+                            ],
+                            "uv": [
+                                66,
+                                50
+                            ]
+                        },
+                        {
+                            "origin": [
+                                -4.77094,
+                                5.80125,
+                                -3.15
+                            ],
+                            "size": [
+                                5.25,
+                                4.2,
+                                6.3
+                            ],
+                            "uv": [
+                                16,
+                                52
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "leftLeg",
+                    "pivot": [
+                        1.9,
+                        12,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                -0.53156,
+                                10.00125,
+                                -2.625
+                            ],
+                            "size": [
+                                5.25,
+                                2.1,
+                                5.25
+                            ],
+                            "uv": [
+                                66,
+                                50
+                            ],
+                            "mirror": true
+                        },
+                        {
+                            "origin": [
+                                -0.47906,
+                                5.80125,
+                                -3.15
+                            ],
+                            "size": [
+                                5.25,
+                                4.2,
+                                6.3
+                            ],
+                            "uv": [
+                                16,
+                                52
+                            ],
+                            "mirror": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

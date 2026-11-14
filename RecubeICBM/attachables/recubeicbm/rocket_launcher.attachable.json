@@ -8,7 +8,7 @@
         "enchanted": "entity_alphatest_glint"
       },
       "textures": {
-        "default": "textures/recubeicbm/items/rocket_launcher",
+        "default": "textures/recubeicbm/weapon/rocket_launcher_bazooka",
         "enchanted": "textures/misc/enchanted_item_glint"
       },
       "geometry": {

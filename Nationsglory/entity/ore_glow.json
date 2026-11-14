@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "ng:ore_glow",
+			"materials": {
+				"default": "ng_ore_glow"
+			},
+			"textures": {
+				"default": "textures/entity/ore_glow"
+			},
+			"geometry": {
+				"default": "geometry.ng_ore_glow"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

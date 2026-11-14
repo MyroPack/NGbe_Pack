@@ -1,0 +1,135 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng_bike_hammerhead_shark.move": {
+			"initial_state": "terre_idle",
+			"states": {
+				"terre_idle": {
+					"animations": [
+						"terre_idle"
+					],
+					"transitions": [
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_idle": "(v.etat == 8 || v.etat == 9) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_forward": "(v.etat == 10 || v.etat == 11) && !(v.capacite == 6)"
+						},
+						{
+							"bite": "v.capacite == 6"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_forward": {
+					"animations": [
+						"terre_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 4 || v.etat == 5) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_idle": "(v.etat == 8 || v.etat == 9) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_forward": "(v.etat == 10 || v.etat == 11) && !(v.capacite == 6)"
+						},
+						{
+							"bite": "v.capacite == 6"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"aqua_idle": {
+					"animations": [
+						"aqua_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 4 || v.etat == 5) && !(v.capacite == 6)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_forward": "(v.etat == 10 || v.etat == 11) && !(v.capacite == 6)"
+						},
+						{
+							"bite": "v.capacite == 6"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"aqua_forward": {
+					"animations": [
+						"aqua_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 4 || v.etat == 5) && !(v.capacite == 6)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_idle": "(v.etat == 8 || v.etat == 9) && !(v.capacite == 6)"
+						},
+						{
+							"bite": "v.capacite == 6"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"bite": {
+					"animations": [
+						"bite"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 4 || v.etat == 5) && !(v.capacite == 6)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 6 || v.etat == 7) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_idle": "(v.etat == 8 || v.etat == 9) && !(v.capacite == 6)"
+						},
+						{
+							"aqua_forward": "(v.etat == 10 || v.etat == 11) && !(v.capacite == 6)"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ng_bike_hammerhead_shark.ambient": {
+			"initial_state": "attente",
+			"states": {
+				"attente": {
+					"on_entry": [
+						"v.ambiance_fin = q.life_time + math.random(10, 20);"
+					],
+					"transitions": [
+						{
+							"son": "q.life_time >= v.ambiance_fin"
+						}
+					]
+				},
+				"son": {
+					"animations": [
+						"ambient"
+					],
+					"transitions": [
+						{
+							"attente": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

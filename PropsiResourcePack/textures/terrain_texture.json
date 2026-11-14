@@ -6,6 +6,12 @@
 	"texture_data": {
 		"propsi_carton": {
 			"textures": "textures/blocks/propsi_carton"
+		},
+		"recube_invisible": {
+			"textures": "textures/blocks/recube/recube_invisible"
+		},
+		"recube_panel_wood": {
+			"textures": "textures/blocks/recube/recube_panel_wood"
 		}
 	}
 }

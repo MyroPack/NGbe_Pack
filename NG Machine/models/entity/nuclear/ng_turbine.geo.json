@@ -5,7 +5,7 @@
       "description": {
         "identifier": "geometry.ng_turbine",
         "texture_width": 128,
-        "texture_height": 128,
+        "texture_height": 152,
         "visible_bounds_width": 5,
         "visible_bounds_height": 2.5,
         "visible_bounds_offset": [
@@ -429,6 +429,125 @@
               "uv": [
                 8,
                 113
+              ]
+            }
+          ]
+        },
+        {
+          "name": "prise_elec_out_back",
+          "pivot": [
+            0,
+            8,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.025,
+                3,
+                19.0
+              ],
+              "size": [
+                10,
+                10,
+                4.0
+              ],
+              "inflate": -0.025,
+              "uv": {
+                "north": {
+                  "uv": [
+                    3,
+                    131
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    16,
+                    131
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    0,
+                    131
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    13,
+                    131
+                  ],
+                  "uv_size": [
+                    3,
+                    10
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    3,
+                    128
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    13,
+                    128
+                  ],
+                  "uv_size": [
+                    10,
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -5.025,
+                3,
+                23
+              ],
+              "size": [
+                10,
+                10,
+                3
+              ],
+              "inflate": -0.025,
+              "uv": [
+                0,
+                128
+              ]
+            },
+            {
+              "origin": [
+                -4.025,
+                4,
+                25
+              ],
+              "size": [
+                8,
+                8,
+                1
+              ],
+              "inflate": -0.025,
+              "uv": [
+                0,
+                141
               ]
             }
           ]

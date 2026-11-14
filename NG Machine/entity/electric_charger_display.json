@@ -3,6 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "ng:electric_charger_display",
+      "enable_attachables": true,
       "materials": {
         "default": "entity_alphatest"
       },
@@ -12,6 +13,14 @@
       },
       "geometry": {
         "default": "geometry.electric_charger"
+      },
+      "animations": {
+        "held_item": "animation.ng_machine.held_item"
+      },
+      "scripts": {
+        "animate": [
+          "held_item"
+        ]
       },
       "render_controllers": [
         "controller.render.ng_electric_charger"

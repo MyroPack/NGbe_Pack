@@ -1,0 +1,1270 @@
+// Ecran d'une lootbox posee, ouvert par un clic gauche (conteneur premium:lootbox_ui de PremiumMod, Ui/LootBoxUi.cs,
+// reglage LootBoxSettings.PreviewScreen). Fichier produit par tools/lootbox/gen_lootbox_screen.py : chaque texte vient
+// du serveur, dans la case indiquee par collection_index (Ui/LootBoxUiSlots.cs). Meme page que l'ecran des box de
+// Paladium (PalaUiResourcePack, ui/premium_box/box_screen.json) avec les controles de la boutique NG. A gauche le rendu
+// de la lootbox (textures/ui/lootbox, case 19) ou son objet en grand (case 25), Ouvrir et la carte (nom, objets par
+// ouverture, description) ; a droite la legende des raretes (cases 21 a 24) et le contenu par pages de 15 (case
+// 30 + 2 i : rarete de l'objet i, a commun, b rare, 5 epique, c legendaire avec un contour et un halo dores, dessinee par son cristal
+// de textures/ui/rarete ; case 31 + 2 i : l'objet, avec son info-bulle), puis la pagination des ecrans NG (26 page
+// precedente, 28 « Page - x/y », 27 page suivante).
+{
+ "namespace": "ng_premium_lootbox",
+ "main_panel": {
+  "type": "panel",
+  "size": [
+   420,
+   236
+  ],
+  "controls": [
+   {
+    "background@ng_boutique_asset.fill": {
+     "$fill_color": [
+      0.09,
+      0.094,
+      0.106
+     ],
+     "layer": 0
+    }
+   },
+   {
+    "content@ng_premium_lootbox.content": {
+     "layer": 1
+    }
+   }
+  ]
+ },
+ "home_mapping@ng_pala_gui.mapping_button": {
+  "$default_button_texture|default": "textures/ui/paladium_assets/button/home",
+  "$hover_button_texture|default": "textures/ui/paladium_assets/button/home_hover",
+  "$pressed_button_texture|default": "textures/ui/paladium_assets/button/home_hover"
+ },
+ "home_button": {
+  "type": "collection_panel",
+  "collection_name": "container_items",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "slot": {
+     "type": "panel",
+     "collection_index": 1,
+     "size": [
+      "100%",
+      "100%"
+     ],
+     "bindings": [
+      {
+       "binding_name": "#hover_text",
+       "binding_type": "collection",
+       "binding_collection_name": "container_items"
+      },
+      {
+       "binding_type": "view",
+       "source_property_name": "(not ((#hover_text - 'hub_button') = #hover_text))",
+       "target_property_name": "#visible"
+      }
+     ],
+     "controls": [
+      {
+       "button@ng_pala_gui.Simple_Button": {
+        "size": [
+         "100%",
+         "100%"
+        ],
+        "$size_button": [
+         "100%",
+         "100%"
+        ],
+        "$index": 1,
+        "$texture_button": "ng_premium_lootbox.home_mapping",
+        "$padding_right": [
+         0.1,
+         0.1
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "crystal_legende_commun": {
+  "type": "image",
+  "texture": "textures/ui/rarete/legende/cristal_commun",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_legende_rare": {
+  "type": "image",
+  "texture": "textures/ui/rarete/legende/cristal_rare",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_legende_epique": {
+  "type": "image",
+  "texture": "textures/ui/rarete/legende/cristal_epique",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_legende_legendaire": {
+  "type": "image",
+  "texture": "textures/ui/rarete/legende/cristal_legendaire",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_case_commun": {
+  "type": "image",
+  "texture": "textures/ui/rarete/case/cristal_commun",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_case_rare": {
+  "type": "image",
+  "texture": "textures/ui/rarete/case/cristal_rare",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_case_epique": {
+  "type": "image",
+  "texture": "textures/ui/rarete/case/cristal_epique",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "crystal_case_legendaire": {
+  "type": "image",
+  "texture": "textures/ui/rarete/case/cristal_legendaire",
+  "keep_ratio": true,
+  "size": [
+   "100%",
+   "100%"
+  ]
+ },
+ "rarity_crystal": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "commun@ng_boutique_asset.has_flag": {
+     "$flag": "§a",
+     "$content": "ng_premium_lootbox.crystal_case_commun"
+    }
+   },
+   {
+    "rare@ng_boutique_asset.has_flag": {
+     "$flag": "§b",
+     "$content": "ng_premium_lootbox.crystal_case_rare"
+    }
+   },
+   {
+    "epique@ng_boutique_asset.has_flag": {
+     "$flag": "§5",
+     "$content": "ng_premium_lootbox.crystal_case_epique"
+    }
+   },
+   {
+    "legendaire@ng_boutique_asset.has_flag": {
+     "$flag": "§c",
+     "$content": "ng_premium_lootbox.crystal_case_legendaire"
+    }
+   }
+  ]
+ },
+ "item_icon": {
+  "type": "collection_panel",
+  "collection_name": "container_items",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "$index|default": 0,
+  "$icon_size|default": [
+   16,
+   16
+  ],
+  "controls": [
+   {
+    "item@ng_pala_gui.locked_item": {
+     "$index": "$index",
+     "$size": [
+      "100%",
+      "100%"
+     ],
+     "$offset": [
+      0,
+      0
+     ],
+     "$size_container": [
+      "100%",
+      "100%"
+     ],
+     "$cell_image_size": [
+      "100%",
+      "100%"
+     ],
+     "$item_renderer_panel_size": [
+      "100%",
+      "100%"
+     ],
+     "$item_renderer_size": "$icon_size",
+     "$item_renderer_binding_condition": "always"
+    }
+   }
+  ]
+ },
+ "halo": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "glow@ng_boutique_asset.card": {
+     "size": [
+      42,
+      42
+     ],
+     "color": [
+      0.8862745098039215,
+      0.6901960784313725,
+      0.3058823529411765
+     ],
+     "alpha": 0.32,
+     "layer": 0
+    }
+   },
+   {
+    "outline": {
+     "type": "image",
+     "texture": "textures/ui/rarete/case/contour_legendaire",
+     "keep_ratio": false,
+     "size": [
+      39,
+      39
+     ],
+     "layer": 3
+    }
+   }
+  ]
+ },
+ "reward_content": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "$rarity|default": 0,
+  "$item|default": 0,
+  "controls": [
+   {
+    "halo@ng_boutique_asset.has_flag": {
+     "$index": "$rarity",
+     "$flag": "§c",
+     "$content": "ng_premium_lootbox.halo",
+     "layer": 0
+    }
+   },
+   {
+    "card@ng_boutique_asset.card": {
+     "size": [
+      38,
+      38
+     ],
+     "layer": 1
+    }
+   },
+   {
+    "item": {
+     "type": "panel",
+     "size": [
+      26,
+      26
+     ],
+     "layer": 2,
+     "controls": [
+      {
+       "item@ng_pala_gui.locked_item_with_data": {
+        "$index": "$item",
+        "size": [
+         26,
+         26
+        ],
+        "$size": [
+         26,
+         26
+        ],
+        "$size_container": [
+         26,
+         26
+        ],
+        "$cell_image_size": [
+         26,
+         26
+        ],
+        "$item_renderer_panel_size": [
+         26,
+         26
+        ],
+        "$item_renderer_size": [
+         22,
+         22
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "crystal@ng_premium_lootbox.rarity_crystal": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      29.0,
+      5.0
+     ],
+     "size": [
+      8,
+      8
+     ],
+     "$index": "$rarity",
+     "layer": 20
+    }
+   }
+  ]
+ },
+ "reward": {
+  "type": "panel",
+  "size": [
+   42,
+   42
+  ],
+  "$rarity|default": 0,
+  "$item|default": 0,
+  "controls": [
+   {
+    "cell@ng_boutique_asset.has_value": {
+     "$index": "$rarity",
+     "$content": "ng_premium_lootbox.reward_content"
+    }
+   }
+  ]
+ },
+ "pagination": {
+  "type": "collection_panel",
+  "collection_name": "container_items",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "row@ng_module.stackpanel": {
+     "size": [
+      "100%c",
+      10
+     ],
+     "orientation": "horizontal",
+     "controls": [
+      {
+       "previous@ng_module.panel": {
+        "size": [
+         "100%c",
+         "100%"
+        ],
+        "controls": [
+         {
+          "button@ng_module.Simple_Button": {
+           "size": [
+            10,
+            10
+           ],
+           "offset": [
+            0,
+            0.6
+           ],
+           "$index": 26,
+           "$icon_right_offset": [
+            -0.3,
+            0
+           ],
+           "$size_icone_right": [
+            7,
+            7
+           ],
+           "$texture_icone_right": "ng_asset.icon_34",
+           "$texture_button": "ng_asset.button_18"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "label@ng_module.panel": {
+        "size": [
+         "100%c + 6px",
+         "100%"
+        ],
+        "controls": [
+         {
+          "text@ng_module.Simple_text": {
+           "$type_get_text": "Get_text_type_1",
+           "$index": 28,
+           "offset": [
+            0,
+            0.8
+           ],
+           "size": [
+            "100%c",
+            "100%"
+           ],
+           "$font_scale_factor": 0.7
+          }
+         }
+        ]
+       }
+      },
+      {
+       "next@ng_module.panel": {
+        "size": [
+         "100%c",
+         "100%"
+        ],
+        "controls": [
+         {
+          "button@ng_module.Simple_Button": {
+           "size": [
+            10,
+            10
+           ],
+           "offset": [
+            0,
+            0.6
+           ],
+           "$index": 27,
+           "$icon_right_offset": [
+            0.3,
+            0
+           ],
+           "$size_icone_right": [
+            7,
+            7
+           ],
+           "$texture_icone_right": "ng_asset.icon_35",
+           "$texture_button": "ng_asset.button_18"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "content": {
+  "type": "panel",
+  "size": [
+   "100%",
+   "100%"
+  ],
+  "controls": [
+   {
+    "title@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      10,
+      15.5
+     ],
+     "size": [
+      330,
+      14.44
+     ],
+     "$index": 11,
+     "$font_scale": 1.51,
+     "$text_color": [
+      1,
+      1,
+      1
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "top_left",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "home@ng_premium_lootbox.home_button": {
+     "size": [
+      10,
+      10
+     ],
+     "anchor_from": "top_right",
+     "anchor_to": "top_right",
+     "offset": [
+      -24,
+      9
+     ],
+     "layer": 30
+    }
+   },
+   {
+    "close@ng_pala_gui.close_button": {
+     "size": [
+      10,
+      10
+     ],
+     "anchor_from": "top_right",
+     "anchor_to": "top_right",
+     "offset": [
+      -10,
+      9
+     ],
+     "layer": 30
+    }
+   },
+   {
+    "title_line@ng_boutique_asset.separator": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      10,
+      35
+     ],
+     "size": [
+      400,
+      0.44
+     ],
+     "layer": 3
+    }
+   },
+   {
+    "image": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      10,
+      41
+     ],
+     "size": [
+      150,
+      96
+     ],
+     "type": "panel",
+     "layer": 5,
+     "controls": [
+      {
+       "image@ng_boutique_asset.slot_image": {
+        "$index": 19
+       }
+      }
+     ]
+    }
+   },
+   {
+    "big_icon@ng_premium_lootbox.item_icon": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      57.0,
+      61.0
+     ],
+     "size": [
+      56,
+      56
+     ],
+     "$index": 25,
+     "$icon_size": [
+      48,
+      48
+     ],
+     "layer": 5
+    }
+   },
+   {
+    "open@ng_boutique_asset.red_button": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      10,
+      141
+     ],
+     "size": [
+      150,
+      16
+     ],
+     "$index": 17,
+     "$font_scale_factor": 0.7,
+     "layer": 20
+    }
+   },
+   {
+    "card@ng_boutique_asset.card": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      10,
+      162
+     ],
+     "size": [
+      150,
+      64
+     ],
+     "layer": 1
+    }
+   },
+   {
+    "heading@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      16,
+      167
+     ],
+     "size": [
+      86,
+      10
+     ],
+     "$index": 12,
+     "$font_scale": 0.62,
+     "$text_color": [
+      1,
+      1,
+      1
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "pill_background@ng_boutique_asset.card_inner": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102,
+      166.5
+     ],
+     "size": [
+      52,
+      11
+     ],
+     "layer": 5
+    }
+   },
+   {
+    "pill_count@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      102,
+      166.5
+     ],
+     "size": [
+      8.5,
+      11
+     ],
+     "$index": 13,
+     "$font_scale": 0.5,
+     "$text_color": [
+      1,
+      1,
+      1
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "right_middle",
+     "$text_alignment": "right",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "pill_icon@ng_premium_lootbox.item_icon": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      112,
+      168.0
+     ],
+     "size": [
+      8,
+      8
+     ],
+     "$index": 14,
+     "$icon_size": [
+      8,
+      8
+     ],
+     "layer": 6
+    }
+   },
+   {
+    "pill_text@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      121.5,
+      166.5
+     ],
+     "size": [
+      32.5,
+      11
+     ],
+     "$index": 15,
+     "$font_scale": 0.5,
+     "$text_color": [
+      1,
+      1,
+      1
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "description@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      16,
+      181
+     ],
+     "size": [
+      138,
+      42
+     ],
+     "$index": 16,
+     "$font_scale": 0.5,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "top_left",
+     "$text_alignment": "left",
+     "$font_type": "default",
+     "layer": 20
+    }
+   },
+   {
+    "content_title@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      41
+     ],
+     "size": [
+      110,
+      9
+     ],
+     "$index": 18,
+     "$font_scale": 0.62,
+     "$text_color": [
+      1,
+      1,
+      1
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "legend_crystal_0@ng_premium_lootbox.crystal_legende_commun": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      281,
+      42
+     ],
+     "size": [
+      7,
+      7
+     ],
+     "layer": 20
+    }
+   },
+   {
+    "legend_name_0@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      290,
+      41
+     ],
+     "size": [
+      20,
+      9
+     ],
+     "$index": 21,
+     "$font_scale": 0.45,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "legend_crystal_1@ng_premium_lootbox.crystal_legende_rare": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      315,
+      42
+     ],
+     "size": [
+      7,
+      7
+     ],
+     "layer": 20
+    }
+   },
+   {
+    "legend_name_1@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      324,
+      41
+     ],
+     "size": [
+      13,
+      9
+     ],
+     "$index": 22,
+     "$font_scale": 0.45,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "legend_crystal_2@ng_premium_lootbox.crystal_legende_epique": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      342,
+      42
+     ],
+     "size": [
+      7,
+      7
+     ],
+     "layer": 20
+    }
+   },
+   {
+    "legend_name_2@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      351,
+      41
+     ],
+     "size": [
+      17,
+      9
+     ],
+     "$index": 23,
+     "$font_scale": 0.45,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "legend_crystal_3@ng_premium_lootbox.crystal_legende_legendaire": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      373,
+      42
+     ],
+     "size": [
+      7,
+      7
+     ],
+     "layer": 20
+    }
+   },
+   {
+    "legend_name_3@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      382,
+      41
+     ],
+     "size": [
+      28,
+      9
+     ],
+     "$index": 24,
+     "$font_scale": 0.45,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "left_middle",
+     "$text_alignment": "left",
+     "$font_type": "MinecraftTen",
+     "layer": 20
+    }
+   },
+   {
+    "empty@ng_boutique_asset.slot_text": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      54
+     ],
+     "size": [
+      240,
+      144
+     ],
+     "$index": 20,
+     "$font_scale": 0.6,
+     "$text_color": [
+      0.694,
+      0.71,
+      0.737
+     ],
+     "$text_getter": "get_text_raw",
+     "$label_anchor": "center",
+     "$text_alignment": "center",
+     "$font_type": "default",
+     "layer": 20
+    }
+   },
+   {
+    "cell_0@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      54
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 30,
+     "$item": 31,
+     "layer": 2
+    }
+   },
+   {
+    "cell_1@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      218,
+      54
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 32,
+     "$item": 33,
+     "layer": 2
+    }
+   },
+   {
+    "cell_2@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      266,
+      54
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 34,
+     "$item": 35,
+     "layer": 2
+    }
+   },
+   {
+    "cell_3@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      314,
+      54
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 36,
+     "$item": 37,
+     "layer": 2
+    }
+   },
+   {
+    "cell_4@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      362,
+      54
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 38,
+     "$item": 39,
+     "layer": 2
+    }
+   },
+   {
+    "cell_5@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      102
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 40,
+     "$item": 41,
+     "layer": 2
+    }
+   },
+   {
+    "cell_6@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      218,
+      102
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 42,
+     "$item": 43,
+     "layer": 2
+    }
+   },
+   {
+    "cell_7@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      266,
+      102
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 44,
+     "$item": 45,
+     "layer": 2
+    }
+   },
+   {
+    "cell_8@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      314,
+      102
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 46,
+     "$item": 47,
+     "layer": 2
+    }
+   },
+   {
+    "cell_9@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      362,
+      102
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 48,
+     "$item": 49,
+     "layer": 2
+    }
+   },
+   {
+    "cell_10@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      150
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 50,
+     "$item": 51,
+     "layer": 2
+    }
+   },
+   {
+    "cell_11@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      218,
+      150
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 52,
+     "$item": 53,
+     "layer": 2
+    }
+   },
+   {
+    "cell_12@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      266,
+      150
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 54,
+     "$item": 55,
+     "layer": 2
+    }
+   },
+   {
+    "cell_13@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      314,
+      150
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 56,
+     "$item": 57,
+     "layer": 2
+    }
+   },
+   {
+    "cell_14@ng_premium_lootbox.reward": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      362,
+      150
+     ],
+     "size": [
+      42,
+      42
+     ],
+     "$rarity": 58,
+     "$item": 59,
+     "layer": 2
+    }
+   },
+   {
+    "pagination@ng_premium_lootbox.pagination": {
+     "anchor_from": "top_left",
+     "anchor_to": "top_left",
+     "offset": [
+      170,
+      199
+     ],
+     "size": [
+      234,
+      12
+     ],
+     "layer": 20
+    }
+   }
+  ]
+ }
+}

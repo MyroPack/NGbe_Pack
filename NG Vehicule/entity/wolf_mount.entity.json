@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:wolf_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/wolf_mount"
+			},
+			"geometry": {
+				"default": "geometry.ng_bike_wolf"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"death": "animation.ng_bike_wolf.death",
+				"jump": "animation.ng_bike_wolf.jump",
+				"roar": "animation.ng_bike_wolf.roar",
+				"terre_forward": "animation.ng_bike_wolf.terre_forward",
+				"terre_idle": "animation.ng_bike_wolf.terre_idle",
+				"terre_idle2": "animation.ng_bike_wolf.terre_idle2",
+				"terre_idle_mount": "animation.ng_bike_wolf.terre_idle_mount",
+				"ambient": "animation.ng_bike_wolf.ambient",
+				"move": "controller.animation.ng_bike_wolf.move",
+				"ambient_ctrl": "controller.animation.ng_bike_wolf.ambient"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.env = math.clamp(q.mark_variant, 0, 2);",
+					"v.moving = (q.modified_move_speed > 0.05 || (v.env != 0 && math.abs(q.vertical_speed) > 0.05)) ? 1 : 0;",
+					"v.mounted = q.has_rider ? 1 : 0;",
+					"v.etat = v.env * 4 + v.moving * 2 + v.mounted;",
+					"v.capacite = q.variant;"
+				],
+				"animate": [
+					"move",
+					"ambient_ctrl"
+				]
+			},
+			"sound_effects": {
+				"ambient": "ng_bike.wolf.ambient",
+				"death": "ng_bike.wolf.death",
+				"idle": "ng_bike.wolf.idle",
+				"idle2": "ng_bike.wolf.idle2",
+				"roar": "ng_bike.wolf.roar",
+				"terre_forward": "ng_bike.wolf.terre_forward"
+			}
+		}
+	}
+}

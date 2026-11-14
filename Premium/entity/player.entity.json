@@ -51,6 +51,14 @@
         "referent_rank_tag": "textures/entity/rank_tag/referent_rank_tag",
         "roleplay_rank_tag": "textures/entity/rank_tag/roleplay_rank_tag",
         "staff_rank_tag": "textures/entity/rank_tag/staff_rank_tag",
+        "creator_rank_tag": "textures/entity/rank_tag/creator_rank_tag",
+        "affiliate_tier_rank_tag": "textures/entity/rank_tag/affiliate_tier_rank_tag",
+        "partner_rank_tag": "textures/entity/rank_tag/partner_rank_tag",
+        "ambassador_rank_tag": "textures/entity/rank_tag/ambassador_rank_tag",
+        "creator_en_rank_tag": "textures/entity/rank_tag/creator_en_rank_tag",
+        "affiliate_tier_en_rank_tag": "textures/entity/rank_tag/affiliate_tier_en_rank_tag",
+        "partner_en_rank_tag": "textures/entity/rank_tag/partner_en_rank_tag",
+        "ambassador_en_rank_tag": "textures/entity/rank_tag/ambassador_en_rank_tag",
         "cosmetic.head.hat_octopus": "textures/entity/cosmetic/head/hat_octopus",
         "cosmetic.head.hat_robotic_arm": "textures/entity/cosmetic/head/hat_robotic_arm",
         "cosmetic.head.hat_bandana_green": "textures/entity/cosmetic/head/hat_bandana_green",
@@ -77,7 +85,53 @@
         "cosmetic.head.hat_witch": "textures/entity/cosmetic/head/hat_witch",
         "cosmetic.head.hat_skull": "textures/entity/cosmetic/head/hat_skull",
         "cosmetic.suit.supreme_wither_suit": "textures/entity/cosmetic/suit/supreme_wither_suit",
-        "cosmetic.cape.cape_ghost": "textures/entity/cosmetic/cape/cape_ghost"
+        "cosmetic.cape.cape_ghost": "textures/entity/cosmetic/cape/cape_ghost",
+        "cosmetic.hands.hands_wanderer": "textures/entity/cosmetic/hands/hands_wanderer",
+        "cosmetic.body.chestplates_wanderer": "textures/entity/cosmetic/body/chestplates_wanderer",
+        "cosmetic.head.hats_wanderer": "textures/entity/cosmetic/head/hats_wanderer",
+        "cosmetic.hands.hands_cursed_skull": "textures/entity/cosmetic/hands/hands_cursed_skull",
+        "cosmetic.body.chestplates_cursed_skull": "textures/entity/cosmetic/body/chestplates_cursed_skull",
+        "cosmetic.head.hats_cursed_skull": "textures/entity/cosmetic/head/hats_cursed_skull",
+        "cosmetic.hands.hands_pirate_hook": "textures/entity/cosmetic/hands/hands_pirate_hook",
+        "cosmetic.hands.hands_yeti": "textures/entity/cosmetic/hands/hands_yeti",
+        "cosmetic.head.hats_yeti": "textures/entity/cosmetic/head/hats_yeti",
+        "cosmetic.hands.hands_soda": "textures/entity/cosmetic/hands/hands_soda",
+        "cosmetic.body.chestplates_hotdog_mustard": "textures/entity/cosmetic/body/chestplates_hotdog_mustard",
+        "cosmetic.body.chestplates_hotdog_ketchup": "textures/entity/cosmetic/body/chestplates_hotdog_ketchup",
+        "cosmetic.head.hats_burger": "textures/entity/cosmetic/head/hats_burger",
+        "cosmetic.head.hats_fries": "textures/entity/cosmetic/head/hats_fries",
+        "cosmetic.hands.hands_trumpet": "textures/entity/cosmetic/hands/hands_trumpet",
+        "cosmetic.body.chestplates_trumpet": "textures/entity/cosmetic/body/chestplates_trumpet",
+        "cosmetic.head.hats_band": "textures/entity/cosmetic/head/hats_band",
+        "cosmetic.body.chestplates_pirate_treasure_chest": "textures/entity/cosmetic/body/chestplates_pirate_treasure_chest",
+        "cosmetic.body.chestplates_pirate_backpack": "textures/entity/cosmetic/body/chestplates_pirate_backpack",
+        "cosmetic.head.hats_pirate_bandana": "textures/entity/cosmetic/head/hats_pirate_bandana",
+        "cosmetic.body.chestplates_voodoo": "textures/entity/cosmetic/body/chestplates_voodoo",
+        "cosmetic.hands.hands_voodoo": "textures/entity/cosmetic/hands/hands_voodoo",
+        "cosmetic.head.hats_voodoo": "textures/entity/cosmetic/head/hats_voodoo",
+        "cosmetic.body.chestplates_demon_king_chest": "textures/entity/cosmetic/body/chestplates_demon_king_chest",
+        "cosmetic.hands.hands_demon_king_shoulders": "textures/entity/cosmetic/hands/hands_demon_king_shoulders",
+        "cosmetic.head.hats_demon_king_helmet": "textures/entity/cosmetic/head/hats_demon_king_helmet",
+        "cosmetic.hands.hands_mini_boss_frozen_hands": "textures/entity/cosmetic/hands/hands_mini_boss_frozen_hands",
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns": "textures/entity/cosmetic/head/hats_mini_boss_corrupted_ice_horns",
+        "cosmetic.body.chestplates_gingerbread_backpack": "textures/entity/cosmetic/body/chestplates_gingerbread_backpack",
+        "cosmetic.hands.hands_gingerbread_staff": "textures/entity/cosmetic/hands/hands_gingerbread_staff",
+        "cosmetic.head.hats_gingerbread_cap": "textures/entity/cosmetic/head/hats_gingerbread_cap",
+        "cosmetic.hands.hands_noel_parade": "textures/entity/cosmetic/hands/hands_noel_parade",
+        "cosmetic.head.hats_noel_parade": "textures/entity/cosmetic/head/hats_noel_parade",
+        "cosmetic.body.chestplates_noel_parade": "textures/entity/cosmetic/body/chestplates_noel_parade",
+        "cosmetic.head.hats_lucky_cat": "textures/entity/cosmetic/head/hats_lucky_cat",
+        "cosmetic.hands.hands_lucky_cat_paw": "textures/entity/cosmetic/hands/hands_lucky_cat_paw",
+        "cosmetic.body.chestplates_lucky_cat_backpack": "textures/entity/cosmetic/body/chestplates_lucky_cat_backpack",
+        "cosmetic.body.chestplates_panda_backpack": "textures/entity/cosmetic/body/chestplates_panda_backpack",
+        "cosmetic.hands.hands_bamboo_lantern_staff": "textures/entity/cosmetic/hands/hands_bamboo_lantern_staff",
+        "cosmetic.head.hats_chinese_conical": "textures/entity/cosmetic/head/hats_chinese_conical",
+        "cosmetic.hands.hands_plague_pathfinder_lantern": "textures/entity/cosmetic/hands/hands_plague_pathfinder_lantern",
+        "cosmetic.body.chestplates_plague_pathfinder_cage": "textures/entity/cosmetic/body/chestplates_plague_pathfinder_cage",
+        "cosmetic.head.hats_plague_pathfinder_mask": "textures/entity/cosmetic/head/hats_plague_pathfinder_mask",
+        "cosmetic.head.hats_phenix": "textures/entity/cosmetic/head/hats_phenix",
+        "cosmetic.hands.hands_phenix": "textures/entity/cosmetic/hands/hands_phenix",
+        "cosmetic.body.chestplates_phenix": "textures/entity/cosmetic/body/chestplates_phenix"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
@@ -112,7 +166,52 @@
         "cosmetic.body.back_unicorn_buoy": "geometry.cosmetic.body.back_unicorn_buoy",
         "cosmetic.head.hat_witch": "geometry.cosmetic.head.hat_witch",
         "cosmetic.head.hat_skull": "geometry.cosmetic.head.hat_skull",
-        "cosmetic.suit.supreme_wither_suit": "geometry.cosmetic.suit.supreme_wither_suit"
+        "cosmetic.suit.supreme_wither_suit": "geometry.cosmetic.suit.supreme_wither_suit",
+        "cosmetic.hands.hands_wanderer": "geometry.cosmetic.hands.hands_wanderer",
+        "cosmetic.body.chestplates_wanderer": "geometry.cosmetic.body.chestplates_wanderer",
+        "cosmetic.head.hats_wanderer": "geometry.cosmetic.head.hats_wanderer",
+        "cosmetic.hands.hands_cursed_skull": "geometry.cosmetic.hands.hands_cursed_skull",
+        "cosmetic.body.chestplates_cursed_skull": "geometry.cosmetic.body.chestplates_cursed_skull",
+        "cosmetic.head.hats_cursed_skull": "geometry.cosmetic.head.hats_cursed_skull",
+        "cosmetic.hands.hands_pirate_hook": "geometry.cosmetic.hands.hands_pirate_hook",
+        "cosmetic.hands.hands_yeti": "geometry.cosmetic.hands.hands_yeti",
+        "cosmetic.head.hats_yeti": "geometry.cosmetic.head.hats_yeti",
+        "cosmetic.hands.hands_soda": "geometry.cosmetic.hands.hands_soda",
+        "cosmetic.body.chestplates_hotdog": "geometry.cosmetic.body.chestplates_hotdog",
+        "cosmetic.head.hats_burger": "geometry.cosmetic.head.hats_burger",
+        "cosmetic.head.hats_fries": "geometry.cosmetic.head.hats_fries",
+        "cosmetic.hands.hands_trumpet": "geometry.cosmetic.hands.hands_trumpet",
+        "cosmetic.body.chestplates_trumpet": "geometry.cosmetic.body.chestplates_trumpet",
+        "cosmetic.head.hats_band": "geometry.cosmetic.head.hats_band",
+        "cosmetic.body.chestplates_pirate_treasure_chest": "geometry.cosmetic.body.chestplates_pirate_treasure_chest",
+        "cosmetic.body.chestplates_pirate_backpack": "geometry.cosmetic.body.chestplates_pirate_backpack",
+        "cosmetic.head.hats_pirate_bandana": "geometry.cosmetic.head.hats_pirate_bandana",
+        "cosmetic.body.chestplates_voodoo": "geometry.cosmetic.body.chestplates_voodoo",
+        "cosmetic.hands.hands_voodoo": "geometry.cosmetic.hands.hands_voodoo",
+        "cosmetic.head.hats_voodoo": "geometry.cosmetic.head.hats_voodoo",
+        "cosmetic.body.chestplates_demon_king_chest": "geometry.cosmetic.body.chestplates_demon_king_chest",
+        "cosmetic.hands.hands_demon_king_shoulders": "geometry.cosmetic.hands.hands_demon_king_shoulders",
+        "cosmetic.head.hats_demon_king_helmet": "geometry.cosmetic.head.hats_demon_king_helmet",
+        "cosmetic.hands.hands_mini_boss_frozen_hands": "geometry.cosmetic.hands.hands_mini_boss_frozen_hands",
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns": "geometry.cosmetic.head.hats_mini_boss_corrupted_ice_horns",
+        "cosmetic.body.chestplates_gingerbread_backpack": "geometry.cosmetic.body.chestplates_gingerbread_backpack",
+        "cosmetic.hands.hands_gingerbread_staff": "geometry.cosmetic.hands.hands_gingerbread_staff",
+        "cosmetic.head.hats_gingerbread_cap": "geometry.cosmetic.head.hats_gingerbread_cap",
+        "cosmetic.hands.hands_noel_parade": "geometry.cosmetic.hands.hands_noel_parade",
+        "cosmetic.head.hats_noel_parade": "geometry.cosmetic.head.hats_noel_parade",
+        "cosmetic.body.chestplates_noel_parade": "geometry.cosmetic.body.chestplates_noel_parade",
+        "cosmetic.head.hats_lucky_cat": "geometry.cosmetic.head.hats_lucky_cat",
+        "cosmetic.hands.hands_lucky_cat_paw": "geometry.cosmetic.hands.hands_lucky_cat_paw",
+        "cosmetic.body.chestplates_lucky_cat_backpack": "geometry.cosmetic.body.chestplates_lucky_cat_backpack",
+        "cosmetic.body.chestplates_panda_backpack": "geometry.cosmetic.body.chestplates_panda_backpack",
+        "cosmetic.hands.hands_bamboo_lantern_staff": "geometry.cosmetic.hands.hands_bamboo_lantern_staff",
+        "cosmetic.head.hats_chinese_conical": "geometry.cosmetic.head.hats_chinese_conical",
+        "cosmetic.hands.hands_plague_pathfinder_lantern": "geometry.cosmetic.hands.hands_plague_pathfinder_lantern",
+        "cosmetic.body.chestplates_plague_pathfinder_cage": "geometry.cosmetic.body.chestplates_plague_pathfinder_cage",
+        "cosmetic.head.hats_plague_pathfinder_mask": "geometry.cosmetic.head.hats_plague_pathfinder_mask",
+        "cosmetic.head.hats_phenix": "geometry.cosmetic.head.hats_phenix",
+        "cosmetic.hands.hands_phenix": "geometry.cosmetic.hands.hands_phenix",
+        "cosmetic.body.chestplates_phenix": "geometry.cosmetic.body.chestplates_phenix"
       },
       "scripts": {
         "scale": "0.9375",
@@ -204,6 +303,7 @@
           "v.cosmetic_head = v.cosmetic_preview_type == 2 ? v.cosmetic_preview_value : (q.has_property('cosmetic:head') ? q.property('cosmetic:head') : 0);",
           "v.cosmetic_body = v.cosmetic_preview_type == 3 ? v.cosmetic_preview_value : (q.has_property('cosmetic:body') ? q.property('cosmetic:body') : 0);",
           "v.cosmetic_suit = v.cosmetic_preview_type == 4 ? v.cosmetic_preview_value : (q.has_property('cosmetic:suit') ? q.property('cosmetic:suit') : 0);",
+          "v.cosmetic_hands = v.cosmetic_preview_type == 6 ? v.cosmetic_preview_value : (q.has_property('cosmetic:hands') ? q.property('cosmetic:hands') : 0);",
           "v.cosmetic_hide_bones_mask = v.cosmetic_preview_type > 0 ? v.cosmetic_preview_mask : (q.has_property('cosmetic:hide_bones_mask') ? q.property('cosmetic:hide_bones_mask') : 0);",
           "v.cosmetic_kill_animation = q.has_property('cosmetic:kill_animation') ? q.property('cosmetic:kill_animation') : 0;",
           "v.cosmetic_kill_preview = v.cosmetic_preview_type == 5 ? v.cosmetic_preview_value : 0;",
@@ -216,16 +316,16 @@
             "ngpropsi_flag_pose": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'propsi:wall_flag', 'propsi:wall_flag_nova', 'propsi:wall_flag_iris')"
           },
           {
-            "recubeicbm_armsup": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:anti_matter', 'ng:red_matter', 'ng:rocket')"
+            "recubeicbm_armsup": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:anti_matter', 'ng:red_matter', 'ng:endbringer', 'ng:rocket')"
           },
           {
             "recubeicbm_heavy": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:rpg', 'ng:rocket_launcher')"
           },
           {
-            "recubeicbm_aim_rifle": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:ak47', 'ng:m249', 'ng:ks23', 'ng:mossberg')"
+            "recubeicbm_aim_rifle": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:ak47', 'ng:m249', 'ng:ks23', 'ng:mossberg', 'ng:laser_assault_rifle', 'ng:laser_shotgun')"
           },
           {
-            "recubeicbm_aim_pistol": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:usp45', 'ng:desert_eagle')"
+            "recubeicbm_aim_pistol": "!variable.is_first_person && !variable.is_paperdoll && query.is_item_name_any('slot.weapon.mainhand', 0, 'ng:usp45', 'ng:desert_eagle', 'ng:laser_pistol')"
           },
           {
             "ngvehicle_winch_hanging": "!variable.is_first_person && !variable.is_paperdoll && query.is_riding_any_entity_of_type('nationsglory:winch_hook')"
@@ -250,6 +350,18 @@
           },
           {
             "cosmetic.hide_held_items": "v.cosmetic_preview > 0"
+          },
+          {
+            "cosmetic.body.chestplates_trumpet": "v.cosmetic_body == 16"
+          },
+          {
+            "cosmetic.head.hats_demon_king_helmet": "v.cosmetic_head == 15"
+          },
+          {
+            "cosmetic.hands.hands_mini_boss_frozen_hands": "v.cosmetic_hands == 9"
+          },
+          {
+            "cosmetic.head.hats_mini_boss_corrupted_ice_horns": "v.cosmetic_head == 16"
           },
           "cosmetic.preview_turn"
         ],
@@ -344,7 +456,11 @@
         "cosmetic.body.back_coffin": "animation.cosmetic.body.back_coffin",
         "cosmetic.body.back_demon_wings": "animation.cosmetic.body.back_demon_wings",
         "cosmetic.suit.supreme_wither_suit": "animation.cosmetic.suit.supreme_wither_suit",
-        "cosmetic.hide_held_items": "animation.cosmetic.hide_held_items"
+        "cosmetic.hide_held_items": "animation.cosmetic.hide_held_items",
+        "cosmetic.body.chestplates_trumpet": "animation.cosmetic.body.chestplates_trumpet.idle",
+        "cosmetic.head.hats_demon_king_helmet": "animation.cosmetic.head.hats_demon_king_helmet.idle",
+        "cosmetic.hands.hands_mini_boss_frozen_hands": "animation.cosmetic.hands.hands_mini_boss_frozen_hands.idle",
+        "cosmetic.head.hats_mini_boss_corrupted_ice_horns": "animation.cosmetic.head.hats_mini_boss_corrupted_ice_horns.idle"
       },
       "render_controllers": [
         {
@@ -454,6 +570,144 @@
         },
         {
           "controller.render.cosmetic.kill_animation.kill_animation_firestorm.vfx": "!variable.is_first_person && !q.is_spectator && ((v.cosmetic_kill_animation == 2 && q.life_time < 4.5) || (q.is_in_ui && v.cosmetic_kill_preview == 2))"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_wanderer": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 1"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_wanderer": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 12"
+        },
+        {
+          "controller.render.cosmetic.head.hats_wanderer": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 7"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_cursed_skull": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 2"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_cursed_skull": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 13"
+        },
+        {
+          "controller.render.cosmetic.head.hats_cursed_skull": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 8"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_pirate_hook": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 3"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_yeti": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 4"
+        },
+        {
+          "controller.render.cosmetic.head.hats_yeti": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 9"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_soda": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 5"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_hotdog_mustard": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 14"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_hotdog_ketchup": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 15"
+        },
+        {
+          "controller.render.cosmetic.head.hats_burger": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 10"
+        },
+        {
+          "controller.render.cosmetic.head.hats_fries": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 11"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_trumpet": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 6"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_trumpet": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 16"
+        },
+        {
+          "controller.render.cosmetic.head.hats_band": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 12"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_pirate_treasure_chest": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 17"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_pirate_backpack": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 18"
+        },
+        {
+          "controller.render.cosmetic.head.hats_pirate_bandana": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 13"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_voodoo": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 19"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_voodoo": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 7"
+        },
+        {
+          "controller.render.cosmetic.head.hats_voodoo": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 14"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_demon_king_chest": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 20"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_demon_king_shoulders": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 8"
+        },
+        {
+          "controller.render.cosmetic.head.hats_demon_king_helmet": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 15"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_mini_boss_frozen_hands": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 9"
+        },
+        {
+          "controller.render.cosmetic.head.hats_mini_boss_corrupted_ice_horns": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 16"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_gingerbread_backpack": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 21"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_gingerbread_staff": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 10"
+        },
+        {
+          "controller.render.cosmetic.head.hats_gingerbread_cap": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 17"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_noel_parade": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 11"
+        },
+        {
+          "controller.render.cosmetic.head.hats_noel_parade": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 18"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_noel_parade": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 22"
+        },
+        {
+          "controller.render.cosmetic.head.hats_lucky_cat": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 19"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_lucky_cat_paw": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 12"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_lucky_cat_backpack": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 23"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_panda_backpack": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 24"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_bamboo_lantern_staff": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 13"
+        },
+        {
+          "controller.render.cosmetic.head.hats_chinese_conical": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 20"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_plague_pathfinder_lantern": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 14"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_plague_pathfinder_cage": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 25"
+        },
+        {
+          "controller.render.cosmetic.head.hats_plague_pathfinder_mask": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 21"
+        },
+        {
+          "controller.render.cosmetic.head.hats_phenix": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_head == 22"
+        },
+        {
+          "controller.render.cosmetic.hands.hands_phenix": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_hands == 15"
+        },
+        {
+          "controller.render.cosmetic.body.chestplates_phenix": "v.cosmetic_kill_animation == 0 && !(q.is_in_ui && v.cosmetic_kill_preview > 0) && !variable.is_first_person && !q.is_spectator && v.cosmetic_body == 26"
         }
       ],
       "enable_attachables": true

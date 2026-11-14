@@ -2,12 +2,21 @@
 	"resource_pack_name": "ResourcePackTemplate",
 	"texture_name": "atlas.items",
 	"texture_data": {
+		"ng_balise_legende": {"textures": "textures/items/balise/balise_legende"},
+		"ng_balise_premium": {"textures": "textures/items/balise/balise_premium"},
+		"ng_balise_premium_plus": {"textures": "textures/items/balise/balise_premium_plus"},
 		"ng_lootbox_classique": {"textures": "textures/items/lootbox/lootbox_classique"},
 		"ng_lootbox_nuke": {"textures": "textures/items/lootbox/lootbox_nuke"},
 		"ng_lootbox_legendaire": {"textures": "textures/items/lootbox/lootbox_legendaire"},
 		"ng_lootbox_ultimate": {"textures": "textures/items/lootbox/lootbox_ultimate"},
 		"ng_lootbox_megalodon": {"textures": "textures/items/lootbox/lootbox_megalodon"},
 		"ngpremium_app_button": {"textures": "textures/items/app_button"},
+		"ngpremium_megalodon_helmet": {"textures": "textures/items/megalodon_helmet"},
+		"ngpremium_megalodon_chestplate": {"textures": "textures/items/megalodon_chestplate"},
+		"ngpremium_megalodon_leggings": {"textures": "textures/items/megalodon_leggings"},
+		"ngpremium_megalodon_boots": {"textures": "textures/items/megalodon_boots"},
+		"ngpremium_speed_leggings": {"textures": "textures/items/speed_leggings"},
+		"ngpremium_jump_boots": {"textures": "textures/items/jump_boots"},
 		"power_potion": {
 			"textures": "textures/items/power_potion"
 		},

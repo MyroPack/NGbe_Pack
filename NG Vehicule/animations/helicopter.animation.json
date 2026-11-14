@@ -1,6 +1,14 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
+		"animation.helicopter.tilt": {
+			"loop": true,
+			"bones": {
+				"ng_tilt": {
+					"rotation": ["q.property('ng:tilt_pitch')", 0, "q.property('ng:tilt_roll')"]
+				}
+			}
+		},
 		"animation.helicopter.rotor": {
 			"loop": true,
 			"bones": {

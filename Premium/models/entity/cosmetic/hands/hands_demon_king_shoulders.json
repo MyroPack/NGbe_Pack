@@ -1,0 +1,313 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.hands.hands_demon_king_shoulders",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.45,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "leftArm",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "leftSleeve",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "leftArm"
+        },
+        {
+          "name": "rightArm",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "rightSleeve",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "parent": "rightArm"
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.left.left_neck_plate",
+          "parent": "leftSleeve",
+          "pivot": [
+            6.9957,
+            24.33598,
+            -0.48433
+          ],
+          "rotation": [
+            0,
+            45,
+            -62.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5.8757,
+                21.59098,
+                -3.27563
+              ],
+              "size": [
+                2.49,
+                4.99,
+                2.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                17,
+                65
+              ]
+            },
+            {
+              "origin": [
+                3.3757,
+                21.59098,
+                -0.77563
+              ],
+              "size": [
+                4.99,
+                4.99,
+                2.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                0,
+                80
+              ]
+            },
+            {
+              "origin": [
+                4.64347,
+                18.58098,
+                3.49214
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "pivot": [
+                10.14347,
+                24.08098,
+                3.49214
+              ],
+              "rotation": [
+                0,
+                -45,
+                0
+              ],
+              "uv": [
+                0,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.left.left_arm",
+          "parent": "leftSleeve",
+          "pivot": [
+            5,
+            23,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                3.6757,
+                20.39098,
+                -2.27563
+              ],
+              "size": [
+                4.49,
+                2.49,
+                4.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                0,
+                73
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.left.right_arm",
+          "parent": "rightArm",
+          "pivot": [
+            -5,
+            23,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.right.rightSleeve",
+          "parent": "rightSleeve",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.1657,
+                20.39098,
+                -2.27563
+              ],
+              "size": [
+                4.49,
+                2.49,
+                4.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                0,
+                73
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.right.right_arm",
+          "parent": "rightArm",
+          "pivot": [
+            -5,
+            23,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_demon_king_shoulders.right.right_neck_plate",
+          "parent": "rightSleeve",
+          "pivot": [
+            -6.9957,
+            24.33598,
+            -0.48433
+          ],
+          "rotation": [
+            0,
+            -45,
+            62.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -8.3657,
+                21.59098,
+                -3.27563
+              ],
+              "size": [
+                2.49,
+                4.99,
+                2.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                17,
+                65
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -8.3657,
+                21.59098,
+                -0.77563
+              ],
+              "size": [
+                4.99,
+                4.99,
+                2.49
+              ],
+              "inflate": 0.01,
+              "uv": [
+                0,
+                80
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -12.64347,
+                18.58098,
+                3.49214
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "pivot": [
+                -10.14347,
+                24.08098,
+                3.49214
+              ],
+              "rotation": [
+                0,
+                45,
+                0
+              ],
+              "uv": [
+                0,
+                65
+              ],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

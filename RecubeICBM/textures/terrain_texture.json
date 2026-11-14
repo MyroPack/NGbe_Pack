@@ -6,6 +6,9 @@
   "texture_data": {
     "recubeicbm_invisible": {
       "textures": "textures/recubeicbm/blocks/invisible"
+    },
+    "recubeicbm_terminal": {
+      "textures": "textures/recubeicbm/blocks/terminal_lancement"
     }
   }
 }

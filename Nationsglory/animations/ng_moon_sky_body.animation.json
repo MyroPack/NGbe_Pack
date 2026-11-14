@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ng_moon_sky_body.suivi": {
+      "loop": true,
+      "bones": {
+        "suivi": {
+          "position": [
+            "-16 * math.min(q.distance_from_camera, 24) * math.sin(q.rotation_to_camera(1)) * math.cos(q.rotation_to_camera(0)) + 1280 * math.cos(45)",
+            "-16 * math.min(q.distance_from_camera, 24) * math.sin(q.rotation_to_camera(0)) + 1280 * math.sin(45)",
+            "-16 * math.min(q.distance_from_camera, 24) * math.cos(q.rotation_to_camera(1)) * math.cos(q.rotation_to_camera(0))"
+          ]
+        },
+        "astre": {
+          "scale": [
+            20,
+            20,
+            20
+          ]
+        }
+      }
+    }
+  }
+}

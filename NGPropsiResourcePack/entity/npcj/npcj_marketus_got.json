@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "propsi:npcj_marketus_got",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/npcj/npcj_marketus_got"
+      },
+      "geometry": {
+        "default": "geometry.propsi_e_npcj_marketus_got"
+      },
+      "animations": {
+        "near": "animation.propsi_e_npcj_marketus_got.near",
+        "idle": "animation.propsi_e_npcj_marketus_got.idle",
+        "idle2": "animation.propsi_e_npcj_marketus_got.idle2",
+        "talk": "animation.propsi_e_npcj_marketus_got.talk",
+        "controleur": "controller.animation.propsi_e_npcj_marketus_got",
+        "titre": "animation.propsi_e_npcj_marketus_got.titre"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.npcj_proche = q.distance_from_camera <= 4.0;"
+        ],
+        "animate": [
+          "controleur",
+          "titre"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "particle_effects": {
+        "titre": "propsi:npcj_marketus_got_titre"
+      }
+    }
+  }
+}

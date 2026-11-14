@@ -501,7 +501,7 @@
             25.38
           ],
           "size": [
-            84.0,
+            70.0,
             13.12
           ],
           "$index": 17
@@ -512,11 +512,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            84.0,
+            70.0,
             25.38
           ],
           "size": [
-            84.0,
+            70.0,
             13.12
           ],
           "$index": 18
@@ -527,11 +527,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            168.0,
+            140.0,
             25.38
           ],
           "size": [
-            84.0,
+            70.0,
             13.12
           ],
           "$index": 19
@@ -542,11 +542,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            252.0,
+            210.0,
             25.38
           ],
           "size": [
-            84.0,
+            70.0,
             13.12
           ],
           "$index": 20
@@ -557,14 +557,44 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            336.0,
+            280.0,
             25.38
           ],
           "size": [
-            84.0,
+            70.0,
             13.12
           ],
           "$index": 21
+        }
+      },
+      {
+        "category_5@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            350.0,
+            25.38
+          ],
+          "size": [
+            70.0,
+            13.12
+          ],
+          "$index": 185,
+          "$content": "ng_boutique.store_category_extra"
+        }
+      }
+    ]
+  },
+  "store_category_extra": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button@ng_boutique_asset.category_button": {
+          "$index": 185
         }
       }
     ]

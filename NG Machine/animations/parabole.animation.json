@@ -1,0 +1,52 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ng_parabole.idle": {
+      "loop": true,
+      "animation_length": 40,
+      "bones": {
+        "bone2": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "19.7083": {
+              "pre": [
+                -87.5,
+                0,
+                0
+              ],
+              "post": [
+                -87.5,
+                0,
+                0
+              ],
+              "lerp_mode": "catmullrom"
+            },
+            "40.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "bone": {
+          "rotation": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "40.0": [
+              0,
+              -360,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

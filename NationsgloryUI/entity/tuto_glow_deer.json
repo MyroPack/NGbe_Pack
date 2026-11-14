@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:tuto_glow_deer",
+      "materials": {
+        "default": "ng_tuto_glow"
+      },
+      "textures": {
+        "default": "textures/entity/ngb/deer_0"
+      },
+      "geometry": {
+        "default": "geometry.ng.deer"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

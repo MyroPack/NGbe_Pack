@@ -140,6 +140,80 @@
       }
     ]
   },
+  "filter_icon_white_7": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_hands_white",
+          "keep_ratio": true,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ]
+  },
+  "filter_hands": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "button@ng_boutique_asset.sidebar_button": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "$index": 97
+        }
+      },
+      {
+        "icon": {
+          "type": "image",
+          "texture": "textures/ui/paladium_assets/boutique/category/wearable_hands",
+          "keep_ratio": true,
+          "layer": 20,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.37,
+            2.37
+          ],
+          "size": [
+            10.5,
+            10.5
+          ]
+        }
+      },
+      {
+        "selected@ng_boutique_asset.has_flag": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            2.37,
+            2.37
+          ],
+          "size": [
+            10.5,
+            10.5
+          ],
+          "$index": 97,
+          "$flag": "§1",
+          "$content": "ng_boutique_collection.filter_icon_white_7",
+          "layer": 21
+        }
+      }
+    ]
+  },
   "player_renderer": {
     "type": "custom",
     "renderer": "live_player_renderer",
@@ -1001,6 +1075,22 @@
         }
       },
       {
+        "filter_7@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            8.51,
+            168.35
+          ],
+          "size": [
+            15.25,
+            15.25
+          ],
+          "$index": 97,
+          "$content": "ng_boutique_collection.filter_hands"
+        }
+      },
+      {
         "search_background@ng_boutique_asset.input": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
@@ -1516,11 +1606,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            43.96,
+            42.43,
             215.03
           ],
           "size": [
-            9.19,
+            12.25,
             12.25
           ],
           "layer": 20
@@ -1565,11 +1655,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            74.58,
+            73.05,
             215.03
           ],
           "size": [
-            9.19,
+            12.25,
             12.25
           ],
           "layer": 20
@@ -1614,11 +1704,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            105.21,
+            103.68,
             215.03
           ],
           "size": [
-            9.19,
+            12.25,
             12.25
           ],
           "layer": 20
@@ -1663,11 +1753,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            135.83,
+            134.3,
             215.03
           ],
           "size": [
-            9.19,
+            12.25,
             12.25
           ],
           "layer": 20
@@ -1712,11 +1802,11 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            166.46,
+            164.93,
             215.03
           ],
           "size": [
-            9.19,
+            12.25,
             12.25
           ],
           "layer": 20

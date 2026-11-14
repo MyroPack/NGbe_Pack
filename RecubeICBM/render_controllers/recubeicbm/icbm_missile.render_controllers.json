@@ -26,7 +26,8 @@
             "Texture.conventionnel",
             "Texture.conventionnel",
             "Texture.interceptor",
-            "Texture.rpg_rocket"
+            "Texture.rpg_rocket",
+            "Texture.endbringer"
           ]
         },
         "geometries": {
@@ -52,18 +53,19 @@
             "Geometry.conventionnel",
             "Geometry.conventionnel",
             "Geometry.interceptor",
-            "Geometry.rpg_rocket"
+            "Geometry.rpg_rocket",
+            "Geometry.endbringer"
           ]
         }
       },
-      "geometry": "Array.geos[math.clamp(q.variant, 0, 21)]",
+      "geometry": "Array.geos[math.clamp(q.variant, 0, 22)]",
       "materials": [
         {
           "*": "Material.default"
         }
       ],
       "textures": [
-        "Array.skins[math.clamp(q.variant, 0, 21)]"
+        "Array.skins[math.clamp(q.variant, 0, 22)]"
       ]
     }
   }

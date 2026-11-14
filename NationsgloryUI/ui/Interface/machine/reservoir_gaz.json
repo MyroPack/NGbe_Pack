@@ -348,7 +348,7 @@
                                         "controls":[
 
                                               {"text@ng_module.label":{
-                                                "text":"Surchauffe",
+                                                "text":"ng.machine.overheat",
                                                 "font_scale_factor": 0.6    
                                               }},
 
@@ -363,7 +363,7 @@
                                                   "size": ["100%c", "100%"],
                                                   "$font_scale_factor": 0.6,
                                                   "$text_offset": [0, -2]
-                                              }}
+                                              }},{"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default",10], "font_scale_factor":0.6, "offset":[0,-2], "layer":10 }}
                                       ]}},
 
                                       {"content@ng_module.stackpanel":{
@@ -376,7 +376,7 @@
                                                   "controls":[
 
                                                         {"text@ng_module.label":{
-                                                          "text":"Consomation",
+                                                          "text":"ng.machine.consumption",
                                                           "size":["default",10],
                                                           "font_scale_factor": 0.6    
                                                         }}
@@ -436,14 +436,11 @@
                           "size":[130,"100%c"],
                           "controls":[
 
-                                    {"center@ng_module.collectionpanel":{
-                                      "collection_name":"container_items",
-                                      "size":["100%","100%c"],
+                                    {"center@ng_module.panel":{
+                                      "size":["100%",21],
                                       "controls":[
 
-                                                  {"slot_1@ng_module.custome_slot":{
-                                                    "$index":16
-                                                  }}
+                                                  {"slot_1@reservoir_gaz.slot_with_ghost":{ "$slot_index":24, "$ghost_texture":"textures/recubeicbm/items/gas_bottle" }}
                                     ]}},
 
                                     {"icon@ng_module.panel":{
@@ -512,7 +509,7 @@
                                                 {"loading_bar@ng_module.loading_bar": {
                                                   "size": ["100%",9],
                                                   "layer": 5,
-                                                  "$index": 12,
+                                                  "$index": 23,
                                                   "$load_bar_size":["100% - 2px",7],
                                                   "$orientation": "horizontal",
                                                   "$color_border": [0.886, 0.125, 0.169],
@@ -545,10 +542,103 @@
                                                 {"loading_bar@ng_module.loading_bar": {
                                                   "size": ["100%",9],
                                                   "layer": 5,
-                                                  "$index": 12,
+                                                  "$index": 23,
                                                   "$load_bar_size":["100% - 2px",7],
                                                   "$orientation": "horizontal",
                                                   "$color_border": [0.000, 0.827, 0.949],
+                                                  "$layer_percent": 3,
+                                                  "$texture_background_bar":"ng_asset.background_02",
+                                                  "$texture_background_top": "textures/ui/background/background_white"
+                                                }}
+
+                                          ]}},{"azote_bar@ng_module.conditional":{
+                                            "collection_index":22,
+                                            "collection_name":"container_items",
+                                            "type":"stack_panel",
+                                            "size":["100%","100%c"],
+                                            "bindings":[
+                                                        {
+                                                          "binding_name": "#hover_text",
+                                                          "binding_type": "collection",
+                                                          "binding_collection_name": "container_items"
+                                                        },
+                                                        {
+                                                          "binding_type": "view",
+                                                          "source_property_name": "(not ((#hover_text - 'Nitrogen' - 'nitrogen' - 'Azote' - 'azote') = #hover_text))",
+                                                          "target_property_name": "#visible"
+                                                        }
+                                            ],
+                                            "controls":[
+
+                                                {"loading_bar@ng_module.loading_bar": {
+                                                  "size": ["100%",9],
+                                                  "layer": 5,
+                                                  "$index": 23,
+                                                  "$load_bar_size":["100% - 2px",7],
+                                                  "$orientation": "horizontal",
+                                                  "$color_border": [0.569, 0.400, 0.969],
+                                                  "$layer_percent": 3,
+                                                  "$texture_background_bar":"ng_asset.background_02",
+                                                  "$texture_background_top": "textures/ui/background/background_white"
+                                                }}
+
+                                          ]}},{"air_bar@ng_module.conditional":{
+                                            "collection_index":22,
+                                            "collection_name":"container_items",
+                                            "type":"stack_panel",
+                                            "size":["100%","100%c"],
+                                            "bindings":[
+                                                        {
+                                                          "binding_name": "#hover_text",
+                                                          "binding_type": "collection",
+                                                          "binding_collection_name": "container_items"
+                                                        },
+                                                        {
+                                                          "binding_type": "view",
+                                                          "source_property_name": "(not ((#hover_text - 'Air' - 'air') = #hover_text))",
+                                                          "target_property_name": "#visible"
+                                                        }
+                                            ],
+                                            "controls":[
+
+                                                {"loading_bar@ng_module.loading_bar": {
+                                                  "size": ["100%",9],
+                                                  "layer": 5,
+                                                  "$index": 23,
+                                                  "$load_bar_size":["100% - 2px",7],
+                                                  "$orientation": "horizontal",
+                                                  "$color_border": [0.820, 0.835, 0.859],
+                                                  "$layer_percent": 3,
+                                                  "$texture_background_bar":"ng_asset.background_02",
+                                                  "$texture_background_top": "textures/ui/background/background_white"
+                                                }}
+
+                                          ]}},{"autre_bar@ng_module.conditional":{
+                                            "collection_index":22,
+                                            "collection_name":"container_items",
+                                            "type":"stack_panel",
+                                            "size":["100%","100%c"],
+                                            "bindings":[
+                                                        {
+                                                          "binding_name": "#hover_text",
+                                                          "binding_type": "collection",
+                                                          "binding_collection_name": "container_items"
+                                                        },
+                                                        {
+                                                          "binding_type": "view",
+                                                          "source_property_name": "((not (#hover_text = '')) and ((#hover_text - 'Argon' - 'argon' - 'Oxygen' - 'oxygen' - 'Oxygene' - 'oxygene' - 'Nitrogen' - 'nitrogen' - 'Azote' - 'azote' - 'Air' - 'air') = #hover_text))",
+                                                          "target_property_name": "#visible"
+                                                        }
+                                            ],
+                                            "controls":[
+
+                                                {"loading_bar@ng_module.loading_bar": {
+                                                  "size": ["100%",9],
+                                                  "layer": 5,
+                                                  "$index": 23,
+                                                  "$load_bar_size":["100% - 2px",7],
+                                                  "$orientation": "horizontal",
+                                                  "$color_border": [0.604, 0.902, 0.000],
                                                   "$layer_percent": 3,
                                                   "$texture_background_bar":"ng_asset.background_02",
                                                   "$texture_background_top": "textures/ui/background/background_white"
@@ -560,9 +650,41 @@
                         ]}}
   ]}}
 
-  ]}
+  ]},
+
+  // Une case avec, tant qu'elle est vide, l'image de l'objet attendu en transparence (la bouteille de gaz), comme a
+  // l'Ecotron : une image fixe du pack ($ghost_texture).
+  "slot_with_ghost@ng_module.panel":{
+    "size":[21,21],
+    "$ghost_texture|default":"",
+    "controls":[
+      {"cell@ng_module.collectionpanel":{
+        "collection_name":"container_items",
+        "size":["100%","100%"],
+        "controls":[
+          {"slot@ng_module.custome_slot":{ "$index":"$slot_index" }},
+          {"ghost@reservoir_gaz.ghost_image":{ "$index":"$slot_index", "layer":10 }}
+        ]
+      }}
+    ]
+  },
+
+  // L'image de l'objet attendu, sur la case $index tant qu'elle est vide (texte de survol de la case vide).
+  "ghost_image@ng_module.panel":{
+    "size":["100%","100%"],
+    "collection_index":"$index",
+    "controls":[
+      {"image":{
+        "type":"image",
+        "texture":"$ghost_texture",
+        "size":[16,16],
+        "alpha":0.4,
+        "bindings":[
+          {"binding_name":"#hover_text","binding_type":"collection","binding_collection_name":"container_items"},
+          {"binding_type":"view","source_property_name":"(#hover_text = '')","target_property_name":"#visible"}
+        ]
+      }}
+    ]
+  }
 
 }
-
-
-    

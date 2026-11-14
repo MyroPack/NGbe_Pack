@@ -186,9 +186,9 @@
                                                                         "$type_get_text": "Get_text_type_2",
                                                                         "$index": 43,
                                                                         "layer": 6,
-                                                                        "$text_offset":[0,0.6],
+                                                                        "$text_offset":[0,0],
                                                                         "size": ["100%c","100%"],
-                                                                        "$font_scale_factor": 0.2
+                                                                        "$font_scale_factor": 0.7
                                                                       }}
                                                                 ]}},
 
@@ -319,10 +319,14 @@
                                     "orientation":"horizontal",
                                     "controls":[
 
-                                      // Cinq ligues : bronze, argent, or, platine, diamant. Les quatre premieres
-                                      // gardent les cases 47 a 62 ; la cinquieme (diamant, le dessin rank_master)
-                                      // est aux cases 77 a 80, apres le panneau de droite, pour ne rien decaler.
+                                      // Cinq ligues : bronze, argent, or, Master (platine de l'API), Challenger
+                                      // (diamant de l'API, noms de NG depuis le 04/11). Les quatre premieres gardent
+                                      // les cases 47 a 62 ; la cinquieme (Challenger, emblème rank_challenger) est aux
+                                      // cases 77 a 80, apres le panneau de droite, pour ne rien decaler.
                                       // Cinq cases de 38 + 3 + 16 et quatre ecarts de 7 : 313 des 324 de large.
+                                      // Sous l'icone (30), le nom de la ligue en 0.68 comme « TOP » (il etait en 0.18,
+                                      // illisible, capture de Leo du 02/11 15 h 50), ecarts 4 et 2 au lieu de 6 et 6 :
+                                      // la colonne reste sous les 52 des trois cases de recompense.
 
                                       {"bronze@ng_module.stackpanel":{
                                         "size":["100%c","100%cm"],
@@ -343,7 +347,7 @@
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,4]
                                                 }},
 
                                                 {"icon@ng_module.panel": {
@@ -354,13 +358,13 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": 47,
                                                       "size": ["100%c","100%c"],
-                                                      "$font_scale_factor": 0.18
+                                                      "$font_scale_factor": 0.68
                                                     }}
 
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,2]
                                                 }},
 
                                                 {"lp_label@ng_module.panel": {
@@ -435,7 +439,7 @@
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,4]
                                                 }},
 
                                                 {"icon@ng_module.panel": {
@@ -446,13 +450,13 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": 51,
                                                       "size": ["100%c","100%c"],
-                                                      "$font_scale_factor": 0.18
+                                                      "$font_scale_factor": 0.68
                                                     }}
 
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,2]
                                                 }},
 
                                                 {"lp_label@ng_module.panel": {
@@ -527,7 +531,7 @@
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,4]
                                                 }},
 
                                                 {"icon@ng_module.panel": {
@@ -538,13 +542,13 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": 55,
                                                       "size": ["100%c","100%c"],
-                                                      "$font_scale_factor": 0.18
+                                                      "$font_scale_factor": 0.68
                                                     }}
 
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,2]
                                                 }},
 
                                                 {"lp_label@ng_module.panel": {
@@ -619,7 +623,7 @@
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,4]
                                                 }},
 
                                                 {"icon@ng_module.panel": {
@@ -630,13 +634,13 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": 59,
                                                       "size": ["100%c","100%c"],
-                                                      "$font_scale_factor": 0.18
+                                                      "$font_scale_factor": 0.68
                                                     }}
 
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,2]
                                                 }},
 
                                                 {"lp_label@ng_module.panel": {
@@ -705,13 +709,13 @@
                                                   "size": ["100%", "100%c"],
                                                   "controls":[
 
-                                                        {"icon@ng_asset.rank_master":{
+                                                        {"icon@ng_asset.rank_challenger":{
                                                           "size":[30,30]
                                                         }}
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,4]
                                                 }},
 
                                                 {"icon@ng_module.panel": {
@@ -722,13 +726,13 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": 77,
                                                       "size": ["100%c","100%c"],
-                                                      "$font_scale_factor": 0.18
+                                                      "$font_scale_factor": 0.68
                                                     }}
 
                                                 ]}},
 
                                                 {"padding@ng_module.panel": {
-                                                  "size": [0.1,6]
+                                                  "size": [0.1,2]
                                                 }},
 
                                                 {"lp_label@ng_module.panel": {
@@ -1378,9 +1382,9 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": "$rankname_lp",
                                                       "layer": 6,
-                                                      "$text_offset":[0,0.6],
+                                                      "$text_offset":[0,0],
                                                       "size": ["100%c","100%"],
-                                                      "$font_scale_factor": 0.2
+                                                      "$font_scale_factor": 0.7
                                                     }}
                                               ]}},
 
@@ -1479,9 +1483,9 @@
                                                       "$type_get_text": "Get_text_type_2",
                                                       "$index": "$rankname_lp",
                                                       "layer": 6,
-                                                      "$text_offset":[0,0.6],
+                                                      "$text_offset":[0,0],
                                                       "size": ["100%c","100%"],
-                                                      "$font_scale_factor": 0.2
+                                                      "$font_scale_factor": 0.7
                                                     }}
                                               ]}},
 

@@ -1,0 +1,114 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.ng_enclosure_adaptateurs",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 3,
+    "visible_bounds_height": 4.5,
+    "visible_bounds_offset": [
+     0,
+     1.75,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "enclos_adaptateur_electrique",
+     "pivot": [
+      0,
+      8,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -5.025,
+        3,
+        7
+       ],
+       "size": [
+        10,
+        10,
+        3
+       ],
+       "inflate": -0.025,
+       "uv": [
+        29,
+        44
+       ]
+      },
+      {
+       "origin": [
+        -4.025,
+        4,
+        9
+       ],
+       "size": [
+        8,
+        8,
+        1
+       ],
+       "inflate": -0.025,
+       "uv": [
+        29,
+        57
+       ]
+      }
+     ]
+    },
+    {
+     "name": "enclos_adaptateur_fluide",
+     "pivot": [
+      0,
+      8,
+      0
+     ],
+     "rotation": [
+      -90,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -5.025,
+        3,
+        7
+       ],
+       "size": [
+        10,
+        10,
+        3
+       ],
+       "inflate": -0.025,
+       "uv": [
+        55,
+        44
+       ]
+      },
+      {
+       "origin": [
+        -4.025,
+        4,
+        9
+       ],
+       "size": [
+        8,
+        8,
+        1
+       ],
+       "inflate": -0.025,
+       "uv": [
+        55,
+        57
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

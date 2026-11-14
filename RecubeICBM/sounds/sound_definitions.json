@@ -145,14 +145,14 @@
     },
     "recubeicbm.missile.launch": {
       "category": "hostile",
+      "max_distance": 128.0,
       "sounds": [
         {
-          "name": "sounds/fireworks/launch1",
-          "volume": 2.0,
-          "pitch": 0.5
+          "name": "sounds/recubeicbm/missile_liftoff",
+          "stream": true,
+          "volume": 1.0
         }
-      ],
-      "max_distance": 128.0
+      ]
     },
     "recubeicbm.missile.incoming": {
       "category": "hostile",
@@ -323,6 +323,17 @@
       ],
       "max_distance": 256.0
     },
+    "recubeicbm.endbringer": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/missiles/endbringer",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 256.0
+    },
     "recubeicbm.antimatter": {
       "category": "neutral",
       "sounds": [
@@ -333,6 +344,127 @@
         }
       ],
       "max_distance": 256.0
+    },
+    "recubeicbm.laser_pistol.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/laser_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.laser_assault_rifle.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/laser_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.laser_assault_rifle.reload": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/laser_assault_rifle_reload",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.laser_shotgun.shoot": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/laser_shotgun_shoot",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 64.0
+    },
+    "recubeicbm.laser_shotgun.reload": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/weapons/laser_shotgun_reload",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ],
+      "max_distance": 16.0
+    },
+    "recubeicbm.missile.explode_tnt": {
+      "category": "hostile",
+      "max_distance": 96.0,
+      "sounds": [
+        {
+          "name": "sounds/random/explode1",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/random/explode2",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/random/explode3",
+          "volume": 1.0,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/random/explode4",
+          "volume": 1.0,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "recubeicbm.missile.earthquake": {
+      "category": "hostile",
+      "max_distance": 256.0,
+      "sounds": [
+        {
+          "name": "sounds/recubeicbm/missile_earthquake",
+          "stream": true,
+          "volume": 1.0
+        }
+      ]
+    },
+    "recubeicbm.missile.blast": {
+      "category": "hostile",
+      "sounds": [
+        {
+          "name": "sounds/random/explode1",
+          "volume": 1.0,
+          "pitch": 0.7,
+          "is3D": false
+        },
+        {
+          "name": "sounds/random/explode2",
+          "volume": 1.0,
+          "pitch": 0.7,
+          "is3D": false
+        },
+        {
+          "name": "sounds/random/explode3",
+          "volume": 1.0,
+          "pitch": 0.7,
+          "is3D": false
+        },
+        {
+          "name": "sounds/random/explode4",
+          "volume": 1.0,
+          "pitch": 0.7,
+          "is3D": false
+        }
+      ]
     }
   }
 }

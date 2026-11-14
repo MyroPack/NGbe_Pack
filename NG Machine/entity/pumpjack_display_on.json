@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:pumpjack_display_on",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/pumpjack"
+      },
+      "geometry": {
+        "default": "geometry.pumpjack"
+      },
+      "animations": {
+        "pump": "animation.ng_pumpjack.pump"
+      },
+      "scripts": {
+        "animate": [
+          "pump"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

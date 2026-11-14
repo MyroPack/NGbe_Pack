@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:grain_trailer",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/grain_trailer"
+			},
+			"geometry": {
+				"default": "geometry.grain_trailer"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"roues": "animation.grain_trailer.roues"
+			},
+			"scripts": {
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					"roues"
+				]
+			}
+		}
+	}
+}

@@ -176,7 +176,7 @@
 					]
 				},
 				{
-					"name": "bone",
+					"name": "multi_tool_bone",
 					"parent": "wrapper",
 					"pivot": [-4, 10, -3],
 					"cubes": [
@@ -186,7 +186,7 @@
 					]
 				},
 				{
-					"name": "bone2",
+					"name": "multi_tool_bone2",
 					"parent": "wrapper",
 					"pivot": [-6, 16.5, -5],
 					"cubes": [

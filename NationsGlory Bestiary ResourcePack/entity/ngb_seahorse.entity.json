@@ -22,6 +22,9 @@
         "controller": "controller.animation.ng.seahorse.move"
       },
       "scripts": {
+        "initialize": [
+          "variable.ngb_moving = 0.0;"
+        ],
         "pre_animation": [
           "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
         ],

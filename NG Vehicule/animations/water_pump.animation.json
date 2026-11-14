@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.water_pump.roues": {
+			"loop": true,
+			"bones": {
+				"wheels": {
+					"rotation": [
+						"-q.modified_distance_moved * 110",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

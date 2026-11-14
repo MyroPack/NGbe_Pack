@@ -1,0 +1,114 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.ng_garage_adaptateurs",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 13,
+    "visible_bounds_height": 6.5,
+    "visible_bounds_offset": [
+     0,
+     2.75,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "garage_adaptateur_electrique",
+     "pivot": [
+      32,
+      8,
+      32
+     ],
+     "cubes": [
+      {
+       "origin": [
+        26.975,
+        3,
+        39
+       ],
+       "size": [
+        10,
+        10,
+        3
+       ],
+       "inflate": -0.025,
+       "uv": [
+        29,
+        44
+       ]
+      },
+      {
+       "origin": [
+        27.975,
+        4,
+        41
+       ],
+       "size": [
+        8,
+        8,
+        1
+       ],
+       "inflate": -0.025,
+       "uv": [
+        29,
+        57
+       ]
+      }
+     ]
+    },
+    {
+     "name": "garage_adaptateur_fluide",
+     "pivot": [
+      32,
+      8,
+      31
+     ],
+     "rotation": [
+      0,
+      90,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        26.975,
+        3,
+        38
+       ],
+       "size": [
+        10,
+        10,
+        3
+       ],
+       "inflate": -0.025,
+       "uv": [
+        55,
+        44
+       ]
+      },
+      {
+       "origin": [
+        27.975,
+        4,
+        40
+       ],
+       "size": [
+        8,
+        8,
+        1
+       ],
+       "inflate": -0.025,
+       "uv": [
+        55,
+        57
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

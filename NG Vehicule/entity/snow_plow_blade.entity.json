@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:snow_plow_blade",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/snow_plow_blade"
+			},
+			"geometry": {
+				"default": "geometry.snow_plow_blade"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

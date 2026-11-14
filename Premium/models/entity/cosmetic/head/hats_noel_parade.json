@@ -1,0 +1,864 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.head.hats_noel_parade",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.03,
+        "visible_bounds_height": 3.06,
+        "visible_bounds_offset": [
+          0,
+          1.28,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "head",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.hat",
+          "parent": "head",
+          "pivot": [
+            1,
+            32,
+            -1
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.group4",
+          "parent": "cosmetic.head.hats_noel_parade.hat",
+          "pivot": [
+            1,
+            32,
+            -1
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                32,
+                -5
+              ],
+              "size": [
+                10,
+                5,
+                10
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    113,
+                    43
+                  ],
+                  "uv_size": [
+                    10,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    113,
+                    43
+                  ],
+                  "uv_size": [
+                    10,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    113,
+                    43
+                  ],
+                  "uv_size": [
+                    10,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    113,
+                    43
+                  ],
+                  "uv_size": [
+                    10,
+                    5
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    87,
+                    51
+                  ],
+                  "uv_size": [
+                    10,
+                    10
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -3,
+                35,
+                -2.5
+              ],
+              "size": [
+                12,
+                5,
+                5
+              ],
+              "pivot": [
+                0,
+                37,
+                0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                22.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    113,
+                    25
+                  ],
+                  "uv_size": [
+                    12,
+                    5
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    98,
+                    57
+                  ],
+                  "uv_size": [
+                    5,
+                    5
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    113,
+                    31
+                  ],
+                  "uv_size": [
+                    12,
+                    5
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    104,
+                    57
+                  ],
+                  "uv_size": [
+                    5,
+                    5
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    98,
+                    51
+                  ],
+                  "uv_size": [
+                    12,
+                    5
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    113,
+                    42
+                  ],
+                  "uv_size": [
+                    12,
+                    -5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.group8",
+          "parent": "cosmetic.head.hats_noel_parade.group4",
+          "pivot": [
+            9.5,
+            32.5,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                7.75,
+                30.75,
+                -2.25
+              ],
+              "size": [
+                4.5,
+                4.5,
+                4.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    87,
+                    62
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    87,
+                    62
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    87,
+                    62
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    87,
+                    62
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    92,
+                    62
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    124,
+                    47
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                8,
+                31,
+                -2
+              ],
+              "size": [
+                4,
+                4,
+                4
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    110,
+                    59
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    110,
+                    59
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    110,
+                    59
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    110,
+                    59
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    115,
+                    59
+                  ],
+                  "uv_size": [
+                    4,
+                    4
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    120,
+                    63
+                  ],
+                  "uv_size": [
+                    4,
+                    -4
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.group9",
+          "parent": "cosmetic.head.hats_noel_parade.group4",
+          "pivot": [
+            1,
+            29,
+            -1
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6,
+                28.8,
+                -6
+              ],
+              "size": [
+                12,
+                3,
+                12
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    111,
+                    55
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    111,
+                    55
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    111,
+                    55
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    111,
+                    55
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    100,
+                    25
+                  ],
+                  "uv_size": [
+                    12,
+                    12
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    100,
+                    50
+                  ],
+                  "uv_size": [
+                    12,
+                    -12
+                  ]
+                }
+              }
+            },
+            {
+              "origin": [
+                -6.25,
+                28.55,
+                -6.25
+              ],
+              "size": [
+                12.5,
+                3.5,
+                12.5
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    111,
+                    51
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "east": {
+                  "uv": [
+                    111,
+                    51
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    111,
+                    51
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    111,
+                    51
+                  ],
+                  "uv_size": [
+                    12,
+                    3
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    87,
+                    25
+                  ],
+                  "uv_size": [
+                    12,
+                    12
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    87,
+                    50
+                  ],
+                  "uv_size": [
+                    12,
+                    -12
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.beard",
+          "parent": "cosmetic.head.hats_noel_parade.hat",
+          "pivot": [
+            4.51712,
+            23.52799,
+            -2.94155
+          ],
+          "cubes": [
+            {
+              "origin": [
+                3.51712,
+                21.02799,
+                -3.94155
+              ],
+              "size": [
+                2,
+                5,
+                2
+              ],
+              "pivot": [
+                4.51712,
+                23.52799,
+                -2.94155
+              ],
+              "rotation": [
+                -6.26765,
+                -7.52076,
+                -18.58597
+              ],
+              "uv": [
+                115,
+                0
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -5.51712,
+                21.02799,
+                -3.94155
+              ],
+              "size": [
+                2,
+                5,
+                2
+              ],
+              "pivot": [
+                -4.51712,
+                23.52799,
+                -2.94155
+              ],
+              "rotation": [
+                -6.26765,
+                7.52076,
+                18.58597
+              ],
+              "uv": [
+                115,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -5.25,
+                20.87955,
+                -6.42178
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                -3.75,
+                22.37955,
+                -6.42178
+              ],
+              "rotation": [
+                -31.60659,
+                7.99365,
+                12.73415
+              ],
+              "uv": [
+                109,
+                13
+              ]
+            },
+            {
+              "origin": [
+                -2,
+                16,
+                -6
+              ],
+              "size": [
+                4,
+                8,
+                4
+              ],
+              "pivot": [
+                0,
+                23,
+                -5
+              ],
+              "rotation": [
+                -22.5,
+                0,
+                0
+              ],
+              "uv": [
+                98,
+                0
+              ]
+            },
+            {
+              "origin": [
+                2.25,
+                20.87955,
+                -6.42178
+              ],
+              "size": [
+                3,
+                5,
+                2
+              ],
+              "pivot": [
+                3.75,
+                22.37955,
+                -6.42178
+              ],
+              "rotation": [
+                -31.60659,
+                -7.99365,
+                -12.73415
+              ],
+              "uv": [
+                109,
+                13
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                2,
+                16.57508,
+                -6.37745
+              ],
+              "size": [
+                3,
+                7,
+                2
+              ],
+              "pivot": [
+                3.5,
+                19.57508,
+                -5.87745
+              ],
+              "rotation": [
+                -22.42287,
+                -1.91134,
+                -4.62111
+              ],
+              "uv": [
+                98,
+                13
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -5,
+                16.57508,
+                -6.37745
+              ],
+              "size": [
+                3,
+                7,
+                2
+              ],
+              "pivot": [
+                -3.5,
+                19.57508,
+                -5.87745
+              ],
+              "rotation": [
+                -22.42287,
+                1.91134,
+                4.62111
+              ],
+              "uv": [
+                98,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.leftmustache",
+          "parent": "cosmetic.head.hats_noel_parade.beard",
+          "pivot": [
+            1.5,
+            25,
+            -6
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0.5,
+                24,
+                -6
+              ],
+              "size": [
+                4,
+                2,
+                1
+              ],
+              "pivot": [
+                1.5,
+                25,
+                -6
+              ],
+              "rotation": [
+                0,
+                22.5,
+                10
+              ],
+              "uv": [
+                115,
+                8
+              ]
+            },
+            {
+              "origin": [
+                4.5,
+                22,
+                -5.5
+              ],
+              "size": [
+                4,
+                4,
+                0
+              ],
+              "pivot": [
+                1.5,
+                25,
+                -6
+              ],
+              "rotation": [
+                0,
+                22.5,
+                10
+              ],
+              "uv": [
+                120,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.head.hats_noel_parade.rightmustache",
+          "parent": "cosmetic.head.hats_noel_parade.beard",
+          "pivot": [
+            -1.5,
+            25,
+            -6
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.5,
+                24,
+                -6
+              ],
+              "size": [
+                4,
+                2,
+                1
+              ],
+              "pivot": [
+                -1.5,
+                25,
+                -6
+              ],
+              "rotation": [
+                0,
+                -22.5,
+                -10
+              ],
+              "uv": [
+                109,
+                21
+              ]
+            },
+            {
+              "origin": [
+                -8.5,
+                22,
+                -5.5
+              ],
+              "size": [
+                4,
+                4,
+                0
+              ],
+              "pivot": [
+                -1.5,
+                25,
+                -6
+              ],
+              "rotation": [
+                0,
+                -22.5,
+                -10
+              ],
+              "uv": [
+                120,
+                17
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

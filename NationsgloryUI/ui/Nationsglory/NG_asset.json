@@ -1185,10 +1185,18 @@
     "texture":"textures/ui/ng_assets/Auther/rank_or"
   },
 
-  // La ligue platine n'a pas de dessin dans Auther : icone faite par tools/league_icons/league_icons.py.
+  // La ligue platine de l'API, appelee Master sur NG : son emblème est fait par tools/league_icons/league_icons.py
+  // (le dessin rank_master en violet amethyste).
   "rank_platine":{
     "type":"image",
     "texture":"textures/ui/ng_assets/league/platinum"
+  },
+
+  // La ligue diamant de l'API, appelee Challenger sur NG : le dessin rank_master en braise et or, fait par le meme
+  // script (04/11, a la place du dessin rank_master tel quel).
+  "rank_challenger":{
+    "type":"image",
+    "texture":"textures/ui/ng_assets/league/diamond"
   },
 
   "background_screen":{

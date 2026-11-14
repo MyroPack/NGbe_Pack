@@ -20,7 +20,9 @@
         },
         "ground_move": {
           "animations": [
-            "move"
+            {
+              "move": "math.clamp(query.modified_move_speed * 5, 0, 1)"
+            }
           ],
           "transitions": [
             {

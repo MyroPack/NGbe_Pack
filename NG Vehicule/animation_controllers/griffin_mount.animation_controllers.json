@@ -1,0 +1,173 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ng_bike_griffin.move": {
+			"initial_state": "terre_idle",
+			"states": {
+				"terre_idle": {
+					"animations": [
+						"terre_idle"
+					],
+					"transitions": [
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 10 || v.etat == 11) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_idle": "(v.etat == 4 || v.etat == 5) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_forward": "(v.etat == 6 || v.etat == 7) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"dash": "v.capacite == 2"
+						},
+						{
+							"grab": "v.capacite == 5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"terre_forward": {
+					"animations": [
+						"terre_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 8 || v.etat == 9) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_idle": "(v.etat == 4 || v.etat == 5) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_forward": "(v.etat == 6 || v.etat == 7) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"dash": "v.capacite == 2"
+						},
+						{
+							"grab": "v.capacite == 5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"fly_idle": {
+					"animations": [
+						"fly_idle"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 8 || v.etat == 9) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 10 || v.etat == 11) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_forward": "(v.etat == 6 || v.etat == 7) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"dash": "v.capacite == 2"
+						},
+						{
+							"grab": "v.capacite == 5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"fly_forward": {
+					"animations": [
+						"fly_forward"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 8 || v.etat == 9) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 10 || v.etat == 11) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_idle": "(v.etat == 4 || v.etat == 5) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"dash": "v.capacite == 2"
+						},
+						{
+							"grab": "v.capacite == 5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"dash": {
+					"animations": [
+						"dash"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 8 || v.etat == 9) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 10 || v.etat == 11) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_idle": "(v.etat == 4 || v.etat == 5) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_forward": "(v.etat == 6 || v.etat == 7) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"grab": "v.capacite == 5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"grab": {
+					"animations": [
+						"grab"
+					],
+					"transitions": [
+						{
+							"terre_idle": "(v.etat == 0 || v.etat == 1 || v.etat == 8 || v.etat == 9) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"terre_forward": "(v.etat == 2 || v.etat == 3 || v.etat == 10 || v.etat == 11) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_idle": "(v.etat == 4 || v.etat == 5) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"fly_forward": "(v.etat == 6 || v.etat == 7) && !(v.capacite == 2 || v.capacite == 5)"
+						},
+						{
+							"dash": "v.capacite == 2"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.ng_bike_griffin.ambient": {
+			"initial_state": "attente",
+			"states": {
+				"attente": {
+					"on_entry": [
+						"v.ambiance_fin = q.life_time + math.random(10, 20);"
+					],
+					"transitions": [
+						{
+							"son": "q.life_time >= v.ambiance_fin"
+						}
+					]
+				},
+				"son": {
+					"animations": [
+						"ambient"
+					],
+					"transitions": [
+						{
+							"attente": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

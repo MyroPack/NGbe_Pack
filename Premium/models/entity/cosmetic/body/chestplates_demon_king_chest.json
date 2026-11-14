@@ -1,0 +1,173 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.body.chestplates_demon_king_chest",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.0,
+        "visible_bounds_height": 2.02,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "jacket",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "rightArm",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "cosmetic.body.chestplates_demon_king_chest.body",
+          "parent": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5,
+                17,
+                -3
+              ],
+              "size": [
+                10,
+                7,
+                6
+              ],
+              "inflate": 0.25,
+              "uv": [
+                96,
+                72
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                12,
+                -3
+              ],
+              "size": [
+                10,
+                3,
+                6
+              ],
+              "inflate": -0.25,
+              "uv": [
+                96,
+                100
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_demon_king_chest.right_arm",
+          "parent": "rightArm",
+          "pivot": [
+            -5,
+            23,
+            0
+          ]
+        },
+        {
+          "name": "cosmetic.body.chestplates_demon_king_chest.glow1",
+          "parent": "jacket",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -2,
+                11.5,
+                -3.5
+              ],
+              "size": [
+                4,
+                4,
+                2
+              ],
+              "inflate": -0.25,
+              "pivot": [
+                0,
+                13.5,
+                -1.5
+              ],
+              "rotation": [
+                0,
+                0,
+                45
+              ],
+              "uv": [
+                93,
+                111
+              ]
+            },
+            {
+              "origin": [
+                -5,
+                17,
+                -3
+              ],
+              "size": [
+                10,
+                7,
+                6
+              ],
+              "uv": [
+                96,
+                86
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@
 					]
 				},
 				{
-					"name": "bone",
+					"name": "ragnarok_helmet_bone",
 					"parent": "head",
 					"pivot": [5, 31.75, -0.25],
 					"rotation": [-45, 0, 0],
@@ -32,7 +32,7 @@
 					]
 				},
 				{
-					"name": "bone2",
+					"name": "ragnarok_helmet_bone2",
 					"parent": "head",
 					"pivot": [-5, 31.75, -0.25],
 					"rotation": [-45, 0, 0],

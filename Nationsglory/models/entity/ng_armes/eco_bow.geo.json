@@ -1,0 +1,153 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.ng_arme.eco_bow_standby",
+        "texture_width": 32,
+        "texture_height": 32
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "texture_meshes": [
+            {
+              "local_pivot": [
+                12.0,
+                0.0,
+                12.0
+              ],
+              "position": [
+                2.0,
+                1.0,
+                -2.0
+              ],
+              "rotation": [
+                0.0,
+                -135.0,
+                90.0
+              ],
+              "texture": "default",
+              "scale": [
+                0.5,
+                0.5,
+                0.5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.ng_arme.eco_bow_pulling_0",
+        "texture_width": 32,
+        "texture_height": 32
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "texture_meshes": [
+            {
+              "local_pivot": [
+                12.0,
+                0.0,
+                12.0
+              ],
+              "position": [
+                2.0,
+                1.0,
+                -1.0
+              ],
+              "rotation": [
+                0.0,
+                -135.0,
+                90.0
+              ],
+              "texture": "bow_pulling_0",
+              "scale": [
+                0.5,
+                0.5,
+                0.5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.ng_arme.eco_bow_pulling_1",
+        "texture_width": 32,
+        "texture_height": 32
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "texture_meshes": [
+            {
+              "local_pivot": [
+                12.0,
+                0.0,
+                12.0
+              ],
+              "position": [
+                2.01,
+                1.0,
+                -1.0
+              ],
+              "rotation": [
+                0.0,
+                -135.0,
+                90.0
+              ],
+              "texture": "bow_pulling_1",
+              "scale": [
+                0.5,
+                0.5,
+                0.5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "identifier": "geometry.ng_arme.eco_bow_pulling_2",
+        "texture_width": 32,
+        "texture_height": 32
+      },
+      "bones": [
+        {
+          "name": "rightitem",
+          "texture_meshes": [
+            {
+              "local_pivot": [
+                12.0,
+                0.0,
+                12.0
+              ],
+              "position": [
+                2.01,
+                1.0,
+                -1.0
+              ],
+              "rotation": [
+                0.0,
+                -135.0,
+                90.0
+              ],
+              "texture": "bow_pulling_2",
+              "scale": [
+                0.5,
+                0.5,
+                0.5
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

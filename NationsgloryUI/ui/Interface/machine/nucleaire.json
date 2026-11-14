@@ -151,7 +151,7 @@
                                                     "size":[3,"100%"]
                                                   }},
 
-                                                  {"amelioration@ng_asset.background_13":{
+                                                  {"amelioration@ng_module.panel":{
                                                       "size":["fill","100%"],
                                                       "controls":[
                                                               {"page1@nucleaire.page1":{}},
@@ -225,10 +225,12 @@
             ]}}
   ]},
 
-  // Page des reglages : ameliorations, informations, description (comme les autres machines)
+  // Page des reglages (engrenage), a la hauteur des autres machines : a gauche les ameliorations et la description ; a
+  // droite le bloc Informations (les lignes de la machine), puis la surchauffe et la consommation comme dans les
+  // reglages du petrolier (31/10, 20 h 18)
   "page1@ng_module.stackpanel":{
     "orientation":"horizontal",
-    "size":["100% - 8px","100% - 8px"],
+    "size":["100%","100%"],
     "bindings": [
       {
         "binding_type": "view",
@@ -238,10 +240,17 @@
       }
     ],
     "controls":[
+      {"background@ng_asset.background_13":{
+        "size":["100%","100%"],
+        "controls":[
+          {"page@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "size":["100% - 8px","100% - 8px"],
+            "controls":[
 
-            {"left_part@ng_module.stackpanel":{
-              "size":["50% - 2px","100%"],
-              "controls":[
+                  {"left_part@ng_module.stackpanel":{
+                    "size":["50% - 2px","100%"],
+                    "controls":[
 
                       {"header@ng_asset.background_12":{
                         "size": ["100%",15],
@@ -259,9 +268,8 @@
                       ]}},
 
                       {"content@ng_asset.background_11":{
-                        "size": ["100%",35],
+                        "size": ["100%",30],
                         "controls":[
-
                               {"content@ng_module.stackpanel":{
                                 "orientation":"horizontal",
                                 "collection_name": "container_items",
@@ -275,9 +283,28 @@
                               ]}}
                       ]}},
 
-                      {"padding@ng_module.panel":{
-                        "size":["100%",2]
-                      }},
+                      {"padding@ng_module.panel":{ "size":["100%",3] }},
+
+                      {"description@ng_module.panel":{
+                        "size":["100%","fill"],
+                        "controls":[
+                            {"text@ng_module.Simple_text": {
+                              "$type_get_text": "Get_text_type_1",
+                              "$index": 15,
+                              "layer":15,
+                              "$text_size":[104,44],
+                              "size":["100%c","100%"],
+                              "$font_scale_factor": 0.5,
+                              "$text_color": [0.624, 0.624, 0.663]
+                            }}
+                      ]}}
+                  ]}},
+
+                  {"padding@ng_module.panel":{ "size":[4,"100%"] }},
+
+                  {"info@ng_module.stackpanel":{
+                    "size":["fill","100%"],
+                    "controls":[
 
                       {"header@ng_asset.background_12":{
                         "size": ["100%",15],
@@ -294,85 +321,53 @@
                               }}
                       ]}},
 
-                      {"content@ng_asset.background_11":{
-                        "size": ["100%",25],
+                      {"rows@ng_asset.background_11":{
+                        "size": ["100%","fill"],
                         "controls":[
-
-                              {"content@ng_module.stackpanel":{
-                                  "size":["100% - 8px",20],
-                                  "controls":[
-
-                                      {"padding@ng_module.panel":{
-                                          "size":["100%",1]
-                                      }},
-
-                                      {"content@ng_module.stackpanel":{
-                                        "orientation":"horizontal",
-                                        "size":["100%",10],
-                                        "controls":[
-                                              {"text@ng_module.label":{
-                                                "text":"ng.nucleaire.heat",
-                                                "localize":true,
-                                                "font_scale_factor": 0.6
-                                              }},
-                                              {"padding@ng_module.panel":{
-                                                "size":["fill","100%"]
-                                              }},
-                                              {"heat_bar@ng_module.Simple_text": {
-                                                  "$type_get_text": "Get_text_type_1",
-                                                  "$index": 14,
-                                                  "layer":10,
-                                                  "size": ["100%c", "100%"],
-                                                  "$font_scale_factor": 0.6,
-                                                  "$text_offset": [0, -2]
-                                              }}
-                                      ]}},
-
-                                      {"content@ng_module.stackpanel":{
-                                        "orientation":"horizontal",
-                                        "size":["100%",10],
-                                        "controls":[
-                                                {"text@ng_module.label":{
-                                                  "text":"ng.nucleaire.consumption",
-                                                  "localize":true,
-                                                  "size":["default",10],
-                                                  "font_scale_factor": 0.6
-                                                }},
-                                                {"padding@ng_module.panel":{
-                                                  "size":["fill","100%"]
-                                                }},
-                                                {"consumption_label@ng_module.Simple_text": {
-                                                  "$type_get_text": "Get_text_type_1",
-                                                  "$index": 13,
-                                                  "layer":10,
-                                                  "size": ["100%c", "100%"],
-                                                  "$font_scale_factor": 0.6,
-                                                  "$text_offset": [0, -2]
-                                               }}
-                                      ]}}
+                            {"rows@ng_module.stackpanel":{
+                              "size":["100%","100% - 2px"],
+                              "controls":[
+                                  {"padding@ng_module.panel":{ "size":["100%",1] }},
+                                  {"row_0@nucleaire.row":{ "$label_index": 27, "$value_index": 35 }},
+                                  {"row_1@nucleaire.row":{ "$label_index": 28, "$value_index": 36 }},
+                                  {"row_2@nucleaire.row":{ "$label_index": 29, "$value_index": 37 }},
+                                  {"row_3@nucleaire.row":{ "$label_index": 30, "$value_index": 38 }},
+                                  {"row_4@nucleaire.row":{ "$label_index": 31, "$value_index": 39 }},
+                                  {"row_5@nucleaire.row":{ "$label_index": 32, "$value_index": 40 }},
+                                  {"row_6@nucleaire.row":{ "$label_index": 33, "$value_index": 41 }},
+                                  {"row_7@nucleaire.row":{ "$label_index": 34, "$value_index": 42 }},
+                                  {"heat@ng_module.stackpanel":{
+                                    "orientation":"horizontal",
+                                    "size":["100%",7.5],
+                                    "controls":[
+                                      {"padding@ng_module.panel":{ "size":[3,"100%"] }},
+                                      {"text@ng_module.label":{ "text":"ng.machine.overheat", "localize":true, "size":["default","100%"], "font_scale_factor":0.5, "color":[0.624, 0.624, 0.663], "offset":[0,-0.5] }},
+                                      {"padding@ng_module.panel":{ "size":["fill","100%"] }},
+                                      {"value@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 14, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.5, "$text_offset": [0, -0.5] }},
+                                      {"percent@ng_module.label":{ "text":"%", "localize":false, "size":["default","100%"], "font_scale_factor":0.5, "offset":[0,-0.5], "layer":10 }},
+                                      {"padding@ng_module.panel":{ "size":[3,"100%"] }}
+                                  ]}},
+                                  {"consumption@ng_module.stackpanel":{
+                                    "orientation":"horizontal",
+                                    "size":["100%",7.5],
+                                    "controls":[
+                                      {"padding@ng_module.panel":{ "size":[3,"100%"] }},
+                                      {"text@ng_module.label":{ "text":"ng.machine.consumption", "localize":true, "size":["default","100%"], "font_scale_factor":0.5, "color":[0.624, 0.624, 0.663], "offset":[0,-0.5] }},
+                                      {"padding@ng_module.panel":{ "size":["fill","100%"] }},
+                                      {"value@ng_module.Simple_text": { "$type_get_text": "Get_text_type_1", "$index": 13, "layer":10, "size": ["100%c", "100%"], "$font_scale_factor": 0.5, "$text_offset": [0, -0.5] }},
+                                      {"padding@ng_module.panel":{ "size":[3,"100%"] }}
+                                  ]}}
                               ]}}
-                      ]}}
-            ]}},
-
-            {"padding@ng_module.panel":{
-              "size":[4,"100%"]
-            }},
-
-            {"description@ng_module.Simple_text": {
-              "$type_get_text": "Get_text_type_1",
-              "$index": 15,
-              "layer":15,
-              "$text_size":[110,92],
-              "size":["100%c","100%"],
-              "$font_scale_factor": 0.6,
-              "$text_color": [0.624, 0.624, 0.663]
-            }}
+                        ]}}
+                  ]}}
+            ]}}
+        ]}}
   ]},
 
   // Une ligne du bloc d'informations : l'intitule a gauche (gris), la valeur a droite (prete, couleurs comprises)
   "row@ng_module.stackpanel": {
     "orientation":"horizontal",
-    "size":["100%",9.5],
+    "size":["100%",7.5],
     "controls":[
       {"padding@ng_module.panel":{ "size":[3,"100%"] }},
       {"label@ng_module.Simple_text": {
@@ -409,32 +404,54 @@
         "collection_name":"container_items",
         "size":["100%","100%"],
         "controls":[
-          {"ghost@nucleaire.ghost_item":{ "$index":"$ghost_index", "layer":2 }},
           {"slot@ng_module.custome_slot":{
             "$index":"$slot_index",
             "$offset_stack_count_label":[-1,-1],
             "$font_scale_factor_stack_count_label":0.9
-          }}
+          }},
+          {"ghost@nucleaire.ghost_item":{ "$index":"$ghost_index", "layer":10 }}
         ]
       }}
     ]
   },
 
-  // L'objet attendu d'une case vide : le serveur met un exemplaire de l'objet lui-meme dans le slot $index (rien quand
-  // la case est occupee), dessine en transparence par le rendu des objets du jeu, a la taille de l'objet de la case.
-  // Rien d'autre : ni fond, ni nombre, ni bouton (la case reelle, au-dessus pour la souris, garde les clics et le
-  // survol). Meme principe que l'apercu du compresseur electrique. L'ancien chemin d'icone lu dans le nom donnait le
-  // damier violet et noir de texture introuvable (essai du 17/10).
-  "ghost_item@ng_module.collectionpanel":{
-    "collection_name":"container_items",
+  // L'objet attendu d'une case vide : le serveur met dans la case fantome $index l'objet attendu, nomme de son
+  // identifiant (« ng:nuke »), et rien quand la case est occupee. L'image fixe et pale de cet objet se montre quand ce nom
+  // porte son identifiant. Ce panneau ne fait que choisir la case (collection_index) : la collection est celle de la
+  // case parente (meme montage que les silhouettes validees de l'Ecotron) ; avec collection_name ici aussi, les images
+  // ne lisaient pas leur case et la derniere (la cellule de tritium) se dessinait partout (31/10, 19 h 42).
+  "ghost_item@ng_module.panel":{
     "collection_index":"$index",
     "size":[16,16],
     "controls":[
-      {"item@common.item_renderer":{
-        "size":["100%","100%"],
-        "alpha":0.35,
-        "$item_collection_name":"container_items"
-      }}
+      {"missile@nucleaire.ghost_image":{ "$ghost_id":"ng:nuke", "$ghost_texture":"textures/recubeicbm/items/nuke" }},
+      {"u238@nucleaire.ghost_image":{ "$ghost_id":"ng:uranium_rode_238", "$ghost_texture":"textures/items/ng_uranium_rode_238" }},
+      {"u235@nucleaire.ghost_image":{ "$ghost_id":"ng:uranium_rode_235", "$ghost_texture":"textures/items/ng_uranium_rode_235" }},
+      {"mark_1@nucleaire.ghost_image":{ "$ghost_id":"ng:mark_1", "$ghost_texture":"textures/items/ng_mark_1" }},
+      {"mark_2@nucleaire.ghost_image":{ "$ghost_id":"ng:mark_2", "$ghost_texture":"textures/items/ng_mark_2" }},
+      {"mark_3@nucleaire.ghost_image":{ "$ghost_id":"ng:mark_3", "$ghost_texture":"textures/items/ng_mark_3" }},
+      {"dechets@nucleaire.ghost_image":{ "$ghost_id":"ng:nuclear_waste", "$ghost_texture":"textures/items/ng_nuclear_waste" }},
+      {"onyx@nucleaire.ghost_image":{ "$ghost_id":"ng:onyx_block", "$ghost_texture":"textures/blocks/ancien_ng/onyx_block" }},
+      {"cellule@nucleaire.ghost_image":{ "$ghost_id":"ng:tritium_cell", "$ghost_texture":"textures/recubeicbm/items/tritium_cell" }},
+      {"uranium_brut@nucleaire.ghost_image":{ "$ghost_id":"ng:uranium_brut", "$ghost_texture":"textures/items/uranium_brut" }},
+      {"poudre_235@nucleaire.ghost_image":{ "$ghost_id":"ng:powder_uranium_235", "$ghost_texture":"textures/items/ng_powder_uranium_235" }},
+      {"poudre_238@nucleaire.ghost_image":{ "$ghost_id":"ng:powder_uranium_238", "$ghost_texture":"textures/items/ng_powder_uranium_238" }},
+      {"purifiee_235@nucleaire.ghost_image":{ "$ghost_id":"ng:powder_purify_uranium_235", "$ghost_texture":"textures/items/ng_powder_purify_uranium_235" }},
+      {"purifiee_238@nucleaire.ghost_image":{ "$ghost_id":"ng:powder_purify_uranium_238", "$ghost_texture":"textures/items/ng_powder_purify_uranium_238" }},
+      {"yellow_cake_235@nucleaire.ghost_image":{ "$ghost_id":"ng:yellow_cake_uranium_235", "$ghost_texture":"textures/items/ng_yellow_cake_uranium_235" }},
+      {"yellow_cake_238@nucleaire.ghost_image":{ "$ghost_id":"ng:yellow_cake_uranium_238", "$ghost_texture":"textures/items/ng_yellow_cake_uranium_238" }}
+    ]
+  },
+
+  // L'image d'un objet attendu, montree quand le nom de la case fantome porte $ghost_id (et rien si la case est vide)
+  "ghost_image":{
+    "type":"image",
+    "size":["100%","100%"],
+    "texture":"$ghost_texture",
+    "alpha":0.4,
+    "bindings":[
+      {"binding_name":"#hover_text","binding_type":"collection","binding_collection_name":"container_items"},
+      {"binding_type":"view","source_property_name":"((not (#hover_text = '')) and (not ((#hover_text - $ghost_id) = #hover_text)))","target_property_name":"#visible"}
     ]
   },
 
@@ -459,11 +476,11 @@
     ]
   },
 
-  // Un bouton MARCHE ou ARRET : cache tant que son nom ne porte ni §0 ni §1 (la machine n'a pas d'interrupteur)
+  // Un bouton de l'interrupteur (ACTIVER ou DESACTIVER, comme le petrolier) : cache tant que son nom ne porte ni §0 ni §1
   "power@ng_module.conditional": {
     "collection_name":"container_items",
     "type":"panel",
-    "size":[44,14],
+    "size":[45,16],
     "bindings":[
       {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
       {"binding_type": "view", "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))", "target_property_name": "#visible"}
@@ -478,7 +495,7 @@
         "$S0_type_get_text": "Get_text_type_1",
         "$S1_type_get_text": "Get_text_type_1",
         "$font_type":"MinecraftTen",
-        "$font_scale_factor": 0.6,
+        "$font_scale_factor": 0.7,
         "$fonction_mapping_button_S0": "clickable",
         "$fonction_mapping_button_S1": "nonclickable",
         "$text_offset": [0, -1.3]
@@ -486,10 +503,159 @@
     ]
   },
 
-  // Page de la machine : a gauche l'etat, la barre, les cases et l'interrupteur ; a droite le bloc d'informations
+  // L'interrupteur ACTIVER / DESACTIVER du petrolier, au meme gabarit : cadre sombre background_23 a la taille des
+  // boutons (+ 6 px), boutons de 45 x 16, ACTIVER sur fond vert quand la machine tourne, DESACTIVER encadre quand elle
+  // est arretee (le bouton du chargeur, CHARGER, seul dans le cadre). Toute la ligne est cachee, sans place prise, pour
+  // une machine sans interrupteur (le slot 23 ne porte ni §0 ni §1).
+  "switch@ng_module.conditional": {
+    "type":"stack_panel",
+    "size":["100%","100%c"],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '§0' - '§1') = #hover_text))", "target_property_name": "#visible"}
+    ],
+    "controls":[
+      {"center@ng_module.panel":{
+        "size":["100%","100%c"],
+        "controls":[
+          {"background_button@ng_asset.background_23":{
+            "size":["100%c + 6px","100%c + 6px"],
+            "controls":[
+              {"button@ng_module.stackpanel":{
+                "orientation":"horizontal",
+                "collection_name": "container_items",
+                "size":["100%c","100%cm"],
+                "controls":[
+                  {"on@nucleaire.power":{
+                    "collection_index": 23,
+                    "$button_index": 23,
+                    "$current_texture": "ng_asset.button_activated"
+                  }},
+                  {"off@nucleaire.power":{
+                    "collection_index": 24,
+                    "$button_index": 24,
+                    "$current_texture": "ng_asset.button_07"
+                  }}
+              ]}}
+          ]}}
+      ]}},
+      {"padding@ng_module.panel":{ "size":["100%",5] }}
+    ]
+  },
+
+  // La barre d'avancement (dechets, charge, synthese...) et son texte : cachee, sans place prise, quand le texte (slot
+  // 26) vaut « false » (le reacteur : sa surchauffe est sur la barre de chaleur verticale)
+  "bar_block@ng_module.conditional": {
+    "type":"stack_panel",
+    "size":["100%","100%c"],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "((#hover_text - 'false') = #hover_text)", "target_property_name": "#visible"}
+    ],
+    "controls":[
+      {"bar_label_row@ng_module.panel":{
+        "size":["100%",8],
+        "controls":[
+          {"bar_label@ng_module.Simple_text": {
+            "$type_get_text": "Get_text_type_1",
+            "$index": 26,
+            "layer":10,
+            "size": ["100%c", "100%"],
+            "$font_scale_factor": 0.55,
+            "$text_color": [0.910, 0.725, 0.192],
+            "$text_offset": [0, -1]
+          }}
+      ]}},
+      {"bar_row@ng_module.panel":{
+        "size":["100%",6],
+        "controls":[
+          {"loading_bar@ng_module.loading_bar": {
+            "size": [160,5],
+            "layer": 5,
+            "$index": 25,
+            "$load_bar_size":["100% - 2px",3],
+            "$orientation": "horizontal",
+            "$color_border": [0.910, 0.725, 0.192],
+            "$layer_percent": 3,
+            "$texture_background_bar":"ng_asset.background_02",
+            "$texture_background_top": "textures/ui/background/background_white"
+          }}
+      ]}},
+      {"padding@ng_module.panel":{ "size":["100%",4] }}
+    ]
+  },
+
+  // La ligne des cases : cachee, sans place prise, quand la machine n'en a pas (slot 45 a 0). Le parent direct d'une
+  // case conditionnelle doit nommer la collection, sinon sa condition ne lit rien.
+  // La fleche entre l'entree et les sorties (slot 51 a 1), l'icone de l'imprimante ; l'ecart quand il n'y en a pas
+  "fleche@ng_module.conditional": {
+    "type":"panel",
+    "size":[34,21],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '1') = #hover_text))", "target_property_name": "#visible"}
+    ],
+    "controls":[
+      {"icon@ng_asset.icon_13":{ "size":[15,15], "color":[0.322, 0.322, 0.361] }}
+    ]
+  },
+  "ecart_sans_fleche@ng_module.conditional": {
+    "type":"panel",
+    "size":[6,21],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "((#hover_text - '1') = #hover_text)", "target_property_name": "#visible"}
+    ]
+  },
+
+  "slots_row@ng_module.conditional": {
+    "type":"stack_panel",
+    "size":["100%","100%c"],
+    "bindings":[
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not ((#hover_text - '1' - '2' - '3') = #hover_text))", "target_property_name": "#visible"}
+    ],
+    "controls":[
+      {"row@ng_module.panel":{
+        "size":["100%",21],
+        "controls":[
+          {"slots@ng_module.stackpanel":{
+            "orientation":"horizontal",
+            "size":["100%c",21],
+            "collection_name":"container_items",
+            "controls":[
+                {"slot_0@nucleaire.slot_first":{
+                  "collection_index": 45,
+                  "$slot_index": 43,
+                  "$ghost_index": 46
+                }},
+                // Comme l'imprimante : l'entree, la fleche, puis les sorties cote a cote (slot 51 a 1) ; sans fleche,
+                // un simple ecart entre les cases (retour de Leo du 01/11, 10 h 28)
+                {"fleche@nucleaire.fleche":{ "collection_index": 51 }},
+                {"ecart@nucleaire.ecart_sans_fleche":{ "collection_index": 51 }},
+                {"slot_1@nucleaire.slot_second":{
+                  "collection_index": 45,
+                  "$slot_index": 44,
+                  "$ghost_index": 47
+                }},
+                {"padding@ng_module.panel":{ "size":[2,"100%"] }},
+                {"slot_2@nucleaire.slot_third":{
+                  "collection_index": 45,
+                  "$slot_index": 49,
+                  "$ghost_index": 50
+                }}
+            ]}}
+      ]}},
+      {"padding@ng_module.panel":{ "size":["100%",3] }}
+    ]
+  },
+
+  // Page d'accueil au gabarit du petrolier : une colonne centree dans le fond sombre et, a droite, la barre de chaleur
+  // verticale a thermometre (slot 14 : la surchauffe du reacteur, comme la chaleur des autres machines). Dans la
+  // colonne, l'interrupteur, la barre d'avancement et les cases sont des panneaux conditionnels enfants directs de la
+  // pile : caches, ils ne prennent pas de place (31/10, 20 h 18).
   "page2@ng_module.stackpanel":{
-    "orientation":"horizontal",
-    "size":["100% - 8px","100% - 8px"],
+    "size":["100%","100%"],
     "bindings": [
       {
         "binding_type": "view",
@@ -499,152 +665,94 @@
       }
     ],
     "controls":[
+      {"content@ng_module.panel":{
+        "size":["100%","100%"],
+        "controls":[
+          {"stackpanel@ng_module.stackpanel":{
+            "size":["100%","100%"],
+            "orientation":"horizontal",
+            "controls":[
 
-            {"left@ng_module.stackpanel":{
-              "size":[96,"100%"],
-              "collection_name":"container_items",
-              "controls":[
-
-                  {"state@ng_module.Simple_text": {
-                    "$type_get_text": "Get_text_type_1",
-                    "$index": 22,
-                    "layer":10,
-                    "size": ["100%", 10],
-                    "$font_type":"MinecraftTen",
-                    "$font_scale_factor": 0.65,
-                    "$text_offset": [0, -1]
-                  }},
-
-                  {"bar_label@ng_module.Simple_text": {
-                    "$type_get_text": "Get_text_type_1",
-                    "$index": 26,
-                    "layer":10,
-                    "size": ["100%", 7],
-                    "$font_scale_factor": 0.5,
-                    "$text_color": [0.910, 0.725, 0.192],
-                    "$text_offset": [0, -1]
-                  }},
-
-                  {"loading_bar@ng_module.loading_bar": {
-                    "size": ["100%",6],
-                    "layer": 5,
-                    "$index": 25,
-                    "$load_bar_size":["100% - 2px",4],
-                    "$orientation": "horizontal",
-                    "$color_border": [0.910, 0.725, 0.192],
-                    "$layer_percent": 3,
-                    "$texture_background_bar":"ng_asset.background_02",
-                    "$texture_background_top": "textures/ui/background/background_white"
-                  }},
-
-                  {"padding@ng_module.panel":{ "size":["100%",5] }},
-
-                  // Le parent direct d'une case conditionnelle doit nommer la collection, sinon sa condition ne lit rien
-                  // et la case reste cachee (meme regle que list_craft du compresseur et content de la citerne)
-                  {"slots@ng_module.stackpanel":{
-                    "orientation":"horizontal",
-                    "size":["100%",21],
+              {"background@ng_asset.background_13":{
+                "size":["100% - 10px","100%"],
+                "controls":[
+                  {"column@ng_module.stackpanel":{
+                    "size":[200,"100%c"],
                     "collection_name":"container_items",
                     "controls":[
-                        {"slot_0@nucleaire.slot_first":{
-                          "collection_index": 45,
-                          "$slot_index": 43,
-                          "$ghost_index": 46
-                        }},
-                        {"padding@ng_module.panel":{ "size":[3,"100%"] }},
-                        {"slot_1@nucleaire.slot_second":{
-                          "collection_index": 45,
-                          "$slot_index": 44,
-                          "$ghost_index": 47
-                        }},
-                        {"padding@ng_module.panel":{ "size":[3,"100%"] }},
-                        {"slot_2@nucleaire.slot_third":{
-                          "collection_index": 45,
-                          "$slot_index": 49,
-                          "$ghost_index": 50
-                        }}
-                    ]}},
 
-                  {"caption@ng_module.Simple_text": {
-                    "$type_get_text": "Get_text_type_1",
-                    "$index": 48,
-                    "layer":10,
-                    "size": ["100%", 8],
-                    "$font_scale_factor": 0.45,
-                    "$text_offset": [0, 0]
-                  }},
+                      {"switch@nucleaire.switch":{ "collection_index": 23 }},
 
-                  {"padding@ng_module.panel":{ "size":["100%","fill"] }},
+                      {"state_row@ng_module.panel":{
+                        "size":["100%",11],
+                        "controls":[
+                          {"state@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 22,
+                            "layer":10,
+                            "size": ["100%c", "100%"],
+                            "$max_size": [196, 11],
+                            "$font_type":"MinecraftTen",
+                            "$font_scale_factor": 0.7,
+                            "$text_offset": [0, -1]
+                          }}
+                      ]}},
 
-                  {"buttons@ng_module.stackpanel":{
-                    "orientation":"horizontal",
-                    "size":["100%",14],
-                    "collection_name":"container_items",
-                    "controls":[
-                        {"on@nucleaire.power":{
-                          "collection_index": 23,
-                          "$button_index": 23,
-                          "$current_texture": "ng_asset.button_activated"
-                        }},
-                        {"padding@ng_module.panel":{ "size":[4,"100%"] }},
-                        {"off@nucleaire.power":{
-                          "collection_index": 24,
-                          "$button_index": 24,
-                          "$current_texture": "ng_asset.button_07"
-                        }}
-                    ]}}
+                      {"padding@ng_module.panel":{ "size":["100%",2] }},
+
+                      {"bar@nucleaire.bar_block":{ "collection_index": 26 }},
+
+                      {"slots@nucleaire.slots_row":{ "collection_index": 45 }},
+
+                      {"caption_row@ng_module.panel":{
+                        "size":["100%",12],
+                        "controls":[
+                          {"caption@ng_module.Simple_text": {
+                            "$type_get_text": "Get_text_type_1",
+                            "$index": 48,
+                            "layer":10,
+                            "size": ["100%c", "100%"],
+                            "$max_size": [196, 12],
+                            "$font_scale_factor": 0.5,
+                            "$text_offset": [0, 0]
+                          }}
+                      ]}}
+                  ]}}
               ]}},
 
-            {"padding@ng_module.panel":{
-              "size":[5,"100%"]
-            }},
+              {"padding@ng_module.panel": {
+                "size": [1, "100%"]
+              }},
 
-            {"info@ng_module.stackpanel":{
-              "size":["fill","100%"],
-              "controls":[
-
-                  {"header@ng_asset.background_12":{
-                    "size": ["100%",12],
+              {"background_icon@ng_asset.background_white":{
+                "size":[9,"100%"],
+                "color":[0.094, 0.094, 0.106],
+                "controls":[
+                  {"stackpanel@ng_module.stackpanel":{
+                    "size":["100% - 2px","100% - 2px"],
                     "controls":[
-                        {"stack_panel@ng_module.stackpanel":{
-                          "orientation":"horizontal",
-                          "size":["100% - 2px","100% - 2px"],
-                          "controls":[
-                              {"padding@ng_module.panel":{ "size":[4,"100%"] }},
-                              {"centring@ng_module.panel":{
-                                "size":["100%c","100%"],
-                                "controls":[
-                                    {"title":{
-                                      "type":"label",
-                                      "font_scale_factor":0.6,
-                                      "layer":10,
-                                      "offset":[0,-0.6],
-                                      "color":[0.624, 0.624, 0.663],
-                                      "font_type":"MinecraftTen",
-                                      "localize":true,
-                                      "text":"ng.nucleaire.information"
-                                    }}
-                              ]}}
-                          ]}}
-                  ]}},
-
-                  {"rows@ng_asset.background_11":{
-                    "size": ["100%","fill"],
-                    "controls":[
-                        {"rows@ng_module.stackpanel":{
-                          "size":["100%","100% - 2px"],
-                          "controls":[
-                              {"padding@ng_module.panel":{ "size":["100%",1] }},
-                              {"row_0@nucleaire.row":{ "$label_index": 27, "$value_index": 35 }},
-                              {"row_1@nucleaire.row":{ "$label_index": 28, "$value_index": 36 }},
-                              {"row_2@nucleaire.row":{ "$label_index": 29, "$value_index": 37 }},
-                              {"row_3@nucleaire.row":{ "$label_index": 30, "$value_index": 38 }},
-                              {"row_4@nucleaire.row":{ "$label_index": 31, "$value_index": 39 }},
-                              {"row_5@nucleaire.row":{ "$label_index": 32, "$value_index": 40 }},
-                              {"row_6@nucleaire.row":{ "$label_index": 33, "$value_index": 41 }},
-                              {"row_7@nucleaire.row":{ "$label_index": 34, "$value_index": 42 }}
-                          ]}}
+                      {"loading_bar@ng_module.loading_bar": {
+                        "size": ["100%","100% - 8px"],
+                        "layer": 5,
+                        "$index": 14,
+                        "$load_bar_size":["100%","100%"],
+                        "$orientation": "vertical",
+                        "$color_border": [1.000, 0.122, 0.294],
+                        "$color_border_empty":[0.188, 0.004, 0.059],
+                        "$layer_percent": 3,
+                        "$texture_background_bar":"ng_asset.background_white",
+                        "$texture_background_top": "textures/ui/background/background_white"
+                      }},
+                      {"padding@ng_module.panel": {
+                        "size": ["100%", 0.6]
+                      }},
+                      {"icon@ng_asset.icon_15":{
+                        "size":["100%",8],
+                        "color":[1.000, 0.122, 0.294]
+                      }}
                   ]}}
               ]}}
-    ]}
+          ]}}
+      ]}}
+  ]}
 }

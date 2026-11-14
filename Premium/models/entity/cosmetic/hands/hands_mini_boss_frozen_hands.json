@@ -1,0 +1,757 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.cosmetic.hands.hands_mini_boss_frozen_hands",
+        "texture_width": 128,
+        "texture_height": 128,
+        "visible_bounds_width": 2.61,
+        "visible_bounds_height": 2.33,
+        "visible_bounds_offset": [
+          0,
+          1.0,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "pivot": [
+            0,
+            12,
+            0
+          ],
+          "parent": "root"
+        },
+        {
+          "name": "body",
+          "pivot": [
+            0,
+            24,
+            0
+          ],
+          "parent": "waist"
+        },
+        {
+          "name": "leftArm",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "leftSleeve",
+          "pivot": [
+            5,
+            22,
+            0
+          ],
+          "parent": "leftArm"
+        },
+        {
+          "name": "rightArm",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "parent": "body"
+        },
+        {
+          "name": "rightSleeve",
+          "pivot": [
+            -5,
+            22,
+            0
+          ],
+          "parent": "rightArm"
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow2",
+          "parent": "leftSleeve",
+          "pivot": [
+            8,
+            14,
+            2.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4,
+                12,
+                -2.5
+              ],
+              "size": [
+                4,
+                12,
+                4
+              ],
+              "inflate": 0.25,
+              "uv": [
+                35,
+                76
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm3",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow2",
+          "pivot": [
+            8,
+            14,
+            -0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8,
+                12,
+                -2
+              ],
+              "size": [
+                4,
+                3,
+                0
+              ],
+              "pivot": [
+                8,
+                14,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                90
+              ],
+              "uv": [
+                46,
+                67
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm4",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow2",
+          "pivot": [
+            8,
+            14,
+            1
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8,
+                12,
+                -0.5
+              ],
+              "size": [
+                4,
+                3,
+                0
+              ],
+              "pivot": [
+                8,
+                14,
+                1
+              ],
+              "rotation": [
+                0,
+                0,
+                90
+              ],
+              "uv": [
+                46,
+                67
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.cosme_arm5",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow2",
+          "pivot": [
+            8,
+            14,
+            2.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                8,
+                12,
+                1
+              ],
+              "size": [
+                4,
+                3,
+                0
+              ],
+              "pivot": [
+                8,
+                14,
+                2.5
+              ],
+              "rotation": [
+                0,
+                0,
+                90
+              ],
+              "uv": [
+                46,
+                67
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.left_shouder",
+          "parent": "leftSleeve",
+          "pivot": [
+            4.204,
+            24.09216,
+            6.98062
+          ],
+          "rotation": [
+            0,
+            0,
+            -2.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.3,
+                20.7,
+                -3
+              ],
+              "size": [
+                7,
+                5,
+                6
+              ],
+              "pivot": [
+                6.8,
+                22.2,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -10
+              ],
+              "uv": [
+                0,
+                65
+              ]
+            },
+            {
+              "origin": [
+                3.3,
+                19.7,
+                -4
+              ],
+              "size": [
+                3,
+                7,
+                8
+              ],
+              "pivot": [
+                6.8,
+                22.2,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -10
+              ],
+              "uv": [
+                0,
+                77
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow3",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.left_shouder",
+          "pivot": [
+            12.65395,
+            25.29833,
+            0.5
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.left_shouder2",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow3",
+          "pivot": [
+            12.65395,
+            25.29833,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                12.55482,
+                24.62155,
+                -1.07513
+              ],
+              "size": [
+                2.925,
+                3,
+                2.9
+              ],
+              "pivot": [
+                14.07982,
+                26.12155,
+                0.97487
+              ],
+              "rotation": [
+                0,
+                -45,
+                -30
+              ],
+              "uv": [
+                21,
+                65
+              ]
+            },
+            {
+              "origin": [
+                7.65395,
+                23.79833,
+                -1.5
+              ],
+              "size": [
+                7,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "pivot": [
+                12.65395,
+                25.29833,
+                0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                -30
+              ],
+              "uv": [
+                27,
+                67
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.body5",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow3",
+          "pivot": [
+            8.48238,
+            22.88412,
+            -0.67157
+          ],
+          "rotation": [
+            -35.26439,
+            30,
+            -54.73561
+          ],
+          "cubes": [
+            {
+              "origin": [
+                12.33243,
+                21.37795,
+                -1.62719
+              ],
+              "size": [
+                2.9,
+                3,
+                2.9
+              ],
+              "pivot": [
+                13.03243,
+                22.67795,
+                -0.15219
+              ],
+              "rotation": [
+                0,
+                45,
+                0
+              ],
+              "uv": [
+                21,
+                65
+              ]
+            },
+            {
+              "origin": [
+                8.48238,
+                21.38412,
+                -2.67157
+              ],
+              "size": [
+                5,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "uv": [
+                15,
+                77
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.left.body6",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.left.glow3",
+          "pivot": [
+            8.48238,
+            22.88412,
+            0.67157
+          ],
+          "rotation": [
+            35.26439,
+            -30,
+            -54.73561
+          ],
+          "cubes": [
+            {
+              "origin": [
+                12.33243,
+                21.37795,
+                -1.27281
+              ],
+              "size": [
+                2.9,
+                3,
+                2.9
+              ],
+              "pivot": [
+                13.03243,
+                22.67795,
+                0.15219
+              ],
+              "rotation": [
+                0,
+                -45,
+                0
+              ],
+              "uv": [
+                21,
+                65
+              ]
+            },
+            {
+              "origin": [
+                8.48238,
+                21.38412,
+                -1.32843
+              ],
+              "size": [
+                5,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "uv": [
+                15,
+                77
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.cosme_arm2",
+          "parent": "rightSleeve",
+          "pivot": [
+            -5.204,
+            24.09216,
+            6.98062
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.right_shouder",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.right.cosme_arm2",
+          "pivot": [
+            -4.204,
+            24.09216,
+            6.98062
+          ],
+          "rotation": [
+            0,
+            0,
+            2.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -11.3,
+                20.7,
+                -3
+              ],
+              "size": [
+                7,
+                5,
+                6
+              ],
+              "pivot": [
+                -6.8,
+                22.2,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                10
+              ],
+              "uv": [
+                0,
+                65
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -6.3,
+                19.7,
+                -4
+              ],
+              "size": [
+                3,
+                7,
+                8
+              ],
+              "pivot": [
+                -6.8,
+                22.2,
+                -0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                10
+              ],
+              "uv": [
+                0,
+                77
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.glow6",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.right.right_shouder",
+          "pivot": [
+            -12.65395,
+            25.29833,
+            0.5
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.right_shouder2",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.right.glow6",
+          "pivot": [
+            -12.65395,
+            25.29833,
+            0.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -15.47982,
+                24.62155,
+                -1.07513
+              ],
+              "size": [
+                2.925,
+                3,
+                2.9
+              ],
+              "pivot": [
+                -14.07982,
+                26.12155,
+                0.97487
+              ],
+              "rotation": [
+                0,
+                45,
+                30
+              ],
+              "uv": [
+                21,
+                65
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -14.65395,
+                23.79833,
+                -1.5
+              ],
+              "size": [
+                7,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "pivot": [
+                -12.65395,
+                25.29833,
+                0.5
+              ],
+              "rotation": [
+                0,
+                0,
+                30
+              ],
+              "uv": [
+                27,
+                67
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.body2",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.right.glow6",
+          "pivot": [
+            -8.48238,
+            22.88412,
+            -0.67157
+          ],
+          "rotation": [
+            -35.26439,
+            -30,
+            54.73561
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -15.23243,
+                21.37795,
+                -1.62719
+              ],
+              "size": [
+                2.9,
+                3,
+                2.9
+              ],
+              "pivot": [
+                -13.03243,
+                22.67795,
+                -0.15219
+              ],
+              "rotation": [
+                0,
+                -45,
+                0
+              ],
+              "uv": [
+                21,
+                65
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -13.48238,
+                21.38412,
+                -2.67157
+              ],
+              "size": [
+                5,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "uv": [
+                15,
+                77
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "cosmetic.hands.hands_mini_boss_frozen_hands.right.body3",
+          "parent": "cosmetic.hands.hands_mini_boss_frozen_hands.right.glow6",
+          "pivot": [
+            -8.48238,
+            22.88412,
+            0.67157
+          ],
+          "rotation": [
+            35.26439,
+            30,
+            54.73561
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -15.23243,
+                21.37795,
+                -1.27281
+              ],
+              "size": [
+                2.9,
+                3,
+                2.9
+              ],
+              "pivot": [
+                -13.03243,
+                22.67795,
+                0.15219
+              ],
+              "rotation": [
+                0,
+                45,
+                0
+              ],
+              "uv": [
+                21,
+                65
+              ],
+              "mirror": true
+            },
+            {
+              "origin": [
+                -13.48238,
+                21.38412,
+                -1.32843
+              ],
+              "size": [
+                5,
+                3,
+                4
+              ],
+              "inflate": 0.05,
+              "uv": [
+                15,
+                77
+              ],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

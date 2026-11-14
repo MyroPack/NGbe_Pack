@@ -1164,15 +1164,15 @@
         }
       },
       {
-        "gem@ng_boutique_asset.rarity_gem": {
+        "gem@ng_boutique_asset.rarity_gem_large": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            219.84,
+            213.6,
             5.73
           ],
           "size": [
-            18.46,
+            24.7,
             24.7
           ],
           "$index": 23,
@@ -2461,15 +2461,15 @@
         }
       },
       {
-        "gem@ng_boutique_asset.rarity_gem": {
+        "gem@ng_boutique_asset.rarity_gem_large": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            111.34,
+            105.1,
             5.73
           ],
           "size": [
-            18.46,
+            24.7,
             24.7
           ],
           "$index": 28,

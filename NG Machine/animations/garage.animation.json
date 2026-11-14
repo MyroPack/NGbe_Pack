@@ -1,0 +1,123 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ng_garage.close": {
+      "loop": true,
+      "bones": {
+        "shadow": {
+          "position": [
+            0,
+            -2,
+            0
+          ],
+          "scale": 0
+        }
+      }
+    },
+    "animation.ng_garage.open": {
+      "loop": true,
+      "bones": {
+        "shadow": {
+          "scale": 1
+        },
+        "door2": {
+          "position": [
+            0,
+            36,
+            0
+          ]
+        }
+      }
+    },
+    "animation.ng_garage.close_to_open": {
+      "animation_length": 1,
+      "bones": {
+        "shadow": {
+          "position": {
+            "0.0": [
+              0,
+              -1,
+              0
+            ],
+            "0.0417": [
+              0,
+              0,
+              0
+            ]
+          },
+          "scale": {
+            "0.0": [
+              1,
+              0,
+              1
+            ],
+            "1.0": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "door2": {
+          "position": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "1.0": [
+              0,
+              36,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "animation.ng_garage.open_to_close": {
+      "animation_length": 1,
+      "bones": {
+        "shadow": {
+          "position": {
+            "0.9583": [
+              0,
+              0,
+              0
+            ],
+            "1.0": [
+              0,
+              -1,
+              0
+            ]
+          },
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "1.0": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        "door2": {
+          "position": {
+            "0.0": [
+              0,
+              36,
+              0
+            ],
+            "1.0": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}

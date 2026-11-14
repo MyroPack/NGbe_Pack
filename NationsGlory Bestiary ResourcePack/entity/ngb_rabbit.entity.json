@@ -23,8 +23,15 @@
         "look": "animation.ng.rabbit.look"
       },
       "scripts": {
+        "initialize": [
+          "variable.ngb_moving = 0.0;",
+          "variable.ngb_look_x = 0.0;",
+          "variable.ngb_look_y = 0.0;"
+        ],
         "pre_animation": [
-          "variable.ngb_moving = query.modified_move_speed > 0.05 || math.abs(query.vertical_speed) > 0.05;"
+          "variable.ngb_moving = variable.ngb_moving ? query.modified_move_speed > 0.02 : query.modified_move_speed > 0.05;",
+          "variable.ngb_look_x = variable.ngb_look_x + (math.clamp(query.target_x_rotation, -30, 30) - variable.ngb_look_x) * math.min(1, query.delta_time * 6);",
+          "variable.ngb_look_y = variable.ngb_look_y + (math.clamp(query.target_y_rotation, -55, 55) - variable.ngb_look_y) * math.min(1, query.delta_time * 6);"
         ],
         "animate": [
           "controller",

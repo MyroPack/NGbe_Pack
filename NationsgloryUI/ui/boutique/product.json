@@ -300,15 +300,15 @@
         }
       },
       {
-        "gem@ng_boutique_asset.rarity_gem": {
+        "gem@ng_boutique_asset.rarity_gem_large": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "offset": [
-            144.38,
+            139.22,
             72.19
           ],
           "size": [
-            15.31,
+            20.47,
             20.47
           ],
           "$index": 27,
@@ -446,6 +446,464 @@
           ],
           "$index": 29,
           "layer": 20
+        }
+      },
+      {
+        "preview_title@ng_boutique_asset.slot_text": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            184.41,
+            103.47
+          ],
+          "size": [
+            225.31,
+            16.0
+          ],
+          "$index": 31,
+          "$font_scale": 0.5,
+          "$text_color": [
+            0.694,
+            0.71,
+            0.737
+          ],
+          "$text_getter": "get_text_raw",
+          "$label_anchor": "top_left",
+          "layer": 20,
+          "$font_type": "default"
+        }
+      },
+      {
+        "preview_cell_0@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            184.41,
+            121.0
+          ],
+          "$rarity": 35,
+          "$item": 36,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_1@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            212.41,
+            121.0
+          ],
+          "$rarity": 37,
+          "$item": 38,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_2@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            240.41,
+            121.0
+          ],
+          "$rarity": 39,
+          "$item": 40,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_3@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            268.41,
+            121.0
+          ],
+          "$rarity": 41,
+          "$item": 42,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_4@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            296.41,
+            121.0
+          ],
+          "$rarity": 43,
+          "$item": 44,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_5@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            324.41,
+            121.0
+          ],
+          "$rarity": 45,
+          "$item": 46,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_6@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            352.41,
+            121.0
+          ],
+          "$rarity": 47,
+          "$item": 48,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_7@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            380.41,
+            121.0
+          ],
+          "$rarity": 49,
+          "$item": 50,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_8@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            184.41,
+            149.0
+          ],
+          "$rarity": 51,
+          "$item": 52,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_9@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            212.41,
+            149.0
+          ],
+          "$rarity": 53,
+          "$item": 54,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_10@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            240.41,
+            149.0
+          ],
+          "$rarity": 55,
+          "$item": 56,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_11@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            268.41,
+            149.0
+          ],
+          "$rarity": 57,
+          "$item": 58,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_12@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            296.41,
+            149.0
+          ],
+          "$rarity": 59,
+          "$item": 60,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_13@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            324.41,
+            149.0
+          ],
+          "$rarity": 61,
+          "$item": 62,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_14@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            352.41,
+            149.0
+          ],
+          "$rarity": 63,
+          "$item": 64,
+          "layer": 20
+        }
+      },
+      {
+        "preview_cell_15@ng_boutique_product.preview_cell": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            380.41,
+            149.0
+          ],
+          "$rarity": 65,
+          "$item": 66,
+          "layer": 20
+        }
+      },
+      {
+        "preview_pages@ng_boutique_asset.has_value": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            184.41,
+            179.0
+          ],
+          "size": [
+            80,
+            10
+          ],
+          "$index": 34,
+          "$content": "ng_boutique_product.preview_pages_content",
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "preview_cell_content": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$rarity|default": 0,
+    "$item|default": 0,
+    "controls": [
+      {
+        "card@ng_boutique_asset.card": {
+          "size": [
+            25,
+            25
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "item": {
+          "type": "panel",
+          "size": [
+            19,
+            19
+          ],
+          "layer": 2,
+          "controls": [
+            {
+              "item@ng_pala_gui.locked_item_with_data": {
+                "$index": "$item",
+                "size": [
+                  19,
+                  19
+                ],
+                "$size": [
+                  19,
+                  19
+                ],
+                "$size_container": [
+                  19,
+                  19
+                ],
+                "$cell_image_size": [
+                  19,
+                  19
+                ],
+                "$item_renderer_panel_size": [
+                  19,
+                  19
+                ],
+                "$item_renderer_size": [
+                  16,
+                  16
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "crystal@ng_premium_lootbox.rarity_crystal": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            19,
+            1
+          ],
+          "size": [
+            6,
+            6
+          ],
+          "$index": "$rarity",
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "preview_cell": {
+    "type": "panel",
+    "size": [
+      27,
+      27
+    ],
+    "$rarity|default": 0,
+    "$item|default": 0,
+    "controls": [
+      {
+        "cell@ng_boutique_asset.has_value": {
+          "$index": "$rarity",
+          "$content": "ng_boutique_product.preview_cell_content"
+        }
+      }
+    ]
+  },
+  "preview_pages_content": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "row@ng_module.stackpanel": {
+          "size": [
+            "100%c",
+            10
+          ],
+          "orientation": "horizontal",
+          "controls": [
+            {
+              "previous@ng_module.panel": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "button@ng_module.Simple_Button": {
+                      "size": [
+                        10,
+                        10
+                      ],
+                      "offset": [
+                        0,
+                        0.6
+                      ],
+                      "$index": 32,
+                      "$icon_right_offset": [
+                        -0.3,
+                        0
+                      ],
+                      "$size_icone_right": [
+                        7,
+                        7
+                      ],
+                      "$texture_icone_right": "ng_asset.icon_34",
+                      "$texture_button": "ng_asset.button_18"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label@ng_module.panel": {
+                "size": [
+                  "100%c + 6px",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "text@ng_module.Simple_text": {
+                      "$type_get_text": "Get_text_type_1",
+                      "$index": 34,
+                      "offset": [
+                        0,
+                        0.8
+                      ],
+                      "size": [
+                        "100%c",
+                        "100%"
+                      ],
+                      "$font_scale_factor": 0.7
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "next@ng_module.panel": {
+                "type": "panel",
+                "size": [
+                  "100%c",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "button@ng_module.Simple_Button": {
+                      "size": [
+                        10,
+                        10
+                      ],
+                      "offset": [
+                        0,
+                        0.6
+                      ],
+                      "$index": 33,
+                      "$icon_right_offset": [
+                        0.3,
+                        0
+                      ],
+                      "$size_icone_right": [
+                        7,
+                        7
+                      ],
+                      "$texture_icone_right": "ng_asset.icon_35",
+                      "$texture_button": "ng_asset.button_18"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     ]

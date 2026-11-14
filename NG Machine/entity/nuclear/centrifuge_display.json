@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ng:centrifuge_display",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nuclear/centrifuge_off",
+        "on": "textures/entity/nuclear/centrifuge_on"
+      },
+      "geometry": {
+        "default": "geometry.ng_uranium_extractor"
+      },
+      "render_controllers": [
+        "controller.render.ng_nuclear_onoff"
+      ]
+    }
+  }
+}

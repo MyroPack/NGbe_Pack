@@ -28,13 +28,13 @@
 					]
 				},
 				{
-					"name": "bone",
+					"name": "adventurer_helmet_bone",
 					"parent": "head",
 					"pivot": [-1.5, 2.5, -1.5]
 				},
 				{
 					"name": "eye_scan",
-					"parent": "bone",
+					"parent": "adventurer_helmet_bone",
 					"pivot": [-1.1, 1.75, -2.65],
 					"cubes": [
 						{"origin": [-6.1, 22.75, -6.65], "size": [5, 11, 4], "inflate": 0.25, "uv": [48, 49]},
@@ -57,7 +57,7 @@
 				},
 				{
 					"name": "hat",
-					"parent": "bone",
+					"parent": "adventurer_helmet_bone",
 					"pivot": [3.475, 31.7, 3.575],
 					"rotation": [-22.5, 0, 25],
 					"cubes": [

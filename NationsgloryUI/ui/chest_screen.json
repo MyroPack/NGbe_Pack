@@ -182,6 +182,16 @@
             "$focus_leurre_contenu": "tannage.main_panel"
           },
           {
+            "requires": "($new_container_title = 'ng:moulin')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "moulin.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:silo')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "silo.main_panel"
+          },
+          {
             "requires": "($new_container_title = 'ng:workstations')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "workstations.main_panel"
@@ -226,6 +236,16 @@
             "$focus_leurre_contenu": "punisher_ng.main_panel"
           },
           {
+            "requires": "($new_container_title = 'ng:warzone')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_warzone.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'paladium:leaderboard')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_leaderboard.main_panel"
+          },
+          {
             "requires": "($new_container_title = 'ng:annuaire_lobby')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "annuaire_lobby.main_panel"
@@ -244,6 +264,11 @@
             "$focus_leurre_contenu": "ngphone.main_panel"
           },
           {
+            "requires": "($new_container_title = 'ng:admin')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "admin_ng.main_panel"
+          },
+          {
             "requires": "($new_container_title = 'ng:pays')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "pays.main_panel"
@@ -254,9 +279,19 @@
             "$focus_leurre_contenu": "pays_fondation.main_panel"
           },
           {
+            "requires": "($new_container_title = 'ng:recap_assaut')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "recap_assaut.main_panel"
+          },
+          {
             "requires": "($new_container_title = 'ng:bestiaire')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "ngbestiary.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:succes')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ngsucces.main_panel"
           },
           {
             "requires": "($new_container_title = 'ng:marchand')",
@@ -277,6 +312,21 @@
             "requires": "($new_container_title = 'ng:fusee_cargo')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "fusee.cargo_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:garage')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "garage.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:enclos')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "enclos.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'ng:tracteur')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "tracteur.main_panel"
           },
           {
             "requires": "($new_container_title = 'ng:settings')",
@@ -302,6 +352,16 @@
             "requires": "($new_container_title = 'premium:daily_reward_ui')",
             "$screen_content": "focus_leurre.contenu",
             "$focus_leurre_contenu": "ng_daily_reward.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'premium:converter_ui')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_convertisseur.main_panel"
+          },
+          {
+            "requires": "($new_container_title = 'premium:lootbox_ui')",
+            "$screen_content": "focus_leurre.contenu",
+            "$focus_leurre_contenu": "ng_premium_lootbox.main_panel"
           },
           {
             "requires": "($new_container_title = 'ng:backpack')",

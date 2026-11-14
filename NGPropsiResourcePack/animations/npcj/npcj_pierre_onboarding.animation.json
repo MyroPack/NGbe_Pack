@@ -1,0 +1,847 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.propsi_e_npcj_pierre_onboarding.idle": {
+      "loop": true,
+      "animation_length": 4,
+      "override_previous_animation": true,
+      "blend_weight": 1,
+      "bones": {
+        "head": {
+          "rotation": [
+            "(math.sin((q.anim_time+0.4)*360)*-2)",
+            "(math.sin(q.anim_time*90)*5)",
+            0
+          ]
+        },
+        "right_leg": {
+          "rotation": [
+            0.8889265,
+            6.9456204999999995,
+            2.6055224999999997
+          ],
+          "position": [
+            -0.175,
+            -0.06999999999999999,
+            0.35
+          ]
+        },
+        "left_leg": {
+          "rotation": [
+            -1.7478755,
+            -0.9936044999999999,
+            -1.3185444999999998
+          ],
+          "position": [
+            0,
+            -0.105,
+            -0.35
+          ]
+        },
+        "right_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "upper_body": {
+          "rotation": [
+            "(math.sin((q.anim_time+0.3)*360)*1)",
+            5,
+            0
+          ],
+          "position": [
+            0,
+            "0+math.sin((q.anim_time)*360)*0.5/2",
+            0
+          ]
+        },
+        "right_arm": {
+          "rotation": [
+            9.02707,
+            16.78086,
+            "17.6781889618+math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_arm": {
+          "rotation": [
+            -5.88595,
+            -22.13991,
+            "-10.8052-math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "root": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "nose": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "beard": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "pioche_main_gauche": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1
+        }
+      }
+    },
+    "animation.propsi_e_npcj_pierre_onboarding.near": {
+      "loop": true,
+      "animation_length": 2,
+      "override_previous_animation": true,
+      "blend_weight": 1,
+      "bones": {
+        "head": {
+          "rotation": [
+            "(-query.target_x_rotation - this)",
+            "(-query.target_y_rotation - this)",
+            0
+          ]
+        },
+        "right_leg": {
+          "rotation": [
+            0.8889265,
+            6.9456204999999995,
+            2.6055224999999997
+          ],
+          "position": [
+            -0.175,
+            -0.06999999999999999,
+            0.35
+          ]
+        },
+        "left_leg": {
+          "rotation": [
+            -1.7478755,
+            -0.9936044999999999,
+            -1.3185444999999998
+          ],
+          "position": [
+            0,
+            -0.105,
+            -0.35
+          ]
+        },
+        "right_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "upper_body": {
+          "rotation": [
+            "(math.sin((q.anim_time+0.3)*360)*1)",
+            5,
+            0
+          ],
+          "position": [
+            0,
+            "0+math.sin((q.anim_time)*360)*0.5/2",
+            0
+          ]
+        },
+        "right_arm": {
+          "rotation": [
+            9.02707,
+            16.78086,
+            "17.6781889618+math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_arm": {
+          "rotation": [
+            -5.88595,
+            -22.13991,
+            "-10.8052-math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "root": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "nose": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "beard": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "pioche_main_gauche": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0
+        }
+      }
+    },
+    "animation.propsi_e_npcj_pierre_onboarding.talk": {
+      "loop": true,
+      "animation_length": 2,
+      "override_previous_animation": true,
+      "blend_weight": 1,
+      "bones": {
+        "head": {
+          "rotation": [
+            "(-query.target_x_rotation - this)",
+            "(-query.target_y_rotation - this)",
+            0
+          ]
+        },
+        "right_leg": {
+          "rotation": [
+            0.8889265,
+            6.9456204999999995,
+            2.6055224999999997
+          ],
+          "position": [
+            -0.175,
+            -0.06999999999999999,
+            0.35
+          ]
+        },
+        "left_leg": {
+          "rotation": [
+            -1.7478755,
+            -0.9936044999999999,
+            -1.3185444999999998
+          ],
+          "position": [
+            0,
+            -0.105,
+            -0.35
+          ]
+        },
+        "right_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "upper_body": {
+          "rotation": [
+            "(math.sin((q.anim_time+0.3)*360)*1)",
+            5,
+            0
+          ],
+          "position": [
+            0,
+            "0+math.sin((q.anim_time)*360)*0.5/2",
+            0
+          ]
+        },
+        "right_arm": {
+          "rotation": [
+            9.02707,
+            16.78086,
+            "17.6781889618+math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_arm": {
+          "rotation": [
+            -5.88595,
+            -22.13991,
+            "-10.8052-math.sin((q.anim_time+0.6)*360)*6"
+          ]
+        },
+        "left_pupil": {
+          "scale": {
+            "0.0": [
+              1,
+              1,
+              1
+            ],
+            "0.0833": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.1667": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.25": [
+              1,
+              0,
+              1
+            ],
+            "0.3333": [
+              1,
+              0.2593,
+              1
+            ],
+            "0.4167": [
+              1,
+              0.7407,
+              1
+            ],
+            "0.5": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "root": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "torso": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "nose": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "beard": {
+          "rotation": {
+            "0.0": [
+              -1.5,
+              0,
+              0
+            ],
+            "0.0833": [
+              -1.66665,
+              0,
+              0
+            ],
+            "0.1667": [
+              -1.66665,
+              0,
+              0
+            ],
+            "0.25": [
+              -1.5,
+              0,
+              0
+            ],
+            "0.3333": [
+              -1.05555,
+              0,
+              0
+            ],
+            "0.4167": [
+              -0.44445,
+              0,
+              0
+            ],
+            "0.5": [
+              0,
+              0,
+              0
+            ],
+            "0.5833": [
+              0,
+              0,
+              0
+            ],
+            "0.6667": [
+              0,
+              0,
+              0
+            ],
+            "0.75": [
+              0,
+              0,
+              0
+            ],
+            "0.8333": [
+              -0.49995,
+              0,
+              0
+            ],
+            "0.9167": [
+              -1.1667,
+              0,
+              0
+            ],
+            "1.0": [
+              -1.5,
+              0,
+              0
+            ],
+            "1.0833": [
+              -1.11105,
+              0,
+              0
+            ],
+            "1.1667": [
+              -0.38894999999999996,
+              0,
+              0
+            ],
+            "1.25": [
+              0,
+              0,
+              0
+            ],
+            "1.3333": [
+              -0.38894999999999996,
+              0,
+              0
+            ],
+            "1.4167": [
+              -1.11105,
+              0,
+              0
+            ],
+            "1.5": [
+              -1.5,
+              0,
+              0
+            ],
+            "1.5833": [
+              -1.11105,
+              0,
+              0
+            ],
+            "1.6667": [
+              -0.38894999999999996,
+              0,
+              0
+            ],
+            "1.75": [
+              0,
+              0,
+              0
+            ],
+            "1.8333": [
+              -0.33330000000000004,
+              0,
+              0
+            ],
+            "1.9167": [
+              -1.0000499999999999,
+              0,
+              0
+            ],
+            "2.0": [
+              -1.5,
+              0,
+              0
+            ]
+          },
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "pioche_main_gauche": {
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0
+        }
+      }
+    },
+    "animation.propsi_e_npcj_pierre_onboarding.forward": {
+      "loop": true,
+      "anim_time_update": "query.modified_distance_moved",
+      "bones": {
+        "head": {
+          "rotation": [
+            -5,
+            "math.cos(query.anim_time * 28) * -6",
+            "math.sin(query.anim_time * 28) * 2"
+          ]
+        },
+        "arms": {
+          "rotation": [
+            "2.3 + math.cos(query.anim_time * 28 + 180) * 9",
+            0,
+            0
+          ]
+        },
+        "right_leg": {
+          "rotation": [
+            "math.cos(query.anim_time * 28) * 65",
+            0,
+            0
+          ]
+        },
+        "left_leg": {
+          "rotation": [
+            "math.cos(query.anim_time * 28) * -65",
+            0,
+            0
+          ]
+        },
+        "upper_body": {
+          "rotation": [
+            0,
+            "math.cos(query.anim_time * 28) * 6",
+            "-math.cos(query.anim_time * 28) * 1.2"
+          ],
+          "position": [
+            0,
+            "math.sin(query.anim_time * 28 * 2) * 0.35",
+            0
+          ]
+        },
+        "lower_body": {
+          "position": [
+            0,
+            "math.sin(query.anim_time * 28 * 2) * 0.35",
+            0
+          ]
+        },
+        "left_arm": {
+          "rotation": [
+            "-5.88595 + math.cos(query.anim_time * 28) * 8",
+            -22.13991,
+            "-12 - math.sin(query.anim_time * 28) * 2"
+          ]
+        },
+        "right_arm": {
+          "rotation": [
+            "9 + math.cos(query.anim_time * 28 + 180) * 25",
+            8,
+            "12 + math.sin(query.anim_time * 28) * 3"
+          ]
+        },
+        "right_pupil": {
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "left_pupil": {
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "pioche_main_gauche": {
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "animation.propsi_e_npcj_pierre_onboarding.titre": {
+      "loop": true,
+      "animation_length": 2.0,
+      "particle_effects": {
+        "0.05": {
+          "effect": "titre",
+          "locator": "npcj_titre"
+        }
+      }
+    }
+  }
+}

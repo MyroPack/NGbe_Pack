@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nationsglory:lion_mount",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/lion_mount"
+			},
+			"geometry": {
+				"default": "geometry.ng_bike_lion"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"jump": "animation.ng_bike_lion.jump",
+				"terre_forward": "animation.ng_bike_lion.terre_forward",
+				"terre_idle": "animation.ng_bike_lion.terre_idle",
+				"terre_idle_mount": "animation.ng_bike_lion.terre_idle_mount",
+				"ambient": "animation.ng_bike_lion.ambient",
+				"move": "controller.animation.ng_bike_lion.move",
+				"ambient_ctrl": "controller.animation.ng_bike_lion.ambient"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.env = math.clamp(q.mark_variant, 0, 2);",
+					"v.moving = (q.modified_move_speed > 0.05 || (v.env != 0 && math.abs(q.vertical_speed) > 0.05)) ? 1 : 0;",
+					"v.mounted = q.has_rider ? 1 : 0;",
+					"v.etat = v.env * 4 + v.moving * 2 + v.mounted;",
+					"v.capacite = q.variant;"
+				],
+				"animate": [
+					"move",
+					"ambient_ctrl"
+				]
+			},
+			"sound_effects": {
+				"ambient": "ng_bike.lion.ambient",
+				"forward": "ng_bike.lion.forward",
+				"jump": "ng_bike.lion.jump"
+			}
+		}
+	}
+}

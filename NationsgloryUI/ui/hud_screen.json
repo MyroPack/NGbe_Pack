@@ -947,6 +947,11 @@
               // pour les seuls bandeaux §t§r dont l'etiquette porte la marque §n§g§m§r ; meme titre et meme texte.
               {"missile@hud.toast_inside": {"layer": 1000000010, "$content_background_color": [0.157, 0.188, 0.208], "$outline_background_color": [0.11, 0.133, 0.165], "$icon_outilne_background_color": [0.514, 0.165, 0.067], "$icon_background_color": [0.773, 0.255, 0.169], "$icon_texture": "icbm_hud.icon_missile", "$icon_color": [0.98, 0.98, 0.98], "bindings": [{"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"}, {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§m§r')", "target_property_name": "#visible", "binding_condition": "once"}, {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§t§r§n§g§m§r')", "target_property_name": "#enabled", "binding_condition": "once"}]}},
 
+              // Image d'un succes de NGAchievementMod (NotifyMod, WithImage) : posee sur le carre de gauche du panneau de
+              // reussite, a la place de la coche, pour les seules lignes §s§r dont le texte commence par la marque §n§g§i§r.
+              // Le reste du panneau est celui de reussite, inchange ; sans la marque, rien n'est montre.
+              {"succes_image@hud.succes_image": {}},
+
               // Habillage des notifications du bestiaire (NGBestiaryResourcePack, ui/ngbestiary_hud.json). Il se
               // montre lui-meme, pour les seuls bandeaux §t§r dont l'etiquette porte sa marque. Vide sans ce pack.
               {"bestiary_toast@ngbestiary_hud.toast": {}}
@@ -960,6 +965,46 @@
               "binding_collection_name": "chat_text_grid", 
               "binding_condition": "once"
           }
+      ]}}
+  ]},
+
+  // Le carre de gauche du panneau de reussite (memes couleurs), avec l'image d'un succes au lieu de la coche. Le numero de
+  // l'image suit la marque en trois chiffres, chacun un code de couleur (octets 18 a 27 de la ligne) : « §0§4§2 » donne
+  // textures/ui/ngsucces/notif/042 (images ecrites par tools/ecran.py de NGAchievementMod).
+  "succes_image": {
+    "type": "panel",
+    "size": [30, "100%"],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "layer": 1000000010,
+    "bindings": [
+      {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+      {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§s§r§n§g§i§r')", "target_property_name": "#visible", "binding_condition": "once"},
+      {"binding_type": "view", "source_property_name": "(('%.18s' * #text) = '§s§r§n§g§i§r')", "target_property_name": "#enabled", "binding_condition": "once"}
+    ],
+    "controls": [
+
+      {"outline@ng_asset.background_white": {
+        "color": [0.486, 0.812, 0.000],
+        "size": ["100%", "100%"],
+        "controls": [
+
+            {"inner@ng_asset.background_white": {
+              "color": [0.604, 0.902, 0.000],
+              "anchor_from": "right_middle",
+              "anchor_to": "right_middle",
+              "size": ["100% - 1px", "100% - 2px"]
+            }},
+
+            {"image": {
+              "type": "image",
+              "size": [20, 20],
+              "layer": 3,
+              "bindings": [
+                {"binding_name": "#chat_text", "binding_name_override": "#text", "binding_type": "collection", "binding_collection_name": "chat_text_grid", "binding_condition": "once"},
+                {"binding_type": "view", "source_property_name": "('textures/ui/ngsucces/notif/' + ((('%.27s' * #text) - ('%.18s' * #text)) - '§'))", "target_property_name": "#texture"}
+              ]
+            }}
       ]}}
   ]},
 
@@ -1302,12 +1347,25 @@
     "type": "panel",
     "size": ["100%", "100%"],
     "controls": [
-      {"titre_du_jeu@hud.hud_title_text": {
+      // Sans la marque du tracteur (§t§q§t) : le titre du jeu ; avec elle, le panneau de conduite du tracteur
+      // (tools/tracteur/hud_tracteur.py).
+      {"sans_tracteur": {
+        "type": "panel",
+        "size": ["100%", "100%"],
         "bindings": [
           {"binding_name": "#hud_title_text_string", "binding_type": "global"},
-          {"binding_type": "view", "source_property_name": "((#hud_title_text_string - '§d§c§v') = #hud_title_text_string)", "target_property_name": "#visible"}
+          {"binding_type": "view", "source_property_name": "((#hud_title_text_string - '§t§q§t') = #hud_title_text_string)", "target_property_name": "#visible"}
+        ],
+        "controls": [
+          {"titre_du_jeu@hud.hud_title_text": {
+            "bindings": [
+              {"binding_name": "#hud_title_text_string", "binding_type": "global"},
+              {"binding_type": "view", "source_property_name": "((#hud_title_text_string - '§d§c§v') = #hud_title_text_string)", "target_property_name": "#visible"}
+            ]
+          }}
         ]
       }},
+      {"panneau_tracteur@ng_hud_tracteur.panneau": {}},
       {"ecran_decouverte@hud.ng_decouverte_ecran": {}}
     ]
   },

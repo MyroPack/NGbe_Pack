@@ -35,7 +35,7 @@
 
                                         {"text@ng_module.Simple_text":{
                                           "$type_get_text": "Get_text_type_1",
-                                          "$index": 23,
+                                          "$index": 32,
                                           "$text_offset":[0,-1.6],
                                           "$font_type":"MinecraftTen",
                                           "size": ["100%c","100%"],

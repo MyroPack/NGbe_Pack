@@ -1,0 +1,10 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ng_garage_adaptateurs": {
+      "geometry": "Geometry.adaptateurs",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Texture.adaptateurs"]
+    }
+  }
+}

@@ -1,5 +1,59 @@
 {
   "format_version" : "1.21.40",
+  "ng:wheat_crop" : {
+    "sound" : "grass"
+  },
+  "ng:carrot_crop" : {
+    "sound" : "grass"
+  },
+  "ng:potato_crop" : {
+    "sound" : "grass"
+  },
+  "ng:barley_crop" : {
+    "sound" : "grass"
+  },
+  "ng:oat_crop" : {
+    "sound" : "grass"
+  },
+  "ng:soybean_crop" : {
+    "sound" : "grass"
+  },
+  "ng:corn_crop" : {
+    "sound" : "grass"
+  },
+  "ng:rye_crop" : {
+    "sound" : "grass"
+  },
+  "ng:glazed_spelt_crop" : {
+    "sound" : "grass"
+  },
+  "ng:arctic_oat_crop" : {
+    "sound" : "grass"
+  },
+  "ng:eggplant_crop" : {
+    "sound" : "grass"
+  },
+  "ng:tomato_crop" : {
+    "sound" : "grass"
+  },
+  "ng:spinach_crop" : {
+    "sound" : "grass"
+  },
+  "ng:cabbage_crop" : {
+    "sound" : "grass"
+  },
+  "ng:onion_crop" : {
+    "sound" : "grass"
+  },
+  "ng:lentil_crop" : {
+    "sound" : "grass"
+  },
+  "ng:zucchini_crop" : {
+    "sound" : "grass"
+  },
+  "ng:bell_pepper_crop" : {
+    "sound" : "grass"
+  },
   "ng:power_bank" : {
     "textures" : "storage_module_0",
     "sound" : "place.iron"

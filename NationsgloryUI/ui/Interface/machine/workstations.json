@@ -1,11 +1,14 @@
 {
   "namespace": "workstations",
 
+  // Fenetre de 417 x 192 (170 de haut avant le 01/11 : plus d'air pour lire, retour de Leo). L'inventaire du joueur ne
+  // s'affiche que sur les pages Stockage et Resultats, ou l'on pose et reprend des objets ; ailleurs, le panneau de
+  // l'atelier prend toute la largeur (retour de Leo du 01/11, comme l'atelier de NG Java).
   "main_panel":{
     "type":"panel",
     "size":["100%","100%"],
     "controls":[
- 
+
 /*             {"small_chest_grid@chest.small_chest_grid":{
               "grid_dimensions": [ 9, 9 ],
               "layer":800000,
@@ -14,7 +17,7 @@
               "size": [ 162, 162 ]
             }},
  */
-            
+
             {"background_black@ng_asset.background_white":{
               "color":[0.000, 0.000, 0.000],
               "size":["150%","150%"],
@@ -23,12 +26,12 @@
 
             {"stack_panel@ng_module.stackpanel":{
               "orientation":"horizontal",
-              "size":["100%c",170],
+              "size":[417,192],
               "controls":[
 
                   {"gestion_panel@ng_asset.background_white":{
                     "color":[0.153, 0.153, 0.165],
-                    "size":[222,"100%"],
+                    "size":["fill","100%"],
                     "controls":[
 
                         {"stack_panel@ng_module.stackpanel":{
@@ -51,13 +54,13 @@
                                                      {"centring@ng_module.panel":{
                                                         "size":["100%c","100%"],
                                                         "controls":[
-                                                         
+
                                                                       {"title@ng_module.Simple_text": {
                                                                         "$type_get_text": "Get_text_type_1",
                                                                         "$index": 89,
                                                                         "$font_type":"MinecraftTen",
                                                                         "$text_offset":[0,-1.3],
-                                                                        "$max_size":[120,10],
+                                                                        "$max_size":[200,10],
                                                                         "layer":10,
                                                                         "size": ["100%c", "100%"],
                                                                         "$font_scale_factor": 0.8
@@ -68,27 +71,30 @@
                                                         "size":["fill","100%"]
                                                       }},
 
-                                                      {"energy@ng_module.panel":{
+                                                      // Pastilles de la vraie ressource de l'atelier (cases 134 a 136 de
+                                                      // NGMachineMod) : eclair pour l'electricite, bouteille pour le gaz,
+                                                      // pompe pour le liquide ; une case vide = pas de pastille (la station
+                                                      // de craft n'en a aucune). Retour de Leo du 01/11 17 h 39.
+                                                      {"pastilles@ng_module.stackpanel":{
+                                                        "orientation":"horizontal",
+                                                        "collection_name":"container_items",
                                                         "size":["100%c","100%"],
                                                         "controls":[
-
-                                                              {"background@ng_asset.background_03":{
-                                                                "min_size":[20,"100% - 2px"],
-                                                                "size": ["100%c + 10px","100% - 2px"],
-                                                                "controls":[
-
-                                                                      {"text@ng_module.Simple_text": {
-                                                                        "$type_get_text": "Get_text_type_1",
-                                                                        "$index": 20,
-                                                                        "layer":5,
-                                                                        "$text_offset":[0,0.3],
-                                                                        "size": ["100%c", "100%"],
-                                                                        "$size_icone_left": [8,8],
-                                                                        "$color_icone_left": [1.000, 0.537, 0.012],
-                                                                        "$texture_icone_left": "ng_asset.icon_08",
-                                                                        "$font_scale_factor": 0.7
-                                                                      }}
-                                                              ]}}
+                                                              {"electricite@workstations.pastille":{
+                                                                "$index_pastille": 134,
+                                                                "$texture_pastille": "ng_asset.icon_03",
+                                                                "$couleur_pastille": [1.000, 0.808, 0.188]
+                                                              }},
+                                                              {"gaz@workstations.pastille":{
+                                                                "$index_pastille": 135,
+                                                                "$texture_pastille": "workstations.icone_gaz",
+                                                                "$couleur_pastille": [0.831, 0.831, 0.847]
+                                                              }},
+                                                              {"liquide@workstations.pastille":{
+                                                                "$index_pastille": 136,
+                                                                "$texture_pastille": "ng_asset.icon_19",
+                                                                "$couleur_pastille": [0.831, 0.831, 0.847]
+                                                              }}
                                                       ]}},
 
                                                       {"padding@ng_module.panel":{
@@ -99,8 +105,8 @@
                                                         "size":["100%c","100%"],
                                                         "controls":[
 
-                                                              {"close_button@ng_module.close_button":{}}  
-                                                              
+                                                              {"close_button@ng_module.close_button":{}}
+
                                                       ]}}
                                           ]}}
                                     ]}},
@@ -110,7 +116,7 @@
                                     }},
 
                                     {"content@ng_module.panel":{
-                                      "size":["100%",143],
+                                      "size":["100%","fill"],
                                       "controls":[
 
                                             {"content@ng_module.stackpanel":{
@@ -130,8 +136,8 @@
                                                                     "size":["100%",1]
                                                                   }},
 
-                                                                  {"homme_button@ng_module.section_toggle_button": { 
-                                                                      "toggle_group_forced_index": 0, 
+                                                                  {"homme_button@ng_module.section_toggle_button": {
+                                                                      "toggle_group_forced_index": 0,
                                                                       "$section_topic": "page_1",
 
                                                                       "$is_default_toggle": true,
@@ -147,11 +153,11 @@
                                                                   }},
 
                                                                   {"padding@ng_module.panel":{
-                                                                    "size":["100%",1]
+                                                                    "size":["100%",2]
                                                                   }},
 
-                                                                  {"book_button@ng_module.section_toggle_button": { 
-                                                                      "$toggle_group_forced_index": 1, 
+                                                                  {"book_button@ng_module.section_toggle_button": {
+                                                                      "$toggle_group_forced_index": 1,
                                                                       "$section_topic": "page_2",
 
                                                                       "$button_asset":"ng_asset.toggle_asset_01",
@@ -162,11 +168,11 @@
                                                                   }},
 
                                                                   {"padding@ng_module.panel":{
-                                                                    "size":["100%",1]
+                                                                    "size":["100%",2]
                                                                   }},
 
-                                                                  {"button_stockage@ng_module.section_toggle_button": { 
-                                                                      "$toggle_group_forced_index": 2, 
+                                                                  {"button_stockage@ng_module.section_toggle_button": {
+                                                                      "$toggle_group_forced_index": 2,
                                                                       "$section_topic": "page_3",
                                                                       "$button_asset":"ng_asset.toggle_asset_01",
                                                                       "$size_icon":[9.5,9.5],
@@ -176,7 +182,7 @@
                                                                   }},
 
                                                                   {"padding@ng_module.panel":{
-                                                                    "size":["100%",1]
+                                                                    "size":["100%",2]
                                                                   }},
 
                                                                   {"button_resultats@ng_module.section_toggle_button": {
@@ -209,6 +215,18 @@
                         ]}}
                   ]}},
 
+                  // Inventaire du joueur : pages Stockage (3) et Resultats (4) seulement. Cache, il ne prend aucune
+                  // place dans la rangee et le panneau de l'atelier s'etire (largeur « fill »).
+                  {"colonne_inventaire@ng_module.stackpanel":{
+                    "orientation":"horizontal",
+                    "size":[195,"100%"],
+                    "bindings": [
+                      { "binding_type": "view", "source_control_name": "page_3_button_toggle", "source_property_name": "#toggle_state", "target_property_name": "#page3_state" },
+                      { "binding_type": "view", "source_control_name": "page_4_button_toggle", "source_property_name": "#toggle_state", "target_property_name": "#page4_state" },
+                      { "binding_type": "view", "source_property_name": "(#page3_state or #page4_state)", "target_property_name": "#visible" }
+                    ],
+                    "controls":[
+
                   {"padding@ng_module.panel":{
                     "size":[4,"100%"]
                   }},
@@ -218,14 +236,14 @@
                     "controls":[
 
                   {"inventory@ng_asset.background_02":{
-                    "size": ["100%",101],
+                    "size": ["100%",105],
                     "anchor_from":"top_middle",
                     "anchor_to":"top_middle",
                     "controls":[
 
                                 {"inventory_content@ng_module.stackpanel":{
                                   "size":[181,"100% - 10px"],
-                                  "controls":[           
+                                  "controls":[
 
                                               {"title":{
                                                   "size":["100%",10],
@@ -235,6 +253,10 @@
                                                   "color":[0.443, 0.443, 0.482],
                                                   "font_type":"MinecraftTen",
                                                   "text":"inventaire"
+                                              }},
+
+                                              {"padding@ng_module.panel":{
+                                                "size":["100%",4]
                                               }},
 
                                               {"inventory@ng_asset.background_white":{
@@ -278,7 +300,8 @@
 
                   ]}}
                   ]}}
-            ]}}   
+                  ]}}
+            ]}}
   ]},
 
   "page1@ng_module.stackpanel":{
@@ -515,23 +538,26 @@
             ]}}
   ]},
 
+  // Page Recettes, sur toute la largeur depuis le 01/11 (l'inventaire du joueur n'y est plus) : a gauche les onglets
+  // et la liste, a droite le detail de la recette choisie, avec sous les ingredients une rangee de prerequis (liquide,
+  // electricite, gaz, competence, R&D) comme l'atelier de NG Java, en rouge s'ils manquent (retour de Leo du 01/11).
   "page2@ng_module.stackpanel":{
     "orientation":"horizontal",
     "size":["100%","100%"],
          "bindings": [
-        {"binding_type": "view", 
-        "source_control_name": "page_2_button_toggle", 
-        "source_property_name": "#toggle_state", 
+        {"binding_type": "view",
+        "source_control_name": "page_2_button_toggle",
+        "source_property_name": "#toggle_state",
         "target_property_name": "#visible" }
     ],
     "controls":[
 
             {"left_part@ng_module.stackpanel":{
-              "size":["45% - 0.6px","100%"],
+              "size":[146,"100%"],
               "controls":[
 
                 {"top@ng_asset.background_13":{
-                  "size":["100%",23],
+                  "size":["100%",26],
                   "controls":[
 
                            {"button@ng_module.stackpanel":{
@@ -539,8 +565,27 @@
                             "size":["100% - 6px","100% - 6px"],
                             "controls":[
 
+                                  // Onglet « Tout » (case 137, demande de Leo du 07/11) : toutes les recettes de l'atelier, avant les
+                                  // quatre onglets de categorie (cases 27 a 30)
                                   {"onglet@ng_module.panel": {
-                                    "size": ["25%", "100%"],
+                                    "size": ["20%", "100%"],
+                                    "controls": [
+                                      {"button_home@ng_module.multiple_status_button": {
+                                        "size": ["100%", "100%"],
+                                        "$size_button": ["100%", "100%"],
+                                        "$index": 137,
+                                        "$textures_button_S0": "ng_asset.button_05",
+                                        "$textures_button_S1": "ng_asset.button_06",
+                                        "$fonction_mapping_button_S0": "clickable",
+                                        "$fonction_mapping_button_S1": "nonclickable"
+                                      }},
+                                      {"pictogramme@workstations.pictos_onglet": { "$index": 137 }}
+                                    ]
+                                  }},
+
+
+                                  {"onglet@ng_module.panel": {
+                                    "size": ["20%", "100%"],
                                     "controls": [
                                       {"button_home@ng_module.multiple_status_button": {
                                         "size": ["100%", "100%"],
@@ -555,9 +600,9 @@
                                     ]
                                   }},
 
-                                  
+
                                   {"onglet@ng_module.panel": {
-                                    "size": ["25%", "100%"],
+                                    "size": ["20%", "100%"],
                                     "controls": [
                                       {"button_home@ng_module.multiple_status_button": {
                                         "size": ["100%", "100%"],
@@ -572,9 +617,9 @@
                                     ]
                                   }},
 
-                                  
+
                                   {"onglet@ng_module.panel": {
-                                    "size": ["25%", "100%"],
+                                    "size": ["20%", "100%"],
                                     "controls": [
                                       {"button_home@ng_module.multiple_status_button": {
                                         "size": ["100%", "100%"],
@@ -589,9 +634,9 @@
                                     ]
                                   }},
 
-                                  
+
                                   {"onglet@ng_module.panel": {
-                                    "size": ["25%", "100%"],
+                                    "size": ["20%", "100%"],
                                     "controls": [
                                       {"button_home@ng_module.multiple_status_button": {
                                         "size": ["100%", "100%"],
@@ -609,31 +654,71 @@
                           ]}}
                 ]}},
 
+                {"padding@ng_module.panel":{
+                  "size":["100%",3]
+                }},
+
                 {"bottom@ng_asset.background_13":{
                   "size":["100%","fill"],
                   "controls":[
 
                       {"bottom@ng_module.stackpanel":{
-                        "size":["100% - 8px","100% - 8px"],
+                        "size":["100% - 10px","100% - 10px"],
                         "controls":[
 
                             // Nom de l'onglet courant (slot 106), au-dessus de la liste des recettes
                             {"nom_onglet@ng_module.panel":{
-                              "size":["100%",9],
+                              "size":["100%",10],
                               "controls":[
                                 {"texte@ng_module.Simple_text": {
                                   "$type_get_text": "Get_text_type_1",
                                   "$index": 106,
                                   "anchor_from":"left_middle",
                                   "anchor_to":"left_middle",
-                                  "offset":[2,0],
-                                  "$max_size":[80,8],
-                                  "size": ["100%c",8],
+                                  "offset":[1,0],
+                                  "$max_size":[130,9],
+                                  "size": ["100%c",9],
                                   "$text_color":[0.624,0.624,0.663],
                                   "$text_offset":[0,-1],
-                                  "$font_scale_factor": 0.5
+                                  "$font_scale_factor": 0.55
+                                }}
+                                ,
+                                // « Tout » / « All » (ng.ateliers.onglet_tout), quand l'onglet 137 est le courant
+                                {"nom_tout@ng_module.collectionpanel": {
+                                  "collection_name": "container_items",
+                                  "size": ["100%", "100%"],
+                                  "controls": [
+                                    {"etat": {
+                                      "type": "panel",
+                                      "collection_index": 137,
+                                      "size": ["100%", "100%"],
+                                      "bindings": [
+                                        {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+                                        {"binding_type": "view", "source_property_name": "(not ((#hover_text - '§1') = #hover_text))", "target_property_name": "#visible"}
+                                      ],
+                                      "controls": [
+                                        {"texte": {
+                                          "type": "label",
+                                          "text": "ng.ateliers.onglet_tout",
+                                          "localize": true,
+                                          "anchor_from": "left_middle",
+                                          "anchor_to": "left_middle",
+                                          "offset": [1, -1],
+                                          "size": ["default", "default"],
+                                          "color": [0.624, 0.624, 0.663],
+                                          "font_scale_factor": 0.55,
+                                          "font_type": "default",
+                                          "shadow": false
+                                        }}
+                                      ]
+                                    }}
+                                  ]
                                 }}
                             ]}},
+
+                            {"padding@ng_module.panel":{
+                              "size":["100%",3]
+                            }},
 
                             {"scroll@ng_module.scroll_test":{
                               "size":["100%","fill"],
@@ -642,7 +727,11 @@
                               "$scroll_bar_color":[0.322, 0.322, 0.361],
                               "$scroll_textures_background": "ng_asset.background_white",
                               "$scroll_background_color":[0.094, 0.094, 0.106],
-                              "$scrolling_content": "workstations.list_craft"                              
+                              "$scrolling_content": "workstations.list_craft"
+                            }},
+
+                            {"padding@ng_module.panel":{
+                              "size":["100%",3]
                             }},
 
                             // Pages de la liste quand l'onglet a plus de 7 recettes (cases 107 a 109)
@@ -652,20 +741,25 @@
                               "$index_suiv": 109
                             }}
                   ]}}
-            
-                ]}}    
+
+                ]}}
             ]}},
 
+            {"padding@ng_module.panel": {
+              "size": [4, "100%"]
+            }},
+
             {"right_part@ng_asset.background_13":{
-              "size":["55% + 0.6px","100%"],
+              "size":["fill","100%"],
               "controls":[
 
                 {"content@ng_module.stackpanel":{
-                  "size":["100% - 10px","100% - 8px"],
+                  "size":["100% - 12px","100% - 10px"],
                   "controls":[
 
+                        // Le nom de la recette, sur deux lignes au besoin : largeur fixe, hauteur selon le texte
                         {"title@ng_module.panel":{
-                          "size":["100%c",8],
+                          "size":["100%","100%c"],
                           "controls":[
 
                               {"text@ng_module.Simple_text": {
@@ -673,154 +767,198 @@
                                 "$index": 38,
                                 "$font_type":"MinecraftTen",
                                 "layer":5,
-                                "offset":[-0.5,-1.6],
-                                "$max_size":[90,8],
-                                "size": ["100%c",8],
-                                "$font_scale_factor": 0.8
+                                "anchor_from":"top_left",
+                                "anchor_to":"top_left",
+                                "offset":[0,-0.6],
+                                "$text_size":[210,"default"],
+                                "$max_size":[210,18],
+                                "size": ["100%c","100%c"],
+                                "$font_scale_factor": 0.75
                               }}
                         ]}},
-
-                        {"description_item@ng_module.Simple_text": {
-                          "$type_get_text": "Get_text_type_1",
-                          "$index": 39,
-                          "layer":15,
-                          "$text_size":[95,15],
-                          "$max_size":[95,15],
-                          "size":[95,15],
-                          "$font_scale_factor": 0.5
-                        }},
 
                         {"padding@ng_module.panel": {
                           "size": ["100%",3]
                         }},
 
-                        {"backgournd@ng_asset.background_white":{
+                        {"description_item@ng_module.panel":{
+                          "size":["100%","100%c"],
+                          "controls":[
+
+                              {"texte@ng_module.Simple_text": {
+                                "$type_get_text": "Get_text_type_1",
+                                "$index": 39,
+                                "layer":15,
+                                "anchor_from":"top_left",
+                                "anchor_to":"top_left",
+                                "$text_size":[210,"default"],
+                                "$max_size":[210,13],
+                                "size":["100%c","100%c"],
+                                "$text_color":[0.831, 0.831, 0.847],
+                                "$font_scale_factor": 0.55
+                              }}
+                        ]}},
+
+                        {"padding@ng_module.panel": {
+                          "size": ["100%",5]
+                        }},
+
+                        {"cadre@ng_asset.background_white":{
                           "size":["100%","fill"],
                           "color":[0.200, 0.200, 0.220],
                           "controls":[
-                            
-                                {"backgournd@ng_asset.background_white":{
+
+                                {"fond@ng_asset.background_white":{
                                   "color":[0.180, 0.180, 0.192],
                                   "size":["100% - 2px","100% - 2px"],
                                   "controls":[
 
                                       {"content@ng_module.stackpanel":{
-                                        "size":["100%","100%"],
+                                        "size":["100% - 8px","100% - 8px"],
                                         "controls":[
 
-                                          {"content@ng_module.panel":{
-                                            "size":["100%","100% - 22px"],
+                                          // Ingredients : une rangee de 8 (cases 40 a 43 puis 91 a 94)
+                                          {"ingredients@ng_module.stackpanel": {
+                                            "orientation":"horizontal",
+                                            "size": ["100%", 32],
+                                            "controls":[
+                                                {"case@workstations.asset_preview_craft":{ "$index":40, "$index_objet":126 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":41, "$index_objet":127 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":42, "$index_objet":128 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":43, "$index_objet":129 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":91, "$index_objet":130 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":92, "$index_objet":131 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":93, "$index_objet":132 }},
+                                                {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                {"case@workstations.asset_preview_craft":{ "$index":94, "$index_objet":133 }}
+                                          ]}},
+
+                                          {"padding@ng_module.panel": {
+                                            "size": ["100%",5]
+                                          }},
+
+                                          // Prerequis : liquide, electricite, gaz, competences puis R&D (cases 113 a 118)
+                                          {"prerequis@ng_module.panel": {
+                                            "size": ["100%", 32],
                                             "controls":[
 
-                                                                                                {"rows@ng_module.stackpanel": {
-                                                  "offset":[0,2],
-                                                  "size": ["100% - 2px", "100% - 4px"],
+                                                {"aucun@workstations.aucun_prerequis":{}},
+
+                                                {"rangee@ng_module.stackpanel": {
+                                                  "orientation":"horizontal",
+                                                  "size": ["100%", "100%"],
                                                   "controls":[
-
-                                                      {"row_1@ng_module.stackpanel": {
-                                                        "orientation":"horizontal",
-                                                        "size": ["100%", "50%"],
-                                                        "controls":[
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":40 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":41 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":42 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":43 }}
-                                                      ]}},
-
-                                                      {"row_2@ng_module.stackpanel": {
-                                                        "orientation":"horizontal",
-                                                        "size": ["100%", "50%"],
-                                                        "controls":[
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":91 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":92 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":93 }},
-                                                            {"preview_craft@workstations.asset_preview_craft":{ "$index":94 }}
-                                                      ]}}
+                                                      {"case@workstations.asset_prerequis":{ "$index":113 }},
+                                                      {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                      {"case@workstations.asset_prerequis":{ "$index":114 }},
+                                                      {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                      {"case@workstations.asset_prerequis":{ "$index":115 }},
+                                                      {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                      {"case@workstations.asset_prerequis":{ "$index":116 }},
+                                                      {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                      {"case@workstations.asset_prerequis":{ "$index":117 }},
+                                                      {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+                                                      {"case@workstations.asset_prerequis":{ "$index":118 }}
                                                 ]}}
                                           ]}},
 
-                                          // Nom de l'ingredient touche (slot 105, un vrai objet sans nom :
-                                          // le jeu ecrit son propre nom traduit), sinon l'aide
-                                          {"nom_ingredient@ng_module.panel":{
-                                            "size":["100%",10],
-                                            "controls":[
+                                          {"padding@ng_module.panel": {
+                                            "size": ["100%","fill"]
+                                          }},
 
-                                                {"aide":{
-                                                  "type":"label",
-                                                  "text":"ng.ateliers.ingredient_hint",
-                                                  "size":["100% - 4px","default"],
-                                                  "layer":1,
-                                                  "text_alignment":"center",
-                                                  "color":[0.624,0.624,0.663],
-                                                  "font_scale_factor":0.5,
-                                                  "font_type":"default",
-                                                  "shadow":false,
-                                                  "localize":true
-                                                }},
-
-                                                {"nom@ng_module.collectionpanel":{
-                                                  "size":["100%","100%"],
-                                                  "layer":2,
-                                                  "collection_name":"container_items",
-                                                  "controls":[
-
-                                                      {"choisi":{
-                                                        "type":"panel",
-                                                        "collection_index":105,
-                                                        "size":["100%","100%"],
-                                                        "bindings":[
-                                                          {
-                                                            "binding_name": "#hover_text",
-                                                            "binding_type": "collection",
-                                                            "binding_collection_name": "container_items"
-                                                          },
-                                                          {
-                                                            "binding_type": "view",
-                                                            "source_property_name": "(not((#hover_text) = ''))",
-                                                            "target_property_name": "#visible"
-                                                          }
-                                                        ],
-                                                        "controls":[
-
-                                                            {"fond@ng_asset.background_white":{
-                                                              "size":["100%","100%"],
-                                                              "color":[0.180, 0.180, 0.192],
-                                                              "layer":1
-                                                            }},
-
-                                                            {"texte@ng_module.Simple_text": {
-                                                              "$type_get_text": "Get_text_type_1",
-                                                              "$index": 105,
-                                                              "layer":2,
-                                                              "$max_size":[92,10],
-                                                              "size": ["100%c",10],
-                                                              "$font_scale_factor": 0.5
-                                                            }}
-                                                      ]}}
-                                                ]}}
-                                          ]}},
-
-                                          {"backgournd@ng_asset.background_white":{
+                                          // Nom de la case touchee (ingredient : slot 105, un vrai objet sans nom, le jeu
+                                          // ecrit son nom traduit ; prerequis : son texte complet), sinon l'aide ; pages des
+                                          // ingredients de part et d'autre
+                                          {"bas@ng_asset.background_white":{
                                             "color":[0.247, 0.247, 0.275],
-                                            "size":["100%",12],
+                                            "size":["100%",13],
                                             "controls":[
 
-                                                {"padding@ng_module.stackpanel": {
+                                                {"rangee@ng_module.stackpanel": {
                                                   "orientation":"horizontal",
                                                   "size": ["100% - 4px", "100% - 2px"],
                                                   "controls":[
 
                                                       {"left_button@ng_module.Simple_Button":{
-                                                        "size":[10,10],
+                                                        "size":[11,11],
                                                         "$index": 44,
                                                         "$icon_right_offset":[0.3,0],
                                                         "$size_icone_right": [7,7],
                                                         "$texture_icone_right": "ng_asset.icon_34",
                                                         "$texture_button": "ng_asset.button_26"
-                                                      }},   
+                                                      }},
 
-                                                      {"padding@ng_module.panel": {
-                                                        "size": ["fill", "100%"],
+                                                      {"espace@ng_module.panel":{ "size":[4,"100%"] }},
+
+                                                      {"nom_ingredient@ng_module.panel":{
+                                                        "size":["fill","100%"],
+                                                        "controls":[
+
+                                                            {"aide":{
+                                                              "type":"label",
+                                                              "text":"ng.ateliers.ingredient_hint",
+                                                              "size":["100% - 4px","default"],
+                                                              "layer":1,
+                                                              "text_alignment":"center",
+                                                              "color":[0.624,0.624,0.663],
+                                                              "font_scale_factor":0.55,
+                                                              "font_type":"default",
+                                                              "shadow":false,
+                                                              "localize":true
+                                                            }},
+
+                                                            {"nom@ng_module.collectionpanel":{
+                                                              "size":["100%","100%"],
+                                                              "layer":2,
+                                                              "collection_name":"container_items",
+                                                              "controls":[
+
+                                                                  {"choisi":{
+                                                                    "type":"panel",
+                                                                    "collection_index":105,
+                                                                    "size":["100%","100%"],
+                                                                    "bindings":[
+                                                                      {
+                                                                        "binding_name": "#hover_text",
+                                                                        "binding_type": "collection",
+                                                                        "binding_collection_name": "container_items"
+                                                                      },
+                                                                      {
+                                                                        "binding_type": "view",
+                                                                        "source_property_name": "(not((#hover_text) = ''))",
+                                                                        "target_property_name": "#visible"
+                                                                      }
+                                                                    ],
+                                                                    "controls":[
+
+                                                                        {"fond@ng_asset.background_white":{
+                                                                          "size":["100%","100%"],
+                                                                          "color":[0.247, 0.247, 0.275],
+                                                                          "layer":1
+                                                                        }},
+
+                                                                        {"texte@ng_module.Simple_text": {
+                                                                          "$type_get_text": "Get_text_type_1",
+                                                                          "$index": 105,
+                                                                          "layer":2,
+                                                                          "$max_size":[150,11],
+                                                                          "size": ["100%c",11],
+                                                                          "$font_scale_factor": 0.55
+                                                                        }}
+                                                                  ]}}
+                                                            ]}}
+                                                      ]}},
+
+                                                      {"espace@ng_module.panel":{ "size":[4,"100%"] }},
+
+                                                      {"page@ng_module.panel": {
+                                                        "size": ["100%c", "100%"],
                                                         "controls":[
 
                                                             {"text@ng_module.Simple_text": {
@@ -829,12 +967,15 @@
                                                               "offset":[0,0.6],
                                                               "layer":5,
                                                               "size": ["100%c", "100%c"],
-                                                              "$font_scale_factor": 0.6
+                                                              "$text_color":[0.624,0.624,0.663],
+                                                              "$font_scale_factor": 0.55
                                                             }}
                                                       ]}},
 
+                                                      {"espace@ng_module.panel":{ "size":[4,"100%"] }},
+
                                                       {"right_button@ng_module.Simple_Button":{
-                                                        "size":[10,10],
+                                                        "size":[11,11],
                                                         "$index": 46,
                                                         "$icon_right_offset":[0.3,0],
                                                         "$size_icone_right": [7,7],
@@ -844,30 +985,32 @@
 
                                                   ]}}
                                           ]}}
-                                      ]}}                            
+                                      ]}}
                         ]}}
                         ]}},
 
                         {"padding@ng_module.panel": {
-                          "size": ["100%",3]
+                          "size": ["100%",5]
                         }},
 
                         {"order_row@ng_module.stackpanel":{
                           "orientation":"horizontal",
-                          "size":["100%",14],
+                          "size":["100%",16],
                           "controls":[
 
                               {"minus@ng_module.Simple_Button":{
-                                "size":[11,"100%"],
+                                "size":[14,"100%"],
                                 "$index": 96,
                                 "$font_scale_factor":0.8,
                                 "$type_get_text":"Get_text_type_1",
                                 "$texture_button": "ng_asset.button_26"
                               }},
 
+                              {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+
                               {"quantity@ng_asset.background_white":{
                                 "color":[0.094, 0.094, 0.106],
-                                "size":[18,"100%"],
+                                "size":[24,"100%"],
                                 "controls":[
 
                                     {"text@ng_module.Simple_text": {
@@ -876,12 +1019,14 @@
                                       "$text_offset":[0,0.4],
                                       "layer":5,
                                       "size": ["100%c", "100%c"],
-                                      "$font_scale_factor": 0.6
+                                      "$font_scale_factor": 0.65
                                     }}
                               ]}},
 
+                              {"espace@ng_module.panel":{ "size":[2,"100%"] }},
+
                               {"plus@ng_module.Simple_Button":{
-                                "size":[11,"100%"],
+                                "size":[14,"100%"],
                                 "$index": 97,
                                 "$font_scale_factor":0.8,
                                 "$type_get_text":"Get_text_type_1",
@@ -889,18 +1034,18 @@
                               }},
 
                               {"padding@ng_module.panel": {
-                                "size": [3, "100%"]
+                                "size": [6, "100%"]
                               }},
 
                               {"buttton@ng_module.Simple_Button":{
                                 "size":["fill","100%"],
                                 "$index": 47,
-                                "$font_scale_factor":0.7,
-                                "$max_size":[62,10],
+                                "$font_scale_factor":0.75,
+                                "$max_size":[150,10],
                                 "$type_get_text":"Get_text_type_1",
                                 "$texture_button": "ng_asset.button_26"
                               }}
-                        ]}}                   
+                        ]}}
                 ]}}
 
             ]}}
@@ -1514,6 +1659,8 @@
 
   //Asset 
 
+  // Case d'ingredient : l'icone sur fond sombre, puis le compte (disponible / requis, vert ou rouge) sur une bande dessous,
+  // comme l'atelier de NG Java. Toucher la case ecrit le nom de l'ingredient sous les cases (§1 dans son nom = encadree).
   "asset_preview_craft@ng_module.collectionpanel": {
     "size":["100%c","100%c"],
     "collection_name": "container_items",
@@ -1522,7 +1669,7 @@
       {"button": {
           "type": "input_panel",
           "collection_index": "$index",
-          "size": [23,"100%c"],
+          "size": [25,32],
           "bindings":[
             {
               "binding_name": "#hover_text",
@@ -1538,18 +1685,18 @@
           "controls": [
 
                 {"content@ng_module.stackpanel":{
-                  "size":[21,"100%c"],
+                  "size":["100%","100%"],
                   "controls":[
-            
+
                         {"backgroound@ng_asset.background_white":{
-                          "size":["100%",21],
+                          "size":["100%",23],
                           "layer":8,
                           "color":[0.094, 0.094, 0.106],
                           "controls":[
 
-                                {"icone@ng_module.icone":{
-                                  "size":[18,18],
-                                  "$Get_text_type":"Get_text_type_2"
+                                // L'ingredient, rendu par le jeu comme dans l'inventaire (case $index_objet)
+                                {"icone@workstations.icone_objet":{
+                                  "size":[16,16]
                                 }},
 
                                 // Cadre de l'ingredient touche, dont le nom s'affiche sous les cases
@@ -1584,66 +1731,220 @@
                                 }}
                         ]}},
 
-                        {"padding@ng_module.panel": {
-                          "size": ["100%", 2]
-                        }},
-
-                        {"centring_text@ng_module.panel": {
-                          "collection_index": "$index",
-                          "size": ["100%","100%c"],
+                        {"bande@ng_asset.background_white": {
+                          "size": ["100%",9],
+                          "layer":8,
+                          "color":[0.125, 0.125, 0.137],
                           "controls":[
 
                                   {"text@ng_module.Get_text_type_3": {
                                     "type": "label",
-                                    "layer": 10000000000000000,
+                                    "layer": 10,
                                     "text": "#text",
-                                    "offset": "$text_offset",
-                                    "font_scale_factor": 0.4
+                                    "offset": [0,0.3],
+                                    "max_size": [25,9],
+                                    "font_scale_factor": 0.45
                                   }}
                         ]}}
                 ]}}
       ]}}
   ]},
 
+  // Case de prerequis (cases 113 a 118) : un pictogramme fixe de l'ecran (le code apres le texte dit lequel), puis la
+  // valeur courte (« 500 mL », « 400 », « Ingén. 2 », « Milit. 14 ») en vert si le prerequis est rempli, en rouge sinon.
+  // Toucher la case ecrit son texte complet sous les cases, a la place du nom d'un ingredient.
+  "asset_prerequis@ng_module.collectionpanel": {
+    "size":["100%c","100%c"],
+    "collection_name": "container_items",
+    "controls": [
+
+      {"button": {
+          "type": "input_panel",
+          "collection_index": "$index",
+          "size": [25,32],
+          "bindings":[
+            {
+              "binding_name": "#hover_text",
+              "binding_type": "collection",
+              "binding_collection_name": "container_items"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not((#hover_text) = ''))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+
+                {"content@ng_module.stackpanel":{
+                  "size":["100%","100%"],
+                  "controls":[
+
+                        {"fond@ng_asset.background_white":{
+                          "size":["100%",23],
+                          "layer":8,
+                          "color":[0.094, 0.094, 0.106],
+                          "controls":[
+
+                                {"picto@workstations.pictos_prerequis":{
+                                  "size":[13,13],
+                                  "layer":2
+                                }},
+
+                                {"selection":{
+                                  "type":"panel",
+                                  "size":["100%","100%"],
+                                  "layer":6,
+                                  "bindings":[
+                                    {
+                                      "binding_name": "#hover_text",
+                                      "binding_type": "collection",
+                                      "binding_collection_name": "container_items"
+                                    },
+                                    {
+                                      "binding_type": "view",
+                                      "source_property_name": "(not ((#hover_text - '§1') = #hover_text))",
+                                      "target_property_name": "#visible"
+                                    }
+                                  ],
+                                  "controls":[
+                                    {"contour@ng_asset.background_22":{
+                                      "size":["100%","100%"]
+                                    }}
+                                  ]
+                                }},
+
+                                {"clic@ng_asset.button_contour_white":{
+                                  "$mapping_button":"clickable",
+                                  "layer":7
+                                }}
+                        ]}},
+
+                        {"bande@ng_asset.background_white": {
+                          "size": ["100%",9],
+                          "layer":8,
+                          "color":[0.125, 0.125, 0.137],
+                          "controls":[
+
+                                  {"text@ng_module.Get_text_type_3": {
+                                    "type": "label",
+                                    "layer": 10,
+                                    "text": "#text",
+                                    "offset": [0,0.3],
+                                    "max_size": [25,9],
+                                    "font_scale_factor": 0.45
+                                  }}
+                        ]}}
+                ]}}
+      ]}}
+  ]},
+
+  // Les 5 pictogrammes des prerequis en images fixes, un seul visible : celui dont le code est dans le nom de la case
+  // (meme principe que les pictogrammes des onglets). Eclair jaune comme sur NG Java, les autres blancs.
+  "pictos_prerequis": {
+    "type": "panel",
+    "controls": [
+      {"liquide@workstations.picto_prerequis": {
+        "$picto": "textures/ui/icon/icon_19",
+        "$couleur_picto": [0.831, 0.831, 0.847],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(not ((#hover_text - 'prerequis_liquide') = #hover_text))", "target_property_name": "#visible"}
+        ]
+      }},
+      {"electricite@workstations.picto_prerequis": {
+        "$picto": "textures/ui/icon/icon_03",
+        "$couleur_picto": [1.000, 0.808, 0.188],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(not ((#hover_text - 'prerequis_electricite') = #hover_text))", "target_property_name": "#visible"}
+        ]
+      }},
+      {"gaz@workstations.picto_prerequis": {
+        "$picto": "textures/ui/ateliers/prerequis_gaz",
+        "$couleur_picto": [0.831, 0.831, 0.847],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(not ((#hover_text - 'prerequis_gaz') = #hover_text))", "target_property_name": "#visible"}
+        ]
+      }},
+      {"competence@workstations.picto_prerequis": {
+        "$picto": "textures/ui/ateliers/prerequis_competence",
+        "$couleur_picto": [0.831, 0.831, 0.847],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(not ((#hover_text - 'prerequis_competence') = #hover_text))", "target_property_name": "#visible"}
+        ]
+      }},
+      {"recherche@workstations.picto_prerequis": {
+        "$picto": "textures/ui/ateliers/prerequis_recherche",
+        "$couleur_picto": [0.831, 0.831, 0.847],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(not ((#hover_text - 'prerequis_recherche') = #hover_text))", "target_property_name": "#visible"}
+        ]
+      }}
+    ]
+  },
+
+  "picto_prerequis": {
+    "type": "image",
+    "size": ["100%", "100%"],
+    "texture": "$picto",
+    "color": "$couleur_picto"
+  },
+
+  // « Aucun prerequis » en gris quand la recette n'en demande aucun (case 113 vide)
+  "aucun_prerequis@ng_module.collectionpanel": {
+    "size": ["100%", "100%"],
+    "collection_name": "container_items",
+    "controls": [
+      {"vide": {
+        "type": "panel",
+        "collection_index": 113,
+        "size": ["100%", "100%"],
+        "bindings": [
+          {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+          {"binding_type": "view", "source_property_name": "(#hover_text = '')", "target_property_name": "#visible"}
+        ],
+        "controls": [
+          {"texte": {
+            "type": "label",
+            "text": "ng.ateliers.aucun_prerequis",
+            "localize": true,
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "offset": [2, 0],
+            "size": ["default", "default"],
+            "color": [0.443, 0.443, 0.482],
+            "font_scale_factor": 0.55,
+            "shadow": false
+          }}
+        ]
+      }}
+    ]
+  },
+
    //scroll & asset button scroll
 
+  // Liste des recettes : entrees 31 a 37 (nom et etat), icones 119 a 125 (l'objet produit, rendu comme en inventaire)
   "list_craft@ng_module.stackpanel":{
     "collection_name": "container_items",
     "size":["100%","100%c"],
     "controls":[
-
-      {"button_craft_01@workstations.asset_button_craft":{
-          "$index":31
-      }},
-
-            {"button_craft_01@workstations.asset_button_craft":{
-          "$index":32
-      }},
-
-            {"button_craft_01@workstations.asset_button_craft":{
-          "$index":33
-      }},
-
-            {"button_craft_01@workstations.asset_button_craft":{
-          "$index":34
-      }},
-
-            {"button_craft_01@workstations.asset_button_craft":{
-          "$index":35
-      }},
-
-            {"button_craft_01@workstations.asset_button_craft":{
-          "$index":36
-      }},
-
-               {"button_craft_01@workstations.asset_button_craft":{
-          "$index":37
-      }}
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":31, "$index_objet":119 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":32, "$index_objet":120 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":33, "$index_objet":121 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":34, "$index_objet":122 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":35, "$index_objet":123 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":36, "$index_objet":124 }},
+      {"button_craft_01@workstations.asset_button_craft":{ "$index":37, "$index_objet":125 }}
   ]},
 
+  // Ligne de la liste des recettes : bouton de 17, puis 2 d'air avant la suivante (01/11, plus lisible)
   "asset_button_craft@ng_module.stackpanel": {
     "collection_index":"$index",
-    "size": ["100% - 0.3px",15],
+    "size": ["100% - 0.3px",19],
     "bindings":[
       {
         "binding_name": "#hover_text",
@@ -1665,7 +1966,7 @@
           "$textures_button_S1": "ng_asset.button_full_white",
           "$fonction_mapping_button_S0|default": "nonclickable",
           "$fonction_mapping_button_S1|default": "clickable",
-          "size": ["100%","100%"],
+          "size": ["100%",17],
           "controls": [
 
                   {"texture_button":{
@@ -1732,31 +2033,32 @@
                           "size":["100% - 4px","100% - 4px"],
                           "controls":[
 
-                                {"icone@ng_module.icone":{
-                                  "size":[10,10],
+                                // L'objet produit, rendu par le jeu comme dans l'inventaire (case $index_objet)
+                                {"icone@workstations.icone_objet":{
+                                  "size":[13,13],
                                   "layer":5
-,                                 "$index": "$index",
-                                  "$Get_text_type":"Get_text_type_2"
                                 }},
 
                                 // Espace net entre l'icone et le nom de la recette
                                 {"espace@ng_module.panel":{
-                                  "size":[3,"100%"]
+                                  "size":[4,"100%"]
                                 }},
 
                                 {"craft_text_name@ng_module.panel":{
                                     "size":["100%c","100%"],
                                     "controls":[
 
-                                            // Remonte d'un demi-point : la police a pixels se dessine plus bas que l'icone
+                                            // Le nom entier sur deux lignes au besoin (« Potion de... » etait coupe, retour de Leo du
+                                            // 01/11) : largeur fixe, hauteur selon le texte, centre dans la ligne de la liste
                                             {"text_name@ng_module.Simple_text": {
                                               "$type_get_text": "Get_text_type_3",
                                               "$index": "$index",
                                               "layer":6,
-                                              "$max_size":[63,10],
-                                              "size": ["100%c", 10],
-                                              "$text_offset":[0,-0.5],
-                                              "$font_scale_factor": 0.7
+                                              "$text_size":[104,"default"],
+                                              "$max_size":[104,13],
+                                              "size": ["100%c", "100%"],
+                                              "$text_offset":[0,0],
+                                              "$font_scale_factor": 0.6
                                             }}
                                 ]}}
                         ]}}
@@ -1764,13 +2066,122 @@
       ]}}
   ]},
 
+  // Pastille de l'en-tete : le fond et le texte de l'ancienne pastille d'energie, avec le pictogramme de la ressource
+  // ($texture_pastille, $couleur_pastille) et la reserve lue dans la case $index_pastille ; cachee quand la case est vide.
+  // L'air a sa droite fait partie de la pastille, pour disparaitre avec elle.
+  "pastille@ng_module.stackpanel": {
+    "orientation": "horizontal",
+    "$index_pastille|default": 0,
+    "collection_index": "$index_pastille",
+    "size": ["100%c", "100%"],
+    "bindings": [
+      {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+      {"binding_type": "view", "source_property_name": "(not (#hover_text = ''))", "target_property_name": "#visible"}
+    ],
+    "controls": [
+      {"centrage@ng_module.panel": {
+        "size": ["100%c", "100%"],
+        "controls": [
+          {"background@ng_asset.background_03": {
+            "min_size": [20, "100% - 2px"],
+            "size": ["100%c + 10px", "100% - 2px"],
+            "controls": [
+              {"text@ng_module.Simple_text": {
+                "$type_get_text": "Get_text_type_1",
+                "$index": "$index_pastille",
+                "layer": 5,
+                "$text_offset": [0, 0.3],
+                "size": ["100%c", "100%"],
+                "$size_icone_left": [8, 8],
+                "$color_icone_left": "$couleur_pastille",
+                "$texture_icone_left": "$texture_pastille",
+                "$font_scale_factor": 0.7
+              }}
+            ]
+          }}
+        ]
+      }},
+      {"espace@ng_module.panel": {
+        "size": [2, "100%"]
+      }}
+    ]
+  },
+
+  "icone_gaz": {
+    "type": "image",
+    "texture": "textures/ui/ateliers/prerequis_gaz"
+  },
+
+  // Icone d'un objet de recette ou d'ingredient : l'objet reel de la case $index_objet (NGMachineMod 119 a 133), dessine
+  // par le rendu d'objet du jeu, le meme que les cases d'inventaire (un bloc en 3D, un objet avec son vrai rendu ; retour
+  // de Leo du 01/11 17 h 29 : plus de face de texture). Case d'icone vide (objet inconnu du serveur) : repli sur la
+  // texture portee par le nom de la case $index, comme avant.
+  "icone_objet": {
+    "type": "panel",
+    "$index_objet|default": 0,
+    "controls": [
+
+      {"rendu@workstations.rendu_objet": {}},
+
+      {"repli": {
+        "type": "collection_panel",
+        "collection_name": "container_items",
+        "size": ["100%", "100%"],
+        "controls": [
+          {"case_vide": {
+            "type": "panel",
+            "collection_index": "$index_objet",
+            "size": ["100%", "100%"],
+            "bindings": [
+              {"binding_name": "#hover_text", "binding_type": "collection", "binding_collection_name": "container_items"},
+              {"binding_type": "view", "source_property_name": "(#hover_text = '')", "target_property_name": "#visible"}
+            ],
+            "controls": [
+              {"texture@ng_module.icone": {
+                "size": ["100%", "100%"],
+                "$Get_text_type": "Get_text_type_2"
+              }}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
+  // Le rendu d'objet de ng_module.container_item (inventory_item_renderer et ses liaisons), sans fond, sans nombre et
+  // sans bouton : la case de recette ou d'ingredient garde son propre clic.
+  "rendu_objet": {
+    "type": "collection_panel",
+    "collection_name": "container_items",
+    "size": ["100%", "100%"],
+    "controls": [
+      {"case": {
+        "type": "panel",
+        "collection_index": "$index_objet",
+        "size": ["100%", "100%"],
+        "controls": [
+          {"objet": {
+            "type": "custom",
+            "renderer": "inventory_item_renderer",
+            "size": ["100%", "100%"],
+            "layer": 1,
+            "bindings": [
+              {"binding_type": "collection_details", "binding_collection_name": "container_items"},
+              {"binding_name": "#item_renderer_data", "binding_type": "collection", "binding_collection_name": "container_items", "binding_condition": "visible"}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },
+
   // Pictogramme d'un onglet de categorie : le nom du slot porte l'etat (§0 cliquable, §1 onglet courant), 90 « : »
   // puis le chemin du pictogramme choisi par le pack de comportement (tab_icon). L'onglet porte les 17 pictogrammes
   // connus en images fixes, un seul visible : celui dont le chemin est dans le nom. Blanc pour un onglet cliquable,
   // gris pour l'onglet courant, comme les boutons maison et livre. Un nouveau pictogramme s'ajoute dans liste_pictos.
   "pictos_onglet@ng_module.collectionpanel": {
     "collection_name": "container_items",
-    "size": [9.5, 9.5],
+    "size": [11, 11],
     "layer": 10,
     "controls": [
       {"etat": {

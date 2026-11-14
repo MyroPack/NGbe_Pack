@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.cosmetic.hands.hands_phenix": {
+      "geometry": "Geometry.cosmetic.hands.hands_phenix",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.cosmetic.hands.hands_phenix"
+      ]
+    }
+  }
+}

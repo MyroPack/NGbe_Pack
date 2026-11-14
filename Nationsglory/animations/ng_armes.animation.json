@@ -1,0 +1,1359 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.ng_arme.ragnarock_hammer.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.84
+        }
+      }
+    },
+    "animation.ng_arme.ragnarock_hammer.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.84
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_trainer_spear.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_trainer_spear.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_officer_scepter.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.811
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_officer_scepter.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.811
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_soldier_sword.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.646
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_soldier_sword.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.646
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.aurelions_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_trainer_halberd.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.457
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_trainer_halberd.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.457
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_blade.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.647
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_blade.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.647
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.solkhars_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_trainer_anchor.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.597
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_trainer_anchor.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.597
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_officer_saber.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.693
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_officer_saber.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.693
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_soldier_saber.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_soldier_saber.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.noctembruns_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_spear.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.438
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_spear.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.438
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_bone_staff.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.516
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_bone_staff.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.516
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.terrakins_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_trainer_poleaxe.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.467
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_trainer_poleaxe.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.467
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_officer_axe.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.79
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_officer_axe.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.79
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_soldier_axe.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.79
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_soldier_axe.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.79
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.skjornars_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_spear.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.447
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_spear.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.447
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_officer_sword.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_officer_sword.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.525
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_bow.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -65,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            1,
+            -4
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            133.5,
+            60,
+            -60
+          ],
+          "position": [
+            -14,
+            26,
+            1
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.sylvaris_bow.third_person_hold": {
+      "loop": true,
+      "bones": {
+        "wrapper": {
+          "rotation": [
+            -75,
+            0,
+            0
+          ],
+          "position": [
+            6,
+            -11,
+            12
+          ]
+        },
+        "root_item": {
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "position": [
+            1,
+            18,
+            -9
+          ],
+          "scale": 0.8
+        }
+      }
+    },
+    "animation.ng_arme.arc.wield": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            "c.is_first_person ? -4.0 : 0.0",
+            "c.is_first_person ? -2.0 : 0.0",
+            "c.is_first_person ? -2.0 : 0.0"
+          ],
+          "rotation": [
+            "c.is_first_person ? -15.0 : 0.0",
+            "c.is_first_person ? 55.0 : 0.0",
+            "c.is_first_person ? -35.0 : 0.0"
+          ]
+        }
+      }
+    },
+    "animation.ng_arme.arc.wield_first_person_pull": {
+      "loop": true,
+      "bones": {
+        "rightitem": {
+          "position": [
+            -4.0,
+            "math.sin(q.life_time * 800.0) * 0.05",
+            -6.0
+          ],
+          "rotation": [
+            10.0,
+            5.0,
+            -5.0
+          ]
+        }
+      }
+    }
+  }
+}
